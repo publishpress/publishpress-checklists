@@ -980,12 +980,21 @@
           .ready(function () {
             $('.attachments-wrapper li').each(function () {
               if ($(this).attr('aria-checked') === 'true') {
-                meta_id = Number($(this).attr('data-id'));
-                callableFunc();
+                const selected_id = Number($(this).attr('data-id'));
+                // Only update if this is the featured image
+                if (selected_id === meta_id) {
+                  callableFunc();
+                }
               }
             });
           })
-          .on('change', callableFunc);
+          .on('change', function () {
+            // Only update alt text if we're editing the featured image
+            const selected_id = Number($('.attachments-wrapper li[aria-checked="true"]').attr('data-id'));
+            if (selected_id === meta_id) {
+              callableFunc();
+            }
+          });
       }
       $('#pp-checklists-req-featured_image_alt').trigger(PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE, has_alt);
     });
