@@ -262,8 +262,8 @@
                 .find('.request-response')
                 .html(
                   '<div id="message" class="ppch-message notice is-dismissible updated published"><p>' +
-                    response_content +
-                    '</p><button type="button" class="notice-dismiss" onclick="this.closest(\'#message\').remove();"><span class="screen-reader-text">Dismiss this notice.</span></button></div>',
+                  response_content +
+                  '</p><button type="button" class="notice-dismiss" onclick="this.closest(\'#message\').remove();"><span class="screen-reader-text">Dismiss this notice.</span></button></div>',
                 );
               target_li.find('.pp-checklists-check-item').prop('disabled', false);
               target_li.find('.spinner').removeClass('is-active');
@@ -272,10 +272,10 @@
                 .find('.request-response')
                 .html(
                   '<div id="message" class="ppch-message notice is-dismissible updated published"><p>' +
-                    errorThrown +
-                    ' ' +
-                    textStatus +
-                    '</p><button type="button" class="notice-dismiss" onclick="this.closest(\'#message\').remove();"><span class="screen-reader-text">Dismiss this notice.</span></button></div>',
+                  errorThrown +
+                  ' ' +
+                  textStatus +
+                  '</p><button type="button" class="notice-dismiss" onclick="this.closest(\'#message\').remove();"><span class="screen-reader-text">Dismiss this notice.</span></button></div>',
                 );
               target_li.find('.pp-checklists-check-item').prop('disabled', false);
               target_li.find('.spinner').removeClass('is-active');
@@ -719,7 +719,7 @@
       }
 
       const linkWithoutFragment = link.split('#')[0];
-    
+
       return linkWithoutFragment.match(
         /^(?:(#[-a-zA-Z0-9@:%._\+~#=]{0,256})|https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@;:%_\+.~#?&\/\/=!*'(),]*)|tel:\+?[0-9\-]+|mailto:[a-z0-9\-_\.]+@[a-z0-9\-_\.]+?[a-z0-9@\.\?=\s\%,\-&_;*]+)$/i,
       );
@@ -887,7 +887,7 @@
 
   /*----------  Warning icon in submit button  ----------*/
   // Need this validation for status filter in Pro to work
-  if (ppChecklists.show_warning_icon_submit) {    
+  if (ppChecklists.show_warning_icon_submit) {
     $(document).on(PP_Checklists.EVENT_TIC, function (event) {
       var has_unchecked = $('#pp-checklists-req-box').children('.status-no');
       if (has_unchecked.length > 0) {
@@ -980,12 +980,21 @@
           .ready(function () {
             $('.attachments-wrapper li').each(function () {
               if ($(this).attr('aria-checked') === 'true') {
-                meta_id = Number($(this).attr('data-id'));
-                callableFunc();
+                const selected_id = Number($(this).attr('data-id'));
+                // Only update if this is the featured image
+                if (selected_id === meta_id) {
+                  callableFunc();
+                }
               }
             });
           })
-          .on('change', callableFunc);
+          .on('change', function () {
+            // Only update alt text if we're editing the featured image
+            const selected_id = Number($('.attachments-wrapper li[aria-checked="true"]').attr('data-id'));
+            if (selected_id === meta_id) {
+              callableFunc();
+            }
+          });
       }
       $('#pp-checklists-req-featured_image_alt').trigger(PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE, has_alt);
     });
@@ -1099,23 +1108,23 @@
       let obj = PP_Checklists.is_gutenberg_active()
         ? PP_Checklists.getEditor().getEditedPostAttribute('tags')
         : $('.tagchecklist li')
-            .map((_, el) =>
-              $(el)
-                .contents()
-                .filter((_, node) => node.nodeType === 3)
-                .text()
-                .trim(),
-            )
-            .get();
+          .map((_, el) =>
+            $(el)
+              .contents()
+              .filter((_, node) => node.nodeType === 3)
+              .text()
+              .trim(),
+          )
+          .get();
 
       if (typeof obj !== 'undefined') {
         let { value: required_tags, label } = ppChecklists.requirements.required_tags;
         let required_tags_reached =
           required_tags.length > 0
             ? required_tags.filter((value) => {
-                if (PP_Checklists.is_gutenberg_active()) return !obj.includes(Number(value.split('__')[0]));
-                return !obj.includes(value.split('__')[1]);
-              })
+              if (PP_Checklists.is_gutenberg_active()) return !obj.includes(Number(value.split('__')[0]));
+              return !obj.includes(value.split('__')[1]);
+            })
             : [];
         let has_required_tags = required_tags_reached.length > 0;
 
@@ -1149,23 +1158,23 @@
       let obj = PP_Checklists.is_gutenberg_active()
         ? PP_Checklists.getEditor().getEditedPostAttribute('tags')
         : $('.tagchecklist li')
-            .map((_, el) =>
-              $(el)
-                .contents()
-                .filter((_, node) => node.nodeType === 3)
-                .text()
-                .trim(),
-            )
-            .get();
+          .map((_, el) =>
+            $(el)
+              .contents()
+              .filter((_, node) => node.nodeType === 3)
+              .text()
+              .trim(),
+          )
+          .get();
 
       if (typeof obj !== 'undefined') {
         let { value: prohibited_tags, label } = ppChecklists.requirements.prohibited_tags;
         let prohibited_tags_reached =
           prohibited_tags.length > 0
             ? prohibited_tags.filter((value) => {
-                if (PP_Checklists.is_gutenberg_active()) return obj.includes(Number(value.split('__')[0]));
-                return obj.includes(value.split('__')[1]);
-              })
+              if (PP_Checklists.is_gutenberg_active()) return obj.includes(Number(value.split('__')[0]));
+              return obj.includes(value.split('__')[1]);
+            })
             : [];
         let has_prohibited_tags = prohibited_tags_reached.length > 0;
 
@@ -1235,8 +1244,8 @@
       let obj = PP_Checklists.is_gutenberg_active()
         ? PP_Checklists.getEditor().getEditedPostAttribute('categories')
         : $('#categorychecklist input:checked')
-            .map((_, chkEl) => Number($(chkEl).val()))
-            .get();
+          .map((_, chkEl) => Number($(chkEl).val()))
+          .get();
 
       if (typeof obj !== 'undefined') {
         let { value: required_categories, label } = ppChecklists.requirements.required_categories;
@@ -1278,8 +1287,8 @@
       let obj = PP_Checklists.is_gutenberg_active()
         ? PP_Checklists.getEditor().getEditedPostAttribute('categories')
         : $('#categorychecklist input:checked')
-            .map((_, chkEl) => Number($(chkEl).val()))
-            .get();
+          .map((_, chkEl) => Number($(chkEl).val()))
+          .get();
 
       if (typeof obj !== 'undefined') {
         let { value: prohibited_categories, label } = ppChecklists.requirements.prohibited_categories;
@@ -1558,25 +1567,25 @@
       wp.data.subscribe(function () {
         setTimeout(function() {
           var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
-    
+
           if (typeof content == 'undefined') {
             return;
           }
-    
+
           var count = PP_Checklists.extract_internal_links(content).length;
-    
+
           if (lastInternalCount == count) {
             return;
           }
-    
+
           var min = parseInt(ppChecklists.requirements.internal_links.value[0]),
             max = parseInt(ppChecklists.requirements.internal_links.value[1]);
-    
+
           $('#pp-checklists-req-internal_links').trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
             PP_Checklists.check_valid_quantity(count, min, max),
           );
-    
+
           lastInternalCount = count;
         }, 100);
       });
@@ -1665,27 +1674,27 @@
       wp.data.subscribe(function () {
         setTimeout(function() {
           var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
-    
+
           if (typeof content == 'undefined') {
             return;
           }
-    
+
           var count = PP_Checklists.extract_external_links(content).length;
-    
+
           if (lastExternalCount == count) {
             return;
           }
-    
+
           var min = parseInt(ppChecklists.requirements.external_links.value[0]),
             max = parseInt(ppChecklists.requirements.external_links.value[1]);
-    
+
           $('#pp-checklists-req-external_links').trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
             PP_Checklists.check_valid_quantity(count, min, max),
           );
-    
+
           lastExternalCount = count;
-        }, 150); 
+        }, 150);
       });
     }
   } else {
@@ -1779,13 +1788,13 @@
         if (wp.data.select('core/block-editor')) {
           const blocks = wp.data.select('core/block-editor').getBlocks();
           const imageBlocks = blocks.filter(block => block.name === 'core/image');
-          
+
           imageBlocks.forEach(block => {
             // Check if this block's HTML matches any of the missing alt images
-            const hasWarning = missingAltImages.some(html => 
+            const hasWarning = missingAltImages.some(html =>
               html.includes(block.attributes.id) || html.includes(block.attributes.url)
             );
-            
+
             // Set warning attribute on the list view item
             const listViewElement = document.querySelector(
               `.block-editor-list-view-leaf[data-block="${block.clientId}"]`
@@ -1868,29 +1877,29 @@
     if ($('#pp-checklists-req-validate_links').length > 0) {
       wp.data.subscribe(function () {
         var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
-    
+
         if (typeof content == 'undefined') {
           return;
         }
-    
+
         // Get invalid links
         var invalidLinks = PP_Checklists.validate_links_format(content);
         var no_invalid_link = invalidLinks.length === 0;
-    
+
         // Update block warnings if we're in the block editor
         if (wp.data.select('core/block-editor')) {
           const blocks = wp.data.select('core/block-editor').getBlocks();
-          
+
           // Check all blocks that might contain links
           blocks.forEach(block => {
             // Get block content/HTML
             const blockContent = block.attributes.content || '';
-            
+
             // Check if this block contains any invalid links
-            const hasWarning = invalidLinks.some(invalidLink => 
+            const hasWarning = invalidLinks.some(invalidLink =>
               blockContent.includes(invalidLink)
             );
-            
+
             // Set warning attribute on the list view item
             const listViewElement = document.querySelector(
               `.block-editor-list-view-leaf[data-block="${block.clientId}"]`
@@ -1900,7 +1909,7 @@
             }
           });
         }
-    
+
         $('#pp-checklists-req-validate_links').trigger(PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE, no_invalid_link);
       });
     }
@@ -1973,25 +1982,25 @@
     if ($('#pp-checklists-req-image_alt_count').length > 0) {
       wp.data.subscribe(function () {
         var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
-    
+
         if (typeof content == 'undefined') {
           return;
         }
-    
+
         var altLengths = PP_Checklists.get_image_alt_lengths(content);
         var min = parseInt(ppChecklists.requirements.image_alt_count.value[0]);
         var max = parseInt(ppChecklists.requirements.image_alt_count.value[1]);
-    
+
         // Check if we have access to block editor
         if (wp.data.select('core/block-editor')) {
           const blocks = wp.data.select('core/block-editor').getBlocks();
           const imageBlocks = blocks.filter(block => block.name === 'core/image');
-          
+
           imageBlocks.forEach(block => {
             // Check if this block's alt text length is within limits
             const altLength = block.attributes.alt ? block.attributes.alt.length : 0;
             const hasWarning = !PP_Checklists.check_valid_quantity(altLength, min, max);
-            
+
             // Set warning attribute on the list view item
             const listViewElement = document.querySelector(
               `.block-editor-list-view-leaf[data-block="${block.clientId}"]`
@@ -2001,11 +2010,11 @@
             }
           });
         }
-    
+
         var isValid = altLengths.every(function (length) {
           return PP_Checklists.check_valid_quantity(length, min, max);
         });
-    
+
         $('#pp-checklists-req-image_alt_count').trigger(PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE, isValid);
       });
     }
@@ -2060,7 +2069,7 @@
     update();
   }
 
-  
+
 
   /**
    *
