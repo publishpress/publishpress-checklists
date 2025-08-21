@@ -16,7 +16,10 @@ class PPChecklistsPanel extends Component {
         this.state = {
             showRequiredLegend: false,
             requirements: [],
-            failedRequirements: [],
+            failedRequirements: {
+                block: [],
+                warning: []
+            },
         };
     }
 
@@ -41,6 +44,36 @@ class PPChecklistsPanel extends Component {
         let notices  = wp.data.dispatch('core/notices');
         let coreSavePost = coreEditor.savePost;
         let coreEdiPost  = coreEditor.editPost;
+
+        // Add Gutenberg validation that triggers failed requirements
+        let validateRequirements = () => {
+            
+            let uncheckedItems = {
+                block: [],
+                warning: []
+            };
+
+            // Check each requirement from the requirements array
+            this.state.requirements.forEach(req => {
+                if (!req.status) {
+                    // This requirement is not met
+                    if (req.rule === 'block') {
+                        uncheckedItems.block.push(req.label);
+                    } else if (req.rule === 'warning') {
+                        uncheckedItems.warning.push(req.label);
+                    }
+                }
+            });
+
+            this.updateFailedRequirements(uncheckedItems);
+        };
+
+        // Subscribe to changes to trigger validation
+        wp.data.subscribe(() => {
+            if (this.isMounted && this.state.requirements.length > 0) {
+                validateRequirements();
+            }
+        });
 
         if (!this.oldStatus || this.oldStatus == '') {
             this.oldStatus = wp.data.select('core/editor').getCurrentPost()['status'];
@@ -89,17 +122,19 @@ class PPChecklistsPanel extends Component {
                     publishing_post = true;
                 }
             }
-
-            if (!publishing_post || typeof this.state.failedRequirements.block === "undefined" || this.state.failedRequirements.block.length === 0) {
+            
+            const hasBlockRequirements = this.state.failedRequirements.block && this.state.failedRequirements.block.length > 0;
+            const hasWarningRequirements = this.state.failedRequirements.warning && this.state.failedRequirements.warning.length > 0;
+            
+            if (!publishing_post || !hasBlockRequirements) {
                 return coreSavePost(options);
             } else {
-                wp.data.dispatch('core/edit-post').closePublishSidebar();
                 notices.createErrorNotice(i18n.completeRequirementMessage, {
                     id: 'publishpress-checklists-validation',
                     isDismissible: true
                 });
                 wp.data.dispatch('core/edit-post').openGeneralSidebar('publishpress-checklists-panel/checklists-sidebar');
-
+                
                 /**
                  * change status to draft or old status if failed to 
                  * solve further save draft button not working. This is
