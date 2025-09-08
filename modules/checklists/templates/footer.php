@@ -20,21 +20,21 @@
         <ul>
             <li>
                 <a href="//publishpress.com/checklists" target="_blank" rel="noopener noreferrer"
-                   title="About <?php echo esc_attr($context['plugin_name']); ?>"><?php echo esc_html__(
+                   title="<?php esc_attr_e('About PublishPress Checklists', 'publishpress-checklists');?>"><?php echo esc_html__(
                         'About',
                         'publishpress-checklists'
                     ); ?></a>
             </li>
             <li>
                 <a href="//publishpress.com/knowledge-base/checklist-introduction/" target="_blank" rel="noopener noreferrer"
-                   title="<?php echo esc_attr($context['plugin_name']); ?> Documentation"><?php echo esc_html__(
+                   title="<?php esc_attr_e('PublishPress Checklists Documentation', 'publishpress-checklists');?>"><?php echo esc_html__(
                         'Documentation',
                         'publishpress-checklists'
                     ); ?></a>
             </li>
             <li>
                 <a href="//publishpress.com/publishpress-support/" target="_blank" rel="noopener noreferrer"
-                   title="Contact the PublishPress team"><?php echo esc_html__('Contact', 'publishpress-checklists'); ?></a>
+                   title="<?php esc_attr_e('Contact the PublishPress team', 'publishpress-checklists');?>"><?php echo esc_html__('Contact', 'publishpress-checklists'); ?></a>
             </li>
             
         </ul>
