@@ -152,7 +152,7 @@
                                                     <td class="ppc-pro-overlay-cell" colspan="4">
                                                         <a href="https://publishpress.com/links/publishpress-checklists-nudge" target="_blank">
                                                         <div class="ppc-pro-overlay-text">
-                                                            <span class="dashicons dashicons-lock"></span> Pro feature
+                                                            <span class="dashicons dashicons-lock"></span> <?php esc_html_e('Pro feature', 'publishpress-checklists'); ?>
                                                         </div>
                                                         </a>
                                                     </td>
