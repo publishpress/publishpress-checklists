@@ -64,7 +64,7 @@
                                 <span class="<?php echo esc_attr($args['icon']); ?>">
                                     <?php if (isset($args['svg']) && !empty($args['svg'])) : echo $args['svg']; endif; ?>
                                 </span>
-                                <span class="item"><?php echo esc_html_e($args['label']); ?></span>
+                                <span class="item"><?php esc_html_e($args['label']); ?></span>
                                 <?php if ($enabled_count > 0) : ?>
                                     <span class="pp-checklists-count-indicator"><?php echo esc_html($enabled_count); ?></span>
                                 <?php endif; ?>
@@ -165,7 +165,7 @@
                                 <?php if ($post_type === $post_type_key && !$group_has_requirements) : ?>
                                     <tr class="pp-checklists-requirement-row ppch-<?php echo esc_attr($group); ?>-group" data-post-type="<?php echo esc_attr($post_type); ?>">
                                         <td colspan="4" id="empty-custom-rule">
-                                            <?php echo esc_html_e(sprintf(__('No %s requirements for this post type.', 'publishpress-checklists'), $group)); ?>
+                                            <?php echo esc_html(sprintf(__('No %s requirements for this post type.', 'publishpress-checklists'), $group)); ?>
                                         </td>
                                     </tr>
                                 <?php endif; ?>
