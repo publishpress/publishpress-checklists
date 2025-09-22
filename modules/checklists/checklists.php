@@ -645,6 +645,8 @@ if (!class_exists('PPCH_Checklists')) {
                             'Which roles can mark this task as complete?',
                             'publishpress-checklists'
                         ),
+                        'noResults'         => esc_html__('No results found', 'publishpress-checklists'),
+                        'searching'         => esc_html__('Searching…', 'publishpress-checklists'),
                         'remove'            => esc_html__('Remove', 'publishpress-checklists'),
                         'custom_enter_name' => esc_html__('Enter name of custom task', 'publishpress-checklists'),
                         'openai_enter_name' => esc_html__('Enter OpenAI task prompt', 'publishpress-checklists'),
