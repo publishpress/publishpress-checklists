@@ -75,6 +75,7 @@ if (!class_exists('PPCH_Settings')) {
                     'show_warning_icon_submit' => Base_requirement::VALUE_YES,
                     'openai_api_key'           => '',
                     'show_checklists_column'   => 'off',
+                    'delete_data_on_uninstall' => 'off',
                     'who_can_ignore_option'      => Base_requirement::VALUE_YES
                 ],
                 'autoload'             => true,
@@ -635,6 +636,11 @@ if (!class_exists('PPCH_Settings')) {
             }
             $new_options['show_checklists_column'] = $new_options['show_checklists_column'] === 'on' ? 'on' : 'off';
 
+            if (!isset($new_options['delete_data_on_uninstall'])) {
+                $new_options['delete_data_on_uninstall'] = 'off';
+            }
+            $new_options['delete_data_on_uninstall'] = $new_options['delete_data_on_uninstall'] === 'on' ? 'on' : 'off';
+
             return $new_options;
         }
 
@@ -764,6 +770,14 @@ if (!class_exists('PPCH_Settings')) {
                 $this->module->options_group_name . '_general'
             );
 
+            add_settings_field(
+                'delete_data_on_uninstall',
+                __('Delete data on uninstall:', 'publishpress-checklists'),
+                [$this, 'settings_delete_data_on_uninstall_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_tools'
+            );
+
             if (!Util::isChecklistsProActive()) {
                 add_settings_field(
                     'status_filter_settings',
@@ -834,6 +848,13 @@ if (!class_exists('PPCH_Settings')) {
                 [$this, 'settings_openai_api_key_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_integration'
+            );
+
+            add_settings_section(
+                $this->module->options_group_name . '_tools',
+                __return_false(),
+                [$this, 'settings_section_tools'],
+                $this->module->options_group_name
             );
 
             /**
@@ -928,6 +949,26 @@ if (!class_exists('PPCH_Settings')) {
                 . checked($value, 'yes', false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
                 'This will display a warning icon in the "Checklists" box.',
+                'publishpress-checklists'
+            );
+            echo '</label>';
+        }
+
+        /**
+         * Displays the checkbox to enable deleting plugin data on uninstall
+         *
+         * @param array $args
+         */
+        public function settings_delete_data_on_uninstall_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_delete_data_on_uninstall';
+            $value = isset($this->module->options->delete_data_on_uninstall) ? $this->module->options->delete_data_on_uninstall : 'off';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="checkbox" value="on" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[delete_data_on_uninstall]" '
+                . checked($value, 'on', false) . ' />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'When enabled, all PublishPress Checklists data will be deleted if the plugin is uninstalled.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -1087,6 +1128,7 @@ if (!class_exists('PPCH_Settings')) {
                     '#ppch-tab-general'     => esc_html__('General', 'publishpress-checklists'),
                     '#ppch-tab-publishing-options' => esc_html__('Publishing Options', 'publishpress-checklists'),
                     '#ppch-tab-integration'       => esc_html__('Integration', 'publishpress-checklists'),
+                    '#ppch-tab-tools'       => esc_html__('Tools', 'publishpress-checklists'),
                 ]
             );
 
@@ -1111,6 +1153,11 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_section_integration()
         {
             echo '<input type="hidden" id="ppch-tab-integration" />';
+        }
+
+        public function settings_section_tools()
+        {
+            echo '<input type="hidden" id="ppch-tab-tools" />';
         }
     }
 }
