@@ -74,7 +74,6 @@ if (!class_exists('PPCH_Settings')) {
                     'disable_publish_button'   => Base_requirement::VALUE_NO,
                     'show_warning_icon_submit' => Base_requirement::VALUE_YES,
                     'openai_api_key'           => '',
-                    'show_checklists_column'   => 'off',
                     'delete_data_on_uninstall' => 'off',
                     'who_can_ignore_option'      => Base_requirement::VALUE_YES
                 ],
@@ -631,11 +630,6 @@ if (!class_exists('PPCH_Settings')) {
                 $new_options['disable_publish_button'] = Base_requirement::VALUE_NO;
             }
 
-            if (!isset($new_options['show_checklists_column'])) {
-                $new_options['show_checklists_column'] = 'off';
-            }
-            $new_options['show_checklists_column'] = $new_options['show_checklists_column'] === 'on' ? 'on' : 'off';
-
             if (!isset($new_options['delete_data_on_uninstall'])) {
                 $new_options['delete_data_on_uninstall'] = 'off';
             }
@@ -790,9 +784,9 @@ if (!class_exists('PPCH_Settings')) {
 
             if (!Util::isChecklistsProActive()) {
                 add_settings_field(
-                    'show_checklists_column',
+                    'show_checklists_settings',
                     __('Show Checklists column in post lists:', 'publishpress-checklists'),
-                    [$this, 'settings_show_checklists_column_option'],
+                    [$this, 'settings_show_checklists_option'],
                     $this->module->options_group_name,
                     $this->module->options_group_name . '_general'
                 );
@@ -917,16 +911,16 @@ if (!class_exists('PPCH_Settings')) {
          *
          * @param array
          */
-        public function settings_show_checklists_column_option($args = [])
+        public function settings_show_checklists_option($args = [])
         {
-            $id    = $this->module->options_group_name . '_show_checklists_column';
+            $id    = $this->module->options_group_name . '_show_checklists_settings';
             $value = 'no';
 
             echo '<label for="' . esc_attr($id) . '" class="disabled-pro-option">';
-            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[show_checklists_column]" '
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[show_checklists_settings]" '
                 . checked($value, 'yes', false) . ' disabled="disabled" />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'Show Checklists column in post lists',
+                'Add a Checklists column to the Posts screen showing how many requirements are complete.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -948,7 +942,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[show_warning_icon_submit]" '
                 . checked($value, 'yes', false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This will display a warning icon in the "Checklists" box.',
+                'This will display a warning icon in the "Checklists" box if requirements are incomplete.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -989,7 +983,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[who_can_ignore_option]" '
                 . checked($value, 'yes', false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This will show "Who can ignore" options',
+                'This will show "Who can ignore" options.',
                 'publishpress-checklists'
             );
             echo '</label>';
