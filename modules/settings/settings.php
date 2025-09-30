@@ -790,6 +790,16 @@ if (!class_exists('PPCH_Settings')) {
 
             if (!Util::isChecklistsProActive()) {
                 add_settings_field(
+                    'duplicate_checklist_settings',
+                    __('Enable Duplicate Checklists:', 'publishpress-checklists'),
+                    [$this, 'settings_duplicate_checklist_option'],
+                    $this->module->options_group_name,
+                    $this->module->options_group_name . '_general'
+                );
+            }
+
+            if (!Util::isChecklistsProActive()) {
+                add_settings_field(
                     'show_checklists_column',
                     __('Show Checklists column in post lists:', 'publishpress-checklists'),
                     [$this, 'settings_show_checklists_column_option'],
@@ -905,6 +915,27 @@ if (!class_exists('PPCH_Settings')) {
                 . checked($value, 'yes', false) . ' disabled="disabled" />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
                 'This allows tasks to be disabled for specific statuses such as "Draft" or "Published.',
+                'publishpress-checklists'
+            );
+            echo '</label>';
+            echo ' <a href="https://publishpress.com/links/checklists-menu" target="_blank" class="pro-badge">PRO</a>';
+        }
+
+        /**
+         * Displays the promo field for duplicate checklists in the free version
+         *
+         * @param array $args
+         */
+        public function settings_duplicate_checklist_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_duplicate_checklist_settings';
+            $value = 'no';
+
+            echo '<label for="' . esc_attr($id) . '" class="disabled-pro-option">';
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[duplicate_checklist_settings]" '
+                . checked($value, 'yes', false) . ' disabled="disabled" />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'This allows users to duplicate existing checklist task.',
                 'publishpress-checklists'
             );
             echo '</label>';
