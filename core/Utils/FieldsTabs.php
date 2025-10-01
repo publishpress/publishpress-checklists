@@ -18,59 +18,59 @@ class FieldsTabs {
     private function __construct() {
         $this->fields_tabs = array(
             "title" => array(
-                "label" => "Title",
+                "label" => __('Title', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-edit"
             ),
             "content" => array(
-                "label" => "Content",
+                "label" => __('Content', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-welcome-write-blog"
             ),
             "publish_date_time" => array(
-                "label" => "Publish Date / Time",
+                "label" => __('Publish Date / Time', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-calendar-alt"
             ),
             "approval" => array(
-                "label" => "Approval",
+                "label" => __('Approval', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-yes"
             ),
             "images" => array(
-                "label" => "Images",
+                "label" => __('Images', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-format-image"
             ),
             "audio_video" => array(
-                "label" => "Audio / Video",
+                "label" => __('Audio / Video', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-admin-media"
             ),
             "featured_image" => array(
-                "label" => "Featured Image",
+                "label" => __('Featured Image', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-cover-image"
             ),
             "links" => array(
-                "label" => "Links",
+                "label" => __('Links', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-admin-links"
             ),
             "permalinks" => array(
-                "label" => "Permalink",
+                "label" => __('Permalink', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-editor-unlink"
             ),
             "categories" => array(
-                "label" => "Categories",
+                "label" => __('Categories', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-category"
             ),
             "tags" => array(
-                "label" => "Tags",
+                "label" => __('Tags', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-tag"
             ),
             "taxonomies" => array(
-                "label" => "Taxonomies",
+                "label" => __('Taxonomies', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-list-view"
             ),
             "accessibility" => array(
-                "label" => "Accessibility",
+                "label" => __('Accessibility', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-universal-access"
             ),
             "custom" => array(
-                "label" => "Custom",
+                "label" => __('Custom', 'publishpress-checklists'),
                 "icon" => "dashicons dashicons-admin-generic"
             )
         );
