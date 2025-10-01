@@ -7,7 +7,7 @@ Tags: approval, checklist, maximum, minimum, requirement
 Requires at least: 5.5
 Requires PHP: 7.2.5
 Tested up to: 6.8
-Stable tag: 2.22.0
+Stable tag: 2.23.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -364,6 +364,17 @@ With the PublishPress Checklists plugin, you can require that site's content mee
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+= [2.23.0] - 2 October 2025 =
+* Added: Add option to delete data when uninstall the plugin #1012
+* Fixed: Featured Image Alt Text is not recognized #992
+* Fixed: Checklists requirement notice banner is missing #998
+* Fixed: HyperLinkValidator does not accept TLD more than 6 character #1016
+* Updated: Remove Yellow color in Checklists column screen #996
+* Updated: Text update for General Settings #994
+* Updated: Put the domain name on translation string (credit @DAnn2012)
+* Lang: Translate fields tabs #1008
+* Lang: Brazil Translation #991
 
 = [2.22.0] - 31 July 2025 =
 * Added: Small indicator for active tasks #920

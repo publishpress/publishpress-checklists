@@ -784,7 +784,7 @@ if (!class_exists('PPCH_Settings')) {
 
             if (!Util::isChecklistsProActive()) {
                 add_settings_field(
-                    'show_checklists_settings',
+                    'duplicate_checklists_settings',
                     __('Enable Duplicate Checklists:', 'publishpress-checklists'),
                     [$this, 'settings_duplicate_checklist_option'],
                     $this->module->options_group_name,
