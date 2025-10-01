@@ -389,7 +389,16 @@
       $icon = $('<span>').addClass('dashicons dashicons-no').attr('data-id', id).attr('data-type', type).appendTo($a);
 
       // Re-initialize select 2
-      $('#pp-checklists-global select').select2();
+      $('#pp-checklists-global select').select2({
+        language: {
+          noResults: function () {
+            return objectL10n_checklists_global_checklist.noResults;
+          },
+          searching: function () {
+            return objectL10n_checklists_global_checklist.searching;
+          }
+        },
+      });
 
       $a.on('click', function(event) {
         callback_remove_row(event);
