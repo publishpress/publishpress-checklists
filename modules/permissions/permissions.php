@@ -129,7 +129,7 @@ class PPCH_Permissions extends Module
                     true,
                     in_array($slug, $selected),
                     false
-                ) . '>' . esc_html($role['name']) . '</option>';
+                ) . '>' . esc_html_x($role['name'], 'User role') . '</option>';
         }
         $rolesSelect .= '</select>';
         
