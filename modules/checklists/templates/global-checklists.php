@@ -64,7 +64,7 @@
                                 <span class="<?php echo esc_attr($args['icon']); ?>">
                                     <?php if (isset($args['svg']) && !empty($args['svg'])) : echo $args['svg']; endif; ?>
                                 </span>
-                                <span class="item"><?php esc_html($args['label']); ?></span>
+                                <span class="item"><?php echo esc_html($args['label']); ?></span>
                                 <?php if ($enabled_count > 0) : ?>
                                     <span class="pp-checklists-count-indicator"><?php echo esc_html($enabled_count); ?></span>
                                 <?php endif; ?>
