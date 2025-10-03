@@ -24,7 +24,10 @@ class PPChecklistsWarning extends Component {
         super();
 
         this.state = {
-            requirements: {}
+            requirements: {
+                block: [],
+                warning: []
+            }
         };
 
         this.updateFailedRequirements = this.updateFailedRequirements.bind(this);

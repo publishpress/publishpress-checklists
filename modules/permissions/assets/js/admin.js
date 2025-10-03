@@ -1,5 +1,14 @@
 jQuery(function ($) {
-    $('#pp-checklists-global select').select2();
+    $('#pp-checklists-global select').select2({
+        language: {
+          noResults: function () {
+            return objectL10n_checklists_global_checklist.noResults;
+          },
+          searching: function () {
+            return objectL10n_checklists_global_checklist.searching;
+          }
+        },
+      });
     // Re-initialize select 2 with ajax
     function initializeSelect2(selector, identifier) {
         $(selector).select2({
@@ -24,6 +33,14 @@ jQuery(function ($) {
                         pagination: { more: res.data.has_next },
                     };
                 },
+            },
+            language: {
+                noResults: function () {
+                    return objectL10n_checklists_global_checklist.noResults;
+                },
+                searching: function () {
+                    return objectL10n_checklists_global_checklist.searching;
+                }
             },
         });
     }

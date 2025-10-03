@@ -74,7 +74,7 @@ if (!class_exists('PPCH_Settings')) {
                     'disable_publish_button'   => Base_requirement::VALUE_NO,
                     'show_warning_icon_submit' => Base_requirement::VALUE_YES,
                     'openai_api_key'           => '',
-                    'show_checklists_column'   => 'off',
+                    'delete_data_on_uninstall' => 'off',
                     'who_can_ignore_option'      => Base_requirement::VALUE_YES
                 ],
                 'autoload'             => true,
@@ -630,10 +630,10 @@ if (!class_exists('PPCH_Settings')) {
                 $new_options['disable_publish_button'] = Base_requirement::VALUE_NO;
             }
 
-            if (!isset($new_options['show_checklists_column'])) {
-                $new_options['show_checklists_column'] = 'off';
+            if (!isset($new_options['delete_data_on_uninstall'])) {
+                $new_options['delete_data_on_uninstall'] = 'off';
             }
-            $new_options['show_checklists_column'] = $new_options['show_checklists_column'] === 'on' ? 'on' : 'off';
+            $new_options['delete_data_on_uninstall'] = $new_options['delete_data_on_uninstall'] === 'on' ? 'on' : 'off';
 
             return $new_options;
         }
@@ -764,6 +764,14 @@ if (!class_exists('PPCH_Settings')) {
                 $this->module->options_group_name . '_general'
             );
 
+            add_settings_field(
+                'delete_data_on_uninstall',
+                __('Delete data on uninstall:', 'publishpress-checklists'),
+                [$this, 'settings_delete_data_on_uninstall_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_tools'
+            );
+
             if (!Util::isChecklistsProActive()) {
                 add_settings_field(
                     'status_filter_settings',
@@ -776,9 +784,19 @@ if (!class_exists('PPCH_Settings')) {
 
             if (!Util::isChecklistsProActive()) {
                 add_settings_field(
+                    'duplicate_checklists_settings',
+                    __('Enable Duplicate Checklists:', 'publishpress-checklists'),
+                    [$this, 'settings_duplicate_checklist_option'],
+                    $this->module->options_group_name,
+                    $this->module->options_group_name . '_general'
+                );
+            }
+
+            if (!Util::isChecklistsProActive()) {
+                add_settings_field(
                     'show_checklists_column',
                     __('Show Checklists column in post lists:', 'publishpress-checklists'),
-                    [$this, 'settings_show_checklists_column_option'],
+                    [$this, 'settings_show_checklists_option'],
                     $this->module->options_group_name,
                     $this->module->options_group_name . '_general'
                 );
@@ -836,6 +854,13 @@ if (!class_exists('PPCH_Settings')) {
                 $this->module->options_group_name . '_integration'
             );
 
+            add_settings_section(
+                $this->module->options_group_name . '_tools',
+                __return_false(),
+                [$this, 'settings_section_tools'],
+                $this->module->options_group_name
+            );
+
             /**
              * Post Types
              */
@@ -891,21 +916,42 @@ if (!class_exists('PPCH_Settings')) {
         }
 
         /**
+         * Displays the promo field for duplicate checklists in the free version
+         *
+         * @param array $args
+         */
+        public function settings_duplicate_checklist_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_duplicate_checklist_settings';
+            $value = 'no';
+
+            echo '<label for="' . esc_attr($id) . '" class="disabled-pro-option">';
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[duplicate_checklist_settings]" '
+                . checked($value, 'yes', false) . ' disabled="disabled" />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'This allows users to duplicate existing checklist task.',
+                'publishpress-checklists'
+            );
+            echo '</label>';
+            echo ' <a href="https://publishpress.com/links/checklists-menu" target="_blank" class="pro-badge">PRO</a>';
+        }
+
+        /**
          * Displays the checkbox to enable or disable the Checklists column in post lists
          * close to the submit button
          *
          * @param array
          */
-        public function settings_show_checklists_column_option($args = [])
+        public function settings_show_checklists_option($args = [])
         {
-            $id    = $this->module->options_group_name . '_show_checklists_column';
+            $id    = $this->module->options_group_name . '_show_checklists_settings';
             $value = 'no';
 
             echo '<label for="' . esc_attr($id) . '" class="disabled-pro-option">';
-            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[show_checklists_column]" '
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[show_checklists_settings]" '
                 . checked($value, 'yes', false) . ' disabled="disabled" />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'Show Checklists column in post lists',
+                'Add a Checklists column to the Posts screen showing how many requirements are complete.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -927,7 +973,27 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[show_warning_icon_submit]" '
                 . checked($value, 'yes', false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This will display a warning icon in the "Checklists" box.',
+                'This will display a warning icon in the "Checklists" box if requirements are incomplete.',
+                'publishpress-checklists'
+            );
+            echo '</label>';
+        }
+
+        /**
+         * Displays the checkbox to enable deleting plugin data on uninstall
+         *
+         * @param array $args
+         */
+        public function settings_delete_data_on_uninstall_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_delete_data_on_uninstall';
+            $value = isset($this->module->options->delete_data_on_uninstall) ? $this->module->options->delete_data_on_uninstall : 'off';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="checkbox" value="on" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[delete_data_on_uninstall]" '
+                . checked($value, 'on', false) . ' />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'When enabled, all PublishPress Checklists data will be deleted if the plugin is uninstalled.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -948,7 +1014,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[who_can_ignore_option]" '
                 . checked($value, 'yes', false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This will show "Who can ignore" options',
+                'This will show "Who can ignore" options.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -1087,6 +1153,7 @@ if (!class_exists('PPCH_Settings')) {
                     '#ppch-tab-general'     => esc_html__('General', 'publishpress-checklists'),
                     '#ppch-tab-publishing-options' => esc_html__('Publishing Options', 'publishpress-checklists'),
                     '#ppch-tab-integration'       => esc_html__('Integration', 'publishpress-checklists'),
+                    '#ppch-tab-tools'       => esc_html__('Tools', 'publishpress-checklists'),
                 ]
             );
 
@@ -1111,6 +1178,11 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_section_integration()
         {
             echo '<input type="hidden" id="ppch-tab-integration" />';
+        }
+
+        public function settings_section_tools()
+        {
+            echo '<input type="hidden" id="ppch-tab-tools" />';
         }
     }
 }

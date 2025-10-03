@@ -645,6 +645,8 @@ if (!class_exists('PPCH_Checklists')) {
                             'Which roles can mark this task as complete?',
                             'publishpress-checklists'
                         ),
+                        'noResults'         => esc_html__('No results found', 'publishpress-checklists'),
+                        'searching'         => esc_html__('Searching…', 'publishpress-checklists'),
                         'remove'            => esc_html__('Remove', 'publishpress-checklists'),
                         'custom_enter_name' => esc_html__('Enter name of custom task', 'publishpress-checklists'),
                         'openai_enter_name' => esc_html__('Enter OpenAI task prompt', 'publishpress-checklists'),
@@ -850,7 +852,7 @@ if (!class_exists('PPCH_Checklists')) {
                         ),
                         'show_warning_icon_submit' => Base_requirement::VALUE_YES === $legacyPlugin->settings->module->options->show_warning_icon_submit,
                         'disable_publish_button'   => Base_requirement::VALUE_YES === $legacyPlugin->settings->module->options->disable_publish_button,
-                        'title_warning_icon'       => esc_html__('One or more items in the checklist are not completed'),
+                        'title_warning_icon'       => esc_html__('One or more items in the checklist are not completed', 'publishpress-checklists'),
                         'is_gutenberg_active'      => $this->is_gutenberg_active(),
                         'user_can_manage_options'  => current_user_can('manage_options'),
                         'configure_url'            => esc_url($this->get_admin_link()),
