@@ -29,3 +29,6 @@ builder.yml
 /local.sh
 /packages
 /lib/**/.git
+
+dev-workspace/.cache
+.env
