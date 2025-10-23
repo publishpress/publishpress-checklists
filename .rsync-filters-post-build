@@ -17,3 +17,5 @@
 - vendor/woocommerce/action-scheduler/changelog.txt
 - CONTRIBUTING.md
 - assets_wp
+- .env
+- .env.example
