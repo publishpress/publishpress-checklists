@@ -63,3 +63,5 @@
 - vendor/publishpress/wordpress-version-notices/tests
 - CONTRIBUTING.md
 - assets_wp
+- .phplint-cache
+- .phplint.cache

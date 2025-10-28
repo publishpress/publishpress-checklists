@@ -19,3 +19,7 @@
 - assets_wp
 - .env
 - .env.example
+- .env.testing.dist
+- .prettierrc
+- .rsync-filters-post-build
+- .rsync-filters-pre-build
