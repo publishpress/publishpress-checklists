@@ -17,3 +17,4 @@ tests export-ignore
 webpack.config.js export-ignore
 CONTRIBUTING.md export-ignore
 .env.example export-ignore
+.wordpress-org export-ignore

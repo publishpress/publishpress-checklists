@@ -16,4 +16,5 @@ exclude:
   - assets
   - cache
   - languages
+  - .wordpress-org
 warning: false
