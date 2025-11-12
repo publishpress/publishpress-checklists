@@ -10,7 +10,8 @@
     }
   ],
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "process-timeout": 3600
   },
   "repositories": [
   ],
@@ -33,7 +34,11 @@
     "check:lint": "phplint",
     "pre-autoload-dump": "composer dumpautoload --working-dir=./lib",
     "pre-update-cmd": "composer update --working-dir=./lib",
-    "pre-install-cmd": "composer install --working-dir=./lib"
+    "pre-install-cmd": "composer install --working-dir=./lib",
+    "translate": "lib/vendor/bin/publishpress-translate",
+    "translate:dry-run": "lib/vendor/bin/publishpress-translate --dry-run",
+    "translate:download": "lib/vendor/bin/publishpress-translate --download",
+    "translate:upload": "lib/vendor/bin/publishpress-translate --upload"
   },
   "minimum-stability": "stable",
   "extra": {
