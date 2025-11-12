@@ -10,8 +10,7 @@
     }
   ],
   "config": {
-    "preferred-install": "dist",
-    "process-timeout": 3600
+    "preferred-install": "dist"
   },
   "repositories": [
   ],
