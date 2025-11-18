@@ -13,6 +13,9 @@ services:
         stdin_open: true
         tty: true
         working_dir: "/project"
+        environment:
+            OPENAI_API_KEY: ${OPENAI_API_KEY}
+            WEBLATE_API_TOKEN: ${WEBLATE_API_TOKEN}
         volumes:
             - ../../:/project
             - ../.cache/terminal/.zsh_history:/root/.zsh_history
