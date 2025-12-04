@@ -13,7 +13,11 @@
     "preferred-install": "dist"
   },
   "repositories": [
-  ],
+    {
+        "type": "vcs",
+        "url": "https://github.com/publishpress/publishpress-translator.git"
+    }
+    ],
   "require": {
     "php": ">=7.2.5"
   },
@@ -22,7 +26,8 @@
     "codeception/module-phpbrowser": "^1.0",
     "codeception/module-db": "^1.0",
     "codeception/util-universalframework": "^1.0",
-    "overtrue/phplint": "^2.4"
+    "overtrue/phplint": "^2.4",
+      "publishpress/translations": "^1.0"
   },
   "scripts": {
     "build": "pbuild build",
@@ -33,7 +38,13 @@
     "check:lint": "phplint",
     "pre-autoload-dump": "composer dumpautoload --working-dir=./lib",
     "pre-update-cmd": "composer update --working-dir=./lib",
-    "pre-install-cmd": "composer install --working-dir=./lib"
+    "pre-install-cmd": "composer install --working-dir=./lib",
+    "translate": "vendor/bin/publishpress-translate",
+    "translate:dry-run": "vendor/bin/publishpress-translate --dry-run",
+    "translate:download": "vendor/bin/publishpress-translate --download",
+    "translate:upload": "vendor/bin/publishpress-translate --upload",
+    "translate:force": "vendor/bin/publishpress-translate --force",
+    "translate:force-custom": "vendor/bin/publishpress-translate --force --languages"
   },
   "minimum-stability": "stable",
   "extra": {
