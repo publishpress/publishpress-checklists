@@ -563,6 +563,38 @@ if (!class_exists('PPCH_Checklists')) {
                         'all'
                     );
 
+                    // Add inline CSS for custom colors
+                    $legacyPlugin = Factory::getLegacyPlugin();
+                    $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+                    
+                    $required_complete_color = isset($settings_options->required_complete_color) ? $settings_options->required_complete_color : '#66bb6a';
+                    $required_incomplete_color = isset($settings_options->required_incomplete_color) ? $settings_options->required_incomplete_color : '#ef5350';
+                    $recommended_complete_color = isset($settings_options->recommended_complete_color) ? $settings_options->recommended_complete_color : '#66bb6a';
+                    $recommended_incomplete_color = isset($settings_options->recommended_incomplete_color) ? $settings_options->recommended_incomplete_color : '#ef5350';
+
+                    $custom_css = "
+                        /* Required (block) items - Complete */
+                        .pp-checklists-req.pp-checklists-block.status-yes *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(.request-response *) {
+                            color: {$required_complete_color} !important;
+                        }
+                        
+                        /* Required (block) items - Incomplete */
+                        .pp-checklists-req.pp-checklists-block.status-no *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(.request-response *) {
+                            color: {$required_incomplete_color} !important;
+                        }
+                        
+                        /* Recommended (warning) items - Complete */
+                        .pp-checklists-req.pp-checklists-warning.status-yes *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(.request-response *) {
+                            color: {$recommended_complete_color} !important;
+                        }
+                        
+                        /* Recommended (warning) items - Incomplete */
+                        .pp-checklists-req.pp-checklists-warning.status-no *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(.request-response *) {
+                            color: {$recommended_incomplete_color} !important;
+                        }
+                    ";
+                    wp_add_inline_style('pp-checklists-requirements', $custom_css);
+
                     wp_register_style(
                         'pp-remodal',
                         $this->module_url . 'assets/css/remodal.css',
@@ -814,6 +846,11 @@ if (!class_exists('PPCH_Checklists')) {
                     true
                 );
 
+                // Get custom icon settings
+                $settings_options = $legacyPlugin->settings->module->options;
+                $complete_icon = isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes';
+                $incomplete_icon = isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no';
+
                 wp_localize_script(
                     'pp-checklists-requirements',
                     'ppChecklists',
@@ -857,6 +894,10 @@ if (!class_exists('PPCH_Checklists')) {
                         'user_can_manage_options'  => current_user_can('manage_options'),
                         'configure_url'            => esc_url($this->get_admin_link()),
                         'status_filter_enabled'    => isset($options->status_filter_enabled) ? $options->status_filter_enabled : 'off',
+                        'customIcons'              => [
+                            'complete'   => $complete_icon,
+                            'incomplete' => $incomplete_icon,
+                        ],
                     ]
                 );
 
@@ -1136,6 +1177,9 @@ if (!class_exists('PPCH_Checklists')) {
                         PPCH_VERSION,
                         true
                     );
+                    $legacyPlugin = Factory::getLegacyPlugin();
+                    $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+                    
                     wp_localize_script(
                         'pp-checklists-panel-gutenberg',
                         'i18n',
@@ -1146,6 +1190,14 @@ if (!class_exists('PPCH_Checklists')) {
                             'required' => __("required", "publishpress-checklists"),
                             'elementorNotice' => __("Checklists tasks are not available in Elementor editors", "publishpress-checklists"),
                             'isElementorEnabled' => ElementorUtils::isElementorEnabled() ? "1" : "0",
+                            'customIcons' => array(
+                                'complete' => isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes',
+                                'incomplete' => isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no',
+                            ),
+                            'customColors' => array(
+                                'complete' => isset($settings_options->complete_color) ? $settings_options->complete_color : '#66bb6a',
+                                'incomplete' => isset($settings_options->incomplete_color) ? $settings_options->incomplete_color : '#ef5350',
+                            ),
                         )
                     );
                 }

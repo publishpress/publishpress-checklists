@@ -207,6 +207,20 @@ class PPChecklistsPanel extends Component {
         }
     };
 
+    /**
+     * Get the icon class based on status
+     * 
+     * @param {string} rule - 'block' (Required) or 'warning' (Recommended) - not used anymore
+     * @param {boolean} status - true (complete) or false (incomplete)
+     * @returns {string} - Dashicon class name
+     */
+    getIconClass = (rule, status) => {
+        const customIcons = i18n.customIcons || {};
+        
+        // Use the same icons for both Required and Recommended
+        return status ? (customIcons.complete || 'dashicons-yes') : (customIcons.incomplete || 'dashicons-no');
+    };
+
     render() {
         const { showRequiredLegend, requirements } = this.state;
         
@@ -256,7 +270,7 @@ class PPChecklistsPanel extends Component {
                                                 {req.is_custom || req.require_button ? (
                                                     <input type="hidden" name={`_PPCH_custom_item[${req.id}]`} value={req.status ? 'yes' : 'no'} />
                                                 ) : null}
-                                                <div className={`status-icon dashicons ${req.is_custom ? (req.status ? 'dashicons-yes' : '') : (req.status ? 'dashicons-yes' : 'dashicons-no')}`}></div>
+                                                <div className={`status-icon dashicons ${req.is_custom ? (req.status ? 'dashicons-yes' : '') : this.getIconClass(req.rule, req.status)}`}></div>
                                                 <div className="status-label">
                                                     <span className="req-label" dangerouslySetInnerHTML={{ __html: req.label }} />
                                                     {req.rule === 'block' ? (
