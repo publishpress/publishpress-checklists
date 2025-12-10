@@ -27,7 +27,7 @@
     "codeception/module-db": "^1.0",
     "codeception/util-universalframework": "^1.0",
     "overtrue/phplint": "^2.4",
-      "publishpress/translations": "^1.0"
+    "publishpress/translations": "dev-self-hosted"
   },
   "scripts": {
     "build": "pbuild build",
