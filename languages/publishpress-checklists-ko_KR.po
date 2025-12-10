@@ -1,16 +1,15 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Plugins - PublishPress Checklists: Pre-Publishing "
-"Approval Task Checklist for WordPress Content - Development (trunk)\n"
-"POT-Creation-Date: 2024-10-15 21:56+0700\n"
-"PO-Revision-Date: 2025-11-11 11:45+0000\n"
+"Project-Id-Version: PublishPress Checklists\n"
+"POT-Creation-Date: 2025-10-01 11:08+0000\n"
+"PO-Revision-Date: 2025-11-11 11:53+0000\n"
 "Last-Translator: Anderson Grudtner Martins <anderson@publishpress.com>\n"
-"Language-Team: German\n"
+"Language-Team: Anderson Grudtner Martins <anderson@publishpress.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -24,9 +23,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
-"Language: de-DE\n"
-"Report-Msgid-Bugs-To: \n"
-"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"Language: ko-KR\n"
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
@@ -35,102 +32,102 @@ msgstr "%d "
 
 #: core/Requirement/Image_alt_count.php:48
 msgid "%d character in Alt text"
-msgstr "%d Zeichen im Alt-Text"
+msgstr "%d 문자(들) Alt 텍스트에"
 
 #: core/Requirement/Filled_excerpt.php:48
 msgid "%d character in excerpt"
-msgstr "%d Zeichen im Textauszug"
+msgstr "%d 문자(들) 발췌에"
 
 #: core/Requirement/Title_count.php:46
 msgid "%d character in title"
-msgstr "%d Zeichen in der Überschrift"
+msgstr "%d 문자(들) 제목에"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 msgid "%d character in Yoast SEO focus keyword"
-msgstr "%d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "%d 문자(들) Yoast SEO 포커스 키워드에"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 msgid "%d character in Yoast SEO meta description"
-msgstr "%d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "%d 문자(들) Yoast SEO 메타 설명에"
 
 #: core/Requirement/Image_alt_count.php:49
 msgid "%d characters in Alt text"
-msgstr "%d Zeichen im Alt-Text"
+msgstr "%d 문자(들) Alt 텍스트에"
 
 #: core/Requirement/Filled_excerpt.php:49
 msgid "%d characters in excerpt"
-msgstr "%d Zeichen im Textauszug"
+msgstr "%d 문자(들) 발췌에"
 
 #: core/Requirement/Title_count.php:47
 msgid "%d characters in title"
-msgstr "%d Zeichen in der Überschrift"
+msgstr "%d 문자(들) 제목에"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 msgid "%d characters in Yoast SEO focus keyword"
-msgstr "%d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "%d 문자(들) Yoast SEO 포커스 키워드에"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 msgid "%d characters in Yoast SEO meta description"
-msgstr "%d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "%d 문자(들) Yoast SEO 메타 설명에"
 
 #: core/Requirement/External_links.php:48
 msgid "%d external link in content"
-msgstr "%d externer Link im Inhalt"
+msgstr "%d 외부 링크 콘텐츠에"
 
 #: core/Requirement/External_links.php:49
 msgid "%d external links in content"
-msgstr "%d externe Links im Inhalt"
+msgstr "%d 외부 링크들 콘텐츠에"
 
 #: core/Requirement/Internal_links.php:48
 msgid "%d internal link in content"
-msgstr "%d interner Link im Inhalt"
+msgstr "%d 내부 링크 콘텐츠에"
 
 #: core/Requirement/Internal_links.php:49
 msgid "%d internal links in content"
-msgstr "%d interne Links im Inhalt"
+msgstr "%d 내부 링크들 콘텐츠에"
 
 #: core/Requirement/Tags_count.php:52
 msgid "%d tag"
-msgstr "%d Schlagwort"
+msgstr "%d 태그"
 
 #: core/Requirement/Tags_count.php:53
 msgid "%d tags"
-msgstr "%d Schlagwörter"
+msgstr "%d 태그들"
 
 #: core/Requirement/Words_count.php:48
 msgid "%d word in content"
-msgstr "%d Wort im Inhalt"
+msgstr "%d 단어 콘텐츠에"
 
 #: core/Requirement/Words_count.php:49
 msgid "%d words in content"
-msgstr "%d Wörter im Inhalt"
+msgstr "%d 단어들 콘텐츠에"
 
 #: core/Requirement/Categories_count.php:53
 #, php-format
 msgid "%s categories"
-msgstr "%s Kategorien"
+msgstr "%s 카테고리"
 
 #: core/Requirement/Categories_count.php:52
 #, php-format
 msgid "%s category"
-msgstr "%s Kategorie"
+msgstr "%s 카테고리"
 
 #: modules/checklists/pro-requirements.php:294
 #, php-format
 msgid "%s is filled"
-msgstr "%s ist ausgefüllt"
+msgstr "%s 가 채워졌습니다"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About"
-msgstr "Über"
+msgstr "정보"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
-msgstr "Über PublishPress Checklisten"
+msgstr "PublishPress 체크리스트에 대하여"
 
 #: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
-msgstr "Barrierefreiheit"
+msgstr "접근성"
 
 #: core/Utils/FieldsTabs.php:126
 msgid "ACF"
@@ -140,315 +137,305 @@ msgstr "ACF"
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
-msgstr ""
-"Fügen Sie eine Checklisten-Spalte zum Bildschirm Beiträge hinzu, die "
-"anzeigt, wie viele Anforderungen erfüllt sind."
+msgstr "게시물 화면에 체크리스트 열을 추가하여 완료된 요구 사항 수를 표시합니다."
 
 #: modules/checklists/checklists.php:1053
 msgid "Add custom task"
-msgstr "Eigene Aufgabe hinzufügen"
+msgstr "사용자 정의 작업 추가"
 
 #: modules/checklists/templates/global-checklists.php:206
 msgid "Add OpenAI Prompt task"
-msgstr "OpenAI Prompt-Aufgabe hinzufügen"
+msgstr "OpenAI 프롬프트 작업 추가"
 
 #: modules/settings/settings.php:877
 msgid "Add to these post types:"
-msgstr "Für diese Beitragstypen aktivieren:"
+msgstr "다음 게시물 유형에 추가:"
 
 #: modules/checklists/checklists.php:677
 msgid "Adventurous Tone Content"
-msgstr "Abenteuerlicher Ton Inhalt"
+msgstr "모험적인 톤 콘텐츠"
 
 #: core/Requirement/Image_alt.php:44 core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
-msgstr "Alle Bilder haben Alternativtext"
+msgstr "모든 이미지에 Alt 텍스트가 있습니다"
 
 #: core/Utils/FieldsTabs.php:111
 msgid "All in One SEO"
-msgstr "All-in-One SEO"
+msgstr "올인원 SEO"
 
 #: core/Requirement/Validate_links.php:65
 #: core/Requirement/Validate_links.php:66
 msgid "All links use a valid format"
-msgstr "Alle Links im gültigen Format"
+msgstr "모든 링크가 유효한 형식을 사용합니다"
 
 #: core/Requirement/Openai_item.php:286
 msgid "An error occured."
-msgstr "Ein Fehler ist aufgetreten."
+msgstr "오류가 발생했습니다."
 
 #: core/Requirement/Openai_item.php:362
 #, php-format
 msgid "API Error: %1s."
-msgstr "API-Fehler: %1s."
+msgstr "API 오류: %1s."
 
 #: core/Utils/FieldsTabs.php:33
 msgid "Approval"
-msgstr "Genehmigung"
+msgstr "승인"
 
 #: core/Requirement/Approved_by.php:48
 #, php-format
 msgid "Approved by %s"
-msgstr "Genehmigt von %s"
+msgstr "%s 에 의해 승인됨"
 
 #: core/Requirement/Approved_by.php:49
 msgid "Approved by a user in this role"
-msgstr "Genehmigt von einem Nutzer dieser Rolle"
+msgstr "이 역할의 사용자에 의해 승인됨"
 
 #: modules/checklists/checklists.php:829
 msgid "Are you sure you want to publish anyway?"
-msgstr "Bist du sicher, dass du dennoch veröffentlichen möchtest?"
+msgstr "그래도 게시하시겠습니까?"
 
 #: modules/checklists/checklists.php:833
 msgid "Are you sure you want to update the published post anyway?"
-msgstr "Bist du sicher, dass du den Beitrag dennoch veröffentlichen willst?"
+msgstr "발행된 게시물을 업데이트하시겠습니까?"
 
 #: core/Utils/FieldsTabs.php:41
 msgid "Audio / Video"
-msgstr "Audio / Video"
+msgstr "오디오 / 비디오"
 
 #: core/Requirement/Taxonomies_count.php:57
 msgid "Between %d and %d "
-msgstr "Zwischen %d und %d "
+msgstr "%d와 %d 사이"
 
 #: core/Requirement/Image_alt_count.php:50
 msgid "Between %d and %d characters in Alt text"
-msgstr "Zwischen %d und %d Zeichen im Alt-Text"
+msgstr "대체 텍스트에서 %d와 %d 문자 사이"
 
 #: core/Requirement/Filled_excerpt.php:50
 msgid "Between %d and %d characters in excerpt"
-msgstr "Zwischen %d und %d Zeichen im Textauszug"
+msgstr "발췌에서 %d와 %d 문자 사이"
 
 #: core/Requirement/Title_count.php:48
 msgid "Between %d and %d characters in title"
-msgstr "Zwischen %d und %d Zeichen in der Überschrift"
+msgstr "제목에서 %d와 %d 문자 사이"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
-msgstr "Zwischen %d und %d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "Yoast SEO 포커스 키워드에서 %d와 %d 문자 사이"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 msgid "Between %d and %d characters in Yoast SEO meta description"
-msgstr "Zwischen %d und %d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "Yoast SEO 메타 설명에서 %d와 %d 문자 사이"
 
 #: core/Requirement/External_links.php:50
 msgid "Between %d and %d external links in content"
-msgstr "Zwischen %d und %d externe Links im Inhalt"
+msgstr "내용에서 %d와 %d 외부 링크 사이"
 
 #: core/Requirement/Internal_links.php:50
 msgid "Between %d and %d internal links in content"
-msgstr "Zwischen %d und %d internen Links im Inhalt"
+msgstr "내용에서 %d와 %d 내부 링크 사이"
 
 #: core/Requirement/Tags_count.php:54
 msgid "Between %d and %d tags"
-msgstr "Zwischen %d und %d Schlagwörter"
+msgstr "태그에서 %d와 %d 사이"
 
 #: core/Requirement/Words_count.php:50
 msgid "Between %d and %d words in content"
-msgstr "Zwischen %d und %d Wörtern im Inhalt"
+msgstr "내용에서 %d와 %d 단어 사이"
 
 #: core/Requirement/Categories_count.php:54
 #, php-format
 msgid "Between %s and %s categories"
-msgstr "Zwischen %s und %s Kategorien"
+msgstr "%s와 %s 카테고리 사이"
 
 #: core/Utils/FieldsTabs.php:57
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "카테고리"
 
 #: core/Legacy/LegacyPlugin.php:212 modules/settings/settings.php:493
 msgid "Cheatin&#8217; uh?"
-msgstr "Schummeln, oder?"
+msgstr "속임수인가요?"
 
 #: modules/checklists/checklists.php:883
 msgid "Check Now"
-msgstr "Jetzt prüfen"
+msgstr "지금 확인하기"
 
 #: modules/checklists/checklists.php:748 modules/checklists/checklists.php:828
 msgid "Checklist"
-msgstr "Checkliste"
+msgstr "체크리스트"
 
 #: core/Plugin.php:103 core/Legacy/LegacyPlugin.php:348
 #: modules/checklists/checklists.php:110 modules/checklists/checklists.php:985
 #: modules/checklists/checklists.php:1000
 #: modules/checklists/checklists.php:1144
 msgid "Checklists"
-msgstr "Checklisten"
+msgstr "체크리스트들"
 
 #: modules/settings/settings.php:62 modules/settings/settings.php:118
 msgid "Checklists Settings"
-msgstr "Checklist-Einstellungen"
+msgstr "체크리스트 설정"
 
 #: modules/checklists/checklists.php:1147
 #: modules/checklists/templates/meta-box.php:11
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr "Checklistenaufgaben sind in Elementor-Editoren nicht verfügbar"
+msgstr "체크리스트 작업은 Elementor 편집기에서 사용할 수 없습니다."
 
 #: modules/checklists/checklists.php:657
 msgid "Clear Content"
-msgstr "Inhalt löschen"
+msgstr "내용 지우기"
 
 #: modules/checklists/templates/footer.php:37
 msgid "Contact"
-msgstr "Kontakt"
+msgstr "연락처"
 
 #: modules/checklists/templates/footer.php:37
 msgid "Contact the PublishPress team"
-msgstr "Kontaktieren Sie das PublishPress-Team"
+msgstr "PublishPress 팀에 연락하기"
 
 #: core/Utils/FieldsTabs.php:25
 msgid "Content"
-msgstr "Inhalt"
+msgstr "내용"
 
 #: core/Utils/FieldsTabs.php:73 core/Requirement/Custom_item.php:60
 #: core/Requirement/Custom_item.php:61
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "사용자 정의"
 
 #: modules/checklists/templates/global-checklists.php:199
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
-msgstr ""
-"Eigene Aufgaben werden nicht automatisch erledigt. Die entsprechende "
-"Checkbox muss manuell bestätigt werden."
+msgstr "사용자 정의 작업은 자동으로 완료되지 않습니다. 사용자는 작업이 완료되었음을 표시하기 위해 체크박스를 선택해야 합니다."
 
 #: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
-msgstr "Definiere Anforderungen an Permalink"
+msgstr "퍼머링크와 관련된 작업 정의"
 
 #: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
-msgstr "Definiere Yoast SEO Aufgaben"
+msgstr "Yoast SEO와 관련된 작업 정의"
 
 #: modules/settings/settings.php:769
 msgid "Delete data on uninstall:"
-msgstr "Daten bei Deinstallation löschen:"
+msgstr "제거 시 데이터 삭제:"
 
 #: modules/checklists/templates/global-checklists.php:187
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "설명"
 
 #: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
-msgstr "Detaillierte Dokumentation ist auch auf der Plugin-Website verfügbar."
+msgstr "자세한 문서는 플러그인 웹사이트에서도 확인할 수 있습니다."
 
 #: modules/settings/settings.php:833
 msgid "Disable \"Publish\" button:"
-msgstr "„Veröffentlichen“-Schaltfläche deaktivieren:"
+msgstr "\"발행\" 버튼 비활성화:"
 
 #: modules/settings/settings.php:825
 msgid "Disable \"Quick Edit\" completely:"
-msgstr "„Schnellbearbeitung“ vollständig deaktivieren:"
+msgstr "\"빠른 편집\" 완전히 비활성화:"
 
 #: modules/settings/settings.php:817
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
-msgstr "Deaktivieren Sie die Option „Status“, wenn Sie „Quick Edit“ verwenden:"
+msgstr "\"빠른 편집\"을 사용할 때 \"상태\" 옵션 비활성화:"
 
 #: core/API/LabelMapper.php:39 modules/checklists/checklists.php:1075
 msgid "Disabled"
-msgstr "Deaktiviert"
+msgstr "비활성화됨"
 
 #: modules/settings/settings.php:457
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
-msgstr ""
-"Deaktiviert, da add_post_type_support('%1$s', '%2$s') in der geladenen "
-"Datei enthalten."
+msgstr "add_post_type_support('%1$s', '%2$s')가 로드된 파일에 포함되어 있어 비활성화됨."
 
 #: modules/checklists/checklists.php:1051
 msgid "Disabled, Recommended or Required"
-msgstr "Deaktiviert, Empfohlen oder Erforderlich"
+msgstr "비활성화됨, 권장 또는 필수"
 
 #: modules/settings/settings.php:1037
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
-msgstr ""
-"Es wird empfohlen, die Option „Status“ zu deaktivieren, da sie verwendet "
-"werden kann, um die Anforderungen der Checklisten zu umgehen."
+msgstr "\"상태\" 옵션을 비활성화하는 것이 권장됩니다. 이를 통해 체크리스트 요구 사항을 피할 수 있습니다."
 
 #: modules/checklists/templates/footer.php:30
 msgid "Documentation"
-msgstr "Dokumentation (engl.)"
+msgstr "문서"
 
 #: modules/checklists/checklists.php:673
 msgid "Empathetic Tone Content"
-msgstr "Empathischer Ton Inhalt"
+msgstr "공감적인 톤의 내용"
 
 #: modules/settings/settings.php:788
 msgid "Enable Duplicate Checklists:"
-msgstr "Duplikat-Checklisten aktivieren:"
+msgstr "중복 체크리스트 활성화:"
 
 #: modules/settings/settings.php:778
 msgid "Enable Status Filter:"
-msgstr "Statusfilter aktivieren:"
+msgstr "상태 필터 활성화:"
 
 #: modules/settings/settings.php:753
 msgid "Enable Who Can Ignore:"
-msgstr "Wer kann ignorieren aktivieren:"
+msgstr "무시할 수 있는 사용자 활성화:"
 
 #: modules/settings/settings.php:306
 msgid "Enabled features"
-msgstr "Aktivierte Elemente"
+msgstr "활성화된 기능"
 
 #: core/Requirement/Custom_item.php:81 modules/checklists/checklists.php:651
 msgid "Enter name of custom task"
-msgstr "Name der benutzerdefinierten Aufgabe eingeben"
+msgstr "사용자 정의 작업의 이름을 입력하세요"
 
 #: core/Requirement/Openai_item.php:100 modules/checklists/checklists.php:652
 msgid "Enter OpenAI task prompt"
-msgstr "OpenAI-Aufgabenaufforderung eingeben"
+msgstr "OpenAI 작업 프롬프트를 입력하세요"
 
 #: modules/settings/settings.php:1098
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
-msgstr ""
-"Geben Sie Ihren API-Schlüssel ein, um OpenAI-Eingabeaufforderungen in "
-"Checklistenaufgaben zu verwenden."
+msgstr "체크리스트 작업에서 OpenAI 프롬프트를 사용하려면 API 키를 입력하세요."
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
-msgstr "Vorschaubild"
+msgstr "특집 이미지"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
-msgstr "Das vorgestellte Bild hat einen Alternativtext"
+msgstr "특집 이미지에는 Alt 텍스트가 있습니다"
 
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
-msgstr "Vorschaubild hat eine Bildunterschrift"
+msgstr "특집 이미지에는 캡션이 있습니다"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "Vorgestelltes Bild wurde hinzugefügt"
+msgstr "특집 이미지가 추가되었습니다"
 
 #: modules/settings/settings.php:297
 msgid "Features"
-msgstr "Funktionen"
+msgstr "기능"
 
 #: modules/settings/settings.php:298
 msgid "Feel free to select only the features you need."
-msgstr "Wählen Sie nur die benötigten Eigenschaften aus."
+msgstr "필요한 기능만 선택하시면 됩니다."
 
 #: modules/checklists/checklists.php:661
 msgid "Friendly Tone Content"
-msgstr "Freundlicher Ton Inhalt"
+msgstr "친근한 어조 콘텐츠"
 
 #: modules/settings/settings.php:1153
 msgid "General"
-msgstr "Allgemein"
+msgstr "일반"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
 msgid "Good"
-msgstr "Gut"
+msgstr "좋음"
 
 #. Author URI of the plugin
 msgid "https://publishpress.com"
@@ -461,346 +448,344 @@ msgstr "https://publishpress.com/"
 #: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
-msgstr "Wenn du %s magst, hinterlasse eine %s Wertung. Danke!"
+msgstr "%s를 좋아하신다면 %s 평가를 남겨주세요. 감사합니다!"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
-msgstr ""
-"Wenn Sie Hilfe benötigen oder einen neuen Funktionswunsch haben, lassen Sie "
-"es uns wissen."
+msgstr "도움이 필요하시거나 새로운 기능 요청이 있으시면 알려주세요."
 
 #: core/Utils/FieldsTabs.php:37
 msgid "Images"
-msgstr "Bilder"
+msgstr "이미지"
 
 #: modules/settings/settings.php:1155
 msgid "Integration"
-msgstr "Integration"
+msgstr "통합"
 
 #: core/Requirement/Openai_item.php:401
 msgid "Invalid response"
-msgstr "Ungültige Antwort"
+msgstr "잘못된 응답"
 
 #: modules/checklists/checklists.php:658
 msgid "Is this content clear and easy to read?"
-msgstr "Ist dieser Inhalt klar und leicht zu lesen?"
+msgstr "이 콘텐츠가 명확하고 읽기 쉬운가요?"
 
 #: modules/checklists/checklists.php:678
 msgid "Is this content tone adventurous?"
-msgstr "Ist dieser Inhalt tonmäßig abenteuerlich?"
+msgstr "이 콘텐츠의 톤이 모험적인가요?"
 
 #: modules/checklists/checklists.php:674
 msgid "Is this content tone empathetic?"
-msgstr "Ist dieser Inhalt tonmäßig empathisch?"
+msgstr "이 콘텐츠의 톤이 공감적인가요?"
 
 #: modules/checklists/checklists.php:662
 msgid "Is this content tone friendly?"
-msgstr "Ist dieser Inhalt tonmäßig freundlich?"
+msgstr "이 콘텐츠의 톤이 친근한가요?"
 
 #: modules/checklists/checklists.php:670
 msgid "Is this content tone persuasive?"
-msgstr "Ist dieser Inhalt tonmäßig überzeugend?"
+msgstr "이 콘텐츠의 톤이 설득력 있는가요?"
 
 #: modules/checklists/checklists.php:666
 msgid "Is this content tone professional?"
-msgstr "Ist dieser Inhalt tonmäßig professionell?"
+msgstr "이 콘텐츠의 톤이 전문적인가요?"
 
 #: modules/checklists/checklists.php:682
 msgid "Is this content tone promotional?"
-msgstr "Ist dieser Inhalt tonmäßig werblich?"
+msgstr "이 콘텐츠의 톤이 홍보적인가요?"
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
-msgstr "Lateinischer Zeichensatz im Permalink"
+msgstr "퍼머링크의 라틴 문자"
 
 #: core/Utils/FieldsTabs.php:49
 msgid "Links"
-msgstr "Links"
+msgstr "링크"
 
 #: core/Requirement/Pro_Requirement.php:113
 #: core/Requirement/Base_counter.php:310
 msgid "Max"
-msgstr "Max"
+msgstr "최대"
 
 #: core/Requirement/Taxonomies_count.php:53
 #: core/Requirement/Taxonomies_count.php:54
 msgid "Maximum of %d "
-msgstr "Maximum von %d "
+msgstr "최대 %d "
 
 #: core/Requirement/Image_alt_count.php:46
 msgid "Maximum of %d character in Alt text"
-msgstr "Maximal %d Zeichen im Alt-Text"
+msgstr "Alt 텍스트에서 최대 %d 자"
 
 #: core/Requirement/Filled_excerpt.php:46
 msgid "Maximum of %d character in excerpt"
-msgstr "Maximum von %d Zeichen im Textauszug"
+msgstr "발췌에서 최대 %d 자"
 
 #: core/Requirement/Title_count.php:44
 msgid "Maximum of %d character in title"
-msgstr "Maximum von %d Zeichen in der Überschrift"
+msgstr "제목에서 최대 %d 자"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 msgid "Maximum of %d character in Yoast SEO focus keyword"
-msgstr "Maximal %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Yoast SEO 집중 키워드에서 최대 %d 자"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 msgid "Maximum of %d character in Yoast SEO meta description"
-msgstr "Maximal %d Zeichen in der Yoast SEO Meta-Beschreibung"
+msgstr "Yoast SEO 메타 설명에서 최대 %d 자"
 
 #: core/Requirement/Image_alt_count.php:47
 msgid "Maximum of %d characters in Alt text"
-msgstr "Maximal %d Zeichen im Alt-Text"
+msgstr "Alt 텍스트에서 최대 %d 자"
 
 #: core/Requirement/Filled_excerpt.php:47
 msgid "Maximum of %d characters in excerpt"
-msgstr "Maximum von %d Zeichen im Textauszug"
+msgstr "발췌에서 %d자 이하"
 
 #: core/Requirement/Title_count.php:45
 msgid "Maximum of %d characters in title"
-msgstr "Maximum von %d Zeichen in der Überschrift"
+msgstr "제목에서 %d자 이하"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
-msgstr "Maximal %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Yoast SEO 초점 키워드에서 %d자 이하"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 msgid "Maximum of %d characters in Yoast SEO meta description"
-msgstr "Maximal %d Zeichen in der Yoast SEO Meta-Beschreibung"
+msgstr "Yoast SEO 메타 설명에서 %d자 이하"
 
 #: core/Requirement/External_links.php:46
 msgid "Maximum of %d external link in content"
-msgstr "Maximum von %d externen Link im Inhalt"
+msgstr "내용에서 %d개의 외부 링크 이하"
 
 #: core/Requirement/External_links.php:47
 msgid "Maximum of %d external links in content"
-msgstr "Maximum von %d externen Links im Inhalt"
+msgstr "내용에서 %d개의 외부 링크 이하"
 
 #: core/Requirement/Internal_links.php:46
 msgid "Maximum of %d internal link in content"
-msgstr "Maximum von %d internen Link im Inhalt"
+msgstr "내용에서 %d개의 내부 링크 이하"
 
 #: core/Requirement/Internal_links.php:47
 msgid "Maximum of %d internal links in content"
-msgstr "Maximum von %d internen Links im Inhalt"
+msgstr "내용에서 %d개의 내부 링크 이하"
 
 #: core/Requirement/Tags_count.php:50
 msgid "Maximum of %d tag"
-msgstr "Maximum von %d Schlagwort"
+msgstr "최대 %d 태그"
 
 #: core/Requirement/Tags_count.php:51
 msgid "Maximum of %d tags"
-msgstr "Maximum von %d Schlagwörtern"
+msgstr "최대 %d 태그"
 
 #: core/Requirement/Words_count.php:46
 msgid "Maximum of %d word in content"
-msgstr "Maximum von %d Wort im Inhalt"
+msgstr "내용에서 %d단어 이하"
 
 #: core/Requirement/Words_count.php:47
 msgid "Maximum of %d words in content"
-msgstr "Maximum von %d Wörtern im Inhalt"
+msgstr "내용에서 %d단어 이하"
 
 #: core/Requirement/Categories_count.php:51
 #, php-format
 msgid "Maximum of %s categories"
-msgstr "Maximum von %s Kategorien"
+msgstr "최대 %s 카테고리"
 
 #: core/Requirement/Categories_count.php:50
 #, php-format
 msgid "Maximum of %s category"
-msgstr "Maximum %s Kategorie"
+msgstr "최대 %s 카테고리"
 
 #: core/Requirement/Pro_Requirement.php:112
 #: core/Requirement/Base_counter.php:302
 msgid "Min"
-msgstr "Mindest"
+msgstr "최소"
 
 #: core/Requirement/Taxonomies_count.php:51
 #: core/Requirement/Taxonomies_count.php:52
 msgid "Minimum of %d "
-msgstr "Minimum von %d "
+msgstr "최소 %d "
 
 #: core/Requirement/Image_alt_count.php:44
 msgid "Minimum of %d character in Alt text"
-msgstr "Mindestens %d Zeichen im Alt-Text"
+msgstr "대체 텍스트에서 %d자 이하"
 
 #: core/Requirement/Filled_excerpt.php:44
 msgid "Minimum of %d character in excerpt"
-msgstr "Minimum von %d Zeichen im Textauszug"
+msgstr "발췌에서 %d자 이하"
 
 #: core/Requirement/Title_count.php:42
 msgid "Minimum of %d character in title"
-msgstr "Minimum von %d Zeichen in der Überschrift"
+msgstr "제목에서 %d자 이하"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 msgid "Minimum of %d character in Yoast SEO focus keyword"
-msgstr "Mindestens %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Yoast SEO 초점 키워드에서 %d자 이하"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 msgid "Minimum of %d character in Yoast SEO meta description"
-msgstr "Mindestens %d Zeichen in der Yoast SEO Meta-Beschreibung"
+msgstr "Yoast SEO 메타 설명의 최소 %d자"
 
 #: core/Requirement/Image_alt_count.php:45
 msgid "Minimum of %d characters in Alt text"
-msgstr "Mindestens %d Zeichen im Alt-Text"
+msgstr "대체 텍스트의 최소 %d자"
 
 #: core/Requirement/Filled_excerpt.php:45
 msgid "Minimum of %d characters in excerpt"
-msgstr "Minimum von %d Zeichen im Textauszug"
+msgstr "발췌의 최소 %d자"
 
 #: core/Requirement/Title_count.php:43
 msgid "Minimum of %d characters in title"
-msgstr "Minimum von %d Zeichen in der Überschrift"
+msgstr "제목의 최소 %d자"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
-msgstr "Mindestens %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Yoast SEO 집중 키워드의 최소 %d자"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 msgid "Minimum of %d characters in Yoast SEO meta description"
-msgstr "Mindestens %d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "Yoast SEO 메타 설명의 최소 %d자"
 
 #: core/Requirement/External_links.php:44
 msgid "Minimum of %d external link in content"
-msgstr "Minimum von %d externen Link im Inhalt"
+msgstr "콘텐츠에 최소 %d개의 외부 링크"
 
 #: core/Requirement/External_links.php:45
 msgid "Minimum of %d external links in content"
-msgstr "Minimum von %d externen Links im Inhalt"
+msgstr "콘텐츠에 최소 %d개의 외부 링크"
 
 #: core/Requirement/Internal_links.php:44
 msgid "Minimum of %d internal link in content"
-msgstr "Minimum von %d internen Link im Inhalt"
+msgstr "콘텐츠에 최소 %d개의 내부 링크"
 
 #: core/Requirement/Internal_links.php:45
 msgid "Minimum of %d internal links in content"
-msgstr "Minimum von %d internen Links im Inhalt"
+msgstr "콘텐츠에 최소 %d개의 내부 링크"
 
 #: core/Requirement/Tags_count.php:48
 msgid "Minimum of %d tag"
-msgstr "Minimum von %d Schlagwort"
+msgstr "최소 %d개의 태그"
 
 #: core/Requirement/Tags_count.php:49
 msgid "Minimum of %d tags"
-msgstr "Minimum von %d Schlagwörtern"
+msgstr "최소 %d개의 태그"
 
 #: core/Requirement/Words_count.php:44
 msgid "Minimum of %d word in content"
-msgstr "Minimum von %d Wort im Inhalt"
+msgstr "콘텐츠에 최소 %d개의 단어"
 
 #: core/Requirement/Words_count.php:45
 msgid "Minimum of %d words in content"
-msgstr "Minimum von %d Wörtern im Inhalt"
+msgstr "콘텐츠에 최소 %d개의 단어"
 
 #: core/Requirement/Categories_count.php:49
 #, php-format
 msgid "Minimum of %s categories"
-msgstr "Minimum von %s Kategorien"
+msgstr "최소 %s개의 카테고리"
 
 #: core/Requirement/Categories_count.php:48
 #, php-format
 msgid "Minimum of %s category"
-msgstr "Minimum %s Kategorie"
+msgstr "최소 %s개의 카테고리"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
 msgid "Minimum Yoast SEO analysis score"
-msgstr "Minimum Yoast SEO Analyse-Wert"
+msgstr "최소 Yoast SEO 분석 점수"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
 msgid "Minimum Yoast SEO readability score"
-msgstr "Minimum Yoast SEO Lesbarkeitswert"
+msgstr "최소 Yoast SEO 가독성 점수"
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
-msgstr "Benötigen Sie Unterstützung für PublishPress Checklisten?"
+msgstr "PublishPress 체크리스트 지원이 필요하신가요?"
 
 #: modules/checklists/templates/global-checklists.php:186
 msgid "New Item"
-msgstr "Neues Produkt"
+msgstr "새 항목"
 
 #: modules/checklists/checklists.php:885
 msgid "No"
-msgstr "Nein"
+msgstr "아니요"
 
 #: modules/checklists/templates/global-checklists.php:168
 #, php-format
 msgid "No %s requirements for this post type."
-msgstr "Keine %s-Anforderungen für diesen Beitragstyp."
+msgstr "이 게시물 유형에 대한 %s 요구 사항이 없습니다."
 
 #: modules/checklists/checklists.php:648
 msgid "No results found"
-msgstr "Keine Ergebnisse gefunden"
+msgstr "결과를 찾을 수 없습니다"
 
 #: modules/checklists/checklists.php:845 modules/checklists/checklists.php:849
 msgid "Not required, but important: "
-msgstr "Nicht erforderlich, aber wichtig"
+msgstr "필수는 아니지만 중요합니다: "
 
 #: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
-msgstr "Anzahl an "
+msgstr "수"
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
-msgstr "Anzahl an Kategorien"
+msgstr "카테고리 수"
 
 #: modules/checklists/pro-requirements.php:281
 #, php-format
 msgid "Number of Characters in %s field"
-msgstr "Anzahl der Zeichen im %s-Feld"
+msgstr "%s 필드의 문자 수"
 
 #: core/Requirement/Image_alt_count.php:42
 #: core/Requirement/Image_alt_count.php:43
 msgid "Number of characters in Alt text"
-msgstr "Anzahl Zeichen in der Überschrift"
+msgstr "Alt 텍스트의 문자 수"
 
 #: core/Requirement/Title_count.php:40 core/Requirement/Title_count.php:41
 msgid "Number of characters in title"
-msgstr "Anzahl Zeichen in der Überschrift"
+msgstr "제목의 문자 수"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
-msgstr "Anzahl der Zeichen im Yoast SEO-Fokus-Keyword"
+msgstr "Yoast SEO 초점 키워드의 문자 수"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:39
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
-msgstr "Anzahl der Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "Yoast SEO 메타 설명의 문자 수"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
-msgstr "Zahl der externen Links im Inhalt"
+msgstr "콘텐츠의 외부 링크 수"
 
 #: core/Requirement/Internal_links.php:43
 msgid "Number of internal links in content"
-msgstr "Anzahl der internen Link im Inhalt"
+msgstr "콘텐츠의 내부 링크 수"
 
 #: core/Requirement/Tags_count.php:47
 msgid "Number of tags"
-msgstr "Anzahl Schlagwörter"
+msgstr "태그 수"
 
 #: core/Requirement/Words_count.php:43
 msgid "Number of words in content"
-msgstr "Zahl der Wörter im Inhalt"
+msgstr "콘텐츠의 단어 수"
 
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
 msgid "Numbers of characters in excerpt"
-msgstr "Anzahl Zeichen im Textauszug"
+msgstr "발췌의 문자 수"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
 msgid "OK"
-msgstr "OK"
+msgstr "확인"
 
 #: modules/checklists/checklists.php:884
 msgid "Ok"
-msgstr "Ok"
+msgstr "확인"
 
 #: modules/checklists/checklists.php:855
 msgid "One or more items in the checklist are not completed"
-msgstr "Eins oder mehrere Elemente in der Checkliste sind nicht abgeschlossen"
+msgstr "체크리스트의 하나 이상의 항목이 완료되지 않았습니다"
 
 #: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70
 msgid "Openai"
@@ -808,109 +793,107 @@ msgstr "Openai"
 
 #: modules/settings/settings.php:851
 msgid "OpenAI API Key:"
-msgstr "OpenAI API-Schlüssel:"
+msgstr "OpenAI API 키:"
 
 #: core/Requirement/Openai_item.php:307
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
-msgstr ""
-"OpenAI-Aufgaben erfordern einen API-Schlüssel. Bitte fügen Sie Ihren "
-"API-Schlüssel im Bereich „Einstellungen“ hinzu."
+msgstr "OpenAI 작업에는 API 키가 필요합니다. 설정 영역에 API 키를 추가하십시오."
 
 #: modules/checklists/checklists.php:1052
 msgid "Options"
-msgstr "Einstellungen"
+msgstr "옵션"
 
 #: modules/checklists/checklists.php:636
 msgid "options cannot be empty."
-msgstr "Optionen dürfen nicht leer sein."
+msgstr "옵션은 비어 있을 수 없습니다."
 
 #: core/Utils/FieldsTabs.php:53
 msgid "Permalink"
-msgstr "Permalink"
+msgstr "퍼머링크"
 
 #: modules/permalinks/permalinks.php:65
 msgid "Permalinks"
-msgstr "Permalinks"
+msgstr "퍼머링크들"
 
 #: modules/permissions/permissions.php:68
 msgid "Permissions"
-msgstr "Berechtigungen"
+msgstr "권한"
 
 #: modules/checklists/checklists.php:669
 msgid "Persuasive Tone Content"
-msgstr "Überzeugender Toninhalt"
+msgstr "설득력 있는 톤 콘텐츠"
 
 #: modules/checklists/checklists.php:837
 msgid "Please complete the following tasks before publishing:"
-msgstr "Bitte erledige die folgenden Aufgaben vor Veröffentlichung"
+msgstr "게시하기 전에 다음 작업을 완료하십시오:"
 
 #: modules/checklists/checklists.php:841
 msgid "Please complete the following tasks before updating the published post:"
-msgstr "Bitte erledige die folgenden Aufgaben vor Veröffentlichung:"
+msgstr "게시된 게시물을 업데이트하기 전에 다음 작업을 완료하십시오:"
 
 #: modules/checklists/checklists.php:1143
 msgid "Please complete the required(*) checklists task."
-msgstr "Bitte führen Sie die erforderlichen(*) Checklistenaufgaben aus."
+msgstr "필수(*) 체크리스트 작업을 완료하십시오."
 
 #: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
-msgstr "Korrigiere bitte die Fehler und versuche es noch einmal."
+msgstr "아래의 양식 오류를 수정하고 다시 시도하십시오."
 
 #: modules/checklists/checklists.php:640
 msgid "Please make sure to add a name for all the custom tasks."
-msgstr "Benenne alle eigenen Aufgaben"
+msgstr "모든 사용자 정의 작업에 이름을 추가했는지 확인하십시오."
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
-msgstr "Beitrag existiert nicht"
+msgstr "게시물 내용이 비어 있습니다."
 
 #: core/Legacy/LegacyPlugin.php:217
 msgid "Post does not exist"
-msgstr "Beitrag existiert nicht"
+msgstr "게시물이 존재하지 않습니다"
 
 #: modules/settings/settings.php:1152
 msgid "Post Types"
-msgstr "Beitragsarten"
+msgstr "게시물 유형"
 
 #: modules/checklists/templates/global-checklists.php:155
 msgid "Pro feature"
-msgstr "Pro-Funktion"
+msgstr "프로 기능"
 
 #: modules/checklists/checklists.php:665
 msgid "Professional Tone Content"
-msgstr "Professioneller Toninhalt"
+msgstr "전문적인 톤 콘텐츠"
 
 #: core/Requirement/Prohibited_categories.php:88
 msgid "Prohibited categories"
-msgstr "Verbotene Kategorien"
+msgstr "금지된 카테고리"
 
 #: core/Requirement/Prohibited_categories.php:87
 #, php-format
 msgid "Prohibited categories: %s"
-msgstr "Verbotene Kategorien: %s"
+msgstr "금지된 카테고리: %s"
 
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
-msgstr "Verbotene Tags"
+msgstr "금지된 태그"
 
 #: core/Requirement/Prohibited_tags.php:87
 #, php-format
 msgid "Prohibited tags: %s"
-msgstr "Verbotene Tags: %s"
+msgstr "금지된 태그: %s"
 
 #: modules/checklists/checklists.php:681
 msgid "Promotional Tone Content"
-msgstr "Werblicher Toninhalt"
+msgstr "홍보 톤 콘텐츠"
 
 #: core/Utils/FieldsTabs.php:29
 msgid "Publish Date / Time"
-msgstr "Veröffentlichungsdatum / -zeit"
+msgstr "발행 날짜 / 시간"
 
 #: modules/settings/settings.php:1154
 msgid "Publishing Options"
-msgstr "Veröffentlichungsoptionen"
+msgstr "발행 옵션"
 
 #. Author of the plugin
 msgid "PublishPress"
@@ -919,11 +902,11 @@ msgstr "PublishPress"
 #: core/Legacy/Module.php:286
 #. Name of the plugin
 msgid "PublishPress Checklists"
-msgstr "PublishPress Checklisten"
+msgstr "PublishPress 체크리스트"
 
 #: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
-msgstr "Dokumentation zu PublishPress Checklisten"
+msgstr "PublishPress 체크리스트 문서"
 
 #: core/Utils/FieldsTabs.php:104
 msgid "Rank Math SEO"
@@ -931,239 +914,223 @@ msgstr "Rank Math SEO"
 
 #: core/API/LabelMapper.php:40 modules/checklists/checklists.php:1076
 msgid "Recommended"
-msgstr "Empfohlen"
+msgstr "추천"
 
 #: core/Requirement/Custom_item.php:129 core/Requirement/Openai_item.php:147
 #: modules/checklists/checklists.php:650
 msgid "Remove"
-msgstr "Entfernen"
+msgstr "제거"
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
-msgstr "Unterstützung anfordern"
+msgstr "지원 요청"
 
 #: core/API/LabelMapper.php:41 modules/checklists/checklists.php:882
 #: modules/checklists/checklists.php:1077
 msgid "Required"
-msgstr "Erforderlich"
+msgstr "필수"
 
 #: modules/checklists/checklists.php:1146
 msgid "required"
-msgstr "Erforderlich"
+msgstr "필수"
 
 #: core/Requirement/Required_categories.php:88
 msgid "Required categories"
-msgstr "Erforderliche Kategorien"
+msgstr "필수 카테고리"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
 msgid "Required categories: %s"
-msgstr "Erforderliche Kategorien: %s"
+msgstr "필수 카테고리: %s"
 
 #: core/Requirement/Required_tags.php:88
 msgid "Required tags"
-msgstr "Erforderliche Tags"
+msgstr "필수 태그"
 
 #: core/Requirement/Required_tags.php:87
 #, php-format
 msgid "Required tags: %s"
-msgstr "Erforderliche Tags: %s"
+msgstr "필수 태그: %s"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"
-msgstr "Bewertungen"
+msgstr "리뷰"
 
 #: modules/checklists/templates/global-checklists.php:15
 #: modules/checklists/templates/global-checklists.php:220
 msgid "Save Changes"
-msgstr "Änderungen speichern "
+msgstr "변경 사항 저장"
 
 #: modules/checklists/checklists.php:649
 msgid "Searching…"
-msgstr "Suche…"
+msgstr "검색 중…"
 
 #: core/Requirement/Openai_item.php:380
 msgid "See the full response."
-msgstr "Sehen Sie sich die vollständige Antwort an."
+msgstr "전체 응답 보기."
 
 #: core/Plugin.php:104 modules/settings/settings.php:120
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "설정"
 
 #: modules/checklists/templates/global-checklists.php:8
 msgid "Settings saved successfully!"
-msgstr "Einstellungen erfolgreich gespeichert!"
+msgstr "설정이 성공적으로 저장되었습니다!"
 
 #: modules/settings/settings.php:798
 msgid "Show Checklists column in post lists:"
-msgstr "Überprüfungslisten-Spalte in Beitragslisten anzeigen:"
+msgstr "게시물 목록에 체크리스트 열 표시:"
 
 #: modules/settings/settings.php:761
 msgid "Show warning icon:"
-msgstr "Zeige Warnsymbol"
+msgstr "경고 아이콘 표시:"
 
 #: modules/checklists/checklists.php:653
 msgid "Suggested Prompts"
-msgstr "Vorgeschlagene Eingabeaufforderungen"
+msgstr "제안된 프롬프트"
 
 #: core/Utils/FieldsTabs.php:61
 msgid "Tags"
-msgstr "Tags"
+msgstr "태그"
 
 #: modules/checklists/checklists.php:1050
 msgid "Task"
-msgstr "Aufgabe"
+msgstr "작업"
 
 #: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
-msgstr "Taxonomien"
+msgstr "분류"
 
 #: modules/checklists/templates/global-checklists.php:213
 msgid "The prompt should be in form of a question."
-msgstr "Die Eingabeaufforderung sollte die Form einer Frage haben."
+msgstr "프롬프트는 질문 형식이어야 합니다."
 
 #: modules/settings/settings.php:361
 msgid "There are no PublishPress modules registered"
-msgstr "Es sind keine PublishPress-Module registriert"
+msgstr "등록된 PublishPress 모듈이 없습니다"
 
 #: modules/settings/settings.php:910
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
-msgstr ""
-"Dies ermöglicht es, Aufgaben für spezifische Status wie \"Entwurf\" oder "
-"\"Veröffentlicht\" zu deaktivieren."
+msgstr "이 설정은 \"초안\" 또는 \"게시됨\"과 같은 특정 상태에 대해 작업을 비활성화할 수 있습니다."
 
 #: modules/settings/settings.php:931
 msgid "This allows users to duplicate existing checklist task."
-msgstr "Dies ermöglicht es Benutzern, vorhandene Checklistenaufgaben zu duplizieren."
+msgstr "이 설정은 사용자가 기존 체크리스트 작업을 복제할 수 있게 합니다."
 
 #: modules/checklists/templates/global-checklists.php:213
 msgid "This feature requires an OpenAI API Key."
-msgstr "Diese Funktion erfordert einen OpenAI API-Schlüssel."
+msgstr "이 기능은 OpenAI API 키가 필요합니다."
 
 #: publishpress-checklists.php:103
 msgid "This plugin can be deleted."
-msgstr "Dieses Plugin kann gelöscht werden."
+msgstr "이 플러그인은 삭제할 수 있습니다."
 
 #: modules/settings/settings.php:1058
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
-msgstr ""
-"Dies deaktiviert \"Schnell bearbeiten\" für alle Benutzer außer denen mit "
-"der Berechtigung \"manage_options\"."
+msgstr "이 설정은 \"manage_options\" 권한이 없는 모든 사용자에 대해 \"빠른 편집\"을 비활성화합니다."
 
 #: modules/settings/settings.php:1079
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
-msgstr ""
-"Dies deaktiviert die \"Veröffentlichen\"-Schaltfläche, wenn die "
-"Anforderungen der Checkliste nicht erfüllt sind."
+msgstr "이 설정은 체크리스트 요구 사항이 충족되지 않을 때 \"게시\" 버튼을 비활성화합니다."
 
 #: modules/settings/settings.php:975
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
-msgstr ""
-"Dies zeigt ein Warnsymbol im \"Überprüfungslisten\"-Bereich, wenn "
-"Anforderungen unvollständig sind."
+msgstr "이 설정은 요구 사항이 불완전할 경우 \"체크리스트\" 상자에 경고 아이콘을 표시합니다."
 
 #: modules/settings/settings.php:1016
 msgid "This will show \"Who can ignore\" options."
-msgstr "Dies zeigt die Optionen \"Wer kann ignorieren\" an."
+msgstr "이 설정은 \"누가 무시할 수 있는지\" 옵션을 표시합니다."
 
 #: core/Utils/FieldsTabs.php:21
 msgid "Title"
-msgstr "Titel"
+msgstr "제목"
 
 #: modules/settings/settings.php:1156
 msgid "Tools"
-msgstr "Werkzeuge"
+msgstr "도구"
 
 #: publishpress-checklists.php:183 core/Plugin.php:112
 msgid "Upgrade to Pro"
-msgstr "Upgrade auf Pro"
+msgstr "프로로 업그레이드"
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try agai.n"
-msgstr ""
-"Validierungsfehler. Bitte laden Sie diese Seite neu und versuchen Sie es "
-"erneut."
+msgstr "유효성 검사 오류. 이 페이지를 새로 고치고 다시 시도하십시오."
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "Wissensdatenbank ansehen"
+msgstr "지식 베이스 보기"
 
 #: modules/checklists/checklists.php:654
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
-msgstr ""
-"Was ist die erwartete OpenAI-Antwort, um die Anforderung als erfüllt zu "
-"markieren?"
+msgstr "요구 사항을 통과로 표시하기 위한 OpenAI의 예상 응답은 무엇입니까?"
 
 #: modules/settings/settings.php:995
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
-msgstr ""
-"Wenn aktiviert, werden alle PublishPress Checklisten-Daten gelöscht, wenn "
-"das Plugin deinstalliert wird."
+msgstr "활성화되면, 플러그인이 제거될 경우 모든 PublishPress 체크리스트 데이터가 삭제됩니다."
 
 #: core/Requirement/Custom_item.php:62 modules/checklists/checklists.php:644
 msgid "Which roles can mark this task as complete?"
-msgstr "Welche Rolle darf die Aufgabe als erledigt markieren?"
+msgstr "어떤 역할이 이 작업을 완료로 표시할 수 있습니까?"
 
 #: modules/permissions/permissions.php:107
 msgid "Who can ignore the task?"
-msgstr "Wer darf die Aufgabe ignorieren?"
+msgstr "누가 이 작업을 무시할 수 있습니까?"
 
 #. Description of the plugin
 msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
-msgstr ""
-"Mit den Checklisten von PublishPress können Sie "
-"Veröffentlichungsanforderungen für Ihre Inhalte auswählen."
+msgstr "PublishPress 체크리스트를 사용하면 콘텐츠에 대한 게시 요구 사항을 선택할 수 있습니다."
 
 #: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
-msgstr "WooCommerce"
+msgstr "우커머스"
 
 #: modules/checklists/checklists.php:886
 msgid "Yes"
-msgstr "Ja"
+msgstr "예"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
 #. %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
-msgstr "Yoast-Lesbarkeit: %s"
+msgstr "요스트 가독성: %s"
 
 #: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68
 msgid "Yoast SEO"
-msgstr "Yoast SEO"
+msgstr "요스트 SEO"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
 #. %s expands to the seo score
 #, php-format
 msgid "Yoast SEO: %s"
-msgstr "Yoast SEO: %s"
+msgstr "요스트 SEO: %s"
 
 #: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
-msgstr "Du hast nicht die erforderliche Berechtigung, um diese Aktion durchzuführen."
+msgstr "이 작업을 완료할 수 있는 필요한 권한이 없습니다."
 
 #: modules/checklists/checklists.php:878
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
-msgstr "Keine ausstehenden %sChecklist tasks%s."
+msgstr "당신은 어떤 %s체크리스트 작업%s도 완료할 필요가 없습니다."
 
 #: modules/checklists/checklists.php:824 modules/checklists/checklists.php:1145
 msgid "You don't have to complete any Checklist tasks."
-msgstr "Keine ausstehenden %sChecklist tasks%s."
+msgstr "당신은 어떤 체크리스트 작업도 완료할 필요가 없습니다."
 
 #: publishpress-checklists.php:154
 #, php-format
@@ -1171,5 +1138,5 @@ msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "
 "features and support. %sUpgrade to Pro%s"
 msgstr ""
-"Sie verwenden PublishPress Checklists Free. Die Pro-Version bietet mehr "
-"Funktionen und Unterstützung. %sUpgrade auf Pro%s"
+"당신은 PublishPress 체크리스트 무료 버전을 사용하고 있습니다. 프로 버전은 더 많은 기능과 지원을 제공합니다. %s프로로 "
+"업그레이드%s"

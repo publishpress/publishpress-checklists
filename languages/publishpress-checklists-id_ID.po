@@ -1,32 +1,28 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Plugins - PublishPress Checklists: Pre-Publishing "
-"Approval Task Checklist for WordPress Content - Development (trunk)\n"
-"POT-Creation-Date: 2024-10-15 21:56+0700\n"
-"PO-Revision-Date: 2025-11-11 11:45+0000\n"
-"Last-Translator: Anderson Grudtner Martins <anderson@publishpress.com>\n"
-"Language-Team: German\n"
+"Project-Id-Version: PublishPress Checklists\n"
+"POT-Creation-Date: 2025-10-01 11:08+0000\n"
+"PO-Revision-Date: 2025-11-18 14:51+0000\n"
+"Last-Translator: Riza <riza@publishpress.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/"
+"publishpress-checklists/publishpress-checklists/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Loco https://localise.biz/\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: publishpress-checklists.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,"
-"2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__"
-"ngettext_noop:1,2\n"
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,"
+"2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
-"Language: de-DE\n"
-"Report-Msgid-Bugs-To: \n"
-"X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
@@ -35,102 +31,102 @@ msgstr "%d "
 
 #: core/Requirement/Image_alt_count.php:48
 msgid "%d character in Alt text"
-msgstr "%d Zeichen im Alt-Text"
+msgstr "%d karakter dalam teks Alt"
 
 #: core/Requirement/Filled_excerpt.php:48
 msgid "%d character in excerpt"
-msgstr "%d Zeichen im Textauszug"
+msgstr "%d karakter dalam kutipan"
 
 #: core/Requirement/Title_count.php:46
 msgid "%d character in title"
-msgstr "%d Zeichen in der Überschrift"
+msgstr "%d karakter dalam judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 msgid "%d character in Yoast SEO focus keyword"
-msgstr "%d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "%d karakter dalam kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 msgid "%d character in Yoast SEO meta description"
-msgstr "%d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "%d karakter dalam deskripsi meta Yoast SEO"
 
 #: core/Requirement/Image_alt_count.php:49
 msgid "%d characters in Alt text"
-msgstr "%d Zeichen im Alt-Text"
+msgstr "%d karakter dalam teks Alt"
 
 #: core/Requirement/Filled_excerpt.php:49
 msgid "%d characters in excerpt"
-msgstr "%d Zeichen im Textauszug"
+msgstr "%d karakter dalam kutipan"
 
 #: core/Requirement/Title_count.php:47
 msgid "%d characters in title"
-msgstr "%d Zeichen in der Überschrift"
+msgstr "%d karakter dalam judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 msgid "%d characters in Yoast SEO focus keyword"
-msgstr "%d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "%d karakter dalam kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 msgid "%d characters in Yoast SEO meta description"
-msgstr "%d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "%d karakter dalam deskripsi meta Yoast SEO"
 
 #: core/Requirement/External_links.php:48
 msgid "%d external link in content"
-msgstr "%d externer Link im Inhalt"
+msgstr "%d tautan eksternal dalam konten"
 
 #: core/Requirement/External_links.php:49
 msgid "%d external links in content"
-msgstr "%d externe Links im Inhalt"
+msgstr "%d tautan eksternal dalam konten"
 
 #: core/Requirement/Internal_links.php:48
 msgid "%d internal link in content"
-msgstr "%d interner Link im Inhalt"
+msgstr "%d tautan internal dalam konten"
 
 #: core/Requirement/Internal_links.php:49
 msgid "%d internal links in content"
-msgstr "%d interne Links im Inhalt"
+msgstr "%d tautan internal dalam konten"
 
 #: core/Requirement/Tags_count.php:52
 msgid "%d tag"
-msgstr "%d Schlagwort"
+msgstr "%d tag"
 
 #: core/Requirement/Tags_count.php:53
 msgid "%d tags"
-msgstr "%d Schlagwörter"
+msgstr "%d tag"
 
 #: core/Requirement/Words_count.php:48
 msgid "%d word in content"
-msgstr "%d Wort im Inhalt"
+msgstr "%d kata dalam konten"
 
 #: core/Requirement/Words_count.php:49
 msgid "%d words in content"
-msgstr "%d Wörter im Inhalt"
+msgstr "%d kata dalam konten"
 
 #: core/Requirement/Categories_count.php:53
 #, php-format
 msgid "%s categories"
-msgstr "%s Kategorien"
+msgstr "%s kategori"
 
 #: core/Requirement/Categories_count.php:52
 #, php-format
 msgid "%s category"
-msgstr "%s Kategorie"
+msgstr "%s kategori"
 
 #: modules/checklists/pro-requirements.php:294
 #, php-format
 msgid "%s is filled"
-msgstr "%s ist ausgefüllt"
+msgstr "%s telah diisi"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About"
-msgstr "Über"
+msgstr "Tentang"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
-msgstr "Über PublishPress Checklisten"
+msgstr "Tentang PublishPress Checklists"
 
 #: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
-msgstr "Barrierefreiheit"
+msgstr "Aksesibilitas"
 
 #: core/Utils/FieldsTabs.php:126
 msgid "ACF"
@@ -141,67 +137,67 @@ msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr ""
-"Fügen Sie eine Checklisten-Spalte zum Bildschirm Beiträge hinzu, die "
-"anzeigt, wie viele Anforderungen erfüllt sind."
+"Tambahkan kolom Checklists ke layar Pos yang menunjukkan berapa banyak "
+"persyaratan yang telah lengkap."
 
 #: modules/checklists/checklists.php:1053
 msgid "Add custom task"
-msgstr "Eigene Aufgabe hinzufügen"
+msgstr "Tambahkan tugas kustom"
 
 #: modules/checklists/templates/global-checklists.php:206
 msgid "Add OpenAI Prompt task"
-msgstr "OpenAI Prompt-Aufgabe hinzufügen"
+msgstr "Tambahkan tugas Prompt OpenAI"
 
 #: modules/settings/settings.php:877
 msgid "Add to these post types:"
-msgstr "Für diese Beitragstypen aktivieren:"
+msgstr "Tambahkan ke jenis pos ini:"
 
 #: modules/checklists/checklists.php:677
 msgid "Adventurous Tone Content"
-msgstr "Abenteuerlicher Ton Inhalt"
+msgstr "Konten Nada Petualangan"
 
 #: core/Requirement/Image_alt.php:44 core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
-msgstr "Alle Bilder haben Alternativtext"
+msgstr "Semua gambar memiliki teks Alt"
 
 #: core/Utils/FieldsTabs.php:111
 msgid "All in One SEO"
-msgstr "All-in-One SEO"
+msgstr "All in One SEO"
 
 #: core/Requirement/Validate_links.php:65
 #: core/Requirement/Validate_links.php:66
 msgid "All links use a valid format"
-msgstr "Alle Links im gültigen Format"
+msgstr "Semua tautan menggunakan format yang valid"
 
 #: core/Requirement/Openai_item.php:286
 msgid "An error occured."
-msgstr "Ein Fehler ist aufgetreten."
+msgstr "Terjadi kesalahan."
 
 #: core/Requirement/Openai_item.php:362
 #, php-format
 msgid "API Error: %1s."
-msgstr "API-Fehler: %1s."
+msgstr "Kesalahan API: %1s."
 
 #: core/Utils/FieldsTabs.php:33
 msgid "Approval"
-msgstr "Genehmigung"
+msgstr "Persetujuan"
 
 #: core/Requirement/Approved_by.php:48
 #, php-format
 msgid "Approved by %s"
-msgstr "Genehmigt von %s"
+msgstr "Disetujui oleh %s"
 
 #: core/Requirement/Approved_by.php:49
 msgid "Approved by a user in this role"
-msgstr "Genehmigt von einem Nutzer dieser Rolle"
+msgstr "Disetujui oleh pengguna dalam peran ini"
 
 #: modules/checklists/checklists.php:829
 msgid "Are you sure you want to publish anyway?"
-msgstr "Bist du sicher, dass du dennoch veröffentlichen möchtest?"
+msgstr "Apakah Anda yakin ingin menerbitkan juga?"
 
 #: modules/checklists/checklists.php:833
 msgid "Are you sure you want to update the published post anyway?"
-msgstr "Bist du sicher, dass du den Beitrag dennoch veröffentlichen willst?"
+msgstr "Apakah Anda yakin ingin memperbarui pos yang dipublikasikan?"
 
 #: core/Utils/FieldsTabs.php:41
 msgid "Audio / Video"
@@ -209,145 +205,145 @@ msgstr "Audio / Video"
 
 #: core/Requirement/Taxonomies_count.php:57
 msgid "Between %d and %d "
-msgstr "Zwischen %d und %d "
+msgstr "Antara %d dan %d "
 
 #: core/Requirement/Image_alt_count.php:50
 msgid "Between %d and %d characters in Alt text"
-msgstr "Zwischen %d und %d Zeichen im Alt-Text"
+msgstr "Antara %d dan %d karakter dalam teks Alt"
 
 #: core/Requirement/Filled_excerpt.php:50
 msgid "Between %d and %d characters in excerpt"
-msgstr "Zwischen %d und %d Zeichen im Textauszug"
+msgstr "Antara %d dan %d karakter dalam kutipan"
 
 #: core/Requirement/Title_count.php:48
 msgid "Between %d and %d characters in title"
-msgstr "Zwischen %d und %d Zeichen in der Überschrift"
+msgstr "Antara %d dan %d karakter dalam judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
-msgstr "Zwischen %d und %d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "Antara %d dan %d karakter dalam kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 msgid "Between %d and %d characters in Yoast SEO meta description"
-msgstr "Zwischen %d und %d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "Antara %d dan %d karakter dalam deskripsi meta Yoast SEO"
 
 #: core/Requirement/External_links.php:50
 msgid "Between %d and %d external links in content"
-msgstr "Zwischen %d und %d externe Links im Inhalt"
+msgstr "Antara %d dan %d tautan eksternal dalam konten"
 
 #: core/Requirement/Internal_links.php:50
 msgid "Between %d and %d internal links in content"
-msgstr "Zwischen %d und %d internen Links im Inhalt"
+msgstr "Antara %d dan %d tautan internal dalam konten"
 
 #: core/Requirement/Tags_count.php:54
 msgid "Between %d and %d tags"
-msgstr "Zwischen %d und %d Schlagwörter"
+msgstr "Antara %d dan %d tag"
 
 #: core/Requirement/Words_count.php:50
 msgid "Between %d and %d words in content"
-msgstr "Zwischen %d und %d Wörtern im Inhalt"
+msgstr "Antara %d dan %d kata dalam konten"
 
 #: core/Requirement/Categories_count.php:54
 #, php-format
 msgid "Between %s and %s categories"
-msgstr "Zwischen %s und %s Kategorien"
+msgstr "Antara %s dan %s kategori"
 
 #: core/Utils/FieldsTabs.php:57
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "Kategori"
 
 #: core/Legacy/LegacyPlugin.php:212 modules/settings/settings.php:493
 msgid "Cheatin&#8217; uh?"
-msgstr "Schummeln, oder?"
+msgstr "Curang&#8217; ya?"
 
 #: modules/checklists/checklists.php:883
 msgid "Check Now"
-msgstr "Jetzt prüfen"
+msgstr "Periksa Sekarang"
 
 #: modules/checklists/checklists.php:748 modules/checklists/checklists.php:828
 msgid "Checklist"
-msgstr "Checkliste"
+msgstr "Daftar Periksa"
 
 #: core/Plugin.php:103 core/Legacy/LegacyPlugin.php:348
 #: modules/checklists/checklists.php:110 modules/checklists/checklists.php:985
 #: modules/checklists/checklists.php:1000
 #: modules/checklists/checklists.php:1144
 msgid "Checklists"
-msgstr "Checklisten"
+msgstr "Checklists"
 
 #: modules/settings/settings.php:62 modules/settings/settings.php:118
 msgid "Checklists Settings"
-msgstr "Checklist-Einstellungen"
+msgstr "Pengaturan Checklists"
 
 #: modules/checklists/checklists.php:1147
 #: modules/checklists/templates/meta-box.php:11
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr "Checklistenaufgaben sind in Elementor-Editoren nicht verfügbar"
+msgstr "Tugas dari Checklists tidak tersedia di editor Elementor"
 
 #: modules/checklists/checklists.php:657
 msgid "Clear Content"
-msgstr "Inhalt löschen"
+msgstr "Hapus Konten"
 
 #: modules/checklists/templates/footer.php:37
 msgid "Contact"
-msgstr "Kontakt"
+msgstr "Kontak"
 
 #: modules/checklists/templates/footer.php:37
 msgid "Contact the PublishPress team"
-msgstr "Kontaktieren Sie das PublishPress-Team"
+msgstr "Hubungi tim PublishPress"
 
 #: core/Utils/FieldsTabs.php:25
 msgid "Content"
-msgstr "Inhalt"
+msgstr "Konten"
 
 #: core/Utils/FieldsTabs.php:73 core/Requirement/Custom_item.php:60
 #: core/Requirement/Custom_item.php:61
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "Kustom"
 
 #: modules/checklists/templates/global-checklists.php:199
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
 msgstr ""
-"Eigene Aufgaben werden nicht automatisch erledigt. Die entsprechende "
-"Checkbox muss manuell bestätigt werden."
+"Tugas kustom tidak selesai secara otomatis. Pengguna harus mencentang kotak "
+"untuk menunjukkan bahwa mereka telah menyelesaikan tugas."
 
 #: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
-msgstr "Definiere Anforderungen an Permalink"
+msgstr "Tentukan tugas yang terkait dengan permalink"
 
 #: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
-msgstr "Definiere Yoast SEO Aufgaben"
+msgstr "Tentukan tugas yang terkait dengan Yoast SEO"
 
 #: modules/settings/settings.php:769
 msgid "Delete data on uninstall:"
-msgstr "Daten bei Deinstallation löschen:"
+msgstr "Hapus data saat uninstall:"
 
 #: modules/checklists/templates/global-checklists.php:187
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "Deskripsi"
 
 #: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
-msgstr "Detaillierte Dokumentation ist auch auf der Plugin-Website verfügbar."
+msgstr "Dokumentasi rinci juga tersedia di situs web plugin."
 
 #: modules/settings/settings.php:833
 msgid "Disable \"Publish\" button:"
-msgstr "„Veröffentlichen“-Schaltfläche deaktivieren:"
+msgstr "Nonaktifkan tombol \"Terbitkan\":"
 
 #: modules/settings/settings.php:825
 msgid "Disable \"Quick Edit\" completely:"
-msgstr "„Schnellbearbeitung“ vollständig deaktivieren:"
+msgstr "Nonaktifkan \"Edit Cepat\" sepenuhnya:"
 
 #: modules/settings/settings.php:817
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
-msgstr "Deaktivieren Sie die Option „Status“, wenn Sie „Quick Edit“ verwenden:"
+msgstr "Nonaktifkan opsi \"Status\" saat menggunakan \"Edit Cepat\":"
 
 #: core/API/LabelMapper.php:39 modules/checklists/checklists.php:1075
 msgid "Disabled"
-msgstr "Deaktiviert"
+msgstr "Dinonaktifkan"
 
 #: modules/settings/settings.php:457
 #, php-format
@@ -355,100 +351,100 @@ msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr ""
-"Deaktiviert, da add_post_type_support('%1$s', '%2$s') in der geladenen "
-"Datei enthalten."
+"Dinonaktifkan karena add_post_type_support('%1$s', '%2$s') termasuk dalam "
+"file yang dimuat."
 
 #: modules/checklists/checklists.php:1051
 msgid "Disabled, Recommended or Required"
-msgstr "Deaktiviert, Empfohlen oder Erforderlich"
+msgstr "Dinonaktifkan, Direkomendasikan, atau Diperlukan"
 
 #: modules/settings/settings.php:1037
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
 msgstr ""
-"Es wird empfohlen, die Option „Status“ zu deaktivieren, da sie verwendet "
-"werden kann, um die Anforderungen der Checklisten zu umgehen."
+"Menonaktifkan opsi \"Status\" disarankan karena dapat digunakan untuk "
+"menghindari penggunaan persyaratan Checklist."
 
 #: modules/checklists/templates/footer.php:30
 msgid "Documentation"
-msgstr "Dokumentation (engl.)"
+msgstr "Dokumentasi"
 
 #: modules/checklists/checklists.php:673
 msgid "Empathetic Tone Content"
-msgstr "Empathischer Ton Inhalt"
+msgstr "Konten dengan Nada Empatik"
 
 #: modules/settings/settings.php:788
 msgid "Enable Duplicate Checklists:"
-msgstr "Duplikat-Checklisten aktivieren:"
+msgstr "Aktifkan Pemeriksaan Duplikat Checklist:"
 
 #: modules/settings/settings.php:778
 msgid "Enable Status Filter:"
-msgstr "Statusfilter aktivieren:"
+msgstr "Aktifkan Filter Status:"
 
 #: modules/settings/settings.php:753
 msgid "Enable Who Can Ignore:"
-msgstr "Wer kann ignorieren aktivieren:"
+msgstr "Aktifkan Siapa yang Dapat Mengabaikan:"
 
 #: modules/settings/settings.php:306
 msgid "Enabled features"
-msgstr "Aktivierte Elemente"
+msgstr "Fitur yang Diaktifkan"
 
 #: core/Requirement/Custom_item.php:81 modules/checklists/checklists.php:651
 msgid "Enter name of custom task"
-msgstr "Name der benutzerdefinierten Aufgabe eingeben"
+msgstr "Masukkan nama tugas kustom"
 
 #: core/Requirement/Openai_item.php:100 modules/checklists/checklists.php:652
 msgid "Enter OpenAI task prompt"
-msgstr "OpenAI-Aufgabenaufforderung eingeben"
+msgstr "Masukkan prompt tugas OpenAI"
 
 #: modules/settings/settings.php:1098
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
-"Geben Sie Ihren API-Schlüssel ein, um OpenAI-Eingabeaufforderungen in "
-"Checklistenaufgaben zu verwenden."
+"Masukkan Kunci API Anda untuk menggunakan prompt OpenAI dalam tugas "
+"checklist."
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
-msgstr "Vorschaubild"
+msgstr "Gambar Unggulan"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
-msgstr "Das vorgestellte Bild hat einen Alternativtext"
+msgstr "Gambar unggulan memiliki teks Alt"
 
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
-msgstr "Vorschaubild hat eine Bildunterschrift"
+msgstr "Gambar unggulan memiliki keterangan"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "Vorgestelltes Bild wurde hinzugefügt"
+msgstr "Gambar unggulan telah ditambahkan"
 
 #: modules/settings/settings.php:297
 msgid "Features"
-msgstr "Funktionen"
+msgstr "Fitur"
 
 #: modules/settings/settings.php:298
 msgid "Feel free to select only the features you need."
-msgstr "Wählen Sie nur die benötigten Eigenschaften aus."
+msgstr "Silakan pilih hanya fitur yang Anda butuhkan."
 
 #: modules/checklists/checklists.php:661
 msgid "Friendly Tone Content"
-msgstr "Freundlicher Ton Inhalt"
+msgstr "Konten dengan Nada Ramah"
 
 #: modules/settings/settings.php:1153
 msgid "General"
-msgstr "Allgemein"
+msgstr "Umum"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
 msgid "Good"
-msgstr "Gut"
+msgstr "Baik"
 
 #. Author URI of the plugin
 msgid "https://publishpress.com"
@@ -461,331 +457,331 @@ msgstr "https://publishpress.com/"
 #: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
-msgstr "Wenn du %s magst, hinterlasse eine %s Wertung. Danke!"
+msgstr "Jika Anda suka %s, silakan berikan kami penilaian %s. Terima kasih!"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
-"Wenn Sie Hilfe benötigen oder einen neuen Funktionswunsch haben, lassen Sie "
-"es uns wissen."
+"Jika Anda memerlukan bantuan atau memiliki permintaan fitur baru, beri tahu "
+"kami."
 
 #: core/Utils/FieldsTabs.php:37
 msgid "Images"
-msgstr "Bilder"
+msgstr "Gambar"
 
 #: modules/settings/settings.php:1155
 msgid "Integration"
-msgstr "Integration"
+msgstr "Integrasi"
 
 #: core/Requirement/Openai_item.php:401
 msgid "Invalid response"
-msgstr "Ungültige Antwort"
+msgstr "Respon tidak valid"
 
 #: modules/checklists/checklists.php:658
 msgid "Is this content clear and easy to read?"
-msgstr "Ist dieser Inhalt klar und leicht zu lesen?"
+msgstr "Apakah konten ini jelas dan mudah dibaca?"
 
 #: modules/checklists/checklists.php:678
 msgid "Is this content tone adventurous?"
-msgstr "Ist dieser Inhalt tonmäßig abenteuerlich?"
+msgstr "Apakah nada konten ini petualangan?"
 
 #: modules/checklists/checklists.php:674
 msgid "Is this content tone empathetic?"
-msgstr "Ist dieser Inhalt tonmäßig empathisch?"
+msgstr "Apakah nada konten ini empatik?"
 
 #: modules/checklists/checklists.php:662
 msgid "Is this content tone friendly?"
-msgstr "Ist dieser Inhalt tonmäßig freundlich?"
+msgstr "Apakah nada konten ini ramah?"
 
 #: modules/checklists/checklists.php:670
 msgid "Is this content tone persuasive?"
-msgstr "Ist dieser Inhalt tonmäßig überzeugend?"
+msgstr "Apakah nada konten ini persuasif?"
 
 #: modules/checklists/checklists.php:666
 msgid "Is this content tone professional?"
-msgstr "Ist dieser Inhalt tonmäßig professionell?"
+msgstr "Apakah nada konten ini profesional?"
 
 #: modules/checklists/checklists.php:682
 msgid "Is this content tone promotional?"
-msgstr "Ist dieser Inhalt tonmäßig werblich?"
+msgstr "Apakah nada konten ini promosi?"
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
-msgstr "Lateinischer Zeichensatz im Permalink"
+msgstr "Karakter Latin di permalink"
 
 #: core/Utils/FieldsTabs.php:49
 msgid "Links"
-msgstr "Links"
+msgstr "Tautan"
 
 #: core/Requirement/Pro_Requirement.php:113
 #: core/Requirement/Base_counter.php:310
 msgid "Max"
-msgstr "Max"
+msgstr "Maks"
 
 #: core/Requirement/Taxonomies_count.php:53
 #: core/Requirement/Taxonomies_count.php:54
 msgid "Maximum of %d "
-msgstr "Maximum von %d "
+msgstr "Maksimum %d "
 
 #: core/Requirement/Image_alt_count.php:46
 msgid "Maximum of %d character in Alt text"
-msgstr "Maximal %d Zeichen im Alt-Text"
+msgstr "Maksimum %d karakter di teks Alt"
 
 #: core/Requirement/Filled_excerpt.php:46
 msgid "Maximum of %d character in excerpt"
-msgstr "Maximum von %d Zeichen im Textauszug"
+msgstr "Maksimum %d karakter di kutipan"
 
 #: core/Requirement/Title_count.php:44
 msgid "Maximum of %d character in title"
-msgstr "Maximum von %d Zeichen in der Überschrift"
+msgstr "Maksimum %d karakter di judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 msgid "Maximum of %d character in Yoast SEO focus keyword"
-msgstr "Maximal %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Maksimum %d karakter di kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 msgid "Maximum of %d character in Yoast SEO meta description"
-msgstr "Maximal %d Zeichen in der Yoast SEO Meta-Beschreibung"
+msgstr "Maksimum %d karakter di deskripsi meta Yoast SEO"
 
 #: core/Requirement/Image_alt_count.php:47
 msgid "Maximum of %d characters in Alt text"
-msgstr "Maximal %d Zeichen im Alt-Text"
+msgstr "Maksimum %d karakter di teks Alt"
 
 #: core/Requirement/Filled_excerpt.php:47
 msgid "Maximum of %d characters in excerpt"
-msgstr "Maximum von %d Zeichen im Textauszug"
+msgstr "Maksimum %d karakter dalam kutipan"
 
 #: core/Requirement/Title_count.php:45
 msgid "Maximum of %d characters in title"
-msgstr "Maximum von %d Zeichen in der Überschrift"
+msgstr "Maksimum %d karakter dalam judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
-msgstr "Maximal %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Maksimum %d karakter dalam kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 msgid "Maximum of %d characters in Yoast SEO meta description"
-msgstr "Maximal %d Zeichen in der Yoast SEO Meta-Beschreibung"
+msgstr "Maksimum %d karakter dalam deskripsi meta Yoast SEO"
 
 #: core/Requirement/External_links.php:46
 msgid "Maximum of %d external link in content"
-msgstr "Maximum von %d externen Link im Inhalt"
+msgstr "Maksimum %d tautan eksternal dalam konten"
 
 #: core/Requirement/External_links.php:47
 msgid "Maximum of %d external links in content"
-msgstr "Maximum von %d externen Links im Inhalt"
+msgstr "Maksimum %d tautan eksternal dalam konten"
 
 #: core/Requirement/Internal_links.php:46
 msgid "Maximum of %d internal link in content"
-msgstr "Maximum von %d internen Link im Inhalt"
+msgstr "Maksimum %d tautan internal dalam konten"
 
 #: core/Requirement/Internal_links.php:47
 msgid "Maximum of %d internal links in content"
-msgstr "Maximum von %d internen Links im Inhalt"
+msgstr "Maksimum %d tautan internal dalam konten"
 
 #: core/Requirement/Tags_count.php:50
 msgid "Maximum of %d tag"
-msgstr "Maximum von %d Schlagwort"
+msgstr "Maksimum %d tag"
 
 #: core/Requirement/Tags_count.php:51
 msgid "Maximum of %d tags"
-msgstr "Maximum von %d Schlagwörtern"
+msgstr "Maksimum %d tag"
 
 #: core/Requirement/Words_count.php:46
 msgid "Maximum of %d word in content"
-msgstr "Maximum von %d Wort im Inhalt"
+msgstr "Maksimum %d kata dalam konten"
 
 #: core/Requirement/Words_count.php:47
 msgid "Maximum of %d words in content"
-msgstr "Maximum von %d Wörtern im Inhalt"
+msgstr "Maksimum %d kata dalam konten"
 
 #: core/Requirement/Categories_count.php:51
 #, php-format
 msgid "Maximum of %s categories"
-msgstr "Maximum von %s Kategorien"
+msgstr "Maksimum %s kategori"
 
 #: core/Requirement/Categories_count.php:50
 #, php-format
 msgid "Maximum of %s category"
-msgstr "Maximum %s Kategorie"
+msgstr "Maksimum %s kategori"
 
 #: core/Requirement/Pro_Requirement.php:112
 #: core/Requirement/Base_counter.php:302
 msgid "Min"
-msgstr "Mindest"
+msgstr "Min"
 
 #: core/Requirement/Taxonomies_count.php:51
 #: core/Requirement/Taxonomies_count.php:52
 msgid "Minimum of %d "
-msgstr "Minimum von %d "
+msgstr "Minimum %d "
 
 #: core/Requirement/Image_alt_count.php:44
 msgid "Minimum of %d character in Alt text"
-msgstr "Mindestens %d Zeichen im Alt-Text"
+msgstr "Minimum %d karakter dalam teks Alt"
 
 #: core/Requirement/Filled_excerpt.php:44
 msgid "Minimum of %d character in excerpt"
-msgstr "Minimum von %d Zeichen im Textauszug"
+msgstr "Minimum %d karakter dalam kutipan"
 
 #: core/Requirement/Title_count.php:42
 msgid "Minimum of %d character in title"
-msgstr "Minimum von %d Zeichen in der Überschrift"
+msgstr "Minimum %d karakter dalam judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 msgid "Minimum of %d character in Yoast SEO focus keyword"
-msgstr "Mindestens %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Minimum %d karakter dalam kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 msgid "Minimum of %d character in Yoast SEO meta description"
-msgstr "Mindestens %d Zeichen in der Yoast SEO Meta-Beschreibung"
+msgstr "Minimum %d karakter dalam deskripsi meta Yoast SEO"
 
 #: core/Requirement/Image_alt_count.php:45
 msgid "Minimum of %d characters in Alt text"
-msgstr "Mindestens %d Zeichen im Alt-Text"
+msgstr "Minimum %d karakter dalam teks Alt"
 
 #: core/Requirement/Filled_excerpt.php:45
 msgid "Minimum of %d characters in excerpt"
-msgstr "Minimum von %d Zeichen im Textauszug"
+msgstr "Minimum %d karakter dalam kutipan"
 
 #: core/Requirement/Title_count.php:43
 msgid "Minimum of %d characters in title"
-msgstr "Minimum von %d Zeichen in der Überschrift"
+msgstr "Minimum %d karakter dalam judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
-msgstr "Mindestens %d Zeichen im Yoast SEO Fokus-Keyword"
+msgstr "Minimum %d karakter dalam kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 msgid "Minimum of %d characters in Yoast SEO meta description"
-msgstr "Mindestens %d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "Minimum %d karakter dalam deskripsi meta Yoast SEO"
 
 #: core/Requirement/External_links.php:44
 msgid "Minimum of %d external link in content"
-msgstr "Minimum von %d externen Link im Inhalt"
+msgstr "Minimum %d tautan eksternal dalam konten"
 
 #: core/Requirement/External_links.php:45
 msgid "Minimum of %d external links in content"
-msgstr "Minimum von %d externen Links im Inhalt"
+msgstr "Minimum %d tautan eksternal dalam konten"
 
 #: core/Requirement/Internal_links.php:44
 msgid "Minimum of %d internal link in content"
-msgstr "Minimum von %d internen Link im Inhalt"
+msgstr "Minimum %d tautan internal dalam konten"
 
 #: core/Requirement/Internal_links.php:45
 msgid "Minimum of %d internal links in content"
-msgstr "Minimum von %d internen Links im Inhalt"
+msgstr "Minimum %d tautan internal dalam konten"
 
 #: core/Requirement/Tags_count.php:48
 msgid "Minimum of %d tag"
-msgstr "Minimum von %d Schlagwort"
+msgstr "Minimum %d tag"
 
 #: core/Requirement/Tags_count.php:49
 msgid "Minimum of %d tags"
-msgstr "Minimum von %d Schlagwörtern"
+msgstr "Minimum %d tag"
 
 #: core/Requirement/Words_count.php:44
 msgid "Minimum of %d word in content"
-msgstr "Minimum von %d Wort im Inhalt"
+msgstr "Minimum %d kata dalam konten"
 
 #: core/Requirement/Words_count.php:45
 msgid "Minimum of %d words in content"
-msgstr "Minimum von %d Wörtern im Inhalt"
+msgstr "Minimum %d kata dalam konten"
 
 #: core/Requirement/Categories_count.php:49
 #, php-format
 msgid "Minimum of %s categories"
-msgstr "Minimum von %s Kategorien"
+msgstr "Minimum %s kategori"
 
 #: core/Requirement/Categories_count.php:48
 #, php-format
 msgid "Minimum of %s category"
-msgstr "Minimum %s Kategorie"
+msgstr "Minimum %s kategori"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
 msgid "Minimum Yoast SEO analysis score"
-msgstr "Minimum Yoast SEO Analyse-Wert"
+msgstr "Minimum skor analisis Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
 msgid "Minimum Yoast SEO readability score"
-msgstr "Minimum Yoast SEO Lesbarkeitswert"
+msgstr "Minimum skor keterbacaan Yoast SEO"
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
-msgstr "Benötigen Sie Unterstützung für PublishPress Checklisten?"
+msgstr "Butuh Dukungan PublishPress Checklists?"
 
 #: modules/checklists/templates/global-checklists.php:186
 msgid "New Item"
-msgstr "Neues Produkt"
+msgstr "Item Baru"
 
 #: modules/checklists/checklists.php:885
 msgid "No"
-msgstr "Nein"
+msgstr "Tidak"
 
 #: modules/checklists/templates/global-checklists.php:168
 #, php-format
 msgid "No %s requirements for this post type."
-msgstr "Keine %s-Anforderungen für diesen Beitragstyp."
+msgstr "Tidak ada persyaratan %s untuk tipe pos ini."
 
 #: modules/checklists/checklists.php:648
 msgid "No results found"
-msgstr "Keine Ergebnisse gefunden"
+msgstr "Tidak ada hasil yang ditemukan"
 
 #: modules/checklists/checklists.php:845 modules/checklists/checklists.php:849
 msgid "Not required, but important: "
-msgstr "Nicht erforderlich, aber wichtig"
+msgstr "Tidak wajib, tetapi penting: "
 
 #: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
-msgstr "Anzahl an "
+msgstr "Jumlah "
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
-msgstr "Anzahl an Kategorien"
+msgstr "Jumlah kategori"
 
 #: modules/checklists/pro-requirements.php:281
 #, php-format
 msgid "Number of Characters in %s field"
-msgstr "Anzahl der Zeichen im %s-Feld"
+msgstr "Jumlah karakter di bidang %s"
 
 #: core/Requirement/Image_alt_count.php:42
 #: core/Requirement/Image_alt_count.php:43
 msgid "Number of characters in Alt text"
-msgstr "Anzahl Zeichen in der Überschrift"
+msgstr "Jumlah karakter di teks Alt"
 
 #: core/Requirement/Title_count.php:40 core/Requirement/Title_count.php:41
 msgid "Number of characters in title"
-msgstr "Anzahl Zeichen in der Überschrift"
+msgstr "Jumlah karakter di judul"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
-msgstr "Anzahl der Zeichen im Yoast SEO-Fokus-Keyword"
+msgstr "Jumlah karakter di kata kunci fokus Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:39
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
-msgstr "Anzahl der Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "Jumlah karakter di deskripsi meta Yoast SEO"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
-msgstr "Zahl der externen Links im Inhalt"
+msgstr "Jumlah tautan eksternal dalam konten"
 
 #: core/Requirement/Internal_links.php:43
 msgid "Number of internal links in content"
-msgstr "Anzahl der internen Link im Inhalt"
+msgstr "Jumlah tautan internal dalam konten"
 
 #: core/Requirement/Tags_count.php:47
 msgid "Number of tags"
-msgstr "Anzahl Schlagwörter"
+msgstr "Jumlah tag"
 
 #: core/Requirement/Words_count.php:43
 msgid "Number of words in content"
-msgstr "Zahl der Wörter im Inhalt"
+msgstr "Jumlah kata dalam konten"
 
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
 msgid "Numbers of characters in excerpt"
-msgstr "Anzahl Zeichen im Textauszug"
+msgstr "Jumlah karakter dalam kutipan"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
@@ -800,7 +796,7 @@ msgstr "Ok"
 
 #: modules/checklists/checklists.php:855
 msgid "One or more items in the checklist are not completed"
-msgstr "Eins oder mehrere Elemente in der Checkliste sind nicht abgeschlossen"
+msgstr "Satu atau lebih item dalam daftar periksa belum selesai"
 
 #: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70
 msgid "Openai"
@@ -808,122 +804,122 @@ msgstr "Openai"
 
 #: modules/settings/settings.php:851
 msgid "OpenAI API Key:"
-msgstr "OpenAI API-Schlüssel:"
+msgstr "Kunci API OpenAI:"
 
 #: core/Requirement/Openai_item.php:307
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
 msgstr ""
-"OpenAI-Aufgaben erfordern einen API-Schlüssel. Bitte fügen Sie Ihren "
-"API-Schlüssel im Bereich „Einstellungen“ hinzu."
+"Tugas OpenAI memerlukan Kunci API. Silakan tambahkan Kunci API Anda di area "
+"Pengaturan."
 
 #: modules/checklists/checklists.php:1052
 msgid "Options"
-msgstr "Einstellungen"
+msgstr "Opsi"
 
 #: modules/checklists/checklists.php:636
 msgid "options cannot be empty."
-msgstr "Optionen dürfen nicht leer sein."
+msgstr "opsi tidak boleh kosong."
 
 #: core/Utils/FieldsTabs.php:53
 msgid "Permalink"
-msgstr "Permalink"
+msgstr "Tautan Permanen"
 
 #: modules/permalinks/permalinks.php:65
 msgid "Permalinks"
-msgstr "Permalinks"
+msgstr "Tautan Permanen"
 
 #: modules/permissions/permissions.php:68
 msgid "Permissions"
-msgstr "Berechtigungen"
+msgstr "Izin"
 
 #: modules/checklists/checklists.php:669
 msgid "Persuasive Tone Content"
-msgstr "Überzeugender Toninhalt"
+msgstr "Konten Nada Persuasif"
 
 #: modules/checklists/checklists.php:837
 msgid "Please complete the following tasks before publishing:"
-msgstr "Bitte erledige die folgenden Aufgaben vor Veröffentlichung"
+msgstr "Silakan selesaikan tugas berikut sebelum menerbitkan:"
 
 #: modules/checklists/checklists.php:841
 msgid "Please complete the following tasks before updating the published post:"
-msgstr "Bitte erledige die folgenden Aufgaben vor Veröffentlichung:"
+msgstr "Silakan selesaikan tugas berikut sebelum memperbarui pos yang diterbitkan:"
 
 #: modules/checklists/checklists.php:1143
 msgid "Please complete the required(*) checklists task."
-msgstr "Bitte führen Sie die erforderlichen(*) Checklistenaufgaben aus."
+msgstr "Silakan selesaikan tugas daftar periksa yang diperlukan(*)"
 
 #: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
-msgstr "Korrigiere bitte die Fehler und versuche es noch einmal."
+msgstr "Silakan perbaiki kesalahan formulir Anda di bawah ini dan coba lagi."
 
 #: modules/checklists/checklists.php:640
 msgid "Please make sure to add a name for all the custom tasks."
-msgstr "Benenne alle eigenen Aufgaben"
+msgstr "Silakan pastikan untuk menambahkan nama untuk semua tugas kustom."
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
-msgstr "Beitrag existiert nicht"
+msgstr "Konten pos kosong."
 
 #: core/Legacy/LegacyPlugin.php:217
 msgid "Post does not exist"
-msgstr "Beitrag existiert nicht"
+msgstr "Pos tidak ada"
 
 #: modules/settings/settings.php:1152
 msgid "Post Types"
-msgstr "Beitragsarten"
+msgstr "Tipe Pos"
 
 #: modules/checklists/templates/global-checklists.php:155
 msgid "Pro feature"
-msgstr "Pro-Funktion"
+msgstr "Fitur Pro"
 
 #: modules/checklists/checklists.php:665
 msgid "Professional Tone Content"
-msgstr "Professioneller Toninhalt"
+msgstr "Konten Nada Profesional"
 
 #: core/Requirement/Prohibited_categories.php:88
 msgid "Prohibited categories"
-msgstr "Verbotene Kategorien"
+msgstr "Kategori Terlarang"
 
 #: core/Requirement/Prohibited_categories.php:87
 #, php-format
 msgid "Prohibited categories: %s"
-msgstr "Verbotene Kategorien: %s"
+msgstr "Kategori Terlarang: %s"
 
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
-msgstr "Verbotene Tags"
+msgstr "Tag yang dilarang"
 
 #: core/Requirement/Prohibited_tags.php:87
 #, php-format
 msgid "Prohibited tags: %s"
-msgstr "Verbotene Tags: %s"
+msgstr "Tag yang dilarang: %s"
 
 #: modules/checklists/checklists.php:681
 msgid "Promotional Tone Content"
-msgstr "Werblicher Toninhalt"
+msgstr "Konten Nada Promosi"
 
 #: core/Utils/FieldsTabs.php:29
 msgid "Publish Date / Time"
-msgstr "Veröffentlichungsdatum / -zeit"
+msgstr "Tanggal / Waktu Publikasi"
 
 #: modules/settings/settings.php:1154
 msgid "Publishing Options"
-msgstr "Veröffentlichungsoptionen"
+msgstr "Opsi Publikasi"
 
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: core/Legacy/Module.php:286
 #. Name of the plugin
+#: core/Legacy/Module.php:286
 msgid "PublishPress Checklists"
-msgstr "PublishPress Checklisten"
+msgstr "PublishPress Checklists"
 
 #: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
-msgstr "Dokumentation zu PublishPress Checklisten"
+msgstr "Dokumentasi PublishPress Checklists"
 
 #: core/Utils/FieldsTabs.php:104
 msgid "Rank Math SEO"
@@ -931,200 +927,198 @@ msgstr "Rank Math SEO"
 
 #: core/API/LabelMapper.php:40 modules/checklists/checklists.php:1076
 msgid "Recommended"
-msgstr "Empfohlen"
+msgstr "Rekomendasi"
 
 #: core/Requirement/Custom_item.php:129 core/Requirement/Openai_item.php:147
 #: modules/checklists/checklists.php:650
 msgid "Remove"
-msgstr "Entfernen"
+msgstr "Hapus"
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
-msgstr "Unterstützung anfordern"
+msgstr "Minta Dukungan"
 
 #: core/API/LabelMapper.php:41 modules/checklists/checklists.php:882
 #: modules/checklists/checklists.php:1077
 msgid "Required"
-msgstr "Erforderlich"
+msgstr "Diperlukan"
 
 #: modules/checklists/checklists.php:1146
 msgid "required"
-msgstr "Erforderlich"
+msgstr "diperlukan"
 
 #: core/Requirement/Required_categories.php:88
 msgid "Required categories"
-msgstr "Erforderliche Kategorien"
+msgstr "Kategori yang Diperlukan"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
 msgid "Required categories: %s"
-msgstr "Erforderliche Kategorien: %s"
+msgstr "Kategori yang Diperlukan: %s"
 
 #: core/Requirement/Required_tags.php:88
 msgid "Required tags"
-msgstr "Erforderliche Tags"
+msgstr "Tag yang Diperlukan"
 
 #: core/Requirement/Required_tags.php:87
 #, php-format
 msgid "Required tags: %s"
-msgstr "Erforderliche Tags: %s"
+msgstr "Tag yang Diperlukan: %s"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"
-msgstr "Bewertungen"
+msgstr "Ulasan"
 
 #: modules/checklists/templates/global-checklists.php:15
 #: modules/checklists/templates/global-checklists.php:220
 msgid "Save Changes"
-msgstr "Änderungen speichern "
+msgstr "Simpan Perubahan"
 
 #: modules/checklists/checklists.php:649
 msgid "Searching…"
-msgstr "Suche…"
+msgstr "Mencari…"
 
 #: core/Requirement/Openai_item.php:380
 msgid "See the full response."
-msgstr "Sehen Sie sich die vollständige Antwort an."
+msgstr "Lihat respons lengkap."
 
 #: core/Plugin.php:104 modules/settings/settings.php:120
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Pengaturan"
 
 #: modules/checklists/templates/global-checklists.php:8
 msgid "Settings saved successfully!"
-msgstr "Einstellungen erfolgreich gespeichert!"
+msgstr "Pengaturan berhasil disimpan!"
 
 #: modules/settings/settings.php:798
 msgid "Show Checklists column in post lists:"
-msgstr "Überprüfungslisten-Spalte in Beitragslisten anzeigen:"
+msgstr "Tampilkan kolom Daftar Periksa di daftar pos:"
 
 #: modules/settings/settings.php:761
 msgid "Show warning icon:"
-msgstr "Zeige Warnsymbol"
+msgstr "Tampilkan ikon peringatan:"
 
 #: modules/checklists/checklists.php:653
 msgid "Suggested Prompts"
-msgstr "Vorgeschlagene Eingabeaufforderungen"
+msgstr "Prompt yang Disarankan"
 
 #: core/Utils/FieldsTabs.php:61
 msgid "Tags"
-msgstr "Tags"
+msgstr "Tag"
 
 #: modules/checklists/checklists.php:1050
 msgid "Task"
-msgstr "Aufgabe"
+msgstr "Tugas"
 
 #: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
-msgstr "Taxonomien"
+msgstr "Taksonomi"
 
 #: modules/checklists/templates/global-checklists.php:213
 msgid "The prompt should be in form of a question."
-msgstr "Die Eingabeaufforderung sollte die Form einer Frage haben."
+msgstr "Prompt harus dalam bentuk pertanyaan."
 
 #: modules/settings/settings.php:361
 msgid "There are no PublishPress modules registered"
-msgstr "Es sind keine PublishPress-Module registriert"
+msgstr "Tidak ada modul PublishPress yang terdaftar"
 
 #: modules/settings/settings.php:910
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr ""
-"Dies ermöglicht es, Aufgaben für spezifische Status wie \"Entwurf\" oder "
-"\"Veröffentlicht\" zu deaktivieren."
+"Ini memungkinkan tugas dinonaktifkan untuk status tertentu seperti \"Draf\" "
+"atau \"Dipublikasikan.\""
 
 #: modules/settings/settings.php:931
 msgid "This allows users to duplicate existing checklist task."
-msgstr "Dies ermöglicht es Benutzern, vorhandene Checklistenaufgaben zu duplizieren."
+msgstr "Ini memungkinkan pengguna untuk menggandakan tugas daftar periksa yang ada."
 
 #: modules/checklists/templates/global-checklists.php:213
 msgid "This feature requires an OpenAI API Key."
-msgstr "Diese Funktion erfordert einen OpenAI API-Schlüssel."
+msgstr "Fitur ini memerlukan Kunci API OpenAI."
 
 #: publishpress-checklists.php:103
 msgid "This plugin can be deleted."
-msgstr "Dieses Plugin kann gelöscht werden."
+msgstr "Plugin ini dapat dihapus."
 
 #: modules/settings/settings.php:1058
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
 msgstr ""
-"Dies deaktiviert \"Schnell bearbeiten\" für alle Benutzer außer denen mit "
-"der Berechtigung \"manage_options\"."
+"Ini akan menonaktifkan \"Sunting Cepat\" untuk semua pengguna kecuali "
+"mereka yang memiliki kemampuan \"manage_options\"."
 
 #: modules/settings/settings.php:1079
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr ""
-"Dies deaktiviert die \"Veröffentlichen\"-Schaltfläche, wenn die "
-"Anforderungen der Checkliste nicht erfüllt sind."
+"Ini akan menonaktifkan tombol \"Publikasikan\" ketika persyaratan daftar "
+"periksa tidak terpenuhi."
 
 #: modules/settings/settings.php:975
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr ""
-"Dies zeigt ein Warnsymbol im \"Überprüfungslisten\"-Bereich, wenn "
-"Anforderungen unvollständig sind."
+"Ini akan menampilkan ikon peringatan di kotak \"Daftar Periksa\" jika "
+"persyaratan tidak lengkap."
 
 #: modules/settings/settings.php:1016
 msgid "This will show \"Who can ignore\" options."
-msgstr "Dies zeigt die Optionen \"Wer kann ignorieren\" an."
+msgstr "Ini akan menampilkan opsi \"Siapa yang dapat mengabaikan\"."
 
 #: core/Utils/FieldsTabs.php:21
 msgid "Title"
-msgstr "Titel"
+msgstr "Judul"
 
 #: modules/settings/settings.php:1156
 msgid "Tools"
-msgstr "Werkzeuge"
+msgstr "Alat"
 
 #: publishpress-checklists.php:183 core/Plugin.php:112
 msgid "Upgrade to Pro"
-msgstr "Upgrade auf Pro"
+msgstr "Tingkatkan ke Pro"
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try agai.n"
-msgstr ""
-"Validierungsfehler. Bitte laden Sie diese Seite neu und versuchen Sie es "
-"erneut."
+msgstr "Kesalahan validasi. Silakan muat ulang halaman ini dan coba lagi."
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "Wissensdatenbank ansehen"
+msgstr "Lihat Basis Pengetahuan"
 
 #: modules/checklists/checklists.php:654
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr ""
-"Was ist die erwartete OpenAI-Antwort, um die Anforderung als erfüllt zu "
-"markieren?"
+"Apa tanggapan OpenAI yang diharapkan untuk menandai persyaratan sebagai "
+"lulus?"
 
 #: modules/settings/settings.php:995
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr ""
-"Wenn aktiviert, werden alle PublishPress Checklisten-Daten gelöscht, wenn "
-"das Plugin deinstalliert wird."
+"Ketika diaktifkan, semua data PublishPress Checklists akan dihapus jika "
+"plugin diuninstall."
 
 #: core/Requirement/Custom_item.php:62 modules/checklists/checklists.php:644
 msgid "Which roles can mark this task as complete?"
-msgstr "Welche Rolle darf die Aufgabe als erledigt markieren?"
+msgstr "Peran mana yang dapat menandai tugas ini sebagai selesai?"
 
 #: modules/permissions/permissions.php:107
 msgid "Who can ignore the task?"
-msgstr "Wer darf die Aufgabe ignorieren?"
+msgstr "Siapa yang dapat mengabaikan tugas ini?"
 
 #. Description of the plugin
 msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr ""
-"Mit den Checklisten von PublishPress können Sie "
-"Veröffentlichungsanforderungen für Ihre Inhalte auswählen."
+"Dengan PublishPress Checklists, Anda dapat memilih persyaratan penerbitan "
+"untuk konten Anda."
 
 #: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
@@ -1132,38 +1126,38 @@ msgstr "WooCommerce"
 
 #: modules/checklists/checklists.php:886
 msgid "Yes"
-msgstr "Ja"
+msgstr "Ya"
 
+#. %s expands to the readability score
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
-#. %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
-msgstr "Yoast-Lesbarkeit: %s"
+msgstr "Keterbacaan Yoast: %s"
 
 #: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
+#. %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
-#. %s expands to the seo score
 #, php-format
 msgid "Yoast SEO: %s"
-msgstr "Yoast SEO: %s"
+msgstr "SEO Yoast: %s"
 
 #: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
-msgstr "Du hast nicht die erforderliche Berechtigung, um diese Aktion durchzuführen."
+msgstr "Anda tidak memiliki izin yang diperlukan untuk menyelesaikan tindakan ini."
 
 #: modules/checklists/checklists.php:878
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
-msgstr "Keine ausstehenden %sChecklist tasks%s."
+msgstr "Anda tidak perlu menyelesaikan tugas %sChecklist%s apa pun."
 
 #: modules/checklists/checklists.php:824 modules/checklists/checklists.php:1145
 msgid "You don't have to complete any Checklist tasks."
-msgstr "Keine ausstehenden %sChecklist tasks%s."
+msgstr "Anda tidak perlu menyelesaikan tugas Checklist apa pun."
 
 #: publishpress-checklists.php:154
 #, php-format
@@ -1171,5 +1165,5 @@ msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "
 "features and support. %sUpgrade to Pro%s"
 msgstr ""
-"Sie verwenden PublishPress Checklists Free. Die Pro-Version bietet mehr "
-"Funktionen und Unterstützung. %sUpgrade auf Pro%s"
+"Anda menggunakan PublishPress Checklists Gratis. Versi Pro memiliki lebih "
+"banyak fitur dan dukungan. %sTingkatkan ke Pro%s"
