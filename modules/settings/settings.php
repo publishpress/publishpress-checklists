@@ -75,7 +75,14 @@ if (!class_exists('PPCH_Settings')) {
                     'show_warning_icon_submit' => Base_requirement::VALUE_YES,
                     'openai_api_key'           => '',
                     'delete_data_on_uninstall' => 'off',
-                    'who_can_ignore_option'      => Base_requirement::VALUE_YES
+                    'who_can_ignore_option'      => Base_requirement::VALUE_YES,
+                    // Custom icons and colors for checklist items
+                    'complete_icon'               => 'dashicons-yes',
+                    'incomplete_icon'             => 'dashicons-no',
+                    'required_complete_color'     => '#66bb6a',
+                    'required_incomplete_color'   => '#ef5350',
+                    'recommended_complete_color'  => '#66bb6a',
+                    'recommended_incomplete_color' => '#ef5350',
                 ],
                 'autoload'             => true,
                 'add_menu'             => true,
@@ -131,7 +138,7 @@ if (!class_exists('PPCH_Settings')) {
                     wp_enqueue_script(
                         'ppch-settings',
                         $this->module_url . 'lib/settings.js',
-                        ['jquery'],
+                        ['jquery', 'wp-color-picker'],
                         PPCH_VERSION
                     );
                 }
@@ -153,6 +160,7 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') {
+                wp_enqueue_style('wp-color-picker');
                 wp_enqueue_script('jquery-ui-core');
                 wp_enqueue_script('jquery-ui-tabs');
             }
@@ -837,6 +845,64 @@ if (!class_exists('PPCH_Settings')) {
             );
 
             /**
+             * Appearance
+             */
+            add_settings_section(
+                $this->module->options_group_name . '_appearance',
+                __return_false(),
+                [$this, 'settings_section_appearance'],
+                $this->module->options_group_name
+            );
+
+            add_settings_field(
+                'complete_icon',
+                __('Complete Icon:', 'publishpress-checklists'),
+                [$this, 'settings_complete_icon_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'incomplete_icon',
+                __('Incomplete Icon:', 'publishpress-checklists'),
+                [$this, 'settings_incomplete_icon_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'required_complete_color',
+                __('Required Complete Color:', 'publishpress-checklists'),
+                [$this, 'settings_required_complete_color_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'required_incomplete_color',
+                __('Required Incomplete Color:', 'publishpress-checklists'),
+                [$this, 'settings_required_incomplete_color_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'recommended_complete_color',
+                __('Recommended Complete Color:', 'publishpress-checklists'),
+                [$this, 'settings_recommended_complete_color_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'recommended_incomplete_color',
+                __('Recommended Incomplete Color:', 'publishpress-checklists'),
+                [$this, 'settings_recommended_incomplete_color_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            /**
              * Integration
              */
             add_settings_section(
@@ -1152,6 +1218,7 @@ if (!class_exists('PPCH_Settings')) {
                     '#ppch-tab-post-types'  => esc_html__('Post Types', 'publishpress-checklists'),
                     '#ppch-tab-general'     => esc_html__('General', 'publishpress-checklists'),
                     '#ppch-tab-publishing-options' => esc_html__('Publishing Options', 'publishpress-checklists'),
+                    '#ppch-tab-appearance'  => esc_html__('Appearance', 'publishpress-checklists'),
                     '#ppch-tab-integration'       => esc_html__('Integration', 'publishpress-checklists'),
                     '#ppch-tab-tools'       => esc_html__('Tools', 'publishpress-checklists'),
                 ]
@@ -1183,6 +1250,93 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_section_tools()
         {
             echo '<input type="hidden" id="ppch-tab-tools" />';
+        }
+
+        public function settings_section_appearance()
+        {
+            echo '<input type="hidden" id="ppch-tab-appearance" />';
+        }
+
+        /**
+         * Settings field for Complete Icon
+         */
+        public function settings_complete_icon_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_complete_icon';
+            $value = isset($this->module->options->complete_icon) ? $this->module->options->complete_icon : 'dashicons-yes';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[complete_icon]" placeholder="dashicons-yes" />';
+            echo '<br /><span class="description">' . esc_html__('Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). ', 'publishpress-checklists');
+            echo '<a href="https://developer.wordpress.org/resource/dashicons/" target="_blank">' . esc_html__('View Dashicons', 'publishpress-checklists') . '</a></span>';
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for Incomplete Icon
+         */
+        public function settings_incomplete_icon_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_incomplete_icon';
+            $value = isset($this->module->options->incomplete_icon) ? $this->module->options->incomplete_icon : 'dashicons-no';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[incomplete_icon]" placeholder="dashicons-no" />';
+            echo '<br /><span class="description">' . esc_html__('Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). ', 'publishpress-checklists');
+            echo '<a href="https://developer.wordpress.org/resource/dashicons/" target="_blank">' . esc_html__('View Dashicons', 'publishpress-checklists') . '</a></span>';
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for Required Complete Color
+         */
+        public function settings_required_complete_color_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_required_complete_color';
+            $value = isset($this->module->options->required_complete_color) ? $this->module->options->required_complete_color : '#66bb6a';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_complete_color]" class="pp-checklists-color-picker" data-default-color="#66bb6a" />';
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for Required Incomplete Color
+         */
+        public function settings_required_incomplete_color_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_required_incomplete_color';
+            $value = isset($this->module->options->required_incomplete_color) ? $this->module->options->required_incomplete_color : '#ef5350';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for Recommended Complete Color
+         */
+        public function settings_recommended_complete_color_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_recommended_complete_color';
+            $value = isset($this->module->options->recommended_complete_color) ? $this->module->options->recommended_complete_color : '#66bb6a';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_complete_color]" class="pp-checklists-color-picker" data-default-color="#66bb6a" />';
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for Recommended Incomplete Color
+         */
+        public function settings_recommended_incomplete_color_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_recommended_incomplete_color';
+            $value = isset($this->module->options->recommended_incomplete_color) ? $this->module->options->recommended_incomplete_color : '#ef5350';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '</label>';
         }
     }
 }

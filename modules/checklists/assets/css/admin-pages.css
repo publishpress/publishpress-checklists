@@ -122,8 +122,8 @@ textarea.pp-checklists-custom-item-title {
   transition: color 200ms ease-in-out;
 }
 
-.pressshack-admin-wrapper button:not(.notice-dismiss),
-.pressshack-admin-wrapper .button:not(.notice-dismiss) {
+.pressshack-admin-wrapper button:not(.notice-dismiss):not(.wp-color-result),
+.pressshack-admin-wrapper .button:not(.notice-dismiss):not(.wp-color-result) {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

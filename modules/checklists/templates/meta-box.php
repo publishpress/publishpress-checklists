@@ -42,7 +42,16 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
                             if ($req['is_custom']) :
                                 $icon_class = $req['status'] ? 'dashicons-yes' : '';
                             else:
-                                $icon_class = $req['status'] ? 'dashicons-yes' : 'dashicons-no';
+                                // Get custom icon settings
+                                $legacyPlugin = \PublishPress\Checklists\Core\Factory::getLegacyPlugin();
+                                $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+                                
+                                // Use the same icons for both Required and Recommended
+                                if ($req['status']) {
+                                    $icon_class = isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes';
+                                } else {
+                                    $icon_class = isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no';
+                                }
                             endif;
                             ?>
                             <div class="status-icon dashicons <?php echo esc_attr($icon_class); ?>"></div>
