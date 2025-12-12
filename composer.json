@@ -27,7 +27,7 @@
     "codeception/module-db": "^1.0",
     "codeception/util-universalframework": "^1.0",
     "overtrue/phplint": "^2.4",
-      "publishpress/translations": "^1.0"
+    "publishpress/translations": "dev-self-hosted"
   },
   "scripts": {
     "build": "pbuild build",
@@ -50,6 +50,14 @@
   "extra": {
     "plugin-slug": "publishpress-checklists",
     "plugin-name": "publishpress-checklists",
-    "plugin-folder": "publishpress-checklists"
+    "plugin-folder": "publishpress-checklists",
+    "scripts-descriptions": {
+      "translate": "Generate and upload translations to Weblate using AI-powered Potomatic",
+      "translate:dry-run": "Preview translations without making API calls",
+      "translate:download": "Download translations from Weblate",
+      "translate:upload": "Upload existing translations to Weblate (no AI translation)",
+      "translate:force": "Force re-translate all strings (ignore existing translations)",
+      "translate:force-custom": "Force re-translate with specific languages (requires --languages parameter)"
+    }
   }
 }
