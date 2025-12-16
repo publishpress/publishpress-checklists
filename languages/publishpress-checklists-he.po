@@ -1070,7 +1070,7 @@ msgid "Upgrade to Pro"
 msgstr "שדרוג לגרסה מקצועית"
 
 #: core/Requirement/Openai_item.php:293
-msgid "Validation error. Kindly reload this page and try again."
+msgid "Validation error. Kindly reload this page and try agai.n"
 msgstr "שגיאת אימות. אנא טען מחדש את הדף הזה וניסה שוב."
 
 #: core/Legacy/Util.php:198

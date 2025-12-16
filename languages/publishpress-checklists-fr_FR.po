@@ -688,7 +688,7 @@ msgid "This will display a warning icon in the \"Publish\" box."
 msgstr "Ceci affichera une icône d’avertissement dans la boîte « Publier »"
 
 #: core/Requirement/Openai_item.php:273
-msgid "Validation error. Kindly reload this page and try again."
+msgid "Validation error. Kindly reload this page and try agai.n"
 msgstr "Erreur de validation. Veuillez recharger cette page et réessayer."
 
 #: modules/checklists/checklists.php:606

@@ -1087,7 +1087,7 @@ msgid "Upgrade to Pro"
 msgstr "Atualizar para Pro"
 
 #: core/Requirement/Openai_item.php:293
-msgid "Validation error. Kindly reload this page and try again."
+msgid "Validation error. Kindly reload this page and try agai.n"
 msgstr ""
 "Erro de validação. Por favor, recarregue esta página e tente novamente.n"
 

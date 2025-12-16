@@ -677,8 +677,8 @@ msgid "This will display a warning icon in the \"Publish\" box."
 msgstr "This will display a warning icon in the \"Publish\" box."
 
 #: core/Requirement/Openai_item.php:273, fuzzy
-msgid "Validation error. Kindly reload this page and try again."
-msgstr "Validation error. Kindly reload this page and try again."
+msgid "Validation error. Kindly reload this page and try agai.n"
+msgstr "Validation error. Kindly reload this page and try agai.n"
 
 #: modules/checklists/checklists.php:606, fuzzy
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
