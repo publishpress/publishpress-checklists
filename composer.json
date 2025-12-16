@@ -12,12 +12,6 @@
   "config": {
     "preferred-install": "dist"
   },
-  "repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/publishpress/publishpress-translator.git"
-    }
-    ],
   "require": {
     "php": ">=7.2.5"
   },
@@ -27,7 +21,7 @@
     "codeception/module-db": "^1.0",
     "codeception/util-universalframework": "^1.0",
     "overtrue/phplint": "^2.4",
-    "publishpress/translations": "dev-self-hosted"
+    "publishpress/translations": "dev-development"
   },
   "scripts": {
     "build": "pbuild build",

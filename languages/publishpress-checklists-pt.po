@@ -1,30 +1,28 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PublishPress - PublishPress Checklists\n"
-"POT-Creation-Date: 2024-10-15 21:56+0700\n"
-"PO-Revision-Date: 2025-12-16 13:57+0000\n"
-"Last-Translator: Anderson Grudtner Martins <anderson@publishpress.com>\n"
-"Language-Team: Portuguese (Brazil)\n"
+"Project-Id-Version: PublishPress Checklists\n"
+"POT-Creation-Date: 2025-10-01 11:08+0000\n"
+"PO-Revision-Date: 2025-12-11 18:36+0000\n"
+"Last-Translator: Anderson <anderson@publishpress.com>\n"
+"Language-Team: Portuguese <https://weblate.publishpress.com/projects/"
+"publishpress-checklists/publishpress-checklists/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: publishpress-checklists.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,"
-"2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__"
-"ngettext_noop:1,2\n"
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,"
+"2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
-"Language: pt-BR\n"
-"Report-Msgid-Bugs-To: \n"
-"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56, fuzzy
@@ -124,7 +122,7 @@ msgstr "Sobre"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
-msgstr "Sobre o PublishPress Checklists"
+msgstr "Sobre as Checklists do PublishPress"
 
 #: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
@@ -139,7 +137,7 @@ msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr ""
-"Adicione uma coluna de Checklists à tela de Posts mostrando quantos "
+"Adicione uma coluna de Checklists na tela de Posts mostrando quantos "
 "requisitos estão completos."
 
 #: modules/checklists/checklists.php:1053
@@ -156,7 +154,7 @@ msgstr "Adicionar a estes tipos de post:"
 
 #: modules/checklists/checklists.php:677
 msgid "Adventurous Tone Content"
-msgstr "Conteúdo com Tom Aventureiro"
+msgstr "Conteúdo de Tom Aventureiro"
 
 #: core/Requirement/Image_alt.php:44 core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
@@ -280,7 +278,8 @@ msgstr "Configurações de listas de verificação"
 #: modules/checklists/checklists.php:1147
 #: modules/checklists/templates/meta-box.php:11
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr "As tarefas de Checklists não estão disponíveis nos editores do Elementor"
+msgstr ""
+"As tarefas das Checklists não estão disponíveis nos editores do Elementor"
 
 #: modules/checklists/checklists.php:657
 msgid "Clear Content"
@@ -305,11 +304,11 @@ msgstr "Personalizado"
 
 #: modules/checklists/templates/global-checklists.php:199
 msgid ""
-"Custom tasks do not complete automatically. Users must check the box to "
-"show they have completed the task."
+"Custom tasks do not complete automatically. Users must check the box to show "
+"they have completed the task."
 msgstr ""
-"Tarefas personalizadas não são concluídas automaticamente. Os usuários "
-"devem marcar a caixa para mostrar que concluíram a tarefa."
+"Tarefas personalizadas não são concluídas automaticamente. Os usuários devem "
+"marcar a caixa para mostrar que concluíram a tarefa."
 
 #: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
@@ -333,11 +332,11 @@ msgstr "Documentação detalhada também está disponível no site do plugin."
 
 #: modules/settings/settings.php:833
 msgid "Disable \"Publish\" button:"
-msgstr "Desativar botão \"Publicar\":"
+msgstr "Desabilitar botão \"Publicar\":"
 
 #: modules/settings/settings.php:825
 msgid "Disable \"Quick Edit\" completely:"
-msgstr "Desativar \"Edição Rápida\" completamente:"
+msgstr "Desabilitar \"Edição Rápida\" completamente:"
 
 #: modules/settings/settings.php:817
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
@@ -353,8 +352,8 @@ msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr ""
-"Desabilitado, pois add_post_type_support('%1$s', '%2$s') está incluído em "
-"um arquivo já carregado."
+"Desabilitado, pois add_post_type_support('%1$s', '%2$s') está incluído em um "
+"arquivo já carregado."
 
 #: modules/checklists/checklists.php:1051
 msgid "Disabled, Recommended or Required"
@@ -365,8 +364,8 @@ msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
 msgstr ""
-"Desativar a opção \"Status\" é recomendado porque pode ser usada para "
-"evitar o uso dos requisitos das Listas de Verificação."
+"Desabilitar a opção \"Status\" é recomendado, pois pode ser usada para "
+"evitar o uso dos requisitos das Checklists."
 
 #: modules/checklists/templates/footer.php:30
 msgid "Documentation"
@@ -378,15 +377,15 @@ msgstr "Conteúdo com Tom Empático"
 
 #: modules/settings/settings.php:788
 msgid "Enable Duplicate Checklists:"
-msgstr "Ativar Verificação de Listas de Verificação Duplicadas:"
+msgstr "Habilitar Checklists Duplicados:"
 
 #: modules/settings/settings.php:778
 msgid "Enable Status Filter:"
-msgstr "Ativar Filtro de Status:"
+msgstr "Habilitar Filtro de Status:"
 
 #: modules/settings/settings.php:753
 msgid "Enable Who Can Ignore:"
-msgstr "Ativar Quem Pode Ignorar:"
+msgstr "Habilitar Quem Pode Ignorar:"
 
 #: modules/settings/settings.php:306
 msgid "Enabled features"
@@ -408,7 +407,7 @@ msgstr ""
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
-msgstr "Imagem em Destaque"
+msgstr "Imagem Destacada"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
@@ -418,7 +417,7 @@ msgstr "A imagem em destaque tem texto alternativo"
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
-msgstr "A imagem em destaque tem legenda"
+msgstr "A imagem destacada tem legenda"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
@@ -431,7 +430,8 @@ msgstr "Funcionalidades"
 
 #: modules/settings/settings.php:298
 msgid "Feel free to select only the features you need."
-msgstr "Sinta-se livre para selecionar somente as funcionalidades de que precisa."
+msgstr ""
+"Sinta-se livre para selecionar somente as funcionalidades de que precisa."
 
 #: modules/checklists/checklists.php:661
 msgid "Friendly Tone Content"
@@ -463,7 +463,9 @@ msgstr "Se você gosta do %s por favor nos deixe uma avaliação %s. Obrigado!"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
-msgstr "Se você precisar de ajuda ou tiver um novo pedido de recurso, nos avise."
+msgstr ""
+"Se você precisar de ajuda ou tiver um novo pedido de funcionalidade, nos "
+"avise."
 
 #: core/Utils/FieldsTabs.php:37
 msgid "Images"
@@ -483,27 +485,27 @@ msgstr "Este conteúdo é claro e fácil de ler?"
 
 #: modules/checklists/checklists.php:678
 msgid "Is this content tone adventurous?"
-msgstr "O tom deste conteúdo é aventureiro?"
+msgstr "Este conteúdo tem um tom aventureiro?"
 
 #: modules/checklists/checklists.php:674
 msgid "Is this content tone empathetic?"
-msgstr "O tom deste conteúdo é empático?"
+msgstr "Este conteúdo tem um tom empático?"
 
 #: modules/checklists/checklists.php:662
 msgid "Is this content tone friendly?"
-msgstr "O tom deste conteúdo é amigável?"
+msgstr "Este conteúdo tem um tom amigável?"
 
 #: modules/checklists/checklists.php:670
 msgid "Is this content tone persuasive?"
-msgstr "O tom deste conteúdo é persuasivo?"
+msgstr "Este conteúdo tem um tom persuasivo?"
 
 #: modules/checklists/checklists.php:666
 msgid "Is this content tone professional?"
-msgstr "O tom deste conteúdo é profissional?"
+msgstr "Este conteúdo tem um tom profissional?"
 
 #: modules/checklists/checklists.php:682
 msgid "Is this content tone promotional?"
-msgstr "O tom deste conteúdo é promocional?"
+msgstr "Este conteúdo tem um tom promocional?"
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
@@ -707,7 +709,7 @@ msgstr "Pontuação mínima de legibilidade do Yoast SEO"
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
-msgstr "Precisa de suporte do PublishPress Checklists?"
+msgstr "Precisa de suporte para o PublishPress Checklists?"
 
 #: modules/checklists/templates/global-checklists.php:186
 msgid "New Item"
@@ -810,7 +812,8 @@ msgstr "Chave da API OpenAI:"
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
-msgstr "As tarefas OpenAI exigem uma API Key. Adicione sua API Key na área Settings."
+msgstr ""
+"As tarefas OpenAI exigem uma API Key. Adicione sua API Key na área Settings."
 
 #: modules/checklists/checklists.php:1052
 msgid "Options"
@@ -856,7 +859,8 @@ msgstr "Por favor corrija os erros do formulário abaixo e tente novamente."
 
 #: modules/checklists/checklists.php:640
 msgid "Please make sure to add a name for all the custom tasks."
-msgstr "Certifique-se de adicionar um nome para todas as tarefas personalizadas."
+msgstr ""
+"Certifique-se de adicionar um nome para todas as tarefas personalizadas."
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
@@ -868,7 +872,7 @@ msgstr "O post não existe"
 
 #: modules/settings/settings.php:1152
 msgid "Post Types"
-msgstr "Tipos de Postagens"
+msgstr "Tipos de Postagem"
 
 #: modules/checklists/templates/global-checklists.php:155
 msgid "Pro feature"
@@ -912,8 +916,8 @@ msgstr "Opções de Publicação"
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: core/Legacy/Module.php:286, fuzzy
 #. Name of the plugin
+#: core/Legacy/Module.php:286, fuzzy
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
@@ -992,7 +996,7 @@ msgstr "Configurações salvas com sucesso!"
 
 #: modules/settings/settings.php:798
 msgid "Show Checklists column in post lists:"
-msgstr "Mostrar coluna de Checklists nas listas de posts:"
+msgstr "Mostrar coluna de Checklists nas listas de postagens:"
 
 #: modules/settings/settings.php:761
 msgid "Show warning icon:"
@@ -1027,14 +1031,12 @@ msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr ""
-"Isso permite que tarefas sejam desativadas para status específicos, como "
-"\"Rascunho\" ou \"Publicado.&t>\n"
-"<t i=\"7\">Isso permite que os usuários dupliquem tarefas de checklist "
-"existentes."
+"Isso permite que tarefas sejam desabilitadas para status específicos, como "
+"\"Rascunho\" ou \"Publicado."
 
 #: modules/settings/settings.php:931
 msgid "This allows users to duplicate existing checklist task."
-msgstr ""
+msgstr "Isso permite que os usuários dupliquem tarefas de checklist existentes."
 
 #: modules/checklists/templates/global-checklists.php:213
 msgid "This feature requires an OpenAI API Key."
@@ -1042,22 +1044,22 @@ msgstr "Este recurso requer uma chave de API OpenAI."
 
 #: publishpress-checklists.php:103
 msgid "This plugin can be deleted."
-msgstr "Este plugin pode ser excluído."
+msgstr "Este plugin pode ser deletado."
 
 #: modules/settings/settings.php:1058
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
 msgstr ""
-"Isso desativará \"Edição Rápida\" para todos os usuários, exceto para "
-"aqueles com a capacidade \"manage_options\"."
+"Isso desabilitará \"Edição Rápida\" para todos os usuários, exceto aqueles "
+"com a capacidade \"manage_options\"."
 
 #: modules/settings/settings.php:1079
 msgid ""
-"This will disable the \"Publish\" button when checklist requirements are "
-"not met."
+"This will disable the \"Publish\" button when checklist requirements are not "
+"met."
 msgstr ""
-"Isso desativará o botão \"Publicar\" quando os requisitos do checklist não "
+"Isso desabilitará o botão \"Publicar\" quando os requisitos do checklist não "
 "forem atendidos."
 
 #: modules/settings/settings.php:975
@@ -1086,23 +1088,25 @@ msgstr "Atualizar para Pro"
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
-msgstr "Erro de validação. Por favor, recarregue esta página e tente novamente.n"
+msgstr ""
+"Erro de validação. Por favor, recarregue esta página e tente novamente.n"
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "Visualizar Base de Conhecimento"
+msgstr "Ver Base de Conhecimento"
 
 #: modules/checklists/checklists.php:654
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
-msgstr "Qual é a resposta esperada da OpenAI para marcar o requisito como aprovado?"
+msgstr ""
+"Qual é a resposta esperada da OpenAI para marcar o requisito como aprovado?"
 
 #: modules/settings/settings.php:995
 msgid ""
-"When enabled, all PublishPress Checklists data will be deleted if the "
-"plugin is uninstalled."
+"When enabled, all PublishPress Checklists data will be deleted if the plugin "
+"is uninstalled."
 msgstr ""
-"Quando habilitado, todos os dados do PublishPress Checklists serão "
-"excluídos se o plugin for desinstalado."
+"Quando ativado, todos os dados do PublishPress Checklists serão excluídos se "
+"o plugin for desinstalado."
 
 #: core/Requirement/Custom_item.php:62 modules/checklists/checklists.php:644
 msgid "Which roles can mark this task as complete?"
@@ -1128,9 +1132,9 @@ msgstr "WooCommerce"
 msgid "Yes"
 msgstr "Sim"
 
+#. %s expands to the readability score
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
-#. %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
 msgstr "Legibilidade do Yoast: %s"
@@ -1139,9 +1143,9 @@ msgstr "Legibilidade do Yoast: %s"
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
+#. %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
-#. %s expands to the seo score
 #, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
@@ -1162,8 +1166,8 @@ msgstr "Você não precisa concluir nenhuma tarefa da Lista de Verificação."
 #: publishpress-checklists.php:154
 #, php-format
 msgid ""
-"You're using PublishPress Checklists Free. The Pro version has more "
-"features and support. %sUpgrade to Pro%s"
+"You're using PublishPress Checklists Free. The Pro version has more features "
+"and support. %sUpgrade to Pro%s"
 msgstr ""
 "Você está usando o PublishPress Checklists Free. A versão Pro tem mais "
 "recursos e suporte. %sAtualizar para Pro%s"

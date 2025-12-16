@@ -1,9 +1,8 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2025-11-11 11:53+0000\n"
+"PO-Revision-Date: 2025-12-16 13:57+0000\n"
 "Last-Translator: Anderson Grudtner Martins <anderson@publishpress.com>\n"
 "Language-Team: Anderson Grudtner Martins <anderson@publishpress.com>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +25,7 @@ msgstr ""
 "Language: ko-KR\n"
 
 #: core/Requirement/Taxonomies_count.php:55
-#: core/Requirement/Taxonomies_count.php:56
+#: core/Requirement/Taxonomies_count.php:56, fuzzy
 msgid "%d "
 msgstr "%d "
 
@@ -129,7 +128,7 @@ msgstr "PublishPress 체크리스트에 대하여"
 msgid "Accessibility"
 msgstr "접근성"
 
-#: core/Utils/FieldsTabs.php:126
+#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
@@ -433,7 +432,7 @@ msgstr "일반"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169, fuzzy
 msgid "Good"
 msgstr "좋음"
 
@@ -787,7 +786,7 @@ msgstr "확인"
 msgid "One or more items in the checklist are not completed"
 msgstr "체크리스트의 하나 이상의 항목이 완료되지 않았습니다"
 
-#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70
+#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
@@ -891,7 +890,7 @@ msgstr "홍보 톤 콘텐츠"
 msgid "Publish Date / Time"
 msgstr "발행 날짜 / 시간"
 
-#: modules/settings/settings.php:1154
+#: modules/settings/settings.php:1154, fuzzy
 msgid "Publishing Options"
 msgstr "발행 옵션"
 
@@ -908,7 +907,7 @@ msgstr "PublishPress 체크리스트"
 msgid "PublishPress Checklists Documentation"
 msgstr "PublishPress 체크리스트 문서"
 
-#: core/Utils/FieldsTabs.php:104
+#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
@@ -1062,7 +1061,7 @@ msgid "Upgrade to Pro"
 msgstr "프로로 업그레이드"
 
 #: core/Requirement/Openai_item.php:293
-msgid "Validation error. Kindly reload this page and try agai.n"
+msgid "Validation error. Kindly reload this page and try again."
 msgstr "유효성 검사 오류. 이 페이지를 새로 고치고 다시 시도하십시오."
 
 #: core/Legacy/Util.php:198

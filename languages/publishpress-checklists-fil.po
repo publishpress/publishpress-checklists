@@ -2,31 +2,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2025-11-14 22:44+0000\n"
-"Last-Translator: Adesina Adedeji <deji@publishpress.com>\n"
-"Language-Team: Filipino <https://hosted.weblate.org/projects/"
-"publishpress-checklists/publishpress-checklists/fil/>\n"
-"Language: fil\n"
+"PO-Revision-Date: 2025-12-16 13:57+0000\n"
+"Last-Translator: Anderson Grudtner Martins <anderson@publishpress.com>\n"
+"Language-Team: Filipino "
+"<https://weblate.publishpress.com/projects/publishpress-checklists/"
+"publishpress-checklists/fil/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && "
-"(n % 10 == 4 || n % 10 == 6 || n % 10 == 9);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"|| n % 10 == 6 || n % 10 == 9);\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: publishpress-checklists.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,"
-"2\n"
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,"
+"2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__"
+"ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 || n % 10 == 6 || n % 10 == 9);\n"
 
 #: core/Requirement/Taxonomies_count.php:55
-#: core/Requirement/Taxonomies_count.php:56
+#: core/Requirement/Taxonomies_count.php:56, fuzzy
 msgid "%d "
 msgstr "%d "
 
@@ -86,7 +88,7 @@ msgstr "%d panloob na link sa nilalaman"
 msgid "%d internal links in content"
 msgstr "%d mga panloob na link sa nilalaman"
 
-#: core/Requirement/Tags_count.php:52
+#: core/Requirement/Tags_count.php:52, fuzzy
 msgid "%d tag"
 msgstr "%d tag"
 
@@ -125,11 +127,11 @@ msgstr "Tungkol"
 msgid "About PublishPress Checklists"
 msgstr "Tungkol sa PublishPress Checklists"
 
-#: core/Utils/FieldsTabs.php:69
+#: core/Utils/FieldsTabs.php:69, fuzzy
 msgid "Accessibility"
 msgstr "Accessibility"
 
-#: core/Utils/FieldsTabs.php:126
+#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
@@ -161,7 +163,7 @@ msgstr "Mapangahas na Nilalaman"
 msgid "All images have Alt text"
 msgstr "Lahat ng mga larawan ay may Alt text"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
@@ -200,7 +202,7 @@ msgstr "Sigurado ka bang nais mong ipublish pa rin?"
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "Sigurado ka bang nais mong i-update ang nai-publish na post kahit na?"
 
-#: core/Utils/FieldsTabs.php:41
+#: core/Utils/FieldsTabs.php:41, fuzzy
 msgid "Audio / Video"
 msgstr "Audio / Video"
 
@@ -253,7 +255,7 @@ msgstr "Sa pagitan ng %s at %s na mga kategorya"
 msgid "Categories"
 msgstr "Mga Kategorya"
 
-#: core/Legacy/LegacyPlugin.php:212 modules/settings/settings.php:493
+#: core/Legacy/LegacyPlugin.php:212 modules/settings/settings.php:493, fuzzy
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
@@ -261,7 +263,7 @@ msgstr "Cheatin&#8217; uh?"
 msgid "Check Now"
 msgstr "Suriin Ngayon"
 
-#: modules/checklists/checklists.php:748 modules/checklists/checklists.php:828
+#: modules/checklists/checklists.php:748 modules/checklists/checklists.php:828, fuzzy
 msgid "Checklist"
 msgstr "Checklist"
 
@@ -340,8 +342,7 @@ msgstr "Ganap na i-disable ang \"Quick Edit\":"
 
 #: modules/settings/settings.php:817
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
-msgstr ""
-"Huwag paganahin ang \"Status\" na opsyon kapag gumagamit ng \"Quick Edit\":"
+msgstr "Huwag paganahin ang \"Status\" na opsyon kapag gumagamit ng \"Quick Edit\":"
 
 #: core/API/LabelMapper.php:39 modules/checklists/checklists.php:1075
 msgid "Disabled"
@@ -403,7 +404,8 @@ msgstr "Ilagay ang OpenAI task prompt"
 #: modules/settings/settings.php:1098
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
-"Ilagay ang iyong API Key upang magamit ang OpenAI prompts sa checklist tasks."
+"Ilagay ang iyong API Key upang magamit ang OpenAI prompts sa checklist "
+"tasks."
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
@@ -443,7 +445,7 @@ msgstr "Pangkalahatan"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169, fuzzy
 msgid "Good"
 msgstr "Maganda"
 
@@ -607,7 +609,7 @@ msgid "Maximum of %s category"
 msgstr "Maximum ng %s na kategorya"
 
 #: core/Requirement/Pro_Requirement.php:112
-#: core/Requirement/Base_counter.php:302
+#: core/Requirement/Base_counter.php:302, fuzzy
 msgid "Min"
 msgstr "Min"
 
@@ -799,11 +801,11 @@ msgstr "Ayos"
 msgid "One or more items in the checklist are not completed"
 msgstr "Isang o higit pang mga item sa checklist ang hindi natapos"
 
-#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70
+#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
-#: modules/settings/settings.php:851
+#: modules/settings/settings.php:851, fuzzy
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
 
@@ -823,7 +825,7 @@ msgstr "Mga Pagpipilian"
 msgid "options cannot be empty."
 msgstr "hindi maaaring walang laman ang mga opsyon."
 
-#: core/Utils/FieldsTabs.php:53
+#: core/Utils/FieldsTabs.php:53, fuzzy
 msgid "Permalink"
 msgstr "Permalink"
 
@@ -860,8 +862,8 @@ msgstr "Mangyaring ituwid ang iyong mga error sa form sa ibaba at subukan muli."
 #: modules/checklists/checklists.php:640
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr ""
-"Mangyaring siguraduhing magdagdag ng pangalan para sa lahat ng mga pasadyang "
-"gawain."
+"Mangyaring siguraduhing magdagdag ng pangalan para sa lahat ng mga "
+"pasadyang gawain."
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
@@ -909,7 +911,7 @@ msgstr "Nilalaman na may tono ng promosyon"
 msgid "Publish Date / Time"
 msgstr "Petsa / Oras ng Pag-publish"
 
-#: modules/settings/settings.php:1154
+#: modules/settings/settings.php:1154, fuzzy
 msgid "Publishing Options"
 msgstr "Mga Opsyon sa Pag-publish"
 
@@ -917,8 +919,8 @@ msgstr "Mga Opsyon sa Pag-publish"
 msgid "PublishPress"
 msgstr "PublishPress"
 
+#: core/Legacy/Module.php:286, fuzzy
 #. Name of the plugin
-#: core/Legacy/Module.php:286
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
@@ -926,7 +928,7 @@ msgstr "PublishPress Checklists"
 msgid "PublishPress Checklists Documentation"
 msgstr "Dokumentasyon ng PublishPress Checklists"
 
-#: core/Utils/FieldsTabs.php:104
+#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
@@ -1090,9 +1092,10 @@ msgid "Upgrade to Pro"
 msgstr "Mag-upgrade sa Pro"
 
 #: core/Requirement/Openai_item.php:293
-msgid "Validation error. Kindly reload this page and try agai.n"
+msgid "Validation error. Kindly reload this page and try again."
 msgstr ""
-"Error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang muli."
+"Error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang "
+"muli."
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
@@ -1125,10 +1128,10 @@ msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr ""
-"Sa PublishPress Checklists, maaari mong piliin ang mga kinakailangan sa pag-"
-"publish para sa iyong nilalaman."
+"Sa PublishPress Checklists, maaari mong piliin ang mga kinakailangan sa "
+"pag-publish para sa iyong nilalaman."
 
-#: core/Utils/FieldsTabs.php:97
+#: core/Utils/FieldsTabs.php:97, fuzzy
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1136,21 +1139,21 @@ msgstr "WooCommerce"
 msgid "Yes"
 msgstr "Oo"
 
-#. %s expands to the readability score
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
-#, php-format
+#. %s expands to the readability score
+#, fuzzy, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
-#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68
+#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
-#. %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
-#, php-format
+#. %s expands to the seo score
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 

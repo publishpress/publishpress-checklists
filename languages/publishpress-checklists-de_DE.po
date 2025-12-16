@@ -1,10 +1,9 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - PublishPress Checklists: Pre-Publishing "
 "Approval Task Checklist for WordPress Content - Development (trunk)\n"
 "POT-Creation-Date: 2024-10-15 21:56+0700\n"
-"PO-Revision-Date: 2025-11-11 11:45+0000\n"
+"PO-Revision-Date: 2025-12-16 13:56+0000\n"
 "Last-Translator: Anderson Grudtner Martins <anderson@publishpress.com>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +28,7 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
 #: core/Requirement/Taxonomies_count.php:55
-#: core/Requirement/Taxonomies_count.php:56
+#: core/Requirement/Taxonomies_count.php:56, fuzzy
 msgid "%d "
 msgstr "%d "
 
@@ -47,11 +46,11 @@ msgstr "%d Zeichen in der Überschrift"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 msgid "%d character in Yoast SEO focus keyword"
-msgstr "%d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "%d Zeichen im Yoast SEO Fokus-Schlüsselwort"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 msgid "%d character in Yoast SEO meta description"
-msgstr "%d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "%d Zeichen in der Yoast SEO Meta-Beschreibung"
 
 #: core/Requirement/Image_alt_count.php:49
 msgid "%d characters in Alt text"
@@ -67,11 +66,11 @@ msgstr "%d Zeichen in der Überschrift"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 msgid "%d characters in Yoast SEO focus keyword"
-msgstr "%d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "%d Zeichen im Yoast SEO Fokus-Schlüsselwort"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 msgid "%d characters in Yoast SEO meta description"
-msgstr "%d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "%d Zeichen in der Yoast SEO Meta-Beschreibung"
 
 #: core/Requirement/External_links.php:48
 msgid "%d external link in content"
@@ -132,7 +131,7 @@ msgstr "Über PublishPress Checklisten"
 msgid "Accessibility"
 msgstr "Barrierefreiheit"
 
-#: core/Utils/FieldsTabs.php:126
+#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
@@ -141,8 +140,8 @@ msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr ""
-"Fügen Sie eine Checklisten-Spalte zum Bildschirm Beiträge hinzu, die "
-"anzeigt, wie viele Anforderungen erfüllt sind."
+"Fügen Sie eine Checklisten-Spalte zum Posts-Bildschirm hinzu, die zeigt, "
+"wie viele Anforderungen erfüllt sind."
 
 #: modules/checklists/checklists.php:1053
 msgid "Add custom task"
@@ -158,15 +157,15 @@ msgstr "Für diese Beitragstypen aktivieren:"
 
 #: modules/checklists/checklists.php:677
 msgid "Adventurous Tone Content"
-msgstr "Abenteuerlicher Ton Inhalt"
+msgstr "Abenteuerlicher Toninhalt"
 
 #: core/Requirement/Image_alt.php:44 core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
 msgstr "Alle Bilder haben Alternativtext"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
-msgstr "All-in-One SEO"
+msgstr "All in One SEO"
 
 #: core/Requirement/Validate_links.php:65
 #: core/Requirement/Validate_links.php:66
@@ -203,7 +202,7 @@ msgstr "Bist du sicher, dass du dennoch veröffentlichen möchtest?"
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "Bist du sicher, dass du den Beitrag dennoch veröffentlichen willst?"
 
-#: core/Utils/FieldsTabs.php:41
+#: core/Utils/FieldsTabs.php:41, fuzzy
 msgid "Audio / Video"
 msgstr "Audio / Video"
 
@@ -225,11 +224,11 @@ msgstr "Zwischen %d und %d Zeichen in der Überschrift"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
-msgstr "Zwischen %d und %d Zeichen im Yoast SEO-Keyword für den Fokus"
+msgstr "Zwischen %d und %d Zeichen im Yoast SEO Fokus-Schlüsselwort"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 msgid "Between %d and %d characters in Yoast SEO meta description"
-msgstr "Zwischen %d und %d Zeichen in der Yoast SEO-Meta-Beschreibung"
+msgstr "Zwischen %d und %d Zeichen in der Yoast SEO Meta-Beschreibung"
 
 #: core/Requirement/External_links.php:50
 msgid "Between %d and %d external links in content"
@@ -282,7 +281,7 @@ msgstr "Checklist-Einstellungen"
 #: modules/checklists/checklists.php:1147
 #: modules/checklists/templates/meta-box.php:11
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr "Checklistenaufgaben sind in Elementor-Editoren nicht verfügbar"
+msgstr "Checklisten-Aufgaben sind in Elementor-Editoren nicht verfügbar"
 
 #: modules/checklists/checklists.php:657
 msgid "Clear Content"
@@ -339,7 +338,7 @@ msgstr "„Veröffentlichen“-Schaltfläche deaktivieren:"
 
 #: modules/settings/settings.php:825
 msgid "Disable \"Quick Edit\" completely:"
-msgstr "„Schnellbearbeitung“ vollständig deaktivieren:"
+msgstr "„Schnell bearbeiten“ vollständig deaktivieren:"
 
 #: modules/settings/settings.php:817
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
@@ -376,11 +375,11 @@ msgstr "Dokumentation (engl.)"
 
 #: modules/checklists/checklists.php:673
 msgid "Empathetic Tone Content"
-msgstr "Empathischer Ton Inhalt"
+msgstr "Einfühlsamer Ton Inhalt"
 
 #: modules/settings/settings.php:788
 msgid "Enable Duplicate Checklists:"
-msgstr "Duplikat-Checklisten aktivieren:"
+msgstr "Doppelte Checklisten aktivieren:"
 
 #: modules/settings/settings.php:778
 msgid "Enable Status Filter:"
@@ -396,7 +395,7 @@ msgstr "Aktivierte Elemente"
 
 #: core/Requirement/Custom_item.php:81 modules/checklists/checklists.php:651
 msgid "Enter name of custom task"
-msgstr "Name der benutzerdefinierten Aufgabe eingeben"
+msgstr "Namen der benutzerdefinierten Aufgabe eingeben"
 
 #: core/Requirement/Openai_item.php:100 modules/checklists/checklists.php:652
 msgid "Enter OpenAI task prompt"
@@ -410,7 +409,7 @@ msgstr ""
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
-msgstr "Vorschaubild"
+msgstr "Beitragsbild"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
@@ -420,7 +419,7 @@ msgstr "Das vorgestellte Bild hat einen Alternativtext"
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
-msgstr "Vorschaubild hat eine Bildunterschrift"
+msgstr "Beitragsbild hat Bildunterschrift"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
@@ -446,7 +445,7 @@ msgstr "Allgemein"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169, fuzzy
 msgid "Good"
 msgstr "Gut"
 
@@ -473,7 +472,7 @@ msgstr ""
 msgid "Images"
 msgstr "Bilder"
 
-#: modules/settings/settings.php:1155
+#: modules/settings/settings.php:1155, fuzzy
 msgid "Integration"
 msgstr "Integration"
 
@@ -487,38 +486,38 @@ msgstr "Ist dieser Inhalt klar und leicht zu lesen?"
 
 #: modules/checklists/checklists.php:678
 msgid "Is this content tone adventurous?"
-msgstr "Ist dieser Inhalt tonmäßig abenteuerlich?"
+msgstr "Ist dieser Inhalt abenteuerlich?"
 
 #: modules/checklists/checklists.php:674
 msgid "Is this content tone empathetic?"
-msgstr "Ist dieser Inhalt tonmäßig empathisch?"
+msgstr "Ist dieser Inhalt einfühlsam?"
 
 #: modules/checklists/checklists.php:662
 msgid "Is this content tone friendly?"
-msgstr "Ist dieser Inhalt tonmäßig freundlich?"
+msgstr "Ist dieser Inhalt freundlich?"
 
 #: modules/checklists/checklists.php:670
 msgid "Is this content tone persuasive?"
-msgstr "Ist dieser Inhalt tonmäßig überzeugend?"
+msgstr "Ist dieser Inhalt überzeugend?"
 
 #: modules/checklists/checklists.php:666
 msgid "Is this content tone professional?"
-msgstr "Ist dieser Inhalt tonmäßig professionell?"
+msgstr "Ist dieser Inhalt professionell?"
 
 #: modules/checklists/checklists.php:682
 msgid "Is this content tone promotional?"
-msgstr "Ist dieser Inhalt tonmäßig werblich?"
+msgstr "Ist dieser Inhalt werblich?"
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
 msgstr "Lateinischer Zeichensatz im Permalink"
 
-#: core/Utils/FieldsTabs.php:49
+#: core/Utils/FieldsTabs.php:49, fuzzy
 msgid "Links"
 msgstr "Links"
 
 #: core/Requirement/Pro_Requirement.php:113
-#: core/Requirement/Base_counter.php:310
+#: core/Requirement/Base_counter.php:310, fuzzy
 msgid "Max"
 msgstr "Max"
 
@@ -790,11 +789,11 @@ msgstr "Anzahl Zeichen im Textauszug"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168, fuzzy
 msgid "OK"
 msgstr "OK"
 
-#: modules/checklists/checklists.php:884
+#: modules/checklists/checklists.php:884, fuzzy
 msgid "Ok"
 msgstr "Ok"
 
@@ -802,7 +801,7 @@ msgstr "Ok"
 msgid "One or more items in the checklist are not completed"
 msgstr "Eins oder mehrere Elemente in der Checkliste sind nicht abgeschlossen"
 
-#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70
+#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
@@ -826,11 +825,11 @@ msgstr "Einstellungen"
 msgid "options cannot be empty."
 msgstr "Optionen dürfen nicht leer sein."
 
-#: core/Utils/FieldsTabs.php:53
+#: core/Utils/FieldsTabs.php:53, fuzzy
 msgid "Permalink"
 msgstr "Permalink"
 
-#: modules/permalinks/permalinks.php:65
+#: modules/permalinks/permalinks.php:65, fuzzy
 msgid "Permalinks"
 msgstr "Permalinks"
 
@@ -906,9 +905,9 @@ msgstr "Werblicher Toninhalt"
 
 #: core/Utils/FieldsTabs.php:29
 msgid "Publish Date / Time"
-msgstr "Veröffentlichungsdatum / -zeit"
+msgstr "Veröffentlichungsdatum / -uhrzeit"
 
-#: modules/settings/settings.php:1154
+#: modules/settings/settings.php:1154, fuzzy
 msgid "Publishing Options"
 msgstr "Veröffentlichungsoptionen"
 
@@ -925,7 +924,7 @@ msgstr "PublishPress Checklisten"
 msgid "PublishPress Checklists Documentation"
 msgstr "Dokumentation zu PublishPress Checklisten"
 
-#: core/Utils/FieldsTabs.php:104
+#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
@@ -996,7 +995,7 @@ msgstr "Einstellungen erfolgreich gespeichert!"
 
 #: modules/settings/settings.php:798
 msgid "Show Checklists column in post lists:"
-msgstr "Überprüfungslisten-Spalte in Beitragslisten anzeigen:"
+msgstr "Checklisten-Spalte in Beitragslisten anzeigen:"
 
 #: modules/settings/settings.php:761
 msgid "Show warning icon:"
@@ -1006,7 +1005,7 @@ msgstr "Zeige Warnsymbol"
 msgid "Suggested Prompts"
 msgstr "Vorgeschlagene Eingabeaufforderungen"
 
-#: core/Utils/FieldsTabs.php:61
+#: core/Utils/FieldsTabs.php:61, fuzzy
 msgid "Tags"
 msgstr "Tags"
 
@@ -1031,12 +1030,12 @@ msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr ""
-"Dies ermöglicht es, Aufgaben für spezifische Status wie \"Entwurf\" oder "
+"Dies ermöglicht es, Aufgaben für bestimmte Status wie \"Entwurf\" oder "
 "\"Veröffentlicht\" zu deaktivieren."
 
 #: modules/settings/settings.php:931
 msgid "This allows users to duplicate existing checklist task."
-msgstr "Dies ermöglicht es Benutzern, vorhandene Checklistenaufgaben zu duplizieren."
+msgstr "Dies ermöglicht es Benutzern, vorhandene Checklistenelemente zu duplizieren."
 
 #: modules/checklists/templates/global-checklists.php:213
 msgid "This feature requires an OpenAI API Key."
@@ -1051,15 +1050,15 @@ msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
 msgstr ""
-"Dies deaktiviert \"Schnell bearbeiten\" für alle Benutzer außer denen mit "
-"der Berechtigung \"manage_options\"."
+"Dies deaktiviert \"Schnellbearbeitung\" für alle Benutzer, außer für "
+"diejenigen mit der Berechtigung \"manage_options\"."
 
 #: modules/settings/settings.php:1079
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr ""
-"Dies deaktiviert die \"Veröffentlichen\"-Schaltfläche, wenn die "
+"Dies deaktiviert die Schaltfläche \"Veröffentlichen\", wenn die "
 "Anforderungen der Checkliste nicht erfüllt sind."
 
 #: modules/settings/settings.php:975
@@ -1067,12 +1066,12 @@ msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr ""
-"Dies zeigt ein Warnsymbol im \"Überprüfungslisten\"-Bereich, wenn "
-"Anforderungen unvollständig sind."
+"Dies zeigt ein Warnsymbol im \"Checklisten\"-Bereich an, wenn Anforderungen "
+"unvollständig sind."
 
 #: modules/settings/settings.php:1016
 msgid "This will show \"Who can ignore\" options."
-msgstr "Dies zeigt die Optionen \"Wer kann ignorieren\" an."
+msgstr "Dies zeigt Optionen für \"Wer kann ignorieren\" an."
 
 #: core/Utils/FieldsTabs.php:21
 msgid "Title"
@@ -1084,17 +1083,17 @@ msgstr "Werkzeuge"
 
 #: publishpress-checklists.php:183 core/Plugin.php:112
 msgid "Upgrade to Pro"
-msgstr "Upgrade auf Pro"
+msgstr "Auf Pro upgraden"
 
 #: core/Requirement/Openai_item.php:293
-msgid "Validation error. Kindly reload this page and try agai.n"
+msgid "Validation error. Kindly reload this page and try again."
 msgstr ""
 "Validierungsfehler. Bitte laden Sie diese Seite neu und versuchen Sie es "
 "erneut."
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "Wissensdatenbank ansehen"
+msgstr "Wissensdatenbank anzeigen"
 
 #: modules/checklists/checklists.php:654
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
@@ -1126,7 +1125,7 @@ msgstr ""
 "Mit den Checklisten von PublishPress können Sie "
 "Veröffentlichungsanforderungen für Ihre Inhalte auswählen."
 
-#: core/Utils/FieldsTabs.php:97
+#: core/Utils/FieldsTabs.php:97, fuzzy
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1141,14 +1140,14 @@ msgstr "Ja"
 msgid "Yoast Readability: %s"
 msgstr "Yoast-Lesbarkeit: %s"
 
-#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68
+#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
 #. %s expands to the seo score
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
@@ -1172,4 +1171,4 @@ msgid ""
 "features and support. %sUpgrade to Pro%s"
 msgstr ""
 "Sie verwenden PublishPress Checklists Free. Die Pro-Version bietet mehr "
-"Funktionen und Unterstützung. %sUpgrade auf Pro%s"
+"Funktionen und Unterstützung. %sAuf Pro upgraden%s"

@@ -1,6 +1,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+= [2.24.0] - 16 December 2025 =
+* Added: Allow user to change icon and color on checklists item #1033
+* Added: New translation system using PublishPress Translator library #1029
+* Fixed: Small typo on OpenAI item #1030 
+* Fixed: String translation on global-checklists.php by @DAnn2012
+* Fixed: Show translated role names in permissions.php by @DAnn2012
+* Lang: ES FR IT translation updated #1024
+* Lang: Brazil translation #1027
+
 = [2.23.0] - 2 October 2025 =
 * Added: Add option to delete data when uninstall the plugin #1012
 * Fixed: Featured Image Alt Text is not recognized #992

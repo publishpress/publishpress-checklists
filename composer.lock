@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7e3ef2590c15d6677d08f7e653619d1",
+    "content-hash": "464da8a6bd93110c2e7932623c0708e1",
     "packages": [],
     "packages-dev": [
         {
@@ -2032,16 +2032,16 @@
         },
         {
             "name": "publishpress/translations",
-            "version": "dev-self-hosted",
+            "version": "dev-development",
             "source": {
                 "type": "git",
                 "url": "https://github.com/publishpress/library-publishpress-translator.git",
-                "reference": "740b29c138cfb0db9d28f6bf1f0ff3bdcb5894bf"
+                "reference": "168be82ae62a130ddef9c841ed9bf82cc54d4791"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/publishpress/library-publishpress-translator/zipball/740b29c138cfb0db9d28f6bf1f0ff3bdcb5894bf",
-                "reference": "740b29c138cfb0db9d28f6bf1f0ff3bdcb5894bf",
+                "url": "https://api.github.com/repos/publishpress/library-publishpress-translator/zipball/168be82ae62a130ddef9c841ed9bf82cc54d4791",
+                "reference": "168be82ae62a130ddef9c841ed9bf82cc54d4791",
                 "shasum": ""
             },
             "require": {
@@ -2061,6 +2061,7 @@
                 "szepeviktor/phpstan-wordpress": "^1.3",
                 "wp-coding-standards/wpcs": "^3"
             },
+            "default-branch": true,
             "bin": [
                 "bin/publishpress-translate"
             ],
@@ -2070,63 +2071,7 @@
                     "PublishPress\\Translations\\": "src/"
                 }
             },
-            "scripts": {
-                "check:php": [
-                    "@check:php-7.2",
-                    "@check:php-7.4",
-                    "@check:php-8.0",
-                    "@check:php-8.1",
-                    "@check:php-8.2",
-                    "@check:php-8.3",
-                    "@check:php-8.4"
-                ],
-                "check:php-7.4": [
-                    "phpcs --standard=.phpcs-php-compatibility.xml --runtime-set testVersion 7.4"
-                ],
-                "check:php-8.0": [
-                    "phpcs --standard=.phpcs-php-compatibility.xml --runtime-set testVersion 8.0"
-                ],
-                "check:php-8.1": [
-                    "phpcs --standard=.phpcs-php-compatibility.xml --runtime-set testVersion 8.1"
-                ],
-                "check:php-8.2": [
-                    "phpcs --standard=.phpcs-php-compatibility.xml --runtime-set testVersion 8.2"
-                ],
-                "check:php-8.3": [
-                    "phpcs --standard=.phpcs-php-compatibility.xml --runtime-set testVersion 8.3"
-                ],
-                "check:php-8.4": [
-                    "phpcs --standard=.phpcs-php-compatibility.xml --runtime-set testVersion 8.4"
-                ],
-                "check:lint": [
-                    "phplint --no-cache"
-                ],
-                "check:cs": [
-                    "phpcs"
-                ],
-                "check:stan": [
-                    "phpstan"
-                ],
-                "info:versions": [
-                    "bash ./dev-workspace/scripts/dependency-versions.sh"
-                ],
-                "config:phpcs": [
-                    "phpcs --config-set installed_paths \"../../phpcsstandards/phpcsutils,../../phpcsstandards/phpcsextra,../../automattic/vipwpcs,../../phpcompatibility/php-compatibility,../../sirbrillig/phpcs-variable-analysis,../../publishpress/publishpress-phpcs-standards/standards,../../wp-coding-standards/wpcs\""
-                ],
-                "post-install-cmd": [
-                    "@setup-potomatic",
-                    "@config:phpcs"
-                ],
-                "post-update-cmd": [
-                    "@setup-potomatic",
-                    "@config:phpcs"
-                ],
-                "setup-potomatic": [
-                    "@php -r \"echo '\\n\\u1F4E6 Setting up Potomatic...\\n';\"",
-                    "cd potomatic && npm install --omit=dev --silent || echo 'Warning: npm not found. Please install Node.js from https://nodejs.org/'",
-                    "@php -r \"echo '\\u2713 Potomatic ready!\\n\\n';\""
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-or-later"
             ],
@@ -2138,10 +2083,10 @@
             ],
             "description": "AI-powered translation automation for PublishPress plugins using Potomatic",
             "support": {
-                "source": "https://github.com/publishpress/library-publishpress-translator/tree/self-hosted",
-                "issues": "https://github.com/publishpress/library-publishpress-translator/issues"
+                "issues": "https://github.com/publishpress/library-publishpress-translator/issues",
+                "source": "https://github.com/publishpress/library-publishpress-translator/tree/development"
             },
-            "time": "2025-12-10T13:50:57+00:00"
+            "time": "2025-12-15T15:27:48+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

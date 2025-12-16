@@ -1,9 +1,8 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2025-11-11 11:49+0000\n"
+"PO-Revision-Date: 2025-12-16 13:57+0000\n"
 "Last-Translator: Anderson Grudtner Martins <anderson@publishpress.com>\n"
 "Language-Team: Anderson Grudtner Martins <anderson@publishpress.com>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +26,7 @@ msgstr ""
 "Language: ru-RU\n"
 
 #: core/Requirement/Taxonomies_count.php:55
-#: core/Requirement/Taxonomies_count.php:56
+#: core/Requirement/Taxonomies_count.php:56, fuzzy
 msgid "%d "
 msgstr "%d "
 
@@ -130,7 +129,7 @@ msgstr "О PublishPress Checklists"
 msgid "Accessibility"
 msgstr "Доступность"
 
-#: core/Utils/FieldsTabs.php:126
+#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
@@ -162,7 +161,7 @@ msgstr "Контент с авантюрным тоном"
 msgid "All images have Alt text"
 msgstr "Все изображения имеют Alt текст"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
@@ -444,7 +443,7 @@ msgstr "Общее"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169, fuzzy
 msgid "Good"
 msgstr "Хорошо"
 
@@ -800,7 +799,7 @@ msgstr "Хорошо"
 msgid "One or more items in the checklist are not completed"
 msgstr "Один или несколько пунктов в контрольном списке не завершены"
 
-#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70
+#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
@@ -908,7 +907,7 @@ msgstr "Контент с рекламным тоном"
 msgid "Publish Date / Time"
 msgstr "Дата / Время публикации"
 
-#: modules/settings/settings.php:1154
+#: modules/settings/settings.php:1154, fuzzy
 msgid "Publishing Options"
 msgstr "Опции публикации"
 
@@ -916,7 +915,7 @@ msgstr "Опции публикации"
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: core/Legacy/Module.php:286
+#: core/Legacy/Module.php:286, fuzzy
 #. Name of the plugin
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
@@ -925,7 +924,7 @@ msgstr "PublishPress Checklists"
 msgid "PublishPress Checklists Documentation"
 msgstr "Документация PublishPress Checklists"
 
-#: core/Utils/FieldsTabs.php:104
+#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
@@ -1089,7 +1088,7 @@ msgid "Upgrade to Pro"
 msgstr "Переход на Pro"
 
 #: core/Requirement/Openai_item.php:293
-msgid "Validation error. Kindly reload this page and try agai.n"
+msgid "Validation error. Kindly reload this page and try again."
 msgstr "Ошибка валидации. Пожалуйста, перезагрузите эту страницу и попробуйте снова."
 
 #: core/Legacy/Util.php:198
@@ -1124,7 +1123,7 @@ msgstr ""
 "С помощью PublishPress Checklists вы можете выбрать требования к публикации "
 "для вашего контента."
 
-#: core/Utils/FieldsTabs.php:97
+#: core/Utils/FieldsTabs.php:97, fuzzy
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1139,7 +1138,7 @@ msgstr "Да"
 msgid "Yoast Readability: %s"
 msgstr "Читаемость Yoast: %s"
 
-#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68
+#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
