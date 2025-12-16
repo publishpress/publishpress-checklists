@@ -33,7 +33,17 @@
     "pre-autoload-dump": "composer dumpautoload --working-dir=./lib",
     "pre-update-cmd": "composer update --working-dir=./lib",
     "pre-install-cmd": "composer install --working-dir=./lib",
-    "translate": "vendor/bin/publishpress-translate",
+    "make-pot": [
+      "wp i18n make-pot . languages/publishpress-checklists.pot --domain=publishpress-checklists --exclude=vendor,node_modules,dist,tests,lib/vendor"
+    ],
+    "make-mo": [
+      "wp i18n make-mo languages/"
+    ],
+    "translate": [
+      "@make-pot",
+      "vendor/bin/publishpress-translate translate",
+      "@make-mo"
+    ],
     "translate:dry-run": "vendor/bin/publishpress-translate --dry-run",
     "translate:download": "vendor/bin/publishpress-translate --download",
     "translate:upload": "vendor/bin/publishpress-translate --upload",
