@@ -17,3 +17,9 @@
 - vendor/woocommerce/action-scheduler/changelog.txt
 - CONTRIBUTING.md
 - assets_wp
+- .env
+- .env.example
+- .env.testing.dist
+- .prettierrc
+- .rsync-filters-post-build
+- .rsync-filters-pre-build

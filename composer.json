@@ -2,7 +2,7 @@
   "name": "publishpress/publishpress-checklists",
   "type": "wordpress-plugin",
   "description": "",
-  "license": "GPL-2",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "PublishPress",
@@ -12,8 +12,6 @@
   "config": {
     "preferred-install": "dist"
   },
-  "repositories": [
-  ],
   "require": {
     "php": ">=7.2.5"
   },
@@ -22,22 +20,48 @@
     "codeception/module-phpbrowser": "^1.0",
     "codeception/module-db": "^1.0",
     "codeception/util-universalframework": "^1.0",
-    "overtrue/phplint": "^2.4"
+    "overtrue/phplint": "^2.4",
+    "publishpress/translations": "dev-development"
   },
   "scripts": {
-    "build": "ppbuild build",
-    "build:dir": "ppbuild build-dir",
-    "build:clean": "ppbuild clean",
-    "get-version": "ppbuild version",
+    "build": "pbuild build",
+    "build:dir": "pbuild build-dir",
+    "build:clean": "pbuild clean",
+    "get-version": "pbuild version",
     "check:longpath": "longpath .",
+    "check:lint": "phplint",
     "pre-autoload-dump": "composer dumpautoload --working-dir=./lib",
     "pre-update-cmd": "composer update --working-dir=./lib",
-    "pre-install-cmd": "composer install --working-dir=./lib"
+    "pre-install-cmd": "composer install --working-dir=./lib",
+    "make-pot": [
+      "wp i18n make-pot . languages/publishpress-checklists.pot --domain=publishpress-checklists --exclude=vendor,node_modules,dist,tests,lib/vendor"
+    ],
+    "make-mo": [
+      "wp i18n make-mo languages/"
+    ],
+    "translate": [
+      "@make-pot",
+      "vendor/bin/publishpress-translate translate",
+      "@make-mo"
+    ],
+    "translate:dry-run": "vendor/bin/publishpress-translate --dry-run",
+    "translate:download": "vendor/bin/publishpress-translate --download",
+    "translate:upload": "vendor/bin/publishpress-translate --upload",
+    "translate:force": "vendor/bin/publishpress-translate --force",
+    "translate:force-custom": "vendor/bin/publishpress-translate --force --languages"
   },
   "minimum-stability": "stable",
   "extra": {
     "plugin-slug": "publishpress-checklists",
     "plugin-name": "publishpress-checklists",
-    "plugin-folder": "publishpress-checklists"
+    "plugin-folder": "publishpress-checklists",
+    "scripts-descriptions": {
+      "translate": "Generate and upload translations to Weblate using AI-powered Potomatic",
+      "translate:dry-run": "Preview translations without making API calls",
+      "translate:download": "Download translations from Weblate",
+      "translate:upload": "Upload existing translations to Weblate (no AI translation)",
+      "translate:force": "Force re-translate all strings (ignore existing translations)",
+      "translate:force-custom": "Force re-translate with specific languages (requires --languages parameter)"
+    }
   }
 }

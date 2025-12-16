@@ -522,18 +522,24 @@
      */
     update_requirement_icon: function (is_completed, $element) {
       var $icon_element = $element.find('.dashicons');
+      
+      // Get custom icons from settings or use defaults
+      var customIcons = ppChecklists.customIcons || {};
+      var completeIcon = customIcons.complete || 'dashicons-yes';
+      var incompleteIcon = customIcons.incomplete || 'dashicons-no';
+      
       if (is_completed) {
         // Ok
-        $icon_element.removeClass('dashicons-no');
-        $icon_element.addClass('dashicons-yes');
+        $icon_element.removeClass(incompleteIcon);
+        $icon_element.addClass(completeIcon);
         $icon_element.parent().removeClass('status-no');
         $icon_element.parent().addClass('status-yes');
         $element.find('.ppch_item_requirement').val('yes');
         wp.hooks.doAction('pp-checklists.requirements-updated', $element);
       } else {
         // Not ok
-        $icon_element.removeClass('dashicons-yes');
-        $icon_element.addClass('dashicons-no');
+        $icon_element.removeClass(completeIcon);
+        $icon_element.addClass(incompleteIcon);
         $icon_element.parent().removeClass('status-yes');
         $icon_element.parent().addClass('status-no');
         $element.find('.ppch_item_requirement').val('no');

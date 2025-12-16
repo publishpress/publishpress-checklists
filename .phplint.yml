@@ -1,6 +1,8 @@
-path: ./
+path:
+  - ./
+  - ./core
+  - ./modules
 jobs: 10
-cache: build/phplint.cache
 extensions:
   - php
 exclude:
@@ -9,6 +11,10 @@ exclude:
   - bin
   - build
   - node_modules
-  - tests/_output
-  - tests/_support/_generated
+  - tests
+  - .github
+  - assets
+  - cache
+  - languages
+  - .wordpress-org
 warning: false

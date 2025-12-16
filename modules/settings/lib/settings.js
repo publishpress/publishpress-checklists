@@ -1,4 +1,7 @@
 jQuery(document).ready(function ($) {
+  // Initialize color pickers
+  $('.pp-checklists-color-picker').wpColorPicker();
+
   // Tabs
 
   var $tabsWrapper = $('#publishpress-checklists-settings-tabs');
