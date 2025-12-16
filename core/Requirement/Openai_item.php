@@ -291,7 +291,7 @@ class Openai_item extends Base_simple implements Interface_required
             || !wp_verify_nonce(sanitize_key($_POST['nonce']), 'pp-checklists-requirements')
         ) {
             $response['content'] = esc_html__(
-                'Validation error. Kindly reload this page and try agai.n',
+                'Validation error. Kindly reload this page and try again.',
                 'publishpress-checklists'
             );
         } elseif (empty(trim(sanitize_text_field($_POST['content'])))) {

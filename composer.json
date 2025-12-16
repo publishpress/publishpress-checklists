@@ -12,12 +12,6 @@
   "config": {
     "preferred-install": "dist"
   },
-  "repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/publishpress/publishpress-translator.git"
-    }
-    ],
   "require": {
     "php": ">=7.2.5"
   },
@@ -27,7 +21,7 @@
     "codeception/module-db": "^1.0",
     "codeception/util-universalframework": "^1.0",
     "overtrue/phplint": "^2.4",
-    "publishpress/translations": "dev-self-hosted"
+    "publishpress/translations": "dev-development"
   },
   "scripts": {
     "build": "pbuild build",
@@ -39,7 +33,17 @@
     "pre-autoload-dump": "composer dumpautoload --working-dir=./lib",
     "pre-update-cmd": "composer update --working-dir=./lib",
     "pre-install-cmd": "composer install --working-dir=./lib",
-    "translate": "vendor/bin/publishpress-translate",
+    "make-pot": [
+      "wp i18n make-pot . languages/publishpress-checklists.pot --domain=publishpress-checklists --exclude=vendor,node_modules,dist,tests,lib/vendor"
+    ],
+    "make-mo": [
+      "wp i18n make-mo languages/"
+    ],
+    "translate": [
+      "@make-pot",
+      "vendor/bin/publishpress-translate translate",
+      "@make-mo"
+    ],
     "translate:dry-run": "vendor/bin/publishpress-translate --dry-run",
     "translate:download": "vendor/bin/publishpress-translate --download",
     "translate:upload": "vendor/bin/publishpress-translate --upload",
