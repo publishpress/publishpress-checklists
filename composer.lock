@@ -2036,12 +2036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/publishpress/library-publishpress-translator.git",
-                "reference": "168be82ae62a130ddef9c841ed9bf82cc54d4791"
+                "reference": "2bed100526c2a83980c474b8ace684d1a971115f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/publishpress/library-publishpress-translator/zipball/168be82ae62a130ddef9c841ed9bf82cc54d4791",
-                "reference": "168be82ae62a130ddef9c841ed9bf82cc54d4791",
+                "url": "https://api.github.com/repos/publishpress/library-publishpress-translator/zipball/2bed100526c2a83980c474b8ace684d1a971115f",
+                "reference": "2bed100526c2a83980c474b8ace684d1a971115f",
                 "shasum": ""
             },
             "require": {
@@ -2086,7 +2086,7 @@
                 "issues": "https://github.com/publishpress/library-publishpress-translator/issues",
                 "source": "https://github.com/publishpress/library-publishpress-translator/tree/development"
             },
-            "time": "2025-12-15T15:27:48+00:00"
+            "time": "2025-12-17T11:59:19+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -4619,6 +4619,6 @@
     "platform": {
         "php": ">=7.2.5"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
