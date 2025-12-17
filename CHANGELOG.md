@@ -1,6 +1,9 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+= [2.24.1] - 17 December 2025 =
+* Fixed: Remove double language file in translation #1045
+
 = [2.24.0] - 16 December 2025 =
 * Added: Allow user to change icon and color on checklists item #1033
 * Added: New translation system using PublishPress Translator library #1029

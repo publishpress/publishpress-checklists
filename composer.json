@@ -28,6 +28,7 @@
     "build:dir": "pbuild build-dir",
     "build:clean": "pbuild clean",
     "get-version": "pbuild version",
+    "info:versions": "bash ./dev-workspace/scripts/dependency-versions.sh",
     "check:longpath": "longpath .",
     "check:lint": "phplint",
     "pre-autoload-dump": "composer dumpautoload --working-dir=./lib",
