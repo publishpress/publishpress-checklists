@@ -582,8 +582,6 @@
       return submit_form;
     });
 
-    // Remove current notice on dismiss (WordPress handles is-dismissible automatically)
-
     // Remove notice on any number input changed
     $(document).on('change input paste', '.pp-checklists-number', function () {
       //remove previous notice
