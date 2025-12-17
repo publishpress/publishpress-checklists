@@ -995,7 +995,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[duplicate_checklist_settings]" '
                 . checked($value, 'yes', false) . ' disabled="disabled" />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This allows users to duplicate existing checklist task.',
+                'This allows users to duplicate existing checklist tasks.',
                 'publishpress-checklists'
             );
             echo '</label>';
