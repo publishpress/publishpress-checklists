@@ -21,12 +21,13 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Report-Msgid-Bugs-To: \n"
 "X-Loco-Version: 2.6.11; wp-6.6.2"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: core/Requirement/Taxonomies_count.php:48
-#: core/Requirement/Taxonomies_count.php:49, fuzzy
+#: core/Requirement/Taxonomies_count.php:48
+#: core/Requirement/Taxonomies_count.php:49
 msgid "%d "
 msgstr "%d "
 
@@ -290,7 +291,7 @@ msgstr "Genel:"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:129
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:160
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:130
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161
 msgid "Good"
 msgstr "İyi"
 
@@ -530,7 +531,7 @@ msgstr "TAMAM"
 msgid "Ok"
 msgstr "Tamam"
 
-#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62, fuzzy
+#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62
 msgid "Openai"
 msgstr "Openai"
 
@@ -604,7 +605,7 @@ msgstr "Yasaklı kategoriler: %s"
 msgid "Prohibited tags"
 msgstr "Yasaklanmış etiketler"
 
-#: core/Requirement/Prohibited_tags.php:42, fuzzy
+#: core/Requirement/Prohibited_tags.php:42
 msgid "Prohibited tags: %s"
 msgstr "Yasaklanmış etiketler: %s"
 
@@ -727,14 +728,14 @@ msgstr "Evet"
 msgid "Yoast Readability: %s"
 msgstr "Yoast Okunabilirliği: %s"
 
-#: modules/yoastseo/yoastseo.php:66, fuzzy
+#: modules/yoastseo/yoastseo.php:66
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
 #. %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:123
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:128
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 

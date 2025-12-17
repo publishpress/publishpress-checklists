@@ -18,7 +18,8 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2"
 
 #: core/Requirement/Taxonomies_count.php:48
-#: core/Requirement/Taxonomies_count.php:49, fuzzy
+#: core/Requirement/Taxonomies_count.php:48
+#: core/Requirement/Taxonomies_count.php:49
 msgid "%d "
 msgstr "%d "
 
@@ -54,11 +55,11 @@ msgstr "%d link interno nel contenuto"
 msgid "%d internal links in content"
 msgstr "%d link interni nel contenuto"
 
-#: core/Requirement/Tags_count.php:45, fuzzy
+#: core/Requirement/Tags_count.php:45
 msgid "%d tag"
 msgstr "%d tag"
 
-#: core/Requirement/Tags_count.php:46, fuzzy
+#: core/Requirement/Tags_count.php:46
 msgid "%d tags"
 msgstr "%d tags"
 
@@ -282,7 +283,7 @@ msgstr "Generale:"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:129
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:160
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:130
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161
 msgid "Good"
 msgstr "Buono"
 
@@ -461,7 +462,7 @@ msgstr "Punteggio minimo di leggibilità Yoast SEO"
 msgid "New Item"
 msgstr "Nuovo elemento"
 
-#: modules/checklists/checklists.php:790, fuzzy
+#: modules/checklists/checklists.php:790
 msgid "No"
 msgstr "No"
 
@@ -514,15 +515,15 @@ msgstr "Numero di caratteri nel riassunto"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:124
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:159
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:125
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:160, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:160
 msgid "OK"
 msgstr "OK"
 
-#: modules/checklists/checklists.php:789, fuzzy
+#: modules/checklists/checklists.php:789
 msgid "Ok"
 msgstr "Ok"
 
-#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62, fuzzy
+#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62
 msgid "Openai"
 msgstr "Openai"
 
@@ -595,7 +596,7 @@ msgstr "Categorie vietate: %s"
 msgid "Prohibited tags"
 msgstr "Tag vietati"
 
-#: core/Requirement/Prohibited_tags.php:42, fuzzy
+#: core/Requirement/Prohibited_tags.php:42
 msgid "Prohibited tags: %s"
 msgstr "Tag vietati: %s"
 
@@ -604,7 +605,7 @@ msgid "PublishPress"
 msgstr "PublishPress"
 
 #. Name of the plugin
-#: core/Legacy/Module.php:285, fuzzy
+#: core/Legacy/Module.php:285
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
@@ -718,7 +719,7 @@ msgstr "Sì"
 msgid "Yoast Readability: %s"
 msgstr "Leggibilità Yoast: %s"
 
-#: modules/yoastseo/yoastseo.php:66, fuzzy
+#: modules/yoastseo/yoastseo.php:66
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
