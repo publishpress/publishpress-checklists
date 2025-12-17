@@ -2,11 +2,8 @@
     <?php wp_nonce_field('ppch-global-checklists'); ?>
 
     <?php if (isset($context['success']) && $context['success']) : ?>
-        <div class="checklists-save-notice">
-            <div class="alert alert-success alert-dismissible">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <?php echo esc_html__('Settings saved successfully!', 'publishpress-checklists'); ?>
-            </div>
+        <div class="notice notice-success is-dismissible">
+            <p><?php esc_html_e('Settings saved successfully!', 'publishpress-checklists'); ?></p>
         </div>
     <?php endif; ?>
 

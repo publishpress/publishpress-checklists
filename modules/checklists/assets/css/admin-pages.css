@@ -259,69 +259,6 @@ textarea.pp-checklists-custom-item-title {
   padding-left: 3px;
 }
 
-#pp-checklists-global .checklists-save-notice {
-  margin-top: 1rem;
-}
-
-/* Top notice styling when saving */
-#pp-checklists-global .checklists-save-notice:first-child {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  position: sticky;
-  top: 32px;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* End of Top notice styling when saving */
-
-
-#pp-checklists-global .checklists-save-notice .alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-
-#pp-checklists-global .checklists-save-notice .alert-dismissible {
-  padding-right: 35px;
-}
-
-#pp-checklists-global .checklists-save-notice .alert-dismissible .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  color: inherit;
-}
-
-#pp-checklists-global .checklists-save-notice .alert-danger {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
-}
-
-#pp-checklists-global .checklists-save-notice .alert-success {
-  color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-}
-
-#pp-checklists-global .checklists-save-notice .close {
-  float: right;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: 0.2;
-}
-
-#pp-checklists-global .checklists-save-notice a.close {
-  text-decoration: none !important;
-  font-size: 18px !important;
-  line-height: 1.2;
-}
 
 /* Inline field validation styling */
 .field-validation-error {
