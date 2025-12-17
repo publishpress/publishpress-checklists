@@ -17,116 +17,117 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2"
 
 #: core/Requirement/Taxonomies_count.php:48
-#: core/Requirement/Taxonomies_count.php:49, fuzzy
+#: core/Requirement/Taxonomies_count.php:48
+#: core/Requirement/Taxonomies_count.php:49
 msgid "%d "
 msgstr "%d "
 
-#: core/Requirement/Filled_excerpt.php:41, fuzzy
+#: core/Requirement/Filled_excerpt.php:41
 msgid "%d character in excerpt"
 msgstr "%d character in excerpt"
 
-#: core/Requirement/Title_count.php:39, fuzzy
+#: core/Requirement/Title_count.php:39
 msgid "%d character in title"
 msgstr "%d character in title"
 
-#: core/Requirement/Filled_excerpt.php:42, fuzzy
+#: core/Requirement/Filled_excerpt.php:42
 msgid "%d characters in excerpt"
 msgstr "%d characters in excerpt"
 
-#: core/Requirement/Title_count.php:40, fuzzy
+#: core/Requirement/Title_count.php:40
 msgid "%d characters in title"
 msgstr "%d characters in title"
 
-#: core/Requirement/External_links.php:41, fuzzy
+#: core/Requirement/External_links.php:41
 msgid "%d external link in content"
 msgstr "%d external link in content"
 
-#: core/Requirement/External_links.php:42, fuzzy
+#: core/Requirement/External_links.php:42
 msgid "%d external links in content"
 msgstr "%d external links in content"
 
-#: core/Requirement/Internal_links.php:41, fuzzy
+#: core/Requirement/Internal_links.php:41
 msgid "%d internal link in content"
 msgstr "%d internal link in content"
 
-#: core/Requirement/Internal_links.php:42, fuzzy
+#: core/Requirement/Internal_links.php:42
 msgid "%d internal links in content"
 msgstr "%d internal links in content"
 
-#: core/Requirement/Tags_count.php:45, fuzzy
+#: core/Requirement/Tags_count.php:45
 msgid "%d tag"
 msgstr "%d tag"
 
-#: core/Requirement/Tags_count.php:46, fuzzy
+#: core/Requirement/Tags_count.php:46
 msgid "%d tags"
 msgstr "%d tags"
 
-#: core/Requirement/Words_count.php:41, fuzzy
+#: core/Requirement/Words_count.php:41
 msgid "%d word in content"
 msgstr "%d word in content"
 
-#: core/Requirement/Words_count.php:42, fuzzy
+#: core/Requirement/Words_count.php:42
 msgid "%d words in content"
 msgstr "%d words in content"
 
 #: core/Requirement/Categories_count.php:46
-#, fuzzy, php-format
+#, php-format
 msgid "%s categories"
 msgstr "%s categories"
 
 #: core/Requirement/Categories_count.php:45
-#, fuzzy, php-format
+#, php-format
 msgid "%s category"
 msgstr "%s category"
 
-#: modules/checklists/templates/footer.php:23, fuzzy
+#: modules/checklists/templates/footer.php:23
 msgid "About"
 msgstr "About"
 
-#: modules/checklists/checklists.php:953, fuzzy
+#: modules/checklists/checklists.php:953
 msgid "Add custom task"
 msgstr "Add custom task"
 
-#: modules/checklists/templates/global-checklists.php:94, fuzzy
+#: modules/checklists/templates/global-checklists.php:94
 msgid "Add OpenAI Prompt task"
 msgstr "Add OpenAI Prompt task"
 
-#: modules/settings/settings.php:684, fuzzy
+#: modules/settings/settings.php:684
 msgid "Add to these post types:"
 msgstr "Add to these post types:"
 
-#: core/Requirement/Image_alt.php:36 core/Requirement/Image_alt.php:37, fuzzy
+#: core/Requirement/Image_alt.php:36 core/Requirement/Image_alt.php:37
 msgid "All images have Alt text"
 msgstr "All images have Alt text"
 
 #: core/Requirement/Validate_links.php:58
-#: core/Requirement/Validate_links.php:59, fuzzy
+#: core/Requirement/Validate_links.php:59
 msgid "All links use a valid format"
 msgstr "All links use a valid format"
 
-#: core/Requirement/Openai_item.php:266, fuzzy
+#: core/Requirement/Openai_item.php:266
 msgid "An error occured."
 msgstr "An error occured."
 
 #: core/Requirement/Openai_item.php:340
-#, fuzzy, php-format
+#, php-format
 msgid "API Error: %1s."
 msgstr "API Error: %1s."
 
 #: core/Requirement/Approved_by.php:41
-#, fuzzy, php-format
+#, php-format
 msgid "Approved by %s"
 msgstr "Approved by %s"
 
-#: core/Requirement/Approved_by.php:42, fuzzy
+#: core/Requirement/Approved_by.php:42
 msgid "Approved by a user in this role"
 msgstr "Approved by a user in this role"
 
-#: modules/checklists/checklists.php:736, fuzzy
+#: modules/checklists/checklists.php:736
 msgid "Are you sure you want to publish anyway?"
 msgstr "Are you sure you want to publish anyway?"
 
-#: modules/checklists/checklists.php:740, fuzzy
+#: modules/checklists/checklists.php:740
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "Are you sure you want to update the published post anyway?"
 
@@ -134,68 +135,68 @@ msgstr "Are you sure you want to update the published post anyway?"
 msgid "Between %d and %d "
 msgstr "Between %s and %s "
 
-#: core/Requirement/Filled_excerpt.php:43, fuzzy
+#: core/Requirement/Filled_excerpt.php:43
 msgid "Between %d and %d characters in excerpt"
 msgstr "Between %d and %d characters in excerpt"
 
-#: core/Requirement/Title_count.php:41, fuzzy
+#: core/Requirement/Title_count.php:41
 msgid "Between %d and %d characters in title"
 msgstr "Between %d and %d characters in title"
 
-#: core/Requirement/External_links.php:43, fuzzy
+#: core/Requirement/External_links.php:43
 msgid "Between %d and %d external links in content"
 msgstr "Between %d and %d external links in content"
 
-#: core/Requirement/Internal_links.php:43, fuzzy
+#: core/Requirement/Internal_links.php:43
 msgid "Between %d and %d internal links in content"
 msgstr "Between %d and %d internal links in content"
 
-#: core/Requirement/Tags_count.php:47, fuzzy
+#: core/Requirement/Tags_count.php:47
 msgid "Between %d and %d tags"
 msgstr "Between %d and %d tags"
 
-#: core/Requirement/Words_count.php:43, fuzzy
+#: core/Requirement/Words_count.php:43
 msgid "Between %d and %d words in content"
 msgstr "Between %d and %d words in content"
 
 #: core/Requirement/Categories_count.php:47
-#, fuzzy, php-format
+#, php-format
 msgid "Between %s and %s categories"
 msgstr "Between %s and %s categories"
 
-#: core/Legacy/LegacyPlugin.php:213 modules/settings/settings.php:444, fuzzy
+#: core/Legacy/LegacyPlugin.php:213 modules/settings/settings.php:444
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
 #: modules/checklists/checklists.php:788
-#: modules/checklists/assets/js/gutenberg-panel.jsx:242, fuzzy
+#: modules/checklists/assets/js/gutenberg-panel.jsx:242
 msgid "Check Now"
 msgstr "Check Now"
 
-#: modules/checklists/checklists.php:669 modules/checklists/checklists.php:734, fuzzy
+#: modules/checklists/checklists.php:669 modules/checklists/checklists.php:734
 msgid "Checklist"
 msgstr "Checklist"
 
 #: core/Legacy/LegacyPlugin.php:349 modules/checklists/checklists.php:101
 #: modules/checklists/checklists.php:887 modules/checklists/checklists.php:902
 #: modules/checklists/assets/js/gutenberg-panel.jsx:197
-#: modules/checklists/assets/js/gutenberg-panel.jsx:201, fuzzy
+#: modules/checklists/assets/js/gutenberg-panel.jsx:201
 msgid "Checklists"
 msgstr "Checklists"
 
-#: modules/settings/settings.php:61 modules/settings/settings.php:112, fuzzy
+#: modules/settings/settings.php:61 modules/settings/settings.php:112
 msgid "Checklists Settings"
 msgstr "Checklists Settings"
 
-#: core/Legacy/LegacyPlugin.php:206 modules/checklists/checklists.php:735, fuzzy
+#: core/Legacy/LegacyPlugin.php:206 modules/checklists/checklists.php:735
 msgid "Configure"
 msgstr "Configure"
 
-#: modules/checklists/templates/footer.php:37, fuzzy
+#: modules/checklists/templates/footer.php:37
 msgid "Contact"
 msgstr "Contact"
 
-#: core/Requirement/Custom_item.php:52 core/Requirement/Custom_item.php:53, fuzzy
+#: core/Requirement/Custom_item.php:52 core/Requirement/Custom_item.php:53
 msgid "Custom"
 msgstr "Custom"
 
@@ -207,23 +208,23 @@ msgstr ""
 "Custom tasks do not complete automatically. Users must check the box to show "
 "they have completed the task."
 
-#: modules/permalinks/permalinks.php:66, fuzzy
+#: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
 msgstr "Define tasks related to permalinks"
 
-#: modules/yoastseo/yoastseo.php:67, fuzzy
+#: modules/yoastseo/yoastseo.php:67
 msgid "Define tasks related to Yoast SEO"
 msgstr "Define tasks related to Yoast SEO"
 
-#: modules/checklists/templates/global-checklists.php:75, fuzzy
+#: modules/checklists/templates/global-checklists.php:75
 msgid "Description"
 msgstr "Description"
 
-#: modules/settings/settings.php:700, fuzzy
+#: modules/settings/settings.php:700
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Disable the \"Status\" option when using \"Quick Edit\":"
 
-#: modules/checklists/checklists.php:975, fuzzy
+#: modules/checklists/checklists.php:975
 msgid "Disabled"
 msgstr "Disabled"
 
@@ -236,48 +237,48 @@ msgstr ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 
-#: modules/checklists/checklists.php:951, fuzzy
+#: modules/checklists/checklists.php:951
 msgid "Disabled, Recommended or Required"
 msgstr "Disabled, Recommended or Required"
 
-#: modules/checklists/templates/footer.php:30, fuzzy
+#: modules/checklists/templates/footer.php:30
 msgid "Documentation"
 msgstr "Documentation"
 
-#: modules/settings/settings.php:261, fuzzy
+#: modules/settings/settings.php:261
 msgid "Enabled features"
 msgstr "Enabled features"
 
-#: modules/settings/settings.php:781, fuzzy
+#: modules/settings/settings.php:781
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "Enter your API Key to use OpenAI prompts in checklist tasks."
 
 #: core/Requirement/Featured_image_alt.php:36
-#: core/Requirement/Featured_image_alt.php:37, fuzzy
+#: core/Requirement/Featured_image_alt.php:37
 msgid "Featured image has Alt text"
 msgstr "Featured image has Alt text"
 
 #: core/Requirement/Featured_image.php:35
-#: core/Requirement/Featured_image.php:36, fuzzy
+#: core/Requirement/Featured_image.php:36
 msgid "Featured image is added"
 msgstr "Featured image is added"
 
-#: modules/settings/settings.php:252, fuzzy
+#: modules/settings/settings.php:252
 msgid "Features"
 msgstr "Features"
 
-#: modules/settings/settings.php:253, fuzzy
+#: modules/settings/settings.php:253
 msgid "Feel free to select only the features you need."
 msgstr "Feel free to select only the features you need."
 
-#: modules/settings/settings.php:675, fuzzy
+#: modules/settings/settings.php:675
 msgid "General:"
 msgstr "General:"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:129
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:160
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:130
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161
 msgid "Good"
 msgstr "Good"
 
@@ -298,56 +299,56 @@ msgstr ""
 "Checklists requirements."
 
 #: core/Legacy/Module.php:288
-#, fuzzy, php-format
+#, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "If you like %s please leave us a %s rating. Thank you!"
 
-#: core/Requirement/Openai_item.php:386, fuzzy
+#: core/Requirement/Openai_item.php:386
 msgid "Invalid response"
 msgstr "Invalid response"
 
-#: modules/permalinks/lib/Requirement/ValidChars.php:37, fuzzy
+#: modules/permalinks/lib/Requirement/ValidChars.php:37
 msgid "Latin characters in permalink"
 msgstr "Latin characters in permalink"
 
-#: core/Requirement/Base_counter.php:293, fuzzy
+#: core/Requirement/Base_counter.php:293
 msgid "Max"
 msgstr "Max"
 
 #: core/Requirement/Taxonomies_count.php:46
-#: core/Requirement/Taxonomies_count.php:47, fuzzy
+#: core/Requirement/Taxonomies_count.php:47
 msgid "Maximum of %d "
 msgstr "Maximum of %d "
 
-#: core/Requirement/Filled_excerpt.php:39, fuzzy
+#: core/Requirement/Filled_excerpt.php:39
 msgid "Maximum of %d character in excerpt"
 msgstr "Maximum of %d character in excerpt"
 
-#: core/Requirement/Title_count.php:37, fuzzy
+#: core/Requirement/Title_count.php:37
 msgid "Maximum of %d character in title"
 msgstr "Maximum of %d character in title"
 
-#: core/Requirement/Filled_excerpt.php:40, fuzzy
+#: core/Requirement/Filled_excerpt.php:40
 msgid "Maximum of %d characters in excerpt"
 msgstr "Maximum of %d characters in excerpt"
 
-#: core/Requirement/Title_count.php:38, fuzzy
+#: core/Requirement/Title_count.php:38
 msgid "Maximum of %d characters in title"
 msgstr "Maximum of %d characters in title"
 
-#: core/Requirement/External_links.php:39, fuzzy
+#: core/Requirement/External_links.php:39
 msgid "Maximum of %d external link in content"
 msgstr "Maximum of %d external link in content"
 
-#: core/Requirement/External_links.php:40, fuzzy
+#: core/Requirement/External_links.php:40
 msgid "Maximum of %d external links in content"
 msgstr "Maximum of %d external links in content"
 
-#: core/Requirement/Internal_links.php:39, fuzzy
+#: core/Requirement/Internal_links.php:39
 msgid "Maximum of %d internal link in content"
 msgstr "Maximum of %d internal link in content"
 
-#: core/Requirement/Internal_links.php:40, fuzzy
+#: core/Requirement/Internal_links.php:40
 msgid "Maximum of %d internal links in content"
 msgstr "Maximum of %d internal links in content"
 
@@ -359,62 +360,62 @@ msgstr "Maximum of %s tag"
 msgid "Maximum of %d tags"
 msgstr "Maximum of %s tags"
 
-#: core/Requirement/Words_count.php:39, fuzzy
+#: core/Requirement/Words_count.php:39
 msgid "Maximum of %d word in content"
 msgstr "Maximum of %d word in content"
 
-#: core/Requirement/Words_count.php:40, fuzzy
+#: core/Requirement/Words_count.php:40
 msgid "Maximum of %d words in content"
 msgstr "Maximum of %d words in content"
 
 #: core/Requirement/Categories_count.php:44
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %s categories"
 msgstr "Maximum of %s categories"
 
 #: core/Requirement/Categories_count.php:43
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %s category"
 msgstr "Maximum of %s category"
 
-#: core/Requirement/Base_counter.php:285, fuzzy
+#: core/Requirement/Base_counter.php:285
 msgid "Min"
 msgstr "Min"
 
 #: core/Requirement/Taxonomies_count.php:44
-#: core/Requirement/Taxonomies_count.php:45, fuzzy
+#: core/Requirement/Taxonomies_count.php:45
 msgid "Minimum of %d "
 msgstr "Minimum of %d "
 
-#: core/Requirement/Filled_excerpt.php:37, fuzzy
+#: core/Requirement/Filled_excerpt.php:37
 msgid "Minimum of %d character in excerpt"
 msgstr "Minimum of %d character in excerpt"
 
-#: core/Requirement/Title_count.php:35, fuzzy
+#: core/Requirement/Title_count.php:35
 msgid "Minimum of %d character in title"
 msgstr "Minimum of %d character in title"
 
-#: core/Requirement/Filled_excerpt.php:38, fuzzy
+#: core/Requirement/Filled_excerpt.php:38
 msgid "Minimum of %d characters in excerpt"
 msgstr "Minimum of %d characters in excerpt"
 
-#: core/Requirement/Title_count.php:36, fuzzy
+#: core/Requirement/Title_count.php:36
 msgid "Minimum of %d characters in title"
 msgstr "Minimum of %d characters in title"
 
-#: core/Requirement/External_links.php:37, fuzzy
+#: core/Requirement/External_links.php:37
 msgid "Minimum of %d external link in content"
 msgstr "Minimum of %d external link in content"
 
-#: core/Requirement/External_links.php:38, fuzzy
+#: core/Requirement/External_links.php:38
 msgid "Minimum of %d external links in content"
 msgstr "Minimum of %d external links in content"
 
-#: core/Requirement/Internal_links.php:37, fuzzy
+#: core/Requirement/Internal_links.php:37
 msgid "Minimum of %d internal link in content"
 msgstr "Minimum of %d internal link in content"
 
-#: core/Requirement/Internal_links.php:38, fuzzy
+#: core/Requirement/Internal_links.php:38
 msgid "Minimum of %d internal links in content"
 msgstr "Minimum of %d internal links in content"
 
@@ -426,45 +427,45 @@ msgstr "Minimum of %s tag"
 msgid "Minimum of %d tags"
 msgstr "Minimum of %s tags"
 
-#: core/Requirement/Words_count.php:37, fuzzy
+#: core/Requirement/Words_count.php:37
 msgid "Minimum of %d word in content"
 msgstr "Minimum of %d word in content"
 
-#: core/Requirement/Words_count.php:38, fuzzy
+#: core/Requirement/Words_count.php:38
 msgid "Minimum of %d words in content"
 msgstr "Minimum of %d words in content"
 
 #: core/Requirement/Categories_count.php:42
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %s categories"
 msgstr "Minimum of %s categories"
 
 #: core/Requirement/Categories_count.php:41
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %s category"
 msgstr "Minimum of %s category"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:46, fuzzy
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:46
 msgid "Minimum Yoast SEO analysis score"
 msgstr "Minimum Yoast SEO analysis score"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:47, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:47
 msgid "Minimum Yoast SEO readability score"
 msgstr "Minimum Yoast SEO readability score"
 
-#: modules/checklists/templates/global-checklists.php:74, fuzzy
+#: modules/checklists/templates/global-checklists.php:74
 msgid "New Item"
 msgstr "New Item"
 
-#: modules/checklists/checklists.php:790, fuzzy
+#: modules/checklists/checklists.php:790
 msgid "No"
 msgstr "No"
 
-#: modules/checklists/templates/global-checklists.php:101, fuzzy
+#: modules/checklists/templates/global-checklists.php:101
 msgid "No %s requirements for this post type."
 msgstr "No %s requirements for this post type."
 
-#: modules/checklists/checklists.php:752 modules/checklists/checklists.php:756, fuzzy
+#: modules/checklists/checklists.php:752 modules/checklists/checklists.php:756
 msgid "Not required, but important: "
 msgstr "Not required, but important: "
 
@@ -472,44 +473,44 @@ msgstr "Not required, but important: "
 msgid "Number of "
 msgstr "Number of"
 
-#: core/Requirement/Categories_count.php:40, fuzzy
+#: core/Requirement/Categories_count.php:40
 msgid "Number of categories"
 msgstr "Number of categories"
 
 #: core/Requirement/Image_alt_count.php:42
-#: core/Requirement/Image_alt_count.php:43, fuzzy
+#: core/Requirement/Image_alt_count.php:43
 msgid "Number of characters in Alt text"
 msgstr "Number of characters in Alt text"
 
-#: core/Requirement/Title_count.php:33 core/Requirement/Title_count.php:34, fuzzy
+#: core/Requirement/Title_count.php:33 core/Requirement/Title_count.php:34
 msgid "Number of characters in title"
 msgstr "Number of characters in title"
 
-#: core/Requirement/External_links.php:36, fuzzy
+#: core/Requirement/External_links.php:36
 msgid "Number of external links in content"
 msgstr "Number of external links in content"
 
-#: core/Requirement/Internal_links.php:36, fuzzy
+#: core/Requirement/Internal_links.php:36
 msgid "Number of internal links in content"
 msgstr "Number of internal links in content"
 
-#: core/Requirement/Tags_count.php:40, fuzzy
+#: core/Requirement/Tags_count.php:40
 msgid "Number of tags"
 msgstr "Number of tags"
 
-#: core/Requirement/Words_count.php:36, fuzzy
+#: core/Requirement/Words_count.php:36
 msgid "Number of words in content"
 msgstr "Number of words in content"
 
 #: core/Requirement/Filled_excerpt.php:35
-#: core/Requirement/Filled_excerpt.php:36, fuzzy
+#: core/Requirement/Filled_excerpt.php:36
 msgid "Numbers of characters in excerpt"
 msgstr "Numbers of characters in excerpt"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:124
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:159
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:125
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:160, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:160
 msgid "OK"
 msgstr "OK"
 
@@ -517,11 +518,11 @@ msgstr "OK"
 msgid "Ok"
 msgstr "OK"
 
-#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62, fuzzy
+#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62
 msgid "Openai"
 msgstr "Openai"
 
-#: modules/settings/settings.php:708, fuzzy
+#: modules/settings/settings.php:708
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
 
@@ -533,19 +534,19 @@ msgstr ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
 
-#: modules/checklists/checklists.php:952, fuzzy
+#: modules/checklists/checklists.php:952
 msgid "Options"
 msgstr "Options"
 
-#: modules/permalinks/permalinks.php:65, fuzzy
+#: modules/permalinks/permalinks.php:65
 msgid "Permalinks"
 msgstr "Permalinks"
 
-#: modules/permissions/permissions.php:68, fuzzy
+#: modules/permissions/permissions.php:68
 msgid "Permissions"
 msgstr "Permissions"
 
-#: modules/checklists/checklists.php:744, fuzzy
+#: modules/checklists/checklists.php:744
 msgid "Please complete the following tasks before publishing:"
 msgstr "Please complete the following tasks before publishing:"
 
@@ -554,19 +555,19 @@ msgid "Please complete the following tasks before updating the published post:"
 msgstr ""
 "Please complete the following tasks before updating the published post:"
 
-#: modules/checklists/assets/js/gutenberg-panel.jsx:167, fuzzy
+#: modules/checklists/assets/js/gutenberg-panel.jsx:167
 msgid "Please complete the required(*) checklists task."
 msgstr "Please complete the required(*) checklists task."
 
-#: core/Legacy/LegacyPlugin.php:209, fuzzy
+#: core/Legacy/LegacyPlugin.php:209
 msgid "Please correct your form errors below and try again."
 msgstr "Please correct your form errors below and try again."
 
-#: modules/checklists/checklists.php:594, fuzzy
+#: modules/checklists/checklists.php:594
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr "Please make sure to add a name for all the custom tasks."
 
-#: modules/checklists/checklists.php:590, fuzzy
+#: modules/checklists/checklists.php:590
 msgid "Please make sure to complete the settings for"
 msgstr "Please make sure to complete the settings for"
 
@@ -574,23 +575,23 @@ msgstr "Please make sure to complete the settings for"
 msgid "Post content is empty."
 msgstr "Post does not exist"
 
-#: core/Legacy/LegacyPlugin.php:218, fuzzy
+#: core/Legacy/LegacyPlugin.php:218
 msgid "Post does not exist"
 msgstr "Post does not exist"
 
-#: core/Requirement/Prohibited_categories.php:43, fuzzy
+#: core/Requirement/Prohibited_categories.php:43
 msgid "Prohibited categories"
 msgstr "Prohibited categories"
 
-#: core/Requirement/Prohibited_categories.php:42, fuzzy
+#: core/Requirement/Prohibited_categories.php:42
 msgid "Prohibited categories: %s"
 msgstr "Prohibited categories: %s"
 
-#: core/Requirement/Prohibited_tags.php:43, fuzzy
+#: core/Requirement/Prohibited_tags.php:43
 msgid "Prohibited tags"
 msgstr "Prohibited tags"
 
-#: core/Requirement/Prohibited_tags.php:42, fuzzy
+#: core/Requirement/Prohibited_tags.php:42
 msgid "Prohibited tags: %s"
 msgstr "Prohibited tags: %s"
 
@@ -599,20 +600,20 @@ msgid "PublishPress"
 msgstr "PublishPress"
 
 #. Name of the plugin
-#: core/Legacy/Module.php:285, fuzzy
+#: core/Legacy/Module.php:285
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
-#: modules/checklists/checklists.php:976, fuzzy
+#: modules/checklists/checklists.php:976
 msgid "Recommended"
 msgstr "Recommended"
 
 #: core/Requirement/Custom_item.php:121 core/Requirement/Openai_item.php:139
-#: modules/checklists/checklists.php:602, fuzzy
+#: modules/checklists/checklists.php:602
 msgid "Remove"
 msgstr "Remove"
 
-#: modules/checklists/checklists.php:787 modules/checklists/checklists.php:977, fuzzy
+#: modules/checklists/checklists.php:787 modules/checklists/checklists.php:977
 msgid "Required"
 msgstr "Required"
 
@@ -620,35 +621,35 @@ msgstr "Required"
 msgid "required"
 msgstr "Required"
 
-#: core/Requirement/Required_categories.php:43, fuzzy
+#: core/Requirement/Required_categories.php:43
 msgid "Required categories"
 msgstr "Required categories"
 
-#: core/Requirement/Required_categories.php:42, fuzzy
+#: core/Requirement/Required_categories.php:42
 msgid "Required categories: %s"
 msgstr "Required categories: %s"
 
-#: core/Requirement/Required_tags.php:43, fuzzy
+#: core/Requirement/Required_tags.php:43
 msgid "Required tags"
 msgstr "Required tags"
 
-#: core/Requirement/Required_tags.php:42, fuzzy
+#: core/Requirement/Required_tags.php:42
 msgid "Required tags: %s"
 msgstr "Required tags: %s"
 
-#: modules/reviews/reviews.php:61, fuzzy
+#: modules/reviews/reviews.php:61
 msgid "Reviews"
 msgstr "Reviews"
 
-#: modules/checklists/templates/global-checklists.php:108, fuzzy
+#: modules/checklists/templates/global-checklists.php:108
 msgid "Save Changes"
 msgstr "Save Changes"
 
-#: core/Requirement/Openai_item.php:365, fuzzy
+#: core/Requirement/Openai_item.php:365
 msgid "See the full response."
 msgstr "See the full response."
 
-#: modules/settings/settings.php:114, fuzzy
+#: modules/settings/settings.php:114
 msgid "Settings"
 msgstr "Settings"
 
@@ -656,39 +657,39 @@ msgstr "Settings"
 msgid "Show warning icon:"
 msgstr "Show a warning icon:"
 
-#: modules/checklists/checklists.php:950, fuzzy
+#: modules/checklists/checklists.php:950
 msgid "Task"
 msgstr "Task"
 
-#: modules/checklists/templates/global-checklists.php:101, fuzzy
+#: modules/checklists/templates/global-checklists.php:101
 msgid "The prompt should be in form of a question."
 msgstr "The prompt should be in form of a question."
 
-#: modules/settings/settings.php:312, fuzzy
+#: modules/settings/settings.php:312
 msgid "There are no PublishPress modules registered"
 msgstr "There are no PublishPress modules registered"
 
-#: modules/checklists/templates/global-checklists.php:101, fuzzy
+#: modules/checklists/templates/global-checklists.php:101
 msgid "This feature requires an OpenAI API Key."
 msgstr "This feature requires an OpenAI API Key."
 
-#: modules/settings/settings.php:741, fuzzy
+#: modules/settings/settings.php:741
 msgid "This will display a warning icon in the \"Publish\" box."
 msgstr "This will display a warning icon in the \"Publish\" box."
 
-#: core/Requirement/Openai_item.php:273, fuzzy
+#: core/Requirement/Openai_item.php:273
 msgid "Validation error. Kindly reload this page and try agai.n"
 msgstr "Validation error. Kindly reload this page and try agai.n"
 
-#: modules/checklists/checklists.php:606, fuzzy
+#: modules/checklists/checklists.php:606
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr "What's the expected OpenAI response to mark the requirement as pass?"
 
-#: core/Requirement/Custom_item.php:54 modules/checklists/checklists.php:598, fuzzy
+#: core/Requirement/Custom_item.php:54 modules/checklists/checklists.php:598
 msgid "Which roles can mark this task as complete?"
 msgstr "Which roles can mark this task as complete?"
 
-#: modules/permissions/permissions.php:143, fuzzy
+#: modules/permissions/permissions.php:143
 msgid "Who can ignore the task?"
 msgstr "Who can ignore the task?"
 
@@ -700,34 +701,34 @@ msgstr ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 
-#: modules/checklists/checklists.php:791, fuzzy
+#: modules/checklists/checklists.php:791
 msgid "Yes"
 msgstr "Yes"
 
 #. %s expands to the readability score
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:124
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:129
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
-#: modules/yoastseo/yoastseo.php:66, fuzzy
+#: modules/yoastseo/yoastseo.php:66
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
 #. %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:123
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:128
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
-#: core/Legacy/LegacyPlugin.php:214, fuzzy
+#: core/Legacy/LegacyPlugin.php:214
 msgid "You do not have necessary permissions to complete this action."
 msgstr "You do not have necessary permissions to complete this action."
 
 #: modules/checklists/checklists.php:783
-#, fuzzy, php-format
+#, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "You don't have to complete any %sChecklist tasks%s."
 
