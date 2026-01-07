@@ -145,13 +145,51 @@ class Base_requirement
     }
 
     /**
+     * Get the custom label for this requirement if set.
+     *
+     * @return string
+     */
+    public function get_custom_label()
+    {
+        $option_name = $this->name . '_custom_label';
+        
+        if (isset($this->module->options->{$option_name}[$this->post_type])) {
+            return stripslashes($this->module->options->{$option_name}[$this->post_type]);
+        }
+        
+        return '';
+    }
+
+    /**
      * Get the HTML for the title setting field.
      *
      * @return string
      */
     public function get_setting_title_html($css_class = '')
     {
-        return $this->lang['label_settings'];
+        $default_label = $this->lang['label_settings'];
+        $custom_label = $this->get_custom_label();
+        $has_custom = !empty($custom_label);
+        
+        $post_type = esc_attr($this->post_type);
+        $option_name = esc_attr($this->name . '_custom_label');
+        $input_name = esc_attr($this->module->options_group_name) . '[' . $option_name . '][' . $post_type . ']';
+        
+        $html = '<div class="pp-checklists-title-wrapper">';
+        $html .= '<span class="pp-checklists-default-label' . ($has_custom ? ' hidden' : '') . '">' . esc_html($default_label) . '</span>';
+        $html .= '<span class="pp-checklists-custom-label' . (!$has_custom ? ' hidden' : '') . '">' . esc_html($custom_label) . '</span>';
+        $html .= sprintf(
+            '<input type="text" name="%s" value="%s" placeholder="%s" class="pp-checklists-custom-label-input hidden" />',
+            $input_name,
+            esc_attr($custom_label),
+            esc_attr($default_label)
+        );
+        $html .= '<a href="#" class="pp-checklists-edit-label" title="' . esc_attr__('Edit label', 'publishpress-checklists') . '">';
+        $html .= '<span class="dashicons dashicons-edit"></span>';
+        $html .= '</a>';
+        $html .= '</div>';
+        
+        return $html;
     }
 
     /**

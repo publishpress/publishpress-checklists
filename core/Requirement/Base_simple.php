@@ -58,6 +58,14 @@ class Base_simple extends Base_requirement implements Interface_required
             $new_options[$this->name][$this->post_type] = static::VALUE_NO;
         }
 
+        // Sanitize custom label
+        $custom_label_key = $this->name . '_custom_label';
+        if (isset($new_options[$custom_label_key][$this->post_type])) {
+            $new_options[$custom_label_key][$this->post_type] = sanitize_text_field(
+                $new_options[$custom_label_key][$this->post_type]
+            );
+        }
+
         return $new_options;
     }
 
