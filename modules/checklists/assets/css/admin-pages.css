@@ -586,3 +586,57 @@ textarea.pp-checklists-custom-item-title {
 }
 
 /* End Pro Lock badge */
+
+/* Custom Label Editing */
+.pp-checklists-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pp-checklists-default-label,
+.pp-checklists-custom-label {
+  flex: 1;
+}
+
+.pp-checklists-custom-label-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 4px 8px;
+  border: 1px solid #8c8f94;
+  border-radius: 4px;
+}
+
+.pp-checklists-custom-label-input:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+  outline: none;
+}
+
+.pp-checklists-edit-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #2271b1;
+  text-decoration: none;
+  flex-shrink: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.pp-checklists-edit-label:hover {
+  color: #135e96;
+}
+
+.pp-checklists-edit-label .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+/* End Custom Label Editing */

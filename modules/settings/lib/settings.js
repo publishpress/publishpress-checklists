@@ -80,4 +80,40 @@ jQuery(document).ready(function ($) {
   function removeStorageData(storageName) {
     window.localStorage.removeItem(storageName);
   }
+
+  // Reset Custom Labels button handler
+  $('#ppch-reset-custom-labels').on('click', function (e) {
+    e.preventDefault();
+
+    if (typeof ppchToolsSettings === 'undefined') {
+      return;
+    }
+
+    if (!confirm(ppchToolsSettings.resetLabelsConfirm)) {
+      return;
+    }
+
+    var $button = $(this);
+    $button.prop('disabled', true).text('Resetting...');
+
+    $.ajax({
+      url: ppchToolsSettings.ajaxUrl,
+      type: 'POST',
+      data: {
+        action: 'ppch_reset_custom_labels',
+        nonce: ppchToolsSettings.resetLabelsNonce
+      },
+      success: function (response) {
+        if (response.success) {
+          location.reload();
+        } else {
+          alert(response.data.message);
+          $button.prop('disabled', false).text('Reset All Custom Labels');
+        }
+      },
+      error: function () {
+        $button.prop('disabled', false).text('Reset All Custom Labels');
+      }
+    });
+  });
 });

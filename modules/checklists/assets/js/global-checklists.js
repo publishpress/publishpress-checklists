@@ -36,6 +36,16 @@
     
     // Initialize count indicators
     update_count_indicators();
+    
+    // Initialize custom label editing
+    initializeCustomLabelEditing();
+    
+    // Auto-hide success notice after 5 seconds
+    if ($('.checklists-save-notice').length > 0) {
+      setTimeout(function() {
+        $('.checklists-save-notice').fadeOut(500);
+      }, 2500);
+    }
 
     $('#pp-checklists-requirements tbody').sortable({ items: ' > tr' });
     
@@ -636,6 +646,65 @@
         }
       }, 150); // Wait for the removal to complete
     });
+
+    /**
+     * Initialize custom label editing functionality
+     */
+    function initializeCustomLabelEditing() {
+      // Handle click on edit label button
+      $(document).on('click', '.pp-checklists-edit-label', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        var $wrapper = $(this).closest('.pp-checklists-title-wrapper');
+        var $customLabel = $wrapper.find('.pp-checklists-custom-label');
+        var $defaultLabel = $wrapper.find('.pp-checklists-default-label');
+        var $input = $wrapper.find('.pp-checklists-custom-label-input');
+        
+        // Hide both labels, show input
+        $customLabel.hide();
+        $defaultLabel.hide();
+        $input.show().focus();
+      });
+      
+      // Handle blur on custom label input - switch back to label display
+      $(document).on('blur', '.pp-checklists-custom-label-input', function() {
+        var $input = $(this);
+        var $wrapper = $input.closest('.pp-checklists-title-wrapper');
+        var $customLabel = $wrapper.find('.pp-checklists-custom-label');
+        var $defaultLabel = $wrapper.find('.pp-checklists-default-label');
+        var inputValue = $input.val().trim();
+        
+        // Hide input
+        $input.hide();
+        
+        // Show appropriate label
+        if (inputValue !== '') {
+          $customLabel.text(inputValue).show();
+          $defaultLabel.hide();
+        } else {
+          $customLabel.hide();
+          $defaultLabel.show();
+        }
+      });
+      
+      // Handle Enter key to finish editing
+      $(document).on('keydown', '.pp-checklists-custom-label-input', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          $(this).blur();
+        } else if (e.key === 'Escape') {
+          // Revert to original value on Escape
+          var $input = $(this);
+          var $wrapper = $input.closest('.pp-checklists-title-wrapper');
+          var $customLabel = $wrapper.find('.pp-checklists-custom-label');
+          var originalValue = $customLabel.text().trim();
+          
+          $input.val(originalValue);
+          $input.blur();
+        }
+      });
+    }
 
     /**
      * Initialize tab persistence functionality

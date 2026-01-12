@@ -12,13 +12,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Report-Msgid-Bugs-To: \n"
 "X-Loco-Version: 2.6.11; wp-6.6.2"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: core/Requirement/Taxonomies_count.php:48
-#: core/Requirement/Taxonomies_count.php:49, fuzzy
+#: core/Requirement/Taxonomies_count.php:48
+#: core/Requirement/Taxonomies_count.php:49
 msgid "%d "
 msgstr "%d "
 
@@ -193,7 +194,7 @@ msgstr "Réglages des listes de contrôle"
 msgid "Configure"
 msgstr "Configurer"
 
-#: modules/checklists/templates/footer.php:37, fuzzy
+#: modules/checklists/templates/footer.php:37
 msgid "Contact"
 msgstr "Contact"
 
@@ -218,7 +219,7 @@ msgstr "Définir les tâches liées aux permaliens"
 msgid "Define tasks related to Yoast SEO"
 msgstr "Definissez les tâches liées à Yoast SEO"
 
-#: modules/checklists/templates/global-checklists.php:75, fuzzy
+#: modules/checklists/templates/global-checklists.php:75
 msgid "Description"
 msgstr "Description"
 
@@ -244,7 +245,7 @@ msgstr ""
 msgid "Disabled, Recommended or Required"
 msgstr "Désactivée, recommandée ou nécessaire"
 
-#: modules/checklists/templates/footer.php:30, fuzzy
+#: modules/checklists/templates/footer.php:30
 msgid "Documentation"
 msgstr "Documentation"
 
@@ -285,7 +286,7 @@ msgstr "Général :"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:129
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:160
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:130
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161
 msgid "Good"
 msgstr "Bon"
 
@@ -318,7 +319,7 @@ msgstr "Réponse non valide"
 msgid "Latin characters in permalink"
 msgstr "Caractères latins dans le permalien"
 
-#: core/Requirement/Base_counter.php:293, fuzzy
+#: core/Requirement/Base_counter.php:293
 msgid "Max"
 msgstr "Max"
 
@@ -385,7 +386,7 @@ msgstr "Maximum de %s catégories"
 msgid "Maximum of %s category"
 msgstr "Maximum de %s catégories"
 
-#: core/Requirement/Base_counter.php:285, fuzzy
+#: core/Requirement/Base_counter.php:285
 msgid "Min"
 msgstr "Min"
 
@@ -517,15 +518,15 @@ msgstr "Nombre de caractères dans l’extrait"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:124
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:159
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:125
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:160, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:160
 msgid "OK"
 msgstr "OK"
 
-#: modules/checklists/checklists.php:789, fuzzy
+#: modules/checklists/checklists.php:789
 msgid "Ok"
 msgstr "Ok"
 
-#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62, fuzzy
+#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62
 msgid "Openai"
 msgstr "Openai"
 
@@ -541,7 +542,7 @@ msgstr ""
 "Les tâches de OpenAI nécessitent une clé API. Veuillez ajouter votre clé API "
 "dans les réglages."
 
-#: modules/checklists/checklists.php:952, fuzzy
+#: modules/checklists/checklists.php:952
 msgid "Options"
 msgstr "Options"
 
@@ -601,7 +602,7 @@ msgstr "Catégories interdites: %s"
 msgid "Prohibited tags"
 msgstr "Étiquettes interdites"
 
-#: core/Requirement/Prohibited_tags.php:42, fuzzy
+#: core/Requirement/Prohibited_tags.php:42
 msgid "Prohibited tags: %s"
 msgstr "Étiquettes interdites : %s"
 
@@ -610,7 +611,7 @@ msgid "PublishPress"
 msgstr "PublishPress"
 
 #. Name of the plugin
-#: core/Legacy/Module.php:285, fuzzy
+#: core/Legacy/Module.php:285
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
@@ -724,7 +725,7 @@ msgstr "Oui"
 msgid "Yoast Readability: %s"
 msgstr "Lisibilité Yoast : %s"
 
-#: modules/yoastseo/yoastseo.php:66, fuzzy
+#: modules/yoastseo/yoastseo.php:66
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 

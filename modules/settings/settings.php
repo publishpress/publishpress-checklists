@@ -101,6 +101,9 @@ if (!class_exists('PPCH_Settings')) {
 
             add_action('publishpress_checklists_admin_submenu', [$this, 'action_admin_submenu'], 990);
 
+            add_action('wp_ajax_ppch_reset_custom_labels', [$this, 'ajax_reset_custom_labels']);
+            add_action('admin_notices', [$this, 'display_reset_labels_notice']);
+
             add_action('admin_head-edit.php', [$this, 'remove_quick_edit_status_row']);
             add_action('admin_head-edit.php', [$this, 'remove_quick_edit_row']);
             add_action('admin_print_styles', [$this, 'action_admin_print_styles']);
@@ -141,6 +144,12 @@ if (!class_exists('PPCH_Settings')) {
                         ['jquery', 'wp-color-picker'],
                         PPCH_VERSION
                     );
+
+                    wp_localize_script('ppch-settings', 'ppchToolsSettings', [
+                        'ajaxUrl' => admin_url('admin-ajax.php'),
+                        'resetLabelsNonce' => wp_create_nonce('ppch_reset_custom_labels'),
+                        'resetLabelsConfirm' => __('Are you sure you want to reset all renamed checklist items to their default labels? This action cannot be undone.', 'publishpress-checklists'),
+                    ]);
                 }
             }
         }
@@ -927,6 +936,14 @@ if (!class_exists('PPCH_Settings')) {
                 $this->module->options_group_name
             );
 
+            add_settings_field(
+                'reset_custom_labels',
+                __('Reset Renamed Checklist:', 'publishpress-checklists'),
+                [$this, 'settings_reset_custom_labels_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_tools'
+            );
+
             /**
              * Post Types
              */
@@ -995,7 +1012,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[duplicate_checklist_settings]" '
                 . checked($value, 'yes', false) . ' disabled="disabled" />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This allows users to duplicate existing checklist task.',
+                'This allows users to duplicate existing checklist tasks.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -1337,6 +1354,80 @@ if (!class_exists('PPCH_Settings')) {
             echo '<label for="' . esc_attr($id) . '">';
             echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
             echo '</label>';
+        }
+
+        /**
+         * Settings field for Reset Custom Labels button
+         */
+        public function settings_reset_custom_labels_option($args = [])
+        {
+            echo '<button type="button" id="ppch-reset-custom-labels" class="button button-secondary">';
+            echo esc_html__('Reset All Custom Labels', 'publishpress-checklists');
+            echo '</button>';
+            echo '<p class="description">' . esc_html__('This will reset all renamed checklist items back to their default labels.', 'publishpress-checklists') . '</p>';
+        }
+
+        /**
+         * AJAX handler for resetting custom labels
+         */
+        public function ajax_reset_custom_labels()
+        {
+            // Verify nonce
+            if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'ppch_reset_custom_labels')) {
+                wp_send_json_error(['message' => __('Security check failed.', 'publishpress-checklists')]);
+            }
+
+            // Check user capability
+            if (!current_user_can('manage_options')) {
+                wp_send_json_error(['message' => __('You do not have permission to perform this action.', 'publishpress-checklists')]);
+            }
+
+            // Get the checklists options
+            $options = get_option('publishpress_checklists_checklists_options');
+
+            if (!is_object($options)) {
+                $options = new \stdClass();
+            }
+
+            // Convert to array for easier manipulation
+            $options_array = (array) $options;
+
+            // Remove all custom label options (keys ending with _custom_label)
+            $updated = false;
+            foreach ($options_array as $key => $value) {
+                if (preg_match('/_custom_label$/', $key)) {
+                    unset($options_array[$key]);
+                    $updated = true;
+                }
+            }
+
+            if ($updated) {
+                // Convert back to object and save
+                $options = (object) $options_array;
+                update_option('publishpress_checklists_checklists_options', $options);
+            }
+
+            // Set transient to show admin notice after redirect
+            set_transient('ppch_reset_labels_notice', 'success', 30);
+
+            wp_send_json_success();
+        }
+
+        /**
+         * Display admin notice after resetting custom labels
+         */
+        public function display_reset_labels_notice()
+        {
+            $notice = get_transient('ppch_reset_labels_notice');
+
+            if ($notice === 'success') {
+                delete_transient('ppch_reset_labels_notice');
+                ?>
+                <div class="notice notice-success is-dismissible">
+                    <p><?php esc_html_e('All custom labels have been reset successfully.', 'publishpress-checklists'); ?></p>
+                </div>
+                <?php
+            }
         }
     }
 }

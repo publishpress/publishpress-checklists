@@ -18,7 +18,8 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2"
 
 #: core/Requirement/Taxonomies_count.php:48
-#: core/Requirement/Taxonomies_count.php:49, fuzzy
+#: core/Requirement/Taxonomies_count.php:48
+#: core/Requirement/Taxonomies_count.php:49
 msgid "%d "
 msgstr "%d "
 
@@ -274,14 +275,14 @@ msgstr "Características"
 msgid "Feel free to select only the features you need."
 msgstr "Siéntete libre de seleccionar sólo las características que necesitas."
 
-#: modules/settings/settings.php:675, fuzzy
+#: modules/settings/settings.php:675
 msgid "General:"
 msgstr "General:"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:129
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:160
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:130
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161, fuzzy
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161
 msgid "Good"
 msgstr "Bueno"
 
@@ -460,7 +461,7 @@ msgstr "Mínima puntuación de legibilidad en Yoast SEO"
 msgid "New Item"
 msgstr "Nuevo elemento"
 
-#: modules/checklists/checklists.php:790, fuzzy
+#: modules/checklists/checklists.php:790
 msgid "No"
 msgstr "No"
 
@@ -521,7 +522,7 @@ msgstr "Correcto"
 msgid "Ok"
 msgstr "Aceptar"
 
-#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62, fuzzy
+#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62
 msgid "Openai"
 msgstr "Openai"
 
@@ -597,7 +598,7 @@ msgstr "Categorías prohibidas: %s"
 msgid "Prohibited tags"
 msgstr "Etiquetas prohibidas"
 
-#: core/Requirement/Prohibited_tags.php:42, fuzzy
+#: core/Requirement/Prohibited_tags.php:42
 msgid "Prohibited tags: %s"
 msgstr "Etiquetas prohibidas: %s"
 
@@ -722,7 +723,7 @@ msgstr "Sí"
 msgid "Yoast Readability: %s"
 msgstr "Legibilidad de Yoast: %s"
 
-#: modules/yoastseo/yoastseo.php:66, fuzzy
+#: modules/yoastseo/yoastseo.php:66
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
