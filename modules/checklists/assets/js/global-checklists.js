@@ -490,7 +490,7 @@
         custom_task_error_displayed = false;
 
       //remove previous notice and inline validation errors
-      $('.checklists-save-notice').remove();
+      $('#pp-checklists-global > .notice').remove();
       $('.field-validation-error').remove();
       $('.has-validation-error').removeClass('has-validation-error');
 
@@ -511,14 +511,12 @@
           if (min_field.val().trim() === '' && max_field.val().trim() === '') {
             submit_form = false;
             var field_title = $('<strong>').text(`${row_requirement_title}`);
-            submit_error += $('<div class="checklists-save-notice"></div>')
-              .append(
-                $('<div class="alert alert-danger alert-dismissible"></div>')
-                  .append('<a href="javascript:void(0);" class="close">×</a>')
-                  .append(field_title)
-                  .append(document.createTextNode(required_rules_notice)),
-              )
-              .html();
+            submit_error += $('<div class="notice notice-error"><p></p></div>')
+              .find('p')
+              .append(field_title)
+              .append(document.createTextNode(required_rules_notice))
+              .end()
+              .prop('outerHTML');
             
             // Add inline field validation notice
             var $row = $(this);
@@ -533,14 +531,12 @@
           if (!time_field.val()) {
             submit_form = false;
             var field_title = $('<strong>').text(`${row_requirement_title}`);
-            submit_error += $('<div class="checklists-save-notice"></div>')
-              .append(
-                $('<div class="alert alert-danger alert-dismissible"></div>')
-                  .append('<a href="javascript:void(0);" class="close">×</a>')
-                  .append(field_title)
-                  .append(document.createTextNode(required_rules_notice)),
-              )
-              .html();
+            submit_error += $('<div class="notice notice-error"><p></p></div>')
+              .find('p')
+              .append(field_title)
+              .append(document.createTextNode(required_rules_notice))
+              .end()
+              .prop('outerHTML');
             
             // Add inline field validation notice
             var $row = $(this);
@@ -558,19 +554,17 @@
         // Only validate if the row is visible and not marked for removal
         if ($row.is(':visible') && !$row.hasClass('removed') && $this.val().trim() === '' && !custom_task_error_displayed) {
           submit_form = false;
-          submit_error += $('<div class="checklists-save-notice"></div>')
-            .append(
-              $('<div class="alert alert-danger alert-dismissible"></div>')
-                .append('<a href="javascript:void(0);" class="close">×</a>')
-                .append(document.createTextNode(objectL10n_checklists_global_checklist.custom_item_error)),
-            )
-            .html();
+          submit_error += $('<div class="notice notice-error"><p></p></div>')
+            .find('p')
+            .append(document.createTextNode(objectL10n_checklists_global_checklist.custom_item_error))
+            .end()
+            .prop('outerHTML');
           custom_task_error_displayed = true;
         }
       });
 
       if (!submit_form) {
-        var submit_error_el = $('<div class="checklists-save-notice"></div>').append(submit_error);
+        var submit_error_el = $('<div class="pp-checklists-validation-errors"></div>').append(submit_error);
         
         // Add notice at the top of the form for better visibility
         $('#pp-checklists-global').prepend(submit_error_el.clone());
@@ -598,17 +592,10 @@
       return submit_form;
     });
 
-    // Remove current notice on dismiss
-    $(document).on('click', '#pp-checklists-global .checklists-save-notice .close', function (event) {
-      event.preventDefault();
-      //remove all notices (both top and bottom)
-      $('#pp-checklists-global .checklists-save-notice').remove();
-    });
-
     // Remove notice on any number input changed
     $(document).on('change input paste', '.pp-checklists-number', function () {
       //remove previous notice
-      $('.checklists-save-notice').remove();
+      $('#pp-checklists-global > .notice, .pp-checklists-validation-errors').remove();
       // Remove inline validation for this row
       $(this).closest('tr').removeClass('has-validation-error').find('.field-validation-error').remove();
     });
@@ -637,7 +624,7 @@
         }
       });
       if (!hasEmptyCustomTasks) {
-        $('.checklists-save-notice').remove();
+        $('#pp-checklists-global > .notice, .pp-checklists-validation-errors').remove();
       }
     });
     
@@ -655,7 +642,7 @@
           }
         });
         if (!hasEmptyCustomTasks) {
-          $('.checklists-save-notice').remove();
+          $('#pp-checklists-global > .notice, .pp-checklists-validation-errors').remove();
         }
       }, 150); // Wait for the removal to complete
     });
