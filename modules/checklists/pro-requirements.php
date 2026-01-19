@@ -69,6 +69,15 @@ $static = [
         'max'      => '',
     ],
     [
+        'id'       => 'image_caption_count',
+        'type'     => 'counter',
+        'support'  => 'editor',
+        'group'    => 'images',
+        'label'    => __('Number of characters in image captions', 'publishpress-checklists'),
+        'min'      => '',
+        'max'      => '',
+    ],
+    [
         'id'       => 'audio_count',
         'type'     => 'counter',
         'support'  => 'editor',
