@@ -185,7 +185,10 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
     border-radius: 2px;
 }
 
-.block-editor-list-view-leaf[data-warning="true"] .block-editor-list-view-block-contents::before {
+.block-editor-list-view-leaf[data-warning="true"] .block-editor-list-view-block-contents::before,
+.block-editor-list-view [data-warning="true"] .block-editor-list-view-block-contents::before,
+.block-editor-list-view [data-warning="true"] .block-editor-list-view__item-content::before,
+.block-editor-list-view [data-warning="true"].block-editor-list-view__item-content::before {
     font-family: inherit;
     position: absolute;
     top: 5px;

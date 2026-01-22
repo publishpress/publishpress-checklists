@@ -151,6 +151,8 @@ class Base_multiple extends Base_simple implements Interface_required
      */
     public function filter_settings_validate($new_options)
     {
+        $new_options = parent::filter_settings_validate($new_options);
+
         // Option name for the multiple field
         $option_name_multiple = $this->name . '_' . $this->field_name;
         
