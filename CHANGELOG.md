@@ -3,9 +3,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [2.25.0] - 22 January, 2026
 
+- Added: Allow users to rename tasks #1025
 - Added: Change notice style to default WordPress style #1046
 - Added: Add checklists filter #997
-- Updated: Update PublishPress review library #1060
+- Changed: Update PublishPress review library #1060
 - Fixed: Missing alt text warning in Gutenberg #1056
 
 [2.24.1] - 17 December, 2025

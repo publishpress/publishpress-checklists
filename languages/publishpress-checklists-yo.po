@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-21 15:30+0000\n"
+"PO-Revision-Date: 2026-01-21 17:26+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -1084,8 +1084,8 @@ msgid "Permissions"
 msgstr "Ìmúṣẹ"
 
 #: modules/permissions/permissions.php:107
-msgid "Who can ignore the task?"
-msgstr "Tani o le foju kọ iṣẹ naa?"
+msgid "Exclude User Roles"
+msgstr "Yọ awọn ipa olumulo"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"

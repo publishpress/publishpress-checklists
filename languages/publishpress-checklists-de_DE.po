@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-10-15 21:56+0700\n"
-"PO-Revision-Date: 2026-01-21 15:27+0000\n"
+"PO-Revision-Date: 2026-01-21 17:26+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -1079,8 +1079,8 @@ msgid "Permissions"
 msgstr "Berechtigungen"
 
 #: modules/permissions/permissions.php:107
-msgid "Who can ignore the task?"
-msgstr "Wer darf die Aufgabe ignorieren?"
+msgid "Exclude User Roles"
+msgstr "Benutzerrollen ausschließen"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"
