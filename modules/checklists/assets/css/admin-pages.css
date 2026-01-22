@@ -597,14 +597,19 @@ textarea.pp-checklists-custom-item-title {
 .pp-checklists-default-label,
 .pp-checklists-custom-label {
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pp-checklists-custom-label-input {
   flex: 1;
   min-width: 200px;
+  max-width: 100%;
   padding: 4px 8px;
   border: 1px solid #8c8f94;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .pp-checklists-custom-label-input:focus {
@@ -640,3 +645,23 @@ textarea.pp-checklists-custom-item-title {
 }
 
 /* End Custom Label Editing */
+
+/* Fix column widths to prevent overlap on smaller screens */
+.pp-checklists-requirements-settings th:first-child,
+.pp-checklists-requirements-settings td:first-child {
+  width: 40%;
+  min-width: 150px;
+  max-width: 40%;
+}
+
+.pp-checklists-requirements-settings th:nth-child(2),
+.pp-checklists-requirements-settings td:nth-child(2) {
+  width: 150px;
+  min-width: 120px;
+}
+
+@media only screen and (max-width: 900px) {
+  .pp-checklists-custom-label-input {
+    min-width: 120px;
+  }
+}

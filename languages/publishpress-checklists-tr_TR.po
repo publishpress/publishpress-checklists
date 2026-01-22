@@ -27,7 +27,7 @@ msgstr ""
 
 #: core/Requirement/Taxonomies_count.php:48
 #: core/Requirement/Taxonomies_count.php:48
-#: core/Requirement/Taxonomies_count.php:49
+#: core/Requirement/Taxonomies_count.php:49, fuzzy
 msgid "%d "
 msgstr "%d "
 
@@ -291,7 +291,7 @@ msgstr "Genel:"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:129
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:160
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:130
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:161, fuzzy
 msgid "Good"
 msgstr "İyi"
 
@@ -531,7 +531,7 @@ msgstr "TAMAM"
 msgid "Ok"
 msgstr "Tamam"
 
-#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62
+#: core/Requirement/Openai_item.php:61 core/Requirement/Openai_item.php:62, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
@@ -605,7 +605,7 @@ msgstr "Yasaklı kategoriler: %s"
 msgid "Prohibited tags"
 msgstr "Yasaklanmış etiketler"
 
-#: core/Requirement/Prohibited_tags.php:42
+#: core/Requirement/Prohibited_tags.php:42, fuzzy
 msgid "Prohibited tags: %s"
 msgstr "Yasaklanmış etiketler: %s"
 
@@ -728,14 +728,14 @@ msgstr "Evet"
 msgid "Yoast Readability: %s"
 msgstr "Yoast Okunabilirliği: %s"
 
-#: modules/yoastseo/yoastseo.php:66
+#: modules/yoastseo/yoastseo.php:66, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
 #. %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:123
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:128
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 

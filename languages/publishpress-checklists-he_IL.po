@@ -27,7 +27,7 @@ msgstr ""
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:55
-#: core/Requirement/Taxonomies_count.php:56
+#: core/Requirement/Taxonomies_count.php:56, fuzzy
 msgid "%d "
 msgstr "%d "
 
@@ -130,7 +130,7 @@ msgstr "על PublishPress Checklists"
 msgid "Accessibility"
 msgstr "נגישות"
 
-#: core/Utils/FieldsTabs.php:126
+#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
@@ -160,7 +160,7 @@ msgstr "תוכן בטון הרפתקני"
 msgid "All images have Alt text"
 msgstr "כל התמונות כוללות טקסט חלופי"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
@@ -438,7 +438,7 @@ msgstr "כללי"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169, fuzzy
 msgid "Good"
 msgstr "טוב"
 
@@ -792,7 +792,7 @@ msgstr "אוקי"
 msgid "One or more items in the checklist are not completed"
 msgstr "פריט אחד או יותר ברשימת הבדיקה לא הושלמו"
 
-#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70
+#: core/Requirement/Openai_item.php:69 core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
@@ -897,7 +897,7 @@ msgstr "תוכן בטון פרסומי"
 msgid "Publish Date / Time"
 msgstr "תאריך / שעה פרסום"
 
-#: modules/settings/settings.php:1154
+#: modules/settings/settings.php:1154, fuzzy
 msgid "Publishing Options"
 msgstr "אפשרויות פרסום"
 
@@ -906,7 +906,7 @@ msgid "PublishPress"
 msgstr "PublishPress"
 
 #. Name of the plugin
-#: core/Legacy/Module.php:286
+#: core/Legacy/Module.php:286, fuzzy
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
@@ -914,7 +914,7 @@ msgstr "PublishPress Checklists"
 msgid "PublishPress Checklists Documentation"
 msgstr "תיעוד של PublishPress Checklists"
 
-#: core/Utils/FieldsTabs.php:104
+#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
@@ -1103,7 +1103,7 @@ msgid ""
 "your content."
 msgstr "עם PublishPress Checklists, אתה יכול לבחור דרישות פרסום לתוכן שלך."
 
-#: core/Utils/FieldsTabs.php:97
+#: core/Utils/FieldsTabs.php:97, fuzzy
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1114,18 +1114,18 @@ msgstr "כן"
 #. %s expands to the readability score
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
-#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68
+#: core/Utils/FieldsTabs.php:118 modules/yoastseo/yoastseo.php:68, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
 #. %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 

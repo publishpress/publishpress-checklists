@@ -104,7 +104,7 @@ class PPCH_Permissions extends Module
 
     public function actionTasksListTh($postType)
     {
-        echo '<th>' . esc_html__('Who can ignore the task?', 'publishpress-checklists') . '</th>';
+        echo '<th>' . esc_html__('Exclude User Roles', 'publishpress-checklists') . '</th>';
     }
 
     public function actionTasksListTd($requirement, $postType)
