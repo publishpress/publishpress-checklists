@@ -649,9 +649,9 @@ textarea.pp-checklists-custom-item-title {
 /* Fix column widths to prevent overlap on smaller screens */
 .pp-checklists-requirements-settings th:first-child,
 .pp-checklists-requirements-settings td:first-child {
-  width: 40%;
-  min-width: 150px;
-  max-width: 40%;
+  width: 300px;
+  min-width: 100px;
+  max-width: 30%;
 }
 
 .pp-checklists-requirements-settings th:nth-child(2),
