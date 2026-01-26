@@ -40,8 +40,12 @@
     "make-mo": [
       "wp i18n make-mo languages/"
     ],
+    "update-po": [
+      "wp i18n update-po languages/publishpress-checklists.pot languages/"
+    ],
     "translate": [
       "@make-pot",
+      "@update-po",
       "vendor/bin/publishpress-translate translate",
       "@make-mo"
     ],
