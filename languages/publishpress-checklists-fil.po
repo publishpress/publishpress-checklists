@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-21 17:26+0000\n"
+"PO-Revision-Date: 2026-01-26 17:36+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 "
@@ -1166,55 +1166,59 @@ msgstr "Paganahin ang Duplicate Checklists:"
 msgid "Show Checklists column in post lists:"
 msgstr "Ipakita ang kolum ng Checklist sa mga listahan ng post:"
 
-#: modules/settings/settings.php:834
+#: modules/settings/settings.php:825
+msgid "Enable Taxonomy Filter:"
+msgstr "I-enable ang Filter ng Taksonomiya:"
+
+#: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Huwag paganahin ang \"Status\" na opsyon kapag gumagamit ng \"Quick Edit\":"
 
-#: modules/settings/settings.php:842
+#: modules/settings/settings.php:852
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Ganap na i-disable ang \"Quick Edit\":"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:860
 msgid "Disable \"Publish\" button:"
 msgstr "I-disable ang \"Publish\" na button:"
 
-#: modules/settings/settings.php:868
+#: modules/settings/settings.php:878
 msgid "Complete Icon:"
 msgstr "Kumpletong Icon:"
 
-#: modules/settings/settings.php:876
+#: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
 msgstr "Di-kumpletong Icon:"
 
-#: modules/settings/settings.php:884
+#: modules/settings/settings.php:894
 msgid "Required Complete Color:"
 msgstr "Kinakailangang Kumpletong Kulay:"
 
-#: modules/settings/settings.php:892
+#: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
 msgstr "Kinakailangang Di-kumpletong Kulay:"
 
-#: modules/settings/settings.php:900
+#: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
 msgstr "Inirerekomendang Kumpletong Kulay:"
 
-#: modules/settings/settings.php:908
+#: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
 msgstr "Inirerekomendang Di-kumpletong Kulay:"
 
-#: modules/settings/settings.php:926, fuzzy
+#: modules/settings/settings.php:936, fuzzy
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
 
-#: modules/settings/settings.php:941
+#: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
 msgstr "I-reset ang Na-rename na Checklist:"
 
-#: modules/settings/settings.php:960
+#: modules/settings/settings.php:970
 msgid "Add to these post types:"
 msgstr "Idagdag sa mga uri ng post na ito:"
 
-#: modules/settings/settings.php:993
+#: modules/settings/settings.php:1003
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1222,13 +1226,13 @@ msgstr ""
 "Pinapayagan nito ang mga gawain na hindi paganahin para sa mga partikular "
 "na status tulad ng \"Draft\" o \"Published."
 
-#: modules/settings/settings.php:1014
+#: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
 "Pinapayagan nito ang mga gumagamit na kopyahin ang umiiral na mga gawain sa "
 "checklist."
 
-#: modules/settings/settings.php:1036
+#: modules/settings/settings.php:1046
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1236,7 +1240,16 @@ msgstr ""
 "Magdagdag ng Checklists na kolum sa screen ng Mga Post na nagpapakita kung "
 "gaano karaming kinakailangan ang kumpleto."
 
-#: modules/settings/settings.php:1058
+#: modules/settings/settings.php:1067
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Type\" tab to choose the terms."
+msgstr ""
+"Pinapayagan nito na ma-disable ang mga gawain para sa mga post na may "
+"partikular na mga termino ng taksonomiya. Pumunta sa tab na \"Uri ng Post\" "
+"upang pumili ng mga termino."
+
+#: modules/settings/settings.php:1089
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1244,7 +1257,7 @@ msgstr ""
 "Ipinapakita nito ang isang icon ng babala sa kahon ng \"Checklists\" kung "
 "hindi kumpleto ang mga kinakailangan."
 
-#: modules/settings/settings.php:1078
+#: modules/settings/settings.php:1109
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1252,11 +1265,11 @@ msgstr ""
 "Kapag naka-enable, lahat ng data ng PublishPress Checklists ay mabubura "
 "kung ang plugin ay aalisin."
 
-#: modules/settings/settings.php:1099
+#: modules/settings/settings.php:1130
 msgid "This will show \"Who can ignore\" options."
 msgstr "Ipinapakita nito ang mga opsyon na \"Sino ang maaaring hindi pansinin\"."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1151
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1264,7 +1277,7 @@ msgstr ""
 "Inirerekomenda ang pag-disable ng \"Status\" na opsyon dahil maaari itong "
 "magamit upang maiwasan ang paggamit ng mga kinakailangan ng Checklists."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1172
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1272,7 +1285,7 @@ msgstr ""
 "Hihinto nito ang \"Quick Edit\" para sa lahat ng mga gumagamit maliban sa "
 "mga may kakayahang \"manage_options\"."
 
-#: modules/settings/settings.php:1162
+#: modules/settings/settings.php:1193
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
@@ -1280,72 +1293,72 @@ msgstr ""
 "Hihinto nito ang \"Publish\" na button kapag hindi natutugunan ang mga "
 "kinakailangan ng checklist."
 
-#: modules/settings/settings.php:1181
+#: modules/settings/settings.php:1212
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
 "Ilagay ang iyong API Key upang magamit ang OpenAI prompts sa checklist "
 "tasks."
 
-#: modules/settings/settings.php:1235
+#: modules/settings/settings.php:1266
 msgid "Post Types"
 msgstr "Mga Uri ng Post"
 
-#: modules/settings/settings.php:1236
+#: modules/settings/settings.php:1267
 msgid "General"
 msgstr "Pangkalahatan"
 
-#: modules/settings/settings.php:1237
+#: modules/settings/settings.php:1268
 msgid "Publishing Options"
 msgstr "Mga Opsyon sa Pag-publish"
 
-#: modules/settings/settings.php:1238
+#: modules/settings/settings.php:1269
 msgid "Appearance"
 msgstr "Hitsura"
 
-#: modules/settings/settings.php:1239
+#: modules/settings/settings.php:1270
 msgid "Integration"
 msgstr "Pagsasama"
 
-#: modules/settings/settings.php:1240
+#: modules/settings/settings.php:1271
 msgid "Tools"
 msgstr "Mga Tool"
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr ""
 "Ilagay ang pangalan ng klase ng Dashicons (hal., dashicons-yes, "
 "dashicons-saved). "
 
-#: modules/settings/settings.php:1288
-#: modules/settings/settings.php:1303
+#: modules/settings/settings.php:1319
+#: modules/settings/settings.php:1334
 msgid "View Dashicons"
 msgstr "Tingnan ang Dashicons"
 
-#: modules/settings/settings.php:1302
+#: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 "Ilagay ang pangalan ng klase ng Dashicons (hal., dashicons-no, "
 "dashicons-dismiss). "
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
 msgstr "I-reset ang Lahat ng Pasadyang Label"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr ""
 "I-reset nito ang lahat ng mga pinalitang item sa checklist pabalik sa "
 "kanilang mga default na label."
 
-#: modules/settings/settings.php:1377
+#: modules/settings/settings.php:1408
 msgid "Security check failed."
 msgstr "Nabigo ang pagsusuri sa seguridad."
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
 msgstr "Wala kang pahintulot na isagawa ang aksyong ito."
 
-#: modules/settings/settings.php:1427
+#: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
 msgstr "Matagumpay na na-reset ang lahat ng pasadyang label."
 

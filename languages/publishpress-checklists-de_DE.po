@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-10-15 21:56+0700\n"
-"PO-Revision-Date: 2026-01-21 17:26+0000\n"
+"PO-Revision-Date: 2026-01-26 17:35+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -1149,55 +1149,59 @@ msgstr "Doppelte Checklisten aktivieren:"
 msgid "Show Checklists column in post lists:"
 msgstr "Checklisten-Spalte in Beitragslisten anzeigen:"
 
-#: modules/settings/settings.php:834
+#: modules/settings/settings.php:825
+msgid "Enable Taxonomy Filter:"
+msgstr "Taxonomie-Filter aktivieren:"
+
+#: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Deaktivieren Sie die Option „Status“, wenn Sie „Quick Edit“ verwenden:"
 
-#: modules/settings/settings.php:842
+#: modules/settings/settings.php:852
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Aktivieren Sie \"Schnell bearbeiten\" vollständig deaktivieren:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:860
 msgid "Disable \"Publish\" button:"
 msgstr "Schaltfläche \"Veröffentlichen\" deaktivieren:"
 
-#: modules/settings/settings.php:868
+#: modules/settings/settings.php:878
 msgid "Complete Icon:"
 msgstr "Vollständiges Symbol:"
 
-#: modules/settings/settings.php:876
+#: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
 msgstr "Unvollständiges Symbol:"
 
-#: modules/settings/settings.php:884
+#: modules/settings/settings.php:894
 msgid "Required Complete Color:"
 msgstr "Erforderliche vollständige Farbe:"
 
-#: modules/settings/settings.php:892
+#: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
 msgstr "Erforderliche unvollständige Farbe:"
 
-#: modules/settings/settings.php:900
+#: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
 msgstr "Empfohlene vollständige Farbe:"
 
-#: modules/settings/settings.php:908
+#: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
 msgstr "Empfohlene unvollständige Farbe:"
 
-#: modules/settings/settings.php:926
+#: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
 msgstr "OpenAI API-Schlüssel:"
 
-#: modules/settings/settings.php:941
+#: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
 msgstr "Umbenannte Checkliste zurücksetzen:"
 
-#: modules/settings/settings.php:960
+#: modules/settings/settings.php:970
 msgid "Add to these post types:"
 msgstr "Für diese Beitragstypen aktivieren:"
 
-#: modules/settings/settings.php:993
+#: modules/settings/settings.php:1003
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1205,13 +1209,13 @@ msgstr ""
 "Dies ermöglicht das Deaktivieren von Aufgaben für spezifische Status wie "
 "\"Entwurf\" oder \"Veröffentlicht.&nbsp;"
 
-#: modules/settings/settings.php:1014
+#: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
 "Dies ermöglicht den Benutzern, vorhandene Aufgaben in der Checkliste zu "
 "duplizieren."
 
-#: modules/settings/settings.php:1036
+#: modules/settings/settings.php:1046
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1219,7 +1223,16 @@ msgstr ""
 "Fügen Sie eine Checklisten-Spalte zum Posts-Bildschirm hinzu, die zeigt, "
 "wie viele Anforderungen erfüllt sind."
 
-#: modules/settings/settings.php:1058
+#: modules/settings/settings.php:1067
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Type\" tab to choose the terms."
+msgstr ""
+"Dies ermöglicht das Deaktivieren von Aufgaben für Beiträge mit bestimmten "
+"Taxonomiebegriffen. Gehen Sie zum Tab \"Beitragstyp\", um die Begriffe "
+"auszuwählen."
+
+#: modules/settings/settings.php:1089
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1227,7 +1240,7 @@ msgstr ""
 "Dies zeigt ein Warnsymbol im \"Checklisten\"-Bereich an, wenn Anforderungen "
 "unvollständig sind."
 
-#: modules/settings/settings.php:1078
+#: modules/settings/settings.php:1109
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1235,11 +1248,11 @@ msgstr ""
 "Wenn aktiviert, werden alle PublishPress Checklisten-Daten gelöscht, wenn "
 "das Plugin deinstalliert wird."
 
-#: modules/settings/settings.php:1099
+#: modules/settings/settings.php:1130
 msgid "This will show \"Who can ignore\" options."
 msgstr "Dies zeigt die Optionen \"Wer kann ignorieren\" an."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1151
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1247,7 +1260,7 @@ msgstr ""
 "Es wird empfohlen, die Option \"Status\" zu deaktivieren, da sie verwendet "
 "werden kann, um die Anforderungen der Checklisten zu vermeiden."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1172
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1255,7 +1268,7 @@ msgstr ""
 "Dies deaktiviert \"Schnell bearbeiten\" für alle Benutzer, außer für "
 "diejenigen mit der Fähigkeit \"manage_options\"."
 
-#: modules/settings/settings.php:1162
+#: modules/settings/settings.php:1193
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
@@ -1263,72 +1276,72 @@ msgstr ""
 "Dies deaktiviert den \"Veröffentlichen\"-Button, wenn die Anforderungen der "
 "Checkliste nicht erfüllt sind."
 
-#: modules/settings/settings.php:1181
+#: modules/settings/settings.php:1212
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
 "Geben Sie Ihren API-Schlüssel ein, um OpenAI-Eingabeaufforderungen in "
 "Checklistenaufgaben zu verwenden."
 
-#: modules/settings/settings.php:1235
+#: modules/settings/settings.php:1266
 msgid "Post Types"
 msgstr "Beitragstypen"
 
-#: modules/settings/settings.php:1236
+#: modules/settings/settings.php:1267
 msgid "General"
 msgstr "Allgemein"
 
-#: modules/settings/settings.php:1237
+#: modules/settings/settings.php:1268
 msgid "Publishing Options"
 msgstr "Veröffentlichungsoptionen"
 
-#: modules/settings/settings.php:1238
+#: modules/settings/settings.php:1269
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
-#: modules/settings/settings.php:1239, fuzzy
+#: modules/settings/settings.php:1270, fuzzy
 msgid "Integration"
 msgstr "Integration"
 
-#: modules/settings/settings.php:1240
+#: modules/settings/settings.php:1271
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr ""
 "Geben Sie einen Dashicons-Klassennamen ein (z. B. dashicons-yes, "
 "dashicons-saved). "
 
-#: modules/settings/settings.php:1288
-#: modules/settings/settings.php:1303
+#: modules/settings/settings.php:1319
+#: modules/settings/settings.php:1334
 msgid "View Dashicons"
 msgstr "Dashicons anzeigen"
 
-#: modules/settings/settings.php:1302
+#: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 "Geben Sie einen Dashicons-Klassennamen ein (z. B. dashicons-no, "
 "dashicons-dismiss). "
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
 msgstr "Alle benutzerdefinierten Bezeichnungen zurücksetzen"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr ""
 "Dies setzt alle umbenannten Checklistenpunkte auf ihre "
 "Standardbezeichnungen zurück."
 
-#: modules/settings/settings.php:1377
+#: modules/settings/settings.php:1408
 msgid "Security check failed."
 msgstr "Sicherheitsüberprüfung fehlgeschlagen."
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
 msgstr "Sie haben keine Berechtigung, um diese Aktion auszuführen."
 
-#: modules/settings/settings.php:1427
+#: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
 msgstr "Alle benutzerdefinierten Bezeichnungen wurden erfolgreich zurückgesetzt."
 

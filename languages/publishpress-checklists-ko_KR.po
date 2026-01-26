@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-21 17:26+0000\n"
+"PO-Revision-Date: 2026-01-26 17:36+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -1145,162 +1145,174 @@ msgstr "중복 체크리스트 활성화:"
 msgid "Show Checklists column in post lists:"
 msgstr "게시물 목록에 체크리스트 열 표시:"
 
-#: modules/settings/settings.php:834
+#: modules/settings/settings.php:825
+msgid "Enable Taxonomy Filter:"
+msgstr "분류 필터 활성화:"
+
+#: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "\"빠른 편집\"을 사용할 때 \"상태\" 옵션 비활성화:"
 
-#: modules/settings/settings.php:842
+#: modules/settings/settings.php:852
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "\"빠른 편집\" 완전히 비활성화:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:860
 msgid "Disable \"Publish\" button:"
 msgstr "\"발행\" 버튼 비활성화:"
 
-#: modules/settings/settings.php:868
+#: modules/settings/settings.php:878
 msgid "Complete Icon:"
 msgstr "완료 아이콘:"
 
-#: modules/settings/settings.php:876
+#: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
 msgstr "미완료 아이콘:"
 
-#: modules/settings/settings.php:884
+#: modules/settings/settings.php:894
 msgid "Required Complete Color:"
 msgstr "필수 완료 색상:"
 
-#: modules/settings/settings.php:892
+#: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
 msgstr "필수 미완료 색상:"
 
-#: modules/settings/settings.php:900
+#: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
 msgstr "추천 완료 색상:"
 
-#: modules/settings/settings.php:908
+#: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
 msgstr "추천 미완료 색상:"
 
-#: modules/settings/settings.php:926
+#: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
 msgstr "OpenAI API 키:"
 
-#: modules/settings/settings.php:941
+#: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
 msgstr "이름이 변경된 체크리스트 재설정:"
 
-#: modules/settings/settings.php:960
+#: modules/settings/settings.php:970
 msgid "Add to these post types:"
 msgstr "다음 게시물 유형에 추가:"
 
-#: modules/settings/settings.php:993
+#: modules/settings/settings.php:1003
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr "이 설정은 \"초안\" 또는 \"게시됨\"과 같은 특정 상태에 대해 작업을 비활성화할 수 있습니다."
 
-#: modules/settings/settings.php:1014
+#: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "사용자가 기존 체크리스트 작업을 복제할 수 있습니다."
 
-#: modules/settings/settings.php:1036
+#: modules/settings/settings.php:1046
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr "게시물 화면에 체크리스트 열을 추가하여 완료된 요구 사항 수를 표시합니다."
 
-#: modules/settings/settings.php:1058
+#: modules/settings/settings.php:1067
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Type\" tab to choose the terms."
+msgstr ""
+"이 기능은 특정 분류 용어가 있는 게시물에 대해 작업을 비활성화할 수 있게 합니다. \"게시물 유형\" 탭으로 이동하여 용어를 "
+"선택하세요."
+
+#: modules/settings/settings.php:1089
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "이 설정은 요구 사항이 불완전할 경우 \"체크리스트\" 상자에 경고 아이콘을 표시합니다."
 
-#: modules/settings/settings.php:1078
+#: modules/settings/settings.php:1109
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr "활성화되면, 플러그인이 제거될 경우 모든 PublishPress 체크리스트 데이터가 삭제됩니다."
 
-#: modules/settings/settings.php:1099
+#: modules/settings/settings.php:1130
 msgid "This will show \"Who can ignore\" options."
 msgstr "이 설정은 \"누가 무시할 수 있는지\" 옵션을 표시합니다."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1151
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
 msgstr "\"상태\" 옵션을 비활성화하는 것이 권장됩니다. 이를 통해 체크리스트 요구 사항을 피할 수 있습니다."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1172
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
 msgstr "이 설정은 \"manage_options\" 권한이 없는 모든 사용자에 대해 \"빠른 편집\"을 비활성화합니다."
 
-#: modules/settings/settings.php:1162
+#: modules/settings/settings.php:1193
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr "이 설정은 체크리스트 요구 사항이 충족되지 않을 때 \"게시\" 버튼을 비활성화합니다."
 
-#: modules/settings/settings.php:1181
+#: modules/settings/settings.php:1212
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "체크리스트 작업에서 OpenAI 프롬프트를 사용하려면 API 키를 입력하세요."
 
-#: modules/settings/settings.php:1235
+#: modules/settings/settings.php:1266
 msgid "Post Types"
 msgstr "게시물 유형"
 
-#: modules/settings/settings.php:1236
+#: modules/settings/settings.php:1267
 msgid "General"
 msgstr "일반"
 
-#: modules/settings/settings.php:1237
+#: modules/settings/settings.php:1268
 msgid "Publishing Options"
 msgstr "발행 옵션"
 
-#: modules/settings/settings.php:1238
+#: modules/settings/settings.php:1269
 msgid "Appearance"
 msgstr "외관"
 
-#: modules/settings/settings.php:1239
+#: modules/settings/settings.php:1270
 msgid "Integration"
 msgstr "통합"
 
-#: modules/settings/settings.php:1240
+#: modules/settings/settings.php:1271
 msgid "Tools"
 msgstr "도구"
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "Dashicons 클래스 이름을 입력하세요 (예: dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1288
-#: modules/settings/settings.php:1303
+#: modules/settings/settings.php:1319
+#: modules/settings/settings.php:1334
 msgid "View Dashicons"
 msgstr "Dashicons 보기"
 
-#: modules/settings/settings.php:1302
+#: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Dashicons 클래스 이름을 입력하세요 (예: dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
 msgstr "모든 사용자 정의 레이블 초기화"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr "이 작업은 이름이 변경된 체크리스트 항목을 기본 레이블로 되돌립니다."
 
-#: modules/settings/settings.php:1377
+#: modules/settings/settings.php:1408
 msgid "Security check failed."
 msgstr "보안 검사에 실패했습니다."
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
 msgstr "이 작업을 수행할 권한이 없습니다."
 
-#: modules/settings/settings.php:1427
+#: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
 msgstr "모든 사용자 정의 레이블이 성공적으로 초기화되었습니다."
 
