@@ -1,6 +1,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.26.0] - 26 January, 2026
+
+- Added: Add promo for taxonomy filter #1074
+- Changed: Extra descriptions on taxonomy filter setting section #1076
+- Fixed: Reduce task column on Checklists screen #1070
+- Fixed: Changed term setting to the bottom on post type tab #1073
+
 [2.25.0] - 22 January, 2026
 
 - Added: Allow users to rename tasks #1025
