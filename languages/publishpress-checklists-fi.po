@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-21 17:26+0000\n"
+"PO-Revision-Date: 2026-01-27 14:26+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -1155,55 +1155,59 @@ msgstr "Ota käyttöön kaksoislistojen tarkistus:"
 msgid "Show Checklists column in post lists:"
 msgstr "Näytä tarkistuslistat-sarake viestilistassa:"
 
-#: modules/settings/settings.php:834
+#: modules/settings/settings.php:825
+msgid "Enable Taxonomy Filter:"
+msgstr "Ota käyttöön taksonomiasuodatin:"
+
+#: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Poista \"Tila\" -vaihtoehto käytöstä käyttäessäsi \"Pika muokkaus\":"
 
-#: modules/settings/settings.php:842
+#: modules/settings/settings.php:852
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Poista \"Nopea muokkaus\" kokonaan käytöstä:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:860
 msgid "Disable \"Publish\" button:"
 msgstr "Poista \"Julkaise\" -painike käytöstä:"
 
-#: modules/settings/settings.php:868
+#: modules/settings/settings.php:878
 msgid "Complete Icon:"
 msgstr "Valmis kuvake:"
 
-#: modules/settings/settings.php:876
+#: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
 msgstr "Kesken oleva kuvake:"
 
-#: modules/settings/settings.php:884
+#: modules/settings/settings.php:894
 msgid "Required Complete Color:"
 msgstr "Vaadittu valmis väri:"
 
-#: modules/settings/settings.php:892
+#: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
 msgstr "Vaadittu kesken oleva väri:"
 
-#: modules/settings/settings.php:900
+#: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
 msgstr "Suositeltu valmis väri:"
 
-#: modules/settings/settings.php:908
+#: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
 msgstr "Suositeltu kesken oleva väri:"
 
-#: modules/settings/settings.php:926
+#: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
 msgstr "OpenAI API-avain:"
 
-#: modules/settings/settings.php:941
+#: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
 msgstr "Nollaa uudelleennimetyt tarkistuslista:"
 
-#: modules/settings/settings.php:960
-msgid "Add to these post types:"
-msgstr "Lisää näihin julkaisutyyppeihin:"
+#: modules/settings/settings.php:970
+msgid "Post types:"
+msgstr "Postityypit:"
 
-#: modules/settings/settings.php:993
+#: modules/settings/settings.php:1003
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1211,13 +1215,13 @@ msgstr ""
 "Tämä mahdollistaa tehtävien poistamisen käytöstä tietyille statuksille, "
 "kuten \"Luonnos\" tai \"Julkaistu.\""
 
-#: modules/settings/settings.php:1014
+#: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
 "Tämä antaa käyttäjille mahdollisuuden kopioida olemassa olevia "
 "tarkistuslistan tehtäviä."
 
-#: modules/settings/settings.php:1036
+#: modules/settings/settings.php:1046
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1225,7 +1229,16 @@ msgstr ""
 "Lisää Checklists-sarake Postit-näytölle, joka näyttää, kuinka monta "
 "vaatimusta on valmis."
 
-#: modules/settings/settings.php:1058
+#: modules/settings/settings.php:1067
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Types\" tab to choose the terms."
+msgstr ""
+"Tämä mahdollistaa tehtävien poistamisen käytöstä tiettyjen "
+"taksonomia-termien omaaville viesteille. Siirry \"Viestityypit\" "
+"-välilehteen valitaksesi termit."
+
+#: modules/settings/settings.php:1089
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1233,7 +1246,7 @@ msgstr ""
 "Tämä näyttää varoitusikonin \"Tarkistuslistat\" -ruudussa, jos vaatimukset "
 "ovat puutteelliset."
 
-#: modules/settings/settings.php:1078
+#: modules/settings/settings.php:1109
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1241,11 +1254,11 @@ msgstr ""
 "Kun tämä on käytössä, kaikki PublishPress Checklists -tiedot poistetaan, "
 "jos liitännäinen poistetaan."
 
-#: modules/settings/settings.php:1099
+#: modules/settings/settings.php:1130
 msgid "This will show \"Who can ignore\" options."
 msgstr "Tämä näyttää \"Kuka voi ohittaa\" -vaihtoehdot."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1151
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1253,7 +1266,7 @@ msgstr ""
 "\"Tila\" -vaihtoehdon poistamista käytöstä suositellaan, koska sitä voidaan "
 "käyttää Checklists-vaatimusten välttämiseen."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1172
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1261,7 +1274,7 @@ msgstr ""
 "Tämä poistaa \"Nopea muokkaus\" kaikilta käyttäjiltä lukuun ottamatta "
 "niitä, joilla on \"manage_options\" -oikeus."
 
-#: modules/settings/settings.php:1162
+#: modules/settings/settings.php:1193
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
@@ -1269,68 +1282,68 @@ msgstr ""
 "Tämä poistaa \"Julkaise\" -painikkeen, kun tarkistuslistan vaatimuksia ei "
 "ole täytetty."
 
-#: modules/settings/settings.php:1181
+#: modules/settings/settings.php:1212
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
 "Syötä API-avaimesi, jotta voit käyttää OpenAI-kehotuksia "
 "tarkistuslistatehtävissä."
 
-#: modules/settings/settings.php:1235
+#: modules/settings/settings.php:1266
 msgid "Post Types"
 msgstr "Viestityypit"
 
-#: modules/settings/settings.php:1236
+#: modules/settings/settings.php:1267
 msgid "General"
 msgstr "Yleinen"
 
-#: modules/settings/settings.php:1237
+#: modules/settings/settings.php:1268
 msgid "Publishing Options"
 msgstr "Julkaisuvaihtoehdot"
 
-#: modules/settings/settings.php:1238
+#: modules/settings/settings.php:1269
 msgid "Appearance"
 msgstr "Ulkoasu"
 
-#: modules/settings/settings.php:1239
+#: modules/settings/settings.php:1270
 msgid "Integration"
 msgstr "Integraatio"
 
-#: modules/settings/settings.php:1240
+#: modules/settings/settings.php:1271
 msgid "Tools"
 msgstr "Työkalut"
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "Anna Dashicons-luokan nimi (esim. dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1288
-#: modules/settings/settings.php:1303
+#: modules/settings/settings.php:1319
+#: modules/settings/settings.php:1334
 msgid "View Dashicons"
 msgstr "Näytä Dashicons"
 
-#: modules/settings/settings.php:1302
+#: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Anna Dashicons-luokan nimi (esim. dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
 msgstr "Nollaa kaikki mukautetut nimet"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr ""
 "Tämä palauttaa kaikki uudelleennimetyt tarkistuslistan kohteet "
 "oletusnimilleen."
 
-#: modules/settings/settings.php:1377
+#: modules/settings/settings.php:1408
 msgid "Security check failed."
 msgstr "Turvatarkistus epäonnistui."
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
 msgstr "Sinulla ei ole oikeuksia tämän toiminnon suorittamiseen."
 
-#: modules/settings/settings.php:1427
+#: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
 msgstr "Kaikki mukautetut nimet on nollattu onnistuneesti."
 

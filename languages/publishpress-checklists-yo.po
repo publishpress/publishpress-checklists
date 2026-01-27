@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-21 17:26+0000\n"
+"PO-Revision-Date: 2026-01-27 14:26+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -1153,55 +1153,59 @@ msgstr "Mú àyẹ̀wò àtẹ̀jáde pọ̀ sílẹ̀:"
 msgid "Show Checklists column in post lists:"
 msgstr "Fi kọlámu atokọ àṣẹ hàn nínú àkópọ àṣẹ:"
 
-#: modules/settings/settings.php:834
+#: modules/settings/settings.php:825
+msgid "Enable Taxonomy Filter:"
+msgstr "Mu Àyípadà Iṣàkóso ṣiṣẹ:"
+
+#: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Dena aṣayan \"Ipo\" nigba ti nlo \"Ṣatunkọ Yara\":"
 
-#: modules/settings/settings.php:842
+#: modules/settings/settings.php:852
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Dákẹ́ \"Àtúnṣe Yara\" patapata:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:860
 msgid "Disable \"Publish\" button:"
 msgstr "Dákẹ́ \"Ṣe àtúnṣe\" bọtini:"
 
-#: modules/settings/settings.php:868
+#: modules/settings/settings.php:878
 msgid "Complete Icon:"
 msgstr "Aami K_completion:"
 
-#: modules/settings/settings.php:876
+#: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
 msgstr "Aami K_incomplete:"
 
-#: modules/settings/settings.php:884
+#: modules/settings/settings.php:894
 msgid "Required Complete Color:"
 msgstr "Awọ K_required K_completion:"
 
-#: modules/settings/settings.php:892
+#: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
 msgstr "Awọ K_required K_incomplete:"
 
-#: modules/settings/settings.php:900
+#: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
 msgstr "Awọ K_recommended K_completion:"
 
-#: modules/settings/settings.php:908
+#: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
 msgstr "Awọ K_recommended K_incomplete:"
 
-#: modules/settings/settings.php:926
+#: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
 msgstr "Bọtini API OpenAI:"
 
-#: modules/settings/settings.php:941
+#: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
 msgstr "Tun awọn iṣayẹwo ti a tun orukọ:"
 
-#: modules/settings/settings.php:960
-msgid "Add to these post types:"
-msgstr "Fi kun awọn iru ifiweranṣẹ wọnyi:"
+#: modules/settings/settings.php:970
+msgid "Post types:"
+msgstr "Iru ifiweranṣẹ:"
 
-#: modules/settings/settings.php:993
+#: modules/settings/settings.php:1003
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1209,11 +1213,11 @@ msgstr ""
 "Eyi gba iṣẹ́ laaye lati jẹ́ aláìlera fún àwọn ipo pataki gẹ́gẹ́ bí "
 "\"Ìkàwé\" tàbí \"Tí a tẹ̀jáde.\""
 
-#: modules/settings/settings.php:1014
+#: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "Eyi n jẹ ki awọn olumulo ṣe ẹda awọn iṣẹ atokọ ti o wa tẹlẹ."
 
-#: modules/settings/settings.php:1036
+#: modules/settings/settings.php:1046
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1221,13 +1225,21 @@ msgstr ""
 "Fi kolomu Checklists kun si iboju Posts ti o nfihan bi ọpọlọpọ ibeere ti "
 "pari."
 
-#: modules/settings/settings.php:1058
+#: modules/settings/settings.php:1067
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Types\" tab to choose the terms."
+msgstr ""
+"Eyi gba awọn iṣẹ lati di alaiṣiṣẹ fun awọn ifiweranṣẹ pẹlu awọn ọrọ iṣiro "
+"pataki. Lọ si taabu \"Iru Ifiweranṣẹ\" lati yan awọn ọrọ."
+
+#: modules/settings/settings.php:1089
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "Eyi yóò fi aami ikilọ hàn nínú apoti \"Àwọn Atokọ\" tí awọn ibeere kò pé."
 
-#: modules/settings/settings.php:1078
+#: modules/settings/settings.php:1109
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1235,11 +1247,11 @@ msgstr ""
 "Nigbati o ba ti mu ṣiṣẹ, gbogbo data PublishPress Checklists yoo parẹ ti a "
 "ba yọ akopọ naa kuro."
 
-#: modules/settings/settings.php:1099
+#: modules/settings/settings.php:1130
 msgid "This will show \"Who can ignore\" options."
 msgstr "Eyi yóò fi \"Ta ni o le foju kọ\" awọn aṣayan hàn."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1151
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1247,7 +1259,7 @@ msgstr ""
 "Dákẹ́ àṣayan \"Ipo\" ni a ṣe iṣeduro nitori pe a le lo lati yago fun lilo "
 "awọn ibeere Checklists."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1172
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1255,72 +1267,72 @@ msgstr ""
 "Eyi yóò pa \"Ṣatunkọ Kánkán\" fun gbogbo awọn olumulo ayafi fun awọn ti o "
 "ni agbara \"manage_options\"."
 
-#: modules/settings/settings.php:1162
+#: modules/settings/settings.php:1193
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr "Eyi yóò pa bọtini \"Tẹ̀jáde\" run nigbati awọn ibeere atokọ ko ba pade."
 
-#: modules/settings/settings.php:1181
+#: modules/settings/settings.php:1212
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "Tẹ bọtini API rẹ lati lo awọn ibeere OpenAI ninu awọn iṣẹ akọsilẹ."
 
-#: modules/settings/settings.php:1235
+#: modules/settings/settings.php:1266
 msgid "Post Types"
 msgstr "Iru Ifiweranṣẹ"
 
-#: modules/settings/settings.php:1236
+#: modules/settings/settings.php:1267
 msgid "General"
 msgstr "Gbogbogbo"
 
-#: modules/settings/settings.php:1237
+#: modules/settings/settings.php:1268
 msgid "Publishing Options"
 msgstr "Awọn aṣayan Ifiweranṣẹ"
 
-#: modules/settings/settings.php:1238
+#: modules/settings/settings.php:1269
 msgid "Appearance"
 msgstr "Iwa"
 
-#: modules/settings/settings.php:1239
+#: modules/settings/settings.php:1270
 msgid "Integration"
 msgstr "Isopọ"
 
-#: modules/settings/settings.php:1240
+#: modules/settings/settings.php:1271
 msgid "Tools"
 msgstr "Awọn irinṣẹ"
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "Tẹ orukọ kilasi Dashicons kan (e.g., dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1288
-#: modules/settings/settings.php:1303
+#: modules/settings/settings.php:1319
+#: modules/settings/settings.php:1334
 msgid "View Dashicons"
 msgstr "Wo Dashicons"
 
-#: modules/settings/settings.php:1302
+#: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Tẹ orukọ kilasi Dashicons kan (e.g., dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
 msgstr "Tun gbogbo awọn afi aṣa ṣe"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr ""
 "Eyi yoo tun gbogbo awọn ohun atokọ ti a pe ni orukọ pada si awọn afi "
 "aiyipada wọn."
 
-#: modules/settings/settings.php:1377
+#: modules/settings/settings.php:1408
 msgid "Security check failed."
 msgstr "Ayẹwo aabo kuna."
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
 msgstr "Iwọ ko ni igbanilaaye lati ṣe iṣe yii."
 
-#: modules/settings/settings.php:1427
+#: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
 msgstr "Gbogbo awọn afi aṣa ti tunṣe ni aṣeyọri."
 
