@@ -1065,7 +1065,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[taxonomy_filter_settings]" '
                 . checked($value, 'yes', false) . ' disabled="disabled" />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This allows tasks to be disabled for posts with specific taxonomy terms. Go to the "Post Type" tab to choose the terms.',
+                'This allows tasks to be disabled for posts with specific taxonomy terms. Go to the "Post Types" tab to choose the terms.',
                 'publishpress-checklists'
             );
             echo '</label>';
