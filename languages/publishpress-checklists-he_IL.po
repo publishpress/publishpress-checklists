@@ -1363,10 +1363,6 @@ msgstr ""
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
 
-#: modules/settings/settings.php:1067
-msgid "This allows tasks to be disabled for posts with specific taxonomy terms. Go to the \"Post Type\" tab to choose the terms."
-msgstr ""
-
 #: modules/settings/settings.php:1269
 msgid "Appearance"
 msgstr ""
@@ -1406,4 +1402,8 @@ msgstr ""
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
+msgstr ""
+
+#: modules/settings/settings.php:1067
+msgid "This allows tasks to be disabled for posts with specific taxonomy terms. Go to the \"Post Types\" tab to choose the terms."
 msgstr ""

@@ -1231,10 +1231,6 @@ msgstr ""
 msgid "Add a Checklists column to the Posts screen showing how many requirements are complete."
 msgstr ""
 
-#: modules/settings/settings.php:1067
-msgid "This allows tasks to be disabled for posts with specific taxonomy terms. Go to the \"Post Type\" tab to choose the terms."
-msgstr ""
-
 #: modules/settings/settings.php:1089
 msgid "This will display a warning icon in the \"Checklists\" box if requirements are incomplete."
 msgstr ""
@@ -1407,4 +1403,8 @@ msgstr ""
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
+msgstr ""
+
+#: modules/settings/settings.php:1067
+msgid "This allows tasks to be disabled for posts with specific taxonomy terms. Go to the \"Post Types\" tab to choose the terms."
 msgstr ""

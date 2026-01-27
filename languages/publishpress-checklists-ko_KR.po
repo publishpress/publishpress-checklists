@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 07:28+0000\n"
+"PO-Revision-Date: 2026-01-27 14:26+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -1216,10 +1216,10 @@ msgstr "게시물 화면에 체크리스트 열을 추가하여 완료된 요구
 #: modules/settings/settings.php:1067
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
-"to the \"Post Type\" tab to choose the terms."
+"to the \"Post Types\" tab to choose the terms."
 msgstr ""
-"이 기능은 특정 분류 용어가 있는 게시물에 대해 작업을 비활성화할 수 있게 합니다. \"게시물 유형\" 탭으로 이동하여 용어를 "
-"선택하세요."
+"이 기능은 특정 분류 용어가 있는 게시물에 대해 작업을 비활성화할 수 있도록 합니다. 용어를 선택하려면 \"게시물 유형\" 탭으로 "
+"이동하세요."
 
 #: modules/settings/settings.php:1089
 msgid ""

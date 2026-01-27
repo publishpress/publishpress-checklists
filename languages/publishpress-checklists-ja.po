@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 07:28+0000\n"
+"PO-Revision-Date: 2026-01-27 14:26+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -1216,8 +1216,8 @@ msgstr "投稿画面にチェックリスト列を追加し、完了した要件
 #: modules/settings/settings.php:1067
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
-"to the \"Post Type\" tab to choose the terms."
-msgstr "これにより、特定のタクソノミー用語を持つ投稿に対してタスクを無効にすることができます。「投稿タイプ」タブに移動して用語を選択してください。"
+"to the \"Post Types\" tab to choose the terms."
+msgstr "これにより、特定のタクソノミー用語を持つ投稿のタスクを無効にできます。「投稿タイプ」タブに移動して用語を選択してください。"
 
 #: modules/settings/settings.php:1089
 msgid ""
