@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-10-15 21:56+0700\n"
-"PO-Revision-Date: 2026-01-26 17:35+0000\n"
+"PO-Revision-Date: 2026-01-27 07:28+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -1198,8 +1198,8 @@ msgid "Reset Renamed Checklist:"
 msgstr "Umbenannte Checkliste zurücksetzen:"
 
 #: modules/settings/settings.php:970
-msgid "Add to these post types:"
-msgstr "Für diese Beitragstypen aktivieren:"
+msgid "Post types:"
+msgstr "Beitragstypen:"
 
 #: modules/settings/settings.php:1003
 msgid ""

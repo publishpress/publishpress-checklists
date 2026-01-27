@@ -16,67 +16,67 @@ msgstr ""
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d "
 msgstr "%d "
 
 #: core/Requirement/Filled_excerpt.php:48
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d character in excerpt"
 msgstr "%d character in excerpt"
 
 #: core/Requirement/Title_count.php:46
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d character in title"
 msgstr "%d character in title"
 
 #: core/Requirement/Filled_excerpt.php:49
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d characters in excerpt"
 msgstr "%d characters in excerpt"
 
 #: core/Requirement/Title_count.php:47
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d characters in title"
 msgstr "%d characters in title"
 
 #: core/Requirement/External_links.php:48
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d external link in content"
 msgstr "%d external link in content"
 
 #: core/Requirement/External_links.php:49
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d external links in content"
 msgstr "%d external links in content"
 
 #: core/Requirement/Internal_links.php:48
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d internal link in content"
 msgstr "%d internal link in content"
 
 #: core/Requirement/Internal_links.php:49
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d internal links in content"
 msgstr "%d internal links in content"
 
 #: core/Requirement/Tags_count.php:52
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d tag"
 msgstr "%d tag"
 
 #: core/Requirement/Tags_count.php:53
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d tags"
 msgstr "%d tags"
 
 #: core/Requirement/Words_count.php:48
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d word in content"
 msgstr "%d word in content"
 
 #: core/Requirement/Words_count.php:49
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "%d words in content"
 msgstr "%d words in content"
 
@@ -101,10 +101,6 @@ msgstr "Add custom task"
 #: modules/checklists/templates/global-checklists.php:203, fuzzy
 msgid "Add OpenAI Prompt task"
 msgstr "Add OpenAI Prompt task"
-
-#: modules/settings/settings.php:970, fuzzy
-msgid "Add to these post types:"
-msgstr "Add to these post types:"
 
 #: core/Requirement/Image_alt.php:44
 #: core/Requirement/Image_alt.php:45, fuzzy
@@ -148,32 +144,32 @@ msgid "Between %d and %d "
 msgstr "Between %s and %s "
 
 #: core/Requirement/Filled_excerpt.php:50
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Between %d and %d characters in excerpt"
 msgstr "Between %d and %d characters in excerpt"
 
 #: core/Requirement/Title_count.php:48
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Between %d and %d characters in title"
 msgstr "Between %d and %d characters in title"
 
 #: core/Requirement/External_links.php:50
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Between %d and %d external links in content"
 msgstr "Between %d and %d external links in content"
 
 #: core/Requirement/Internal_links.php:50
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Between %d and %d internal links in content"
 msgstr "Between %d and %d internal links in content"
 
 #: core/Requirement/Tags_count.php:54
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Between %d and %d tags"
 msgstr "Between %d and %d tags"
 
 #: core/Requirement/Words_count.php:50
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Between %d and %d words in content"
 msgstr "Between %d and %d words in content"
 
@@ -248,7 +244,7 @@ msgid "Disabled"
 msgstr "Disabled"
 
 #: modules/settings/settings.php:474
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Disabled because add_post_type_support('%1$s', '%2$s') is included in a loaded file."
 msgstr "Disabled because add_post_type_support('%1$s', '%2$s') is included in a loaded file."
 
@@ -323,47 +319,47 @@ msgstr "Max"
 
 #: core/Requirement/Taxonomies_count.php:53
 #: core/Requirement/Taxonomies_count.php:54
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d "
 msgstr "Maximum of %d "
 
 #: core/Requirement/Filled_excerpt.php:46
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d character in excerpt"
 msgstr "Maximum of %d character in excerpt"
 
 #: core/Requirement/Title_count.php:44
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d character in title"
 msgstr "Maximum of %d character in title"
 
 #: core/Requirement/Filled_excerpt.php:47
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d characters in excerpt"
 msgstr "Maximum of %d characters in excerpt"
 
 #: core/Requirement/Title_count.php:45
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d characters in title"
 msgstr "Maximum of %d characters in title"
 
 #: core/Requirement/External_links.php:46
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d external link in content"
 msgstr "Maximum of %d external link in content"
 
 #: core/Requirement/External_links.php:47
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d external links in content"
 msgstr "Maximum of %d external links in content"
 
 #: core/Requirement/Internal_links.php:46
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d internal link in content"
 msgstr "Maximum of %d internal link in content"
 
 #: core/Requirement/Internal_links.php:47
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d internal links in content"
 msgstr "Maximum of %d internal links in content"
 
@@ -378,12 +374,12 @@ msgid "Maximum of %d tags"
 msgstr "Maximum of %s tags"
 
 #: core/Requirement/Words_count.php:46
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d word in content"
 msgstr "Maximum of %d word in content"
 
 #: core/Requirement/Words_count.php:47
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Maximum of %d words in content"
 msgstr "Maximum of %d words in content"
 
@@ -404,47 +400,47 @@ msgstr "Min"
 
 #: core/Requirement/Taxonomies_count.php:51
 #: core/Requirement/Taxonomies_count.php:52
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d "
 msgstr "Minimum of %d "
 
 #: core/Requirement/Filled_excerpt.php:44
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d character in excerpt"
 msgstr "Minimum of %d character in excerpt"
 
 #: core/Requirement/Title_count.php:42
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d character in title"
 msgstr "Minimum of %d character in title"
 
 #: core/Requirement/Filled_excerpt.php:45
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d characters in excerpt"
 msgstr "Minimum of %d characters in excerpt"
 
 #: core/Requirement/Title_count.php:43
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d characters in title"
 msgstr "Minimum of %d characters in title"
 
 #: core/Requirement/External_links.php:44
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d external link in content"
 msgstr "Minimum of %d external link in content"
 
 #: core/Requirement/External_links.php:45
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d external links in content"
 msgstr "Minimum of %d external links in content"
 
 #: core/Requirement/Internal_links.php:44
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d internal link in content"
 msgstr "Minimum of %d internal link in content"
 
 #: core/Requirement/Internal_links.php:45
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d internal links in content"
 msgstr "Minimum of %d internal links in content"
 
@@ -459,12 +455,12 @@ msgid "Minimum of %d tags"
 msgstr "Minimum of %s tags"
 
 #: core/Requirement/Words_count.php:44
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d word in content"
 msgstr "Minimum of %d word in content"
 
 #: core/Requirement/Words_count.php:45
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Minimum of %d words in content"
 msgstr "Minimum of %d words in content"
 
@@ -495,7 +491,7 @@ msgid "No"
 msgstr "No"
 
 #: modules/checklists/templates/global-checklists.php:165
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "No %s requirements for this post type."
 msgstr "No %s requirements for this post type."
 
@@ -612,7 +608,7 @@ msgid "Prohibited categories"
 msgstr "Prohibited categories"
 
 #: core/Requirement/Prohibited_categories.php:87
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Prohibited categories: %s"
 msgstr "Prohibited categories: %s"
 
@@ -621,7 +617,7 @@ msgid "Prohibited tags"
 msgstr "Prohibited tags"
 
 #: core/Requirement/Prohibited_tags.php:87
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Prohibited tags: %s"
 msgstr "Prohibited tags: %s"
 
@@ -662,7 +658,7 @@ msgid "Required categories"
 msgstr "Required categories"
 
 #: core/Requirement/Required_categories.php:87
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Required categories: %s"
 msgstr "Required categories: %s"
 
@@ -671,7 +667,7 @@ msgid "Required tags"
 msgstr "Required tags"
 
 #: core/Requirement/Required_tags.php:87
-#, fuzzy, php-format
+#, fuzzy,php-format
 msgid "Required tags: %s"
 msgstr "Required tags: %s"
 
@@ -1398,4 +1394,8 @@ msgstr ""
 #: publishpress-checklists.php:154
 #, php-format
 msgid "You're using PublishPress Checklists Free. The Pro version has more features and support. %sUpgrade to Pro%s"
+msgstr ""
+
+#: modules/settings/settings.php:970
+msgid "Post types:"
 msgstr ""
