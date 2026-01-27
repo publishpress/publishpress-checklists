@@ -1,7 +1,7 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-[2.26.0] - 26 January, 2026
+[2.26.0] - 27 January, 2026
 
 - Added: Add promo for taxonomy filter #1074
 - Changed: Extra descriptions on taxonomy filter setting section #1076
