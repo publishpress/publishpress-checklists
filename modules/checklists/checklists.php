@@ -1190,6 +1190,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'required' => __("required", "publishpress-checklists"),
                             'elementorNotice' => __("Checklists tasks are not available in Elementor editors", "publishpress-checklists"),
                             'isElementorEnabled' => ElementorUtils::isElementorEnabled() ? "1" : "0",
+                            'supportedPostTypes' => array_keys($supported_post_types),
                             'customIcons' => array(
                                 'complete' => isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes',
                                 'incomplete' => isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no',
