@@ -654,6 +654,7 @@
       var modalId = 'pp-checklists-rename-modal';
       var overlayId = 'pp-checklists-rename-overlay';
       var $activeWrapper = null;
+      var editorPanelRenameEnabled = !!objectL10n_checklists_global_checklist.editor_panel_rename_enabled;
 
       if ($('#' + modalId).length === 0) {
         var modalTitle = objectL10n_checklists_global_checklist.rename_modal_title || 'Rename task labels';
@@ -671,9 +672,11 @@
             '<h3 class="pp-checklists-rename-modal-title">' + modalTitle + '</h3>' +
             '<label class="pp-checklists-rename-modal-label" for="pp-checklists-rename-admin-input">' + adminFieldLabel + '</label>' +
             '<input id="pp-checklists-rename-admin-input" type="text" class="pp-checklists-rename-modal-input" placeholder="' + adminPlaceholder + '" />' +
-            '<label class="pp-checklists-rename-modal-label" for="pp-checklists-rename-editor-input">' + editorFieldLabel + '</label>' +
-            '<input id="pp-checklists-rename-editor-input" type="text" class="pp-checklists-rename-modal-input" placeholder="' + editorPlaceholder + '" />' +
-            '<p class="pp-checklists-rename-modal-preview"><strong>' + previewLabel + '</strong> <span id="pp-checklists-rename-preview-value"></span></p>' +
+            (editorPanelRenameEnabled
+              ? '<label class="pp-checklists-rename-modal-label" for="pp-checklists-rename-editor-input">' + editorFieldLabel + '</label>' +
+                '<input id="pp-checklists-rename-editor-input" type="text" class="pp-checklists-rename-modal-input" placeholder="' + editorPlaceholder + '" />' +
+                '<p class="pp-checklists-rename-modal-preview"><strong>' + previewLabel + '</strong> <span id="pp-checklists-rename-preview-value"></span></p>'
+              : '') +
             '<div class="pp-checklists-rename-modal-actions">' +
               '<button type="button" class="button button-secondary pp-checklists-rename-cancel">' + cancelLabel + '</button>' +
               '<button type="button" class="button button-primary pp-checklists-rename-save">' + saveLabel + '</button>' +
@@ -732,7 +735,49 @@
         return 'min ' + min + ' max ' + max;
       }
 
+      function getMultipleSuffixFromRow($wrapper) {
+        var $row = $wrapper.closest('tr');
+        var $multipleSelect = $row.find('.pp-checklists-task-params select[multiple]').first();
+
+        if (!$multipleSelect.length) {
+          $multipleSelect = $row.find('select[multiple]').first();
+        }
+
+        if (!$multipleSelect.length) {
+          return '';
+        }
+
+        var selectedValues = $multipleSelect.val();
+        if (!Array.isArray(selectedValues) || selectedValues.length === 0) {
+          return '';
+        }
+
+        var selectedLabels = $multipleSelect.find('option:selected')
+          .map(function () {
+            return $.trim($(this).text());
+          })
+          .get();
+
+        if (selectedLabels.length === 0) {
+          selectedValues.forEach(function (value) {
+            if (value.indexOf('__') !== -1) {
+              selectedLabels.push($.trim(value.split('__')[1] || ''));
+            } else {
+              selectedLabels.push($.trim(value));
+            }
+          });
+        }
+
+        return selectedLabels.filter(function (label) {
+          return label !== '';
+        }).join(', ');
+      }
+
       function updateEditorPreview($wrapper, editorLabel) {
+        if (!editorPanelRenameEnabled) {
+          return;
+        }
+
         var previewDefault = objectL10n_checklists_global_checklist.rename_modal_preview_default || 'Default checklist label will be used.';
         var $previewValue = $('#pp-checklists-rename-preview-value');
 
@@ -749,6 +794,12 @@
         var counterSuffix = getCounterSuffixFromRow($wrapper);
         if (counterSuffix !== '') {
           $previewValue.text(trimmedEditorLabel + ' - ' + counterSuffix);
+          return;
+        }
+
+        var multipleSuffix = getMultipleSuffixFromRow($wrapper);
+        if (multipleSuffix !== '') {
+          $previewValue.text(trimmedEditorLabel + ' - ' + multipleSuffix);
           return;
         }
 
@@ -777,12 +828,16 @@
 
         $activeWrapper = $wrapper;
         $('#pp-checklists-rename-admin-input').attr('placeholder', defaultAdminLabel);
-        $('#pp-checklists-rename-editor-input').attr('placeholder', defaultEditorLabel);
         $('#pp-checklists-rename-admin-input').val(currentAdminLabel);
-        $('#pp-checklists-rename-editor-input').val(currentEditorLabel);
+        if (editorPanelRenameEnabled) {
+          $('#pp-checklists-rename-editor-input').attr('placeholder', defaultEditorLabel);
+          $('#pp-checklists-rename-editor-input').val(currentEditorLabel);
+        }
         $('#' + overlayId).addClass('is-open');
         $('#' + modalId).addClass('is-open').attr('aria-hidden', 'false');
-        updateEditorPreview($wrapper, currentEditorLabel);
+        if (editorPanelRenameEnabled) {
+          updateEditorPreview($wrapper, currentEditorLabel);
+        }
         $('#pp-checklists-rename-admin-input').focus();
       }
 
@@ -797,9 +852,11 @@
         var $editButton = $activeWrapper.find('.pp-checklists-edit-label');
 
         $activeWrapper.find('.pp-checklists-custom-label-input').val(adminLabel);
-        $activeWrapper.find('.pp-checklists-editor-label-input').val(editorLabel);
         $editButton.attr('data-admin-label', adminLabel);
-        $editButton.attr('data-editor-label', editorLabel);
+        if (editorPanelRenameEnabled) {
+          $activeWrapper.find('.pp-checklists-editor-label-input').val(editorLabel);
+          $editButton.attr('data-editor-label', editorLabel);
+        }
         updateLabelPreview($activeWrapper, adminLabel);
 
         closeRenameModal();
@@ -814,6 +871,10 @@
       });
 
       $(document).on('input', '#pp-checklists-rename-editor-input', function () {
+        if (!editorPanelRenameEnabled) {
+          return;
+        }
+
         if (!$activeWrapper || $activeWrapper.length === 0) {
           return;
         }

@@ -83,6 +83,7 @@ if (!class_exists('PPCH_Settings')) {
                     'required_incomplete_color'   => '#ef5350',
                     'recommended_complete_color'  => '#66bb6a',
                     'recommended_incomplete_color' => '#ef5350',
+                    'enable_rename_label_editor_panel' => Base_requirement::VALUE_NO,
                 ],
                 'autoload'             => true,
                 'add_menu'             => true,
@@ -649,6 +650,15 @@ if (!class_exists('PPCH_Settings')) {
                 $new_options['disable_publish_button'] = Base_requirement::VALUE_NO;
             }
 
+            if (!isset($new_options['enable_rename_label_editor_panel'])) {
+                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_NO;
+            }
+
+            $new_options['enable_rename_label_editor_panel'] =
+                Base_requirement::VALUE_YES === $new_options['enable_rename_label_editor_panel']
+                ? Base_requirement::VALUE_YES
+                : Base_requirement::VALUE_NO;
+
             if (!isset($new_options['delete_data_on_uninstall'])) {
                 $new_options['delete_data_on_uninstall'] = 'off';
             }
@@ -919,6 +929,14 @@ if (!class_exists('PPCH_Settings')) {
                 'recommended_incomplete_color',
                 __('Recommended Incomplete Color:', 'publishpress-checklists'),
                 [$this, 'settings_recommended_incomplete_color_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'enable_rename_label_editor_panel',
+                __('Enable rename label in editor panel:', 'publishpress-checklists'),
+                [$this, 'settings_enable_rename_label_editor_panel_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_appearance'
             );
@@ -1400,6 +1418,26 @@ if (!class_exists('PPCH_Settings')) {
 
             echo '<label for="' . esc_attr($id) . '">';
             echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for enabling rename label in editor panel.
+         */
+        public function settings_enable_rename_label_editor_panel_option($args = [])
+        {
+            $id = $this->module->options_group_name . '_enable_rename_label_editor_panel';
+            $value = isset($this->module->options->enable_rename_label_editor_panel)
+                ? $this->module->options->enable_rename_label_editor_panel
+                : Base_requirement::VALUE_NO;
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[enable_rename_label_editor_panel]" '
+                . checked($value, Base_requirement::VALUE_YES, false) . ' />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'Enable custom rename labels in the checklist editor panel.',
+                'publishpress-checklists'
+            );
             echo '</label>';
         }
 
