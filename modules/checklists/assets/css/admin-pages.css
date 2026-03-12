@@ -644,6 +644,70 @@ textarea.pp-checklists-custom-item-title {
   pointer-events: none;
 }
 
+.pp-checklists-rename-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 100000;
+}
+
+.pp-checklists-rename-modal-overlay.is-open {
+  display: block;
+}
+
+.pp-checklists-rename-modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 460px;
+  max-width: calc(100vw - 40px);
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 6px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  z-index: 100001;
+}
+
+.pp-checklists-rename-modal.is-open {
+  display: block;
+}
+
+.pp-checklists-rename-modal-title {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.pp-checklists-rename-modal-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.pp-checklists-rename-modal-input {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.pp-checklists-rename-modal-preview {
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: #50575e;
+}
+
+.pp-checklists-rename-modal-preview strong {
+  font-weight: 600;
+}
+
+.pp-checklists-rename-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
 /* End Custom Label Editing */
 
 /* Fix column widths to prevent overlap on smaller screens */

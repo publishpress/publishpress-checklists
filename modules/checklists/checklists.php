@@ -673,6 +673,42 @@ if (!class_exists('PPCH_Checklists')) {
                             'Please make sure to add a name for all the custom tasks.',
                             'publishpress-checklists'
                         ),
+                        'rename_modal_title' => esc_html__(
+                            'Rename task labels',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_admin_label' => esc_html__(
+                            'Label for WP Admin / backend',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_admin_placeholder' => esc_html__(
+                            'Leave empty to use the default WP Admin label',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_editor_label' => esc_html__(
+                            'Label for Editing screen / frontend',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_editor_placeholder' => esc_html__(
+                            'Leave empty to use the default editing screen label',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_preview_label' => esc_html__(
+                            'Preview in editing screen:',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_preview_default' => esc_html__(
+                            'Default checklist label will be used.',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_save' => esc_html__(
+                            'Save',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_cancel' => esc_html__(
+                            'Cancel',
+                            'publishpress-checklists'
+                        ),
                         'editable_by'       => esc_html__(
                             'Which roles can mark this task as complete?',
                             'publishpress-checklists'

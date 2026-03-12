@@ -161,6 +161,139 @@ class Base_requirement
     }
 
     /**
+     * Get the editor label for this requirement if set.
+     *
+     * @return string
+     */
+    public function get_editor_label()
+    {
+        $option_name = $this->name . '_editor_label';
+
+        if (isset($this->module->options->{$option_name}[$this->post_type])) {
+            return stripslashes($this->module->options->{$option_name}[$this->post_type]);
+        }
+
+        return '';
+    }
+
+    /**
+     * Returns whether this requirement has a custom editor label.
+     *
+     * @return bool
+     */
+    protected function has_editor_label()
+    {
+        return '' !== trim($this->get_editor_label());
+    }
+
+    /**
+     * Returns the label to be shown in editing screens.
+     *
+     * @param string $default_label
+     * @param array  $args
+     *
+     * @return string
+     */
+    protected function get_requirement_display_label($default_label, array $args = [])
+    {
+        $editor_label = trim($this->get_editor_label());
+
+        if ('' === $editor_label) {
+            return $default_label;
+        }
+
+        $is_counter = !empty($args['is_counter']);
+        if (!$is_counter) {
+            return $editor_label;
+        }
+
+        $min = isset($args['min']) ? $args['min'] : null;
+        $max = isset($args['max']) ? $args['max'] : null;
+        $compact_label = $this->get_compact_counter_label($min, $max);
+
+        if ('' === $compact_label) {
+            return $editor_label;
+        }
+
+        return sprintf(
+            /* translators: 1: custom editor label, 2: compact counter requirement (min/max/exact). */
+            __('%1$s - %2$s', 'publishpress-checklists'),
+            $editor_label,
+            $compact_label
+        );
+    }
+
+    /**
+     * Returns compact min/max text for counter requirements.
+     *
+     * @param mixed $min
+     * @param mixed $max
+     *
+     * @return string
+     */
+    protected function get_compact_counter_label($min, $max)
+    {
+        $has_min = '' !== (string)$min && null !== $min;
+        $has_max = '' !== (string)$max && null !== $max;
+
+        if (!$has_min && !$has_max) {
+            return '';
+        }
+
+        $min_value = $has_min ? (int)$min : 0;
+        $max_value = $has_max ? (int)$max : 0;
+
+        if ($has_min && $has_max && $min_value === $max_value) {
+            return sprintf(
+                /* translators: %d: exact required value. */
+                __('exact %d', 'publishpress-checklists'),
+                $min_value
+            );
+        }
+
+        if ($has_min && (!$has_max || $max_value < $min_value)) {
+            return sprintf(
+                /* translators: %d: minimum required value. */
+                __('min %d', 'publishpress-checklists'),
+                $min_value
+            );
+        }
+
+        if (!$has_min && $has_max) {
+            return sprintf(
+                /* translators: %d: maximum allowed value. */
+                __('max %d', 'publishpress-checklists'),
+                $max_value
+            );
+        }
+
+        return sprintf(
+            /* translators: 1: minimum required value, 2: maximum allowed value. */
+            __('min %1$d max %2$d', 'publishpress-checklists'),
+            $min_value,
+            $max_value
+        );
+    }
+
+    /**
+     * Returns the default label shown on editing screens when no editor label is set.
+     *
+     * @return string
+     */
+    protected function get_default_editor_label_for_settings()
+    {
+        if (!empty($this->lang['label'])) {
+            return $this->lang['label'];
+        }
+
+        if (!empty($this->lang['label_settings'])) {
+            return $this->lang['label_settings'];
+        }
+
+        return '';
+    }
+
+    /**
      * Get the HTML for the title setting field.
      *
      * @return string
@@ -169,22 +302,29 @@ class Base_requirement
     {
         $default_label = $this->lang['label_settings'];
         $custom_label = $this->get_custom_label();
+        $editor_label = $this->get_editor_label();
         $has_custom = !empty($custom_label);
         
         $post_type = esc_attr($this->post_type);
-        $option_name = esc_attr($this->name . '_custom_label');
-        $input_name = esc_attr($this->module->options_group_name) . '[' . $option_name . '][' . $post_type . ']';
+        $admin_option_name = esc_attr($this->name . '_custom_label');
+        $admin_input_name = esc_attr($this->module->options_group_name) . '[' . $admin_option_name . '][' . $post_type . ']';
+        $editor_option_name = esc_attr($this->name . '_editor_label');
+        $editor_input_name = esc_attr($this->module->options_group_name) . '[' . $editor_option_name . '][' . $post_type . ']';
         
         $html = '<div class="pp-checklists-title-wrapper">';
         $html .= '<span class="pp-checklists-default-label' . ($has_custom ? ' hidden' : '') . '">' . esc_html($default_label) . '</span>';
         $html .= '<span class="pp-checklists-custom-label' . (!$has_custom ? ' hidden' : '') . '">' . esc_html($custom_label) . '</span>';
         $html .= sprintf(
-            '<input type="text" name="%s" value="%s" placeholder="%s" class="pp-checklists-custom-label-input hidden" />',
-            $input_name,
-            esc_attr($custom_label),
-            esc_attr($default_label)
+            '<input type="hidden" name="%s" value="%s" class="pp-checklists-custom-label-input" />',
+            $admin_input_name,
+            esc_attr($custom_label)
         );
-        $html .= '<a href="#" class="pp-checklists-edit-label" title="' . esc_attr__('Edit label', 'publishpress-checklists') . '">';
+        $html .= sprintf(
+            '<input type="hidden" name="%s" value="%s" class="pp-checklists-editor-label-input" />',
+            $editor_input_name,
+            esc_attr($editor_label)
+        );
+        $html .= '<a href="#" class="pp-checklists-edit-label" title="' . esc_attr__('Edit label', 'publishpress-checklists') . '" data-default-label="' . esc_attr($default_label) . '" data-editor-default-label="' . esc_attr($this->get_default_editor_label_for_settings()) . '" data-admin-label="' . esc_attr($custom_label) . '" data-editor-label="' . esc_attr($editor_label) . '">';
         $html .= '<span class="dashicons dashicons-edit"></span>';
         $html .= '</a>';
         $html .= '</div>';

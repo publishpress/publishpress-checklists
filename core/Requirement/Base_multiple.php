@@ -64,12 +64,13 @@ class Base_multiple extends Base_simple implements Interface_required
         // Register in the requirements list
         $requirements[$this->name] = [
             'status'    => $this->get_current_status($post, $option_value),
-            'label'     => $this->lang['label_settings'],
+            'label'     => $this->get_requirement_display_label($this->lang['label_settings']),
             'value'     => $option_value,
             'rule'      => $rule,
             'type'      => $this->type,
             'is_custom' => false,
             'require_button' => false,
+            'has_editor_label' => $this->has_editor_label(),
         ];
 
         return $requirements;

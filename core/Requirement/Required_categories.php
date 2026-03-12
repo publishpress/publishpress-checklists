@@ -382,7 +382,9 @@ class Required_categories extends Base_multiple
         }
 
         // Register in the requirements list
-        $requirements[$this->name]['label'] = sprintf($this->lang['label'], $required_category_names);
+        $requirements[$this->name]['label'] = $this->get_requirement_display_label(
+            sprintf($this->lang['label'], $required_category_names)
+        );
 
         return $requirements;
     }

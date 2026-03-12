@@ -79,6 +79,14 @@ class Base_time extends Base_requirement implements Interface_required
             );
         }
 
+        // Sanitize editor label
+        $editor_label_key = $this->name . '_editor_label';
+        if (isset($new_options[$editor_label_key][$this->post_type])) {
+            $new_options[$editor_label_key][$this->post_type] = sanitize_text_field(
+                $new_options[$editor_label_key][$this->post_type]
+            );
+        }
+
         return $new_options;
     }
 
@@ -166,11 +174,12 @@ class Base_time extends Base_requirement implements Interface_required
         if ($enabled) {
             $requirements[$this->name] = [
                 'status'    => $this->get_current_status($post, $enabled),
-                'label'     => $this->lang['label'],
+                'label'     => $this->get_requirement_display_label($this->lang['label']),
                 'value'     => $enabled,
                 'rule'      => $rule,
                 'type'      => $this->type,
                 'is_custom' => false,
+                'has_editor_label' => $this->has_editor_label(),
             ];
         }
 
