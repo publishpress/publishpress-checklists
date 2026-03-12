@@ -290,18 +290,23 @@
         function (event, item) {
           var $item = $(item),
             $icon = $item.children('.dashicons'),
-            checked = $icon.hasClass('dashicons-yes');
+            customIcons = ppChecklists.customIcons || {},
+            completeIcon = customIcons.complete || 'dashicons-yes',
+            incompleteIcon = customIcons.incomplete || 'dashicons-no',
+            checked = $icon.hasClass(completeIcon);
 
-          $icon.removeClass('dashicons-no');
+          $icon.removeClass(incompleteIcon);
 
           if (checked) {
-            $icon.removeClass('dashicons-yes');
+            $icon.removeClass(completeIcon);
+            $icon.addClass(incompleteIcon);
             $item.removeClass('status-yes');
             $item.addClass('status-no');
             $item.find('.ppch_item_requirement').val('no');
             wp.hooks.doAction('pp-checklists.requirements-updated', $item);
           } else {
-            $icon.addClass('dashicons-yes');
+            $icon.removeClass(incompleteIcon);
+            $icon.addClass(completeIcon);
             $item.addClass('status-yes');
             $item.removeClass('status-no');
             $item.find('.ppch_item_requirement').val('yes');
