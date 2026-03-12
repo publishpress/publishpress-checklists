@@ -1250,6 +1250,20 @@ if (!class_exists('PPCH_Settings')) {
             }
             $new_options['who_can_ignore_option'] = Base_requirement::VALUE_YES === $new_options['who_can_ignore_option'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
 
+            if (isset($new_options['complete_icon'])) {
+                $new_options['complete_icon'] = sanitize_text_field(trim($new_options['complete_icon']));
+            }
+            if (empty($new_options['complete_icon'])) {
+                $new_options['complete_icon'] = 'dashicons-yes';
+            }
+
+            if (isset($new_options['incomplete_icon'])) {
+                $new_options['incomplete_icon'] = sanitize_text_field(trim($new_options['incomplete_icon']));
+            }
+            if (empty($new_options['incomplete_icon'])) {
+                $new_options['incomplete_icon'] = 'dashicons-no';
+            }
+
             return $new_options;
         }
 

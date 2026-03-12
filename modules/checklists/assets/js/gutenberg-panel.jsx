@@ -355,7 +355,7 @@ class PPChecklistsPanel extends Component {
                                                 {req.is_custom || req.require_button ? (
                                                     <input type="hidden" name={`_PPCH_custom_item[${req.id}]`} value={req.status ? 'yes' : 'no'} />
                                                 ) : null}
-                                                <div className={`status-icon dashicons ${req.is_custom ? (req.status ? 'dashicons-yes' : '') : this.getIconClass(req.rule, req.status)}`}></div>
+                                                <div className={`status-icon dashicons ${this.getIconClass(req.rule, req.status)}`}></div>
                                                 <div className="status-label">
                                                     <span className="req-label" dangerouslySetInnerHTML={{ __html: req.label }} />
                                                     {req.rule === 'block' ? (

@@ -848,8 +848,8 @@ if (!class_exists('PPCH_Checklists')) {
 
                 // Get custom icon settings
                 $settings_options = $legacyPlugin->settings->module->options;
-                $complete_icon = isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes';
-                $incomplete_icon = isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no';
+                $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
+                $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
 
                 wp_localize_script(
                     'pp-checklists-requirements',
@@ -1148,6 +1148,7 @@ if (!class_exists('PPCH_Checklists')) {
 
                 if ($screen->base === 'post' && array_key_exists($screen->post_type, $supported_post_types)) {
                     // Required thing to build Gutenberg Blocks
+
                     wp_enqueue_script(
                         'pp-checklists-requirements-gutenberg',
                         plugins_url('/modules/checklists/assets/js/gutenberg-warning.min.js', PPCH_FILE),
@@ -1179,6 +1180,8 @@ if (!class_exists('PPCH_Checklists')) {
                     );
                     $legacyPlugin = Factory::getLegacyPlugin();
                     $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+                    $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
+                    $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
                     
                     wp_localize_script(
                         'pp-checklists-panel-gutenberg',
@@ -1192,8 +1195,8 @@ if (!class_exists('PPCH_Checklists')) {
                             'isElementorEnabled' => ElementorUtils::isElementorEnabled() ? "1" : "0",
                             'supportedPostTypes' => array_keys($supported_post_types),
                             'customIcons' => array(
-                                'complete' => isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes',
-                                'incomplete' => isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no',
+                                'complete' => $complete_icon,
+                                'incomplete' => $incomplete_icon,
                             ),
                             'customColors' => array(
                                 'complete' => isset($settings_options->complete_color) ? $settings_options->complete_color : '#66bb6a',
