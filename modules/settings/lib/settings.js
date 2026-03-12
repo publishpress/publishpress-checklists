@@ -94,7 +94,14 @@ jQuery(document).ready(function ($) {
     }
 
     var $button = $(this);
-    $button.prop('disabled', true).text('Resetting...');
+    var loadingLabel = (typeof ppchToolsSettings !== 'undefined' && ppchToolsSettings.resetLabelsLoading)
+      ? ppchToolsSettings.resetLabelsLoading
+      : 'Resetting...';
+    var defaultLabel = (typeof ppchToolsSettings !== 'undefined' && ppchToolsSettings.resetLabelsButton)
+      ? ppchToolsSettings.resetLabelsButton
+      : 'Reset All Renamed Labels';
+
+    $button.prop('disabled', true).text(loadingLabel);
 
     $.ajax({
       url: ppchToolsSettings.ajaxUrl,
@@ -108,11 +115,11 @@ jQuery(document).ready(function ($) {
           location.reload();
         } else {
           alert(response.data.message);
-          $button.prop('disabled', false).text('Reset All Custom Labels');
+          $button.prop('disabled', false).text(defaultLabel);
         }
       },
       error: function () {
-        $button.prop('disabled', false).text('Reset All Custom Labels');
+        $button.prop('disabled', false).text(defaultLabel);
       }
     });
   });

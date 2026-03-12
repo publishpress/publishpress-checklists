@@ -120,7 +120,9 @@ class Approved_by extends Base_multiple implements Interface_required
         $user_role_names = implode(', ', $user_role_names);
 
         // Register in the requirements list
-        $requirements[$this->name]['label'] = sprintf($this->lang['label'], $user_role_names);
+        $requirements[$this->name]['label'] = $this->get_requirement_display_label(
+            sprintf($this->lang['label'], $user_role_names)
+        );
         //set custom to false if user role is not permitted to prevent any validation
         $requirements[$this->name]['is_custom'] = $this->isUserRolePermitted();
         $requirements[$this->name]['id'] = 'approved_by';

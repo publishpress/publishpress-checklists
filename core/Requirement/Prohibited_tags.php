@@ -348,7 +348,9 @@ class Prohibited_tags extends Base_multiple
         }
 
         // Register in the requirements list
-        $requirements[$this->name]['label'] = sprintf($this->lang['label'], $blocked_tag_names);
+        $requirements[$this->name]['label'] = $this->get_requirement_display_label(
+            sprintf($this->lang['label'], $blocked_tag_names)
+        );
 
         return $requirements;
     }

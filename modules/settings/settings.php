@@ -149,6 +149,8 @@ if (!class_exists('PPCH_Settings')) {
                         'ajaxUrl' => admin_url('admin-ajax.php'),
                         'resetLabelsNonce' => wp_create_nonce('ppch_reset_custom_labels'),
                         'resetLabelsConfirm' => __('Are you sure you want to reset all renamed checklist items to their default labels? This action cannot be undone.', 'publishpress-checklists'),
+                        'resetLabelsLoading' => __('Resetting...', 'publishpress-checklists'),
+                        'resetLabelsButton' => __('Reset All Renamed Labels', 'publishpress-checklists'),
                     ]);
                 }
             }
@@ -1393,9 +1395,9 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_reset_custom_labels_option($args = [])
         {
             echo '<button type="button" id="ppch-reset-custom-labels" class="button button-secondary">';
-            echo esc_html__('Reset All Custom Labels', 'publishpress-checklists');
+            echo esc_html__('Reset All Renamed Labels', 'publishpress-checklists');
             echo '</button>';
-            echo '<p class="description">' . esc_html__('This will reset all renamed checklist items back to their default labels.', 'publishpress-checklists') . '</p>';
+            echo '<p class="description">' . esc_html__('This will reset all renamed checklist labels for WP Admin and Editing screen back to their default labels.', 'publishpress-checklists') . '</p>';
         }
 
         /**
@@ -1423,10 +1425,10 @@ if (!class_exists('PPCH_Settings')) {
             // Convert to array for easier manipulation
             $options_array = (array) $options;
 
-            // Remove all custom label options (keys ending with _custom_label)
+            // Remove all renamed label options (keys ending with _custom_label or _editor_label)
             $updated = false;
             foreach ($options_array as $key => $value) {
-                if (preg_match('/_custom_label$/', $key)) {
+                if (preg_match('/(_custom_label|_editor_label)$/', $key)) {
                     unset($options_array[$key]);
                     $updated = true;
                 }
@@ -1455,7 +1457,7 @@ if (!class_exists('PPCH_Settings')) {
                 delete_transient('ppch_reset_labels_notice');
                 ?>
                 <div class="notice notice-success is-dismissible">
-                    <p><?php esc_html_e('All custom labels have been reset successfully.', 'publishpress-checklists'); ?></p>
+                    <p><?php esc_html_e('All renamed labels have been reset successfully.', 'publishpress-checklists'); ?></p>
                 </div>
                 <?php
             }

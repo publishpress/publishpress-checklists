@@ -1194,6 +1194,7 @@
         if (typeof obj !== 'undefined') {
           let required_tags = config.value;
           let label = config.label;
+          let hasCustomEditorLabel = !!config.has_editor_label;
           let required_tags_reached =
             required_tags.length > 0
               ? required_tags.filter((value) => {
@@ -1204,10 +1205,14 @@
           let has_required_tags = required_tags_reached.length > 0;
 
           const labelEl = $element.find('.status-label');
-          const current_label_text = label.replace(/:.*/, '');
-          const required_tags_str = required_tags_reached.map((el) => el.split('__')[1]).join(', ');
-          const final_label_text =
-            required_tags_str.length > 0 ? `${current_label_text}: ${required_tags_str} ` : `${current_label_text} `;
+          let final_label_text = label;
+
+          if (!hasCustomEditorLabel) {
+            const current_label_text = label.replace(/:.*/, '');
+            const required_tags_str = required_tags_reached.map((el) => el.split('__')[1]).join(', ');
+            final_label_text =
+              required_tags_str.length > 0 ? `${current_label_text}: ${required_tags_str} ` : `${current_label_text} `;
+          }
 
           // Update the label in the ppChecklists object
           if (typeof ppChecklists !== 'undefined' && ppChecklists.requirements[requirementId]) {
@@ -1261,6 +1266,7 @@
         if (typeof obj !== 'undefined') {
           let prohibited_tags = config.value;
           let label = config.label;
+          let hasCustomEditorLabel = !!config.has_editor_label;
           let prohibited_tags_reached =
             prohibited_tags.length > 0
               ? prohibited_tags.filter((value) => {
@@ -1271,10 +1277,14 @@
           let has_prohibited_tags = prohibited_tags_reached.length > 0;
 
           const labelEl = $element.find('.status-label');
-          const current_label_text = label.replace(/:.*/, '');
-          const prohibited_tags_str = prohibited_tags_reached.map((el) => el.split('__')[1]).join(', ');
-          const final_label_text =
-            prohibited_tags_str.length > 0 ? `${current_label_text}: ${prohibited_tags_str} ` : `${current_label_text} `;
+          let final_label_text = label;
+
+          if (!hasCustomEditorLabel) {
+            const current_label_text = label.replace(/:.*/, '');
+            const prohibited_tags_str = prohibited_tags_reached.map((el) => el.split('__')[1]).join(', ');
+            final_label_text =
+              prohibited_tags_str.length > 0 ? `${current_label_text}: ${prohibited_tags_str} ` : `${current_label_text} `;
+          }
 
           // Update the label in the ppChecklists object
           if (typeof ppChecklists !== 'undefined' && ppChecklists.requirements[requirementId]) {
@@ -1360,6 +1370,7 @@
         if (typeof obj !== 'undefined') {
           let required_categories = config.value;
           let label = config.label;
+          let hasCustomEditorLabel = !!config.has_editor_label;
           let required_categories_reached =
             required_categories.length > 0
               ? required_categories.filter((value) => !obj.includes(Number(value.split('__')[0])))
@@ -1367,12 +1378,16 @@
           let has_required_categories = required_categories_reached.length > 0;
 
           const labelEl = $element.find('.status-label');
-          const current_label_text = label.replace(/:.*/, '');
-          const required_categories_str = required_categories_reached.map((el) => el.split('__')[1]).join(', ');
-          const final_label_text =
-            required_categories_str.length > 0
-              ? `${current_label_text}: ${required_categories_str} `
-              : `${current_label_text} `;
+          let final_label_text = label;
+
+          if (!hasCustomEditorLabel) {
+            const current_label_text = label.replace(/:.*/, '');
+            const required_categories_str = required_categories_reached.map((el) => el.split('__')[1]).join(', ');
+            final_label_text =
+              required_categories_str.length > 0
+                ? `${current_label_text}: ${required_categories_str} `
+                : `${current_label_text} `;
+          }
 
           // Update the label in the ppChecklists object
           if (typeof ppChecklists !== 'undefined' && ppChecklists.requirements[requirementId]) {
@@ -1421,6 +1436,7 @@
         if (typeof obj !== 'undefined') {
           let prohibited_categories = config.value;
           let label = config.label;
+          let hasCustomEditorLabel = !!config.has_editor_label;
           let prohibited_categories_reached =
             prohibited_categories.length > 0
               ? prohibited_categories.filter((value) => obj.includes(Number(value.split('__')[0])))
@@ -1428,12 +1444,16 @@
           let has_prohibited_categories = prohibited_categories_reached.length > 0;
 
           const labelEl = $element.find('.status-label');
-          const current_label_text = label.replace(/:.*/, '');
-          const prohibited_categories_str = prohibited_categories_reached.map((el) => el.split('__')[1]).join(', ');
-          const final_label_text =
-            prohibited_categories_str.length > 0
-              ? `${current_label_text}: ${prohibited_categories_str} `
-              : `${current_label_text} `;
+          let final_label_text = label;
+
+          if (!hasCustomEditorLabel) {
+            const current_label_text = label.replace(/:.*/, '');
+            const prohibited_categories_str = prohibited_categories_reached.map((el) => el.split('__')[1]).join(', ');
+            final_label_text =
+              prohibited_categories_str.length > 0
+                ? `${current_label_text}: ${prohibited_categories_str} `
+                : `${current_label_text} `;
+          }
 
           // Update the label in the ppChecklists object
           if (typeof ppChecklists !== 'undefined' && ppChecklists.requirements[requirementId]) {

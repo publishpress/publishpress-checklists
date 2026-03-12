@@ -198,6 +198,15 @@ class Base_counter extends Base_simple implements Interface_required
             );
         }
 
+        $label = $this->get_requirement_display_label(
+            $label,
+            [
+                'is_counter' => true,
+                'min' => $raw_min_option_value,
+                'max' => $raw_max_option_value,
+            ]
+        );
+
 
         // The rule
         $rule = $this->get_option_rule();
@@ -211,6 +220,7 @@ class Base_counter extends Base_simple implements Interface_required
             'type'      => $this->type,
             'is_custom' => false,
             'extra'     => $this->extra,
+            'has_editor_label' => $this->has_editor_label(),
         ];
 
         return $requirements;
@@ -219,6 +229,79 @@ class Base_counter extends Base_simple implements Interface_required
     protected function setUnitText($unit)
     {
         $this->unitText = $unit;
+    }
+
+    /**
+     * Returns default editing-screen label for settings modal placeholder.
+     *
+     * @return string
+     */
+    protected function get_default_editor_label_for_settings()
+    {
+        $post_type = $this->post_type;
+        $legacy_option_name = 'min_' . $this->name . '_value';
+        $option_name_min = $this->name . '_min';
+        $option_name_max = $this->name . '_max';
+
+        $raw_min_option_value = $this->module->options->{$option_name_min}[$post_type] ?? null;
+        if (($raw_min_option_value === null || $raw_min_option_value === '') && isset($this->module->options->{$legacy_option_name}[$post_type])) {
+            $raw_min_option_value = $this->module->options->{$legacy_option_name}[$post_type];
+        }
+        $raw_max_option_value = $this->module->options->{$option_name_max}[$post_type] ?? null;
+
+        if (($raw_min_option_value === null || $raw_min_option_value === '') &&
+            ($raw_max_option_value === null || $raw_max_option_value === '')) {
+            return isset($this->lang['label']) ? $this->lang['label'] : '';
+        }
+
+        $min_value = ($raw_min_option_value !== null && $raw_min_option_value !== '') ? (int)$raw_min_option_value : 0;
+        $max_value = ($raw_max_option_value !== null && $raw_max_option_value !== '') ? (int)$raw_max_option_value : 0;
+
+        if ($min_value == $max_value) {
+            return sprintf(
+                _n(
+                    $this->lang['label_exact_singular'],
+                    $this->lang['label_exact_plural'],
+                    $min_value,
+                    'publishpress-checklists'
+                ),
+                $min_value
+            );
+        }
+
+        if (!empty($min_value) && ($max_value < $min_value)) {
+            return sprintf(
+                _n(
+                    $this->lang['label_min_singular'],
+                    $this->lang['label_min_plural'],
+                    $min_value,
+                    'publishpress-checklists'
+                ),
+                $min_value
+            );
+        }
+
+        if (!empty($min_value) && ($max_value > $min_value)) {
+            return sprintf(
+                __($this->lang['label_between'], 'publishpress-checklists'),
+                $min_value,
+                $max_value
+            );
+        }
+
+        if (empty($min_value) && ($max_value > $min_value)) {
+            return sprintf(
+                _n(
+                    $this->lang['label_max_singular'],
+                    $this->lang['label_max_plural'],
+                    $max_value,
+                    'publishpress-checklists'
+                ),
+                $max_value
+            );
+        }
+
+        return isset($this->lang['label']) ? $this->lang['label'] : '';
     }
 
     /**
