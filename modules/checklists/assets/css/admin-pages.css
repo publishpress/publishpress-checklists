@@ -337,6 +337,14 @@ textarea.pp-checklists-custom-item-title {
 }
 
 @media only screen and (max-width: 781px) {
+  .pp-checklists-content-wrapper {
+    overflow-x: visible;
+  }
+
+  .pp-checklists-requirements-settings {
+    min-width: 0;
+  }
+
   #pp-checklists-global table th {
     display: none;
   }
@@ -469,10 +477,15 @@ textarea.pp-checklists-custom-item-title {
   padding: 10px;
   margin-top: 0;
   padding-top: 0;
+  overflow-x: auto;
 }
 
 .pp-checklists-content-table .select2-container {
   width: 100% !important;
+}
+
+.pp-checklists-requirements-settings {
+  min-width: 500px;
 }
 
 @media only screen and (max-width: 1270px) {
@@ -503,6 +516,31 @@ textarea.pp-checklists-custom-item-title {
 
   .pp-checklists-tabs-wrapper {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 782px) and (max-width: 1100px) {
+  .pp-checklists-content-wrapper {
+    padding-bottom: 16px;
+  }
+
+  .pp-checklists-requirements-settings th,
+  .pp-checklists-requirements-settings td {
+    white-space: normal;
+  }
+
+  .pp-checklists-requirements-settings th:first-child,
+  .pp-checklists-requirements-settings td:first-child {
+    min-width: 260px;
+  }
+
+  .pp-checklists-requirements-settings th:nth-child(2),
+  .pp-checklists-requirements-settings td:nth-child(2) {
+    min-width: 150px;
+  }
+
+  .pp-checklists-task-params {
+    min-width: 180px;
   }
 }
 
