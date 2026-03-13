@@ -773,6 +773,49 @@
         }).join(', ');
       }
 
+      function formatTimeForPreview(rawTime) {
+        var value = $.trim(rawTime || '');
+        if (value === '' || value.indexOf(':') === -1) {
+          return '';
+        }
+
+        var parts = value.split(':');
+        if (parts.length < 2) {
+          return '';
+        }
+
+        var hours = parseInt(parts[0], 10);
+        var minutes = parseInt(parts[1], 10);
+        if (Number.isNaN(hours) || Number.isNaN(minutes) || hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+          return '';
+        }
+
+        var period = hours >= 12 ? 'PM' : 'AM';
+        var displayHour = hours % 12;
+        if (displayHour === 0) {
+          displayHour = 12;
+        }
+
+        var displayMinutes = minutes < 10 ? '0' + minutes : String(minutes);
+
+        return displayHour + ':' + displayMinutes + ' ' + period;
+      }
+
+      function getTimeSuffixFromRow($wrapper) {
+        var $row = $wrapper.closest('tr');
+        var $timeInput = $row.find('.pp-checklists-task-params input[type="time"]').first();
+
+        if (!$timeInput.length) {
+          $timeInput = $row.find('input[type="time"]').first();
+        }
+
+        if (!$timeInput.length) {
+          return '';
+        }
+
+        return formatTimeForPreview($timeInput.val());
+      }
+
       function updateEditorPreview($wrapper, editorLabel) {
         if (!editorPanelRenameEnabled) {
           return;
@@ -800,6 +843,16 @@
         var multipleSuffix = getMultipleSuffixFromRow($wrapper);
         if (multipleSuffix !== '') {
           $previewValue.text(trimmedEditorLabel + ' - ' + multipleSuffix);
+          return;
+        }
+
+        var timeSuffix = getTimeSuffixFromRow($wrapper);
+        if (timeSuffix !== '') {
+          if (trimmedEditorLabel.indexOf('%time%') !== -1) {
+            $previewValue.text(trimmedEditorLabel.replace(/%time%/g, timeSuffix));
+          } else {
+            $previewValue.text(trimmedEditorLabel + ' - ' + timeSuffix);
+          }
           return;
         }
 
