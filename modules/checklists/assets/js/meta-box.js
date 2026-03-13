@@ -1286,7 +1286,7 @@
 
           if (!hasCustomEditorLabel) {
             const current_label_text = label.replace(/:.*/, '');
-            const prohibited_tags_str = prohibited_tags_reached.map((el) => el.split('__')[1]).join(', ');
+            const prohibited_tags_str = prohibited_tags.map((el) => el.split('__')[1]).join(', ');
             final_label_text =
               prohibited_tags_str.length > 0 ? `${current_label_text}: ${prohibited_tags_str} ` : `${current_label_text} `;
           }
@@ -1453,7 +1453,7 @@
 
           if (!hasCustomEditorLabel) {
             const current_label_text = label.replace(/:.*/, '');
-            const prohibited_categories_str = prohibited_categories_reached.map((el) => el.split('__')[1]).join(', ');
+            const prohibited_categories_str = prohibited_categories.map((el) => el.split('__')[1]).join(', ');
             final_label_text =
               prohibited_categories_str.length > 0
                 ? `${current_label_text}: ${prohibited_categories_str} `

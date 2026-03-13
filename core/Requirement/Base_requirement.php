@@ -9,6 +9,7 @@
 
 namespace PublishPress\Checklists\Core\Requirement;
 
+use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Plugin;
 
 defined('ABSPATH') or die('No direct script access allowed.');
@@ -167,6 +168,10 @@ class Base_requirement
      */
     public function get_editor_label()
     {
+        if (!$this->is_editor_panel_label_feature_enabled()) {
+            return '';
+        }
+
         $option_name = $this->name . '_editor_label';
 
         if (isset($this->module->options->{$option_name}[$this->post_type])) {
@@ -174,6 +179,20 @@ class Base_requirement
         }
 
         return '';
+    }
+
+    /**
+     * Returns whether editor panel rename labels are enabled in settings.
+     *
+     * @return bool
+     */
+    protected function is_editor_panel_label_feature_enabled()
+    {
+        $legacy_plugin = Factory::getLegacyPlugin();
+        $settings_options = isset($legacy_plugin->settings->module->options) ? $legacy_plugin->settings->module->options : null;
+        $option_value = isset($settings_options->enable_rename_label_editor_panel) ? $settings_options->enable_rename_label_editor_panel : self::VALUE_NO;
+
+        return self::VALUE_YES === $option_value;
     }
 
     /**

@@ -654,6 +654,11 @@ if (!class_exists('PPCH_Checklists')) {
                     Plugin::RULE_WARNING,
                     Plugin::RULE_BLOCK,
                 );
+                $legacyPlugin = Factory::getLegacyPlugin();
+                $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+                $editor_panel_rename_enabled = isset($settings_options->enable_rename_label_editor_panel)
+                    ? $settings_options->enable_rename_label_editor_panel
+                    : Base_requirement::VALUE_NO;
 
                 wp_localize_script(
                     'pp-checklists-global-checklists',
@@ -663,6 +668,7 @@ if (!class_exists('PPCH_Checklists')) {
                         'roles'             => $roles,
                         'first_post_type'   => current($postTypes),
                         'required_rules'    => $required_rules,
+                        'editor_panel_rename_enabled' => Base_requirement::VALUE_YES === $editor_panel_rename_enabled,
                         'ajaxurl'           => admin_url('admin-ajax.php'),
                         'nonce'             => wp_create_nonce('pp-checklists-rules'),
                         'submit_error'      => esc_html__(
