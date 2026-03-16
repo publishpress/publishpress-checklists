@@ -779,7 +779,7 @@ if (!class_exists('PPCH_Settings')) {
 
             add_settings_field(
                 'show_who_can_ignore',
-                __('Enable Who Can Ignore:', 'publishpress-checklists'),
+                __('Enable User Roles Filter:', 'publishpress-checklists'),
                 [$this, 'settings_who_can_ignore_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_general'
@@ -1148,7 +1148,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[who_can_ignore_option]" '
                 . checked($value, 'yes', false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This will show "Who can ignore" options.',
+                'This will show "Exclude User Roles" options.',
                 'publishpress-checklists'
             );
             echo '</label>';
