@@ -60,7 +60,6 @@ class Plugin
         Factory::getLegacyPlugin();
 
         add_filter('plugin_row_meta', [$this, 'add_plugin_meta'], 10, 2);
-        add_filter('all_plugins', [$this, 'rename_free_plugin_on_plugins_screen']);
 
         add_filter( 'plugin_action_links_' . plugin_basename(PPCH_FILE), [$this, 'add_action_links']);
     }
@@ -117,20 +116,4 @@ class Plugin
         return $links;
     }
 
-    public function rename_free_plugin_on_plugins_screen($plugins)
-    {
-        global $pagenow;
-
-        if ('plugins.php' !== $pagenow) {
-            return $plugins;
-        }
-
-        $pluginBasename = plugin_basename(PPCH_FILE);
-
-        if (isset($plugins[$pluginBasename])) {
-            $plugins[$pluginBasename]['Name'] = 'PublishPress Checklists Free';
-        }
-
-        return $plugins;
-    }
 }
