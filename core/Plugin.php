@@ -69,15 +69,11 @@ class Plugin
      */
     public function loadTextDomain()
     {
-        $domain = 'publishpress-checklists';
-        $locale = determine_locale();
-        $mofile = dirname(__DIR__) . '/languages/' . $domain . '-' . $locale . '.mo';
-
-        // Unload any previously loaded translations (e.g., from wp-content/languages/plugins/)
-        unload_textdomain($domain);
-
-        // Load from plugin's bundled languages folder
-        load_textdomain($domain, $mofile);
+        load_plugin_textdomain(
+            'publishpress-checklists',
+            false,
+            dirname(plugin_basename(PPCH_FILE)) . '/languages/'
+        );
     }
 
     public function deactivateLegacyPlugin()
