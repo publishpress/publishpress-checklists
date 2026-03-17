@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: PublishPress Checklists
+ * Plugin Name: PublishPress Checklists Free
  * Plugin URI:  https://publishpress.com/
  * Description: With PublishPress Checklists, you can choose publishing requirements for your content.
  * Author:      PublishPress

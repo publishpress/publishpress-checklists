@@ -115,4 +115,5 @@ class Plugin
 
         return $links;
     }
+
 }
