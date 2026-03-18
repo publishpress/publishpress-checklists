@@ -18,6 +18,7 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
 #: publishpress-checklists.php
+#: publishpress-checklists.php
 #: core/Legacy/Module.php:286, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists"

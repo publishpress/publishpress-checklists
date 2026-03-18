@@ -12,8 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 14:26+0000\n"
+"POT-Creation-Date: 2026-01-30T13:36:06+00:00\n"
+"PO-Revision-Date: 2026-03-18 17:30+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
@@ -876,19 +876,19 @@ msgstr "Задачи чек-листов недоступны в редакто�
 
 #: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
-msgstr "Оценка заголовка SEO All in One"
+msgstr "Оценка заголовка All in One SEO"
 
 #: modules/checklists/pro-requirements.php:31
 msgid "All in One SEO Score"
-msgstr "Оценка SEO All in One"
+msgstr "Общий балл SEO All in One"
 
 #: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr "Высота главного изображения"
+msgstr "Высота изображения"
 
 #: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr "Ширина главного изображения"
+msgstr "Ширина изображения"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "Heading in hierarchy"
@@ -912,7 +912,7 @@ msgstr "Количество видео в контенте"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr "Одобрено ролью"
+msgstr "Одобрено по роли"
 
 #: modules/checklists/pro-requirements.php:110
 msgid "Approved by user"
@@ -920,7 +920,7 @@ msgstr "Одобрено пользователем"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "Избегайте тегов заголовков в контенте"
+msgstr "Избегайте заголовочных тегов в контенте"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Published at exact time"
@@ -936,19 +936,19 @@ msgstr "Оценка SEO Rank Math"
 
 #: modules/checklists/pro-requirements.php:149
 msgid "Only one H1 tag in content"
-msgstr "Только один тег H1 в контенте"
+msgstr "Только один H1 тег в контенте"
 
 #: modules/checklists/pro-requirements.php:156
 msgid "Tables have a header row"
-msgstr "Таблицы имеют строку заголовка"
+msgstr "У таблиц есть строка заголовка"
 
 #: modules/checklists/pro-requirements.php:163
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Отметьте поле \"Разрешить резервные заказы?\""
+msgstr "Установите флажок \"Разрешить предзаказы?\""
 
 #: modules/checklists/pro-requirements.php:171
 msgid "Select some products for \"Cross-sells\""
-msgstr "Выберите некоторые товары для \"Дополнительных продаж\""
+msgstr "Выберите некоторые продукты для \"Дополнительных продаж\""
 
 #: modules/checklists/pro-requirements.php:179
 msgid "Discount for the \"Sale price\""
@@ -956,15 +956,15 @@ msgstr "Скидка на \"Цена со скидкой\""
 
 #: modules/checklists/pro-requirements.php:187
 msgid "Check the \"Downloadable\" box"
-msgstr "Установите флажок \"Загружаемый\""
+msgstr "Отметьте поле \"Загружаемый\""
 
 #: modules/checklists/pro-requirements.php:195
 msgid "Product image"
-msgstr "Изображение товара"
+msgstr "Изображение продукта"
 
 #: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Manage stock?\" box"
-msgstr "Установите флажок \"Управлять запасами?\""
+msgstr "Отметьте поле \"Управлять запасами?\""
 
 #: modules/checklists/pro-requirements.php:211
 msgid "Enter a \"Regular price\""
@@ -976,7 +976,7 @@ msgstr "Введите \"Цена со скидкой\""
 
 #: modules/checklists/pro-requirements.php:227
 msgid "Schedule the \"Sale price\""
-msgstr "Запланировать \"Цену со скидкой\""
+msgstr "Запланируйте \"Цена со скидкой\""
 
 #: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"SKU\""
@@ -984,15 +984,15 @@ msgstr "Введите \"SKU\""
 
 #: modules/checklists/pro-requirements.php:243
 msgid "Check the \"Sold individually\" box"
-msgstr "Установите флажок \"Продается по отдельности\""
+msgstr "Отметьте поле \"Продается по отдельности\""
 
 #: modules/checklists/pro-requirements.php:251
 msgid "Select some products for \"Upsells\""
-msgstr "Выберите некоторые товары для \"Дополнительных продаж\""
+msgstr "Выберите некоторые продукты для \"Дополнительных продаж\""
 
 #: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Virtual\" box"
-msgstr "Установите флажок \"Виртуальный\""
+msgstr "Отметьте поле \"Виртуальный\""
 
 #: modules/checklists/pro-requirements.php:290
 #, php-format
@@ -1108,8 +1108,8 @@ msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
-"Вы уверены, что хотите сбросить все переименованные элементы списка на их "
-"стандартные названия? Это действие нельзя отменить."
+"Вы уверены, что хотите сбросить все переименованные элементы списка до их "
+"стандартных меток? Это действие нельзя отменить."
 
 #: modules/settings/settings.php:314
 msgid "Features"
@@ -1178,27 +1178,27 @@ msgstr "Отключить кнопку \"Опубликовать\":"
 
 #: modules/settings/settings.php:878
 msgid "Complete Icon:"
-msgstr "Иконка завершения:"
+msgstr "Значок завершено:"
 
 #: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
-msgstr "Иконка незавершенности:"
+msgstr "Значок незавершено:"
 
 #: modules/settings/settings.php:894
 msgid "Required Complete Color:"
-msgstr "Цвет завершенной обязательной:"
+msgstr "Цвет обязательного завершения:"
 
 #: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
-msgstr "Цвет незавершенной обязательной:"
+msgstr "Цвет обязательного незавершения:"
 
 #: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
-msgstr "Цвет рекомендуемой завершенной:"
+msgstr "Цвет рекомендуемого завершения:"
 
 #: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
-msgstr "Цвет рекомендуемой незавершенной:"
+msgstr "Рекомендуемый незавершенный цвет:"
 
 #: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
@@ -1206,11 +1206,11 @@ msgstr "Ключ API OpenAI:"
 
 #: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
-msgstr "Сбросить переименованный список:"
+msgstr "Сбросить переименованный чек-лист:"
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
-msgstr "Типы постов:"
+msgstr "Типы записей:"
 
 #: modules/settings/settings.php:1003
 msgid ""
@@ -1222,9 +1222,7 @@ msgstr ""
 
 #: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr ""
-"Это позволяет пользователям дублировать существующие задачи в контрольном "
-"списке."
+msgstr "Это позволяет пользователям дублировать существующие задачи чек-листа."
 
 #: modules/settings/settings.php:1046
 msgid ""
@@ -1239,8 +1237,8 @@ msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
-"Это позволяет отключать задачи для публикаций с конкретными терминами "
-"таксономии. Перейдите на вкладку \"Типы публикаций\", чтобы выбрать термины."
+"Это позволяет отключать задачи для записей с определенными терминами "
+"таксономии. Перейдите на вкладку \"Типы записей\", чтобы выбрать термины."
 
 #: modules/settings/settings.php:1089
 msgid ""
@@ -1318,7 +1316,7 @@ msgstr "Инструменты"
 
 #: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr "Введите имя класса Dashicons (например, dashicons-yes, dashicons-saved)."
+msgstr "Введите имя класса Dashicons (например, dashicons-yes, dashicons-saved). "
 
 #: modules/settings/settings.php:1319
 #: modules/settings/settings.php:1334
@@ -1327,7 +1325,7 @@ msgstr "Просмотреть Dashicons"
 
 #: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr "Введите имя класса Dashicons (например, dashicons-no, dashicons-dismiss)."
+msgstr "Введите имя класса Dashicons (например, dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
@@ -1335,9 +1333,7 @@ msgstr "Сбросить все пользовательские метки"
 
 #: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
-msgstr ""
-"Это сбросит все переименованные элементы контрольного списка к их меткам по "
-"умолчанию."
+msgstr "Это сбросит все переименованные элементы чек-листа к их меткам по умолчанию."
 
 #: modules/settings/settings.php:1408
 msgid "Security check failed."
@@ -1349,7 +1345,7 @@ msgstr "У вас нет разрешения на выполнение этог
 
 #: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
-msgstr "Все пользовательские метки успешно сброшены."
+msgstr "Все пользовательские метки были успешно сброшены."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40

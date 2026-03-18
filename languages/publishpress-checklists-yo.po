@@ -12,11 +12,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 14:26+0000\n"
+"POT-Creation-Date: 2026-01-30T13:36:06+00:00\n"
+"PO-Revision-Date: 2026-03-18 17:30+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Language: yo\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -30,6 +29,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: publishpress-checklists.php
 #: core/Legacy/Module.php:286, fuzzy
@@ -415,7 +415,7 @@ msgstr "Aṣiṣe kan ṣẹlẹ."
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
-msgstr "Aṣiṣe ìmúdájú. Jọwọ tun ṣe eekanna yii ki o si gbiyanju lẹẹkansi."
+msgstr "Aṣiṣe ìmúlẹ. Jọwọ tún ìwé yìí ṣe àtúnṣe kí o sì tún gbìmọ̀ lẹ́ẹ̀kan síi."
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
@@ -869,75 +869,75 @@ msgstr "Awọn iṣẹ atokọ ko si ni awọn olootu Elementor"
 
 #: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
-msgstr "Gbogbo ninu Ọkan SEO Akọle Iye"
+msgstr "Gbogbo nínú Àkọsílẹ SEO Ìtọ́ka"
 
 #: modules/checklists/pro-requirements.php:31
 msgid "All in One SEO Score"
-msgstr "Gbogbo ninu Ọkan SEO Iye"
+msgstr "Gbogbo nínú Àkọsílẹ SEO"
 
 #: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr "Giga aworan ti a yan"
+msgstr "Giga aworan to wa ninu àfihàn"
 
 #: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr "Iwọn aworan ti a yan"
+msgstr "Iwọn aworan to wa ninu àfihàn"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "Heading in hierarchy"
-msgstr "Akọle ninu ilana"
+msgstr "Àkọsílẹ nínú ìtòsọ́tọ̀"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
-msgstr "Iye awọn aworan ninu akoonu"
+msgstr "Iye awọn aworan nínú akoonu"
 
 #: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
-msgstr "Iye awọn ohun kikọ ninu awọn akọle aworan"
+msgstr "Iye awọn ohun kikọ nínú akọsilẹ aworan"
 
 #: modules/checklists/pro-requirements.php:85
 msgid "Number of audio in content"
-msgstr "Iye awọn ohun afetigbọ ninu akoonu"
+msgstr "Iye awọn ohun èlò nínú akoonu"
 
 #: modules/checklists/pro-requirements.php:94
 msgid "Number of video in content"
-msgstr "Iye awọn fidio ninu akoonu"
+msgstr "Iye awọn fidio nínú akoonu"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr "Fọwọsi nipasẹ ipa"
+msgstr "A fọwọsi nipasẹ ipa"
 
 #: modules/checklists/pro-requirements.php:110
 msgid "Approved by user"
-msgstr "Fọwọsi nipasẹ olumulo"
+msgstr "A fọwọsi nipasẹ olumulo"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "Yago fun awọn aami akọle ninu akoonu"
+msgstr "Yago fun awọn aami akọsori nínú akoonu"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Published at exact time"
-msgstr "Ti gbejade ni akoko gangan"
+msgstr "Ti wa ni tẹjade ni akoko gangan"
 
 #: modules/checklists/pro-requirements.php:132
 msgid "Publish time should be in the future"
-msgstr "Akoko titẹjade yẹ ki o wa ni ọjọ iwaju"
+msgstr "Akoko ikede yẹ ki o wa ninu ọjọ iwaju"
 
 #: modules/checklists/pro-requirements.php:140
 msgid "Rank Math SEO Score"
-msgstr "Iye Rank Math SEO"
+msgstr "Iwọn SEO Rank Math"
 
 #: modules/checklists/pro-requirements.php:149
 msgid "Only one H1 tag in content"
-msgstr "Nikan tag H1 kan ninu akoonu"
+msgstr "Kàn H1 kan ṣoṣo nínú akoonu"
 
 #: modules/checklists/pro-requirements.php:156
 msgid "Tables have a header row"
-msgstr "Awọn tabili ni ila akọle"
+msgstr "Àwọn tabili ni kópa àkọsílẹ"
 
 #: modules/checklists/pro-requirements.php:163
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Ṣayẹwo apoti \"Ṣe afihan awọn aṣẹ pada?\""
+msgstr "Ṣayẹwo apoti \"Ṣe iwọ yoo gba awọn aṣẹ pada?\""
 
 #: modules/checklists/pro-requirements.php:171
 msgid "Select some products for \"Cross-sells\""
@@ -945,7 +945,7 @@ msgstr "Yan diẹ ninu awọn ọja fun \"Cross-sells\""
 
 #: modules/checklists/pro-requirements.php:179
 msgid "Discount for the \"Sale price\""
-msgstr "Iye owo idasilẹ fun \"Iye owo tita\""
+msgstr "Idinku fun \"Iye tita\""
 
 #: modules/checklists/pro-requirements.php:187
 msgid "Check the \"Downloadable\" box"
@@ -961,23 +961,23 @@ msgstr "Ṣayẹwo apoti \"Ṣakoso iṣura?\""
 
 #: modules/checklists/pro-requirements.php:211
 msgid "Enter a \"Regular price\""
-msgstr "Tẹ nọmba \"Iye owo deede\""
+msgstr "Tẹ ọrọ \"Iye deede\""
 
 #: modules/checklists/pro-requirements.php:219
 msgid "Enter a \"Sale price\""
-msgstr "Tẹ nọmba \"Iye owo tita\""
+msgstr "Tẹ ọrọ \"Iye tita\""
 
 #: modules/checklists/pro-requirements.php:227
 msgid "Schedule the \"Sale price\""
-msgstr "Ṣeto \"Iye owo tita\""
+msgstr "Ṣeto \"Iye tita\""
 
 #: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"SKU\""
-msgstr "Tẹ nọmba \"SKU\""
+msgstr "Tẹ ọrọ \"SKU\""
 
 #: modules/checklists/pro-requirements.php:243
 msgid "Check the \"Sold individually\" box"
-msgstr "Ṣayẹwo apoti \"Ta ni ẹyọkan\""
+msgstr "Ṣayẹwo apoti \"Ta ni kọọkan\""
 
 #: modules/checklists/pro-requirements.php:251
 msgid "Select some products for \"Upsells\""
@@ -1085,7 +1085,7 @@ msgstr "Ìmúṣẹ"
 
 #: modules/permissions/permissions.php:107
 msgid "Exclude User Roles"
-msgstr "Yọ awọn ipa olumulo"
+msgstr "Yọkuro Awọn ipa olumulo"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"
@@ -1101,8 +1101,8 @@ msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
-"Ṣe o dajudaju pe o fẹ lati tun gbogbo awọn ohun iṣayẹwo ti a tun orukọ pada "
-"si awọn aami aiyipada wọn? Iṣe yii ko le ṣe atunṣe."
+"Ṣe o da igbẹkẹle pe o fẹ lati tun gbogbo awọn nkan atokọ ti a tun orukọ "
+"silẹ si awọn aami aiyipada wọn? Iṣe yii ko le ṣe atunṣe."
 
 #: modules/settings/settings.php:314
 msgid "Features"
@@ -1155,7 +1155,7 @@ msgstr "Fi kọlámu atokọ àṣẹ hàn nínú àkópọ àṣẹ:"
 
 #: modules/settings/settings.php:825
 msgid "Enable Taxonomy Filter:"
-msgstr "Mu Àyípadà Iṣàkóso ṣiṣẹ:"
+msgstr "Mú Fílítà Taxonomy ṣiṣẹ:"
 
 #: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
@@ -1171,27 +1171,27 @@ msgstr "Dákẹ́ \"Ṣe àtúnṣe\" bọtini:"
 
 #: modules/settings/settings.php:878
 msgid "Complete Icon:"
-msgstr "Aami K_completion:"
+msgstr "Aami Pipe:"
 
 #: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
-msgstr "Aami K_incomplete:"
+msgstr "Aami Aisi Pipe:"
 
 #: modules/settings/settings.php:894
 msgid "Required Complete Color:"
-msgstr "Awọ K_required K_completion:"
+msgstr "Ẹ̀dá Pipe ti a beere:"
 
 #: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
-msgstr "Awọ K_required K_incomplete:"
+msgstr "Ẹ̀dá Aisi Pipe ti a beere:"
 
 #: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
-msgstr "Awọ K_recommended K_completion:"
+msgstr "Ẹ̀dá Pipe ti a ṣe iṣeduro:"
 
 #: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
-msgstr "Awọ K_recommended K_incomplete:"
+msgstr "Àwọ̀ tí a ṣàkóso tí kò pé:"
 
 #: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
@@ -1199,11 +1199,11 @@ msgstr "Bọtini API OpenAI:"
 
 #: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
-msgstr "Tun awọn iṣayẹwo ti a tun orukọ:"
+msgstr "Tun orúkọ àtòkọ náà ṣe:"
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
-msgstr "Iru ifiweranṣẹ:"
+msgstr "Iru ìpò:"
 
 #: modules/settings/settings.php:1003
 msgid ""
@@ -1215,7 +1215,7 @@ msgstr ""
 
 #: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr "Eyi n jẹ ki awọn olumulo ṣe ẹda awọn iṣẹ atokọ ti o wa tẹlẹ."
+msgstr "Èyí gba àwọn olumulo laaye láti da àwọn iṣẹ́ àtòkọ tí ó wà lọ́wọ́ pọ̀."
 
 #: modules/settings/settings.php:1046
 msgid ""
@@ -1230,8 +1230,8 @@ msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
-"Eyi gba awọn iṣẹ lati di alaiṣiṣẹ fun awọn ifiweranṣẹ pẹlu awọn ọrọ iṣiro "
-"pataki. Lọ si taabu \"Iru Ifiweranṣẹ\" lati yan awọn ọrọ."
+"Èyí gba àwọn iṣẹ́ laaye láti jẹ́ kó ma ṣiṣẹ́ fún àwọn ìpò pẹ̀lú àwọn ọrọ̀ "
+"taxonimy pàtó. Lọ sí taabu \"Iru Ìpò\" láti yan àwọn ọrọ̀ náà."
 
 #: modules/settings/settings.php:1089
 msgid ""
@@ -1291,7 +1291,7 @@ msgstr "Awọn aṣayan Ifiweranṣẹ"
 
 #: modules/settings/settings.php:1269
 msgid "Appearance"
-msgstr "Iwa"
+msgstr "Ímúrasílẹ̀"
 
 #: modules/settings/settings.php:1270
 msgid "Integration"
@@ -1303,7 +1303,7 @@ msgstr "Awọn irinṣẹ"
 
 #: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr "Tẹ orukọ kilasi Dashicons kan (e.g., dashicons-yes, dashicons-saved). "
+msgstr "Tẹ orúkọ kilasi Dashicons kan (àpẹẹrẹ, dashicons-yes, dashicons-saved). "
 
 #: modules/settings/settings.php:1319
 #: modules/settings/settings.php:1334
@@ -1312,29 +1312,29 @@ msgstr "Wo Dashicons"
 
 #: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr "Tẹ orukọ kilasi Dashicons kan (e.g., dashicons-no, dashicons-dismiss). "
+msgstr "Tẹ orúkọ kilasi Dashicons kan (àpẹẹrẹ, dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
-msgstr "Tun gbogbo awọn afi aṣa ṣe"
+msgstr "Tun gbogbo Àkọlé Àdáni ṣe"
 
 #: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr ""
-"Eyi yoo tun gbogbo awọn ohun atokọ ti a pe ni orukọ pada si awọn afi "
-"aiyipada wọn."
+"Èyí yóò tún gbogbo ohun àtòkọ tí a ti yí orúkọ wọn padà sí àkọlé àtọkànwá "
+"wọn."
 
 #: modules/settings/settings.php:1408
 msgid "Security check failed."
-msgstr "Ayẹwo aabo kuna."
+msgstr "Ìdánwò ààbò kọ́ ṣẹ́gun."
 
 #: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
-msgstr "Iwọ ko ni igbanilaaye lati ṣe iṣe yii."
+msgstr "Ìwọ kò ní ìjẹ́wọ́ láti ṣe ìṣe yìí."
 
 #: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
-msgstr "Gbogbo awọn afi aṣa ti tunṣe ni aṣeyọri."
+msgstr "Gbogbo àkọlé àdáni ti túnṣe ni aṣeyọrí."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40

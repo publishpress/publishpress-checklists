@@ -12,11 +12,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 14:26+0000\n"
+"POT-Creation-Date: 2026-01-30T13:36:06+00:00\n"
+"PO-Revision-Date: 2026-03-18 17:28+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Language: ja\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -415,7 +414,7 @@ msgstr "エラーが発生しました。"
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
-msgstr "検証エラーです。このページを再読み込みして、もう一度お試しください。"
+msgstr "バリデーションエラーです。このページを再読み込みしてもう一度お試しください。"
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
@@ -887,31 +886,31 @@ msgstr "階層内の見出し"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
-msgstr "コンテンツ内の画像数"
+msgstr "コンテンツ内の画像の数"
 
 #: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
-msgstr "画像キャプションの文字数"
+msgstr "画像キャプション内の文字数"
 
 #: modules/checklists/pro-requirements.php:85
 msgid "Number of audio in content"
-msgstr "コンテンツ内の音声数"
+msgstr "コンテンツ内の音声の数"
 
 #: modules/checklists/pro-requirements.php:94
 msgid "Number of video in content"
-msgstr "コンテンツ内の動画数"
+msgstr "コンテンツ内の動画の数"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr "役割によって承認済み"
+msgstr "役割によって承認されました"
 
 #: modules/checklists/pro-requirements.php:110
 msgid "Approved by user"
-msgstr "ユーザーによって承認済み"
+msgstr "ユーザーによって承認されました"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "コンテンツ内で見出しタグを避ける"
+msgstr "コンテンツ内での見出しタグの使用を避ける"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Published at exact time"
@@ -919,7 +918,7 @@ msgstr "正確な時間に公開"
 
 #: modules/checklists/pro-requirements.php:132
 msgid "Publish time should be in the future"
-msgstr "公開時間は未来でなければなりません"
+msgstr "公開時間は未来である必要があります"
 
 #: modules/checklists/pro-requirements.php:140
 msgid "Rank Math SEO Score"
@@ -927,27 +926,27 @@ msgstr "Rank Math SEOスコア"
 
 #: modules/checklists/pro-requirements.php:149
 msgid "Only one H1 tag in content"
-msgstr "コンテンツ内にH1タグは1つだけ"
+msgstr "コンテンツ内にH1タグは1つのみ"
 
 #: modules/checklists/pro-requirements.php:156
 msgid "Tables have a header row"
-msgstr "テーブルにヘッダー行があります"
+msgstr "テーブルにはヘッダー行があります"
 
 #: modules/checklists/pro-requirements.php:163
 msgid "Check the \"Allow backorders?\" box"
-msgstr "「バックオーダーを許可しますか？」ボックスを確認してください"
+msgstr "「バックオーダーを許可しますか？」ボックスをチェック"
 
 #: modules/checklists/pro-requirements.php:171
 msgid "Select some products for \"Cross-sells\""
-msgstr "「クロスセル」のためにいくつかの製品を選択してください"
+msgstr "\"クロスセル\"のためのいくつかの製品を選択してください"
 
 #: modules/checklists/pro-requirements.php:179
 msgid "Discount for the \"Sale price\""
-msgstr "「販売価格」の割引"
+msgstr "\"セール価格\"の割引"
 
 #: modules/checklists/pro-requirements.php:187
 msgid "Check the \"Downloadable\" box"
-msgstr "「ダウンロード可能」ボックスにチェックを入れてください"
+msgstr "\"ダウンロード可能\"ボックスをチェックしてください"
 
 #: modules/checklists/pro-requirements.php:195
 msgid "Product image"
@@ -955,35 +954,35 @@ msgstr "製品画像"
 
 #: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Manage stock?\" box"
-msgstr "「在庫を管理しますか？」ボックスにチェックを入れてください"
+msgstr "\"在庫管理しますか？\"ボックスをチェックしてください"
 
 #: modules/checklists/pro-requirements.php:211
 msgid "Enter a \"Regular price\""
-msgstr "「通常価格」を入力してください"
+msgstr "\"通常価格\"を入力してください"
 
 #: modules/checklists/pro-requirements.php:219
 msgid "Enter a \"Sale price\""
-msgstr "「販売価格」を入力してください"
+msgstr "\"セール価格\"を入力してください"
 
 #: modules/checklists/pro-requirements.php:227
 msgid "Schedule the \"Sale price\""
-msgstr "「販売価格」をスケジュールしてください"
+msgstr "\"セール価格\"をスケジュールしてください"
 
 #: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"SKU\""
-msgstr "「SKU」を入力してください"
+msgstr "\"SKU\"を入力してください"
 
 #: modules/checklists/pro-requirements.php:243
 msgid "Check the \"Sold individually\" box"
-msgstr "「単品販売」ボックスにチェックを入れてください"
+msgstr "\"個別販売\"ボックスをチェックしてください"
 
 #: modules/checklists/pro-requirements.php:251
 msgid "Select some products for \"Upsells\""
-msgstr "「アップセル」のためにいくつかの製品を選択してください"
+msgstr "\"アップセル\"のためのいくつかの製品を選択してください"
 
 #: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Virtual\" box"
-msgstr "「バーチャル」ボックスにチェックを入れてください"
+msgstr "\"バーチャル\"ボックスをチェックしてください"
 
 #: modules/checklists/pro-requirements.php:290
 #, php-format
@@ -1147,7 +1146,7 @@ msgstr "投稿リストにチェックリストの列を表示："
 
 #: modules/settings/settings.php:825
 msgid "Enable Taxonomy Filter:"
-msgstr "タクソノミーフィルターを有効にする:"
+msgstr "タクソノミーフィルターを有効にする："
 
 #: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
@@ -1163,27 +1162,27 @@ msgstr "「公開」ボタンを無効にする："
 
 #: modules/settings/settings.php:878
 msgid "Complete Icon:"
-msgstr "完了アイコン:"
+msgstr "完了アイコン："
 
 #: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
-msgstr "未完了アイコン:"
+msgstr "未完了アイコン："
 
 #: modules/settings/settings.php:894
 msgid "Required Complete Color:"
-msgstr "必須完了色:"
+msgstr "必須完了色："
 
 #: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
-msgstr "必須未完了色:"
+msgstr "必須未完了色："
 
 #: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
-msgstr "推奨完了色:"
+msgstr "推奨完了色："
 
 #: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
-msgstr "推奨未完了色:"
+msgstr "推奨される未完成の色："
 
 #: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
@@ -1191,7 +1190,7 @@ msgstr "OpenAI APIキー："
 
 #: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
-msgstr "名前変更されたチェックリストをリセット:"
+msgstr "名前が変更されたチェックリストをリセット："
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
@@ -1217,7 +1216,7 @@ msgstr "投稿画面にチェックリスト列を追加し、完了した要件
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
-msgstr "これにより、特定のタクソノミー用語を持つ投稿のタスクを無効にできます。「投稿タイプ」タブに移動して用語を選択してください。"
+msgstr "これにより、特定のタクソノミー用語を持つ投稿に対してタスクを無効にすることができます。「投稿タイプ」タブに移動して用語を選択してください。"
 
 #: modules/settings/settings.php:1089
 msgid ""
@@ -1300,7 +1299,7 @@ msgstr "すべてのカスタムラベルをリセット"
 
 #: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
-msgstr "これにより、すべての名前変更されたチェックリスト項目がデフォルトのラベルに戻ります。"
+msgstr "これにより、すべての名前が変更されたチェックリスト項目がデフォルトのラベルにリセットされます。"
 
 #: modules/settings/settings.php:1408
 msgid "Security check failed."
@@ -1308,7 +1307,7 @@ msgstr "セキュリティチェックに失敗しました。"
 
 #: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
-msgstr "このアクションを実行する権限がありません。"
+msgstr "この操作を実行する権限がありません。"
 
 #: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."

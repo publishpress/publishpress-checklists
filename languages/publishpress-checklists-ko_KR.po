@@ -12,8 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 14:26+0000\n"
+"POT-Creation-Date: 2026-01-30T13:36:06+00:00\n"
+"PO-Revision-Date: 2026-03-18 17:28+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -158,7 +158,7 @@ msgstr "최대"
 
 #: core/Requirement/Base_requirement.php:187
 msgid "Edit label"
-msgstr "라벨 편집"
+msgstr "레이블 편집"
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
@@ -415,7 +415,7 @@ msgstr "오류가 발생했습니다."
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
-msgstr "유효성 검사 오류입니다. 이 페이지를 새로 고치고 다시 시도해 주세요."
+msgstr "유효성 검사 오류. 이 페이지를 새로 고치고 다시 시도해 주세요."
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
@@ -883,11 +883,11 @@ msgstr "대표 이미지 너비"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "Heading in hierarchy"
-msgstr "계층의 제목"
+msgstr "계층 내 제목"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
-msgstr "콘텐츠 내 이미지 수"
+msgstr "내용 내 이미지 수"
 
 #: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
@@ -895,11 +895,11 @@ msgstr "이미지 캡션의 문자 수"
 
 #: modules/checklists/pro-requirements.php:85
 msgid "Number of audio in content"
-msgstr "콘텐츠 내 오디오 수"
+msgstr "내용 내 오디오 수"
 
 #: modules/checklists/pro-requirements.php:94
 msgid "Number of video in content"
-msgstr "콘텐츠 내 비디오 수"
+msgstr "내용 내 비디오 수"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
@@ -911,7 +911,7 @@ msgstr "사용자에 의해 승인됨"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "콘텐츠 내 제목 태그 피하기"
+msgstr "내용 내 제목 태그 피하기"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Published at exact time"
@@ -927,7 +927,7 @@ msgstr "랭크 매스 SEO 점수"
 
 #: modules/checklists/pro-requirements.php:149
 msgid "Only one H1 tag in content"
-msgstr "콘텐츠 내 H1 태그는 하나만 사용"
+msgstr "내용 내 H1 태그는 하나만 사용"
 
 #: modules/checklists/pro-requirements.php:156
 msgid "Tables have a header row"
@@ -935,19 +935,19 @@ msgstr "테이블에는 헤더 행이 있습니다"
 
 #: modules/checklists/pro-requirements.php:163
 msgid "Check the \"Allow backorders?\" box"
-msgstr "\"재고 부족 허용?\" 상자를 확인하세요"
+msgstr "\"백오더 허용?\" 박스를 확인하세요"
 
 #: modules/checklists/pro-requirements.php:171
 msgid "Select some products for \"Cross-sells\""
-msgstr "\"교차 판매\"를 위해 일부 제품을 선택하십시오"
+msgstr "\"교차 판매\"를 위한 제품을 선택하세요"
 
 #: modules/checklists/pro-requirements.php:179
 msgid "Discount for the \"Sale price\""
-msgstr "\"세일 가격\"에 대한 할인"
+msgstr "\"판매 가격\"에 대한 할인"
 
 #: modules/checklists/pro-requirements.php:187
 msgid "Check the \"Downloadable\" box"
-msgstr "\"다운로드 가능\" 상자를 체크하십시오"
+msgstr "\"다운로드 가능\" 상자를 체크하세요"
 
 #: modules/checklists/pro-requirements.php:195
 msgid "Product image"
@@ -955,35 +955,35 @@ msgstr "제품 이미지"
 
 #: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Manage stock?\" box"
-msgstr "\"재고 관리?\" 상자를 체크하십시오"
+msgstr "\"재고 관리?\" 상자를 체크하세요"
 
 #: modules/checklists/pro-requirements.php:211
 msgid "Enter a \"Regular price\""
-msgstr "\"정상 가격\"을 입력하십시오"
+msgstr "\"정상 가격\"을 입력하세요"
 
 #: modules/checklists/pro-requirements.php:219
 msgid "Enter a \"Sale price\""
-msgstr "\"세일 가격\"을 입력하십시오"
+msgstr "\"판매 가격\"을 입력하세요"
 
 #: modules/checklists/pro-requirements.php:227
 msgid "Schedule the \"Sale price\""
-msgstr "\"세일 가격\"을 예약하십시오"
+msgstr "\"판매 가격\"을 예약하세요"
 
 #: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"SKU\""
-msgstr "\"SKU\"를 입력하십시오"
+msgstr "\"SKU\"를 입력하세요"
 
 #: modules/checklists/pro-requirements.php:243
 msgid "Check the \"Sold individually\" box"
-msgstr "\"개별 판매\" 상자를 체크하십시오"
+msgstr "\"개별 판매\" 상자를 체크하세요"
 
 #: modules/checklists/pro-requirements.php:251
 msgid "Select some products for \"Upsells\""
-msgstr "\"업셀\"을 위해 일부 제품을 선택하십시오"
+msgstr "\"상향 판매\"를 위한 제품을 선택하세요"
 
 #: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Virtual\" box"
-msgstr "\"가상\" 상자를 체크하십시오"
+msgstr "\"가상\" 상자를 체크하세요"
 
 #: modules/checklists/pro-requirements.php:290
 #, php-format
@@ -1096,7 +1096,7 @@ msgstr "체크리스트 설정"
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
-msgstr "모든 이름이 변경된 체크리스트 항목을 기본 레이블로 재설정하시겠습니까? 이 작업은 취소할 수 없습니다."
+msgstr "모든 이름이 변경된 체크리스트 항목을 기본 레이블로 재설정하시겠습니까? 이 작업은 실행 취소할 수 없습니다."
 
 #: modules/settings/settings.php:314
 msgid "Features"
@@ -1183,7 +1183,7 @@ msgstr "추천 완료 색상:"
 
 #: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
-msgstr "추천 미완료 색상:"
+msgstr "추천된 미완료 색상:"
 
 #: modules/settings/settings.php:936
 msgid "OpenAI API Key:"
@@ -1191,7 +1191,7 @@ msgstr "OpenAI API 키:"
 
 #: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
-msgstr "이름이 변경된 체크리스트 재설정:"
+msgstr "이름이 변경된 체크리스트 초기화:"
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
@@ -1205,7 +1205,7 @@ msgstr "이 설정은 \"초안\" 또는 \"게시됨\"과 같은 특정 상태에
 
 #: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr "사용자가 기존 체크리스트 작업을 복제할 수 있습니다."
+msgstr "이 기능은 사용자가 기존 체크리스트 작업을 복제할 수 있도록 합니다."
 
 #: modules/settings/settings.php:1046
 msgid ""
@@ -1273,7 +1273,7 @@ msgstr "발행 옵션"
 
 #: modules/settings/settings.php:1269
 msgid "Appearance"
-msgstr "외관"
+msgstr "모양"
 
 #: modules/settings/settings.php:1270
 msgid "Integration"
@@ -1285,28 +1285,28 @@ msgstr "도구"
 
 #: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr "Dashicons 클래스 이름을 입력하세요 (예: dashicons-yes, dashicons-saved). "
+msgstr "대시아이콘 클래스 이름을 입력하세요(예: dashicons-yes, dashicons-saved). "
 
 #: modules/settings/settings.php:1319
 #: modules/settings/settings.php:1334
 msgid "View Dashicons"
-msgstr "Dashicons 보기"
+msgstr "대시아이콘 보기"
 
 #: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr "Dashicons 클래스 이름을 입력하세요 (예: dashicons-no, dashicons-dismiss). "
+msgstr "대시아이콘 클래스 이름을 입력하세요(예: dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
-msgstr "모든 사용자 정의 레이블 초기화"
+msgstr "모든 사용자 지정 레이블 초기화"
 
 #: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
-msgstr "이 작업은 이름이 변경된 체크리스트 항목을 기본 레이블로 되돌립니다."
+msgstr "이 작업은 모든 이름이 변경된 체크리스트 항목을 기본 레이블로 되돌립니다."
 
 #: modules/settings/settings.php:1408
 msgid "Security check failed."
-msgstr "보안 검사에 실패했습니다."
+msgstr "보안 검사가 실패했습니다."
 
 #: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
@@ -1314,7 +1314,7 @@ msgstr "이 작업을 수행할 권한이 없습니다."
 
 #: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
-msgstr "모든 사용자 정의 레이블이 성공적으로 초기화되었습니다."
+msgstr "모든 사용자 지정 레이블이 성공적으로 초기화되었습니다."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40

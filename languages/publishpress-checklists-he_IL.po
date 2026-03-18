@@ -23,6 +23,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 
 #: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
 #, fuzzy,php-format
 msgid "%d "

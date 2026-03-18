@@ -12,11 +12,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 14:26+0000\n"
+"POT-Creation-Date: 2026-01-30T13:36:06+00:00\n"
+"PO-Revision-Date: 2026-03-18 17:28+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 "
 "|| n % 10 == 6 || n % 10 == 9);\n"
 "Language: fil\n"
 "X-Poedit-Basepath: ..\n"
@@ -31,6 +30,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+"Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 || n % 10 == 6 || n % 10 == 9);\n"
 
 #: publishpress-checklists.php
 #: core/Legacy/Module.php:286, fuzzy
@@ -421,7 +421,7 @@ msgstr "Nagkaroon ng error."
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
 msgstr ""
-"Error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang "
+"May error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang "
 "muli."
 
 #: core/Requirement/Openai_item.php:298
@@ -880,21 +880,21 @@ msgstr "kinakailangan"
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Hindi available ang mga checklist na gawain sa Elementor editors"
 
-#: modules/checklists/pro-requirements.php:22
+#: modules/checklists/pro-requirements.php:22, fuzzy
 msgid "All in One SEO Headline Score"
-msgstr "All in One SEO Puntos ng Pamagat"
+msgstr "All in One SEO Headline Score"
 
-#: modules/checklists/pro-requirements.php:31
+#: modules/checklists/pro-requirements.php:31, fuzzy
 msgid "All in One SEO Score"
-msgstr "All in One SEO Puntos"
+msgstr "All in One SEO Score"
 
 #: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr "Taas ng tampok na larawan"
+msgstr "Taas ng tampok na imahe"
 
 #: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr "Lapad ng tampok na larawan"
+msgstr "Lapad ng tampok na imahe"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "Heading in hierarchy"
@@ -902,11 +902,11 @@ msgstr "Pamagat sa hierarchy"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
-msgstr "Bilang ng mga larawan sa nilalaman"
+msgstr "Bilang ng mga imahe sa nilalaman"
 
 #: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
-msgstr "Bilang ng mga karakter sa mga caption ng larawan"
+msgstr "Bilang ng mga karakter sa mga caption ng imahe"
 
 #: modules/checklists/pro-requirements.php:85
 msgid "Number of audio in content"
@@ -918,15 +918,15 @@ msgstr "Bilang ng video sa nilalaman"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr "Inaprubahan ng papel"
+msgstr "Naaprubahan ng role"
 
 #: modules/checklists/pro-requirements.php:110
 msgid "Approved by user"
-msgstr "Inaprubahan ng gumagamit"
+msgstr "Naaprubahan ng user"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "Iwasan ang mga tag ng pamagat sa nilalaman"
+msgstr "Iwasan ang mga heading tag sa nilalaman"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Published at exact time"
@@ -934,11 +934,11 @@ msgstr "Nai-publish sa eksaktong oras"
 
 #: modules/checklists/pro-requirements.php:132
 msgid "Publish time should be in the future"
-msgstr "Dapat nasa hinaharap ang oras ng pag-publish"
+msgstr "Dapat nasa hinaharap ang oras ng publikasyon"
 
-#: modules/checklists/pro-requirements.php:140
+#: modules/checklists/pro-requirements.php:140, fuzzy
 msgid "Rank Math SEO Score"
-msgstr "Rank Math SEO Puntos"
+msgstr "Rank Math SEO Score"
 
 #: modules/checklists/pro-requirements.php:149
 msgid "Only one H1 tag in content"
@@ -950,7 +950,7 @@ msgstr "May header row ang mga talahanayan"
 
 #: modules/checklists/pro-requirements.php:163
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Suriin ang kahon na \"Pahintulutan ang backorders?\""
+msgstr "Suriin ang kahon na \"Payagan ang backorders?\""
 
 #: modules/checklists/pro-requirements.php:171
 msgid "Select some products for \"Cross-sells\""
@@ -962,7 +962,7 @@ msgstr "Diskwento para sa \"Sale price\""
 
 #: modules/checklists/pro-requirements.php:187
 msgid "Check the \"Downloadable\" box"
-msgstr "Tsekin ang kahon ng \"Downloadable\""
+msgstr "I-check ang kahon na \"Downloadable\""
 
 #: modules/checklists/pro-requirements.php:195
 msgid "Product image"
@@ -970,7 +970,7 @@ msgstr "Larawan ng produkto"
 
 #: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Manage stock?\" box"
-msgstr "Tsekin ang kahon ng \"Manage stock?\""
+msgstr "I-check ang kahon na \"Manage stock?\""
 
 #: modules/checklists/pro-requirements.php:211
 msgid "Enter a \"Regular price\""
@@ -982,7 +982,7 @@ msgstr "Ilagay ang \"Sale price\""
 
 #: modules/checklists/pro-requirements.php:227
 msgid "Schedule the \"Sale price\""
-msgstr "Itakda ang \"Sale price\""
+msgstr "Iskedyul ang \"Sale price\""
 
 #: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"SKU\""
@@ -990,7 +990,7 @@ msgstr "Ilagay ang \"SKU\""
 
 #: modules/checklists/pro-requirements.php:243
 msgid "Check the \"Sold individually\" box"
-msgstr "Tsekin ang kahon ng \"Sold individually\""
+msgstr "I-check ang kahon na \"Sold individually\""
 
 #: modules/checklists/pro-requirements.php:251
 msgid "Select some products for \"Upsells\""
@@ -998,7 +998,7 @@ msgstr "Pumili ng ilang produkto para sa \"Upsells\""
 
 #: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Virtual\" box"
-msgstr "Tsekin ang kahon ng \"Virtual\""
+msgstr "I-check ang kahon na \"Virtual\""
 
 #: modules/checklists/pro-requirements.php:290
 #, php-format
@@ -1098,7 +1098,7 @@ msgstr "Mga Pahintulot"
 
 #: modules/permissions/permissions.php:107
 msgid "Exclude User Roles"
-msgstr "Iwasan ang Mga Tungkulin ng Gumagamit"
+msgstr "I-exclude ang User Roles"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"
@@ -1114,8 +1114,8 @@ msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
-"Sigurado ka bang nais mong i-reset ang lahat ng na-rename na checklist "
-"items sa kanilang default na label? Ang aksyong ito ay hindi maibabalik."
+"Sigurado ka bang nais mong i-reset ang lahat ng mga na-renamed na checklist "
+"item sa kanilang default na label? Hindi maibabalik ang aksyong ito."
 
 #: modules/settings/settings.php:314
 msgid "Features"
@@ -1168,7 +1168,7 @@ msgstr "Ipakita ang kolum ng Checklist sa mga listahan ng post:"
 
 #: modules/settings/settings.php:825
 msgid "Enable Taxonomy Filter:"
-msgstr "I-enable ang Filter ng Taksonomiya:"
+msgstr "I-enable ang Taxonomy Filter:"
 
 #: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
@@ -1188,7 +1188,7 @@ msgstr "Kumpletong Icon:"
 
 #: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
-msgstr "Di-kumpletong Icon:"
+msgstr "Hindi Kumpletong Icon:"
 
 #: modules/settings/settings.php:894
 msgid "Required Complete Color:"
@@ -1196,7 +1196,7 @@ msgstr "Kinakailangang Kumpletong Kulay:"
 
 #: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
-msgstr "Kinakailangang Di-kumpletong Kulay:"
+msgstr "Kinakailangang Hindi Kumpletong Kulay:"
 
 #: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
@@ -1204,7 +1204,7 @@ msgstr "Inirerekomendang Kumpletong Kulay:"
 
 #: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
-msgstr "Inirerekomendang Di-kumpletong Kulay:"
+msgstr "Inirerekomendang Hindi Kumpletong Kulay:"
 
 #: modules/settings/settings.php:936, fuzzy
 msgid "OpenAI API Key:"
@@ -1212,7 +1212,7 @@ msgstr "OpenAI API Key:"
 
 #: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
-msgstr "I-reset ang Na-rename na Checklist:"
+msgstr "I-reset ang Pinangalanang Checklist:"
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
@@ -1229,8 +1229,8 @@ msgstr ""
 #: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
-"Pinapayagan nito ang mga gumagamit na kopyahin ang umiiral na mga gawain sa "
-"checklist."
+"Pinapayagan nito ang mga gumagamit na kopyahin ang mga umiiral na checklist "
+"na gawain."
 
 #: modules/settings/settings.php:1046
 msgid ""
@@ -1245,9 +1245,9 @@ msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
-"Pinapayagan nito ang mga gawain na ma-disable para sa mga post na may "
-"partikular na mga termino ng taxonomy. Pumunta sa tab na \"Mga Uri ng "
-"Post\" upang pumili ng mga termino."
+"Pinapayagan nito ang mga gawain na hindi paganahin para sa mga post na may "
+"tiyak na mga termino ng taxonomy. Pumunta sa tab na \"Mga Uri ng Post\" "
+"upang pumili ng mga termino."
 
 #: modules/settings/settings.php:1089
 msgid ""
@@ -1326,7 +1326,7 @@ msgstr "Mga Tool"
 #: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr ""
-"Ilagay ang pangalan ng klase ng Dashicons (hal., dashicons-yes, "
+"Ipasok ang pangalan ng klase ng Dashicons (hal. dashicons-yes, "
 "dashicons-saved). "
 
 #: modules/settings/settings.php:1319
@@ -1337,7 +1337,7 @@ msgstr "Tingnan ang Dashicons"
 #: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
-"Ilagay ang pangalan ng klase ng Dashicons (hal., dashicons-no, "
+"Ipasok ang pangalan ng klase ng Dashicons (hal. dashicons-no, "
 "dashicons-dismiss). "
 
 #: modules/settings/settings.php:1396
@@ -1347,7 +1347,7 @@ msgstr "I-reset ang Lahat ng Pasadyang Label"
 #: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr ""
-"I-reset nito ang lahat ng mga pinalitang item sa checklist pabalik sa "
+"Ito ay magbabalik sa lahat ng pinangalanang mga item ng checklist sa "
 "kanilang mga default na label."
 
 #: modules/settings/settings.php:1408
@@ -1360,7 +1360,7 @@ msgstr "Wala kang pahintulot na isagawa ang aksyong ito."
 
 #: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
-msgstr "Matagumpay na na-reset ang lahat ng pasadyang label."
+msgstr "Lahat ng pasadyang label ay matagumpay na na-reset."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40

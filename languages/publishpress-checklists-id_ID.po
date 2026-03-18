@@ -12,8 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 14:26+0000\n"
+"POT-Creation-Date: 2026-01-30T13:36:06+00:00\n"
+"PO-Revision-Date: 2026-03-18 17:28+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -919,7 +919,7 @@ msgstr "Disetujui oleh pengguna"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "Hindari tag heading dalam konten"
+msgstr "Hindari tag judul dalam konten"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Published at exact time"
@@ -943,7 +943,7 @@ msgstr "Tabel memiliki baris header"
 
 #: modules/checklists/pro-requirements.php:163
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Centang kotak \"Izinkan pemesanan kembali?\""
+msgstr "Centang kotak \"Izinkan backorder?\""
 
 #: modules/checklists/pro-requirements.php:171
 msgid "Select some products for \"Cross-sells\""
@@ -967,7 +967,7 @@ msgstr "Centang kotak \"Kelola stok?\""
 
 #: modules/checklists/pro-requirements.php:211
 msgid "Enter a \"Regular price\""
-msgstr "Masukkan \"Harga biasa\""
+msgstr "Masukkan \"Harga reguler\""
 
 #: modules/checklists/pro-requirements.php:219
 msgid "Enter a \"Sale price\""
@@ -983,7 +983,7 @@ msgstr "Masukkan \"SKU\""
 
 #: modules/checklists/pro-requirements.php:243
 msgid "Check the \"Sold individually\" box"
-msgstr "Centang kotak \"Dijual secara terpisah\""
+msgstr "Centang kotak \"Terjual secara individu\""
 
 #: modules/checklists/pro-requirements.php:251
 msgid "Select some products for \"Upsells\""
@@ -1107,8 +1107,8 @@ msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
-"Apakah Anda yakin ingin mengatur ulang semua item checklist yang diubah "
-"namanya ke label default mereka? Tindakan ini tidak dapat dibatalkan."
+"Apakah Anda yakin ingin mengatur ulang semua item checklist yang dinamai "
+"ulang ke label default mereka? Tindakan ini tidak dapat dibatalkan."
 
 #: modules/settings/settings.php:314
 msgid "Features"
@@ -1205,7 +1205,7 @@ msgstr "Kunci API OpenAI:"
 
 #: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
-msgstr "Atur Ulang Checklist yang Diubah Namanya:"
+msgstr "Atur Ulang Daftar Periksa yang Dinamai:"
 
 #: modules/settings/settings.php:970
 msgid "Post types:"
@@ -1221,7 +1221,7 @@ msgstr ""
 
 #: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr "Ini memungkinkan pengguna untuk menduplikasi tugas checklist yang ada."
+msgstr "Ini memungkinkan pengguna untuk menggandakan tugas daftar periksa yang ada."
 
 #: modules/settings/settings.php:1046
 msgid ""
@@ -1237,7 +1237,8 @@ msgid ""
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
 "Ini memungkinkan tugas untuk dinonaktifkan untuk pos dengan istilah "
-"taksonomi tertentu. Pergi ke tab \"Jenis Pos\" untuk memilih istilah."
+"taksonomi tertentu. Pergi ke tab \"Jenis Pos\" untuk memilih istilah "
+"tersebut."
 
 #: modules/settings/settings.php:1089
 msgid ""
@@ -1315,7 +1316,7 @@ msgstr "Alat"
 
 #: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr "Masukkan nama kelas Dashicons (misalnya, dashicons-yes, dashicons-saved)."
+msgstr "Masukkan nama kelas Dashicons (misalnya, dashicons-yes, dashicons-saved). "
 
 #: modules/settings/settings.php:1319
 #: modules/settings/settings.php:1334
@@ -1324,17 +1325,17 @@ msgstr "Lihat Dashicons"
 
 #: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr "Masukkan nama kelas Dashicons (misalnya, dashicons-no, dashicons-dismiss)."
+msgstr "Masukkan nama kelas Dashicons (misalnya, dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
-msgstr "Reset Semua Label Kustom"
+msgstr "Atur Ulang Semua Label Kustom"
 
 #: modules/settings/settings.php:1398
 msgid "This will reset all renamed checklist items back to their default labels."
 msgstr ""
-"Ini akan mengatur ulang semua item checklist yang telah diganti namanya "
-"kembali ke label default mereka."
+"Ini akan mengatur ulang semua item daftar periksa yang dinamai kembali ke "
+"label default mereka."
 
 #: modules/settings/settings.php:1408
 msgid "Security check failed."
@@ -1346,7 +1347,7 @@ msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini."
 
 #: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
-msgstr "Semua label kustom telah direset dengan sukses."
+msgstr "Semua label kustom telah diatur ulang dengan sukses."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
