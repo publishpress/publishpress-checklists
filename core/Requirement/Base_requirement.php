@@ -190,7 +190,7 @@ class Base_requirement
     {
         $legacy_plugin = Factory::getLegacyPlugin();
         $settings_options = isset($legacy_plugin->settings->module->options) ? $legacy_plugin->settings->module->options : null;
-        $option_value = isset($settings_options->enable_rename_label_editor_panel) ? $settings_options->enable_rename_label_editor_panel : self::VALUE_NO;
+        $option_value = isset($settings_options->enable_rename_label_editor_panel) ? $settings_options->enable_rename_label_editor_panel : self::VALUE_YES;
 
         return self::VALUE_YES === $option_value;
     }

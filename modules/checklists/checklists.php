@@ -680,7 +680,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'rename_modal_title' => esc_html__(
-                            'Rename task labels',
+                            'Rename task label',
                             'publishpress-checklists'
                         ),
                         'rename_modal_admin_label' => esc_html__(

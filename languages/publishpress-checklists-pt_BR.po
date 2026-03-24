@@ -19,6 +19,7 @@ msgstr ""
 
 #: publishpress-checklists.php
 #: publishpress-checklists.php
+#: publishpress-checklists.php
 #: core/Legacy/Module.php:286, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists"
