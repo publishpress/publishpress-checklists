@@ -1,7 +1,7 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-[2.27.0] - 23 March, 2026
+[2.27.0] - 26 March, 2026
 
 - Added: Allow rename label on post editing screen
 - Fixed: Layout issues in mid-size screens #1080
