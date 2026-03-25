@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Plugin Name: PublishPress Checklists
+ * Plugin Name: PublishPress Checklists Free
  * Plugin URI:  https://publishpress.com/
  * Description: With PublishPress Checklists, you can choose publishing requirements for your content.
  * Author:      PublishPress
  * Author URI:  https://publishpress.com
- * Version: 2.26.0
+ * Version: 2.27.0
  * Text Domain: publishpress-checklists
  * Domain Path: /languages
  * Requires at least: 5.5
@@ -61,7 +61,7 @@ if (class_exists('PublishPressInstanceProtection\\Config')) {
 if (!defined('PPCH_LOADED')) {
     define('PPCH_LOADED', 1);
     define('PPCH_PATH_BASE', plugin_dir_path(__FILE__));
-    define('PPCH_VERSION', '2.26.0');
+    define('PPCH_VERSION', '2.27.0');
     define('PPCH_FILE', __DIR__ . '/publishpress-checklists.php');
     define('PPCH_MODULES_PATH', PPCH_PATH_BASE . '/modules');
     define('PPCH_RELATIVE_PATH', 'publishpress-checklists');

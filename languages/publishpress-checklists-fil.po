@@ -1,434 +1,320 @@
-# Copyright (C) 2026 PublishPress
-# This file is distributed under the same license as the PublishPress Checklists plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/publishpress-checklists\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Filipino "
-"<https://weblate.publishpress.com/projects/publishpress-checklists/"
-"publishpress-checklists/fil/>\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/publishpress-"
+"checklists\n"
+"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
+"PO-Revision-Date: 2026-01-30 15:14+0000\n"
+"Last-Translator: Riza Maulana Ardiyanto <riza@publishpress.com>\n"
+"Language-Team: Filipino <https://weblate.publishpress.com/projects/"
+"publishpress-checklists/publishpress-checklists/fil/>\n"
+"Language: fil\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-01 11:08+0000\n"
-"PO-Revision-Date: 2026-01-27 14:26+0000\n"
-"X-Generator: Weblate 5.14.3\n"
-"X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 "
 "|| n % 10 == 6 || n % 10 == 9);\n"
-"Language: fil\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: publishpress-checklists.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,"
-"2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__"
-"ngettext_noop:1,2\n"
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 
-#: publishpress-checklists.php
-#: core/Legacy/Module.php:286, fuzzy
+#. Plugin Name of the plugin
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
-#: publishpress-checklists.php, fuzzy
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
-#: publishpress-checklists.php
 #. Description of the plugin
 msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr ""
-"Sa PublishPress Checklists, maaari mong piliin ang mga kinakailangan sa "
-"pag-publish para sa iyong nilalaman."
+"Sa PublishPress Checklists, maaari mong piliin ang mga kinakailangan sa pag-"
+"publish para sa iyong nilalaman."
 
-#: publishpress-checklists.php, fuzzy
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: publishpress-checklists.php, fuzzy
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
 
-#: core/API/LabelMapper.php:39
-#: modules/checklists/checklists.php:1116
 msgid "Disabled"
 msgstr "Hindi pinagana"
 
-#: core/API/LabelMapper.php:40
-#: modules/checklists/checklists.php:1117
 msgid "Recommended"
 msgstr "Inirerekomenda"
 
-#: core/API/LabelMapper.php:41
-#: modules/checklists/checklists.php:923
-#: modules/checklists/checklists.php:1118
 msgid "Required"
 msgstr "Kinakailangan"
 
-#: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
-msgstr "Mangyaring ituwid ang iyong mga error sa form sa ibaba at subukan muli."
+msgstr ""
+"Mangyaring ituwid ang iyong mga error sa form sa ibaba at subukan muli."
 
-#: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:510, fuzzy
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
-#: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
 msgstr "Wala kang kinakailangang permiso upang makumpleto ang aksyong ito."
 
-#: core/Legacy/LegacyPlugin.php:217
 msgid "Post does not exist"
 msgstr "Walang umiiral na post"
 
-#: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:107
-#: modules/checklists/checklists.php:110
-#: modules/checklists/checklists.php:1026
-#: modules/checklists/checklists.php:1041
-#: modules/checklists/checklists.php:1188
-#: modules/checklists/assets/js/gutenberg-panel.jsx:237
 msgid "Checklists"
 msgstr "Mga Checklist"
 
-#: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "Kung gusto mo ang %s mangyaring iwanan kami ng %s rating. Salamat!"
 
-#: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
 msgstr "Kailangan ng PublishPress Checklists Support?"
 
-#: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
 "Kung kailangan mo ng tulong o may bagong kahilingan para sa tampok, ipaalam "
 "sa amin."
 
-#: core/Legacy/Util.php:188
 msgid "Request Support"
 msgstr "Humiling ng Suporta"
 
-#: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "Ang detalyadong dokumentasyon ay magagamit din sa website ng plugin."
 
-#: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
 msgstr "Tingnan ang Knowledge Base"
 
-#: core/Plugin.php:108
-#: modules/settings/settings.php:130
 msgid "Settings"
 msgstr "Mga Setting"
 
-#: core/Plugin.php:116
-#: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "Mag-upgrade sa Pro"
 
-#: core/Requirement/Approved_by.php:48
 #, php-format
 msgid "Approved by %s"
 msgstr "Naaprubahan ni %s"
 
-#: core/Requirement/Approved_by.php:49
 msgid "Approved by a user in this role"
 msgstr "Naaprubahan ng isang gumagamit sa papel na ito"
 
-#: core/Requirement/Base_counter.php:302
-#: core/Requirement/Pro_Requirement.php:112, fuzzy
 msgid "Min"
 msgstr "Min"
 
-#: core/Requirement/Base_counter.php:310
-#: core/Requirement/Pro_Requirement.php:113
 msgid "Max"
 msgstr "Sagad"
 
-#: core/Requirement/Base_requirement.php:187
 msgid "Edit label"
 msgstr "I-edit ang label"
 
-#: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
 msgstr "Bilang ng mga kategorya"
 
-#: core/Requirement/Categories_count.php:48
 #, php-format
 msgid "Minimum of %s category"
 msgstr "Minimum ng %s na kategorya"
 
-#: core/Requirement/Categories_count.php:49
 #, php-format
 msgid "Minimum of %s categories"
 msgstr "Minimum ng %s na mga kategorya"
 
-#: core/Requirement/Categories_count.php:50
 #, php-format
 msgid "Maximum of %s category"
 msgstr "Maximum ng %s na kategorya"
 
-#: core/Requirement/Categories_count.php:51
 #, php-format
 msgid "Maximum of %s categories"
 msgstr "Maximum ng %s na mga kategorya"
 
-#: core/Requirement/Categories_count.php:52
 #, php-format
 msgid "%s category"
 msgstr "%s kategorya"
 
-#: core/Requirement/Categories_count.php:53
 #, php-format
 msgid "%s categories"
 msgstr "%s mga kategorya"
 
-#: core/Requirement/Categories_count.php:54
 #, php-format
 msgid "Between %s and %s categories"
 msgstr "Sa pagitan ng %s at %s na mga kategorya"
 
-#: core/Requirement/Custom_item.php:60
-#: core/Requirement/Custom_item.php:61
-#: core/Utils/FieldsTabs.php:73
 msgid "Custom"
 msgstr "Pasadya"
 
-#: core/Requirement/Custom_item.php:62
-#: modules/checklists/checklists.php:676
 msgid "Which roles can mark this task as complete?"
 msgstr "Aling mga papel ang makakapagmarka sa gawaing ito bilang kumpleto?"
 
-#: core/Requirement/Custom_item.php:81
-#: modules/checklists/checklists.php:683
 msgid "Enter name of custom task"
 msgstr "Ilagay ang pangalan ng pasadyang gawain"
 
-#: core/Requirement/Custom_item.php:129
-#: core/Requirement/Openai_item.php:147
-#: modules/checklists/checklists.php:682
 msgid "Remove"
 msgstr "Alisin"
 
-#: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
 msgstr "Bilang ng mga panlabas na link sa nilalaman"
 
-#: core/Requirement/External_links.php:44
 #, php-format
 msgid "Minimum of %d external link in content"
 msgstr "Minimum ng %d na panlabas na link sa nilalaman"
 
-#: core/Requirement/External_links.php:45
 #, php-format
 msgid "Minimum of %d external links in content"
 msgstr "Minimum ng %d na mga panlabas na link sa nilalaman"
 
-#: core/Requirement/External_links.php:46
 #, php-format
 msgid "Maximum of %d external link in content"
 msgstr "Maximum ng %d na panlabas na link sa nilalaman"
 
-#: core/Requirement/External_links.php:47
 #, php-format
 msgid "Maximum of %d external links in content"
 msgstr "Maximum ng %d na mga panlabas na link sa nilalaman"
 
-#: core/Requirement/External_links.php:48
 #, php-format
 msgid "%d external link in content"
 msgstr "%d panlabas na link sa nilalaman"
 
-#: core/Requirement/External_links.php:49
 #, php-format
 msgid "%d external links in content"
 msgstr "%d mga panlabas na link sa nilalaman"
 
-#: core/Requirement/External_links.php:50
 #, php-format
 msgid "Between %d and %d external links in content"
 msgstr "Sa pagitan ng %d at %d na mga panlabas na link sa nilalaman"
 
-#: core/Requirement/Featured_image.php:43
-#: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
 msgstr "Ang itinatampok na larawan ay idinagdag"
 
-#: core/Requirement/Featured_image_alt.php:43
-#: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
 msgstr "Ang itinatampok na larawan ay may Alt text"
 
-#: core/Requirement/Featured_image_caption.php:43
-#: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
 msgstr "Ang itinatampok na imahe ay may caption"
 
-#: core/Requirement/Filled_excerpt.php:42
-#: core/Requirement/Filled_excerpt.php:43
 msgid "Numbers of characters in excerpt"
 msgstr "Bilang ng mga karakter sa excerpt"
 
-#: core/Requirement/Filled_excerpt.php:44
 #, php-format
 msgid "Minimum of %d character in excerpt"
 msgstr "Minimum ng %d na karakter sa excerpt"
 
-#: core/Requirement/Filled_excerpt.php:45
 #, php-format
 msgid "Minimum of %d characters in excerpt"
 msgstr "Minimum ng %d na mga karakter sa excerpt"
 
-#: core/Requirement/Filled_excerpt.php:46
 #, php-format
 msgid "Maximum of %d character in excerpt"
 msgstr "Maksimum ng %d na karakter sa buod"
 
-#: core/Requirement/Filled_excerpt.php:47
 #, php-format
 msgid "Maximum of %d characters in excerpt"
 msgstr "Maximum ng %d na karakter sa excerpt"
 
-#: core/Requirement/Filled_excerpt.php:48
 #, php-format
 msgid "%d character in excerpt"
 msgstr "%d karakter sa excerpt"
 
-#: core/Requirement/Filled_excerpt.php:49
 #, php-format
 msgid "%d characters in excerpt"
 msgstr "%d mga karakter sa excerpt"
 
-#: core/Requirement/Filled_excerpt.php:50
 #, php-format
 msgid "Between %d and %d characters in excerpt"
 msgstr "Sa pagitan ng %d at %d na mga karakter sa excerpt"
 
-#: core/Requirement/Image_alt.php:44
-#: core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
 msgstr "Lahat ng mga larawan ay may Alt text"
 
-#: core/Requirement/Image_alt_count.php:42
-#: core/Requirement/Image_alt_count.php:43
 msgid "Number of characters in Alt text"
 msgstr "Bilang ng mga karakter sa Alt text"
 
-#: core/Requirement/Image_alt_count.php:44
 #, php-format
 msgid "Minimum of %d character in Alt text"
 msgstr "Minimum na %d na karakter sa Alt text"
 
-#: core/Requirement/Image_alt_count.php:45
 #, php-format
 msgid "Minimum of %d characters in Alt text"
 msgstr "Minimum ng %d na mga karakter sa Alt text"
 
-#: core/Requirement/Image_alt_count.php:46
 #, php-format
 msgid "Maximum of %d character in Alt text"
 msgstr "Sobra ng %d karakter sa Alt text"
 
-#: core/Requirement/Image_alt_count.php:47
 #, php-format
 msgid "Maximum of %d characters in Alt text"
 msgstr "Sobra ng %d mga karakter sa Alt text"
 
-#: core/Requirement/Image_alt_count.php:48
 #, php-format
 msgid "%d character in Alt text"
 msgstr "%d karakter sa Alt text"
 
-#: core/Requirement/Image_alt_count.php:49
 #, php-format
 msgid "%d characters in Alt text"
 msgstr "%d mga karakter sa Alt text"
 
-#: core/Requirement/Image_alt_count.php:50
 #, php-format
 msgid "Between %d and %d characters in Alt text"
 msgstr "Sa pagitan ng %d at %d na karakter sa Alt text"
 
-#: core/Requirement/Internal_links.php:43
 msgid "Number of internal links in content"
 msgstr "Bilang ng mga panloob na link sa nilalaman"
 
-#: core/Requirement/Internal_links.php:44
 #, php-format
 msgid "Minimum of %d internal link in content"
 msgstr "Minimum ng %d na panloob na link sa nilalaman"
 
-#: core/Requirement/Internal_links.php:45
 #, php-format
 msgid "Minimum of %d internal links in content"
 msgstr "Minimum ng %d na mga panloob na link sa nilalaman"
 
-#: core/Requirement/Internal_links.php:46
 #, php-format
 msgid "Maximum of %d internal link in content"
 msgstr "Maximum ng %d na panloob na link sa nilalaman"
 
-#: core/Requirement/Internal_links.php:47
 #, php-format
 msgid "Maximum of %d internal links in content"
 msgstr "Maximum ng %d na mga panloob na link sa nilalaman"
 
-#: core/Requirement/Internal_links.php:48
 #, php-format
 msgid "%d internal link in content"
 msgstr "%d panloob na link sa nilalaman"
 
-#: core/Requirement/Internal_links.php:49
 #, php-format
 msgid "%d internal links in content"
 msgstr "%d mga panloob na link sa nilalaman"
 
-#: core/Requirement/Internal_links.php:50
 #, php-format
 msgid "Between %d and %d internal links in content"
 msgstr "Sa pagitan ng %d at %d na mga panloob na link sa nilalaman"
 
-#: core/Requirement/Openai_item.php:69
-#: core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
-#: core/Requirement/Openai_item.php:100
-#: modules/checklists/checklists.php:684
 msgid "Enter OpenAI task prompt"
 msgstr "Ilagay ang OpenAI task prompt"
 
-#: core/Requirement/Openai_item.php:286
 msgid "An error occured."
 msgstr "Nagkaroon ng error."
 
-#: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
 msgstr ""
-"Error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang "
+"May error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang "
 "muli."
 
-#: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
 msgstr "Walang laman ang nilalaman ng post."
 
-#: core/Requirement/Openai_item.php:307
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
@@ -436,704 +322,531 @@ msgstr ""
 "Ang mga gawain ng OpenAI ay nangangailangan ng API Key. Mangyaring idagdag "
 "ang iyong API Key sa lugar ng Mga Setting."
 
-#: core/Requirement/Openai_item.php:362
 #, php-format
 msgid "API Error: %1s."
 msgstr "API Error: %1$s."
 
-#: core/Requirement/Openai_item.php:380
 msgid "See the full response."
 msgstr "Tingnan ang buong tugon."
 
-#: core/Requirement/Openai_item.php:401
 msgid "Invalid response"
 msgstr "Hindi wastong tugon"
 
-#: core/Requirement/Prohibited_categories.php:87
 #, php-format
 msgid "Prohibited categories: %s"
 msgstr "Mga Bawal na Kategorya: %s"
 
-#: core/Requirement/Prohibited_categories.php:88
 msgid "Prohibited categories"
 msgstr "Mga Bawal na Kategorya"
 
-#: core/Requirement/Prohibited_tags.php:87
 #, php-format
 msgid "Prohibited tags: %s"
 msgstr "Mga ipinagbabawal na tag: %s"
 
-#: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
 msgstr "Mga ipinagbabawal na tag"
 
-#: core/Requirement/Required_categories.php:87
 #, php-format
 msgid "Required categories: %s"
 msgstr "Mga kinakailangang kategorya: %s"
 
-#: core/Requirement/Required_categories.php:88
 msgid "Required categories"
 msgstr "Mga kinakailangang kategorya"
 
-#: core/Requirement/Required_tags.php:87
 #, php-format
 msgid "Required tags: %s"
 msgstr "Mga kinakailangang tag: %s"
 
-#: core/Requirement/Required_tags.php:88
 msgid "Required tags"
 msgstr "Mga kinakailangang tag"
 
-#: core/Requirement/Tags_count.php:47
 msgid "Number of tags"
 msgstr "Bilang ng mga tag"
 
-#: core/Requirement/Tags_count.php:48
 #, php-format
 msgid "Minimum of %d tag"
 msgstr "Minimum ng %d na tag"
 
-#: core/Requirement/Tags_count.php:49
 #, php-format
 msgid "Minimum of %d tags"
 msgstr "Minimum ng %d na mga tag"
 
-#: core/Requirement/Tags_count.php:50
 #, php-format
 msgid "Maximum of %d tag"
 msgstr "Maximum ng %d na tag"
 
-#: core/Requirement/Tags_count.php:51
 #, php-format
 msgid "Maximum of %d tags"
 msgstr "Maximum ng %d na mga tag"
 
-#: core/Requirement/Tags_count.php:52
-#, fuzzy, php-format
+#, php-format
 msgid "%d tag"
 msgstr "%d tag"
 
-#: core/Requirement/Tags_count.php:53
 #, php-format
 msgid "%d tags"
 msgstr "%d mga tag"
 
-#: core/Requirement/Tags_count.php:54
 #, php-format
 msgid "Between %d and %d tags"
 msgstr "Sa pagitan ng %d at %d na mga tag"
 
-#: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
 msgstr "Bilang ng "
 
-#: core/Requirement/Taxonomies_count.php:51
-#: core/Requirement/Taxonomies_count.php:52
 #, php-format
 msgid "Minimum of %d "
 msgstr "Minimum ng %d "
 
-#: core/Requirement/Taxonomies_count.php:53
-#: core/Requirement/Taxonomies_count.php:54
 #, php-format
 msgid "Maximum of %d "
 msgstr "Maksimum ng %d "
 
-#: core/Requirement/Taxonomies_count.php:55
-#: core/Requirement/Taxonomies_count.php:56
-#, fuzzy, php-format
+#, php-format
 msgid "%d "
 msgstr "%d "
 
-#: core/Requirement/Taxonomies_count.php:57
 #, php-format
 msgid "Between %d and %d "
 msgstr "Sa pagitan ng %d at %d "
 
-#: core/Requirement/Title_count.php:40
-#: core/Requirement/Title_count.php:41
 msgid "Number of characters in title"
 msgstr "Bilang ng mga karakter sa pamagat"
 
-#: core/Requirement/Title_count.php:42
 #, php-format
 msgid "Minimum of %d character in title"
 msgstr "Minimum ng %d na karakter sa pamagat"
 
-#: core/Requirement/Title_count.php:43
 #, php-format
 msgid "Minimum of %d characters in title"
 msgstr "Minimum ng %d na mga karakter sa pamagat"
 
-#: core/Requirement/Title_count.php:44
 #, php-format
 msgid "Maximum of %d character in title"
 msgstr "Maksimum ng %d na karakter sa pamagat"
 
-#: core/Requirement/Title_count.php:45
 #, php-format
 msgid "Maximum of %d characters in title"
 msgstr "Maximum ng %d na karakter sa pamagat"
 
-#: core/Requirement/Title_count.php:46
 #, php-format
 msgid "%d character in title"
 msgstr "%d karakter sa pamagat"
 
-#: core/Requirement/Title_count.php:47
 #, php-format
 msgid "%d characters in title"
 msgstr "%d mga karakter sa pamagat"
 
-#: core/Requirement/Title_count.php:48
 #, php-format
 msgid "Between %d and %d characters in title"
 msgstr "Sa pagitan ng %d at %d na mga karakter sa pamagat"
 
-#: core/Requirement/Validate_links.php:65
-#: core/Requirement/Validate_links.php:66
 msgid "All links use a valid format"
 msgstr "Lahat ng mga link ay gumagamit ng wastong format"
 
-#: core/Requirement/Words_count.php:43
 msgid "Number of words in content"
 msgstr "Bilang ng mga salita sa nilalaman"
 
-#: core/Requirement/Words_count.php:44
 #, php-format
 msgid "Minimum of %d word in content"
 msgstr "Minimum ng %d na salita sa nilalaman"
 
-#: core/Requirement/Words_count.php:45
 #, php-format
 msgid "Minimum of %d words in content"
 msgstr "Minimum ng %d na mga salita sa nilalaman"
 
-#: core/Requirement/Words_count.php:46
 #, php-format
 msgid "Maximum of %d word in content"
 msgstr "Maximum ng %d na salita sa nilalaman"
 
-#: core/Requirement/Words_count.php:47
 #, php-format
 msgid "Maximum of %d words in content"
 msgstr "Maximum ng %d na mga salita sa nilalaman"
 
-#: core/Requirement/Words_count.php:48
 #, php-format
 msgid "%d word in content"
 msgstr "%d salita sa nilalaman"
 
-#: core/Requirement/Words_count.php:49
 #, php-format
 msgid "%d words in content"
 msgstr "%d mga salita sa nilalaman"
 
-#: core/Requirement/Words_count.php:50
 #, php-format
 msgid "Between %d and %d words in content"
 msgstr "Sa pagitan ng %d at %d na mga salita sa nilalaman"
 
-#: core/Utils/FieldsTabs.php:21
 msgid "Title"
 msgstr "Pamagat"
 
-#: core/Utils/FieldsTabs.php:25
 msgid "Content"
 msgstr "Nilalaman"
 
-#: core/Utils/FieldsTabs.php:29
 msgid "Publish Date / Time"
 msgstr "Petsa / Oras ng Pag-publish"
 
-#: core/Utils/FieldsTabs.php:33
 msgid "Approval"
 msgstr "Pag-apruba"
 
-#: core/Utils/FieldsTabs.php:37
 msgid "Images"
 msgstr "Mga Larawan"
 
-#: core/Utils/FieldsTabs.php:41, fuzzy
 msgid "Audio / Video"
 msgstr "Audio / Video"
 
-#: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
 msgstr "Itinatampok na Imahe"
 
-#: core/Utils/FieldsTabs.php:49
 msgid "Links"
 msgstr "Mga Link"
 
-#: core/Utils/FieldsTabs.php:53, fuzzy
 msgid "Permalink"
 msgstr "Permalink"
 
-#: core/Utils/FieldsTabs.php:57
 msgid "Categories"
 msgstr "Mga Kategorya"
 
-#: core/Utils/FieldsTabs.php:61
 msgid "Tags"
 msgstr "Mga Tag"
 
-#: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
 msgstr "Mga Taxonomies"
 
-#: core/Utils/FieldsTabs.php:69, fuzzy
 msgid "Accessibility"
 msgstr "Accessibility"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
-#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
-#: core/Utils/FieldsTabs.php:118
-#: modules/yoastseo/yoastseo.php:68, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
-#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
-#: modules/checklists/checklists.php:668
 msgid "options cannot be empty."
 msgstr "hindi maaaring walang laman ang mga opsyon."
 
-#: modules/checklists/checklists.php:672
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr ""
-"Mangyaring siguraduhing magdagdag ng pangalan para sa lahat ng mga "
-"pasadyang gawain."
+"Mangyaring siguraduhing magdagdag ng pangalan para sa lahat ng mga pasadyang "
+"gawain."
 
-#: modules/checklists/checklists.php:680
 msgid "No results found"
 msgstr "Walang natagpuang resulta"
 
-#: modules/checklists/checklists.php:681
 msgid "Searching…"
 msgstr "Naghahanap…"
 
-#: modules/checklists/checklists.php:685
 msgid "Suggested Prompts"
 msgstr "Inirerekomendang Mga Prompt"
 
-#: modules/checklists/checklists.php:686
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr ""
 "Ano ang inaasahang tugon ng OpenAI upang markahan ang kinakailangan bilang "
 "pumasa?"
 
-#: modules/checklists/checklists.php:689
 msgid "Clear Content"
 msgstr "Linisin ang Nilalaman"
 
-#: modules/checklists/checklists.php:690
 msgid "Is this content clear and easy to read?"
 msgstr "Malinaw at madaling basahin ba ang nilalaman na ito?"
 
-#: modules/checklists/checklists.php:693
 msgid "Friendly Tone Content"
 msgstr "Nilalaman na may Magandang Tono"
 
-#: modules/checklists/checklists.php:694
 msgid "Is this content tone friendly?"
 msgstr "Palakaibigan ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:697
 msgid "Professional Tone Content"
 msgstr "Nilalaman ng Propesyonal na Tono"
 
-#: modules/checklists/checklists.php:698
 msgid "Is this content tone professional?"
 msgstr "Propesyonal ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:701
 msgid "Persuasive Tone Content"
 msgstr "Nilalaman ng Nakakapaniwala na Tono"
 
-#: modules/checklists/checklists.php:702
 msgid "Is this content tone persuasive?"
 msgstr "Nakakapukaw ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:705
 msgid "Empathetic Tone Content"
 msgstr "Nilalaman na may Empatetikong Tono"
 
-#: modules/checklists/checklists.php:706
 msgid "Is this content tone empathetic?"
 msgstr "Empatik ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:709
 msgid "Adventurous Tone Content"
 msgstr "Mapangahas na Nilalaman"
 
-#: modules/checklists/checklists.php:710
 msgid "Is this content tone adventurous?"
 msgstr "Mapang-akit ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:713
 msgid "Promotional Tone Content"
 msgstr "Nilalaman na may tono ng promosyon"
 
-#: modules/checklists/checklists.php:714
 msgid "Is this content tone promotional?"
 msgstr "Pampromosyong tono ba ang nilalaman na ito?"
 
-#: modules/checklists/checklists.php:780
-#: modules/checklists/checklists.php:865, fuzzy
 msgid "Checklist"
 msgstr "Checklist"
 
-#: modules/checklists/checklists.php:861
-#: modules/checklists/checklists.php:1189
 msgid "You don't have to complete any Checklist tasks."
 msgstr "Hindi mo kailangang kumpletuhin ang anumang Checklist tasks."
 
-#: modules/checklists/checklists.php:866
 msgid "Are you sure you want to publish anyway?"
 msgstr "Sigurado ka bang nais mong ipublish pa rin?"
 
-#: modules/checklists/checklists.php:870
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "Sigurado ka bang nais mong i-update ang nai-publish na post kahit na?"
 
-#: modules/checklists/checklists.php:874
 msgid "Please complete the following tasks before publishing:"
 msgstr "Mangyaring kumpletuhin ang mga sumusunod na gawain bago ilathala:"
 
-#: modules/checklists/checklists.php:878
 msgid "Please complete the following tasks before updating the published post:"
 msgstr ""
 "Mangyaring kumpletuhin ang mga sumusunod na gawain bago i-update ang "
 "nailathalang post:"
 
-#: modules/checklists/checklists.php:882
-#: modules/checklists/checklists.php:886
 msgid "Not required, but important: "
 msgstr "Hindi kinakailangan, ngunit mahalaga: "
 
-#: modules/checklists/checklists.php:892
 msgid "One or more items in the checklist are not completed"
 msgstr "Isang o higit pang mga item sa checklist ang hindi natapos"
 
-#: modules/checklists/checklists.php:919
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "Hindi mo kailangang kumpletuhin ang anumang %sChecklist tasks%s."
 
-#: modules/checklists/checklists.php:924
-#: modules/checklists/assets/js/gutenberg-panel.jsx:282
 msgid "Check Now"
 msgstr "Suriin Ngayon"
 
-#: modules/checklists/checklists.php:925
 msgid "Ok"
 msgstr "Ayos"
 
-#: modules/checklists/checklists.php:926
 msgid "No"
 msgstr "Hindi"
 
-#: modules/checklists/checklists.php:927
 msgid "Yes"
 msgstr "Oo"
 
-#: modules/checklists/checklists.php:1091
 msgid "Task"
 msgstr "Gawain"
 
-#: modules/checklists/checklists.php:1092
 msgid "Disabled, Recommended or Required"
 msgstr "Hindi pinagana, InirRecommended o Kinakailangan"
 
-#: modules/checklists/checklists.php:1093
 msgid "Options"
 msgstr "Mga Pagpipilian"
 
-#: modules/checklists/checklists.php:1094
 msgid "Add custom task"
 msgstr "Magdagdag ng pasadyang gawain"
 
-#: modules/checklists/checklists.php:1187
 msgid "Please complete the required(*) checklists task."
 msgstr "Mangyaring kumpletuhin ang kinakailangang(*) mga checklist na gawain."
 
-#: modules/checklists/checklists.php:1190
 msgid "required"
 msgstr "kinakailangan"
 
-#: modules/checklists/checklists.php:1191
-#: modules/checklists/templates/meta-box.php:11
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Hindi available ang mga checklist na gawain sa Elementor editors"
 
-#: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
-msgstr "All in One SEO Puntos ng Pamagat"
+msgstr "All in One SEO Headline Score"
 
-#: modules/checklists/pro-requirements.php:31
 msgid "All in One SEO Score"
-msgstr "All in One SEO Puntos"
+msgstr "All in One SEO Score"
 
-#: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr "Taas ng tampok na larawan"
+msgstr "Taas ng tampok na imahe"
 
-#: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr "Lapad ng tampok na larawan"
+msgstr "Lapad ng tampok na imahe"
 
-#: modules/checklists/pro-requirements.php:58
 msgid "Heading in hierarchy"
 msgstr "Pamagat sa hierarchy"
 
-#: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
-msgstr "Bilang ng mga larawan sa nilalaman"
+msgstr "Bilang ng mga imahe sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
-msgstr "Bilang ng mga karakter sa mga caption ng larawan"
+msgstr "Bilang ng mga karakter sa mga caption ng imahe"
 
-#: modules/checklists/pro-requirements.php:85
 msgid "Number of audio in content"
 msgstr "Bilang ng audio sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:94
 msgid "Number of video in content"
 msgstr "Bilang ng video sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr "Inaprubahan ng papel"
+msgstr "Naaprubahan ng role"
 
-#: modules/checklists/pro-requirements.php:110
 msgid "Approved by user"
-msgstr "Inaprubahan ng gumagamit"
+msgstr "Naaprubahan ng user"
 
-#: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "Iwasan ang mga tag ng pamagat sa nilalaman"
+msgstr "Iwasan ang mga heading tag sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:124
 msgid "Published at exact time"
 msgstr "Nai-publish sa eksaktong oras"
 
-#: modules/checklists/pro-requirements.php:132
 msgid "Publish time should be in the future"
-msgstr "Dapat nasa hinaharap ang oras ng pag-publish"
+msgstr "Dapat nasa hinaharap ang oras ng publikasyon"
 
-#: modules/checklists/pro-requirements.php:140
 msgid "Rank Math SEO Score"
-msgstr "Rank Math SEO Puntos"
+msgstr "Rank Math SEO Score"
 
-#: modules/checklists/pro-requirements.php:149
 msgid "Only one H1 tag in content"
 msgstr "Isang H1 tag lamang sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:156
 msgid "Tables have a header row"
 msgstr "May header row ang mga talahanayan"
 
-#: modules/checklists/pro-requirements.php:163
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Suriin ang kahon na \"Pahintulutan ang backorders?\""
+msgstr "Suriin ang kahon na \"Payagan ang backorders?\""
 
-#: modules/checklists/pro-requirements.php:171
 msgid "Select some products for \"Cross-sells\""
 msgstr "Pumili ng ilang produkto para sa \"Cross-sells\""
 
-#: modules/checklists/pro-requirements.php:179
 msgid "Discount for the \"Sale price\""
 msgstr "Diskwento para sa \"Sale price\""
 
-#: modules/checklists/pro-requirements.php:187
 msgid "Check the \"Downloadable\" box"
-msgstr "Tsekin ang kahon ng \"Downloadable\""
+msgstr "I-check ang kahon na \"Downloadable\""
 
-#: modules/checklists/pro-requirements.php:195
 msgid "Product image"
 msgstr "Larawan ng produkto"
 
-#: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Manage stock?\" box"
-msgstr "Tsekin ang kahon ng \"Manage stock?\""
+msgstr "I-check ang kahon na \"Manage stock?\""
 
-#: modules/checklists/pro-requirements.php:211
 msgid "Enter a \"Regular price\""
 msgstr "Ilagay ang \"Regular price\""
 
-#: modules/checklists/pro-requirements.php:219
 msgid "Enter a \"Sale price\""
 msgstr "Ilagay ang \"Sale price\""
 
-#: modules/checklists/pro-requirements.php:227
 msgid "Schedule the \"Sale price\""
-msgstr "Itakda ang \"Sale price\""
+msgstr "Iskedyul ang \"Sale price\""
 
-#: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"SKU\""
 msgstr "Ilagay ang \"SKU\""
 
-#: modules/checklists/pro-requirements.php:243
 msgid "Check the \"Sold individually\" box"
-msgstr "Tsekin ang kahon ng \"Sold individually\""
+msgstr "I-check ang kahon na \"Sold individually\""
 
-#: modules/checklists/pro-requirements.php:251
 msgid "Select some products for \"Upsells\""
 msgstr "Pumili ng ilang produkto para sa \"Upsells\""
 
-#: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Virtual\" box"
-msgstr "Tsekin ang kahon ng \"Virtual\""
+msgstr "I-check ang kahon na \"Virtual\""
 
-#: modules/checklists/pro-requirements.php:290
 #, php-format
 msgid "Number of Characters in %s field"
 msgstr "Bilang ng mga karakter sa %s na field"
 
-#: modules/checklists/pro-requirements.php:303
 #, php-format
 msgid "%s is filled"
 msgstr "%s ay puno"
 
-#: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
 msgstr "Tungkol sa PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:23
 msgid "About"
 msgstr "Tungkol"
 
-#: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
 msgstr "Dokumentasyon ng PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:30
 msgid "Documentation"
 msgstr "Dokumentasyon"
 
-#: modules/checklists/templates/footer.php:37
 msgid "Contact the PublishPress team"
 msgstr "Kontakin ang pangkat ng PublishPress"
 
-#: modules/checklists/templates/footer.php:37
 msgid "Contact"
 msgstr "Makipag-ugnayan"
 
-#: modules/checklists/templates/global-checklists.php:6
 msgid "Settings saved successfully!"
 msgstr "Matagumpay na nai-save ang mga setting!"
 
-#: modules/checklists/templates/global-checklists.php:12
-#: modules/checklists/templates/global-checklists.php:217
 msgid "Save Changes"
 msgstr "I-save ang Mga Pagbabago"
 
-#: modules/checklists/templates/global-checklists.php:152
 msgid "Pro feature"
 msgstr "Pro na tampok"
 
-#: modules/checklists/templates/global-checklists.php:165
 #, php-format
 msgid "No %s requirements for this post type."
 msgstr "Walang %s na kinakailangan para sa uri ng post na ito."
 
-#: modules/checklists/templates/global-checklists.php:183
 msgid "New Item"
 msgstr "Bagong Item"
 
-#: modules/checklists/templates/global-checklists.php:184
 msgid "Description"
 msgstr "Paglalarawan"
 
-#: modules/checklists/templates/global-checklists.php:196
 msgid ""
-"Custom tasks do not complete automatically. Users must check the box to "
-"show they have completed the task."
+"Custom tasks do not complete automatically. Users must check the box to show "
+"they have completed the task."
 msgstr ""
 "Ang mga pasadyang gawain ay hindi awtomatikong natatapos. Dapat markahan ng "
 "mga gumagamit ang kahon upang ipakita na natapos na nila ang gawain."
 
-#: modules/checklists/templates/global-checklists.php:203
 msgid "Add OpenAI Prompt task"
 msgstr "Magdagdag ng OpenAI Prompt na gawain"
 
-#: modules/checklists/templates/global-checklists.php:210
 msgid "The prompt should be in form of a question."
 msgstr "Dapat nasa anyo ng tanong ang prompt."
 
-#: modules/checklists/templates/global-checklists.php:210
 msgid "This feature requires an OpenAI API Key."
 msgstr "Kailangan ng feature na ito ng OpenAI API Key."
 
-#: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
 msgstr "Mga Latin na karakter sa permalink"
 
-#: modules/permalinks/permalinks.php:65
 msgid "Permalinks"
 msgstr "Mga Permalink"
 
-#: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
 msgstr "Tukuyin ang mga gawain na may kaugnayan sa mga permalink"
 
-#: modules/permissions/permissions.php:68
 msgid "Permissions"
 msgstr "Mga Pahintulot"
 
-#: modules/permissions/permissions.php:107
 msgid "Exclude User Roles"
-msgstr "Iwasan ang Mga Tungkulin ng Gumagamit"
+msgstr "I-exclude ang User Roles"
 
-#: modules/reviews/reviews.php:61
 msgid "Reviews"
 msgstr "Mga pagsusuri"
 
-#: modules/settings/settings.php:62
-#: modules/settings/settings.php:128
 msgid "Checklists Settings"
 msgstr "Mga Setting ng Checklist"
 
-#: modules/settings/settings.php:151
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
-"Sigurado ka bang nais mong i-reset ang lahat ng na-rename na checklist "
-"items sa kanilang default na label? Ang aksyong ito ay hindi maibabalik."
+"Sigurado ka bang nais mong i-reset ang lahat ng mga na-renamed na checklist "
+"item sa kanilang default na label? Hindi maibabalik ang aksyong ito."
 
-#: modules/settings/settings.php:314
 msgid "Features"
 msgstr "Mga Tampok"
 
-#: modules/settings/settings.php:315
 msgid "Feel free to select only the features you need."
 msgstr "Huwag mag-atubiling pumili lamang ng mga tampok na kailangan mo."
 
-#: modules/settings/settings.php:323
 msgid "Enabled features"
 msgstr "Mga pinagana na tampok"
 
-#: modules/settings/settings.php:378
 msgid "There are no PublishPress modules registered"
 msgstr "Walang nakarehistrong mga module ng PublishPress"
 
-#: modules/settings/settings.php:474
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
@@ -1142,97 +855,76 @@ msgstr ""
 "Hindi pinagana dahil ang add_post_type_support('%1$s', '%2$s') ay kasama sa "
 "isang na-load na file."
 
-#: modules/settings/settings.php:770
 msgid "Enable Who Can Ignore:"
 msgstr "Paganahin kung Sino ang Maaaring I-ignore:"
 
-#: modules/settings/settings.php:778
 msgid "Show warning icon:"
 msgstr "Ipakita ang icon ng babala:"
 
-#: modules/settings/settings.php:786
 msgid "Delete data on uninstall:"
 msgstr "Burahin ang data sa pag-uninstall:"
 
-#: modules/settings/settings.php:795
 msgid "Enable Status Filter:"
 msgstr "Paganahin ang Status Filter:"
 
-#: modules/settings/settings.php:805
 msgid "Enable Duplicate Checklists:"
 msgstr "Paganahin ang Duplicate Checklists:"
 
-#: modules/settings/settings.php:815
 msgid "Show Checklists column in post lists:"
 msgstr "Ipakita ang kolum ng Checklist sa mga listahan ng post:"
 
-#: modules/settings/settings.php:825
 msgid "Enable Taxonomy Filter:"
-msgstr "I-enable ang Filter ng Taksonomiya:"
+msgstr "I-enable ang Taxonomy Filter:"
 
-#: modules/settings/settings.php:844
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
-msgstr "Huwag paganahin ang \"Status\" na opsyon kapag gumagamit ng \"Quick Edit\":"
+msgstr ""
+"Huwag paganahin ang \"Status\" na opsyon kapag gumagamit ng \"Quick Edit\":"
 
-#: modules/settings/settings.php:852
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Ganap na i-disable ang \"Quick Edit\":"
 
-#: modules/settings/settings.php:860
 msgid "Disable \"Publish\" button:"
 msgstr "I-disable ang \"Publish\" na button:"
 
-#: modules/settings/settings.php:878
 msgid "Complete Icon:"
 msgstr "Kumpletong Icon:"
 
-#: modules/settings/settings.php:886
 msgid "Incomplete Icon:"
-msgstr "Di-kumpletong Icon:"
+msgstr "Hindi Kumpletong Icon:"
 
-#: modules/settings/settings.php:894
 msgid "Required Complete Color:"
 msgstr "Kinakailangang Kumpletong Kulay:"
 
-#: modules/settings/settings.php:902
 msgid "Required Incomplete Color:"
-msgstr "Kinakailangang Di-kumpletong Kulay:"
+msgstr "Kinakailangang Hindi Kumpletong Kulay:"
 
-#: modules/settings/settings.php:910
 msgid "Recommended Complete Color:"
 msgstr "Inirerekomendang Kumpletong Kulay:"
 
-#: modules/settings/settings.php:918
 msgid "Recommended Incomplete Color:"
-msgstr "Inirerekomendang Di-kumpletong Kulay:"
+msgstr "Inirerekomendang Hindi Kumpletong Kulay:"
 
-#: modules/settings/settings.php:936, fuzzy
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
 
-#: modules/settings/settings.php:951
 msgid "Reset Renamed Checklist:"
-msgstr "I-reset ang Na-rename na Checklist:"
+msgstr "I-reset ang Pinangalanang Checklist:"
 
-#: modules/settings/settings.php:970
 msgid "Post types:"
 msgstr "Mga uri ng post:"
 
-#: modules/settings/settings.php:1003
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr ""
-"Pinapayagan nito ang mga gawain na hindi paganahin para sa mga partikular "
-"na status tulad ng \"Draft\" o \"Published."
+"Pinapayagan nito ang mga gawain na hindi paganahin para sa mga partikular na "
+"status tulad ng \"Draft\" o \"Published."
 
-#: modules/settings/settings.php:1024
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
-"Pinapayagan nito ang mga gumagamit na kopyahin ang umiiral na mga gawain sa "
-"checklist."
+"Pinapayagan nito ang mga gumagamit na kopyahin ang mga umiiral na checklist "
+"na gawain."
 
-#: modules/settings/settings.php:1046
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1240,16 +932,14 @@ msgstr ""
 "Magdagdag ng Checklists na kolum sa screen ng Mga Post na nagpapakita kung "
 "gaano karaming kinakailangan ang kumpleto."
 
-#: modules/settings/settings.php:1067
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
-"Pinapayagan nito ang mga gawain na ma-disable para sa mga post na may "
-"partikular na mga termino ng taxonomy. Pumunta sa tab na \"Mga Uri ng "
-"Post\" upang pumili ng mga termino."
+"Pinapayagan nito ang mga gawain na hindi paganahin para sa mga post na may "
+"tiyak na mga termino ng taxonomy. Pumunta sa tab na \"Mga Uri ng Post\" "
+"upang pumili ng mga termino."
 
-#: modules/settings/settings.php:1089
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1257,19 +947,17 @@ msgstr ""
 "Ipinapakita nito ang isang icon ng babala sa kahon ng \"Checklists\" kung "
 "hindi kumpleto ang mga kinakailangan."
 
-#: modules/settings/settings.php:1109
 msgid ""
-"When enabled, all PublishPress Checklists data will be deleted if the "
-"plugin is uninstalled."
+"When enabled, all PublishPress Checklists data will be deleted if the plugin "
+"is uninstalled."
 msgstr ""
-"Kapag naka-enable, lahat ng data ng PublishPress Checklists ay mabubura "
-"kung ang plugin ay aalisin."
+"Kapag naka-enable, lahat ng data ng PublishPress Checklists ay mabubura kung "
+"ang plugin ay aalisin."
 
-#: modules/settings/settings.php:1130
 msgid "This will show \"Who can ignore\" options."
-msgstr "Ipinapakita nito ang mga opsyon na \"Sino ang maaaring hindi pansinin\"."
+msgstr ""
+"Ipinapakita nito ang mga opsyon na \"Sino ang maaaring hindi pansinin\"."
 
-#: modules/settings/settings.php:1151
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1277,7 +965,6 @@ msgstr ""
 "Inirerekomenda ang pag-disable ng \"Status\" na opsyon dahil maaari itong "
 "magamit upang maiwasan ang paggamit ng mga kinakailangan ng Checklists."
 
-#: modules/settings/settings.php:1172
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1285,212 +972,176 @@ msgstr ""
 "Hihinto nito ang \"Quick Edit\" para sa lahat ng mga gumagamit maliban sa "
 "mga may kakayahang \"manage_options\"."
 
-#: modules/settings/settings.php:1193
 msgid ""
-"This will disable the \"Publish\" button when checklist requirements are "
-"not met."
+"This will disable the \"Publish\" button when checklist requirements are not "
+"met."
 msgstr ""
 "Hihinto nito ang \"Publish\" na button kapag hindi natutugunan ang mga "
 "kinakailangan ng checklist."
 
-#: modules/settings/settings.php:1212
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
-"Ilagay ang iyong API Key upang magamit ang OpenAI prompts sa checklist "
-"tasks."
+"Ilagay ang iyong API Key upang magamit ang OpenAI prompts sa checklist tasks."
 
-#: modules/settings/settings.php:1266
 msgid "Post Types"
 msgstr "Mga Uri ng Post"
 
-#: modules/settings/settings.php:1267
 msgid "General"
 msgstr "Pangkalahatan"
 
-#: modules/settings/settings.php:1268
 msgid "Publishing Options"
 msgstr "Mga Opsyon sa Pag-publish"
 
-#: modules/settings/settings.php:1269
 msgid "Appearance"
 msgstr "Hitsura"
 
-#: modules/settings/settings.php:1270
 msgid "Integration"
 msgstr "Pagsasama"
 
-#: modules/settings/settings.php:1271
 msgid "Tools"
 msgstr "Mga Tool"
 
-#: modules/settings/settings.php:1318
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr ""
-"Ilagay ang pangalan ng klase ng Dashicons (hal., dashicons-yes, "
-"dashicons-saved). "
+"Ipasok ang pangalan ng klase ng Dashicons (hal. dashicons-yes, dashicons-"
+"saved). "
 
-#: modules/settings/settings.php:1319
-#: modules/settings/settings.php:1334
 msgid "View Dashicons"
 msgstr "Tingnan ang Dashicons"
 
-#: modules/settings/settings.php:1333
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
-"Ilagay ang pangalan ng klase ng Dashicons (hal., dashicons-no, "
-"dashicons-dismiss). "
+"Ipasok ang pangalan ng klase ng Dashicons (hal. dashicons-no, dashicons-"
+"dismiss). "
 
-#: modules/settings/settings.php:1396
 msgid "Reset All Custom Labels"
 msgstr "I-reset ang Lahat ng Pasadyang Label"
 
-#: modules/settings/settings.php:1398
-msgid "This will reset all renamed checklist items back to their default labels."
+msgid ""
+"This will reset all renamed checklist items back to their default labels."
 msgstr ""
-"I-reset nito ang lahat ng mga pinalitang item sa checklist pabalik sa "
+"Ito ay magbabalik sa lahat ng pinangalanang mga item ng checklist sa "
 "kanilang mga default na label."
 
-#: modules/settings/settings.php:1408
 msgid "Security check failed."
 msgstr "Nabigo ang pagsusuri sa seguridad."
 
-#: modules/settings/settings.php:1413
 msgid "You do not have permission to perform this action."
 msgstr "Wala kang pahintulot na isagawa ang aksyong ito."
 
-#: modules/settings/settings.php:1458
 msgid "All custom labels have been reset successfully."
-msgstr "Matagumpay na na-reset ang lahat ng pasadyang label."
+msgstr "Lahat ng pasadyang label ay matagumpay na na-reset."
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
 msgstr "Bilang ng mga karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
 msgstr "Minimum na %d na karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
 msgstr "Minimum ng %d na mga karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
 msgstr "Sobra ng %d karakter sa pangunahing keyword ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
 msgstr "Maximum na %d na karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
 msgstr "%d karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
 msgstr "%d mga karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
 msgstr "Sa pagitan ng %d at %d na karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:39
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
 msgstr "Bilang ng mga karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
 msgstr "Minimum ng %d na karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
 msgstr "Minimum ng %d na mga karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
 msgstr "Sobra ng %d karakter sa meta description ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
 msgstr "Maximum na %d na karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "%d character in Yoast SEO meta description"
 msgstr "%d karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
 msgstr "%d mga karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
 msgstr "Sa pagitan ng %d at %d na karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
 msgid "Minimum Yoast SEO readability score"
 msgstr "Minimum na marka ng readability ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
 #. translators: %s expands to the readability score
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
 msgid "OK"
 msgstr "Ayos"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 msgid "Good"
 msgstr "Maganda"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
 msgid "Minimum Yoast SEO analysis score"
 msgstr "Minimum na marka ng pagsusuri ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
 #. translators: %s expands to the seo score
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
-#: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
 msgstr "Tukuyin ang mga gawain na may kaugnayan sa Yoast SEO"
 
-#: publishpress-checklists.php:103
 msgid "This plugin can be deleted."
 msgstr "Maaaring tanggalin ang plugin na ito."
 
-#: publishpress-checklists.php:154
 #, php-format
 msgid ""
-"You're using PublishPress Checklists Free. The Pro version has more "
-"features and support. %sUpgrade to Pro%s"
+"You're using PublishPress Checklists Free. The Pro version has more features "
+"and support. %sUpgrade to Pro%s"
 msgstr ""
 "Gumagamit ka ng PublishPress Checklists Free. Ang bersyon ng Pro ay may "
 "higit pang mga tampok at suporta. %sMag-upgrade sa Pro%s"
+
+#~ msgid "Who can ignore the task?"
+#~ msgstr "Sino ang maaaring hindi pansinin ang gawain?"
+
+#~ msgid "Add to these post types:"
+#~ msgstr "Idagdag sa mga uri ng post na ito:"
+
+#~ msgid "This allows users to duplicate existing checklist task."
+#~ msgstr ""
+#~ "Pinapayagan nito ang mga gumagamit na kopyahin ang umiiral na checklist "
+#~ "na gawain."
+
+#~ msgid "Validation error. Kindly reload this page and try agai.n"
+#~ msgstr ""
+#~ "Error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang "
+#~ "muli."

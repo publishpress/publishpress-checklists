@@ -39,20 +39,16 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
                             <?php endif; ?>
 
                             <?php
-                            if ($req['is_custom']) :
-                                $icon_class = $req['status'] ? 'dashicons-yes' : '';
-                            else:
-                                // Get custom icon settings
-                                $legacyPlugin = \PublishPress\Checklists\Core\Factory::getLegacyPlugin();
-                                $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
-                                
-                                // Use the same icons for both Required and Recommended
-                                if ($req['status']) {
-                                    $icon_class = isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes';
-                                } else {
-                                    $icon_class = isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no';
-                                }
-                            endif;
+                            // Get custom icon settings.
+                            $legacyPlugin = \PublishPress\Checklists\Core\Factory::getLegacyPlugin();
+                            $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+
+                            // Use the same icons for both Required and Recommended, including custom items.
+                            if ($req['status']) {
+                                $icon_class = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
+                            } else {
+                                $icon_class = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
+                            }
                             ?>
                             <div class="status-icon dashicons <?php echo esc_attr($icon_class); ?>"></div>
                             <div class="status-label">

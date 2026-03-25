@@ -361,26 +361,60 @@ class Prohibited_categories extends Base_multiple
             return $requirements;
         }
 
-        $post_id = isset($post->ID) ? $post->ID : 0;
-        $post_categories = wp_get_post_categories($post_id);
-        $blocked_categories = array();
+        $selected_categories = array();
         foreach ($option_value as $category_str) {
-            [$category_id, $category_name] = explode($this->DELIMITER, $category_str);
-            if (in_array($category_id, $post_categories)) {
-                $blocked_categories[] = $category_name;
-            }
+            [, $category_name] = explode($this->DELIMITER, $category_str);
+            $selected_categories[] = $category_name;
         }
 
-        $blocked_category_names = implode(', ', $blocked_categories);
+        $blocked_category_names = implode(', ', $selected_categories);
 
         if (empty($blocked_category_names)) {
             return $requirements;
         }
 
-        // Register in the requirements list
-        $requirements[$this->name]['label'] = sprintf($this->lang['label'], $blocked_category_names);
+        // Register in the requirements list.
+        $requirements[$this->name]['label'] = $this->get_prohibited_categories_label_for_display(
+            $blocked_category_names
+        );
 
         return $requirements;
+    }
+
+    /**
+     * Returns the rendered label for editing screens, preserving prohibited category names.
+     *
+     * @param string $category_names
+     *
+     * @return string
+     */
+    protected function get_prohibited_categories_label_for_display($category_names)
+    {
+        $default_label = sprintf($this->lang['label'], $category_names);
+        $editor_label = trim($this->get_editor_label());
+
+        if ('' === $editor_label) {
+            return $default_label;
+        }
+
+        if ('' === $category_names) {
+            return $editor_label;
+        }
+
+        if (false !== strpos($editor_label, '%categories%')) {
+            return str_replace('%categories%', $category_names, $editor_label);
+        }
+
+        if (preg_match('/%(?:\d+\$)?s/', $editor_label)) {
+            return sprintf($editor_label, $category_names);
+        }
+
+        return sprintf(
+            /* translators: 1: custom editor label, 2: prohibited category names. */
+            __('%1$s - %2$s', 'publishpress-checklists'),
+            $editor_label,
+            $category_names
+        );
     }
 
 

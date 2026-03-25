@@ -332,25 +332,58 @@ class Required_tags extends Base_multiple
             return $requirements;
         }
 
-        $post_tags = wp_get_post_tags($post->ID, array('fields' => 'ids'));
-        $required_tags = array();
+        $selected_tags = array();
         foreach ($option_value as $tag_str) {
-            [$tag_id, $tag_name] = explode($this->DELIMITER, $tag_str);
-            if (!in_array($tag_id, $post_tags)) {
-                $required_tags[] = $tag_name;
-            }
+            [, $tag_name] = explode($this->DELIMITER, $tag_str);
+            $selected_tags[] = $tag_name;
         }
 
-        $required_tag_names = implode(', ', $required_tags);
+        $required_tag_names = implode(', ', $selected_tags);
 
         if (empty($required_tag_names)) {
             return $requirements;
         }
 
-        // Register in the requirements list
-        $requirements[$this->name]['label'] = sprintf($this->lang['label'], $required_tag_names);
+        // Register in the requirements list.
+        $requirements[$this->name]['label'] = $this->get_required_tags_label_for_display($required_tag_names);
 
         return $requirements;
+    }
+
+    /**
+     * Returns the rendered label for editing screens, preserving required tag names.
+     *
+     * @param string $tag_names
+     *
+     * @return string
+     */
+    protected function get_required_tags_label_for_display($tag_names)
+    {
+        $default_label = sprintf($this->lang['label'], $tag_names);
+        $editor_label = trim($this->get_editor_label());
+
+        if ('' === $editor_label) {
+            return $default_label;
+        }
+
+        if ('' === $tag_names) {
+            return $editor_label;
+        }
+
+        if (false !== strpos($editor_label, '%tags%')) {
+            return str_replace('%tags%', $tag_names, $editor_label);
+        }
+
+        if (preg_match('/%(?:\d+\$)?s/', $editor_label)) {
+            return sprintf($editor_label, $tag_names);
+        }
+
+        return sprintf(
+            /* translators: 1: custom editor label, 2: required tag names. */
+            __('%1$s - %2$s', 'publishpress-checklists'),
+            $editor_label,
+            $tag_names
+        );
     }
 
 

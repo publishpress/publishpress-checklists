@@ -83,6 +83,7 @@ if (!class_exists('PPCH_Settings')) {
                     'required_incomplete_color'   => '#ef5350',
                     'recommended_complete_color'  => '#66bb6a',
                     'recommended_incomplete_color' => '#ef5350',
+                    'enable_rename_label_editor_panel' => Base_requirement::VALUE_YES,
                 ],
                 'autoload'             => true,
                 'add_menu'             => true,
@@ -149,6 +150,8 @@ if (!class_exists('PPCH_Settings')) {
                         'ajaxUrl' => admin_url('admin-ajax.php'),
                         'resetLabelsNonce' => wp_create_nonce('ppch_reset_custom_labels'),
                         'resetLabelsConfirm' => __('Are you sure you want to reset all renamed checklist items to their default labels? This action cannot be undone.', 'publishpress-checklists'),
+                        'resetLabelsLoading' => __('Resetting...', 'publishpress-checklists'),
+                        'resetLabelsButton' => __('Reset All Renamed Labels', 'publishpress-checklists'),
                     ]);
                 }
             }
@@ -647,6 +650,15 @@ if (!class_exists('PPCH_Settings')) {
                 $new_options['disable_publish_button'] = Base_requirement::VALUE_NO;
             }
 
+            if (!isset($new_options['enable_rename_label_editor_panel'])) {
+                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_YES;
+            }
+
+            $new_options['enable_rename_label_editor_panel'] =
+                Base_requirement::VALUE_YES === $new_options['enable_rename_label_editor_panel']
+                ? Base_requirement::VALUE_YES
+                : Base_requirement::VALUE_NO;
+
             if (!isset($new_options['delete_data_on_uninstall'])) {
                 $new_options['delete_data_on_uninstall'] = 'off';
             }
@@ -767,7 +779,7 @@ if (!class_exists('PPCH_Settings')) {
 
             add_settings_field(
                 'show_who_can_ignore',
-                __('Enable Who Can Ignore:', 'publishpress-checklists'),
+                __('Enable User Roles Filter:', 'publishpress-checklists'),
                 [$this, 'settings_who_can_ignore_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_general'
@@ -917,6 +929,14 @@ if (!class_exists('PPCH_Settings')) {
                 'recommended_incomplete_color',
                 __('Recommended Incomplete Color:', 'publishpress-checklists'),
                 [$this, 'settings_recommended_incomplete_color_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'enable_rename_label_editor_panel',
+                __('Enable rename label in editor panel:', 'publishpress-checklists'),
+                [$this, 'settings_enable_rename_label_editor_panel_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_appearance'
             );
@@ -1128,7 +1148,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[who_can_ignore_option]" '
                 . checked($value, 'yes', false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'This will show "Who can ignore" options.',
+                'This will show "Exclude User Roles" options.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -1249,6 +1269,20 @@ if (!class_exists('PPCH_Settings')) {
                 $new_options['who_can_ignore_option'] = Base_requirement::VALUE_YES;
             }
             $new_options['who_can_ignore_option'] = Base_requirement::VALUE_YES === $new_options['who_can_ignore_option'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
+
+            if (isset($new_options['complete_icon'])) {
+                $new_options['complete_icon'] = sanitize_text_field(trim($new_options['complete_icon']));
+            }
+            if (empty($new_options['complete_icon'])) {
+                $new_options['complete_icon'] = 'dashicons-yes';
+            }
+
+            if (isset($new_options['incomplete_icon'])) {
+                $new_options['incomplete_icon'] = sanitize_text_field(trim($new_options['incomplete_icon']));
+            }
+            if (empty($new_options['incomplete_icon'])) {
+                $new_options['incomplete_icon'] = 'dashicons-no';
+            }
 
             return $new_options;
         }
@@ -1388,14 +1422,34 @@ if (!class_exists('PPCH_Settings')) {
         }
 
         /**
+         * Settings field for enabling rename label in editor panel.
+         */
+        public function settings_enable_rename_label_editor_panel_option($args = [])
+        {
+            $id = $this->module->options_group_name . '_enable_rename_label_editor_panel';
+            $value = isset($this->module->options->enable_rename_label_editor_panel)
+                ? $this->module->options->enable_rename_label_editor_panel
+                : Base_requirement::VALUE_YES;
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[enable_rename_label_editor_panel]" '
+                . checked($value, Base_requirement::VALUE_YES, false) . ' />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'Enable custom rename labels in the checklist editor panel.',
+                'publishpress-checklists'
+            );
+            echo '</label>';
+        }
+
+        /**
          * Settings field for Reset Custom Labels button
          */
         public function settings_reset_custom_labels_option($args = [])
         {
             echo '<button type="button" id="ppch-reset-custom-labels" class="button button-secondary">';
-            echo esc_html__('Reset All Custom Labels', 'publishpress-checklists');
+            echo esc_html__('Reset All Renamed Labels', 'publishpress-checklists');
             echo '</button>';
-            echo '<p class="description">' . esc_html__('This will reset all renamed checklist items back to their default labels.', 'publishpress-checklists') . '</p>';
+            echo '<p class="description">' . esc_html__('This will reset all renamed checklist labels for WP Admin and Editing screen back to their default labels.', 'publishpress-checklists') . '</p>';
         }
 
         /**
@@ -1423,10 +1477,10 @@ if (!class_exists('PPCH_Settings')) {
             // Convert to array for easier manipulation
             $options_array = (array) $options;
 
-            // Remove all custom label options (keys ending with _custom_label)
+            // Remove all renamed label options (keys ending with _custom_label or _editor_label)
             $updated = false;
             foreach ($options_array as $key => $value) {
-                if (preg_match('/_custom_label$/', $key)) {
+                if (preg_match('/(_custom_label|_editor_label)$/', $key)) {
                     unset($options_array[$key]);
                     $updated = true;
                 }
@@ -1455,7 +1509,7 @@ if (!class_exists('PPCH_Settings')) {
                 delete_transient('ppch_reset_labels_notice');
                 ?>
                 <div class="notice notice-success is-dismissible">
-                    <p><?php esc_html_e('All custom labels have been reset successfully.', 'publishpress-checklists'); ?></p>
+                    <p><?php esc_html_e('All renamed labels have been reset successfully.', 'publishpress-checklists'); ?></p>
                 </div>
                 <?php
             }

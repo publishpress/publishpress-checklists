@@ -119,13 +119,49 @@ class Approved_by extends Base_multiple implements Interface_required
         }
         $user_role_names = implode(', ', $user_role_names);
 
-        // Register in the requirements list
-        $requirements[$this->name]['label'] = sprintf($this->lang['label'], $user_role_names);
+        // Register in the requirements list.
+        $requirements[$this->name]['label'] = $this->get_approval_label_for_display($user_role_names);
         //set custom to false if user role is not permitted to prevent any validation
         $requirements[$this->name]['is_custom'] = $this->isUserRolePermitted();
         $requirements[$this->name]['id'] = 'approved_by';
 
         return $requirements;
+    }
+
+    /**
+     * Returns the rendered label for editing screens, preserving selected roles.
+     *
+     * @param string $user_role_names
+     *
+     * @return string
+     */
+    protected function get_approval_label_for_display($user_role_names)
+    {
+        $default_label = sprintf($this->lang['label'], $user_role_names);
+        $editor_label = trim($this->get_editor_label());
+
+        if ('' === $editor_label) {
+            return $default_label;
+        }
+
+        if ('' === $user_role_names) {
+            return $editor_label;
+        }
+
+        if (false !== strpos($editor_label, '%roles%')) {
+            return str_replace('%roles%', $user_role_names, $editor_label);
+        }
+
+        if (preg_match('/%(?:\d+\$)?s/', $editor_label)) {
+            return sprintf($editor_label, $user_role_names);
+        }
+
+        return sprintf(
+            /* translators: 1: custom editor label, 2: selected role names. */
+            __('%1$s - %2$s', 'publishpress-checklists'),
+            $editor_label,
+            $user_role_names
+        );
     }
 
     /**

@@ -14,6 +14,7 @@ class PPChecklistsPanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            isSupportedContext: true,
             showRequiredLegend: false,
             requirements: [],
             failedRequirements: {
@@ -26,7 +27,9 @@ class PPChecklistsPanel extends Component {
     componentDidMount() {
 
         this.isMounted = true;
-        if (typeof ppChecklists !== "undefined") {
+        const isSupportedContext = this.updateEditorContext();
+
+        if (isSupportedContext && typeof ppChecklists !== "undefined") {
             this.updateRequirements(ppChecklists.requirements);
         }
 
@@ -69,14 +72,16 @@ class PPChecklistsPanel extends Component {
         };
 
         // Subscribe to changes to trigger validation
-        wp.data.subscribe(() => {
-            if (this.isMounted && this.state.requirements.length > 0) {
+        this.contextSubscription = wp.data.subscribe(() => {
+            const currentContextSupported = this.updateEditorContext();
+            if (this.isMounted && currentContextSupported && this.state.requirements.length > 0) {
                 validateRequirements();
             }
         });
 
         if (!this.oldStatus || this.oldStatus == '') {
-            this.oldStatus = wp.data.select('core/editor').getCurrentPost()['status'];
+            const currentPost = wp.data.select('core/editor').getCurrentPost();
+            this.oldStatus = currentPost && currentPost.status ? currentPost.status : '';
         }    
         
         /**
@@ -103,6 +108,10 @@ class PPChecklistsPanel extends Component {
 
         wp.data.dispatch('core/editor').savePost = async (options) => {
             options = options || {};
+
+            if (!this.isSupportedContext()) {
+                return coreSavePost(options);
+            }
 
             let publishing_post = false;
             const mapStatusPublishAllowed = {
@@ -151,6 +160,10 @@ class PPChecklistsPanel extends Component {
     }
 
     componentDidUpdate(_, prevState) {
+        if (!this.state.isSupportedContext) {
+            return;
+        }
+
         if (typeof ppChecklists !== "undefined" && JSON.stringify(Object.values(ppChecklists.requirements)) !== JSON.stringify(prevState.requirements)) {
             this.updateRequirements(ppChecklists.requirements);
         }
@@ -160,9 +173,77 @@ class PPChecklistsPanel extends Component {
 
         hooks.removeAction('pp-checklists.update-failed-requirements', 'publishpress/checklists');
         hooks.removeAction('pp-checklists.requirements-updated', 'publishpress/checklists');
+        if (typeof this.contextSubscription === 'function') {
+            this.contextSubscription();
+        }
 
         this.isMounted = false;
     }
+
+    getCurrentPostType = () => {
+        const selectedPostType = wp.data.select('core/editor').getCurrentPostType();
+        if (selectedPostType) {
+            return selectedPostType;
+        }
+
+        const currentPost = wp.data.select('core/editor').getCurrentPost();
+        return currentPost && currentPost.type ? currentPost.type : '';
+    };
+
+    getEditorRenderingMode = () => {
+        const editorStore = wp.data.select('core/editor');
+        if (editorStore && typeof editorStore.getRenderingMode === 'function') {
+            return editorStore.getRenderingMode();
+        }
+
+        return 'post-only';
+    };
+
+    isSupportedContext = () => {
+        const renderingMode = this.getEditorRenderingMode();
+        if (renderingMode && renderingMode !== 'post-only') {
+            return false;
+        }
+
+        const supportedPostTypes = Array.isArray(i18n.supportedPostTypes) ? i18n.supportedPostTypes : [];
+        const currentPostType = this.getCurrentPostType();
+
+        return supportedPostTypes.includes(currentPostType);
+    };
+
+    updateEditorContext = () => {
+        const contextSupported = this.isSupportedContext();
+
+        if (!this.isMounted) {
+            return contextSupported;
+        }
+
+        this.setState((prevState) => {
+            if (contextSupported) {
+                return prevState.isSupportedContext ? null : { isSupportedContext: true };
+            }
+
+            const failedRequirementsAlreadyReset =
+                prevState.failedRequirements.block.length === 0 &&
+                prevState.failedRequirements.warning.length === 0;
+
+            if (!prevState.isSupportedContext && prevState.requirements.length === 0 && !prevState.showRequiredLegend && failedRequirementsAlreadyReset) {
+                return null;
+            }
+
+            return {
+                isSupportedContext: false,
+                showRequiredLegend: false,
+                requirements: [],
+                failedRequirements: {
+                    block: [],
+                    warning: [],
+                },
+            };
+        });
+
+        return contextSupported;
+    };
 
     /**
      * Hook to failed requirement to update block requirements.
@@ -188,7 +269,7 @@ class PPChecklistsPanel extends Component {
      * @param {Array} Requirements 
      */
     updateRequirements = (Requirements) => {
-        if (this.isMounted) {
+        if (this.isMounted && this.state.isSupportedContext) {
             const showRequiredLegend = Object.values(Requirements).some((req) => req.rule === 'block');
 
             const updatedRequirements = Object.entries(Requirements).map(([key, req]) => {
@@ -222,7 +303,11 @@ class PPChecklistsPanel extends Component {
     };
 
     render() {
-        const { showRequiredLegend, requirements } = this.state;
+        const { isSupportedContext, showRequiredLegend, requirements } = this.state;
+
+        if (!isSupportedContext) {
+            return null;
+        }
         
         return requirements.length > 0 ? (
             <Fragment>
@@ -270,7 +355,7 @@ class PPChecklistsPanel extends Component {
                                                 {req.is_custom || req.require_button ? (
                                                     <input type="hidden" name={`_PPCH_custom_item[${req.id}]`} value={req.status ? 'yes' : 'no'} />
                                                 ) : null}
-                                                <div className={`status-icon dashicons ${req.is_custom ? (req.status ? 'dashicons-yes' : '') : this.getIconClass(req.rule, req.status)}`}></div>
+                                                <div className={`status-icon dashicons ${this.getIconClass(req.rule, req.status)}`}></div>
                                                 <div className="status-label">
                                                     <span className="req-label" dangerouslySetInnerHTML={{ __html: req.label }} />
                                                     {req.rule === 'block' ? (

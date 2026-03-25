@@ -337,6 +337,14 @@ textarea.pp-checklists-custom-item-title {
 }
 
 @media only screen and (max-width: 781px) {
+  .pp-checklists-content-wrapper {
+    overflow-x: visible;
+  }
+
+  .pp-checklists-requirements-settings {
+    min-width: 0;
+  }
+
   #pp-checklists-global table th {
     display: none;
   }
@@ -469,10 +477,15 @@ textarea.pp-checklists-custom-item-title {
   padding: 10px;
   margin-top: 0;
   padding-top: 0;
+  overflow-x: auto;
 }
 
 .pp-checklists-content-table .select2-container {
   width: 100% !important;
+}
+
+.pp-checklists-requirements-settings {
+  min-width: 500px;
 }
 
 @media only screen and (max-width: 1270px) {
@@ -503,6 +516,31 @@ textarea.pp-checklists-custom-item-title {
 
   .pp-checklists-tabs-wrapper {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 782px) and (max-width: 1100px) {
+  .pp-checklists-content-wrapper {
+    padding-bottom: 16px;
+  }
+
+  .pp-checklists-requirements-settings th,
+  .pp-checklists-requirements-settings td {
+    white-space: normal;
+  }
+
+  .pp-checklists-requirements-settings th:first-child,
+  .pp-checklists-requirements-settings td:first-child {
+    min-width: 260px;
+  }
+
+  .pp-checklists-requirements-settings th:nth-child(2),
+  .pp-checklists-requirements-settings td:nth-child(2) {
+    min-width: 150px;
+  }
+
+  .pp-checklists-task-params {
+    min-width: 180px;
   }
 }
 
@@ -642,6 +680,70 @@ textarea.pp-checklists-custom-item-title {
   width: 16px;
   height: 16px;
   pointer-events: none;
+}
+
+.pp-checklists-rename-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 100000;
+}
+
+.pp-checklists-rename-modal-overlay.is-open {
+  display: block;
+}
+
+.pp-checklists-rename-modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 460px;
+  max-width: calc(100vw - 40px);
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 6px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  z-index: 100001;
+}
+
+.pp-checklists-rename-modal.is-open {
+  display: block;
+}
+
+.pp-checklists-rename-modal-title {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.pp-checklists-rename-modal-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.pp-checklists-rename-modal-input {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.pp-checklists-rename-modal-preview {
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: #50575e;
+}
+
+.pp-checklists-rename-modal-preview strong {
+  font-weight: 600;
+}
+
+.pp-checklists-rename-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 /* End Custom Label Editing */

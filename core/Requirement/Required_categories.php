@@ -381,10 +381,48 @@ class Required_categories extends Base_multiple
             return $requirements;
         }
 
-        // Register in the requirements list
-        $requirements[$this->name]['label'] = sprintf($this->lang['label'], $required_category_names);
+        // Register in the requirements list.
+        $requirements[$this->name]['label'] = $this->get_required_categories_label_for_display(
+            $required_category_names
+        );
 
         return $requirements;
+    }
+
+    /**
+     * Returns the rendered label for editing screens, preserving required category names.
+     *
+     * @param string $category_names
+     *
+     * @return string
+     */
+    protected function get_required_categories_label_for_display($category_names)
+    {
+        $default_label = sprintf($this->lang['label'], $category_names);
+        $editor_label = trim($this->get_editor_label());
+
+        if ('' === $editor_label) {
+            return $default_label;
+        }
+
+        if ('' === $category_names) {
+            return $editor_label;
+        }
+
+        if (false !== strpos($editor_label, '%categories%')) {
+            return str_replace('%categories%', $category_names, $editor_label);
+        }
+
+        if (preg_match('/%(?:\d+\$)?s/', $editor_label)) {
+            return sprintf($editor_label, $category_names);
+        }
+
+        return sprintf(
+            /* translators: 1: custom editor label, 2: required category names. */
+            __('%1$s - %2$s', 'publishpress-checklists'),
+            $editor_label,
+            $category_names
+        );
     }
 
     public function get_setting_field_html($css_class = '')

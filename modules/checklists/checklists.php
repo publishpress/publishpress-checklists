@@ -654,6 +654,11 @@ if (!class_exists('PPCH_Checklists')) {
                     Plugin::RULE_WARNING,
                     Plugin::RULE_BLOCK,
                 );
+                $legacyPlugin = Factory::getLegacyPlugin();
+                $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+                $editor_panel_rename_enabled = isset($settings_options->enable_rename_label_editor_panel)
+                    ? $settings_options->enable_rename_label_editor_panel
+                    : Base_requirement::VALUE_NO;
 
                 wp_localize_script(
                     'pp-checklists-global-checklists',
@@ -663,6 +668,7 @@ if (!class_exists('PPCH_Checklists')) {
                         'roles'             => $roles,
                         'first_post_type'   => current($postTypes),
                         'required_rules'    => $required_rules,
+                        'editor_panel_rename_enabled' => Base_requirement::VALUE_YES === $editor_panel_rename_enabled,
                         'ajaxurl'           => admin_url('admin-ajax.php'),
                         'nonce'             => wp_create_nonce('pp-checklists-rules'),
                         'submit_error'      => esc_html__(
@@ -671,6 +677,42 @@ if (!class_exists('PPCH_Checklists')) {
                         ),
                         'custom_item_error' => esc_html__(
                             'Please make sure to add a name for all the custom tasks.',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_title' => esc_html__(
+                            'Rename task label',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_admin_label' => esc_html__(
+                            'Label for WP Admin / backend',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_admin_placeholder' => esc_html__(
+                            'Leave empty to use the default WP Admin label',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_editor_label' => esc_html__(
+                            'Label for Editing screen / frontend',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_editor_placeholder' => esc_html__(
+                            'Leave empty to use the default editing screen label',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_preview_label' => esc_html__(
+                            'Preview in editing screen:',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_preview_default' => esc_html__(
+                            'Default checklist label will be used.',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_save' => esc_html__(
+                            'Save',
+                            'publishpress-checklists'
+                        ),
+                        'rename_modal_cancel' => esc_html__(
+                            'Cancel',
                             'publishpress-checklists'
                         ),
                         'editable_by'       => esc_html__(
@@ -848,8 +890,8 @@ if (!class_exists('PPCH_Checklists')) {
 
                 // Get custom icon settings
                 $settings_options = $legacyPlugin->settings->module->options;
-                $complete_icon = isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes';
-                $incomplete_icon = isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no';
+                $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
+                $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
 
                 wp_localize_script(
                     'pp-checklists-requirements',
@@ -1148,6 +1190,7 @@ if (!class_exists('PPCH_Checklists')) {
 
                 if ($screen->base === 'post' && array_key_exists($screen->post_type, $supported_post_types)) {
                     // Required thing to build Gutenberg Blocks
+
                     wp_enqueue_script(
                         'pp-checklists-requirements-gutenberg',
                         plugins_url('/modules/checklists/assets/js/gutenberg-warning.min.js', PPCH_FILE),
@@ -1179,6 +1222,8 @@ if (!class_exists('PPCH_Checklists')) {
                     );
                     $legacyPlugin = Factory::getLegacyPlugin();
                     $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+                    $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
+                    $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
                     
                     wp_localize_script(
                         'pp-checklists-panel-gutenberg',
@@ -1190,9 +1235,10 @@ if (!class_exists('PPCH_Checklists')) {
                             'required' => __("required", "publishpress-checklists"),
                             'elementorNotice' => __("Checklists tasks are not available in Elementor editors", "publishpress-checklists"),
                             'isElementorEnabled' => ElementorUtils::isElementorEnabled() ? "1" : "0",
+                            'supportedPostTypes' => array_keys($supported_post_types),
                             'customIcons' => array(
-                                'complete' => isset($settings_options->complete_icon) ? $settings_options->complete_icon : 'dashicons-yes',
-                                'incomplete' => isset($settings_options->incomplete_icon) ? $settings_options->incomplete_icon : 'dashicons-no',
+                                'complete' => $complete_icon,
+                                'incomplete' => $incomplete_icon,
                             ),
                             'customColors' => array(
                                 'complete' => isset($settings_options->complete_color) ? $settings_options->complete_color : '#66bb6a',
