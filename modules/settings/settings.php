@@ -83,7 +83,7 @@ if (!class_exists('PPCH_Settings')) {
                     'required_incomplete_color'   => '#ef5350',
                     'recommended_complete_color'  => '#66bb6a',
                     'recommended_incomplete_color' => '#ef5350',
-                    'enable_rename_label_editor_panel' => Base_requirement::VALUE_NO,
+                    'enable_rename_label_editor_panel' => Base_requirement::VALUE_YES,
                 ],
                 'autoload'             => true,
                 'add_menu'             => true,
@@ -651,7 +651,7 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (!isset($new_options['enable_rename_label_editor_panel'])) {
-                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_NO;
+                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_YES;
             }
 
             $new_options['enable_rename_label_editor_panel'] =
@@ -1429,7 +1429,7 @@ if (!class_exists('PPCH_Settings')) {
             $id = $this->module->options_group_name . '_enable_rename_label_editor_panel';
             $value = isset($this->module->options->enable_rename_label_editor_panel)
                 ? $this->module->options->enable_rename_label_editor_panel
-                : Base_requirement::VALUE_NO;
+                : Base_requirement::VALUE_YES;
 
             echo '<label for="' . esc_attr($id) . '">';
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[enable_rename_label_editor_panel]" '

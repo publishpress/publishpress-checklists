@@ -15,6 +15,8 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
 #: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
 #, fuzzy,php-format
 msgid "%d "

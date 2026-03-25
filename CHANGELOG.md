@@ -1,6 +1,18 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.27.0] - 26 March, 2026
+
+- Added: Allow rename label on post editing screen
+- Fixed: Layout issues in mid-size screens #1080
+- Fixed: Minimum number of characters not working in Classic Editor #1086
+- Fixed: Checklists excluded on the "Template" view #1093
+- Fixed: Icon intermittently not showing on post editing screen #1099
+- Changed: Update setting on Number of character in excerpt #1087
+- Changed: Update setting on Exclude User Roles #1084
+- Changed: Add "Free" in the plugin name
+- Changed: Use load_plugin_textdomain on the translation #1107
+
 [2.26.0] - 27 January, 2026
 
 - Added: Add promo for taxonomy filter #1074
