@@ -816,6 +816,14 @@
         return formatTimeForPreview($timeInput.val());
       }
 
+      function getDefaultEditorLabelFromWrapper($wrapper) {
+        if (!$wrapper || !$wrapper.length) {
+          return '';
+        }
+
+        return $.trim($wrapper.find('.pp-checklists-edit-label').attr('data-editor-default-label') || '');
+      }
+
       function updateEditorPreview($wrapper, editorLabel) {
         if (!editorPanelRenameEnabled) {
           return;
@@ -829,8 +837,30 @@
         }
 
         var trimmedEditorLabel = $.trim(editorLabel || '');
+        var isUsingDefaultEditorLabel = trimmedEditorLabel === '';
+        if (trimmedEditorLabel === '') {
+          trimmedEditorLabel = getDefaultEditorLabelFromWrapper($wrapper);
+        }
+
         if (trimmedEditorLabel === '') {
           $previewValue.text(previewDefault);
+          return;
+        }
+
+        if (isUsingDefaultEditorLabel) {
+          var defaultMultipleValue = getMultipleSuffixFromRow($wrapper);
+          if (trimmedEditorLabel.indexOf('%s') !== -1) {
+            $previewValue.text(trimmedEditorLabel.replace(/%s/g, defaultMultipleValue));
+            return;
+          }
+
+          var defaultTimeValue = getTimeSuffixFromRow($wrapper);
+          if (trimmedEditorLabel.indexOf('%time%') !== -1) {
+            $previewValue.text(trimmedEditorLabel.replace(/%time%/g, defaultTimeValue));
+            return;
+          }
+
+          $previewValue.text(trimmedEditorLabel);
           return;
         }
 

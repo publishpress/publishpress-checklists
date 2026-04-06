@@ -684,7 +684,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'rename_modal_admin_label' => esc_html__(
-                            'Label for WP Admin / backend',
+                            'Label for the Checklists screen',
                             'publishpress-checklists'
                         ),
                         'rename_modal_admin_placeholder' => esc_html__(
@@ -692,7 +692,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'rename_modal_editor_label' => esc_html__(
-                            'Label for Editing screen / frontend',
+                            'Label for the post editing screen',
                             'publishpress-checklists'
                         ),
                         'rename_modal_editor_placeholder' => esc_html__(
