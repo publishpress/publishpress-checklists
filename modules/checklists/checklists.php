@@ -526,6 +526,34 @@ if (!class_exists('PPCH_Checklists')) {
         }
 
         /**
+         * Returns whether Gutenberg block highlighting is enabled in settings.
+         *
+         * @return bool
+         */
+        protected function isBlockHighlightingEnabled()
+        {
+            $legacyPlugin = Factory::getLegacyPlugin();
+            $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+            $enabled = isset($settings_options->enable_block_highlighting)
+                ? $settings_options->enable_block_highlighting
+                : Base_requirement::VALUE_YES;
+
+            return Base_requirement::VALUE_YES === $enabled;
+        }
+
+        /**
+         * Returns whether the provided post type uses the block editor.
+         *
+         * @param string $post_type
+         *
+         * @return bool
+         */
+        protected function isBlockEditorPostType($post_type)
+        {
+            return function_exists('use_block_editor_for_post_type') && use_block_editor_for_post_type($post_type);
+        }
+
+        /**
          * Add the MCE plugin file to make the interface between the editor and
          * the requirement meta box. This was the unique way that worked, making
          * it loaded before the MCE is initialized, allowing to configure it.
@@ -620,6 +648,16 @@ if (!class_exists('PPCH_Checklists')) {
 
                     wp_enqueue_style('pp-remodal-default-theme');
                     wp_enqueue_script('pp-remodal');
+
+                    if ($this->isBlockHighlightingEnabled() && $this->isBlockEditorPostType($screen->post_type)) {
+                        wp_register_script(
+                            'pp-checklists-block-highlighting',
+                            $this->module_url . 'assets/js/gutenberg-block-highlighting.js',
+                            ['pp-checklists-requirements'],
+                            PPCH_VERSION,
+                            true
+                        );
+                    }
                 }
             } elseif (isset($_GET['page']) && $_GET['page'] === 'ppch-checklists') {
                 // Admin pages
@@ -942,6 +980,15 @@ if (!class_exists('PPCH_Checklists')) {
                         ],
                     ]
                 );
+
+                $screen = get_current_screen();
+                if (
+                    !is_null($screen)
+                    && $this->isBlockHighlightingEnabled()
+                    && $this->isBlockEditorPostType($screen->post_type)
+                ) {
+                    wp_enqueue_script('pp-checklists-block-highlighting');
+                }
 
                 do_action('publishpress_checklists_enqueue_scripts');
             }
