@@ -420,10 +420,20 @@
 
     updateBlockWarningState: function (clientId, sourceKey, hasWarning, warningText) {
       const warningStore = PP_Checklists_Block_Highlighting.getWarningStoreDispatch();
+      const warningSelectors = PP_Checklists_Block_Highlighting.getWarningStoreSelect();
       const normalizedText = hasWarning ? (warningText || '') : '';
 
       if (!warningStore || !warningStore.setWarning) {
         return;
+      }
+
+      if (warningSelectors && warningSelectors.getWarningsForBlock) {
+        const currentWarnings = warningSelectors.getWarningsForBlock(clientId) || {};
+        const currentText = currentWarnings[sourceKey] || '';
+
+        if (currentText === normalizedText) {
+          return;
+        }
       }
 
       warningStore.setWarning(clientId, sourceKey, normalizedText);
@@ -544,6 +554,26 @@
       });
     },
 
+    clearWarningsForSources: function (sourceKeys) {
+      const keys = Array.isArray(sourceKeys) ? sourceKeys.filter(Boolean) : [];
+
+      if (!keys.length) {
+        return;
+      }
+
+      PP_Checklists_Block_Highlighting.getAllBlocks().forEach(function (block) {
+        keys.forEach(function (sourceKey) {
+          PP_Checklists_Block_Highlighting.updateBlockWarningState(block.clientId, sourceKey, false, '');
+        });
+      });
+    },
+
+    getImageAltCountSourceKeys: function () {
+      return Array.from(document.querySelectorAll('[id^="pp-checklists-req-image_alt_count"]')).map(function (element) {
+        return element.id.replace('pp-checklists-req-', '');
+      });
+    },
+
     syncCurrentWarnings: function () {
       if (!window.PP_Checklists || !window.PP_Checklists.is_gutenberg_active()) {
         return;
@@ -553,13 +583,9 @@
       PP_Checklists_Block_Highlighting.ensureEditorCanvasWarningStyles();
       PP_Checklists_Block_Highlighting.ensureEditorCanvasTooltipBehavior();
 
-      const warningStore = PP_Checklists_Block_Highlighting.getWarningStoreDispatch();
-
-      if (!warningStore || !warningStore.resetWarnings) {
-        return;
-      }
-
-      warningStore.resetWarnings();
+      PP_Checklists_Block_Highlighting.clearWarningsForSources(
+        ['image_alt', 'validate_links'].concat(PP_Checklists_Block_Highlighting.getImageAltCountSourceKeys())
+      );
       PP_Checklists_Block_Highlighting.syncImageAltWarnings();
       PP_Checklists_Block_Highlighting.syncInvalidLinkWarnings();
       PP_Checklists_Block_Highlighting.syncImageAltCountWarnings();
