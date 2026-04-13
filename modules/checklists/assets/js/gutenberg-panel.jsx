@@ -390,8 +390,8 @@ class PPChecklistsPanel extends Component {
 }
 
 const ChecklistsTitle = () => (
-    <div className="pp-checklists-toolbar-icon">
-        Checklists {/* Don't translate, the text is been used in CSS */}
+    <div className="pp-checklists-toolbar-icon" aria-hidden="true">
+        <span className="dashicons dashicons-yes-alt"></span>
     </div>
 );
 
