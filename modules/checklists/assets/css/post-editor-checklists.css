@@ -108,6 +108,25 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
     right: -11px;
 }
 
+/* Adjust warning badge for compact Gutenberg toolbar icon button. */
+body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-toolbar-icon:after {
+    top: -6px;
+    right: -7px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-toolbar-icon:hover:after {
+    top: -7px;
+    right: -8px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 13px;
+}
+
 .pp-checklists-failed-requirements-warning p {
     font-weight: bold;
 }
@@ -172,17 +191,46 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
     padding-left: 4px;
 }
 
-.edit-post-layout:not(.show-icon-labels) .interface-pinned-items button.components-button[aria-label='Checklists'] {
-    padding: 6px 0;
+.pp-checklists-toolbar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
     background: transparent;
+    color: currentColor;
+    border: 0;
+    border-radius: 0;
 }
 
-.pp-checklists-toolbar-icon {
-    padding: 10px 9px 8px;
-    background: #655997;
-    color: #ffffff;
-    border: 1px solid #a6b2be;
+.pp-checklists-toolbar-icon .dashicons {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.interface-pinned-items .components-button .pp-checklists-toolbar-icon,
+.interface-pinned-items .components-button .pp-checklists-toolbar-icon .dashicons {
+    color: inherit !important;
+}
+
+.interface-pinned-items button.components-button[aria-label='Checklists'] {
+    color: #1e1e1e;
+}
+
+.interface-pinned-items button.components-button[aria-label='Checklists'][aria-pressed='true'],
+.interface-pinned-items button.components-button[aria-label='Checklists'].is-pressed {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
     border-radius: 2px;
+}
+
+.interface-pinned-items button.components-button[aria-label='Checklists'][aria-pressed='true'] .pp-checklists-toolbar-icon,
+.interface-pinned-items button.components-button[aria-label='Checklists'].is-pressed .pp-checklists-toolbar-icon {
+    background: transparent;
+    border-radius: 0;
 }
 
 .block-editor-list-view-leaf[data-warning="true"] .block-editor-list-view-block-contents::before,
