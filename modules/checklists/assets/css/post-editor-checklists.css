@@ -142,6 +142,34 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
     display: block;
 }
 
+#pp-checklists-req-box .pp-checklists-req.metabox-req,
+#pp-checklists-sidebar-req-box .pp-checklists-req.panel-req {
+    padding-left: 8px;
+}
+
+#pp-checklists-req-box .pp-checklists-group-heading,
+#pp-checklists-sidebar-req-box .pp-checklists-group-heading {
+    margin: 0 0 4px 10px;
+    padding: 4px 8px;
+    display: inline-block;
+    border: 0;
+    border-radius: 999px;
+    background: #f0f0f1;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #3c434a;
+}
+
+ul#pp-checklists-sidebar-req-box {
+    margin: 0 -10px;
+}
+
+ul#pp-checklists-req-box span.required {
+    font-size: 17px;
+}
+
 .pp-checklists-check-item {
     display: block;
     width: 100%;
@@ -151,7 +179,7 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
 }
 
 .edit-post-meta-boxes-area #pp_checklist_meta.postbox > .inside {
-    padding: 4px;
+    padding: 0px 4px 4px 4px;
 }
 
 .edit-post-meta-boxes-area #poststuff #pp_checklist_meta.postbox h2.hndle {
@@ -198,10 +226,10 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
     width: 20px;
     height: 20px;
     padding: 0;
-    background: transparent;
-    color: currentColor;
-    border: 0;
-    border-radius: 0;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 50%;
 }
 
 .pp-checklists-toolbar-icon .dashicons {
@@ -209,11 +237,12 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
     height: 20px;
     font-size: 20px;
     line-height: 20px;
+    color: #000000;
 }
 
 .interface-pinned-items .components-button .pp-checklists-toolbar-icon,
 .interface-pinned-items .components-button .pp-checklists-toolbar-icon .dashicons {
-    color: inherit !important;
+    color: #000000 !important;
 }
 
 .interface-pinned-items button.components-button[aria-label='Checklists'] {
@@ -229,8 +258,9 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
 
 .interface-pinned-items button.components-button[aria-label='Checklists'][aria-pressed='true'] .pp-checklists-toolbar-icon,
 .interface-pinned-items button.components-button[aria-label='Checklists'].is-pressed .pp-checklists-toolbar-icon {
-    background: transparent;
-    border-radius: 0;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50%;
 }
 
 .block-editor-list-view-leaf[data-warning="true"] .block-editor-list-view-block-contents::before,

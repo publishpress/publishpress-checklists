@@ -85,6 +85,7 @@ if (!class_exists('PPCH_Settings')) {
                     'recommended_complete_color'  => '#66bb6a',
                     'recommended_incomplete_color' => '#ef5350',
                     'enable_rename_label_editor_panel' => Base_requirement::VALUE_YES,
+                    'checklist_items_sort_order' => 'default',
                 ],
                 'autoload'             => true,
                 'add_menu'             => true,
@@ -660,6 +661,18 @@ if (!class_exists('PPCH_Settings')) {
                 ? Base_requirement::VALUE_YES
                 : Base_requirement::VALUE_NO;
 
+            $allowedSortOrders = [
+                'default',
+                'required_recommended',
+                'alphabetical',
+            ];
+            if (
+                !isset($new_options['checklist_items_sort_order'])
+                || !in_array($new_options['checklist_items_sort_order'], $allowedSortOrders, true)
+            ) {
+                $new_options['checklist_items_sort_order'] = 'default';
+            }
+
             if (!isset($new_options['delete_data_on_uninstall'])) {
                 $new_options['delete_data_on_uninstall'] = 'off';
             }
@@ -946,6 +959,14 @@ if (!class_exists('PPCH_Settings')) {
                 'enable_rename_label_editor_panel',
                 __('Enable rename label in editor panel:', 'publishpress-checklists'),
                 [$this, 'settings_enable_rename_label_editor_panel_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'checklist_items_sort_order',
+                __('Checklist item sort order:', 'publishpress-checklists'),
+                [$this, 'settings_checklist_items_sort_order_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_appearance'
             );
@@ -1472,6 +1493,35 @@ if (!class_exists('PPCH_Settings')) {
                 'Enable custom rename labels in the checklist editor panel.',
                 'publishpress-checklists'
             );
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for checklist item sort order in the editor panel.
+         */
+        public function settings_checklist_items_sort_order_option($args = [])
+        {
+            $id = $this->module->options_group_name . '_checklist_items_sort_order';
+            $value = isset($this->module->options->checklist_items_sort_order)
+                ? $this->module->options->checklist_items_sort_order
+                : 'default';
+
+            $sortOptions = [
+                'default'              => esc_html__('Default', 'publishpress-checklists'),
+                'required_recommended' => esc_html__('Required on top and recommended below', 'publishpress-checklists'),
+                'alphabetical'         => esc_html__('Sort alphabetically', 'publishpress-checklists'),
+            ];
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<select id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[checklist_items_sort_order]">';
+
+            foreach ($sortOptions as $optionValue => $optionLabel) {
+                echo '<option value="' . esc_attr($optionValue) . '" ' . selected($value, $optionValue, false) . '>';
+                echo esc_html($optionLabel);
+                echo '</option>';
+            }
+
+            echo '</select>';
             echo '</label>';
         }
 
