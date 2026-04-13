@@ -653,7 +653,7 @@ if (!class_exists('PPCH_Checklists')) {
                         wp_register_script(
                             'pp-checklists-block-highlighting',
                             $this->module_url . 'assets/js/gutenberg-block-highlighting.js',
-                            ['pp-checklists-requirements'],
+                            ['pp-checklists-requirements', 'wp-data', 'wp-hooks', 'wp-compose', 'wp-element'],
                             PPCH_VERSION,
                             true
                         );
