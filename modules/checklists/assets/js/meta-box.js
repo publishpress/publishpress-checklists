@@ -2094,40 +2094,6 @@
           var currentCount = missingAltImages.length;
           var no_missing_alt = currentCount === 0;
 
-          // Update block warnings if we're in the block editor (only for the first element to avoid duplicates)
-          if (requirementId === 'image_alt' && wp.data.select('core/block-editor')) {
-            const listViewRoot = document.querySelector(
-              '.block-editor-list-view-tree, .block-editor-list-view'
-            );
-            const listViewPanel = listViewRoot
-              ? listViewRoot.closest('.block-editor-tabbed-sidebar__tabpanel')
-              : null;
-            const isListViewOpen =
-              listViewRoot && (!listViewPanel || listViewPanel.getAttribute('data-open') === 'true');
-
-            if (isListViewOpen) {
-              const blocks = wp.data.select('core/block-editor').getBlocks();
-              const imageBlocks = blocks.filter(block => block.name === 'core/image');
-
-              imageBlocks.forEach(block => {
-                // Check if this block's HTML matches any of the missing alt images
-                const hasWarning = missingAltImages.some(html =>
-                  html.includes(block.attributes.id) || html.includes(block.attributes.url)
-                );
-
-                // Set warning attribute on the list view item
-                const listViewElement = document.querySelector(
-                  `.block-editor-list-view-leaf[data-block="${block.clientId}"], ` +
-                    `.block-editor-list-view-tree [data-block="${block.clientId}"], ` +
-                    `.block-editor-list-view [data-block="${block.clientId}"]`
-                );
-                if (listViewElement) {
-                  listViewElement.setAttribute('data-warning', hasWarning);
-                }
-              });
-            }
-          }
-
           // If nothing changed for this requirement, bail early
           if (currentCount === lastMissingCounts[requirementId]) {
             return;
@@ -2237,34 +2203,7 @@
         // Detect invalid links in post content.
         var invalidLinks = PP_Checklists.validate_links_format(content);
         var currentCount = invalidLinks.length;
-
-        // Highlight blocks containing invalid links in the List View.
-        if (wp.data.select('core/block-editor')) {
-          const listViewRoot = document.querySelector(
-            '.block-editor-list-view-tree, .block-editor-list-view'
-          );
-          const listViewPanel = listViewRoot
-            ? listViewRoot.closest('.block-editor-tabbed-sidebar__tabpanel')
-            : null;
-          const isListViewOpen =
-            listViewRoot && (!listViewPanel || listViewPanel.getAttribute('data-open') === 'true');
-
-          if (isListViewOpen) {
-            const blocks = wp.data.select('core/block-editor').getBlocks();
-            blocks.forEach(block => {
-              const blockContent = block.attributes.content || '';
-              const hasWarning = invalidLinks.some(link => blockContent.includes(link));
-              const listViewElement = document.querySelector(
-                `.block-editor-list-view-leaf[data-block="${block.clientId}"], ` +
-                  `.block-editor-list-view-tree [data-block="${block.clientId}"], ` +
-                  `.block-editor-list-view [data-block="${block.clientId}"]`,
-              );
-              if (listViewElement) {
-                listViewElement.setAttribute('data-warning', hasWarning);
-              }
-            });
-          }
-        }
+        const warningText = $validateLinksElements.first().text().trim();
 
         // If nothing changed, bail early.
         if (currentCount === lastInvalidCount) {
@@ -2385,35 +2324,6 @@
 
           var min = parseInt(config.value[0]);
           var max = parseInt(config.value[1]);
-
-          // Highlight blocks containing invalid alt lengths in List View
-          if (wp.data.select('core/block-editor')) {
-            const listViewRoot = document.querySelector(
-              '.block-editor-list-view-tree, .block-editor-list-view'
-            );
-            const listViewPanel = listViewRoot
-              ? listViewRoot.closest('.block-editor-tabbed-sidebar__tabpanel')
-              : null;
-            const isListViewOpen =
-              listViewRoot && (!listViewPanel || listViewPanel.getAttribute('data-open') === 'true');
-
-            if (isListViewOpen) {
-              const blocks = wp.data.select('core/block-editor').getBlocks();
-              const imageBlocks = blocks.filter(block => block.name === 'core/image');
-              imageBlocks.forEach(block => {
-                const altLength = block.attributes.alt ? block.attributes.alt.length : 0;
-                const hasWarning = !PP_Checklists.check_valid_quantity(altLength, min, max);
-                const listViewElement = document.querySelector(
-                  `.block-editor-list-view-leaf[data-block="${block.clientId}"], ` +
-                    `.block-editor-list-view-tree [data-block="${block.clientId}"], ` +
-                    `.block-editor-list-view [data-block="${block.clientId}"]`,
-                );
-                if (listViewElement) {
-                  listViewElement.setAttribute('data-warning', hasWarning);
-                }
-              });
-            }
-          }
 
           if (shouldUpdateRequirement) {
             // Validate every image alt length against the config range

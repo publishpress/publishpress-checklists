@@ -73,6 +73,7 @@ if (!class_exists('PPCH_Settings')) {
                     ],
                     'disable_publish_button'   => Base_requirement::VALUE_NO,
                     'show_warning_icon_submit' => Base_requirement::VALUE_YES,
+                    'enable_block_highlighting' => Base_requirement::VALUE_YES,
                     'openai_api_key'           => '',
                     'delete_data_on_uninstall' => 'off',
                     'who_can_ignore_option'      => Base_requirement::VALUE_YES,
@@ -794,6 +795,14 @@ if (!class_exists('PPCH_Settings')) {
             );
 
             add_settings_field(
+                'enable_block_highlighting',
+                __('Highlight failing blocks in the editor:', 'publishpress-checklists'),
+                [$this, 'settings_enable_block_highlighting_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_general'
+            );
+
+            add_settings_field(
                 'delete_data_on_uninstall',
                 __('Delete data on uninstall:', 'publishpress-checklists'),
                 [$this, 'settings_delete_data_on_uninstall_option'],
@@ -1114,6 +1123,26 @@ if (!class_exists('PPCH_Settings')) {
         }
 
         /**
+         * Displays the checkbox to enable Gutenberg block highlighting for failed tasks.
+         *
+         * @param array $args
+         */
+        public function settings_enable_block_highlighting_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_enable_block_highlighting';
+            $value = isset($this->module->options->enable_block_highlighting) ? $this->module->options->enable_block_highlighting : 'yes';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[enable_block_highlighting]" '
+                . checked($value, 'yes', false) . ' />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'This will highlight Gutenberg blocks that fail block-specific checklist tasks.',
+                'publishpress-checklists'
+            );
+            echo '</label>';
+        }
+
+        /**
          * Displays the checkbox to enable deleting plugin data on uninstall
          *
          * @param array $args
@@ -1264,6 +1293,11 @@ if (!class_exists('PPCH_Settings')) {
                 $new_options['show_warning_icon_submit'] = Base_requirement::VALUE_NO;
             }
             $new_options['show_warning_icon_submit'] = Base_requirement::VALUE_YES === $new_options['show_warning_icon_submit'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
+
+            if (!isset($new_options['enable_block_highlighting'])) {
+                $new_options['enable_block_highlighting'] = Base_requirement::VALUE_NO;
+            }
+            $new_options['enable_block_highlighting'] = Base_requirement::VALUE_YES === $new_options['enable_block_highlighting'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
 
             if (!isset($new_options['who_can_ignore_option'])) {
                 $new_options['who_can_ignore_option'] = Base_requirement::VALUE_YES;
