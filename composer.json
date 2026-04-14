@@ -10,59 +10,28 @@
     }
   ],
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+            "publishpress/dev-workspace": true,
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
   },
   "require": {
     "php": ">=7.2.5"
   },
   "require-dev": {
-    "codeception/module-asserts": "^1.2",
-    "codeception/module-phpbrowser": "^1.0",
-    "codeception/module-db": "^1.0",
-    "codeception/util-universalframework": "^1.0",
-    "overtrue/phplint": "^2.4",
-    "publishpress/translations": "dev-development"
-  },
-  "scripts": {
-    "build": "pbuild build",
-    "build:dir": "pbuild build-dir",
-    "build:clean": "pbuild clean",
-    "get-version": "pbuild version",
-    "info:versions": "bash ./dev-workspace/scripts/dependency-versions.sh",
-    "check:longpath": "longpath .",
-    "check:lint": "phplint",
-    "pre-autoload-dump": "composer dumpautoload --working-dir=./lib",
-    "pre-update-cmd": "composer update --working-dir=./lib",
-    "pre-install-cmd": "composer install --working-dir=./lib",
-    "translate": "dev-workspace/run vendor/bin/publishpress-translate --languages=de_DE,fi,fil,id_ID,ja,ko_KR,nl_NL,ru_RU,yo",
-    "translate:dry-run": "dev-workspace/run vendor/bin/publishpress-translate --dry-run",
-    "translate:download": "dev-workspace/run vendor/bin/publishpress-translate --download",
-    "translate:upload": "dev-workspace/run vendor/bin/publishpress-translate --upload",
-    "translate:custom": "dev-workspace/run vendor/bin/publishpress-translate --languages",
-    "translate:force": "dev-workspace/run vendor/bin/publishpress-translate --force",
-    "translate:force-custom": "dev-workspace/run vendor/bin/publishpress-translate --force --languages",
-    "translate:compile": [
-      "@translate:mo",
-      "@translate:json",
-      "@translate:php"
-    ],
-    "translate:pot": "dev-workspace/run wp i18n make-pot . ./languages/publishpress-checklists.pot --domain=publishpress-checklists --exclude=dev-workspace,.wordpress-org,.github,dist,tests,lib,tmp,doc,*.js,*.js.map --allow-root",
-    "translate:mo": "dev-workspace/run wp i18n make-mo ./languages ./languages --allow-root",
-    "translate:json": "dev-workspace/run bash ./dev-workspace/scripts/lang-make-json.sh",
-    "translate:php": "dev-workspace/run wp i18n make-php ./languages --allow-root"
+    "publishpress/dev-workspace": "^1.0"
   },
   "minimum-stability": "stable",
   "extra": {
     "plugin-slug": "publishpress-checklists",
     "plugin-name": "publishpress-checklists",
     "plugin-folder": "publishpress-checklists",
-    "scripts-descriptions": {
-      "translate": "Generate and upload translations to Weblate using AI-powered Potomatic",
-      "translate:dry-run": "Preview translations without making API calls",
-      "translate:download": "Download translations from Weblate",
-      "translate:upload": "Upload existing translations to Weblate (no AI translation)",
-      "translate:force": "Force re-translate all strings (ignore existing translations)",
-      "translate:force-custom": "Force re-translate with specific languages (requires --languages parameter)"
-    }
+    "version-constant": "PPCH_VERSION",
+    "plugin-lang-domain": "publishpress-checklists",
+    "plugin-github-repo": "publishpress/publishpress-checklists",
+    "plugin-composer-package": "publishpress/publishpress-checklists"
   }
 }
