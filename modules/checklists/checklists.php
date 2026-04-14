@@ -597,8 +597,14 @@ if (!class_exists('PPCH_Checklists')) {
                     
                     $required_complete_color = isset($settings_options->required_complete_color) ? $settings_options->required_complete_color : '#66bb6a';
                     $required_incomplete_color = isset($settings_options->required_incomplete_color) ? $settings_options->required_incomplete_color : '#ef5350';
+                    $required_asterisk_color = isset($settings_options->required_asterisk_color) ? $settings_options->required_asterisk_color : '#ef5350';
                     $recommended_complete_color = isset($settings_options->recommended_complete_color) ? $settings_options->recommended_complete_color : '#66bb6a';
                     $recommended_incomplete_color = isset($settings_options->recommended_incomplete_color) ? $settings_options->recommended_incomplete_color : '#ef5350';
+
+                    $required_asterisk_color = sanitize_hex_color($required_asterisk_color);
+                    if (empty($required_asterisk_color)) {
+                        $required_asterisk_color = '#ef5350';
+                    }
 
                     $custom_css = "
                         /* Required (block) items - Complete */
@@ -619,6 +625,12 @@ if (!class_exists('PPCH_Checklists')) {
                         /* Recommended (warning) items - Incomplete */
                         .pp-checklists-req.pp-checklists-warning.status-no *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(.request-response *) {
                             color: {$recommended_incomplete_color} !important;
+                        }
+
+                        /* Required asterisk */
+                        ul#pp-checklists-req-box span.required,
+                        ul#pp-checklists-sidebar-req-box span.required {
+                            color: {$required_asterisk_color} !important;
                         }
                     ";
                     wp_add_inline_style('pp-checklists-requirements', $custom_css);
