@@ -95,7 +95,7 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
             </ul>
 
             <?php if ($show_required_legend) : ?>
-                <em>(*) <?php echo esc_html($context['lang']['required']); ?></em>
+                <em>(<span class="required">*</span>) <?php echo esc_html($context['lang']['required']); ?></em>
             <?php endif; ?>
         </div>
     <?php endif; ?>
