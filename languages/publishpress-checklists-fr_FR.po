@@ -17,6 +17,9 @@ msgstr ""
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
 #, fuzzy,php-format
 msgid "%d "
