@@ -1,7 +1,7 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-[2.28.0] - 20 April, 2026
+[2.28.0] - 17 April, 2026
 
 - Added: Add color option for aesterisk #1117
 - Added: New setting to sort the checklist in editing screen #1116
