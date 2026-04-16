@@ -43,6 +43,11 @@ jobs:
           php-version: '8.3'
           tools: composer
 
+      - name: Composer prepare
+        run: |
+          composer validate
+          composer install
+
       - name: Create .env file
         run: |
           cp $GITHUB_WORKSPACE/.env.example $GITHUB_WORKSPACE/.env
