@@ -1,74 +1,79 @@
 # Copyright (C) 2026 PublishPress
-# This file is distributed under the same license as the PublishPress Checklists plugin.
+# This file is distributed under the same license as the PublishPress Checklists Free plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists 2.26.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/publishpress-"
-"checklists\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-03-19 19:36+0000\n"
-"Last-Translator: Riza Maulana Ardiyanto <riza@publishpress.com>\n"
-"Language-Team: Dutch <https://weblate.publishpress.com/projects/"
-"publishpress-checklists/publishpress-checklists/nl/>\n"
-"Language: nl\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Dutch "
+"<https://weblate.publishpress.com/projects/publishpress-checklists/"
+"publishpress-checklists/nl/>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:53+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: nl-NL\n"
 
+#: publishpress-checklists.php:4
 #. Plugin Name of the plugin
-#. Plugin Name of the plugin
-#: publishpress-checklists.php
-#: core/Legacy/Module.php:286
-msgid "PublishPress Checklists"
-msgstr "PublishPress Checklists"
+msgid "PublishPress Checklists Free"
+msgstr "PublishPress Checklists Free"
 
+#: publishpress-checklists.php:5, fuzzy
 #. Plugin URI of the plugin
-#: publishpress-checklists.php
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
+#: publishpress-checklists.php:6
 #. Description of the plugin
-#: publishpress-checklists.php
-msgid "With PublishPress Checklists, you can choose publishing requirements for your content."
+msgid ""
+"With PublishPress Checklists, you can choose publishing requirements for "
+"your content."
 msgstr ""
-"Met PublishPress Checklists kunt u publicatievereisten voor uw inhoud kiezen."
+"Met PublishPress Checklists kunt u publicatievereisten voor uw inhoud "
+"kiezen."
 
+#: publishpress-checklists.php:7
 #. Author of the plugin
-#: publishpress-checklists.php
 msgid "PublishPress"
 msgstr "PublishPress"
 
+#: publishpress-checklists.php:8, fuzzy
 #. Author URI of the plugin
-#: publishpress-checklists.php
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
 
 #: core/API/LabelMapper.php:39
-#: modules/checklists/checklists.php:1116
+#: modules/checklists/checklists.php:1222
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
 #: core/API/LabelMapper.php:40
-#: modules/checklists/checklists.php:1117
+#: modules/checklists/checklists.php:1029
+#: modules/checklists/checklists.php:1223
+#: modules/checklists/checklists.php:1304
+#: modules/checklists/assets/js/gutenberg-panel.jsx:437
 msgid "Recommended"
 msgstr "Aanbevolen"
 
 #: core/API/LabelMapper.php:41
-#: modules/checklists/checklists.php:923
-#: modules/checklists/checklists.php:1118
+#: modules/checklists/checklists.php:1028
+#: modules/checklists/checklists.php:1224
+#: modules/checklists/checklists.php:1303
+#: modules/checklists/assets/js/gutenberg-panel.jsx:436
 msgid "Required"
 msgstr "Vereist"
 
 #: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
-msgstr ""
-"Corrigeer alstublieft uw formulierfouten hieronder en probeer het opnieuw."
+msgstr "Corrigeer alstublieft uw formulierfouten hieronder en probeer het opnieuw."
 
 #: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:510
+#: modules/settings/settings.php:516, fuzzy
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
@@ -81,14 +86,18 @@ msgid "Post does not exist"
 msgstr "Bericht bestaat niet"
 
 #: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:107
+#: core/Plugin.php:103
 #: modules/checklists/checklists.php:110
-#: modules/checklists/checklists.php:1026
-#: modules/checklists/checklists.php:1041
-#: modules/checklists/checklists.php:1188
-#: modules/checklists/assets/js/gutenberg-panel.jsx:237
+#: modules/checklists/checklists.php:1132
+#: modules/checklists/checklists.php:1147
+#: modules/checklists/checklists.php:1300
+#: modules/checklists/assets/js/gutenberg-panel.jsx:411, fuzzy
 msgid "Checklists"
 msgstr "Checklists"
+
+#: core/Legacy/Module.php:286, fuzzy
+msgid "PublishPress Checklists"
+msgstr "PublishPress Checklists"
 
 #: core/Legacy/Module.php:289
 #, php-format
@@ -102,7 +111,8 @@ msgstr "Heeft u ondersteuning voor PublishPress Checklists nodig?"
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
-"Als u hulp nodig heeft of een nieuw functieverzoek heeft, laat het ons weten."
+"Als u hulp nodig heeft of een nieuw functieverzoek heeft, laat het ons "
+"weten."
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
@@ -116,12 +126,12 @@ msgstr "Gedetailleerde documentatie is ook beschikbaar op de pluginwebsite."
 msgid "View Knowledge Base"
 msgstr "Bekijk de kennisbank"
 
-#: core/Plugin.php:108
-#: modules/settings/settings.php:130
+#: core/Plugin.php:104
+#: modules/settings/settings.php:134
 msgid "Settings"
 msgstr "Instellingen"
 
-#: core/Plugin.php:116
+#: core/Plugin.php:112
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "Upgrade naar Pro"
@@ -135,17 +145,57 @@ msgstr "Goedgekeurd door %s"
 msgid "Approved by a user in this role"
 msgstr "Goedgekeurd door een gebruiker in deze rol"
 
-#: core/Requirement/Base_counter.php:302
-#: core/Requirement/Pro_Requirement.php:112
+#: core/Requirement/Approved_by.php:161
+#: core/Requirement/Base_requirement.php:239
+#: core/Requirement/Prohibited_categories.php:414
+#: core/Requirement/Prohibited_tags.php:383
+#: core/Requirement/Required_categories.php:422
+#: core/Requirement/Required_tags.php:383
+#. translators: 1: custom editor label, 2: selected role names.
+#. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
+#. translators: 1: custom editor label, 2: prohibited category names.
+#. translators: 1: custom editor label, 2: prohibited tag names.
+#. translators: 1: custom editor label, 2: required category names.
+#. translators: 1: custom editor label, 2: required tag names.
+#, fuzzy, php-format
+msgid "%1$s - %2$s"
+msgstr "%1$s - %2$s"
+
+#: core/Requirement/Base_counter.php:385
+#: core/Requirement/Pro_Requirement.php:112, fuzzy
 msgid "Min"
 msgstr "Min"
 
-#: core/Requirement/Base_counter.php:310
-#: core/Requirement/Pro_Requirement.php:113
+#: core/Requirement/Base_counter.php:393
+#: core/Requirement/Pro_Requirement.php:113, fuzzy
 msgid "Max"
 msgstr "Max"
 
-#: core/Requirement/Base_requirement.php:187
+#: core/Requirement/Base_requirement.php:268
+#. translators: %d: exact required value.
+#, fuzzy, php-format
+msgid "exact %d"
+msgstr "exact %d"
+
+#: core/Requirement/Base_requirement.php:276
+#. translators: %d: minimum required value.
+#, fuzzy, php-format
+msgid "min %d"
+msgstr "min %d"
+
+#: core/Requirement/Base_requirement.php:284
+#. translators: %d: maximum allowed value.
+#, fuzzy, php-format
+msgid "max %d"
+msgstr "max %d"
+
+#: core/Requirement/Base_requirement.php:291
+#. translators: 1: minimum required value, 2: maximum allowed value.
+#, fuzzy, php-format
+msgid "min %1$d max %2$d"
+msgstr "min %1$d max %2$d"
+
+#: core/Requirement/Base_requirement.php:346
 msgid "Edit label"
 msgstr "Label bewerken"
 
@@ -195,18 +245,18 @@ msgid "Custom"
 msgstr "Aangepast"
 
 #: core/Requirement/Custom_item.php:62
-#: modules/checklists/checklists.php:676
+#: modules/checklists/checklists.php:768
 msgid "Which roles can mark this task as complete?"
 msgstr "Welke rollen kunnen deze taak als voltooid markeren?"
 
 #: core/Requirement/Custom_item.php:81
-#: modules/checklists/checklists.php:683
+#: modules/checklists/checklists.php:775
 msgid "Enter name of custom task"
 msgstr "Voer de naam van de aangepaste taak in"
 
 #: core/Requirement/Custom_item.php:129
 #: core/Requirement/Openai_item.php:147
-#: modules/checklists/checklists.php:682
+#: modules/checklists/checklists.php:774
 msgid "Remove"
 msgstr "Verwijderen"
 
@@ -266,7 +316,7 @@ msgstr "Uitgelichte afbeelding heeft bijschrift"
 
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
-msgid "Numbers of characters in excerpt"
+msgid "Number of characters in excerpt"
 msgstr "Aantal tekens in samenvatting"
 
 #: core/Requirement/Filled_excerpt.php:44
@@ -389,12 +439,12 @@ msgid "Between %d and %d internal links in content"
 msgstr "Tussen %d en %d interne links in de inhoud"
 
 #: core/Requirement/Openai_item.php:69
-#: core/Requirement/Openai_item.php:70
+#: core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
 #: core/Requirement/Openai_item.php:100
-#: modules/checklists/checklists.php:684
+#: modules/checklists/checklists.php:776
 msgid "Enter OpenAI task prompt"
 msgstr "Voer OpenAI-taakopdracht in"
 
@@ -413,7 +463,9 @@ msgid "Post content is empty."
 msgstr "Berichtinhoud is leeg."
 
 #: core/Requirement/Openai_item.php:307
-msgid "OpenAI tasks require an API Key. Please add your API Key in the Settings area."
+msgid ""
+"OpenAI tasks require an API Key. Please add your API Key in the Settings "
+"area."
 msgstr ""
 "OpenAI-taken vereisen een API-sleutel. Voeg uw API-sleutel toe in het "
 "instellingengebied."
@@ -492,14 +544,14 @@ msgid "Maximum of %d tags"
 msgstr "Maximaal %d tags"
 
 #: core/Requirement/Tags_count.php:52
-#, php-format
+#, fuzzy, php-format
 msgid "%d tag"
-msgstr ""
+msgstr "%d tag"
 
 #: core/Requirement/Tags_count.php:53
-#, php-format
+#, fuzzy, php-format
 msgid "%d tags"
-msgstr ""
+msgstr "%d tags"
 
 #: core/Requirement/Tags_count.php:54
 #, php-format
@@ -524,9 +576,9 @@ msgstr "Maximaal %d "
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
-#, php-format
+#, fuzzy, php-format
 msgid "%d "
-msgstr ""
+msgstr "%d "
 
 #: core/Requirement/Taxonomies_count.php:57
 #, php-format
@@ -637,7 +689,7 @@ msgstr "Goedkeuring"
 msgid "Images"
 msgstr "Afbeeldingen"
 
-#: core/Utils/FieldsTabs.php:41
+#: core/Utils/FieldsTabs.php:41, fuzzy
 msgid "Audio / Video"
 msgstr "Audio / Video"
 
@@ -645,11 +697,11 @@ msgstr "Audio / Video"
 msgid "Featured Image"
 msgstr "Uitgelichte afbeelding"
 
-#: core/Utils/FieldsTabs.php:49
+#: core/Utils/FieldsTabs.php:49, fuzzy
 msgid "Links"
 msgstr "Links"
 
-#: core/Utils/FieldsTabs.php:53
+#: core/Utils/FieldsTabs.php:53, fuzzy
 msgid "Permalink"
 msgstr "Permalink"
 
@@ -657,7 +709,7 @@ msgstr "Permalink"
 msgid "Categories"
 msgstr "Categorieën"
 
-#: core/Utils/FieldsTabs.php:61
+#: core/Utils/FieldsTabs.php:61, fuzzy
 msgid "Tags"
 msgstr "Tags"
 
@@ -673,187 +725,222 @@ msgstr "Toegankelijkheid"
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: core/Utils/FieldsTabs.php:104
+#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
 #: core/Utils/FieldsTabs.php:118
-#: modules/yoastseo/yoastseo.php:68
+#: modules/yoastseo/yoastseo.php:68, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
-#: core/Utils/FieldsTabs.php:126
+#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
-#: modules/checklists/checklists.php:668
+#: modules/checklists/checklists.php:724
 msgid "options cannot be empty."
 msgstr "opties kunnen niet leeg zijn."
 
-#: modules/checklists/checklists.php:672
+#: modules/checklists/checklists.php:728
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr "Zorg ervoor dat u een naam toevoegt voor alle aangepaste taken."
 
-#: modules/checklists/checklists.php:680
+#: modules/checklists/checklists.php:732
+msgid "Rename task label"
+msgstr "Taaklabel hernoemen"
+
+#: modules/checklists/checklists.php:736
+msgid "Label for the Checklists screen"
+msgstr "Label voor het Checklists-scherm"
+
+#: modules/checklists/checklists.php:740
+msgid "Leave empty to use the default WP Admin label"
+msgstr "Laat leeg om het standaard WP Admin-label te gebruiken"
+
+#: modules/checklists/checklists.php:744
+msgid "Label for the post editing screen"
+msgstr "Label voor het berichtbewerkingsscherm"
+
+#: modules/checklists/checklists.php:748
+msgid "Leave empty to use the default editing screen label"
+msgstr "Laat leeg om het standaard bewerkingsschermlabel te gebruiken"
+
+#: modules/checklists/checklists.php:752
+msgid "Preview in editing screen:"
+msgstr "Voorbeeld in bewerkingsscherm:"
+
+#: modules/checklists/checklists.php:756
+msgid "Default checklist label will be used."
+msgstr "Standaard checklistlabel zal worden gebruikt."
+
+#: modules/checklists/checklists.php:760
+msgid "Save"
+msgstr "Opslaan"
+
+#: modules/checklists/checklists.php:764
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: modules/checklists/checklists.php:772
 msgid "No results found"
 msgstr "Geen resultaten gevonden"
 
-#: modules/checklists/checklists.php:681
+#: modules/checklists/checklists.php:773
 msgid "Searching…"
 msgstr "Zoeken…"
 
-#: modules/checklists/checklists.php:685
+#: modules/checklists/checklists.php:777
 msgid "Suggested Prompts"
 msgstr "Voorstellen"
 
-#: modules/checklists/checklists.php:686
+#: modules/checklists/checklists.php:778
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
-msgstr ""
-"Wat is de verwachte OpenAI-reactie om de vereiste als geslaagd te markeren?"
+msgstr "Wat is de verwachte OpenAI-reactie om de vereiste als geslaagd te markeren?"
 
-#: modules/checklists/checklists.php:689
+#: modules/checklists/checklists.php:781
 msgid "Clear Content"
 msgstr "Inhoud wissen"
 
-#: modules/checklists/checklists.php:690
+#: modules/checklists/checklists.php:782
 msgid "Is this content clear and easy to read?"
 msgstr "Is deze inhoud duidelijk en gemakkelijk te lezen?"
 
-#: modules/checklists/checklists.php:693
+#: modules/checklists/checklists.php:785
 msgid "Friendly Tone Content"
 msgstr "Vriendelijke tooninhoud"
 
-#: modules/checklists/checklists.php:694
+#: modules/checklists/checklists.php:786
 msgid "Is this content tone friendly?"
 msgstr "Is deze inhoudstoon vriendelijk?"
 
-#: modules/checklists/checklists.php:697
+#: modules/checklists/checklists.php:789
 msgid "Professional Tone Content"
 msgstr "Professionele tooninhoud"
 
-#: modules/checklists/checklists.php:698
+#: modules/checklists/checklists.php:790
 msgid "Is this content tone professional?"
 msgstr "Is deze inhoudstoon professioneel?"
 
-#: modules/checklists/checklists.php:701
+#: modules/checklists/checklists.php:793
 msgid "Persuasive Tone Content"
 msgstr "Overtuigende tooninhoud"
 
-#: modules/checklists/checklists.php:702
+#: modules/checklists/checklists.php:794
 msgid "Is this content tone persuasive?"
 msgstr "Is deze inhoudstoon overtuigend?"
 
-#: modules/checklists/checklists.php:705
+#: modules/checklists/checklists.php:797
 msgid "Empathetic Tone Content"
 msgstr "Empathische tooninhoud"
 
-#: modules/checklists/checklists.php:706
+#: modules/checklists/checklists.php:798
 msgid "Is this content tone empathetic?"
 msgstr "Is deze inhoudstoon empathisch?"
 
-#: modules/checklists/checklists.php:709
+#: modules/checklists/checklists.php:801
 msgid "Adventurous Tone Content"
 msgstr "Avontuurlijke tooninhoud"
 
-#: modules/checklists/checklists.php:710
+#: modules/checklists/checklists.php:802
 msgid "Is this content tone adventurous?"
 msgstr "Is deze inhoudstoon avontuurlijk?"
 
-#: modules/checklists/checklists.php:713
+#: modules/checklists/checklists.php:805
 msgid "Promotional Tone Content"
 msgstr "Promotionele tooninhoud"
 
-#: modules/checklists/checklists.php:714
+#: modules/checklists/checklists.php:806
 msgid "Is this content tone promotional?"
 msgstr "Is deze inhoudstoon promotioneel?"
 
-#: modules/checklists/checklists.php:780
-#: modules/checklists/checklists.php:865
+#: modules/checklists/checklists.php:872
+#: modules/checklists/checklists.php:960, fuzzy
 msgid "Checklist"
 msgstr "Checklist"
 
-#: modules/checklists/checklists.php:861
-#: modules/checklists/checklists.php:1189
+#: modules/checklists/checklists.php:956
+#: modules/checklists/checklists.php:1301
 msgid "You don't have to complete any Checklist tasks."
 msgstr "Je hoeft geen Checklist-taken te voltooien."
 
-#: modules/checklists/checklists.php:866
+#: modules/checklists/checklists.php:961
 msgid "Are you sure you want to publish anyway?"
 msgstr "Weet je zeker dat je het toch wilt publiceren?"
 
-#: modules/checklists/checklists.php:870
+#: modules/checklists/checklists.php:965
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "Weet je zeker dat je de gepubliceerde post toch wilt bijwerken?"
 
-#: modules/checklists/checklists.php:874
+#: modules/checklists/checklists.php:969
 msgid "Please complete the following tasks before publishing:"
 msgstr "Voltooi de volgende taken voordat je publiceert:"
 
-#: modules/checklists/checklists.php:878
+#: modules/checklists/checklists.php:973
 msgid "Please complete the following tasks before updating the published post:"
 msgstr "Voltooi de volgende taken voordat je de gepubliceerde post bijwerkt:"
 
-#: modules/checklists/checklists.php:882
-#: modules/checklists/checklists.php:886
+#: modules/checklists/checklists.php:977
+#: modules/checklists/checklists.php:981
 msgid "Not required, but important: "
 msgstr "Niet vereist, maar belangrijk: "
 
-#: modules/checklists/checklists.php:892
+#: modules/checklists/checklists.php:987
 msgid "One or more items in the checklist are not completed"
 msgstr "Een of meer items in de checklist zijn niet voltooid"
 
-#: modules/checklists/checklists.php:919
+#: modules/checklists/checklists.php:1024
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "Je hoeft geen %sChecklist-taken%s te voltooien."
 
-#: modules/checklists/checklists.php:924
-#: modules/checklists/assets/js/gutenberg-panel.jsx:282
+#: modules/checklists/checklists.php:1030
+#: modules/checklists/assets/js/gutenberg-panel.jsx:473
 msgid "Check Now"
 msgstr "Nu controleren"
 
-#: modules/checklists/checklists.php:925
+#: modules/checklists/checklists.php:1031, fuzzy
 msgid "Ok"
 msgstr "Ok"
 
-#: modules/checklists/checklists.php:926
+#: modules/checklists/checklists.php:1032
 msgid "No"
 msgstr "Nee"
 
-#: modules/checklists/checklists.php:927
+#: modules/checklists/checklists.php:1033
 msgid "Yes"
 msgstr "Ja"
 
-#: modules/checklists/checklists.php:1091
+#: modules/checklists/checklists.php:1197
 msgid "Task"
 msgstr "Taak"
 
-#: modules/checklists/checklists.php:1092
+#: modules/checklists/checklists.php:1198
 msgid "Disabled, Recommended or Required"
 msgstr "Uitgeschakeld, Aanbevolen of Vereist"
 
-#: modules/checklists/checklists.php:1093
+#: modules/checklists/checklists.php:1199
 msgid "Options"
 msgstr "Opties"
 
-#: modules/checklists/checklists.php:1094
+#: modules/checklists/checklists.php:1200
 msgid "Add custom task"
 msgstr "Voeg een aangepaste taak toe"
 
-#: modules/checklists/checklists.php:1187
+#: modules/checklists/checklists.php:1299
 msgid "Please complete the required(*) checklists task."
 msgstr "Voltooi de vereiste(*) checklist-taak."
 
-#: modules/checklists/checklists.php:1190
+#: modules/checklists/checklists.php:1302
 msgid "required"
 msgstr "vereist"
 
-#: modules/checklists/checklists.php:1191
-#: modules/checklists/templates/meta-box.php:11
+#: modules/checklists/checklists.php:1307
+#: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Checklist-taken zijn niet beschikbaar in Elementor-editors"
 
@@ -874,8 +961,8 @@ msgid "Featured image width"
 msgstr "Breedte van de uitgelichte afbeelding"
 
 #: modules/checklists/pro-requirements.php:58
-msgid "Heading in hierarchy"
-msgstr "Kop in hiërarchie"
+msgid "H1, H2, H3 etc tags are used in logical order"
+msgstr "H1, H2, H3 enz. tags worden in logische volgorde gebruikt"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
@@ -886,103 +973,107 @@ msgid "Number of characters in image captions"
 msgstr "Aantal tekens in afbeeldingsbijschriften"
 
 #: modules/checklists/pro-requirements.php:85
-msgid "Number of audio in content"
-msgstr "Aantal audio in de inhoud"
+msgid "Number of audio items in content"
+msgstr "Aantal audio-items in inhoud"
 
 #: modules/checklists/pro-requirements.php:94
-msgid "Number of video in content"
-msgstr "Aantal video in de inhoud"
+msgid "Number of video items in content"
+msgstr "Aantal video-items in inhoud"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
 msgstr "Goedgekeurd door rol"
 
 #: modules/checklists/pro-requirements.php:110
-msgid "Approved by user"
-msgstr "Goedgekeurd door gebruiker"
+msgid "Approved by specific user"
+msgstr "Goedgekeurd door specifieke gebruiker"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
 msgstr "Vermijd kop-tags in de inhoud"
 
 #: modules/checklists/pro-requirements.php:124
-msgid "Published at exact time"
-msgstr "Gepubliceerd op exact tijdstip"
+msgid "Prohibited words"
+msgstr "Verboden woorden"
 
-#: modules/checklists/pro-requirements.php:132
+#: modules/checklists/pro-requirements.php:131
+msgid "Publish time should be at a specific time"
+msgstr "Publicatietijd moet op een specifiek tijdstip zijn"
+
+#: modules/checklists/pro-requirements.php:139
 msgid "Publish time should be in the future"
 msgstr "Publicatietijd moet in de toekomst liggen"
 
-#: modules/checklists/pro-requirements.php:140
+#: modules/checklists/pro-requirements.php:147
 msgid "Rank Math SEO Score"
 msgstr "Rank Math SEO-score"
 
-#: modules/checklists/pro-requirements.php:149
+#: modules/checklists/pro-requirements.php:156
 msgid "Only one H1 tag in content"
 msgstr "Slechts één H1-tag in de inhoud"
 
-#: modules/checklists/pro-requirements.php:156
+#: modules/checklists/pro-requirements.php:163
 msgid "Tables have a header row"
 msgstr "Tabellen hebben een koprij"
 
-#: modules/checklists/pro-requirements.php:163
+#: modules/checklists/pro-requirements.php:170
 msgid "Check the \"Allow backorders?\" box"
 msgstr "Vink het vakje \"Terugbestellingen toestaan?\" aan"
 
-#: modules/checklists/pro-requirements.php:171
+#: modules/checklists/pro-requirements.php:178
 msgid "Select some products for \"Cross-sells\""
 msgstr "Selecteer enkele producten voor \"Cross-sells\""
 
-#: modules/checklists/pro-requirements.php:179
+#: modules/checklists/pro-requirements.php:186
 msgid "Discount for the \"Sale price\""
 msgstr "Korting voor de \"Verkoopprijs\""
 
-#: modules/checklists/pro-requirements.php:187
+#: modules/checklists/pro-requirements.php:194
 msgid "Check the \"Downloadable\" box"
 msgstr "Vink het vakje \"Downloadbaar\" aan"
 
-#: modules/checklists/pro-requirements.php:195
+#: modules/checklists/pro-requirements.php:202
 msgid "Product image"
 msgstr "Productafbeelding"
 
-#: modules/checklists/pro-requirements.php:203
+#: modules/checklists/pro-requirements.php:210
 msgid "Check the \"Manage stock?\" box"
 msgstr "Vink het vakje \"Voorraad beheren?\" aan"
 
-#: modules/checklists/pro-requirements.php:211
+#: modules/checklists/pro-requirements.php:218
 msgid "Enter a \"Regular price\""
 msgstr "Voer een \"Reguliere prijs\" in"
 
-#: modules/checklists/pro-requirements.php:219
+#: modules/checklists/pro-requirements.php:226
 msgid "Enter a \"Sale price\""
 msgstr "Voer een \"Verkoopprijs\" in"
 
-#: modules/checklists/pro-requirements.php:227
+#: modules/checklists/pro-requirements.php:234
 msgid "Schedule the \"Sale price\""
 msgstr "Plan de \"Verkoopprijs\""
 
-#: modules/checklists/pro-requirements.php:235
+#: modules/checklists/pro-requirements.php:242
 msgid "Enter a \"SKU\""
 msgstr "Voer een \"SKU\" in"
 
-#: modules/checklists/pro-requirements.php:243
+#: modules/checklists/pro-requirements.php:250
 msgid "Check the \"Sold individually\" box"
 msgstr "Vink het vakje \"Apart verkocht\" aan"
 
-#: modules/checklists/pro-requirements.php:251
+#: modules/checklists/pro-requirements.php:258
 msgid "Select some products for \"Upsells\""
 msgstr "Selecteer enkele producten voor \"Upsells\""
 
-#: modules/checklists/pro-requirements.php:259
+#: modules/checklists/pro-requirements.php:266
 msgid "Check the \"Virtual\" box"
 msgstr "Vink het vakje \"Virtueel\" aan"
 
-#: modules/checklists/pro-requirements.php:290
+#: modules/checklists/pro-requirements.php:297
 #, php-format
 msgid "Number of Characters in %s field"
 msgstr "Aantal tekens in %s veld"
 
-#: modules/checklists/pro-requirements.php:303
+#: modules/checklists/pro-requirements.php:310
 #, php-format
 msgid "%s is filled"
 msgstr "%s is ingevuld"
@@ -1007,7 +1098,7 @@ msgstr "Documentatie"
 msgid "Contact the PublishPress team"
 msgstr "Neem contact op met het PublishPress-team"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:37, fuzzy
 msgid "Contact"
 msgstr "Contact"
 
@@ -1038,7 +1129,9 @@ msgid "Description"
 msgstr "Beschrijving"
 
 #: modules/checklists/templates/global-checklists.php:196
-msgid "Custom tasks do not complete automatically. Users must check the box to show they have completed the task."
+msgid ""
+"Custom tasks do not complete automatically. Users must check the box to "
+"show they have completed the task."
 msgstr ""
 "Aangepaste taken worden niet automatisch voltooid. Gebruikers moeten het "
 "vakje aanvinken om aan te geven dat ze de taak hebben voltooid."
@@ -1059,7 +1152,7 @@ msgstr "Deze functie vereist een OpenAI API-sleutel."
 msgid "Latin characters in permalink"
 msgstr "Latijnse karakters in permalink"
 
-#: modules/permalinks/permalinks.php:65
+#: modules/permalinks/permalinks.php:65, fuzzy
 msgid "Permalinks"
 msgstr "Permalinks"
 
@@ -1080,237 +1173,301 @@ msgid "Reviews"
 msgstr "Recensies"
 
 #: modules/settings/settings.php:62
-#: modules/settings/settings.php:128
+#: modules/settings/settings.php:132
 msgid "Checklists Settings"
 msgstr "Instellingen voor checklists"
 
-#: modules/settings/settings.php:151
-msgid "Are you sure you want to reset all renamed checklist items to their default labels? This action cannot be undone."
+#: modules/settings/settings.php:155
+msgid ""
+"Are you sure you want to reset all renamed checklist items to their default "
+"labels? This action cannot be undone."
 msgstr ""
 "Weet u zeker dat u alle hernoemde checklistitems naar hun standaardlabels "
 "wilt terugzetten? Deze actie kan niet ongedaan worden gemaakt."
 
-#: modules/settings/settings.php:314
+#: modules/settings/settings.php:156
+msgid "Resetting..."
+msgstr "Resetten..."
+
+#: modules/settings/settings.php:157
+#: modules/settings/settings.php:1556
+msgid "Reset All Renamed Labels"
+msgstr "Reset Alle Hernoemde Labels"
+
+#: modules/settings/settings.php:320
 msgid "Features"
 msgstr "Functies"
 
-#: modules/settings/settings.php:315
+#: modules/settings/settings.php:321
 msgid "Feel free to select only the features you need."
 msgstr "Voel je vrij om alleen de functies te selecteren die je nodig hebt."
 
-#: modules/settings/settings.php:323
+#: modules/settings/settings.php:329
 msgid "Enabled features"
 msgstr "Ingeschakelde functies"
 
-#: modules/settings/settings.php:378
+#: modules/settings/settings.php:384
 msgid "There are no PublishPress modules registered"
 msgstr "Er zijn geen PublishPress-modules geregistreerd"
 
-#: modules/settings/settings.php:474
+#: modules/settings/settings.php:480
 #, php-format
-msgid "Disabled because add_post_type_support('%1$s', '%2$s') is included in a loaded file."
+msgid ""
+"Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
+"loaded file."
 msgstr ""
 "Uitgeschakeld omdat add_post_type_support(''%1$s', ''%2$s') is opgenomen in "
 "een geladen bestand."
 
-#: modules/settings/settings.php:770
-msgid "Enable Who Can Ignore:"
-msgstr "Schakel Wie Kan Negeren in:"
+#: modules/settings/settings.php:797
+msgid "Enable User Roles Filter:"
+msgstr "Schakel Gebruikersrollenfilter in:"
 
-#: modules/settings/settings.php:778
+#: modules/settings/settings.php:805
 msgid "Show warning icon:"
 msgstr "Waarschuwingsicoon weergeven:"
 
-#: modules/settings/settings.php:786
+#: modules/settings/settings.php:813
+msgid "Highlight failing blocks in the editor:"
+msgstr "Markeer falende blokken in de editor:"
+
+#: modules/settings/settings.php:821
 msgid "Delete data on uninstall:"
 msgstr "Verwijder gegevens bij de-installatie:"
 
-#: modules/settings/settings.php:795
+#: modules/settings/settings.php:830
 msgid "Enable Status Filter:"
 msgstr "Schakel Statusfilter in:"
 
-#: modules/settings/settings.php:805
+#: modules/settings/settings.php:840
 msgid "Enable Duplicate Checklists:"
 msgstr "Schakel Dubbele Checklist in:"
 
-#: modules/settings/settings.php:815
+#: modules/settings/settings.php:850
 msgid "Show Checklists column in post lists:"
 msgstr "Toon Checklist-kolom in berichtenlijsten:"
 
-#: modules/settings/settings.php:825
+#: modules/settings/settings.php:860
 msgid "Enable Taxonomy Filter:"
 msgstr "Schakel Taxonomiefilter in:"
 
-#: modules/settings/settings.php:844
+#: modules/settings/settings.php:879
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Deactiveer de \"Status\" optie bij gebruik van \"Snelle Bewerking\":"
 
-#: modules/settings/settings.php:852
+#: modules/settings/settings.php:887
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Deactiveer \"Snelle Bewerking\" volledig:"
 
-#: modules/settings/settings.php:860
+#: modules/settings/settings.php:895
 msgid "Disable \"Publish\" button:"
 msgstr "Deactiveer \"Publiceren\" knop:"
 
-#: modules/settings/settings.php:878
+#: modules/settings/settings.php:913
 msgid "Complete Icon:"
 msgstr "Voltooid Icoon:"
 
-#: modules/settings/settings.php:886
+#: modules/settings/settings.php:921
 msgid "Incomplete Icon:"
 msgstr "Onvoltooid Icoon:"
 
-#: modules/settings/settings.php:894
+#: modules/settings/settings.php:929
 msgid "Required Complete Color:"
 msgstr "Vereiste Voltooid Kleur:"
 
-#: modules/settings/settings.php:902
+#: modules/settings/settings.php:937
 msgid "Required Incomplete Color:"
 msgstr "Vereiste Onvoltooid Kleur:"
 
-#: modules/settings/settings.php:910
+#: modules/settings/settings.php:945
+msgid "Required Asterisk Color:"
+msgstr "Vereiste Asterisk Kleur:"
+
+#: modules/settings/settings.php:953
 msgid "Recommended Complete Color:"
 msgstr "Aanbevolen Voltooid Kleur:"
 
-#: modules/settings/settings.php:918
+#: modules/settings/settings.php:961
 msgid "Recommended Incomplete Color:"
 msgstr "Aanbevolen Onvoltooid Kleur:"
 
-#: modules/settings/settings.php:936
+#: modules/settings/settings.php:969
+msgid "Rename task labels:"
+msgstr "Hernoem taaklabels:"
+
+#: modules/settings/settings.php:977
+msgid "Checklist task sort order:"
+msgstr "Checklist taak sorteervolgorde:"
+
+#: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Sleutel:"
 
-#: modules/settings/settings.php:951
+#: modules/settings/settings.php:1010
 msgid "Reset Renamed Checklist:"
 msgstr "Reset Veranderde Checklist:"
 
-#: modules/settings/settings.php:970
+#: modules/settings/settings.php:1029
 msgid "Post types:"
 msgstr "Berichttypen:"
 
-#: modules/settings/settings.php:1003
-msgid "This allows tasks to be disabled for specific statuses such as \"Draft\" or \"Published."
+#: modules/settings/settings.php:1062
+msgid ""
+"This allows tasks to be disabled for specific statuses such as \"Draft\" or "
+"\"Published."
 msgstr ""
 "Dit stelt taken in staat om uitgeschakeld te worden voor specifieke "
 "statussen zoals \"Concept\" of \"Gepubliceerd."
 
-#: modules/settings/settings.php:1024
+#: modules/settings/settings.php:1083
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr ""
-"Dit stelt gebruikers in staat om bestaande checklisttaken te dupliceren."
+msgstr "Dit stelt gebruikers in staat om bestaande checklisttaken te dupliceren."
 
-#: modules/settings/settings.php:1046
-msgid "Add a Checklists column to the Posts screen showing how many requirements are complete."
+#: modules/settings/settings.php:1105
+msgid ""
+"Add a Checklists column to the Posts screen showing how many requirements "
+"are complete."
 msgstr ""
 "Voeg een Checklist-kolom toe aan het Berichten-scherm dat toont hoeveel "
 "vereisten zijn voltooid."
 
-#: modules/settings/settings.php:1067
-msgid "This allows tasks to be disabled for posts with specific taxonomy terms. Go to the \"Post Types\" tab to choose the terms."
+#: modules/settings/settings.php:1126
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Types\" tab to choose the terms."
 msgstr ""
 "Dit maakt het mogelijk om taken uit te schakelen voor berichten met "
 "specifieke taxonomievoorwaarden. Ga naar het tabblad \"Berichttypen\" om de "
 "voorwaarden te kiezen."
 
-#: modules/settings/settings.php:1089
-msgid "This will display a warning icon in the \"Checklists\" box if requirements are incomplete."
+#: modules/settings/settings.php:1148
+msgid ""
+"This will display a warning icon in the \"Checklists\" box if requirements "
+"are incomplete."
 msgstr ""
 "Dit zal een waarschuwing pictogram weergeven in de \"Checklists\" box als "
 "vereisten onvoltooid zijn."
 
-#: modules/settings/settings.php:1109
-msgid "When enabled, all PublishPress Checklists data will be deleted if the plugin is uninstalled."
+#: modules/settings/settings.php:1168
+msgid ""
+"This will highlight Gutenberg blocks that fail block-specific checklist "
+"tasks."
+msgstr ""
+"Dit markeert Gutenberg-blokken die falen voor blok-specifieke "
+"checklisttaken."
+
+#: modules/settings/settings.php:1188
+msgid ""
+"When enabled, all PublishPress Checklists data will be deleted if the "
+"plugin is uninstalled."
 msgstr ""
 "Wanneer ingeschakeld, worden alle PublishPress Checklists-gegevens "
 "verwijderd als de plugin wordt verwijderd."
 
-#: modules/settings/settings.php:1130
-msgid "This will show \"Who can ignore\" options."
-msgstr "Dit toont opties voor \"Wie kan negeren\"."
+#: modules/settings/settings.php:1209
+msgid "This will show \"Exclude User Roles\" options."
+msgstr "Dit toont \"Uitsluiten Gebruikersrollen\" opties."
 
-#: modules/settings/settings.php:1151
-msgid "Disabling the \"Status\" option is recommended because it can be used to avoid using the Checklists requirements."
+#: modules/settings/settings.php:1230
+msgid ""
+"Disabling the \"Status\" option is recommended because it can be used to "
+"avoid using the Checklists requirements."
 msgstr ""
 "Het wordt aanbevolen om de optie \"Status\" uit te schakelen omdat deze kan "
 "worden gebruikt om te voorkomen dat de checklistvereisten worden gebruikt."
 
-#: modules/settings/settings.php:1172
-msgid "This will disable \"Quick Edit\" for all users except those with the \"manage_options\" capability."
+#: modules/settings/settings.php:1251
+msgid ""
+"This will disable \"Quick Edit\" for all users except those with the "
+"\"manage_options\" capability."
 msgstr ""
 "Dit zal \"Snelle Bewerking\" uitschakelen voor alle gebruikers behalve "
 "degenen met de \"manage_options\" bevoegdheid."
 
-#: modules/settings/settings.php:1193
-msgid "This will disable the \"Publish\" button when checklist requirements are not met."
+#: modules/settings/settings.php:1272
+msgid ""
+"This will disable the \"Publish\" button when checklist requirements are "
+"not met."
 msgstr ""
 "Dit zal de \"Publiceer\" knop uitschakelen wanneer checklistvereisten niet "
 "zijn voldaan."
 
-#: modules/settings/settings.php:1212
+#: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
-msgstr ""
-"Voer uw API-sleutel in om OpenAI-prompts te gebruiken in checklisttaken."
+msgstr "Voer uw API-sleutel in om OpenAI-prompts te gebruiken in checklisttaken."
 
-#: modules/settings/settings.php:1266
+#: modules/settings/settings.php:1364
 msgid "Post Types"
 msgstr "Berichttypen"
 
-#: modules/settings/settings.php:1267
+#: modules/settings/settings.php:1365
 msgid "General"
 msgstr "Algemeen"
 
-#: modules/settings/settings.php:1268
+#: modules/settings/settings.php:1366
 msgid "Publishing Options"
 msgstr "Publicatie-opties"
 
-#: modules/settings/settings.php:1269
+#: modules/settings/settings.php:1367
 msgid "Appearance"
 msgstr "Uiterlijk"
 
-#: modules/settings/settings.php:1270
+#: modules/settings/settings.php:1368
 msgid "Integration"
 msgstr "Integratie"
 
-#: modules/settings/settings.php:1271
+#: modules/settings/settings.php:1369
 msgid "Tools"
 msgstr "Hulpmiddelen"
 
-#: modules/settings/settings.php:1318
+#: modules/settings/settings.php:1416
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr ""
-"Voer een Dashicons klasse naam in (bijv., dashicons-yes, dashicons-saved). "
+msgstr "Voer een Dashicons klasse naam in (bijv., dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1319
-#: modules/settings/settings.php:1334
+#: modules/settings/settings.php:1417
+#: modules/settings/settings.php:1432
 msgid "View Dashicons"
 msgstr "Bekijk Dashicons"
 
-#: modules/settings/settings.php:1333
+#: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
+msgstr "Voer een Dashicons klasse naam in (bijv., dashicons-no, dashicons-dismiss). "
+
+#: modules/settings/settings.php:1514
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "Sta beheerders toe om taaklabels voor de posteditor te hernoemen."
+
+#: modules/settings/settings.php:1532
+msgid "Default"
+msgstr "Standaard"
+
+#: modules/settings/settings.php:1533
+msgid "Required on top and Recommended below"
+msgstr "Vereist bovenaan en Aanbevolen hieronder"
+
+#: modules/settings/settings.php:1534
+msgid "Sort alphabetically"
+msgstr "Sorteer alfabetisch"
+
+#: modules/settings/settings.php:1558
+msgid ""
+"This will reset all renamed checklist labels for WP Admin and Editing "
+"screen back to their default labels."
 msgstr ""
-"Voer een Dashicons klasse naam in (bijv., dashicons-no, dashicons-dismiss). "
+"Dit zal alle hernoemde checklistlabels voor WP Admin en bewerkingsscherm "
+"terugzetten naar hun standaardlabels."
 
-#: modules/settings/settings.php:1396
-msgid "Reset All Custom Labels"
-msgstr "Reset Alle Aangepaste Labels"
-
-#: modules/settings/settings.php:1398
-msgid "This will reset all renamed checklist items back to their default labels."
-msgstr ""
-"Dit zal alle hernoemde checklist-items terugzetten naar hun standaardlabels."
-
-#: modules/settings/settings.php:1408
+#: modules/settings/settings.php:1568
 msgid "Security check failed."
 msgstr "Beveiligingscontrole is mislukt."
 
-#: modules/settings/settings.php:1413
+#: modules/settings/settings.php:1573
 msgid "You do not have permission to perform this action."
 msgstr "Je hebt geen toestemming om deze actie uit te voeren."
 
-#: modules/settings/settings.php:1458
-msgid "All custom labels have been reset successfully."
-msgstr "Alle aangepaste labels zijn succesvol opnieuw ingesteld."
+#: modules/settings/settings.php:1618
+msgid "All renamed labels have been reset successfully."
+msgstr "Alle hernoemde labels zijn succesvol gereset."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
@@ -1396,9 +1553,9 @@ msgstr "Tussen %d en %d tekens in Yoast SEO meta beschrijving"
 msgid "Minimum Yoast SEO readability score"
 msgstr "Minimale Yoast SEO leesbaarheidsscore"
 
-#. translators: %s expands to the readability score
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
+#. translators: %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Leesbaarheid: %s"
@@ -1406,7 +1563,7 @@ msgstr "Yoast Leesbaarheid: %s"
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167, fuzzy
 msgid "OK"
 msgstr "OK"
 
@@ -1421,12 +1578,12 @@ msgstr "Goed"
 msgid "Minimum Yoast SEO analysis score"
 msgstr "Minimale Yoast SEO analysescore"
 
-#. translators: %s expands to the seo score
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
-#, php-format
+#. translators: %s expands to the seo score
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
-msgstr ""
+msgstr "Yoast SEO: %s"
 
 #: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
@@ -1438,7 +1595,9 @@ msgstr "Deze plugin kan worden verwijderd."
 
 #: publishpress-checklists.php:154
 #, php-format
-msgid "You're using PublishPress Checklists Free. The Pro version has more features and support. %sUpgrade to Pro%s"
+msgid ""
+"You're using PublishPress Checklists Free. The Pro version has more "
+"features and support. %sUpgrade to Pro%s"
 msgstr ""
 "Je gebruikt PublishPress Checklists Free. De Pro-versie heeft meer functies "
 "en ondersteuning. %sUpgrade naar Pro%s"

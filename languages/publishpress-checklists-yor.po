@@ -1,0 +1,1253 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PublishPress Checklists\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-01-30 15:14+0000\n"
+"Last-Translator: Riza Maulana Ardiyanto <riza@publishpress.com>\n"
+"Language-Team: Yoruba <https://weblate.publishpress.com/projects/"
+"publishpress-checklists/publishpress-checklists/yo/>\n"
+"Language: yo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.14.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: publishpress-checklists.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#. Plugin Name of the plugin
+msgid "PublishPress Checklists Free"
+msgstr ""
+
+#. Plugin URI of the plugin
+#, fuzzy
+msgid "https://publishpress.com/"
+msgstr "https://publishpress.com/"
+
+#. Description of the plugin
+msgid ""
+"With PublishPress Checklists, you can choose publishing requirements for "
+"your content."
+msgstr ""
+"Pẹlu PublishPress Checklists, o le yan awọn ibeere titẹjade fun akoonu rẹ."
+
+#. Author of the plugin
+msgid "PublishPress"
+msgstr "PublishPress"
+
+#. Author URI of the plugin
+msgid "https://publishpress.com"
+msgstr "https://publishpress.com"
+
+msgid "Disabled"
+msgstr "Ti dènà"
+
+msgid "Recommended"
+msgstr "Ti a ṣe iṣeduro"
+
+msgid "Required"
+msgstr "Ti a beere"
+
+msgid "Please correct your form errors below and try again."
+msgstr "Jọwọ ṣatunṣe awọn aṣiṣe fọọmu rẹ ni isalẹ ki o si gbiyanju lẹẹkansi."
+
+msgid "Cheatin&#8217; uh?"
+msgstr "Ṣe o n ṣe ẹtan&#8217; bẹẹ ni?"
+
+msgid "You do not have necessary permissions to complete this action."
+msgstr "Iwọ ko ni awọn aṣẹ pataki lati pari iṣẹ yii."
+
+msgid "Post does not exist"
+msgstr "Ifiweranṣẹ ko si"
+
+msgid "Checklists"
+msgstr "Awọn Akojọ Ṣayẹwo"
+
+msgid "PublishPress Checklists"
+msgstr "PublishPress Checklists"
+
+#, php-format
+msgid "If you like %s please leave us a %s rating. Thank you!"
+msgstr "Ti o ba fẹ %s jọwọ fi %s ipo silẹ fun wa. O ṣeun!"
+
+msgid "Need PublishPress Checklists Support?"
+msgstr "Ṣe o nilo Atilẹyin PublishPress Checklists?"
+
+msgid "If you need help or have a new feature request, let us know."
+msgstr "Tí o bá nílò ìrànlọ́wọ́ tàbí ní ìbéèrè tuntun fún ẹya kan, jẹ́ kí a mọ."
+
+msgid "Request Support"
+msgstr "Beere Atilẹyin"
+
+msgid "Detailed documentation is also available on the plugin website."
+msgstr ""
+"Iwe-ẹri ti o ni alaye ni gbogbo wa tun wa lori oju opo wẹẹbu plugin naa."
+
+msgid "View Knowledge Base"
+msgstr "Wo Ile-ika Ẹkọ"
+
+msgid "Settings"
+msgstr "Ẹ̀tọ́"
+
+msgid "Upgrade to Pro"
+msgstr "Mu si Pro"
+
+#, php-format
+msgid "Approved by %s"
+msgstr "Ti fọwọsi nipasẹ %s"
+
+msgid "Approved by a user in this role"
+msgstr "Ti fọwọsi nipasẹ olumulo kan ni ipa yii"
+
+#. translators: 1: custom editor label, 2: selected role names.
+#. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
+#. translators: 1: custom editor label, 2: prohibited category names.
+#. translators: 1: custom editor label, 2: prohibited tag names.
+#. translators: 1: custom editor label, 2: required category names.
+#. translators: 1: custom editor label, 2: required tag names.
+#, php-format
+msgid "%1$s - %2$s"
+msgstr ""
+
+msgid "Min"
+msgstr "kerepin"
+
+msgid "Max"
+msgstr "pòpin"
+
+#. translators: %d: exact required value.
+#, php-format
+msgid "exact %d"
+msgstr ""
+
+#. translators: %d: minimum required value.
+#, php-format
+msgid "min %d"
+msgstr ""
+
+#. translators: %d: maximum allowed value.
+#, php-format
+msgid "max %d"
+msgstr ""
+
+#. translators: 1: minimum required value, 2: maximum allowed value.
+#, php-format
+msgid "min %1$d max %2$d"
+msgstr ""
+
+msgid "Edit label"
+msgstr "Ṣatunkọ aami"
+
+msgid "Number of categories"
+msgstr "Iye awọn ẹka"
+
+#, php-format
+msgid "Minimum of %s category"
+msgstr "Iwọn ti o kere ju %s ẹka"
+
+#, php-format
+msgid "Minimum of %s categories"
+msgstr "Iwọn ti o kere ju %s awọn ẹka"
+
+#, php-format
+msgid "Maximum of %s category"
+msgstr "pòpin ti %s ẹka"
+
+#, php-format
+msgid "Maximum of %s categories"
+msgstr "pòpin ti %s awọn ẹka"
+
+#, php-format
+msgid "%s category"
+msgstr "%s ẹka"
+
+#, php-format
+msgid "%s categories"
+msgstr "%s awọn ẹka"
+
+#, php-format
+msgid "Between %s and %s categories"
+msgstr "Laarin %s ati %s awọn ẹka"
+
+msgid "Custom"
+msgstr "Adani"
+
+msgid "Which roles can mark this task as complete?"
+msgstr "Iru ipa wo ni o le samisi iṣẹ yii gẹgẹ bi ti pari?"
+
+msgid "Enter name of custom task"
+msgstr "Tẹ orúkọ iṣẹ́ àtọkànwá"
+
+msgid "Remove"
+msgstr "Yọ"
+
+msgid "Number of external links in content"
+msgstr "Iye awọn ọna asopọ ita ni akoonu"
+
+#, php-format
+msgid "Minimum of %d external link in content"
+msgstr "Iwọn ti o kere ju %d ọna asopọ ita ninu akoonu"
+
+#, php-format
+msgid "Minimum of %d external links in content"
+msgstr "Iwọn ti o kere ju %d awọn ọna asopọ ita ninu akoonu"
+
+#, php-format
+msgid "Maximum of %d external link in content"
+msgstr "pòpin ti %d ọna asopọ ita ninu akoonu"
+
+#, php-format
+msgid "Maximum of %d external links in content"
+msgstr "pòpin ti %d awọn ọna asopọ ita ninu akoonu"
+
+#, php-format
+msgid "%d external link in content"
+msgstr "%d ọna asopọ ita ninu akoonu"
+
+#, php-format
+msgid "%d external links in content"
+msgstr "%d awọn ọna asopọ ita ninu akoonu"
+
+#, php-format
+msgid "Between %d and %d external links in content"
+msgstr "Laarin %d ati %d awọn ìjápọ ita ni akoonu"
+
+msgid "Featured image is added"
+msgstr "Àwòrán àfihàn ti wa ni afikun"
+
+msgid "Featured image has Alt text"
+msgstr "Àwòrán àfihàn ni ọrọ Alt"
+
+msgid "Featured image has caption"
+msgstr "Àwòrán tó ṣe pàtàkì ní akọlé"
+
+msgid "Number of characters in excerpt"
+msgstr ""
+
+#, php-format
+msgid "Minimum of %d character in excerpt"
+msgstr "Kekere ti %d ohun kikọ ninu apakan"
+
+#, php-format
+msgid "Minimum of %d characters in excerpt"
+msgstr "Iwọn ti o kere ju %d awọn ohun kikọ ninu excerpt"
+
+#, php-format
+msgid "Maximum of %d character in excerpt"
+msgstr "Ìkànsí tó pọ̀jù %d àkàrà nínú àkókò"
+
+#, php-format
+msgid "Maximum of %d characters in excerpt"
+msgstr "pòpin ti %d awọn ohun kikọ ninu apakan"
+
+#, php-format
+msgid "%d character in excerpt"
+msgstr "%d ohun kikọ ninu iyasọtọ"
+
+#, php-format
+msgid "%d characters in excerpt"
+msgstr "%d awọn ohun kikọ ninu iyasọtọ"
+
+#, php-format
+msgid "Between %d and %d characters in excerpt"
+msgstr "Laarin %d ati %d awọn aami ni akopọ"
+
+msgid "All images have Alt text"
+msgstr "Gbogbo awọn aworan ni ọrọ Alt"
+
+msgid "Number of characters in Alt text"
+msgstr "Iye awọn lẹta ninu ọrọ Alt"
+
+#, php-format
+msgid "Minimum of %d character in Alt text"
+msgstr "Kéré jùlọ ti %d àwòrán nínú ọrọ Alt"
+
+#, php-format
+msgid "Minimum of %d characters in Alt text"
+msgstr "Kere ju %d awọn ohun kikọ ninu ọrọ Alt"
+
+#, php-format
+msgid "Maximum of %d character in Alt text"
+msgstr "Max ti %d lẹta ninu Alt text"
+
+#, php-format
+msgid "Maximum of %d characters in Alt text"
+msgstr "Max ti %d lẹta ninu Alt text"
+
+#, php-format
+msgid "%d character in Alt text"
+msgstr "%d ohun kikọ ninu Alt ọrọ"
+
+#, php-format
+msgid "%d characters in Alt text"
+msgstr "%d awọn ohun kikọ ninu Alt ọrọ"
+
+#, php-format
+msgid "Between %d and %d characters in Alt text"
+msgstr "Laarin %d ati %d awọn kikọ ni ọrọ Alt"
+
+msgid "Number of internal links in content"
+msgstr "Iye awọn ọna asopọ inu ni akoonu"
+
+#, php-format
+msgid "Minimum of %d internal link in content"
+msgstr "Iwọn ti o kere ju %d ọna asopọ inu ninu akoonu"
+
+#, php-format
+msgid "Minimum of %d internal links in content"
+msgstr "Iwọn ti o kere ju %d awọn ọna asopọ inu ninu akoonu"
+
+#, php-format
+msgid "Maximum of %d internal link in content"
+msgstr "pòpin ti %d ọna asopọ inu ninu akoonu"
+
+#, php-format
+msgid "Maximum of %d internal links in content"
+msgstr "pòpin ti %d awọn ọna asopọ inu ninu akoonu"
+
+#, php-format
+msgid "%d internal link in content"
+msgstr "%d ọna asopọ inu ninu akoonu"
+
+#, php-format
+msgid "%d internal links in content"
+msgstr "%d awọn ọna asopọ inu ninu akoonu"
+
+#, fuzzy, php-format
+msgid "Between %d and %d internal links in content"
+msgstr "Laarin %d ati %d awọn ìjápọ inu ni akoonu"
+
+msgid "Openai"
+msgstr "Openai"
+
+msgid "Enter OpenAI task prompt"
+msgstr "Tẹ ìpè iṣẹ́ OpenAI"
+
+msgid "An error occured."
+msgstr "Aṣiṣe kan ṣẹlẹ."
+
+msgid "Validation error. Kindly reload this page and try again."
+msgstr "Aṣiṣe ìmúlẹ. Jọwọ tún ìwé yìí ṣe àtúnṣe kí o sì tún gbìmọ̀ lẹ́ẹ̀kan síi."
+
+msgid "Post content is empty."
+msgstr "Akopọ ifiweranṣẹ jẹ ofo."
+
+msgid ""
+"OpenAI tasks require an API Key. Please add your API Key in the Settings "
+"area."
+msgstr ""
+"Awọn iṣẹ OpenAI nilo Bọtini API. Jọwọ fi Bọtini API rẹ kun ni agbegbe Eto."
+
+#, php-format
+msgid "API Error: %1s."
+msgstr "Aṣiṣe API: %1s."
+
+msgid "See the full response."
+msgstr "Wo idahun kikun."
+
+msgid "Invalid response"
+msgstr "Ìdáhùn tí kò tọ́"
+
+#, php-format
+msgid "Prohibited categories: %s"
+msgstr "Awọn ẹka ti a fi le e: %s"
+
+msgid "Prohibited categories"
+msgstr "Awọn ẹka ti a fi le e"
+
+#, php-format
+msgid "Prohibited tags: %s"
+msgstr "Awọn aami ti a ko: %s"
+
+msgid "Prohibited tags"
+msgstr "Awọn aami ti a ko"
+
+#, php-format
+msgid "Required categories: %s"
+msgstr "Awọn ẹka ti a beere: %s"
+
+msgid "Required categories"
+msgstr "Awọn ẹka ti a beere"
+
+#, php-format
+msgid "Required tags: %s"
+msgstr "Awọn aami ti a beere: %s"
+
+msgid "Required tags"
+msgstr "Awọn aami ti a beere"
+
+msgid "Number of tags"
+msgstr "Iye awọn aami"
+
+#, php-format
+msgid "Minimum of %d tag"
+msgstr "Iwọn ti o kere ju %d ami"
+
+#, php-format
+msgid "Minimum of %d tags"
+msgstr "Iwọn ti o kere ju %d awọn ami"
+
+#, php-format
+msgid "Maximum of %d tag"
+msgstr "pòpin ti %d aami"
+
+#, php-format
+msgid "Maximum of %d tags"
+msgstr "pòpin ti %d awọn aami"
+
+#, php-format
+msgid "%d tag"
+msgstr "%d afi"
+
+#, php-format
+msgid "%d tags"
+msgstr "%d awọn afi"
+
+#, php-format
+msgid "Between %d and %d tags"
+msgstr "Laarin %d ati %d awọn aami"
+
+msgid "Number of "
+msgstr "Iye "
+
+#, php-format
+msgid "Minimum of %d "
+msgstr "kekere ti %d "
+
+#, php-format
+msgid "Maximum of %d "
+msgstr "Ìkànsí tó pọ̀jù %d "
+
+#, fuzzy, php-format
+msgid "%d "
+msgstr "%d "
+
+#, php-format
+msgid "Between %d and %d "
+msgstr "Laarin %d ati %d "
+
+msgid "Number of characters in title"
+msgstr "Iye awọn lẹta ninu akọle"
+
+#, php-format
+msgid "Minimum of %d character in title"
+msgstr "Kekere ti %d ohun kikọ ninu akọle"
+
+#, php-format
+msgid "Minimum of %d characters in title"
+msgstr "Iwọn ti o kere ju %d awọn ohun kikọ ninu akọle"
+
+#, php-format
+msgid "Maximum of %d character in title"
+msgstr "Ìkànsí tó pọ̀jù %d àkàrà nínú akọlé"
+
+#, php-format
+msgid "Maximum of %d characters in title"
+msgstr "pòpin ti %d awọn ohun kikọ ninu akọle"
+
+#, php-format
+msgid "%d character in title"
+msgstr "%d ohun kikọ ninu akọle"
+
+#, php-format
+msgid "%d characters in title"
+msgstr "%d awọn ohun kikọ ninu akọle"
+
+#, php-format
+msgid "Between %d and %d characters in title"
+msgstr "Laarin %d ati %d awọn aami ni akọle"
+
+msgid "All links use a valid format"
+msgstr "Gbogbo awọn ọna asopọ lo ọna kika to wulo"
+
+msgid "Number of words in content"
+msgstr "Iye awọn ọrọ ni akoonu"
+
+#, php-format
+msgid "Minimum of %d word in content"
+msgstr "Iwọn ti o kere ju %d ọrọ ninu akoonu"
+
+#, php-format
+msgid "Minimum of %d words in content"
+msgstr "Iwọn ti o kere ju %d awọn ọrọ ninu akoonu"
+
+#, php-format
+msgid "Maximum of %d word in content"
+msgstr "pòpin ti %d ọrọ ninu akoonu"
+
+#, php-format
+msgid "Maximum of %d words in content"
+msgstr "pòpin ti %d awọn ọrọ ninu akoonu"
+
+#, php-format
+msgid "%d word in content"
+msgstr "%d ọrọ ninu akoonu"
+
+#, php-format
+msgid "%d words in content"
+msgstr "%d awọn ọrọ ninu akoonu"
+
+#, fuzzy, php-format
+msgid "Between %d and %d words in content"
+msgstr "Laarin %d ati %d awọn ọrọ ni akoonu"
+
+msgid "Title"
+msgstr "Akọle"
+
+msgid "Content"
+msgstr "Àkóónú"
+
+msgid "Publish Date / Time"
+msgstr "Ọjọ / Akoko Ifiweranṣẹ"
+
+msgid "Approval"
+msgstr "Igbọwọsi"
+
+msgid "Images"
+msgstr "Aworan"
+
+msgid "Audio / Video"
+msgstr "Ohun / Fidio"
+
+msgid "Featured Image"
+msgstr "Àwòrán tó ṣe pàtàkì"
+
+msgid "Links"
+msgstr "Àwọn ọna asopọ"
+
+msgid "Permalink"
+msgstr "Permalink"
+
+msgid "Categories"
+msgstr "Awọn ẹka"
+
+msgid "Tags"
+msgstr "Àwọn ami"
+
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+msgid "Accessibility"
+msgstr "Iwọle"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "Rank Math SEO"
+msgstr "Rank Math SEO"
+
+msgid "All in One SEO"
+msgstr "Gbogbo ni SEO Ni Ọkan"
+
+msgid "Yoast SEO"
+msgstr "Yoast SEO"
+
+msgid "ACF"
+msgstr "ACF"
+
+msgid "options cannot be empty."
+msgstr "àṣàyàn ko le jẹ ofo."
+
+msgid "Please make sure to add a name for all the custom tasks."
+msgstr "Jọwọ rii daju lati fi orukọ kun fun gbogbo awọn iṣẹ aṣa."
+
+msgid "Rename task label"
+msgstr ""
+
+msgid "Label for the Checklists screen"
+msgstr ""
+
+msgid "Leave empty to use the default WP Admin label"
+msgstr ""
+
+msgid "Label for the post editing screen"
+msgstr ""
+
+msgid "Leave empty to use the default editing screen label"
+msgstr ""
+
+msgid "Preview in editing screen:"
+msgstr ""
+
+msgid "Default checklist label will be used."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "No results found"
+msgstr "Ko si awọn esi ti a ri"
+
+msgid "Searching…"
+msgstr "N wa…"
+
+msgid "Suggested Prompts"
+msgstr "Àwọn ìtọ́kasí tó dájú"
+
+msgid "What's the expected OpenAI response to mark the requirement as pass?"
+msgstr ""
+"Kí ni idahun OpenAI ti a nireti lati samisi ibeere naa gẹgẹ bi ti o kọja?"
+
+msgid "Clear Content"
+msgstr "Kó Àkóónú"
+
+msgid "Is this content clear and easy to read?"
+msgstr "Ṣe akoonu yii ye ati irọrun lati ka?"
+
+msgid "Friendly Tone Content"
+msgstr "Àkóónú tó ní ìbáṣepọ̀"
+
+msgid "Is this content tone friendly?"
+msgstr "Ṣe akoonu yii ni irọrun ọrẹ?"
+
+msgid "Professional Tone Content"
+msgstr "Akoonu Iwa ọjọgbọn"
+
+msgid "Is this content tone professional?"
+msgstr "Ṣe akoonu yii ni irọrun ọjọgbọn?"
+
+msgid "Persuasive Tone Content"
+msgstr "Akoonu Iwa ipolongo"
+
+msgid "Is this content tone persuasive?"
+msgstr "Ṣe akoonu yii ni irọrun ikọ́ni?"
+
+msgid "Empathetic Tone Content"
+msgstr "Àkóónú Ohun Èdè Ẹmi"
+
+msgid "Is this content tone empathetic?"
+msgstr "Ṣe akoonu yii ni irọrun empathetic?"
+
+msgid "Adventurous Tone Content"
+msgstr "Akọọlẹ Ohun ti o ni ẹdá"
+
+msgid "Is this content tone adventurous?"
+msgstr "Ṣe akoonu yii ni irọrun ìrìn-ajo?"
+
+msgid "Promotional Tone Content"
+msgstr "Akoko Ipolowo Ak contenido"
+
+msgid "Is this content tone promotional?"
+msgstr "Ṣe akoonu yii ni irọrun ìpolówó?"
+
+msgid "Checklist"
+msgstr "Akojọ Ṣayẹwo"
+
+msgid "You don't have to complete any Checklist tasks."
+msgstr "Iwọ ko ni lati pari eyikeyi Ise akojo aseyewo."
+
+msgid "Are you sure you want to publish anyway?"
+msgstr "Ṣe o da ọ loju pe o fẹ lati tẹjade ni gbogbo ọna?"
+
+msgid "Are you sure you want to update the published post anyway?"
+msgstr ""
+"Ṣe o da ọ loju pe o fẹ lati ṣe imudojuiwọn ifiweranṣẹ ti a tẹjade ni gbogbo "
+"ọna?"
+
+msgid "Please complete the following tasks before publishing:"
+msgstr "Jọwọ pari iṣẹ wọnyi ṣaaju ki o to tẹjade:"
+
+msgid "Please complete the following tasks before updating the published post:"
+msgstr ""
+"Jọwọ pari iṣẹ wọnyi ṣaaju ki o to ṣe imudojuiwọn ifiweranṣẹ ti a tẹjade:"
+
+msgid "Not required, but important: "
+msgstr "Ki ṣe dandan, ṣugbọn o ṣe pataki: "
+
+msgid "One or more items in the checklist are not completed"
+msgstr "Ọkan tabi diẹ ẹ sii awọn nkan ninu atokọ ayẹwo ko ti pari"
+
+#, php-format
+msgid "You don't have to complete any %sChecklist tasks%s."
+msgstr "Iwọ ko ni lati pari eyikeyi %Ise akojo aseyewo%s."
+
+msgid "Check Now"
+msgstr "Ṣayẹwo Bayi"
+
+msgid "Ok"
+msgstr "Daradara"
+
+msgid "No"
+msgstr "Rara"
+
+msgid "Yes"
+msgstr "Bẹẹni"
+
+msgid "Task"
+msgstr "Ìṣe"
+
+msgid "Disabled, Recommended or Required"
+msgstr "Ti dènà, Ti a ṣe iṣeduro tabi Ti a beere"
+
+msgid "Options"
+msgstr "Àṣayan"
+
+msgid "Add custom task"
+msgstr "Fi iṣẹ aṣa kun"
+
+msgid "Please complete the required(*) checklists task."
+msgstr "Jọwọ pari iṣẹ atokọ ti a beere(*) naa."
+
+msgid "required"
+msgstr "ti a beere"
+
+msgid "Checklists tasks are not available in Elementor editors"
+msgstr "Awọn iṣẹ atokọ ko si ni awọn olootu Elementor"
+
+msgid "All in One SEO Headline Score"
+msgstr "Gbogbo nínú Àkọsílẹ SEO Ìtọ́ka"
+
+msgid "All in One SEO Score"
+msgstr "Gbogbo nínú Àkọsílẹ SEO"
+
+msgid "Featured image height"
+msgstr "Giga aworan to wa ninu àfihàn"
+
+msgid "Featured image width"
+msgstr "Iwọn aworan to wa ninu àfihàn"
+
+msgid "H1, H2, H3 etc tags are used in logical order"
+msgstr ""
+
+msgid "Number of images in content"
+msgstr "Iye awọn aworan nínú akoonu"
+
+msgid "Number of characters in image captions"
+msgstr "Iye awọn ohun kikọ nínú akọsilẹ aworan"
+
+msgid "Number of audio items in content"
+msgstr ""
+
+msgid "Number of video items in content"
+msgstr ""
+
+msgid "Approved by role"
+msgstr "A fọwọsi nipasẹ ipa"
+
+msgid "Approved by specific user"
+msgstr ""
+
+msgid "Avoid heading tags in content"
+msgstr "Yago fun awọn aami akọsori nínú akoonu"
+
+msgid "Prohibited words"
+msgstr ""
+
+msgid "Publish time should be at a specific time"
+msgstr ""
+
+msgid "Publish time should be in the future"
+msgstr "Akoko ikede yẹ ki o wa ninu ọjọ iwaju"
+
+msgid "Rank Math SEO Score"
+msgstr "Iwọn SEO Rank Math"
+
+msgid "Only one H1 tag in content"
+msgstr "Kàn H1 kan ṣoṣo nínú akoonu"
+
+msgid "Tables have a header row"
+msgstr "Àwọn tabili ni kópa àkọsílẹ"
+
+msgid "Check the \"Allow backorders?\" box"
+msgstr "Ṣayẹwo apoti \"Ṣe iwọ yoo gba awọn aṣẹ pada?\""
+
+msgid "Select some products for \"Cross-sells\""
+msgstr "Yan diẹ ninu awọn ọja fun \"Cross-sells\""
+
+msgid "Discount for the \"Sale price\""
+msgstr "Idinku fun \"Iye tita\""
+
+msgid "Check the \"Downloadable\" box"
+msgstr "Ṣayẹwo apoti \"Downloadable\""
+
+msgid "Product image"
+msgstr "Aworan ọja"
+
+msgid "Check the \"Manage stock?\" box"
+msgstr "Ṣayẹwo apoti \"Ṣakoso iṣura?\""
+
+msgid "Enter a \"Regular price\""
+msgstr "Tẹ ọrọ \"Iye deede\""
+
+msgid "Enter a \"Sale price\""
+msgstr "Tẹ ọrọ \"Iye tita\""
+
+msgid "Schedule the \"Sale price\""
+msgstr "Ṣeto \"Iye tita\""
+
+msgid "Enter a \"SKU\""
+msgstr "Tẹ ọrọ \"SKU\""
+
+msgid "Check the \"Sold individually\" box"
+msgstr "Ṣayẹwo apoti \"Ta ni kọọkan\""
+
+msgid "Select some products for \"Upsells\""
+msgstr "Yan diẹ ninu awọn ọja fun \"Upsells\""
+
+msgid "Check the \"Virtual\" box"
+msgstr "Ṣayẹwo apoti \"Virtual\""
+
+#, php-format
+msgid "Number of Characters in %s field"
+msgstr "Iye awọn ohun kikọ ninu aaye %s"
+
+#, php-format
+msgid "%s is filled"
+msgstr "%s ti kun"
+
+msgid "About PublishPress Checklists"
+msgstr "Nipa PublishPress Checklists"
+
+msgid "About"
+msgstr "Nipa"
+
+msgid "PublishPress Checklists Documentation"
+msgstr "Iwe Itọsọna PublishPress Checklists"
+
+msgid "Documentation"
+msgstr "Iwe afọwọkọ"
+
+msgid "Contact the PublishPress team"
+msgstr "Kan si ẹgbẹ PublishPress"
+
+msgid "Contact"
+msgstr "Kan si"
+
+msgid "Settings saved successfully!"
+msgstr "Iṣeto ti fipamọ́ ní aṣeyọrí!"
+
+msgid "Save Changes"
+msgstr "Fipamọ Awọn Ayipada"
+
+msgid "Pro feature"
+msgstr "Ẹya Pro"
+
+#, fuzzy, php-format
+msgid "No %s requirements for this post type."
+msgstr "Ko si awọn ibeere %s fun iru ifiweranṣẹ yii."
+
+msgid "New Item"
+msgstr "Ohun Tuntun"
+
+msgid "Description"
+msgstr "Apejuwe"
+
+msgid ""
+"Custom tasks do not complete automatically. Users must check the box to show "
+"they have completed the task."
+msgstr ""
+"Iṣẹ adani ko pari laifọwọyi. Awọn olumulo gbọdọ ṣayẹwo apoti lati fi hàn pe "
+"wọn ti pari iṣẹ naa."
+
+msgid "Add OpenAI Prompt task"
+msgstr "Fi iṣẹ OpenAI Prompt kun"
+
+msgid "The prompt should be in form of a question."
+msgstr "Ìmúrasílẹ̀ náà yẹ kí o jẹ́ ní fọ́ọ̀mù ìbéèrè."
+
+msgid "This feature requires an OpenAI API Key."
+msgstr "Àwọn ẹya yii nilo bọtini API OpenAI kan."
+
+msgid "Latin characters in permalink"
+msgstr "Àwọn àkàrà Látínì nínú permalink"
+
+msgid "Permalinks"
+msgstr "Permalinks"
+
+msgid "Define tasks related to permalinks"
+msgstr "Ṣe alaye awọn iṣẹ ti o ni ibatan si awọn permalink"
+
+msgid "Permissions"
+msgstr "Ìmúṣẹ"
+
+msgid "Exclude User Roles"
+msgstr "Yọkuro Awọn ipa olumulo"
+
+msgid "Reviews"
+msgstr "Atunwo"
+
+msgid "Checklists Settings"
+msgstr "Awọn Eto Akojọ Ṣayẹwo"
+
+msgid ""
+"Are you sure you want to reset all renamed checklist items to their default "
+"labels? This action cannot be undone."
+msgstr ""
+"Ṣe o da igbẹkẹle pe o fẹ lati tun gbogbo awọn nkan atokọ ti a tun orukọ silẹ "
+"si awọn aami aiyipada wọn? Iṣe yii ko le ṣe atunṣe."
+
+msgid "Resetting..."
+msgstr ""
+
+msgid "Reset All Renamed Labels"
+msgstr ""
+
+msgid "Features"
+msgstr "Awọn ẹya"
+
+msgid "Feel free to select only the features you need."
+msgstr "Ma ṣe ṣiyemeji lati yan awọn ẹya ti o nilo nikan."
+
+msgid "Enabled features"
+msgstr "Awọn ẹya ti a mu ṣiṣẹ"
+
+msgid "There are no PublishPress modules registered"
+msgstr "Kò sí àwọn àwùjọ PublishPress tí a forúkọsílẹ̀"
+
+#, php-format
+msgid ""
+"Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
+"loaded file."
+msgstr ""
+"Ti dènà nitori add_post_type_support('%1$s', '%2$s') ti wa ninu faili kan ti "
+"a kojọpọ."
+
+msgid "Enable User Roles Filter:"
+msgstr ""
+
+msgid "Show warning icon:"
+msgstr "Fi aami ikilọ hàn:"
+
+msgid "Highlight failing blocks in the editor:"
+msgstr ""
+
+msgid "Delete data on uninstall:"
+msgstr "Pa data nigba ti a ba yọ:"
+
+msgid "Enable Status Filter:"
+msgstr "Mú àyẹ̀wò ipo ṣiṣẹ́:"
+
+msgid "Enable Duplicate Checklists:"
+msgstr "Mú àyẹ̀wò àtẹ̀jáde pọ̀ sílẹ̀:"
+
+msgid "Show Checklists column in post lists:"
+msgstr "Fi kọlámu atokọ àṣẹ hàn nínú àkópọ àṣẹ:"
+
+msgid "Enable Taxonomy Filter:"
+msgstr "Mú Fílítà Taxonomy ṣiṣẹ:"
+
+msgid "Disable the \"Status\" option when using \"Quick Edit\":"
+msgstr "Dena aṣayan \"Ipo\" nigba ti nlo \"Ṣatunkọ Yara\":"
+
+msgid "Disable \"Quick Edit\" completely:"
+msgstr "Dákẹ́ \"Àtúnṣe Yara\" patapata:"
+
+msgid "Disable \"Publish\" button:"
+msgstr "Dákẹ́ \"Ṣe àtúnṣe\" bọtini:"
+
+msgid "Complete Icon:"
+msgstr "Aami Pipe:"
+
+msgid "Incomplete Icon:"
+msgstr "Aami Aisi Pipe:"
+
+msgid "Required Complete Color:"
+msgstr "Ẹ̀dá Pipe ti a beere:"
+
+msgid "Required Incomplete Color:"
+msgstr "Ẹ̀dá Aisi Pipe ti a beere:"
+
+msgid "Required Asterisk Color:"
+msgstr ""
+
+msgid "Recommended Complete Color:"
+msgstr "Ẹ̀dá Pipe ti a ṣe iṣeduro:"
+
+msgid "Recommended Incomplete Color:"
+msgstr "Àwọ̀ tí a ṣàkóso tí kò pé:"
+
+msgid "Enable rename label in editor panel:"
+msgstr ""
+
+msgid "Checklist item sort order:"
+msgstr ""
+
+msgid "OpenAI API Key:"
+msgstr "Bọtini API OpenAI:"
+
+msgid "Reset Renamed Checklist:"
+msgstr "Tun orúkọ àtòkọ náà ṣe:"
+
+msgid "Post types:"
+msgstr "Iru ìpò:"
+
+msgid ""
+"This allows tasks to be disabled for specific statuses such as \"Draft\" or "
+"\"Published."
+msgstr ""
+"Eyi gba iṣẹ́ laaye lati jẹ́ aláìlera fún àwọn ipo pataki gẹ́gẹ́ bí \"Ìkàwé\" "
+"tàbí \"Tí a tẹ̀jáde.\""
+
+msgid "This allows users to duplicate existing checklist tasks."
+msgstr "Èyí gba àwọn olumulo laaye láti da àwọn iṣẹ́ àtòkọ tí ó wà lọ́wọ́ pọ̀."
+
+msgid ""
+"Add a Checklists column to the Posts screen showing how many requirements "
+"are complete."
+msgstr ""
+"Fi kolomu Checklists kun si iboju Posts ti o nfihan bi ọpọlọpọ ibeere ti "
+"pari."
+
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Types\" tab to choose the terms."
+msgstr ""
+"Èyí gba àwọn iṣẹ́ laaye láti jẹ́ kó ma ṣiṣẹ́ fún àwọn ìpò pẹ̀lú àwọn ọrọ̀ "
+"taxonimy pàtó. Lọ sí taabu \"Iru Ìpò\" láti yan àwọn ọrọ̀ náà."
+
+msgid ""
+"This will display a warning icon in the \"Checklists\" box if requirements "
+"are incomplete."
+msgstr ""
+"Eyi yóò fi aami ikilọ hàn nínú apoti \"Àwọn Atokọ\" tí awọn ibeere kò pé."
+
+msgid ""
+"This will highlight Gutenberg blocks that fail block-specific checklist "
+"tasks."
+msgstr ""
+
+msgid ""
+"When enabled, all PublishPress Checklists data will be deleted if the plugin "
+"is uninstalled."
+msgstr ""
+"Nigbati o ba ti mu ṣiṣẹ, gbogbo data PublishPress Checklists yoo parẹ ti a "
+"ba yọ akopọ naa kuro."
+
+msgid "This will show \"Exclude User Roles\" options."
+msgstr ""
+
+msgid ""
+"Disabling the \"Status\" option is recommended because it can be used to "
+"avoid using the Checklists requirements."
+msgstr ""
+"Dákẹ́ àṣayan \"Ipo\" ni a ṣe iṣeduro nitori pe a le lo lati yago fun lilo "
+"awọn ibeere Checklists."
+
+msgid ""
+"This will disable \"Quick Edit\" for all users except those with the "
+"\"manage_options\" capability."
+msgstr ""
+"Eyi yóò pa \"Ṣatunkọ Kánkán\" fun gbogbo awọn olumulo ayafi fun awọn ti o ni "
+"agbara \"manage_options\"."
+
+msgid ""
+"This will disable the \"Publish\" button when checklist requirements are not "
+"met."
+msgstr "Eyi yóò pa bọtini \"Tẹ̀jáde\" run nigbati awọn ibeere atokọ ko ba pade."
+
+msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
+msgstr "Tẹ bọtini API rẹ lati lo awọn ibeere OpenAI ninu awọn iṣẹ akọsilẹ."
+
+msgid "Post Types"
+msgstr "Iru Ifiweranṣẹ"
+
+msgid "General"
+msgstr "Gbogbogbo"
+
+msgid "Publishing Options"
+msgstr "Awọn aṣayan Ifiweranṣẹ"
+
+msgid "Appearance"
+msgstr "Ímúrasílẹ̀"
+
+msgid "Integration"
+msgstr "Isopọ"
+
+msgid "Tools"
+msgstr "Awọn irinṣẹ"
+
+msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
+msgstr ""
+"Tẹ orúkọ kilasi Dashicons kan (àpẹẹrẹ, dashicons-yes, dashicons-saved). "
+
+msgid "View Dashicons"
+msgstr "Wo Dashicons"
+
+msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
+msgstr ""
+"Tẹ orúkọ kilasi Dashicons kan (àpẹẹrẹ, dashicons-no, dashicons-dismiss). "
+
+msgid "Enable custom rename labels in the checklist editor panel."
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Required on top and recommended below"
+msgstr ""
+
+msgid "Sort alphabetically"
+msgstr ""
+
+msgid ""
+"This will reset all renamed checklist labels for WP Admin and Editing screen "
+"back to their default labels."
+msgstr ""
+
+msgid "Security check failed."
+msgstr "Ìdánwò ààbò kọ́ ṣẹ́gun."
+
+msgid "You do not have permission to perform this action."
+msgstr "Ìwọ kò ní ìjẹ́wọ́ láti ṣe ìṣe yìí."
+
+msgid "All renamed labels have been reset successfully."
+msgstr ""
+
+msgid "Number of characters in Yoast SEO focus keyword"
+msgstr "Iye awọn ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
+
+#, php-format
+msgid "Minimum of %d character in Yoast SEO focus keyword"
+msgstr "Kéré jùlọ ti %d àwòrán nínú ọrọ pataki Yoast SEO"
+
+#, php-format
+msgid "Minimum of %d characters in Yoast SEO focus keyword"
+msgstr "Kere ju %d awọn ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
+
+#, php-format
+msgid "Maximum of %d character in Yoast SEO focus keyword"
+msgstr "Max ti %d lẹta ninu Yoast SEO focus keyword"
+
+#, php-format
+msgid "Maximum of %d characters in Yoast SEO focus keyword"
+msgstr "Maximu ti %d àwòrán nínú ọrọ pataki Yoast SEO"
+
+#, php-format
+msgid "%d character in Yoast SEO focus keyword"
+msgstr "%d ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
+
+#, php-format
+msgid "%d characters in Yoast SEO focus keyword"
+msgstr "%d awọn ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
+
+#, php-format
+msgid "Between %d and %d characters in Yoast SEO focus keyword"
+msgstr "Laarin %d ati %d awọn kikọ ni ọrọ-ọrọ idojuko Yoast SEO"
+
+msgid "Number of characters in Yoast SEO meta description"
+msgstr "Iye awọn ohun kikọ ninu apejuwe meta Yoast SEO"
+
+#, php-format
+msgid "Minimum of %d character in Yoast SEO meta description"
+msgstr "Kere ju %d ohun kikọ ninu apejuwe meta Yoast SEO"
+
+#, php-format
+msgid "Minimum of %d characters in Yoast SEO meta description"
+msgstr "Kere ju %d awọn ohun kikọ ninu apejuwe meta Yoast SEO"
+
+#, php-format
+msgid "Maximum of %d character in Yoast SEO meta description"
+msgstr "Max ti %d lẹta ninu Yoast SEO meta description"
+
+#, php-format
+msgid "Maximum of %d characters in Yoast SEO meta description"
+msgstr "Maximu ti %d àwòrán nínú ìtàn meta Yoast SEO"
+
+#, php-format
+msgid "%d character in Yoast SEO meta description"
+msgstr "%d ohun kikọ ninu apejuwe meta Yoast SEO"
+
+#, php-format
+msgid "%d characters in Yoast SEO meta description"
+msgstr "%d awọn ohun kikọ ninu apejuwe meta Yoast SEO"
+
+#, php-format
+msgid "Between %d and %d characters in Yoast SEO meta description"
+msgstr "Laarin %d ati %d awọn kikọ ni apejuwe meta Yoast SEO"
+
+msgid "Minimum Yoast SEO readability score"
+msgstr "Iwọn iṣiro kika Yoast SEO ti o kere ju"
+
+#. translators: %s expands to the readability score
+#, php-format
+msgid "Yoast Readability: %s"
+msgstr "Yoast Iye kika: %s"
+
+msgid "OK"
+msgstr "Daradara"
+
+msgid "Good"
+msgstr "Daradara"
+
+msgid "Minimum Yoast SEO analysis score"
+msgstr "Iwọn iṣiro itupalẹ Yoast SEO ti o kere ju"
+
+#. translators: %s expands to the seo score
+#, fuzzy, php-format
+msgid "Yoast SEO: %s"
+msgstr "Yoast SEO: %s"
+
+msgid "Define tasks related to Yoast SEO"
+msgstr "Ṣe alaye awọn iṣẹ ti o ni ibatan si Yoast SEO"
+
+msgid "This plugin can be deleted."
+msgstr "A le pa àfikún yìí run."
+
+#, php-format
+msgid ""
+"You're using PublishPress Checklists Free. The Pro version has more features "
+"and support. %sUpgrade to Pro%s"
+msgstr ""
+"Iwọ nlo PublishPress Checklists Free. Ẹya Pro ni awọn ẹya diẹ sii ati "
+"atilẹyin. %sMu si Pro%s"
+
+#~ msgid "Numbers of characters in excerpt"
+#~ msgstr "Iye awọn lẹta ninu akopọ"
+
+#~ msgid "Heading in hierarchy"
+#~ msgstr "Àkọsílẹ nínú ìtòsọ́tọ̀"
+
+#~ msgid "Number of audio in content"
+#~ msgstr "Iye awọn ohun èlò nínú akoonu"
+
+#~ msgid "Number of video in content"
+#~ msgstr "Iye awọn fidio nínú akoonu"
+
+#~ msgid "Approved by user"
+#~ msgstr "A fọwọsi nipasẹ olumulo"
+
+#~ msgid "Published at exact time"
+#~ msgstr "Ti wa ni tẹjade ni akoko gangan"
+
+#~ msgid "Enable Who Can Ignore:"
+#~ msgstr "Mú ẹni tó lè foju kọ́:"
+
+#~ msgid "This will show \"Who can ignore\" options."
+#~ msgstr "Eyi yóò fi \"Ta ni o le foju kọ\" awọn aṣayan hàn."
+
+#~ msgid "Reset All Custom Labels"
+#~ msgstr "Tun gbogbo Àkọlé Àdáni ṣe"
+
+#~ msgid ""
+#~ "This will reset all renamed checklist items back to their default labels."
+#~ msgstr ""
+#~ "Èyí yóò tún gbogbo ohun àtòkọ tí a ti yí orúkọ wọn padà sí àkọlé àtọkànwá "
+#~ "wọn."
+
+#~ msgid "All custom labels have been reset successfully."
+#~ msgstr "Gbogbo àkọlé àdáni ti túnṣe ni aṣeyọrí."
+
+#~ msgid "Who can ignore the task?"
+#~ msgstr "Tani o le foju kọ iṣẹ naa?"
+
+#~ msgid "Add to these post types:"
+#~ msgstr "Fi kun awọn iru ifiweranṣẹ wọnyi:"
+
+#~ msgid "This allows users to duplicate existing checklist task."
+#~ msgstr "Eyi gba àwọn olumulo laaye lati ṣe ẹ̀dá àṣẹ atokọ tó wà."
+
+#~ msgid "Validation error. Kindly reload this page and try agai.n"
+#~ msgstr ""
+#~ "Aṣiṣe ìmúdájú. Jọwọ tun ṣe àtúnṣe oju-iwe yii ki o si gbiyanju lẹẹkansi."

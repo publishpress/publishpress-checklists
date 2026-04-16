@@ -73,6 +73,7 @@ if (!class_exists('PPCH_Settings')) {
                     ],
                     'disable_publish_button'   => Base_requirement::VALUE_NO,
                     'show_warning_icon_submit' => Base_requirement::VALUE_YES,
+                    'enable_block_highlighting' => Base_requirement::VALUE_YES,
                     'openai_api_key'           => '',
                     'delete_data_on_uninstall' => 'off',
                     'who_can_ignore_option'      => Base_requirement::VALUE_YES,
@@ -81,9 +82,11 @@ if (!class_exists('PPCH_Settings')) {
                     'incomplete_icon'             => 'dashicons-no',
                     'required_complete_color'     => '#66bb6a',
                     'required_incomplete_color'   => '#ef5350',
+                    'required_asterisk_color'     => '#ef5350',
                     'recommended_complete_color'  => '#66bb6a',
                     'recommended_incomplete_color' => '#ef5350',
                     'enable_rename_label_editor_panel' => Base_requirement::VALUE_YES,
+                    'checklist_items_sort_order' => 'default',
                 ],
                 'autoload'             => true,
                 'add_menu'             => true,
@@ -651,13 +654,25 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (!isset($new_options['enable_rename_label_editor_panel'])) {
-                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_YES;
+                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_NO;
             }
 
             $new_options['enable_rename_label_editor_panel'] =
                 Base_requirement::VALUE_YES === $new_options['enable_rename_label_editor_panel']
                 ? Base_requirement::VALUE_YES
                 : Base_requirement::VALUE_NO;
+
+            $allowedSortOrders = [
+                'default',
+                'required_recommended',
+                'alphabetical',
+            ];
+            if (
+                !isset($new_options['checklist_items_sort_order'])
+                || !in_array($new_options['checklist_items_sort_order'], $allowedSortOrders, true)
+            ) {
+                $new_options['checklist_items_sort_order'] = 'default';
+            }
 
             if (!isset($new_options['delete_data_on_uninstall'])) {
                 $new_options['delete_data_on_uninstall'] = 'off';
@@ -794,6 +809,14 @@ if (!class_exists('PPCH_Settings')) {
             );
 
             add_settings_field(
+                'enable_block_highlighting',
+                __('Highlight failing blocks in the editor:', 'publishpress-checklists'),
+                [$this, 'settings_enable_block_highlighting_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_general'
+            );
+
+            add_settings_field(
                 'delete_data_on_uninstall',
                 __('Delete data on uninstall:', 'publishpress-checklists'),
                 [$this, 'settings_delete_data_on_uninstall_option'],
@@ -918,6 +941,14 @@ if (!class_exists('PPCH_Settings')) {
             );
 
             add_settings_field(
+                'required_asterisk_color',
+                __('Required Asterisk Color:', 'publishpress-checklists'),
+                [$this, 'settings_required_asterisk_color_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
                 'recommended_complete_color',
                 __('Recommended Complete Color:', 'publishpress-checklists'),
                 [$this, 'settings_recommended_complete_color_option'],
@@ -935,8 +966,16 @@ if (!class_exists('PPCH_Settings')) {
 
             add_settings_field(
                 'enable_rename_label_editor_panel',
-                __('Enable rename label in editor panel:', 'publishpress-checklists'),
+                __('Rename task labels:', 'publishpress-checklists'),
                 [$this, 'settings_enable_rename_label_editor_panel_option'],
+                $this->module->options_group_name,
+                $this->module->options_group_name . '_appearance'
+            );
+
+            add_settings_field(
+                'checklist_items_sort_order',
+                __('Checklist task sort order:', 'publishpress-checklists'),
+                [$this, 'settings_checklist_items_sort_order_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_appearance'
             );
@@ -1114,6 +1153,26 @@ if (!class_exists('PPCH_Settings')) {
         }
 
         /**
+         * Displays the checkbox to enable Gutenberg block highlighting for failed tasks.
+         *
+         * @param array $args
+         */
+        public function settings_enable_block_highlighting_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_enable_block_highlighting';
+            $value = isset($this->module->options->enable_block_highlighting) ? $this->module->options->enable_block_highlighting : 'yes';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[enable_block_highlighting]" '
+                . checked($value, 'yes', false) . ' />';
+            echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
+                'This will highlight Gutenberg blocks that fail block-specific checklist tasks.',
+                'publishpress-checklists'
+            );
+            echo '</label>';
+        }
+
+        /**
          * Displays the checkbox to enable deleting plugin data on uninstall
          *
          * @param array $args
@@ -1265,6 +1324,11 @@ if (!class_exists('PPCH_Settings')) {
             }
             $new_options['show_warning_icon_submit'] = Base_requirement::VALUE_YES === $new_options['show_warning_icon_submit'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
 
+            if (!isset($new_options['enable_block_highlighting'])) {
+                $new_options['enable_block_highlighting'] = Base_requirement::VALUE_NO;
+            }
+            $new_options['enable_block_highlighting'] = Base_requirement::VALUE_YES === $new_options['enable_block_highlighting'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
+
             if (!isset($new_options['who_can_ignore_option'])) {
                 $new_options['who_can_ignore_option'] = Base_requirement::VALUE_YES;
             }
@@ -1396,6 +1460,19 @@ if (!class_exists('PPCH_Settings')) {
         }
 
         /**
+         * Settings field for Required Asterisk Color
+         */
+        public function settings_required_asterisk_color_option($args = [])
+        {
+            $id    = $this->module->options_group_name . '_required_asterisk_color';
+            $value = isset($this->module->options->required_asterisk_color) ? $this->module->options->required_asterisk_color : '#ef5350';
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_asterisk_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '</label>';
+        }
+
+        /**
          * Settings field for Recommended Complete Color
          */
         public function settings_recommended_complete_color_option($args = [])
@@ -1435,9 +1512,38 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[enable_rename_label_editor_panel]" '
                 . checked($value, Base_requirement::VALUE_YES, false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'Enable custom rename labels in the checklist editor panel.',
+                'Allow admins to rename task labels for the post editor.',
                 'publishpress-checklists'
             );
+            echo '</label>';
+        }
+
+        /**
+         * Settings field for checklist item sort order in the editor panel.
+         */
+        public function settings_checklist_items_sort_order_option($args = [])
+        {
+            $id = $this->module->options_group_name . '_checklist_items_sort_order';
+            $value = isset($this->module->options->checklist_items_sort_order)
+                ? $this->module->options->checklist_items_sort_order
+                : 'default';
+
+            $sortOptions = [
+                'default'              => esc_html__('Default', 'publishpress-checklists'),
+                'required_recommended' => esc_html__('Required on top and Recommended below', 'publishpress-checklists'),
+                'alphabetical'         => esc_html__('Sort alphabetically', 'publishpress-checklists'),
+            ];
+
+            echo '<label for="' . esc_attr($id) . '">';
+            echo '<select id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[checklist_items_sort_order]">';
+
+            foreach ($sortOptions as $optionValue => $optionLabel) {
+                echo '<option value="' . esc_attr($optionValue) . '" ' . selected($value, $optionValue, false) . '>';
+                echo esc_html($optionLabel);
+                echo '</option>';
+            }
+
+            echo '</select>';
             echo '</label>';
         }
 

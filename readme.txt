@@ -7,7 +7,7 @@ Tags: approval, checklist, maximum, minimum, requirement
 Requires at least: 5.5
 Requires PHP: 7.2.5
 Tested up to: 6.9
-Stable tag: 2.27.0
+Stable tag: 2.28.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,6 @@ Next to every post and page, writers see a checklist box, showing the tasks they
 
 PublishPress Checklists integrates with [WooCommerce](https://publishpress.com/knowledge-base/woocommerce-product-tasks/), [Yoast SEO](https://publishpress.com/knowledge-base/yoast-seo-tasks/), [All in One SEO](https://publishpress.com/knowledge-base/all-in-one-seo-tasks/), [Rank Math SEO](https://publishpress.com/knowledge-base/rank-math-seo-tasks/),and [Advanced Custom Fields](https://publishpress.com/knowledge-base/advance-custom-fields-tasks/). You can set requirements based on those plugins.
 
-
 PublishPress Checklists also [integrates with OpenAI](https://publishpress.com/knowledge-base/openai/). You can use OpenAI technology to scan your posts and check for the right tone, good spelling, or correct grammar.
 
 ## PublishPress Checklists Pro ##
@@ -48,6 +47,7 @@ Each task on your pre-publish checklist can be configured to meet your site’s 
 * [Body text](https://publishpress.com/knowledge-base/number-of-words-in-content/): Maximum or minimum number of words in the post content.
 * [Excerpt](https://publishpress.com/knowledge-base/number-of-characters-in-excerpt/): Maximum or minimum number of characters in the excerpt.
 * [Avoid specific heading tags](https://publishpress.com/knowledge-base/avoid-heading-tags-in-content-pro/) (Pro version): You can enter choices for the headings to prohibit. The options are H1, H2, H3, H4, H5, and H6.
+* [Prohibited words](https://publishpress.com/knowledge-base/prohibited-words/) (Pro version): You can prevent specific words from being added to a post.
 
 ## Publish Date/ Time Tasks ##
 
@@ -56,13 +56,19 @@ Each task on your pre-publish checklist can be configured to meet your site’s 
 
 ## Approval Tasks ##
 
-* [User role approval](https://publishpress.com/knowledge-base/approved-by-a-user-in-this-role/): Require that posts are approved by users in a specific role.
-* [User approval](https://publishpress.com/knowledge-base/approved-specific-user/) (Pro version): Require that posts are approved by a specific user.
+* [Approved by a user in this role](https://publishpress.com/knowledge-base/approved-by-a-user-in-this-role/): Require that posts are approved by users in a specific role.
+* [Approved by user](https://publishpress.com/knowledge-base/approved-specific-user/) (Pro version): Require that posts are approved by a specific user.
 
 ## Image Tasks ##
 
-* [All images have ALT text](https://publishpress.com/knowledge-base/alt-text-for-all-images/): Require ALT text for all images.
+* [All images have ALT text](https://publishpress.com/knowledge-base/alt-text-for-all-images/): Require ALT text for all images. You can also specify a maximum and minimum number of characters in the ALT text.
 * [Number of images in content](https://publishpress.com/knowledge-base/number-of-images-in-content/) (Pro version): Require a maximum and minimum number of images in the post.
+* [Number of characters in image captions](https://publishpress.com/knowledge-base/number-of-characters-in-image-captions/) (Pro version): Specify a maximum and minimum number of characters in image captions.
+
+## Audio / Video Tasks ##
+
+* [Number of audio items in content](https://publishpress.com/knowledge-base/number-of-audio-items-in-content/) (Pro version): You can require a maximum and minimum number of audio items for your WordPress posts. This covers native HTML players, WordPress shortcodes, and third-party audio embeds such as SoundCloud, Spotify, Mixcloud, and PocketCasts.
+* [Number of video items in content] (https://publishpress.com/knowledge-base/number-of-video-items-in-content/) (Pro version): you can require a maximum and minimum number of audio items for your WordPress posts. This cover a wide range of video content from self-hosted video to YouTube, Vimeo, VideoPress and more.
 
 ## Featured Image Tasks ##
 
@@ -90,6 +96,7 @@ Each task on your pre-publish checklist can be configured to meet your site’s 
 * [Header tags are used in logical order](https://publishpress.com/knowledge-base/header-tags-logical-order/) (Pro version): Ensure that posts on your WordPress site have headings in the correct order. For example: the heading order in your posts should be H1, H2, and then H3
 * [Tables have a header row](https://publishpress.com/knowledge-base/tables-have-a-header-row/) (Pro version): Specify that all tables added to your WordPress posts have header rows.
 
+## Required, Recommended, or Required? ##
 
 You can configure each requirement, depending on whether you want to require writers to complete the tasks. Here are the three options:
 
@@ -175,7 +182,7 @@ With the Pro version of the PublishPress Checklists plugin, you can require that
 
 The Pro versions of the PublishPress plugins are well worth your investment. The Pro versions have extra features and faster support. [Click here to join PublishPress](https://publishpress.com/pricing/).
 
-Join PublishPress and you'll get access to these ten Pro plugins:
+Join PublishPress and you'll get access to these Pro plugins:
 
 * [PublishPress Authors Pro](https://publishpress.com/authors) allows you to add multiple authors and guest authors to WordPress posts.
 * [PublishPress Blocks Pro](https://publishpress.com/blocks) has everything you need to build professional websites with the WordPress block editor.
@@ -186,7 +193,8 @@ Join PublishPress and you'll get access to these ten Pro plugins:
 * [PublishPress Planner Pro](https://publishpress.com/publishpress) is the plugin for managing and scheduling WordPress content.
 * [PublishPress Revisions Pro](https://publishpress.com/revisions) allows you to update your published pages with teamwork and precision.
 * [PublishPress Series Pro](https://publishpress.com/series) enables you to group content together into a series.
-* [PublishPress Statuses Pro](https://publishpress.com/series) enables you to create additional publishing steps for your posts.
+* [PublishPress Shortlinks Pro](https://publishpress.com/shortlinks) allows you to create custom URLs for your posts and external links.
+* [PublishPress Statuses Pro](https://publishpress.com/statuses) enables you to create additional publishing steps for your posts.
 
 Together, these plugins are a suite of powerful publishing tools for WordPress. If you need to create a professional workflow in WordPress, with moderation, revisions, permissions and more... then you should try PublishPress.
 

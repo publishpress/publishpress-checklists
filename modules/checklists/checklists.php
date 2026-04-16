@@ -526,6 +526,34 @@ if (!class_exists('PPCH_Checklists')) {
         }
 
         /**
+         * Returns whether Gutenberg block highlighting is enabled in settings.
+         *
+         * @return bool
+         */
+        protected function isBlockHighlightingEnabled()
+        {
+            $legacyPlugin = Factory::getLegacyPlugin();
+            $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+            $enabled = isset($settings_options->enable_block_highlighting)
+                ? $settings_options->enable_block_highlighting
+                : Base_requirement::VALUE_YES;
+
+            return Base_requirement::VALUE_YES === $enabled;
+        }
+
+        /**
+         * Returns whether the provided post type uses the block editor.
+         *
+         * @param string $post_type
+         *
+         * @return bool
+         */
+        protected function isBlockEditorPostType($post_type)
+        {
+            return function_exists('use_block_editor_for_post_type') && use_block_editor_for_post_type($post_type);
+        }
+
+        /**
          * Add the MCE plugin file to make the interface between the editor and
          * the requirement meta box. This was the unique way that worked, making
          * it loaded before the MCE is initialized, allowing to configure it.
@@ -569,8 +597,14 @@ if (!class_exists('PPCH_Checklists')) {
                     
                     $required_complete_color = isset($settings_options->required_complete_color) ? $settings_options->required_complete_color : '#66bb6a';
                     $required_incomplete_color = isset($settings_options->required_incomplete_color) ? $settings_options->required_incomplete_color : '#ef5350';
+                    $required_asterisk_color = isset($settings_options->required_asterisk_color) ? $settings_options->required_asterisk_color : '#ef5350';
                     $recommended_complete_color = isset($settings_options->recommended_complete_color) ? $settings_options->recommended_complete_color : '#66bb6a';
                     $recommended_incomplete_color = isset($settings_options->recommended_incomplete_color) ? $settings_options->recommended_incomplete_color : '#ef5350';
+
+                    $required_asterisk_color = sanitize_hex_color($required_asterisk_color);
+                    if (empty($required_asterisk_color)) {
+                        $required_asterisk_color = '#ef5350';
+                    }
 
                     $custom_css = "
                         /* Required (block) items - Complete */
@@ -591,6 +625,12 @@ if (!class_exists('PPCH_Checklists')) {
                         /* Recommended (warning) items - Incomplete */
                         .pp-checklists-req.pp-checklists-warning.status-no *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(.request-response *) {
                             color: {$recommended_incomplete_color} !important;
+                        }
+
+                        /* Required asterisk */
+                        ul#pp-checklists-req-box span.required,
+                        ul#pp-checklists-sidebar-req-box span.required {
+                            color: {$required_asterisk_color} !important;
                         }
                     ";
                     wp_add_inline_style('pp-checklists-requirements', $custom_css);
@@ -620,6 +660,16 @@ if (!class_exists('PPCH_Checklists')) {
 
                     wp_enqueue_style('pp-remodal-default-theme');
                     wp_enqueue_script('pp-remodal');
+
+                    if ($this->isBlockHighlightingEnabled() && $this->isBlockEditorPostType($screen->post_type)) {
+                        wp_register_script(
+                            'pp-checklists-block-highlighting',
+                            $this->module_url . 'assets/js/gutenberg-block-highlighting.js',
+                            ['pp-checklists-requirements', 'wp-data', 'wp-hooks', 'wp-compose', 'wp-element'],
+                            PPCH_VERSION,
+                            true
+                        );
+                    }
                 }
             } elseif (isset($_GET['page']) && $_GET['page'] === 'ppch-checklists') {
                 // Admin pages
@@ -684,7 +734,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'rename_modal_admin_label' => esc_html__(
-                            'Label for WP Admin / backend',
+                            'Label for the Checklists screen',
                             'publishpress-checklists'
                         ),
                         'rename_modal_admin_placeholder' => esc_html__(
@@ -692,7 +742,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'rename_modal_editor_label' => esc_html__(
-                            'Label for Editing screen / frontend',
+                            'Label for the post editing screen',
                             'publishpress-checklists'
                         ),
                         'rename_modal_editor_placeholder' => esc_html__(
@@ -873,6 +923,10 @@ if (!class_exists('PPCH_Checklists')) {
             $new_requirements_array = $this->rearrange_requirement_array($requirements);
 
             $legacyPlugin = Factory::getLegacyPlugin();
+            $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
+            $sort_mode = isset($settings_options->checklist_items_sort_order)
+                ? (string)$settings_options->checklist_items_sort_order
+                : 'default';
 
             $options = get_option('publishpress_checklists_settings_options');
 
@@ -889,7 +943,6 @@ if (!class_exists('PPCH_Checklists')) {
                 );
 
                 // Get custom icon settings
-                $settings_options = $legacyPlugin->settings->module->options;
                 $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
                 $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
 
@@ -943,6 +996,15 @@ if (!class_exists('PPCH_Checklists')) {
                     ]
                 );
 
+                $screen = get_current_screen();
+                if (
+                    !is_null($screen)
+                    && $this->isBlockHighlightingEnabled()
+                    && $this->isBlockEditorPostType($screen->post_type)
+                ) {
+                    wp_enqueue_script('pp-checklists-block-highlighting');
+                }
+
                 do_action('publishpress_checklists_enqueue_scripts');
             }
 
@@ -955,6 +1017,7 @@ if (!class_exists('PPCH_Checklists')) {
                 [
                     'metadata_taxonomy' => self::METADATA_TAXONOMY,
                     'requirements'      => $new_requirements_array,
+                    'show_rule_headings' => $sort_mode === 'required_recommended',
                     'configure_link'    => $checklistsLink,
                     'nonce'             => wp_create_nonce(__FILE__),
                     'lang'              => [
@@ -963,6 +1026,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'required'                => esc_html__('Required', 'publishpress-checklists'),
+                        'recommended'             => esc_html__('Recommended', 'publishpress-checklists'),
                         'check'                   => esc_html__('Check Now', 'publishpress-checklists'),
                         'ok'                      => esc_html__('Ok', 'publishpress-checklists'),
                         'no'                      => esc_html__('No', 'publishpress-checklists'),
@@ -1224,6 +1288,9 @@ if (!class_exists('PPCH_Checklists')) {
                     $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
                     $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
                     $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
+                    $checklist_items_sort_order = isset($settings_options->checklist_items_sort_order)
+                        ? (string)$settings_options->checklist_items_sort_order
+                        : 'default';
                     
                     wp_localize_script(
                         'pp-checklists-panel-gutenberg',
@@ -1233,6 +1300,10 @@ if (!class_exists('PPCH_Checklists')) {
                             'checklistLabel' => __("Checklists", "publishpress-checklists"),
                             'noTaskLabel' => __("You don't have to complete any Checklist tasks.", "publishpress-checklists"),
                             'required' => __("required", "publishpress-checklists"),
+                            'requiredHeading' => __("Required", "publishpress-checklists"),
+                            'recommendedHeading' => __("Recommended", "publishpress-checklists"),
+                            'checklistItemsSortOrder' => $checklist_items_sort_order,
+                            'showRuleHeadings' => $checklist_items_sort_order === 'required_recommended' ? "1" : "0",
                             'elementorNotice' => __("Checklists tasks are not available in Elementor editors", "publishpress-checklists"),
                             'isElementorEnabled' => ElementorUtils::isElementorEnabled() ? "1" : "0",
                             'supportedPostTypes' => array_keys($supported_post_types),
@@ -1419,7 +1490,164 @@ if (!class_exists('PPCH_Checklists')) {
                 $new_requirements_array[$new_index] = $requirements[$req_index];
             };
 
+            if ($is_on_metabox) {
+                $new_requirements_array = $this->sort_metabox_requirements($new_requirements_array);
+            }
+
             return $new_requirements_array;
+        }
+
+        /**
+         * Sort metabox requirements according to the selected Appearance setting.
+         *
+         * @param array $requirements
+         * @return array
+         */
+        protected function sort_metabox_requirements($requirements)
+        {
+            $settingsOptions = get_option('publishpress_checklists_settings_options');
+            $sortMode = isset($settingsOptions->checklist_items_sort_order)
+                ? (string)$settingsOptions->checklist_items_sort_order
+                : 'default';
+
+            if ($sortMode === 'default') {
+                return $requirements;
+            }
+
+            $decoratedRequirements = [];
+            $originalIndex = 0;
+
+            foreach ($requirements as $key => $requirement) {
+                $decoratedRequirements[$key] = [
+                    'key'   => $key,
+                    'value' => $requirement,
+                    'label' => $this->normalize_requirement_label_for_sort($requirement),
+                    'group' => $this->get_requirement_sort_group($requirement),
+                    'index' => $originalIndex++,
+                ];
+            }
+
+            uasort($decoratedRequirements, function ($a, $b) use ($sortMode) {
+                if ($sortMode === 'required_recommended') {
+                    if ($a['group'] !== $b['group']) {
+                        return $a['group'] <=> $b['group'];
+                    }
+                }
+
+                $labelComparison = strnatcasecmp($a['label'], $b['label']);
+                if ($labelComparison !== 0) {
+                    return $labelComparison;
+                }
+
+                return $a['index'] <=> $b['index'];
+            });
+
+            $sortedRequirements = [];
+            foreach ($decoratedRequirements as $decoratedRequirement) {
+                $sortedRequirements[$decoratedRequirement['key']] = $decoratedRequirement['value'];
+            }
+
+            return $sortedRequirements;
+        }
+
+        /**
+         * Returns a normalized plain-text label for sorting.
+         *
+         * @param array $requirement
+         * @return string
+         */
+        protected function normalize_requirement_label_for_sort($requirement)
+        {
+            $label = isset($requirement['label']) ? (string)$requirement['label'] : '';
+            $label = wp_strip_all_tags($label);
+            $label = wp_specialchars_decode($label, ENT_QUOTES);
+            $label = trim($label);
+
+            if (function_exists('mb_strtolower')) {
+                return mb_strtolower($label, 'UTF-8');
+            }
+
+            return strtolower($label);
+        }
+
+        /**
+         * Returns a numeric group used to prioritize required/recommended failed items.
+         *
+         * @param array $requirement
+         * @return int
+         */
+        protected function get_requirement_sort_group($requirement)
+        {
+            $rule = isset($requirement['rule']) ? (string)$requirement['rule'] : '';
+            $isCompliant = $this->is_requirement_compliant($requirement);
+            $settingsOptions = get_option('publishpress_checklists_settings_options');
+            $sortMode = isset($settingsOptions->checklist_items_sort_order)
+                ? (string)$settingsOptions->checklist_items_sort_order
+                : 'default';
+
+            if ($sortMode === 'required_recommended') {
+                if ($rule === Plugin::RULE_BLOCK) {
+                    return $isCompliant ? 1 : 0;
+                }
+
+                if ($rule === Plugin::RULE_WARNING) {
+                    return $isCompliant ? 3 : 2;
+                }
+
+                return $isCompliant ? 5 : 4;
+            }
+
+            if (!$isCompliant) {
+                if ($rule === Plugin::RULE_BLOCK) {
+                    return 0;
+                }
+
+                if ($rule === Plugin::RULE_WARNING) {
+                    return 1;
+                }
+
+                return 2;
+            }
+
+            if ($rule === Plugin::RULE_BLOCK) {
+                return 3;
+            }
+
+            if ($rule === Plugin::RULE_WARNING) {
+                return 4;
+            }
+
+            return 5;
+        }
+
+        /**
+         * Determines if a requirement is compliant from its status field.
+         *
+         * @param array $requirement
+         * @return bool
+         */
+        protected function is_requirement_compliant($requirement)
+        {
+            if (!isset($requirement['status'])) {
+                return false;
+            }
+
+            $status = $requirement['status'];
+
+            if (is_bool($status)) {
+                return $status;
+            }
+
+            if (is_numeric($status)) {
+                return (int)$status === 1;
+            }
+
+            if (is_string($status)) {
+                $status = strtolower(trim($status));
+                return in_array($status, ['yes', 'true', '1'], true);
+            }
+
+            return false;
         }
 
 

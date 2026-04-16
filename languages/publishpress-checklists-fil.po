@@ -1,9 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/publishpress-"
-"checklists\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
 "PO-Revision-Date: 2026-01-30 15:14+0000\n"
 "Last-Translator: Riza Maulana Ardiyanto <riza@publishpress.com>\n"
 "Language-Team: Filipino <https://weblate.publishpress.com/projects/"
@@ -27,11 +26,11 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 
 #. Plugin Name of the plugin
-#. Plugin Name of the plugin
-msgid "PublishPress Checklists"
-msgstr "PublishPress Checklists"
+msgid "PublishPress Checklists Free"
+msgstr ""
 
 #. Plugin URI of the plugin
+#, fuzzy
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
@@ -76,6 +75,9 @@ msgstr "Walang umiiral na post"
 msgid "Checklists"
 msgstr "Mga Checklist"
 
+msgid "PublishPress Checklists"
+msgstr "PublishPress Checklists"
+
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "Kung gusto mo ang %s mangyaring iwanan kami ng %s rating. Salamat!"
@@ -110,11 +112,41 @@ msgstr "Naaprubahan ni %s"
 msgid "Approved by a user in this role"
 msgstr "Naaprubahan ng isang gumagamit sa papel na ito"
 
+#. translators: 1: custom editor label, 2: selected role names.
+#. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
+#. translators: 1: custom editor label, 2: prohibited category names.
+#. translators: 1: custom editor label, 2: prohibited tag names.
+#. translators: 1: custom editor label, 2: required category names.
+#. translators: 1: custom editor label, 2: required tag names.
+#, fuzzy, php-format
+msgid "%1$s - %2$s"
+msgstr ""
+
 msgid "Min"
 msgstr "Min"
 
 msgid "Max"
 msgstr "Sagad"
+
+#. translators: %d: exact required value.
+#, php-format
+msgid "exact %d"
+msgstr ""
+
+#. translators: %d: minimum required value.
+#, php-format
+msgid "min %d"
+msgstr ""
+
+#. translators: %d: maximum allowed value.
+#, php-format
+msgid "max %d"
+msgstr ""
+
+#. translators: 1: minimum required value, 2: maximum allowed value.
+#, php-format
+msgid "min %1$d max %2$d"
+msgstr ""
 
 msgid "Edit label"
 msgstr "I-edit ang label"
@@ -202,8 +234,8 @@ msgstr "Ang itinatampok na larawan ay may Alt text"
 msgid "Featured image has caption"
 msgstr "Ang itinatampok na imahe ay may caption"
 
-msgid "Numbers of characters in excerpt"
-msgstr "Bilang ng mga karakter sa excerpt"
+msgid "Number of characters in excerpt"
+msgstr ""
 
 #, php-format
 msgid "Minimum of %d character in excerpt"
@@ -294,7 +326,7 @@ msgstr "%d panloob na link sa nilalaman"
 msgid "%d internal links in content"
 msgstr "%d mga panloob na link sa nilalaman"
 
-#, php-format
+#, fuzzy, php-format
 msgid "Between %d and %d internal links in content"
 msgstr "Sa pagitan ng %d at %d na mga panloob na link sa nilalaman"
 
@@ -379,7 +411,7 @@ msgstr "Maximum ng %d na tag"
 msgid "Maximum of %d tags"
 msgstr "Maximum ng %d na mga tag"
 
-#, php-format
+#, fuzzy, php-format
 msgid "%d tag"
 msgstr "%d tag"
 
@@ -402,7 +434,7 @@ msgstr "Minimum ng %d "
 msgid "Maximum of %d "
 msgstr "Maksimum ng %d "
 
-#, php-format
+#, fuzzy, php-format
 msgid "%d "
 msgstr "%d "
 
@@ -471,7 +503,7 @@ msgstr "%d salita sa nilalaman"
 msgid "%d words in content"
 msgstr "%d mga salita sa nilalaman"
 
-#, php-format
+#, fuzzy, php-format
 msgid "Between %d and %d words in content"
 msgstr "Sa pagitan ng %d at %d na mga salita sa nilalaman"
 
@@ -536,6 +568,33 @@ msgid "Please make sure to add a name for all the custom tasks."
 msgstr ""
 "Mangyaring siguraduhing magdagdag ng pangalan para sa lahat ng mga pasadyang "
 "gawain."
+
+msgid "Rename task label"
+msgstr ""
+
+msgid "Label for the Checklists screen"
+msgstr ""
+
+msgid "Leave empty to use the default WP Admin label"
+msgstr ""
+
+msgid "Label for the post editing screen"
+msgstr ""
+
+msgid "Leave empty to use the default editing screen label"
+msgstr ""
+
+msgid "Preview in editing screen:"
+msgstr ""
+
+msgid "Default checklist label will be used."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
 
 msgid "No results found"
 msgstr "Walang natagpuang resulta"
@@ -619,7 +678,7 @@ msgstr "Hindi kinakailangan, ngunit mahalaga: "
 msgid "One or more items in the checklist are not completed"
 msgstr "Isang o higit pang mga item sa checklist ang hindi natapos"
 
-#, php-format
+#, fuzzy, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "Hindi mo kailangang kumpletuhin ang anumang %sChecklist tasks%s."
 
@@ -668,8 +727,8 @@ msgstr "Taas ng tampok na imahe"
 msgid "Featured image width"
 msgstr "Lapad ng tampok na imahe"
 
-msgid "Heading in hierarchy"
-msgstr "Pamagat sa hierarchy"
+msgid "H1, H2, H3 etc tags are used in logical order"
+msgstr ""
 
 msgid "Number of images in content"
 msgstr "Bilang ng mga imahe sa nilalaman"
@@ -677,23 +736,26 @@ msgstr "Bilang ng mga imahe sa nilalaman"
 msgid "Number of characters in image captions"
 msgstr "Bilang ng mga karakter sa mga caption ng imahe"
 
-msgid "Number of audio in content"
-msgstr "Bilang ng audio sa nilalaman"
+msgid "Number of audio items in content"
+msgstr ""
 
-msgid "Number of video in content"
-msgstr "Bilang ng video sa nilalaman"
+msgid "Number of video items in content"
+msgstr ""
 
 msgid "Approved by role"
 msgstr "Naaprubahan ng role"
 
-msgid "Approved by user"
-msgstr "Naaprubahan ng user"
+msgid "Approved by specific user"
+msgstr ""
 
 msgid "Avoid heading tags in content"
 msgstr "Iwasan ang mga heading tag sa nilalaman"
 
-msgid "Published at exact time"
-msgstr "Nai-publish sa eksaktong oras"
+msgid "Prohibited words"
+msgstr ""
+
+msgid "Publish time should be at a specific time"
+msgstr ""
 
 msgid "Publish time should be in the future"
 msgstr "Dapat nasa hinaharap ang oras ng publikasyon"
@@ -835,6 +897,12 @@ msgstr ""
 "Sigurado ka bang nais mong i-reset ang lahat ng mga na-renamed na checklist "
 "item sa kanilang default na label? Hindi maibabalik ang aksyong ito."
 
+msgid "Resetting..."
+msgstr ""
+
+msgid "Reset All Renamed Labels"
+msgstr ""
+
 msgid "Features"
 msgstr "Mga Tampok"
 
@@ -847,7 +915,7 @@ msgstr "Mga pinagana na tampok"
 msgid "There are no PublishPress modules registered"
 msgstr "Walang nakarehistrong mga module ng PublishPress"
 
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
@@ -855,11 +923,14 @@ msgstr ""
 "Hindi pinagana dahil ang add_post_type_support('%1$s', '%2$s') ay kasama sa "
 "isang na-load na file."
 
-msgid "Enable Who Can Ignore:"
-msgstr "Paganahin kung Sino ang Maaaring I-ignore:"
+msgid "Enable User Roles Filter:"
+msgstr ""
 
 msgid "Show warning icon:"
 msgstr "Ipakita ang icon ng babala:"
+
+msgid "Highlight failing blocks in the editor:"
+msgstr ""
 
 msgid "Delete data on uninstall:"
 msgstr "Burahin ang data sa pag-uninstall:"
@@ -898,11 +969,20 @@ msgstr "Kinakailangang Kumpletong Kulay:"
 msgid "Required Incomplete Color:"
 msgstr "Kinakailangang Hindi Kumpletong Kulay:"
 
+msgid "Required Asterisk Color:"
+msgstr ""
+
 msgid "Recommended Complete Color:"
 msgstr "Inirerekomendang Kumpletong Kulay:"
 
 msgid "Recommended Incomplete Color:"
 msgstr "Inirerekomendang Hindi Kumpletong Kulay:"
+
+msgid "Enable rename label in editor panel:"
+msgstr ""
+
+msgid "Checklist item sort order:"
+msgstr ""
 
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
@@ -948,15 +1028,19 @@ msgstr ""
 "hindi kumpleto ang mga kinakailangan."
 
 msgid ""
+"This will highlight Gutenberg blocks that fail block-specific checklist "
+"tasks."
+msgstr ""
+
+msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the plugin "
 "is uninstalled."
 msgstr ""
 "Kapag naka-enable, lahat ng data ng PublishPress Checklists ay mabubura kung "
 "ang plugin ay aalisin."
 
-msgid "This will show \"Who can ignore\" options."
+msgid "This will show \"Exclude User Roles\" options."
 msgstr ""
-"Ipinapakita nito ang mga opsyon na \"Sino ang maaaring hindi pansinin\"."
 
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
@@ -1014,14 +1098,22 @@ msgstr ""
 "Ipasok ang pangalan ng klase ng Dashicons (hal. dashicons-no, dashicons-"
 "dismiss). "
 
-msgid "Reset All Custom Labels"
-msgstr "I-reset ang Lahat ng Pasadyang Label"
+msgid "Enable custom rename labels in the checklist editor panel."
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Required on top and recommended below"
+msgstr ""
+
+msgid "Sort alphabetically"
+msgstr ""
 
 msgid ""
-"This will reset all renamed checklist items back to their default labels."
+"This will reset all renamed checklist labels for WP Admin and Editing screen "
+"back to their default labels."
 msgstr ""
-"Ito ay magbabalik sa lahat ng pinangalanang mga item ng checklist sa "
-"kanilang mga default na label."
 
 msgid "Security check failed."
 msgstr "Nabigo ang pagsusuri sa seguridad."
@@ -1029,8 +1121,8 @@ msgstr "Nabigo ang pagsusuri sa seguridad."
 msgid "You do not have permission to perform this action."
 msgstr "Wala kang pahintulot na isagawa ang aksyong ito."
 
-msgid "All custom labels have been reset successfully."
-msgstr "Lahat ng pasadyang label ay matagumpay na na-reset."
+msgid "All renamed labels have been reset successfully."
+msgstr ""
 
 msgid "Number of characters in Yoast SEO focus keyword"
 msgstr "Bilang ng mga karakter sa Yoast SEO focus keyword"
@@ -1098,7 +1190,7 @@ msgid "Minimum Yoast SEO readability score"
 msgstr "Minimum na marka ng readability ng Yoast SEO"
 
 #. translators: %s expands to the readability score
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
@@ -1112,7 +1204,7 @@ msgid "Minimum Yoast SEO analysis score"
 msgstr "Minimum na marka ng pagsusuri ng Yoast SEO"
 
 #. translators: %s expands to the seo score
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
@@ -1129,6 +1221,43 @@ msgid ""
 msgstr ""
 "Gumagamit ka ng PublishPress Checklists Free. Ang bersyon ng Pro ay may "
 "higit pang mga tampok at suporta. %sMag-upgrade sa Pro%s"
+
+#~ msgid "Numbers of characters in excerpt"
+#~ msgstr "Bilang ng mga karakter sa excerpt"
+
+#~ msgid "Heading in hierarchy"
+#~ msgstr "Pamagat sa hierarchy"
+
+#~ msgid "Number of audio in content"
+#~ msgstr "Bilang ng audio sa nilalaman"
+
+#~ msgid "Number of video in content"
+#~ msgstr "Bilang ng video sa nilalaman"
+
+#~ msgid "Approved by user"
+#~ msgstr "Naaprubahan ng user"
+
+#~ msgid "Published at exact time"
+#~ msgstr "Nai-publish sa eksaktong oras"
+
+#~ msgid "Enable Who Can Ignore:"
+#~ msgstr "Paganahin kung Sino ang Maaaring I-ignore:"
+
+#~ msgid "This will show \"Who can ignore\" options."
+#~ msgstr ""
+#~ "Ipinapakita nito ang mga opsyon na \"Sino ang maaaring hindi pansinin\"."
+
+#~ msgid "Reset All Custom Labels"
+#~ msgstr "I-reset ang Lahat ng Pasadyang Label"
+
+#~ msgid ""
+#~ "This will reset all renamed checklist items back to their default labels."
+#~ msgstr ""
+#~ "Ito ay magbabalik sa lahat ng pinangalanang mga item ng checklist sa "
+#~ "kanilang mga default na label."
+
+#~ msgid "All custom labels have been reset successfully."
+#~ msgstr "Lahat ng pasadyang label ay matagumpay na na-reset."
 
 #~ msgid "Who can ignore the task?"
 #~ msgstr "Sino ang maaaring hindi pansinin ang gawain?"

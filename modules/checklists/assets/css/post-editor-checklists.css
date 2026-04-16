@@ -108,6 +108,25 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
     right: -11px;
 }
 
+/* Adjust warning badge for compact Gutenberg toolbar icon button. */
+body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-toolbar-icon:after {
+    top: -6px;
+    right: -7px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-toolbar-icon:hover:after {
+    top: -7px;
+    right: -8px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 13px;
+}
+
 .pp-checklists-failed-requirements-warning p {
     font-weight: bold;
 }
@@ -123,6 +142,34 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
     display: block;
 }
 
+#pp-checklists-req-box .pp-checklists-req.metabox-req,
+#pp-checklists-sidebar-req-box .pp-checklists-req.panel-req {
+    padding-left: 8px;
+}
+
+#pp-checklists-req-box .pp-checklists-group-heading,
+#pp-checklists-sidebar-req-box .pp-checklists-group-heading {
+    margin: 0 0 4px 10px;
+    padding: 4px 8px;
+    display: inline-block;
+    border: 0;
+    border-radius: 999px;
+    background: #f0f0f1;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #3c434a;
+}
+
+ul#pp-checklists-sidebar-req-box {
+    margin: 0 -10px;
+}
+
+ul#pp-checklists-req-box span.required {
+    font-size: 17px;
+}
+
 .pp-checklists-check-item {
     display: block;
     width: 100%;
@@ -132,7 +179,7 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
 }
 
 .edit-post-meta-boxes-area #pp_checklist_meta.postbox > .inside {
-    padding: 4px;
+    padding: 0px 4px 4px 4px;
 }
 
 .edit-post-meta-boxes-area #poststuff #pp_checklist_meta.postbox h2.hndle {
@@ -172,38 +219,89 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
     padding-left: 4px;
 }
 
-.edit-post-layout:not(.show-icon-labels) .interface-pinned-items button.components-button[aria-label='Checklists'] {
-    padding: 6px 0;
-    background: transparent;
+.pp-checklists-toolbar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 50%;
 }
 
-.pp-checklists-toolbar-icon {
-    padding: 10px 9px 8px;
-    background: #655997;
-    color: #ffffff;
-    border: 1px solid #a6b2be;
+.pp-checklists-toolbar-icon .dashicons {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.interface-pinned-items .components-button .pp-checklists-toolbar-icon,
+.interface-pinned-items .components-button .pp-checklists-toolbar-icon .dashicons {
+    color: #000000 !important;
+}
+
+.interface-pinned-items button.components-button[aria-label='Checklists'] {
+    color: #1e1e1e;
+}
+
+.interface-pinned-items button.components-button[aria-label='Checklists'][aria-pressed='true'],
+.interface-pinned-items button.components-button[aria-label='Checklists'].is-pressed {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
     border-radius: 2px;
+}
+
+.interface-pinned-items button.components-button[aria-label='Checklists'][aria-pressed='true'] .pp-checklists-toolbar-icon,
+.interface-pinned-items button.components-button[aria-label='Checklists'].is-pressed .pp-checklists-toolbar-icon {
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50%;
 }
 
 .block-editor-list-view-leaf[data-warning="true"] .block-editor-list-view-block-contents::before,
 .block-editor-list-view [data-warning="true"] .block-editor-list-view-block-contents::before,
 .block-editor-list-view [data-warning="true"] .block-editor-list-view__item-content::before,
 .block-editor-list-view [data-warning="true"].block-editor-list-view__item-content::before {
-    font-family: inherit;
     position: absolute;
     top: 5px;
-    line-height: 23px;
-    width: 20px;
-    height: 20px;
-    font-size: 18px;
-    content: '!';
-    background-color: #df0000;
-    color: #ffede8;
-    font-weight: bold;
-    border: 1px solid white;
-    border-radius: 50px;
-    text-align: center;
+    width: 22px;
+    height: 22px;
+    content: '';
+    background-image: var(--pp-checklists-warning-icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
+}
+
+.block-editor-block-list__block.pp-checklists-has-warning:not(:has(> .block-editor-block-list__block-edit)),
+.block-editor-block-list__block.pp-checklists-has-warning > .block-editor-block-list__block-edit {
+    outline: 2px solid #df0000;
+    outline-offset: 2px;
+    position: relative;
+}
+
+.block-editor-block-list__block.pp-checklists-has-warning:not(:has(> .block-editor-block-list__block-edit))::before,
+.block-editor-block-list__block.pp-checklists-has-warning > .block-editor-block-list__block-edit::before {
+    position: absolute;
+    z-index: 30;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    content: '';
+    background-image: var(--pp-checklists-warning-icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px 28px;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 8px rgba(223, 0, 0, 0.18));
+}
