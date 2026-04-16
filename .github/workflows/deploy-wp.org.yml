@@ -42,8 +42,6 @@ jobs:
         with:
           php-version: '8.3'
           tools: composer
-          # symfony/cache conflicts with ext-redis < 6.1; pin PECL redis so Composer’s platform package matches.
-          extensions: redis-6.1.0
 
       - name: Create .env file
         run: |
