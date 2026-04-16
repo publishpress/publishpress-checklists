@@ -5,21 +5,23 @@ msgstr ""
 "Project-Id-Version: PublishPress Checklists Free 2.27.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Greek "
+"<https://weblate.publishpress.com/projects/publishpress-checklists/"
+"publishpress-checklists/el/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-15T17:45:57+00:00\n"
-"PO-Revision-Date: 2026-04-15 18:09+0000\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:13+0000\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: el\n"
 
-#: publishpress-checklists.php:4
+#: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
-msgstr "Δωρεάν Λίστες Ελέγχου PublishPress"
+msgstr "PublishPress Checklists Free"
 
 #: publishpress-checklists.php:5, fuzzy
 #. Plugin URI of the plugin
@@ -32,10 +34,10 @@ msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr ""
-"Με τις Λίστες Ελέγχου PublishPress, μπορείτε να επιλέξετε τις απαιτήσεις "
+"Με το PublishPress Checklists, μπορείτε να επιλέξετε τις απαιτήσεις "
 "δημοσίευσης για το περιεχόμενό σας."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -71,13 +73,13 @@ msgid "Please correct your form errors below and try again."
 msgstr "Παρακαλώ διορθώστε τα σφάλματα της φόρμας σας παρακάτω και προσπαθήστε ξανά."
 
 #: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:516
+#: modules/settings/settings.php:516, fuzzy
 msgid "Cheatin&#8217; uh?"
-msgstr "Απάτη&#8217; ε;"
+msgstr "Cheatin&#8217; uh?"
 
 #: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
-msgstr "Δεν έχετε τις απαραίτητες άδειες για να ολοκληρώσετε αυτήν την ενέργεια."
+msgstr "Δεν έχετε τις απαραίτητες άδειες για να ολοκληρώσετε αυτή την ενέργεια."
 
 #: core/Legacy/LegacyPlugin.php:217
 msgid "Post does not exist"
@@ -91,38 +93,38 @@ msgstr "Η ανάρτηση δεν υπάρχει"
 #: modules/checklists/checklists.php:1300
 #: modules/checklists/assets/js/gutenberg-panel.jsx:411
 msgid "Checklists"
-msgstr "Λίστες Ελέγχου"
+msgstr "Λίστες ελέγχου"
 
-#: core/Legacy/Module.php:286
+#: core/Legacy/Module.php:286, fuzzy
 msgid "PublishPress Checklists"
-msgstr "Λίστες Ελέγχου PublishPress"
+msgstr "PublishPress Checklists"
 
 #: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
-msgstr "Αν σας αρέσει %s παρακαλούμε αφήστε μας μια αξιολόγηση %s. Ευχαριστούμε!"
+msgstr "Αν σας αρέσει το %s παρακαλώ αφήστε μας μια βαθμολογία %s. Ευχαριστώ!"
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
-msgstr "Χρειάζεστε υποστήριξη για τις Λίστες Ελέγχου PublishPress;"
+msgstr "Χρειάζεστε υποστήριξη για το PublishPress Checklists;"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
-"Αν χρειάζεστε βοήθεια ή έχετε ένα νέο αίτημα χαρακτηριστικού, ενημερώστε "
+"Αν χρειάζεστε βοήθεια ή έχετε μια νέα αίτηση χαρακτηριστικού, ενημερώστε "
 "μας."
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
-msgstr "Αίτημα Υποστήριξης"
+msgstr "Αίτηση υποστήριξης"
 
 #: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
-msgstr "Λεπτομερής τεκμηρίωση είναι επίσης διαθέσιμη στον ιστότοπο του plugin."
+msgstr "Λεπτομερής τεκμηρίωση είναι επίσης διαθέσιμη στην ιστοσελίδα του plugin."
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "Δείτε τη Βάση Γνώσεων"
+msgstr "Δείτε τη βάση γνώσεων"
 
 #: core/Plugin.php:104
 #: modules/settings/settings.php:134
@@ -300,17 +302,17 @@ msgstr "Μεταξύ %d και %d εξωτερικών συνδέσμων στο
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "Η εικόνα χαρακτηριστικού έχει προστεθεί"
+msgstr "Η εικόνα που προβάλλεται έχει προστεθεί"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
-msgstr "Η εικόνα χαρακτηριστικού έχει Alt κείμενο"
+msgstr "Η εικόνα που προβάλλεται έχει Alt κείμενο"
 
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
-msgstr "Η εικόνα χαρακτηριστικού έχει λεζάντα"
+msgstr "Η εικόνα που προβάλλεται έχει λεζάντα"
 
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
@@ -365,22 +367,22 @@ msgstr "Αριθμός χαρακτήρων στο Alt κείμενο"
 #: core/Requirement/Image_alt_count.php:44
 #, php-format
 msgid "Minimum of %d character in Alt text"
-msgstr "Ελάχιστος %d χαρακτήρας στο Alt κείμενο"
+msgstr "Ελάχιστο %d χαρακτήρας στο Alt κείμενο"
 
 #: core/Requirement/Image_alt_count.php:45
 #, php-format
 msgid "Minimum of %d characters in Alt text"
-msgstr "Ελάχιστοι %d χαρακτήρες στο Alt κείμενο"
+msgstr "Ελάχιστο %d χαρακτήρες στο Alt κείμενο"
 
 #: core/Requirement/Image_alt_count.php:46
 #, php-format
 msgid "Maximum of %d character in Alt text"
-msgstr "Μέγιστος %d χαρακτήρας στο Alt κείμενο"
+msgstr "Μέγιστο %d χαρακτήρας στο Alt κείμενο"
 
 #: core/Requirement/Image_alt_count.php:47
 #, php-format
 msgid "Maximum of %d characters in Alt text"
-msgstr "Μέγιστοι %d χαρακτήρες στο Alt κείμενο"
+msgstr "Μέγιστο %d χαρακτήρες στο Alt κείμενο"
 
 #: core/Requirement/Image_alt_count.php:48
 #, php-format
@@ -527,17 +529,17 @@ msgstr "Ελάχιστη %d ετικέτα"
 #: core/Requirement/Tags_count.php:49
 #, php-format
 msgid "Minimum of %d tags"
-msgstr "Ελάχιστο %d ετικέτες"
+msgstr "Ελάχιστες %d ετικέτες"
 
 #: core/Requirement/Tags_count.php:50
 #, php-format
 msgid "Maximum of %d tag"
-msgstr "Μέγιστο %d ετικέτα"
+msgstr "Μέγιστος αριθμός %d ετικέτας"
 
 #: core/Requirement/Tags_count.php:51
 #, php-format
 msgid "Maximum of %d tags"
-msgstr "Μέγιστο %d ετικέτες"
+msgstr "Μέγιστος αριθμός %d ετικετών"
 
 #: core/Requirement/Tags_count.php:52
 #, php-format
@@ -552,7 +554,7 @@ msgstr "%d ετικέτες"
 #: core/Requirement/Tags_count.php:54
 #, php-format
 msgid "Between %d and %d tags"
-msgstr "Ανάμεσα σε %d και %d ετικέτες"
+msgstr "Μεταξύ %d και %d ετικετών"
 
 #: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
@@ -562,13 +564,13 @@ msgstr "Αριθμός "
 #: core/Requirement/Taxonomies_count.php:52
 #, php-format
 msgid "Minimum of %d "
-msgstr "Ελάχιστο %d "
+msgstr "Ελάχιστος αριθμός %d "
 
 #: core/Requirement/Taxonomies_count.php:53
 #: core/Requirement/Taxonomies_count.php:54
 #, php-format
 msgid "Maximum of %d "
-msgstr "Μέγιστο %d "
+msgstr "Μέγιστος αριθμός %d "
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
@@ -579,7 +581,7 @@ msgstr "%d "
 #: core/Requirement/Taxonomies_count.php:57
 #, php-format
 msgid "Between %d and %d "
-msgstr "Ανάμεσα σε %d και %d "
+msgstr "Μεταξύ %d και %d "
 
 #: core/Requirement/Title_count.php:40
 #: core/Requirement/Title_count.php:41
@@ -589,27 +591,27 @@ msgstr "Αριθμός χαρακτήρων στον τίτλο"
 #: core/Requirement/Title_count.php:42
 #, php-format
 msgid "Minimum of %d character in title"
-msgstr "Ελάχιστο %d χαρακτήρα στον τίτλο"
+msgstr "Ελάχιστος αριθμός %d χαρακτήρα στον τίτλο"
 
 #: core/Requirement/Title_count.php:43
 #, php-format
 msgid "Minimum of %d characters in title"
-msgstr "Ελάχιστο %d χαρακτήρες στον τίτλο"
+msgstr "Ελάχιστος αριθμός %d χαρακτήρων στον τίτλο"
 
 #: core/Requirement/Title_count.php:44
 #, php-format
 msgid "Maximum of %d character in title"
-msgstr "Μέγιστο %d χαρακτήρα στον τίτλο"
+msgstr "Μέγιστος αριθμός %d χαρακτήρα στον τίτλο"
 
 #: core/Requirement/Title_count.php:45
 #, php-format
 msgid "Maximum of %d characters in title"
-msgstr "Μέγιστο %d χαρακτήρες στον τίτλο"
+msgstr "Μέγιστος αριθμός %d χαρακτήρων στον τίτλο"
 
 #: core/Requirement/Title_count.php:46
 #, php-format
 msgid "%d character in title"
-msgstr "%d χαρακτήρα στον τίτλο"
+msgstr "%d χαρακτήρας στον τίτλο"
 
 #: core/Requirement/Title_count.php:47
 #, php-format
@@ -619,7 +621,7 @@ msgstr "%d χαρακτήρες στον τίτλο"
 #: core/Requirement/Title_count.php:48
 #, php-format
 msgid "Between %d and %d characters in title"
-msgstr "Ανάμεσα σε %d και %d χαρακτήρες στον τίτλο"
+msgstr "Μεταξύ %d και %d χαρακτήρων στον τίτλο"
 
 #: core/Requirement/Validate_links.php:65
 #: core/Requirement/Validate_links.php:66
@@ -633,32 +635,32 @@ msgstr "Αριθμός λέξεων στο περιεχόμενο"
 #: core/Requirement/Words_count.php:44
 #, php-format
 msgid "Minimum of %d word in content"
-msgstr "Ελάχιστος %d λέξη στο περιεχόμενο"
+msgstr "Ελάχιστο %d λέξης στο περιεχόμενο"
 
 #: core/Requirement/Words_count.php:45
 #, php-format
 msgid "Minimum of %d words in content"
-msgstr "Ελάχιστες %d λέξεις στο περιεχόμενο"
+msgstr "Ελάχιστο %d λέξεων στο περιεχόμενο"
 
 #: core/Requirement/Words_count.php:46
 #, php-format
 msgid "Maximum of %d word in content"
-msgstr "Μέγιστος %d λέξη στο περιεχόμενο"
+msgstr "Μέγιστο %d λέξης στο περιεχόμενο"
 
 #: core/Requirement/Words_count.php:47
 #, php-format
 msgid "Maximum of %d words in content"
-msgstr "Μέγιστες %d λέξεις στο περιεχόμενο"
+msgstr "Μέγιστο %d λέξεων στο περιεχόμενο"
 
 #: core/Requirement/Words_count.php:48
 #, php-format
 msgid "%d word in content"
-msgstr "%d λέξη στο περιεχόμενο"
+msgstr "%d λέξης στο περιεχόμενο"
 
 #: core/Requirement/Words_count.php:49
 #, php-format
 msgid "%d words in content"
-msgstr "%d λέξεις στο περιεχόμενο"
+msgstr "%d λέξεων στο περιεχόμενο"
 
 #: core/Requirement/Words_count.php:50
 #, php-format
@@ -691,15 +693,15 @@ msgstr "Ήχος / Βίντεο"
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
-msgstr "Επιλεγμένη Εικόνα"
+msgstr "Εικόνα παρουσίασης"
 
 #: core/Utils/FieldsTabs.php:49
 msgid "Links"
-msgstr "Συνδέσμοι"
+msgstr "Σύνδεσμοι"
 
 #: core/Utils/FieldsTabs.php:53
 msgid "Permalink"
-msgstr "Μόνιμος Σύνδεσμος"
+msgstr "Μόνιμος σύνδεσμος"
 
 #: core/Utils/FieldsTabs.php:57
 msgid "Categories"
@@ -711,13 +713,13 @@ msgstr "Ετικέτες"
 
 #: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
-msgstr "Φορολογίες"
+msgstr "Taxonomies"
 
 #: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
 msgstr "Προσβασιμότητα"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -754,7 +756,7 @@ msgstr "Μετονομασία ετικέτας εργασίας"
 
 #: modules/checklists/checklists.php:736
 msgid "Label for the Checklists screen"
-msgstr "Ετικέτα για την οθόνη λιστών ελέγχου"
+msgstr "Ετικέτα για την οθόνη Λιστών ελέγχου"
 
 #: modules/checklists/checklists.php:740
 msgid "Leave empty to use the default WP Admin label"
@@ -776,7 +778,7 @@ msgstr "Προεπισκόπηση στην οθόνη επεξεργασίας:
 
 #: modules/checklists/checklists.php:756
 msgid "Default checklist label will be used."
-msgstr "Θα χρησιμοποιηθεί η προεπιλεγμένη ετικέτα λίστας ελέγχου."
+msgstr "Η προεπιλεγμένη ετικέτα λίστας ελέγχου θα χρησιμοποιηθεί."
 
 #: modules/checklists/checklists.php:760
 msgid "Save"
@@ -796,13 +798,13 @@ msgstr "Αναζήτηση…"
 
 #: modules/checklists/checklists.php:777
 msgid "Suggested Prompts"
-msgstr "Προτεινόμενες προτροπές"
+msgstr "Προτεινόμενες Προτροπές"
 
 #: modules/checklists/checklists.php:778
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr ""
-"Ποια είναι η αναμενόμενη απάντηση του OpenAI για να χαρακτηριστεί η "
-"απαίτηση ως επιτυχής;"
+"Ποια είναι η αναμενόμενη απάντηση OpenAI για να σημειωθεί η απαίτηση ως "
+"περασμένη;"
 
 #: modules/checklists/checklists.php:781
 msgid "Clear Content"
@@ -814,7 +816,7 @@ msgstr "Είναι αυτό το περιεχόμενο καθαρό και εύ
 
 #: modules/checklists/checklists.php:785
 msgid "Friendly Tone Content"
-msgstr "Φιλικό Τόνο Περιεχόμενο"
+msgstr "Φιλικός Τόνος Περιεχομένου"
 
 #: modules/checklists/checklists.php:786
 msgid "Is this content tone friendly?"
@@ -822,7 +824,7 @@ msgstr "Είναι αυτό το περιεχόμενο φιλικό;"
 
 #: modules/checklists/checklists.php:789
 msgid "Professional Tone Content"
-msgstr "Επαγγελματικό Τόνο Περιεχόμενο"
+msgstr "Επαγγελματικός Τόνος Περιεχομένου"
 
 #: modules/checklists/checklists.php:790
 msgid "Is this content tone professional?"
@@ -830,7 +832,7 @@ msgstr "Είναι αυτό το περιεχόμενο επαγγελματικ
 
 #: modules/checklists/checklists.php:793
 msgid "Persuasive Tone Content"
-msgstr "Πειστικό Τόνο Περιεχόμενο"
+msgstr "Πειστικός Τόνος Περιεχομένου"
 
 #: modules/checklists/checklists.php:794
 msgid "Is this content tone persuasive?"
@@ -838,15 +840,15 @@ msgstr "Είναι αυτό το περιεχόμενο πειστικό;"
 
 #: modules/checklists/checklists.php:797
 msgid "Empathetic Tone Content"
-msgstr "Εμπαθητικό Τόνο Περιεχόμενο"
+msgstr "Εμπαθής Τόνος Περιεχομένου"
 
 #: modules/checklists/checklists.php:798
 msgid "Is this content tone empathetic?"
-msgstr "Είναι αυτό το περιεχόμενο εμπαθητικό;"
+msgstr "Είναι αυτό το περιεχόμενο εμπαθές;"
 
 #: modules/checklists/checklists.php:801
 msgid "Adventurous Tone Content"
-msgstr "Περιεχόμενο Περιπετειώδους Τόνου"
+msgstr "Περιπετειώδης Τόνος Περιεχομένου"
 
 #: modules/checklists/checklists.php:802
 msgid "Is this content tone adventurous?"
@@ -854,7 +856,7 @@ msgstr "Είναι αυτό το περιεχόμενο περιπετειώδε
 
 #: modules/checklists/checklists.php:805
 msgid "Promotional Tone Content"
-msgstr "Προωθητικό Τόνο Περιεχόμενο"
+msgstr "Προωθητικός Τόνος Περιεχομένου"
 
 #: modules/checklists/checklists.php:806
 msgid "Is this content tone promotional?"
@@ -882,18 +884,18 @@ msgstr ""
 
 #: modules/checklists/checklists.php:969
 msgid "Please complete the following tasks before publishing:"
-msgstr "Παρακαλώ ολοκληρώστε τις παρακάτω εργασίες πριν από τη δημοσίευση:"
+msgstr "Παρακαλώ ολοκληρώστε τις παρακάτω εργασίες πριν τη δημοσίευση:"
 
 #: modules/checklists/checklists.php:973
 msgid "Please complete the following tasks before updating the published post:"
 msgstr ""
-"Παρακαλώ ολοκληρώστε τις παρακάτω εργασίες πριν από την ενημέρωση της "
+"Παρακαλώ ολοκληρώστε τις παρακάτω εργασίες πριν την ενημέρωση της "
 "δημοσιευμένης ανάρτησης:"
 
 #: modules/checklists/checklists.php:977
 #: modules/checklists/checklists.php:981
 msgid "Not required, but important: "
-msgstr "Δεν είναι απαραίτητο, αλλά είναι σημαντικό: "
+msgstr "Δεν απαιτείται, αλλά είναι σημαντικό: "
 
 #: modules/checklists/checklists.php:987
 msgid "One or more items in the checklist are not completed"
@@ -907,7 +909,7 @@ msgstr "Δεν χρειάζεται να ολοκληρώσετε καμία %s�
 #: modules/checklists/checklists.php:1030
 #: modules/checklists/assets/js/gutenberg-panel.jsx:473
 msgid "Check Now"
-msgstr "Έλεγχος Τώρα"
+msgstr "Ελέγξτε τώρα"
 
 #: modules/checklists/checklists.php:1031
 msgid "Ok"
@@ -927,7 +929,7 @@ msgstr "Εργασία"
 
 #: modules/checklists/checklists.php:1198
 msgid "Disabled, Recommended or Required"
-msgstr "Απενεργοποιημένο, Προτεινόμενο ή Απαραίτητο"
+msgstr "Απενεργοποιημένο, Συνιστώμενο ή Απαιτούμενο"
 
 #: modules/checklists/checklists.php:1199
 msgid "Options"
@@ -939,11 +941,11 @@ msgstr "Προσθήκη προσαρμοσμένης εργασίας"
 
 #: modules/checklists/checklists.php:1299
 msgid "Please complete the required(*) checklists task."
-msgstr "Παρακαλώ ολοκληρώστε την απαραίτητη(*) εργασία λίστας ελέγχου."
+msgstr "Παρακαλώ ολοκληρώστε την απαιτούμενη(*) εργασία λίστας ελέγχου."
 
 #: modules/checklists/checklists.php:1302
 msgid "required"
-msgstr "απαραίτητο"
+msgstr "απαιτείται"
 
 #: modules/checklists/checklists.php:1307
 #: modules/checklists/templates/meta-box.php:16
@@ -952,23 +954,23 @@ msgstr "Οι εργασίες λίστας ελέγχου δεν είναι δι
 
 #: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
-msgstr "Score Τίτλου SEO All in One"
+msgstr "Σκορ τίτλου SEO All in One"
 
 #: modules/checklists/pro-requirements.php:31
 msgid "All in One SEO Score"
-msgstr "Score SEO All in One"
+msgstr "Σκορ SEO All in One"
 
 #: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr "Ύψος εικόνας εξωφύλλου"
+msgstr "Ύψος εικόνας παρουσίασης"
 
 #: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr "Πλάτος εικόνας εξωφύλλου"
+msgstr "Πλάτος εικόνας παρουσίασης"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "H1, H2, H3 etc tags are used in logical order"
-msgstr "Οι ετικέτες H1, H2, H3 κ.λπ. χρησιμοποιούνται με λογική σειρά"
+msgstr "Οι ετικέτες H1, H2, H3 κ.λπ. χρησιμοποιούνται σε λογική σειρά"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
@@ -984,19 +986,19 @@ msgstr "Αριθμός ηχητικών στοιχείων στο περιεχό
 
 #: modules/checklists/pro-requirements.php:94
 msgid "Number of video items in content"
-msgstr "Αριθμός βιντεοσκοπημένων στοιχείων στο περιεχόμενο"
+msgstr "Αριθμός βίντεο στοιχείων στο περιεχόμενο"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr "Εγκρίθηκε από ρόλο"
+msgstr "Εγκεκριμένο από ρόλο"
 
 #: modules/checklists/pro-requirements.php:110
 msgid "Approved by specific user"
-msgstr "Εγκρίθηκε από συγκεκριμένο χρήστη"
+msgstr "Εγκεκριμένο από συγκεκριμένο χρήστη"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr "Αποφύγετε τις ετικέτες κεφαλίδας στο περιεχόμενο"
+msgstr "Αποφύγετε τις ετικέτες επικεφαλίδας στο περιεχόμενο"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Prohibited words"
@@ -1004,11 +1006,11 @@ msgstr "Απαγορευμένες λέξεις"
 
 #: modules/checklists/pro-requirements.php:131
 msgid "Publish time should be at a specific time"
-msgstr "Ο χρόνος δημοσίευσης θα πρέπει να είναι σε συγκεκριμένη ώρα"
+msgstr "Η ώρα δημοσίευσης πρέπει να είναι σε συγκεκριμένη ώρα"
 
 #: modules/checklists/pro-requirements.php:139
 msgid "Publish time should be in the future"
-msgstr "Ο χρόνος δημοσίευσης θα πρέπει να είναι στο μέλλον"
+msgstr "Η ώρα δημοσίευσης πρέπει να είναι στο μέλλον"
 
 #: modules/checklists/pro-requirements.php:147
 msgid "Rank Math SEO Score"
@@ -1020,15 +1022,15 @@ msgstr "Μόνο μία ετικέτα H1 στο περιεχόμενο"
 
 #: modules/checklists/pro-requirements.php:163
 msgid "Tables have a header row"
-msgstr "Οι πίνακες έχουν γραμμή κεφαλίδας"
+msgstr "Οι πίνακες έχουν μια γραμμή κεφαλίδας"
 
 #: modules/checklists/pro-requirements.php:170
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Ελέγξτε το πλαίσιο \"Επιτρέπονται οι παραγγελίες πίσω;\""
+msgstr "Ελέγξτε το κουτί \"Επιτρέπονται οι προπαραγγελίες;\""
 
 #: modules/checklists/pro-requirements.php:178
 msgid "Select some products for \"Cross-sells\""
-msgstr "Επιλέξτε κάποια προϊόντα για \"Διασταυρούμενες πωλήσεις\""
+msgstr "Επιλέξτε κάποια προϊόντα για \"Συμπληρωματικές πωλήσεις\""
 
 #: modules/checklists/pro-requirements.php:186
 msgid "Discount for the \"Sale price\""
@@ -1036,7 +1038,7 @@ msgstr "Έκπτωση για την \"Τιμή προσφοράς\""
 
 #: modules/checklists/pro-requirements.php:194
 msgid "Check the \"Downloadable\" box"
-msgstr "Ελέγξτε το πλαίσιο \"Λήψη\""
+msgstr "Ελέγξτε το κουτί \"Διαθέσιμο προς λήψη\""
 
 #: modules/checklists/pro-requirements.php:202
 msgid "Product image"
@@ -1044,7 +1046,7 @@ msgstr "Εικόνα προϊόντος"
 
 #: modules/checklists/pro-requirements.php:210
 msgid "Check the \"Manage stock?\" box"
-msgstr "Ελέγξτε το πλαίσιο \"Διαχείριση αποθέματος;\""
+msgstr "Ελέγξτε το κουτί \"Διαχείριση αποθέματος;\""
 
 #: modules/checklists/pro-requirements.php:218
 msgid "Enter a \"Regular price\""
@@ -1056,11 +1058,11 @@ msgstr "Εισάγετε μια \"Τιμή προσφοράς\""
 
 #: modules/checklists/pro-requirements.php:234
 msgid "Schedule the \"Sale price\""
-msgstr "Προγραμματίστε την \"Τιμή πώλησης\""
+msgstr "Προγραμματισμός της \"Τιμής πώλησης\""
 
 #: modules/checklists/pro-requirements.php:242
 msgid "Enter a \"SKU\""
-msgstr "Εισαγάγετε ένα \"SKU\""
+msgstr "Εισάγετε ένα \"SKU\""
 
 #: modules/checklists/pro-requirements.php:250
 msgid "Check the \"Sold individually\" box"
@@ -1068,7 +1070,7 @@ msgstr "Ελέγξτε το κουτί \"Πωλείται ατομικά\""
 
 #: modules/checklists/pro-requirements.php:258
 msgid "Select some products for \"Upsells\""
-msgstr "Επιλέξτε μερικά προϊόντα για \"Αυξήσεις πωλήσεων\""
+msgstr "Επιλέξτε κάποια προϊόντα για \"Upsells\""
 
 #: modules/checklists/pro-requirements.php:266
 msgid "Check the \"Virtual\" box"
@@ -1086,7 +1088,7 @@ msgstr "%s είναι συμπληρωμένο"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
-msgstr "Σχετικά με το PublishPress Checklists"
+msgstr "Σχετικά με τις λίστες ελέγχου PublishPress"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About"
@@ -1094,7 +1096,7 @@ msgstr "Σχετικά"
 
 #: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
-msgstr "Τεκμηρίωση του PublishPress Checklists"
+msgstr "Τεκμηρίωση λιστών ελέγχου PublishPress"
 
 #: modules/checklists/templates/footer.php:30
 msgid "Documentation"
@@ -1102,7 +1104,7 @@ msgstr "Τεκμηρίωση"
 
 #: modules/checklists/templates/footer.php:37
 msgid "Contact the PublishPress team"
-msgstr "Επικοινωνήστε με την ομάδα του PublishPress"
+msgstr "Επικοινωνήστε με την ομάδα PublishPress"
 
 #: modules/checklists/templates/footer.php:37
 msgid "Contact"
@@ -1119,7 +1121,7 @@ msgstr "Αποθήκευση αλλαγών"
 
 #: modules/checklists/templates/global-checklists.php:152
 msgid "Pro feature"
-msgstr "Δυνατότητα Pro"
+msgstr "Επαγγελματική δυνατότητα"
 
 #: modules/checklists/templates/global-checklists.php:165
 #, php-format
@@ -1128,7 +1130,7 @@ msgstr "Δεν υπάρχουν απαιτήσεις %s για αυτόν τον
 
 #: modules/checklists/templates/global-checklists.php:183
 msgid "New Item"
-msgstr "Νέο στοιχείο"
+msgstr "Νέο αντικείμενο"
 
 #: modules/checklists/templates/global-checklists.php:184
 msgid "Description"
@@ -1144,19 +1146,19 @@ msgstr ""
 
 #: modules/checklists/templates/global-checklists.php:203
 msgid "Add OpenAI Prompt task"
-msgstr "Προσθήκη εργασίας OpenAI Prompt"
+msgstr "Προσθήκη εργασίας προτροπής OpenAI"
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "The prompt should be in form of a question."
-msgstr "Η πρόταση θα πρέπει να είναι σε μορφή ερώτησης."
+msgstr "Η προτροπή θα πρέπει να είναι σε μορφή ερώτησης."
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "This feature requires an OpenAI API Key."
-msgstr "Αυτή η δυνατότητα απαιτεί ένα κλειδί API OpenAI."
+msgstr "Αυτή η δυνατότητα απαιτεί ένα OpenAI API Key."
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
-msgstr "Λατινικούς χαρακτήρες στο permalink"
+msgstr "Λατινικοί χαρακτήρες στο permalink"
 
 #: modules/permalinks/permalinks.php:65, fuzzy
 msgid "Permalinks"
@@ -1172,7 +1174,7 @@ msgstr "Δικαιώματα"
 
 #: modules/permissions/permissions.php:107
 msgid "Exclude User Roles"
-msgstr "Αποκλεισμός ρόλων χρηστών"
+msgstr "Αποκλεισμός Ρόλων Χρηστών"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"
@@ -1181,7 +1183,7 @@ msgstr "Κριτικές"
 #: modules/settings/settings.php:62
 #: modules/settings/settings.php:132
 msgid "Checklists Settings"
-msgstr "Ρυθμίσεις λιστών ελέγχου"
+msgstr "Ρυθμίσεις Λιστών Ελέγχου"
 
 #: modules/settings/settings.php:155
 msgid ""
@@ -1199,7 +1201,7 @@ msgstr "Επαναφορά..."
 #: modules/settings/settings.php:157
 #: modules/settings/settings.php:1556
 msgid "Reset All Renamed Labels"
-msgstr "Επαναφορά όλων των μετονομασμένων ετικετών"
+msgstr "Επαναφορά Όλων των Μετονομασμένων Ετικετών"
 
 #: modules/settings/settings.php:320
 msgid "Features"
@@ -1223,12 +1225,12 @@ msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr ""
-"Απενεργοποιημένο διότι το add_post_type_support('%1$s', '%2$s') "
+"Απενεργοποιημένο επειδή το add_post_type_support('%1$s', '%2$s') "
 "περιλαμβάνεται σε ένα φορτωμένο αρχείο."
 
 #: modules/settings/settings.php:797
 msgid "Enable User Roles Filter:"
-msgstr "Ενεργοποίηση φίλτρου ρόλων χρηστών:"
+msgstr "Ενεργοποίηση φίλτρου Ρόλων Χρηστών:"
 
 #: modules/settings/settings.php:805
 msgid "Show warning icon:"
@@ -1236,7 +1238,7 @@ msgstr "Εμφάνιση εικονιδίου προειδοποίησης:"
 
 #: modules/settings/settings.php:813
 msgid "Highlight failing blocks in the editor:"
-msgstr "Επισήμανση αποτυχημένων μπλοκ στο πρόγραμμα επεξεργασίας:"
+msgstr "Επισήμανση αποτυχημένων μπλοκ στο επεξεργαστή:"
 
 #: modules/settings/settings.php:821
 msgid "Delete data on uninstall:"
@@ -1248,7 +1250,7 @@ msgstr "Ενεργοποίηση φίλτρου κατάστασης:"
 
 #: modules/settings/settings.php:840
 msgid "Enable Duplicate Checklists:"
-msgstr "Ενεργοποίηση επαναλαμβανόμενων λιστών ελέγχου:"
+msgstr "Ενεργοποίηση διπλών λιστών ελέγχου:"
 
 #: modules/settings/settings.php:850
 msgid "Show Checklists column in post lists:"
@@ -1256,7 +1258,7 @@ msgstr "Εμφάνιση στήλης λιστών ελέγχου στις λί�
 
 #: modules/settings/settings.php:860
 msgid "Enable Taxonomy Filter:"
-msgstr "Ενεργοποίηση φίλτρου κατηγορίας:"
+msgstr "Ενεργοποίηση φίλτρου κατηγοριών:"
 
 #: modules/settings/settings.php:879
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
@@ -1266,7 +1268,7 @@ msgstr ""
 
 #: modules/settings/settings.php:887
 msgid "Disable \"Quick Edit\" completely:"
-msgstr "Απενεργοποίηση \"Γρήγορης Επεξεργασίας\" εντελώς:"
+msgstr "Απενεργοποίηση της \"Γρήγορης Επεξεργασίας\" εντελώς:"
 
 #: modules/settings/settings.php:895
 msgid "Disable \"Publish\" button:"
@@ -1274,39 +1276,39 @@ msgstr "Απενεργοποίηση του κουμπιού \"Δημοσίευ�
 
 #: modules/settings/settings.php:913
 msgid "Complete Icon:"
-msgstr "Εικονίδιο ολοκλήρωσης:"
+msgstr "Εικονίδιο Ολοκλήρωσης:"
 
 #: modules/settings/settings.php:921
 msgid "Incomplete Icon:"
-msgstr "Εικονίδιο μη ολοκλήρωσης:"
+msgstr "Εικονίδιο Μη Ολοκλήρωσης:"
 
 #: modules/settings/settings.php:929
 msgid "Required Complete Color:"
-msgstr "Υποχρεωτικό χρώμα ολοκλήρωσης:"
+msgstr "Απαιτούμενο Χρώμα Ολοκλήρωσης:"
 
 #: modules/settings/settings.php:937
 msgid "Required Incomplete Color:"
-msgstr "Υποχρεωτικό χρώμα μη ολοκλήρωσης:"
+msgstr "Απαιτούμενο Χρώμα Μη Ολοκλήρωσης:"
 
 #: modules/settings/settings.php:945
 msgid "Required Asterisk Color:"
-msgstr "Υποχρεωτικό χρώμα αστερίσκου:"
+msgstr "Απαιτούμενο Χρώμα Αστερίσκου:"
 
 #: modules/settings/settings.php:953
 msgid "Recommended Complete Color:"
-msgstr "Συνιστώμενο χρώμα ολοκλήρωσης:"
+msgstr "Συνιστώμενο Χρώμα Ολοκλήρωσης:"
 
 #: modules/settings/settings.php:961
 msgid "Recommended Incomplete Color:"
-msgstr "Συνιστώμενο χρώμα μη ολοκλήρωσης:"
+msgstr "Συνιστώμενο Χρώμα Μη Ολοκλήρωσης:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Ενεργοποίηση μετονομασίας ετικέτας στο πάνελ επεξεργασίας:"
+msgid "Rename task labels:"
+msgstr "Μετονομασία ετικετών εργασιών:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Σειρά ταξινόμησης στοιχείων λίστας ελέγχου:"
+msgid "Checklist task sort order:"
+msgstr "Σειρά ταξινόμησης εργασιών λίστας ελέγχου:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1326,12 +1328,12 @@ msgid ""
 "\"Published."
 msgstr ""
 "Αυτό επιτρέπει την απενεργοποίηση εργασιών για συγκεκριμένες καταστάσεις "
-"όπως \"Έκδοση\" ή \"Δημοσιευμένο."
+"όπως \"Πρόχειρο\" ή \"Δημοσιευμένο.\""
 
 #: modules/settings/settings.php:1083
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
-"Αυτό επιτρέπει στους χρήστες να διπλασιάσουν υπάρχουσες εργασίες λίστας "
+"Αυτό επιτρέπει στους χρήστες να διπλασιάζουν υπάρχουσες εργασίες λίστας "
 "ελέγχου."
 
 #: modules/settings/settings.php:1105
@@ -1356,24 +1358,24 @@ msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr ""
-"Αυτό θα εμφανίσει ένα εικονίδιο προειδοποίησης στο πλαίσιο \"Λιστών "
-"Ελέγχου\" εάν οι απαιτήσεις είναι ελλιπείς."
+"Αυτό θα εμφανίσει ένα εικονίδιο προειδοποίησης στο πλαίσιο \"Λίστες "
+"Ελέγχου\" αν οι απαιτήσεις είναι ατελείς."
 
 #: modules/settings/settings.php:1168
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr ""
-"Αυτό θα επισημάνει τα μπλοκ Gutenberg που αποτυγχάνουν σε εργασίες λίστας "
-"ελέγχου συγκεκριμένων μπλοκ."
+"Αυτό θα επισημάνει τα μπλοκ Gutenberg που αποτυγχάνουν να ολοκληρώσουν τις "
+"εργασίες λίστας ελέγχου συγκεκριμένων μπλοκ."
 
 #: modules/settings/settings.php:1188
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr ""
-"Όταν είναι ενεργοποιημένο, όλα τα δεδομένα Λιστών Ελέγχου PublishPress θα "
-"διαγραφούν εάν απεγκατασταθεί το πρόσθετο."
+"Όταν είναι ενεργοποιημένο, όλα τα δεδομένα Λιστών Ελέγχου του PublishPress "
+"θα διαγραφούν αν το πρόσθετο απεγκατασταθεί."
 
 #: modules/settings/settings.php:1209
 msgid "This will show \"Exclude User Roles\" options."
@@ -1384,16 +1386,16 @@ msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
 msgstr ""
-"Η απενεργοποίηση της επιλογής \"Κατάσταση\" συνιστάται επειδή μπορεί να "
-"χρησιμοποιηθεί για να αποφευχθεί η χρήση των απαιτήσεων Λιστών Ελέγχου."
+"Συνιστάται η απενεργοποίηση της επιλογής \"Κατάσταση\" διότι μπορεί να "
+"χρησιμοποιηθεί για να αποφευχθεί η χρήση των απαιτήσεων λίστας ελέγχου."
 
 #: modules/settings/settings.php:1251
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
 msgstr ""
-"Αυτό θα απενεργοποιήσει την επιλογή \"Γρήγορη Επεξεργασία\" για όλους τους "
-"χρήστες εκτός από εκείνους με τη δυνατότητα \"manage_options\"."
+"Αυτό θα απενεργοποιήσει την \"Γρήγορη Επεξεργασία\" για όλους τους χρήστες "
+"εκτός από αυτούς με τη δυνατότητα \"manage_options\"."
 
 #: modules/settings/settings.php:1272
 msgid ""
@@ -1406,7 +1408,7 @@ msgstr ""
 #: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
-"Εισάγετε το API Key σας για να χρησιμοποιήσετε τις προτροπές OpenAI σε "
+"Εισάγετε το API Key σας για να χρησιμοποιήσετε τις προτροπές OpenAI στις "
 "εργασίες λίστας ελέγχου."
 
 #: modules/settings/settings.php:1364
@@ -1440,25 +1442,27 @@ msgstr "Εισάγετε ένα όνομα κλάσης Dashicons (π.χ., dashi
 #: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
 msgid "View Dashicons"
-msgstr "Προβολή Dashicons"
+msgstr "Δείτε τα Dashicons"
 
 #: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr "Εισάγετε ένα όνομα κλάσης Dashicons (π.χ., dashicons-no, dashicons-dismiss)."
+msgstr ""
+"Εισάγετε ένα όνομα κλάσης Dashicons (π.χ., dashicons-no, "
+"dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
-"Ενεργοποιήστε τις προσαρμοσμένες ετικέτες μετονομασίας στον πίνακα "
-"επεξεργασίας λίστας ελέγχου."
+"Επιτρέπεται στους διαχειριστές να μετονομάζουν τις ετικέτες εργασιών για "
+"τον επεξεργαστή αναρτήσεων."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
-msgstr "Προκαθορισμένο"
+msgstr "Προεπιλογή"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "Απαιτείται πάνω και προτείνεται κάτω"
+msgid "Required on top and Recommended below"
+msgstr "Απαιτείται στην κορυφή και Συνιστάται παρακάτω"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"
@@ -1470,99 +1474,99 @@ msgid ""
 "screen back to their default labels."
 msgstr ""
 "Αυτό θα επαναφέρει όλες τις μετονομασμένες ετικέτες λίστας ελέγχου για το "
-"WP Admin και την οθόνη επεξεργασίας πίσω στις προκαθορισμένες ετικέτες τους."
+"WP Admin και την οθόνη επεξεργασίας πίσω στις προεπιλεγμένες ετικέτες τους."
 
 #: modules/settings/settings.php:1568
 msgid "Security check failed."
-msgstr "Η έλεγχο ασφαλείας απέτυχε."
+msgstr "Η έλεγχος ασφαλείας απέτυχε."
 
 #: modules/settings/settings.php:1573
 msgid "You do not have permission to perform this action."
-msgstr "Δεν έχετε άδεια να εκτελέσετε αυτή την ενέργεια."
+msgstr "Δεν έχετε άδεια να εκτελέσετε αυτήν την ενέργεια."
 
 #: modules/settings/settings.php:1618
 msgid "All renamed labels have been reset successfully."
-msgstr "Όλες οι μετονομασμένες ετικέτες έχουν επαναφερθεί επιτυχώς."
+msgstr "Όλες οι μετονομασμένες ετικέτες έχουν επαναφερθεί με επιτυχία."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
-msgstr "Αριθμός χαρακτήρων στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "Αριθμός χαρακτήρων στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
-msgstr "Ελάχιστος %d χαρακτήρας στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "Ελάχιστο %d χαρακτήρα στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
-msgstr "Ελάχιστοι %d χαρακτήρες στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "Ελάχιστο %d χαρακτήρες στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
-msgstr "Μέγιστος %d χαρακτήρας στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "Μέγιστο %d χαρακτήρα στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
-msgstr "Μέγιστοι %d χαρακτήρες στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "Μέγιστο %d χαρακτήρες στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
-msgstr "%d χαρακτήρας στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "%d χαρακτήρα στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
-msgstr "%d χαρακτήρες στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "%d χαρακτήρες στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
-msgstr "Μεταξύ %d και %d χαρακτήρων στο λέξη-κλειδί εστίασης του Yoast SEO"
+msgstr "Μεταξύ %d και %d χαρακτήρων στη λέξη-κλειδί εστίασης Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:39
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
-msgstr "Αριθμός χαρακτήρων στην περιγραφή μετα-δεδομένων του Yoast SEO"
+msgstr "Αριθμός χαρακτήρων στη μετα-περιγραφή Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
-msgstr "Ελάχιστος %d χαρακτήρας στην περιγραφή μετα-δεδομένων του Yoast SEO"
+msgstr "Ελάχιστο %d χαρακτήρα στη μετα-περιγραφή Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
-msgstr "Ελάχιστο %d χαρακτήρων στην περιγραφή μεταδεδομένων Yoast SEO"
+msgstr "Ελάχιστο %d χαρακτήρων στην περιγραφή μετα-δεδομένων Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
-msgstr "Μέγιστος %d χαρακτήρας στην περιγραφή μεταδεδομένων Yoast SEO"
+msgstr "Μέγιστο %d χαρακτήρα στην περιγραφή μετα-δεδομένων Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
-msgstr "Μέγιστοι %d χαρακτήρες στην περιγραφή μεταδεδομένων Yoast SEO"
+msgstr "Μέγιστο %d χαρακτήρων στην περιγραφή μετα-δεδομένων Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "%d character in Yoast SEO meta description"
-msgstr "%d χαρακτήρας στην περιγραφή μεταδεδομένων Yoast SEO"
+msgstr "%d χαρακτήρας στην περιγραφή μετα-δεδομένων Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
-msgstr "%d χαρακτήρες στην περιγραφή μεταδεδομένων Yoast SEO"
+msgstr "%d χαρακτήρες στην περιγραφή μετα-δεδομένων Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
-msgstr "Μεταξύ %d και %d χαρακτήρων στην περιγραφή μεταδεδομένων Yoast SEO"
+msgstr "Μεταξύ %d και %d χαρακτήρων στην περιγραφή μετα-δεδομένων Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
 msgid "Minimum Yoast SEO readability score"
@@ -1587,7 +1591,7 @@ msgstr "Εντάξει"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 msgid "Good"
-msgstr "Καλό"
+msgstr "Καλή"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
 msgid "Minimum Yoast SEO analysis score"
@@ -1602,7 +1606,7 @@ msgstr "Yoast SEO: %s"
 
 #: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
-msgstr "Ορίστε καθήκοντα που σχετίζονται με το Yoast SEO"
+msgstr "Ορίστε εργασίες σχετικές με το Yoast SEO"
 
 #: publishpress-checklists.php:103
 msgid "This plugin can be deleted."

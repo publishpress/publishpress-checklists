@@ -5,18 +5,19 @@ msgstr ""
 "Project-Id-Version: PublishPress Checklists Free 2.27.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Czech "
+"<https://weblate.publishpress.com/projects/publishpress-checklists/"
+"publishpress-checklists/cs/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-15T17:45:57+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:56+0000\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:12+0000\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Language: cs_CZ\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : (n >= 2 && n <= 4) ? 1 : 2;\n"
 
-#: publishpress-checklists.php:4
 #: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
@@ -33,10 +34,10 @@ msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr ""
-"S PublishPress Checklists si můžete zvolit požadavky na publikaci pro váš "
+"S PublishPress Checklists můžete zvolit požadavky na publikování pro váš "
 "obsah."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -49,7 +50,7 @@ msgstr "https://publishpress.com"
 #: core/API/LabelMapper.php:39
 #: modules/checklists/checklists.php:1222
 msgid "Disabled"
-msgstr "Deaktivováno"
+msgstr "Zakázáno"
 
 #: core/API/LabelMapper.php:40
 #: modules/checklists/checklists.php:1029
@@ -69,12 +70,12 @@ msgstr "Požadováno"
 
 #: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
-msgstr "Prosím opravte chyby ve formuláři níže a zkuste to znovu."
+msgstr "Opravy chyby ve formuláři níže a zkuste to znovu."
 
 #: core/Legacy/LegacyPlugin.php:212
 #: modules/settings/settings.php:516
 msgid "Cheatin&#8217; uh?"
-msgstr "Podvádění&#8217; že?"
+msgstr "Podvádíte, co?"
 
 #: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
@@ -101,7 +102,7 @@ msgstr "PublishPress Checklists"
 #: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
-msgstr "Pokud se vám %s líbí, dejte nám prosím %s hodnocení. Děkujeme!"
+msgstr "Pokud se vám %s líbí, prosím, dejte nám %s hodnocení. Děkujeme!"
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
@@ -109,7 +110,7 @@ msgstr "Potřebujete podporu pro PublishPress Checklists?"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
-msgstr "Pokud potřebujete pomoc nebo máte nový požadavek na funkci, dejte nám vědět."
+msgstr "Pokud potřebujete pomoc nebo máte žádost o novou funkci, dejte nám vědět."
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
@@ -131,7 +132,7 @@ msgstr "Nastavení"
 #: core/Plugin.php:112
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
-msgstr "Upgrade na Pro"
+msgstr "Přechod na Pro"
 
 #: core/Requirement/Approved_by.php:48
 #, php-format
@@ -208,7 +209,7 @@ msgstr "Minimálně %s kategorie"
 #: core/Requirement/Categories_count.php:49
 #, php-format
 msgid "Minimum of %s categories"
-msgstr "Minimálně %s kategorie"
+msgstr "Minimálně %s kategorií"
 
 #: core/Requirement/Categories_count.php:50
 #, php-format
@@ -218,7 +219,7 @@ msgstr "Maximálně %s kategorie"
 #: core/Requirement/Categories_count.php:51
 #, php-format
 msgid "Maximum of %s categories"
-msgstr "Maximálně %s kategorie"
+msgstr "Maximálně %s kategorií"
 
 #: core/Requirement/Categories_count.php:52
 #, php-format
@@ -228,7 +229,7 @@ msgstr "%s kategorie"
 #: core/Requirement/Categories_count.php:53
 #, php-format
 msgid "%s categories"
-msgstr "%s kategorie"
+msgstr "%s kategorií"
 
 #: core/Requirement/Categories_count.php:54
 #, php-format
@@ -255,7 +256,7 @@ msgstr "Zadejte název vlastního úkolu"
 #: core/Requirement/Openai_item.php:147
 #: modules/checklists/checklists.php:774
 msgid "Remove"
-msgstr "Odebrat"
+msgstr "Odstranit"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
@@ -299,17 +300,17 @@ msgstr "Mezi %d a %d externími odkazy v obsahu"
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "Obrázek vynikajícího příspěvku byl přidán"
+msgstr "Vybraná obrázek byl přidán"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
-msgstr "Obrázek vynikajícího příspěvku má Alt text"
+msgstr "Vybraný obrázek má Alt text"
 
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
-msgstr "Obrázek vynikajícího příspěvku má popis"
+msgstr "Vybraný obrázek má popis"
 
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
@@ -443,7 +444,7 @@ msgstr "Openai"
 #: core/Requirement/Openai_item.php:100
 #: modules/checklists/checklists.php:776
 msgid "Enter OpenAI task prompt"
-msgstr "Zadejte úlohu OpenAI"
+msgstr "Zadejte výzvu úkolu OpenAI"
 
 #: core/Requirement/Openai_item.php:286
 msgid "An error occured."
@@ -462,7 +463,7 @@ msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
 msgstr ""
-"Úkoly OpenAI vyžadují API klíč. Prosím, přidejte svůj API klíč v oblasti "
+"Úkoly OpenAI vyžadují API klíč. Přidejte prosím svůj API klíč v oblasti "
 "Nastavení."
 
 #: core/Requirement/Openai_item.php:362
@@ -472,7 +473,7 @@ msgstr "Chyba API: %1s."
 
 #: core/Requirement/Openai_item.php:380
 msgid "See the full response."
-msgstr "Zobrazit úplnou odpověď."
+msgstr "Zobrazit celou odpověď."
 
 #: core/Requirement/Openai_item.php:401
 msgid "Invalid response"
@@ -490,11 +491,11 @@ msgstr "Zakázané kategorie"
 #: core/Requirement/Prohibited_tags.php:87
 #, php-format
 msgid "Prohibited tags: %s"
-msgstr "Zakázané štítky: %s"
+msgstr "Zakázané tagy: %s"
 
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
-msgstr "Zakázané štítky"
+msgstr "Zakázané tagy"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
@@ -508,25 +509,25 @@ msgstr "Požadované kategorie"
 #: core/Requirement/Required_tags.php:87
 #, php-format
 msgid "Required tags: %s"
-msgstr "Požadované štítky: %s"
+msgstr "Požadované tagy: %s"
 
 #: core/Requirement/Required_tags.php:88
 msgid "Required tags"
-msgstr "Požadované štítky"
+msgstr "Požadované tagy"
 
 #: core/Requirement/Tags_count.php:47
 msgid "Number of tags"
-msgstr "Počet štítků"
+msgstr "Počet tagů"
 
 #: core/Requirement/Tags_count.php:48
 #, php-format
 msgid "Minimum of %d tag"
-msgstr "Minimálně %d štítek"
+msgstr "Minimálně %d tag"
 
 #: core/Requirement/Tags_count.php:49
 #, php-format
 msgid "Minimum of %d tags"
-msgstr "Minimálně %d štítků"
+msgstr "Minimálně %d tagy"
 
 #: core/Requirement/Tags_count.php:50
 #, php-format
@@ -536,7 +537,7 @@ msgstr "Maximálně %d tag"
 #: core/Requirement/Tags_count.php:51
 #, php-format
 msgid "Maximum of %d tags"
-msgstr "Maximálně %d tagy"
+msgstr "Maximálně %d tagů"
 
 #: core/Requirement/Tags_count.php:52
 #, fuzzy, php-format
@@ -603,7 +604,7 @@ msgstr "Maximálně %d znak v názvu"
 #: core/Requirement/Title_count.php:45
 #, php-format
 msgid "Maximum of %d characters in title"
-msgstr "Maximálně %d znaky v názvu"
+msgstr "Maximálně %d znaků v názvu"
 
 #: core/Requirement/Title_count.php:46
 #, php-format
@@ -632,22 +633,22 @@ msgstr "Počet slov v obsahu"
 #: core/Requirement/Words_count.php:44
 #, php-format
 msgid "Minimum of %d word in content"
-msgstr "Nejméně %d slovo v obsahu"
+msgstr "Minimálně %d slovo v obsahu"
 
 #: core/Requirement/Words_count.php:45
 #, php-format
 msgid "Minimum of %d words in content"
-msgstr "Nejméně %d slov v obsahu"
+msgstr "Minimálně %d slova v obsahu"
 
 #: core/Requirement/Words_count.php:46
 #, php-format
 msgid "Maximum of %d word in content"
-msgstr "Nejvíce %d slovo v obsahu"
+msgstr "Maximálně %d slovo v obsahu"
 
 #: core/Requirement/Words_count.php:47
 #, php-format
 msgid "Maximum of %d words in content"
-msgstr "Nejvíce %d slov v obsahu"
+msgstr "Maximálně %d slova v obsahu"
 
 #: core/Requirement/Words_count.php:48
 #, php-format
@@ -657,7 +658,7 @@ msgstr "%d slovo v obsahu"
 #: core/Requirement/Words_count.php:49
 #, php-format
 msgid "%d words in content"
-msgstr "%d slov v obsahu"
+msgstr "%d slova v obsahu"
 
 #: core/Requirement/Words_count.php:50
 #, php-format
@@ -674,7 +675,7 @@ msgstr "Obsah"
 
 #: core/Utils/FieldsTabs.php:29
 msgid "Publish Date / Time"
-msgstr "Datum / čas publikace"
+msgstr "Datum / Čas publikace"
 
 #: core/Utils/FieldsTabs.php:33
 msgid "Approval"
@@ -684,9 +685,9 @@ msgstr "Schválení"
 msgid "Images"
 msgstr "Obrázky"
 
-#: core/Utils/FieldsTabs.php:41
+#: core/Utils/FieldsTabs.php:41, fuzzy
 msgid "Audio / Video"
-msgstr "Audio / video"
+msgstr "Audio / Video"
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
@@ -696,9 +697,9 @@ msgstr "Hlavní obrázek"
 msgid "Links"
 msgstr "Odkazy"
 
-#: core/Utils/FieldsTabs.php:53
+#: core/Utils/FieldsTabs.php:53, fuzzy
 msgid "Permalink"
-msgstr "Trvalý odkaz"
+msgstr "Permalink"
 
 #: core/Utils/FieldsTabs.php:57
 msgid "Categories"
@@ -710,13 +711,13 @@ msgstr "Štítky"
 
 #: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
-msgstr "Taxonomie"
+msgstr "Taxonomies"
 
 #: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
 msgstr "Přístupnost"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -759,7 +760,7 @@ msgstr "Nechte prázdné pro použití výchozího štítku WP Admin"
 
 #: modules/checklists/checklists.php:744
 msgid "Label for the post editing screen"
-msgstr "Štítek pro obrazovku úprav příspěvku"
+msgstr "Štítek pro obrazovku úprav příspěvků"
 
 #: modules/checklists/checklists.php:748
 msgid "Leave empty to use the default editing screen label"
@@ -783,7 +784,7 @@ msgstr "Zrušit"
 
 #: modules/checklists/checklists.php:772
 msgid "No results found"
-msgstr "Nebyly nalezeny žádné výsledky"
+msgstr "Žádné výsledky nenalezeny"
 
 #: modules/checklists/checklists.php:773
 msgid "Searching…"
@@ -799,7 +800,7 @@ msgstr "Jaká je očekávaná odpověď OpenAI pro označení požadavku jako sp
 
 #: modules/checklists/checklists.php:781
 msgid "Clear Content"
-msgstr "Vymazat obsah"
+msgstr "Vyčistit obsah"
 
 #: modules/checklists/checklists.php:782
 msgid "Is this content clear and easy to read?"
@@ -807,51 +808,51 @@ msgstr "Je tento obsah jasný a snadno čitelný?"
 
 #: modules/checklists/checklists.php:785
 msgid "Friendly Tone Content"
-msgstr "Obsah přátelského tónu"
+msgstr "Obsah s přátelským tónem"
 
 #: modules/checklists/checklists.php:786
 msgid "Is this content tone friendly?"
-msgstr "Je tón tohoto obsahu přátelský?"
+msgstr "Je tento obsah v přátelském tónu?"
 
 #: modules/checklists/checklists.php:789
 msgid "Professional Tone Content"
-msgstr "Obsah profesionálního tónu"
+msgstr "Obsah s profesionálním tónem"
 
 #: modules/checklists/checklists.php:790
 msgid "Is this content tone professional?"
-msgstr "Je tón tohoto obsahu profesionální?"
+msgstr "Je tento obsah v profesionálním tónu?"
 
 #: modules/checklists/checklists.php:793
 msgid "Persuasive Tone Content"
-msgstr "Obsah přesvědčivého tónu"
+msgstr "Obsah s přesvědčivým tónem"
 
 #: modules/checklists/checklists.php:794
 msgid "Is this content tone persuasive?"
-msgstr "Je tón tohoto obsahu přesvědčivý?"
+msgstr "Je tento obsah v přesvědčivém tónu?"
 
 #: modules/checklists/checklists.php:797
 msgid "Empathetic Tone Content"
-msgstr "Obsah empatického tónu"
+msgstr "Obsah s empatickým tónem"
 
 #: modules/checklists/checklists.php:798
 msgid "Is this content tone empathetic?"
-msgstr "Je tón tohoto obsahu empatický?"
+msgstr "Je tento obsah v empatickém tónu?"
 
 #: modules/checklists/checklists.php:801
 msgid "Adventurous Tone Content"
-msgstr "Obsah dobrodružného tónu"
+msgstr "Obsah s dobrodružným tónem"
 
 #: modules/checklists/checklists.php:802
 msgid "Is this content tone adventurous?"
-msgstr "Je tón tohoto obsahu dobrodružný?"
+msgstr "Je tento obsah v dobrodružném tónu?"
 
 #: modules/checklists/checklists.php:805
 msgid "Promotional Tone Content"
-msgstr "Obsah propagačního tónu"
+msgstr "Obsah s propagačním tónem"
 
 #: modules/checklists/checklists.php:806
 msgid "Is this content tone promotional?"
-msgstr "Je tón tohoto obsahu propagační?"
+msgstr "Je tento obsah v propagačním tónu?"
 
 #: modules/checklists/checklists.php:872
 #: modules/checklists/checklists.php:960
@@ -861,15 +862,15 @@ msgstr "Kontrolní seznam"
 #: modules/checklists/checklists.php:956
 #: modules/checklists/checklists.php:1301
 msgid "You don't have to complete any Checklist tasks."
-msgstr "Nemusíte plnit žádné úkoly v kontrolním seznamu."
+msgstr "Nemusíte plnit žádné úkoly kontrolního seznamu."
 
 #: modules/checklists/checklists.php:961
 msgid "Are you sure you want to publish anyway?"
-msgstr "Jste si jisti, že chcete přesto publikovat?"
+msgstr "Jste si jisti, že chcete publikovat i tak?"
 
 #: modules/checklists/checklists.php:965
 msgid "Are you sure you want to update the published post anyway?"
-msgstr "Jste si jisti, že chcete přesto aktualizovat publikovaný příspěvek?"
+msgstr "Jste si jisti, že chcete aktualizovat publikovaný příspěvek i tak?"
 
 #: modules/checklists/checklists.php:969
 msgid "Please complete the following tasks before publishing:"
@@ -882,7 +883,7 @@ msgstr "Před aktualizací publikovaného příspěvku prosím dokončete násle
 #: modules/checklists/checklists.php:977
 #: modules/checklists/checklists.php:981
 msgid "Not required, but important: "
-msgstr "Není vyžadováno, ale důležité: "
+msgstr "Není povinné, ale důležité: "
 
 #: modules/checklists/checklists.php:987
 msgid "One or more items in the checklist are not completed"
@@ -916,7 +917,7 @@ msgstr "Úkol"
 
 #: modules/checklists/checklists.php:1198
 msgid "Disabled, Recommended or Required"
-msgstr "Deaktivováno, doporučeno nebo vyžadováno"
+msgstr "Zakázáno, doporučeno nebo požadováno"
 
 #: modules/checklists/checklists.php:1199
 msgid "Options"
@@ -937,23 +938,23 @@ msgstr "požadováno"
 #: modules/checklists/checklists.php:1307
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr "Úkoly kontrolního seznamu nejsou k dispozici v editorech Elementor"
+msgstr "Úkoly kontrolních seznamů nejsou k dispozici v editorech Elementor"
 
 #: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
-msgstr "Hodnocení nadpisu All in One SEO"
+msgstr "Vše v jednom SEO skóre nadpisu"
 
 #: modules/checklists/pro-requirements.php:31
 msgid "All in One SEO Score"
-msgstr "Hodnocení All in One SEO"
+msgstr "Vše v jednom SEO skóre"
 
 #: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr "Výška hlavního obrázku"
+msgstr "Výška vybraného obrázku"
 
 #: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr "Šířka hlavního obrázku"
+msgstr "Šířka vybraného obrázku"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "H1, H2, H3 etc tags are used in logical order"
@@ -965,7 +966,7 @@ msgstr "Počet obrázků v obsahu"
 
 #: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
-msgstr "Počet znaků v popiscích obrázků"
+msgstr "Počet znaků v popisech obrázků"
 
 #: modules/checklists/pro-requirements.php:85
 msgid "Number of audio items in content"
@@ -1013,11 +1014,11 @@ msgstr "Tabulky mají hlavičkový řádek"
 
 #: modules/checklists/pro-requirements.php:170
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Zaškrtněte políčko \"Povolit zpětné objednávky?\""
+msgstr "Zaškrtněte políčko \"Povolit backorders?\""
 
 #: modules/checklists/pro-requirements.php:178
 msgid "Select some products for \"Cross-sells\""
-msgstr "Vyberte některé produkty pro \"Křížové prodeje\""
+msgstr "Vyberte nějaké produkty pro \"Křížové prodeje\""
 
 #: modules/checklists/pro-requirements.php:186
 msgid "Discount for the \"Sale price\""
@@ -1045,7 +1046,7 @@ msgstr "Zadejte \"Prodejní cenu\""
 
 #: modules/checklists/pro-requirements.php:234
 msgid "Schedule the \"Sale price\""
-msgstr "Naplánujte \"Prodejní cenu\""
+msgstr "Naplánujte \"Cenu v akci\""
 
 #: modules/checklists/pro-requirements.php:242
 msgid "Enter a \"SKU\""
@@ -1079,7 +1080,7 @@ msgstr "O PublishPress Checklists"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About"
-msgstr "O nás"
+msgstr "O"
 
 #: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
@@ -1108,12 +1109,12 @@ msgstr "Uložit změny"
 
 #: modules/checklists/templates/global-checklists.php:152
 msgid "Pro feature"
-msgstr "Pro funkce"
+msgstr "Prémiová funkce"
 
 #: modules/checklists/templates/global-checklists.php:165
 #, php-format
 msgid "No %s requirements for this post type."
-msgstr "Žádné požadavky %s pro tento typ příspěvku."
+msgstr "Žádné %s požadavky pro tento post type."
 
 #: modules/checklists/templates/global-checklists.php:183
 msgid "New Item"
@@ -1137,7 +1138,7 @@ msgstr "Přidat úkol OpenAI Prompt"
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "The prompt should be in form of a question."
-msgstr "Výzva by měla mít formu otázky."
+msgstr "Výzva by měla být ve formě otázky."
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "This feature requires an OpenAI API Key."
@@ -1145,15 +1146,15 @@ msgstr "Tato funkce vyžaduje klíč API OpenAI."
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
-msgstr "Latinské znaky v trvalém odkazu"
+msgstr "Latinské znaky v permalinku"
 
 #: modules/permalinks/permalinks.php:65
 msgid "Permalinks"
-msgstr "Trvalé odkazy"
+msgstr "Permalinky"
 
 #: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
-msgstr "Definujte úkoly související s trvalými odkazy"
+msgstr "Definujte úkoly související s permalinky"
 
 #: modules/permissions/permissions.php:68
 msgid "Permissions"
@@ -1165,7 +1166,7 @@ msgstr "Vyloučit uživatelské role"
 
 #: modules/reviews/reviews.php:61
 msgid "Reviews"
-msgstr "Recenze"
+msgstr "Hodnocení"
 
 #: modules/settings/settings.php:62
 #: modules/settings/settings.php:132
@@ -1177,17 +1178,17 @@ msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
-"Opravdu chcete obnovit všechny přejmenované položky kontrolního seznamu na "
-"jejich výchozí štítky? Tuto akci nelze vrátit zpět."
+"Opravdu chcete resetovat všechny přejmenované položky kontrolního seznamu "
+"na jejich výchozí štítky? Tuto akci nelze vrátit zpět."
 
 #: modules/settings/settings.php:156
 msgid "Resetting..."
-msgstr "Obnovuji..."
+msgstr "Resetuje se..."
 
 #: modules/settings/settings.php:157
 #: modules/settings/settings.php:1556
 msgid "Reset All Renamed Labels"
-msgstr "Obnovit všechny přejmenované štítky"
+msgstr "Resetovat všechny přejmenované štítky"
 
 #: modules/settings/settings.php:320
 msgid "Features"
@@ -1203,7 +1204,7 @@ msgstr "Povolené funkce"
 
 #: modules/settings/settings.php:384
 msgid "There are no PublishPress modules registered"
-msgstr "Žádné moduly PublishPress nejsou zaregistrovány"
+msgstr "Žádné moduly PublishPress nejsou registrovány"
 
 #: modules/settings/settings.php:480
 #, php-format
@@ -1236,11 +1237,11 @@ msgstr "Povolit filtr stavu:"
 
 #: modules/settings/settings.php:840
 msgid "Enable Duplicate Checklists:"
-msgstr "Povolit duplicitní kontrolní seznamy:"
+msgstr "Povolit duplikované seznamy úkolů:"
 
 #: modules/settings/settings.php:850
 msgid "Show Checklists column in post lists:"
-msgstr "Zobrazit sloupec kontrolních seznamů v seznamech příspěvků:"
+msgstr "Zobrazit sloupec seznamů úkolů v seznamech příspěvků:"
 
 #: modules/settings/settings.php:860
 msgid "Enable Taxonomy Filter:"
@@ -1248,15 +1249,15 @@ msgstr "Povolit filtr taxonomie:"
 
 #: modules/settings/settings.php:879
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
-msgstr "Deaktivovat možnost \"Stav\" při použití \"Rychlé úpravy\":"
+msgstr "Zakázat možnost \"Stav\" při použití \"Rychlého úpravování\":"
 
 #: modules/settings/settings.php:887
 msgid "Disable \"Quick Edit\" completely:"
-msgstr "Úplně deaktivovat \"Rychlé úpravy\":"
+msgstr "Úplně zakázat \"Rychlé úpravování\":"
 
 #: modules/settings/settings.php:895
 msgid "Disable \"Publish\" button:"
-msgstr "Deaktivovat tlačítko \"Publikovat\":"
+msgstr "Zakázat tlačítko \"Publikovat\":"
 
 #: modules/settings/settings.php:913
 msgid "Complete Icon:"
@@ -1268,15 +1269,15 @@ msgstr "Ikona nedokončeno:"
 
 #: modules/settings/settings.php:929
 msgid "Required Complete Color:"
-msgstr "Povinná barva dokončeno:"
+msgstr "Požadovaná barva dokončeno:"
 
 #: modules/settings/settings.php:937
 msgid "Required Incomplete Color:"
-msgstr "Povinná barva nedokončeno:"
+msgstr "Požadovaná barva nedokončeno:"
 
 #: modules/settings/settings.php:945
 msgid "Required Asterisk Color:"
-msgstr "Povinná barva hvězdičky:"
+msgstr "Požadovaná barva hvězdičky:"
 
 #: modules/settings/settings.php:953
 msgid "Recommended Complete Color:"
@@ -1287,20 +1288,20 @@ msgid "Recommended Incomplete Color:"
 msgstr "Doporučená barva nedokončeno:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Povolit přejmenování štítku v panelu editoru:"
+msgid "Rename task labels:"
+msgstr "Přejmenovat štítky úloh:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Pořadí třídění položek kontrolního seznamu:"
+msgid "Checklist task sort order:"
+msgstr "Pořadí třídění úloh v seznamu úkolů:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
-msgstr "Klíč API OpenAI:"
+msgstr "OpenAI API klíč:"
 
 #: modules/settings/settings.php:1010
 msgid "Reset Renamed Checklist:"
-msgstr "Resetovat přejmenovaný kontrolní seznam:"
+msgstr "Resetovat přejmenovaný seznam úkolů:"
 
 #: modules/settings/settings.php:1029
 msgid "Post types:"
@@ -1311,19 +1312,19 @@ msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr ""
-"To umožňuje deaktivovat úkoly pro konkrétní stavy, jako jsou \"Koncept\" "
-"nebo \"Publikováno.\""
+"To umožňuje deaktivaci úkolů pro konkrétní stavy, jako jsou \"Koncept\" "
+"nebo \"Publikováno\"."
 
 #: modules/settings/settings.php:1083
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr "To umožňuje uživatelům duplikovat existující úkoly kontrolního seznamu."
+msgstr "To umožňuje uživatelům duplikovat existující úkoly v kontrolním seznamu."
 
 #: modules/settings/settings.php:1105
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr ""
-"Přidejte sloupec Kontrolní seznamy na obrazovku Příspěvků, který ukazuje, "
+"Přidejte sloupec Kontrolní seznamy na obrazovku Příspěvky, který ukazuje, "
 "kolik požadavků je splněno."
 
 #: modules/settings/settings.php:1126
@@ -1331,32 +1332,32 @@ msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
-"To umožňuje deaktivovat úkoly pro příspěvky s konkrétními termíny "
-"taxonomie. Přejděte na kartu \"Typy příspěvků\" a vyberte termíny."
+"To umožňuje deaktivaci úkolů pro příspěvky s konkrétními termíny taxonomie. "
+"Přejděte na kartu \"Typy příspěvků\", abyste vybrali termíny."
 
 #: modules/settings/settings.php:1148
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr ""
-"To zobrazí varovnou ikonu v poli \"Kontrolní seznamy\", pokud jsou "
-"požadavky nesplněny."
+"To zobrazí ikonu varování v poli \"Kontrolní seznamy\", pokud nejsou "
+"požadavky splněny."
 
 #: modules/settings/settings.php:1168
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr ""
-"To zvýrazní bloky Gutenberg, které nesplňují úkoly kontrolního seznamu "
-"specifické pro blok."
+"To zvýrazní bloky Gutenberg, které nesplňují úkoly specifické pro kontrolní "
+"seznam."
 
 #: modules/settings/settings.php:1188
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr ""
-"Pokud je povoleno, všechna data PublishPress Checklists budou smazána, "
-"pokud bude plugin odinstalován."
+"Pokud je aktivováno, všechna data kontrolních seznamů PublishPress budou "
+"smazána, pokud bude plugin odinstalován."
 
 #: modules/settings/settings.php:1209
 msgid "This will show \"Exclude User Roles\" options."
@@ -1368,7 +1369,7 @@ msgid ""
 "avoid using the Checklists requirements."
 msgstr ""
 "Doporučuje se deaktivovat možnost \"Status\", protože může být použita k "
-"vyhnutí se používání požadavků kontrolního seznamu."
+"vyhnutí se používání požadavků kontrolních seznamů."
 
 #: modules/settings/settings.php:1251
 msgid ""
@@ -1383,13 +1384,13 @@ msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr ""
-"To deaktivuje tlačítko \"Publikovat\", pokud nejsou splněny požadavky "
-"kontrolního seznamu."
+"To deaktivuje tlačítko \"Publikovat\" při nesplnění požadavků kontrolního "
+"seznamu."
 
 #: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
-"Zadejte svůj API klíč pro použití OpenAI výzev v úkolech kontrolního "
+"Zadejte svůj API klíč pro použití OpenAI promptů v úkolech kontrolního "
 "seznamu."
 
 #: modules/settings/settings.php:1364
@@ -1430,28 +1431,28 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Zadejte název třídy Dashicons (např. dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr "Povolit vlastní přejmenování štítků v panelu editoru kontrolního seznamu."
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "Povolit administrátorům přejmenovat štítky úloh pro editor příspěvků."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "Výchozí"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
+msgid "Required on top and Recommended below"
 msgstr "Povinné nahoře a doporučené níže"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"
-msgstr "Třídit abecedně"
+msgstr "Seřadit abecedně"
 
 #: modules/settings/settings.php:1558
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
 msgstr ""
-"Tímto se resetují všechny přejmenované štítky kontrolního seznamu pro WP "
-"Admin a obrazovku úprav zpět na jejich výchozí štítky."
+"Tímto se všechny přejmenované štítky kontrolního seznamu pro WP Admin a "
+"editační obrazovku vrátí zpět na výchozí štítky."
 
 #: modules/settings/settings.php:1568
 msgid "Security check failed."
@@ -1468,42 +1469,42 @@ msgstr "Všechny přejmenované štítky byly úspěšně resetovány."
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
-msgstr "Počet znaků v klíčovém slovu Yoast SEO"
+msgstr "Počet znaků v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
-msgstr "Minimálně %d znak v klíčovém slovu Yoast SEO"
+msgstr "Minimálně %d znak v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
-msgstr "Minimálně %d znaky v klíčovém slovu Yoast SEO"
+msgstr "Minimálně %d znaky v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
-msgstr "Maximálně %d znak v klíčovém slovu Yoast SEO"
+msgstr "Maximálně %d znak v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
-msgstr "Maximálně %d znaky v klíčovém slovu Yoast SEO"
+msgstr "Maximálně %d znaky v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
-msgstr "%d znak v klíčovém slovu Yoast SEO"
+msgstr "%d znak v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
-msgstr "%d znaky v klíčovém slovu Yoast SEO"
+msgstr "%d znaky v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
-msgstr "Mezi %d a %d znaky v klíčovém slovu Yoast SEO"
+msgstr "Mezi %d a %d znaky v klíčovém slově Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:39
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:40
@@ -1538,7 +1539,7 @@ msgstr "%d znak v meta popisu Yoast SEO"
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
-msgstr "%d znaků v meta popisu Yoast SEO"
+msgstr "%d znaky v meta popisu Yoast SEO"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
@@ -1554,7 +1555,7 @@ msgstr "Minimální skóre čitelnosti Yoast SEO"
 #. translators: %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
-msgstr "Čitelnost Yoast: %s"
+msgstr "Yoast čitelnost: %s"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
@@ -1568,7 +1569,7 @@ msgstr "OK"
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 msgid "Good"
-msgstr "Dobré"
+msgstr "Dobře"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
 msgid "Minimum Yoast SEO analysis score"
@@ -1596,4 +1597,4 @@ msgid ""
 "features and support. %sUpgrade to Pro%s"
 msgstr ""
 "Používáte PublishPress Checklists Free. Pro verze má více funkcí a podporu. "
-"%sPřepnout na Pro%s"
+"%sPřejít na Pro%s"

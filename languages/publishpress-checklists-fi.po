@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/publishpress-checklists\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Finnish "
 "<https://weblate.publishpress.com/projects/publishpress-checklists/"
@@ -12,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-04-15 18:11+0000\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:13+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -50,7 +49,7 @@ msgstr ""
 "PublishPress Checklistsin avulla voit valita julkaisuvaatimukset "
 "sisällöllesi."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -728,7 +727,7 @@ msgstr "Taksonomiat"
 msgid "Accessibility"
 msgstr "Saavutettavuus"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1301,12 +1300,12 @@ msgid "Recommended Incomplete Color:"
 msgstr "Suositeltu puutteellinen väri:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Ota käyttöön nimien uudelleennimeäminen editorin paneelissa:"
+msgid "Rename task labels:"
+msgstr "Nimeä tehtävän tunnisteet uudelleen:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Tarkistuslistan kohteiden lajittelujärjestys:"
+msgid "Checklist task sort order:"
+msgstr "Tarkistuslistan tehtävien lajittelujärjestys:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1447,18 +1446,18 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Syötä Dashicons-luokan nimi (esim. dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
-"Ota käyttöön mukautetut nimien uudelleennimeämiset tarkistuslistan editorin "
-"paneelissa."
+"Salli ylläpitäjien nimetä tehtävän tunnisteet uudelleen julkaisun "
+"muokkaimessa."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "Oletus"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "Pakollinen ylhäällä ja suositeltava alhaalla"
+msgid "Required on top and Recommended below"
+msgstr "Pakollinen ylhäällä ja Suositeltava alhaalla"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"

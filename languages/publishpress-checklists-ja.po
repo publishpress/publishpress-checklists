@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/publishpress-checklists\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese "
 "<https://weblate.publishpress.com/projects/publishpress-checklists/"
@@ -12,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:53+0000\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:11+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Language: ja\n"
@@ -45,9 +44,9 @@ msgstr "https://publishpress.com/"
 msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
-msgstr "PublishPressチェックリストを使用すると、コンテンツの公開要件を選択できます。"
+msgstr "PublishPress Checklists では、コンテンツの公開条件を設定することができます。"
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -80,20 +79,20 @@ msgstr "必須"
 
 #: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
-msgstr "以下のフォームエラーを修正して再試行してください。"
+msgstr "公開する前に次のタスクを完了してください。"
 
 #: core/Legacy/LegacyPlugin.php:212
 #: modules/settings/settings.php:516
 msgid "Cheatin&#8217; uh?"
-msgstr "チートしてるんじゃないの？"
+msgstr "間違えましたか ?"
 
 #: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
-msgstr "このアクションを完了するための必要な権限がありません。"
+msgstr "この操作を完了するために必要な権限がありません。"
 
 #: core/Legacy/LegacyPlugin.php:217
 msgid "Post does not exist"
-msgstr "投稿は存在しません"
+msgstr "投稿が存在しません"
 
 #: core/Legacy/LegacyPlugin.php:348
 #: core/Plugin.php:103
@@ -101,38 +100,38 @@ msgstr "投稿は存在しません"
 #: modules/checklists/checklists.php:1132
 #: modules/checklists/checklists.php:1147
 #: modules/checklists/checklists.php:1300
-#: modules/checklists/assets/js/gutenberg-panel.jsx:411
+#: modules/checklists/assets/js/gutenberg-panel.jsx:411, fuzzy
 msgid "Checklists"
-msgstr "チェックリスト"
+msgstr "Checklists"
 
-#: core/Legacy/Module.php:286
+#: core/Legacy/Module.php:286, fuzzy
 msgid "PublishPress Checklists"
-msgstr "PublishPress チェックリスト"
+msgstr "PublishPress Checklists"
 
 #: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
-msgstr "もし%sが気に入ったら、%sの評価をお願いします。ありがとうございます！"
+msgstr "%s が気に入ったら、%s評価を残してください。ありがとうございます !"
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
-msgstr "PublishPressチェックリストのサポートが必要ですか？"
+msgstr "PublishPress Checklists のサポートが必要ですか ?"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
-msgstr "助けが必要な場合や新しい機能リクエストがある場合は、お知らせください。"
+msgstr "サポートが必要な場合や新しい機能のリクエストがある場合は、お知らせください。"
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
-msgstr "サポートをリクエスト"
+msgstr "サポートをリクエストする"
 
 #: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
-msgstr "詳細なドキュメントはプラグインのウェブサイトにもあります。"
+msgstr "詳細なドキュメントはプラグインのウェブサイトでもご覧いただけます。"
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "ナレッジベースを表示"
+msgstr "ナレッジベースを見る"
 
 #: core/Plugin.php:104
 #: modules/settings/settings.php:134
@@ -142,16 +141,16 @@ msgstr "設定"
 #: core/Plugin.php:112
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
-msgstr "Proにアップグレード"
+msgstr "Pro にアップグレード"
 
 #: core/Requirement/Approved_by.php:48
 #, php-format
 msgid "Approved by %s"
-msgstr "%s によって承認されました"
+msgstr "%sが承認"
 
 #: core/Requirement/Approved_by.php:49
 msgid "Approved by a user in this role"
-msgstr "この役割のユーザーによって承認されました"
+msgstr "ロールのユーザーによる承認"
 
 #: core/Requirement/Approved_by.php:161
 #: core/Requirement/Base_requirement.php:239
@@ -209,17 +208,17 @@ msgstr "ラベルを編集"
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
-msgstr "カテゴリの数"
+msgstr "カテゴリー数"
 
 #: core/Requirement/Categories_count.php:48
 #, php-format
 msgid "Minimum of %s category"
-msgstr "最小カテゴリ数は%sです"
+msgstr "最低%s個のカテゴリー"
 
 #: core/Requirement/Categories_count.php:49
 #, php-format
 msgid "Minimum of %s categories"
-msgstr "最小カテゴリ数は%sです"
+msgstr "最低%s個のカテゴリー"
 
 #: core/Requirement/Categories_count.php:50
 #, php-format
@@ -229,22 +228,22 @@ msgstr "最大%sカテゴリー"
 #: core/Requirement/Categories_count.php:51
 #, php-format
 msgid "Maximum of %s categories"
-msgstr "最大%sカテゴリ"
+msgstr "最大%sカテゴリー"
 
 #: core/Requirement/Categories_count.php:52
 #, php-format
 msgid "%s category"
-msgstr "%s カテゴリ"
+msgstr "%sカテゴリー"
 
 #: core/Requirement/Categories_count.php:53
 #, php-format
 msgid "%s categories"
-msgstr "%s カテゴリ"
+msgstr "%sカテゴリー"
 
 #: core/Requirement/Categories_count.php:54
 #, php-format
 msgid "Between %s and %s categories"
-msgstr "%s と %s カテゴリの間"
+msgstr "%s と %s カテゴリーの間"
 
 #: core/Requirement/Custom_item.php:60
 #: core/Requirement/Custom_item.php:61
@@ -255,12 +254,12 @@ msgstr "カスタム"
 #: core/Requirement/Custom_item.php:62
 #: modules/checklists/checklists.php:768
 msgid "Which roles can mark this task as complete?"
-msgstr "どの役割がこのタスクを完了したとマークできますか？"
+msgstr "タスクを完了としてマークできるロールはどれか ?"
 
 #: core/Requirement/Custom_item.php:81
 #: modules/checklists/checklists.php:775
 msgid "Enter name of custom task"
-msgstr "カスタムタスクの名前を入力してください"
+msgstr "カスタムタスクの名前を入力"
 
 #: core/Requirement/Custom_item.php:129
 #: core/Requirement/Openai_item.php:147
@@ -270,52 +269,52 @@ msgstr "削除"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
-msgstr "コンテンツ内の外部リンクの数"
+msgstr "コンテンツ内の外部リンク数"
 
 #: core/Requirement/External_links.php:44
 #, php-format
 msgid "Minimum of %d external link in content"
-msgstr "コンテンツ内の最小外部リンク数は%dです"
+msgstr "コンテンツ内に外部リンクは最低%d個"
 
 #: core/Requirement/External_links.php:45
 #, php-format
 msgid "Minimum of %d external links in content"
-msgstr "コンテンツ内の最小外部リンク数は%dです"
+msgstr "コンテンツ内に外部リンクは最低%d個"
 
 #: core/Requirement/External_links.php:46
 #, php-format
 msgid "Maximum of %d external link in content"
-msgstr "コンテンツ内の外部リンクの最大数は%dです"
+msgstr "コンテンツ内に外部リンクは最大%d個"
 
 #: core/Requirement/External_links.php:47
 #, php-format
 msgid "Maximum of %d external links in content"
-msgstr "コンテンツ内の外部リンクの最大数は%dです"
+msgstr "コンテンツ内に外部リンクは最大%d個"
 
 #: core/Requirement/External_links.php:48
 #, php-format
 msgid "%d external link in content"
-msgstr "%d 外部リンクがコンテンツにあります"
+msgstr "コンテンツ内に外部リンクは%d件"
 
 #: core/Requirement/External_links.php:49
 #, php-format
 msgid "%d external links in content"
-msgstr "%d 外部リンクがコンテンツにあります"
+msgstr "コンテンツ内に外部リンクは%d件"
 
 #: core/Requirement/External_links.php:50
 #, php-format
 msgid "Between %d and %d external links in content"
-msgstr "コンテンツ内の %d と %d 外部リンクの間"
+msgstr "コンテンツ内に外部リンクは%d～%d個"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "特集画像が追加されました"
+msgstr "アイキャッチ画像を追加しました"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
-msgstr "特集画像には代替テキストがあります"
+msgstr "アイキャッチ画像には代替テキストが付いています"
 
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
@@ -330,42 +329,42 @@ msgstr "抜粋内の文字数"
 #: core/Requirement/Filled_excerpt.php:44
 #, php-format
 msgid "Minimum of %d character in excerpt"
-msgstr "抜粋の最小文字数は%dです"
+msgstr "抜粋は最低%d文字"
 
 #: core/Requirement/Filled_excerpt.php:45
 #, php-format
 msgid "Minimum of %d characters in excerpt"
-msgstr "抜粋の最小文字数は%d文字です"
+msgstr "抜粋は最低%d文字"
 
 #: core/Requirement/Filled_excerpt.php:46
 #, php-format
 msgid "Maximum of %d character in excerpt"
-msgstr "抜粋での最大 %d 文字"
+msgstr "抜粋は最大%d文字"
 
 #: core/Requirement/Filled_excerpt.php:47
 #, php-format
 msgid "Maximum of %d characters in excerpt"
-msgstr "抜粋の最大文字数は%dです"
+msgstr "抜粋は最大%d文字"
 
 #: core/Requirement/Filled_excerpt.php:48
 #, php-format
 msgid "%d character in excerpt"
-msgstr "%d 文字の抜粋"
+msgstr "抜粋は%d文字"
 
 #: core/Requirement/Filled_excerpt.php:49
 #, php-format
 msgid "%d characters in excerpt"
-msgstr "%d 文字の抜粋"
+msgstr "抜粋は%d文字"
 
 #: core/Requirement/Filled_excerpt.php:50
 #, php-format
 msgid "Between %d and %d characters in excerpt"
-msgstr "抜粋内の %d と %d 文字の間"
+msgstr "抜粋は%d～%d文字"
 
 #: core/Requirement/Image_alt.php:44
 #: core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
-msgstr "すべての画像に代替テキストがあります"
+msgstr "すべての画像に代替テキストが付いています"
 
 #: core/Requirement/Image_alt_count.php:42
 #: core/Requirement/Image_alt_count.php:43
@@ -375,76 +374,76 @@ msgstr "代替テキストの文字数"
 #: core/Requirement/Image_alt_count.php:44
 #, php-format
 msgid "Minimum of %d character in Alt text"
-msgstr "Altテキストの最小文字数は%d文字です"
+msgstr "代替テキストは最低%d文字"
 
 #: core/Requirement/Image_alt_count.php:45
 #, php-format
 msgid "Minimum of %d characters in Alt text"
-msgstr "Altテキストの最小文字数は%dです"
+msgstr "代替テキストは最低%d文字"
 
 #: core/Requirement/Image_alt_count.php:46
 #, php-format
 msgid "Maximum of %d character in Alt text"
-msgstr "Altテキストに最大 %d 文字"
+msgstr "代替テキストは最大%d文字"
 
 #: core/Requirement/Image_alt_count.php:47
 #, php-format
 msgid "Maximum of %d characters in Alt text"
-msgstr "Altテキストに最大 %d 文字"
+msgstr "代替テキストは最大%d文字"
 
 #: core/Requirement/Image_alt_count.php:48
 #, php-format
 msgid "%d character in Alt text"
-msgstr "%d 文字の代替テキスト"
+msgstr "代替テキストは%d文字"
 
 #: core/Requirement/Image_alt_count.php:49
 #, php-format
 msgid "%d characters in Alt text"
-msgstr "%d 文字の代替テキスト"
+msgstr "代替テキストは%d文字"
 
 #: core/Requirement/Image_alt_count.php:50
 #, php-format
 msgid "Between %d and %d characters in Alt text"
-msgstr "代替テキストの %d と %d 文字の間"
+msgstr "代替テキストは%d～%d文字"
 
 #: core/Requirement/Internal_links.php:43
 msgid "Number of internal links in content"
-msgstr "コンテンツ内の内部リンクの数"
+msgstr "コンテンツ内の内部リンク数"
 
 #: core/Requirement/Internal_links.php:44
 #, php-format
 msgid "Minimum of %d internal link in content"
-msgstr "コンテンツ内の最小内部リンク数は%dです"
+msgstr "コンテンツ内に内部リンクは最低%d個"
 
 #: core/Requirement/Internal_links.php:45
 #, php-format
 msgid "Minimum of %d internal links in content"
-msgstr "コンテンツ内の最小内部リンク数は%dです"
+msgstr "コンテンツ内に内部リンクは最低%d個"
 
 #: core/Requirement/Internal_links.php:46
 #, php-format
 msgid "Maximum of %d internal link in content"
-msgstr "コンテンツ内の内部リンクの最大数は%dです"
+msgstr "コンテンツ内に内部リンクは最大%d個"
 
 #: core/Requirement/Internal_links.php:47
 #, php-format
 msgid "Maximum of %d internal links in content"
-msgstr "コンテンツ内の内部リンクの最大数は%dです"
+msgstr "コンテンツ内に内部リンクは最大%d個"
 
 #: core/Requirement/Internal_links.php:48
 #, php-format
 msgid "%d internal link in content"
-msgstr "%d 内部リンクがコンテンツにあります"
+msgstr "コンテンツ内に内部リンクは%d件"
 
 #: core/Requirement/Internal_links.php:49
 #, php-format
 msgid "%d internal links in content"
-msgstr "%d 内部リンクがコンテンツにあります"
+msgstr "コンテンツ内に内部リンクは%d件"
 
 #: core/Requirement/Internal_links.php:50
 #, php-format
 msgid "Between %d and %d internal links in content"
-msgstr "コンテンツ内の %d と %d 内部リンクの間"
+msgstr "コンテンツ内に内部リンクは%d～%d個"
 
 #: core/Requirement/Openai_item.php:69
 #: core/Requirement/Openai_item.php:70, fuzzy
@@ -454,7 +453,7 @@ msgstr "Openai"
 #: core/Requirement/Openai_item.php:100
 #: modules/checklists/checklists.php:776
 msgid "Enter OpenAI task prompt"
-msgstr "OpenAIタスクのプロンプトを入力してください"
+msgstr "OpenAI タスクプロンプトを入力してください"
 
 #: core/Requirement/Openai_item.php:286
 msgid "An error occured."
@@ -466,13 +465,13 @@ msgstr "バリデーションエラーです。このページを再読み込み
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
-msgstr "投稿コンテンツは空です。"
+msgstr "投稿内容が空です。"
 
 #: core/Requirement/Openai_item.php:307
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
-msgstr "OpenAIタスクにはAPIキーが必要です。設定エリアにAPIキーを追加してください。"
+msgstr "OpenAI タスクには API キーが必要です。設定領域に API キーを追加してください。"
 
 #: core/Requirement/Openai_item.php:362
 #, php-format
@@ -481,7 +480,7 @@ msgstr "API エラー: %1s。"
 
 #: core/Requirement/Openai_item.php:380
 msgid "See the full response."
-msgstr "全体の応答を見る。"
+msgstr "回答の全文を見る。"
 
 #: core/Requirement/Openai_item.php:401
 msgid "Invalid response"
@@ -490,29 +489,29 @@ msgstr "無効な応答"
 #: core/Requirement/Prohibited_categories.php:87
 #, php-format
 msgid "Prohibited categories: %s"
-msgstr "禁止カテゴリ：%s"
+msgstr "禁止カテゴリー: %s"
 
 #: core/Requirement/Prohibited_categories.php:88
 msgid "Prohibited categories"
-msgstr "禁止カテゴリ"
+msgstr "禁止カテゴリー"
 
 #: core/Requirement/Prohibited_tags.php:87
 #, php-format
 msgid "Prohibited tags: %s"
-msgstr "禁止されたタグ: %s"
+msgstr "禁止タグ: %s"
 
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
-msgstr "禁止されたタグ"
+msgstr "禁止タグ"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
 msgid "Required categories: %s"
-msgstr "必須カテゴリ: %s"
+msgstr "必須カテゴリー: %s"
 
 #: core/Requirement/Required_categories.php:88
 msgid "Required categories"
-msgstr "必須カテゴリ"
+msgstr "必須カテゴリー"
 
 #: core/Requirement/Required_tags.php:87
 #, php-format
@@ -530,22 +529,22 @@ msgstr "タグの数"
 #: core/Requirement/Tags_count.php:48
 #, php-format
 msgid "Minimum of %d tag"
-msgstr "最小タグ数は%dです"
+msgstr "最低%d個のタグ"
 
 #: core/Requirement/Tags_count.php:49
 #, php-format
 msgid "Minimum of %d tags"
-msgstr "最小タグ数は%dです"
+msgstr "最低%d個のタグ"
 
 #: core/Requirement/Tags_count.php:50
 #, php-format
 msgid "Maximum of %d tag"
-msgstr "最大%dタグ"
+msgstr "最大%d個のタグ"
 
 #: core/Requirement/Tags_count.php:51
 #, php-format
 msgid "Maximum of %d tags"
-msgstr "最大%dタグ"
+msgstr "最大%d個のタグ"
 
 #: core/Requirement/Tags_count.php:52
 #, php-format
@@ -560,23 +559,23 @@ msgstr "%d タグ"
 #: core/Requirement/Tags_count.php:54
 #, php-format
 msgid "Between %d and %d tags"
-msgstr "タグの %d と %d の間"
+msgstr "%d～%d個のタグ"
 
 #: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
-msgstr "数 "
+msgstr "制限数 "
 
 #: core/Requirement/Taxonomies_count.php:51
 #: core/Requirement/Taxonomies_count.php:52
 #, php-format
 msgid "Minimum of %d "
-msgstr "最小%d "
+msgstr "最低%d個 "
 
 #: core/Requirement/Taxonomies_count.php:53
 #: core/Requirement/Taxonomies_count.php:54
 #, php-format
 msgid "Maximum of %d "
-msgstr "最大 %d "
+msgstr "最大%d個 "
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
@@ -587,7 +586,7 @@ msgstr "%d "
 #: core/Requirement/Taxonomies_count.php:57
 #, php-format
 msgid "Between %d and %d "
-msgstr "%d と %d の間 "
+msgstr "%dから%dの間 "
 
 #: core/Requirement/Title_count.php:40
 #: core/Requirement/Title_count.php:41
@@ -597,81 +596,81 @@ msgstr "タイトルの文字数"
 #: core/Requirement/Title_count.php:42
 #, php-format
 msgid "Minimum of %d character in title"
-msgstr "タイトルの最小文字数は%dです"
+msgstr "タイトルは最低%d文字"
 
 #: core/Requirement/Title_count.php:43
 #, php-format
 msgid "Minimum of %d characters in title"
-msgstr "タイトルの最小文字数は%d文字です"
+msgstr "タイトルは最低%d文字"
 
 #: core/Requirement/Title_count.php:44
 #, php-format
 msgid "Maximum of %d character in title"
-msgstr "タイトルでの最大 %d 文字"
+msgstr "タイトルは最大%d文字"
 
 #: core/Requirement/Title_count.php:45
 #, php-format
 msgid "Maximum of %d characters in title"
-msgstr "タイトルの最大文字数は%dです"
+msgstr "タイトルは最大%d文字"
 
 #: core/Requirement/Title_count.php:46
 #, php-format
 msgid "%d character in title"
-msgstr "%d 文字のタイトル"
+msgstr "タイトルは%d文字"
 
 #: core/Requirement/Title_count.php:47
 #, php-format
 msgid "%d characters in title"
-msgstr "%d 文字のタイトル"
+msgstr "タイトルは%d文字"
 
 #: core/Requirement/Title_count.php:48
 #, php-format
 msgid "Between %d and %d characters in title"
-msgstr "タイトル内の %d と %d 文字の間"
+msgstr "タイトルは%d～%d文字"
 
 #: core/Requirement/Validate_links.php:65
 #: core/Requirement/Validate_links.php:66
 msgid "All links use a valid format"
-msgstr "すべてのリンクは有効なフォーマットを使用しています"
+msgstr "全リンクで有効な形式を使用"
 
 #: core/Requirement/Words_count.php:43
 msgid "Number of words in content"
-msgstr "コンテンツ内の単語の数"
+msgstr "コンテンツ内の単語数"
 
 #: core/Requirement/Words_count.php:44
 #, php-format
 msgid "Minimum of %d word in content"
-msgstr "コンテンツ内の最小単語数は%dです"
+msgstr "コンテンツ内に単語は最低%d語"
 
 #: core/Requirement/Words_count.php:45
 #, php-format
 msgid "Minimum of %d words in content"
-msgstr "コンテンツ内の最小単語数は%dです"
+msgstr "コンテンツ内に単語は最低%d語"
 
 #: core/Requirement/Words_count.php:46
 #, php-format
 msgid "Maximum of %d word in content"
-msgstr "コンテンツ内の最大単語数は%dです"
+msgstr "コンテンツ内に単語は最大%d語"
 
 #: core/Requirement/Words_count.php:47
 #, php-format
 msgid "Maximum of %d words in content"
-msgstr "コンテンツ内の最大単語数は%dです"
+msgstr "コンテンツ内に単語は最大%d語"
 
 #: core/Requirement/Words_count.php:48
 #, php-format
 msgid "%d word in content"
-msgstr "%d 単語がコンテンツにあります"
+msgstr "コンテンツに%d語"
 
 #: core/Requirement/Words_count.php:49
 #, php-format
 msgid "%d words in content"
-msgstr "%d 単語がコンテンツにあります"
+msgstr "コンテンツに%d語"
 
 #: core/Requirement/Words_count.php:50
 #, php-format
 msgid "Between %d and %d words in content"
-msgstr "コンテンツ内の %d と %d 単語の間"
+msgstr "%d～%d文字のコンテンツ"
 
 #: core/Utils/FieldsTabs.php:21
 msgid "Title"
@@ -725,7 +724,7 @@ msgstr "分類"
 msgid "Accessibility"
 msgstr "アクセシビリティ"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -733,9 +732,9 @@ msgstr "WooCommerce"
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
-msgstr "オールインワン SEO"
+msgstr "All in One SEO"
 
 #: core/Utils/FieldsTabs.php:118
 #: modules/yoastseo/yoastseo.php:68, fuzzy
@@ -752,7 +751,7 @@ msgstr "オプションは空にできません。"
 
 #: modules/checklists/checklists.php:728
 msgid "Please make sure to add a name for all the custom tasks."
-msgstr "すべてのカスタムタスクに名前を追加することを確認してください。"
+msgstr "すべてのカスタムタスクに必ず名前を追加してください。"
 
 #: modules/checklists/checklists.php:732
 msgid "Rename task label"
@@ -804,7 +803,7 @@ msgstr "推奨プロンプト"
 
 #: modules/checklists/checklists.php:778
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
-msgstr "要件を合格としてマークするために期待されるOpenAIの応答は何ですか？"
+msgstr "要件をパスとしてマークするために OpenAI に期待する応答は何ですか ?"
 
 #: modules/checklists/checklists.php:781
 msgid "Clear Content"
@@ -812,7 +811,7 @@ msgstr "コンテンツをクリア"
 
 #: modules/checklists/checklists.php:782
 msgid "Is this content clear and easy to read?"
-msgstr "この内容は明確で読みやすいですか？"
+msgstr "このコンテンツは明確で読みやすいですか ?"
 
 #: modules/checklists/checklists.php:785
 msgid "Friendly Tone Content"
@@ -820,7 +819,7 @@ msgstr "フレンドリーなトーンのコンテンツ"
 
 #: modules/checklists/checklists.php:786
 msgid "Is this content tone friendly?"
-msgstr "この内容のトーンは親しみやすいですか？"
+msgstr "この内容はフレンドリーなものですか ?"
 
 #: modules/checklists/checklists.php:789
 msgid "Professional Tone Content"
@@ -828,23 +827,23 @@ msgstr "専門的なトーンのコンテンツ"
 
 #: modules/checklists/checklists.php:790
 msgid "Is this content tone professional?"
-msgstr "この内容のトーンはプロフェッショナルですか？"
+msgstr "この内容は専門的なものですか ?"
 
 #: modules/checklists/checklists.php:793
 msgid "Persuasive Tone Content"
-msgstr "説得力のあるトーンのコンテンツ"
+msgstr "説得力の高いトーンのコンテンツ"
 
 #: modules/checklists/checklists.php:794
 msgid "Is this content tone persuasive?"
-msgstr "この内容のトーンは説得力がありますか？"
+msgstr "この内容は説得力がありますか ?"
 
 #: modules/checklists/checklists.php:797
 msgid "Empathetic Tone Content"
-msgstr "共感的トーンのコンテンツ"
+msgstr "共感的なトーンのコンテンツ"
 
 #: modules/checklists/checklists.php:798
 msgid "Is this content tone empathetic?"
-msgstr "この内容のトーンは共感的ですか？"
+msgstr "この内容は共感できるものですか ?"
 
 #: modules/checklists/checklists.php:801
 msgid "Adventurous Tone Content"
@@ -852,15 +851,15 @@ msgstr "冒険的なトーンのコンテンツ"
 
 #: modules/checklists/checklists.php:802
 msgid "Is this content tone adventurous?"
-msgstr "この内容のトーンは冒険的ですか？"
+msgstr "この内容は冒険的なものですか ?"
 
 #: modules/checklists/checklists.php:805
 msgid "Promotional Tone Content"
-msgstr "プロモーショントーンコンテンツ"
+msgstr "宣伝トーンのコンテンツ"
 
 #: modules/checklists/checklists.php:806
 msgid "Is this content tone promotional?"
-msgstr "この内容のトーンはプロモーション的ですか？"
+msgstr "この内容は宣伝色の強いものですか ?"
 
 #: modules/checklists/checklists.php:872
 #: modules/checklists/checklists.php:960
@@ -870,46 +869,46 @@ msgstr "チェックリスト"
 #: modules/checklists/checklists.php:956
 #: modules/checklists/checklists.php:1301
 msgid "You don't have to complete any Checklist tasks."
-msgstr "チェックリストタスクを完了する必要はありません。"
+msgstr "Checklist のタスクを完了する必要はありません。"
 
 #: modules/checklists/checklists.php:961
 msgid "Are you sure you want to publish anyway?"
-msgstr "それでも公開してもよろしいですか？"
+msgstr "本当に公開してもよろしいですか ?"
 
 #: modules/checklists/checklists.php:965
 msgid "Are you sure you want to update the published post anyway?"
-msgstr "公開された投稿を更新してもよろしいですか？"
+msgstr "公開済の投稿を更新してもよろしいですか ?"
 
 #: modules/checklists/checklists.php:969
 msgid "Please complete the following tasks before publishing:"
-msgstr "公開する前に以下のタスクを完了してください："
+msgstr "下記項目を完了してください:"
 
 #: modules/checklists/checklists.php:973
 msgid "Please complete the following tasks before updating the published post:"
-msgstr "公開された投稿を更新する前に以下のタスクを完了してください："
+msgstr "公開した投稿を更新する前に、次のタスクを完了してください:"
 
 #: modules/checklists/checklists.php:977
 #: modules/checklists/checklists.php:981
 msgid "Not required, but important: "
-msgstr "必須ではありませんが、重要です： "
+msgstr "必須ではありませんが、重要です: "
 
 #: modules/checklists/checklists.php:987
 msgid "One or more items in the checklist are not completed"
-msgstr "チェックリストの項目の1つ以上が未完了です"
+msgstr "チェックリストの1つ以上の項目が完了していません"
 
 #: modules/checklists/checklists.php:1024
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
-msgstr "任意の%sチェックリストタスク%sを完了する必要はありません。"
+msgstr "%sチェックリストのタスク%sを完了する必要はありません。"
 
 #: modules/checklists/checklists.php:1030
 #: modules/checklists/assets/js/gutenberg-panel.jsx:473
 msgid "Check Now"
 msgstr "今すぐチェック"
 
-#: modules/checklists/checklists.php:1031
+#: modules/checklists/checklists.php:1031, fuzzy
 msgid "Ok"
-msgstr "大丈夫"
+msgstr "Ok"
 
 #: modules/checklists/checklists.php:1032
 msgid "No"
@@ -925,7 +924,7 @@ msgstr "タスク"
 
 #: modules/checklists/checklists.php:1198
 msgid "Disabled, Recommended or Required"
-msgstr "無効、推奨または必須"
+msgstr "無効/推奨/必須"
 
 #: modules/checklists/checklists.php:1199
 msgid "Options"
@@ -933,11 +932,11 @@ msgstr "オプション"
 
 #: modules/checklists/checklists.php:1200
 msgid "Add custom task"
-msgstr "カスタムタスクを追加"
+msgstr "カスタムタスクの追加"
 
 #: modules/checklists/checklists.php:1299
 msgid "Please complete the required(*) checklists task."
-msgstr "必須(*)チェックリストタスクを完了してください。"
+msgstr "必須 (*) 項目を完了してください。"
 
 #: modules/checklists/checklists.php:1302
 msgid "required"
@@ -946,7 +945,7 @@ msgstr "必須"
 #: modules/checklists/checklists.php:1307
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr "チェックリストのタスクは Elementor エディターでは利用できません"
+msgstr "Checklists のタスクは、Elementor のエディターでは使用できません。"
 
 #: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
@@ -1080,7 +1079,7 @@ msgstr "%sフィールドの文字数"
 #: modules/checklists/pro-requirements.php:310
 #, php-format
 msgid "%s is filled"
-msgstr "%s が入力されています"
+msgstr "%sは入力済みです"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
@@ -1088,7 +1087,7 @@ msgstr "PublishPress チェックリストについて"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About"
-msgstr "概要"
+msgstr "私たちについて"
 
 #: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
@@ -1104,7 +1103,7 @@ msgstr "PublishPress チームに連絡する"
 
 #: modules/checklists/templates/footer.php:37
 msgid "Contact"
-msgstr "連絡先"
+msgstr "連絡"
 
 #: modules/checklists/templates/global-checklists.php:6
 msgid "Settings saved successfully!"
@@ -1113,7 +1112,7 @@ msgstr "設定が正常に保存されました！"
 #: modules/checklists/templates/global-checklists.php:12
 #: modules/checklists/templates/global-checklists.php:217
 msgid "Save Changes"
-msgstr "変更を保存"
+msgstr "変更内容を保存"
 
 #: modules/checklists/templates/global-checklists.php:152
 msgid "Pro feature"
@@ -1122,11 +1121,11 @@ msgstr "プロ機能"
 #: modules/checklists/templates/global-checklists.php:165
 #, php-format
 msgid "No %s requirements for this post type."
-msgstr "この投稿タイプには%sの要件はありません。"
+msgstr "この投稿タイプには%s要件がありません。"
 
 #: modules/checklists/templates/global-checklists.php:183
 msgid "New Item"
-msgstr "新しいアイテム"
+msgstr "新規項目"
 
 #: modules/checklists/templates/global-checklists.php:184
 msgid "Description"
@@ -1136,7 +1135,7 @@ msgstr "説明"
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
-msgstr "カスタムタスクは自動的に完了しません。ユーザーはタスクを完了したことを示すためにチェックボックスをチェックする必要があります。"
+msgstr "カスタムタスクは自動的に完了しません。ユーザーはタスクを完了したことを示すためにチェックボックスをオンにする必要があります。"
 
 #: modules/checklists/templates/global-checklists.php:203
 msgid "Add OpenAI Prompt task"
@@ -1144,11 +1143,11 @@ msgstr "OpenAI プロンプトタスクを追加"
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "The prompt should be in form of a question."
-msgstr "プロンプトは質問の形式である必要があります。"
+msgstr "プロンプトは質問形式にする必要があります。"
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "This feature requires an OpenAI API Key."
-msgstr "この機能にはOpenAI APIキーが必要です。"
+msgstr "この機能には OpenAI API キーが必要です。"
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
@@ -1160,7 +1159,7 @@ msgstr "パーマリンク"
 
 #: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
-msgstr "パーマリンクに関連するタスクを定義"
+msgstr "パーマリンクに関するタスクを定義する"
 
 #: modules/permissions/permissions.php:68
 msgid "Permissions"
@@ -1177,7 +1176,7 @@ msgstr "レビュー"
 #: modules/settings/settings.php:62
 #: modules/settings/settings.php:132
 msgid "Checklists Settings"
-msgstr "チェックリスト設定"
+msgstr "Checklists の設定"
 
 #: modules/settings/settings.php:155
 msgid ""
@@ -1196,7 +1195,7 @@ msgstr "すべての名前変更されたラベルをリセット"
 
 #: modules/settings/settings.php:320
 msgid "Features"
-msgstr "機能"
+msgstr "特長"
 
 #: modules/settings/settings.php:321
 msgid "Feel free to select only the features you need."
@@ -1208,14 +1207,14 @@ msgstr "有効な機能"
 
 #: modules/settings/settings.php:384
 msgid "There are no PublishPress modules registered"
-msgstr "登録されたPublishPressモジュールはありません"
+msgstr "PublishPress モジュールが登録されていません"
 
 #: modules/settings/settings.php:480
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
-msgstr "add_post_type_support('%1$s', '%2$s')が読み込まれたファイルに含まれているため無効になっています。"
+msgstr "ロードしたファイルに add_post_type_support('%1$s', '%2$s') が含まれているため無効です。"
 
 #: modules/settings/settings.php:797
 msgid "Enable User Roles Filter:"
@@ -1223,7 +1222,7 @@ msgstr "ユーザーロールフィルターを有効にする:"
 
 #: modules/settings/settings.php:805
 msgid "Show warning icon:"
-msgstr "警告アイコンを表示："
+msgstr "警告アイコンを表示:"
 
 #: modules/settings/settings.php:813
 msgid "Highlight failing blocks in the editor:"
@@ -1235,7 +1234,7 @@ msgstr "アンインストール時にデータを削除："
 
 #: modules/settings/settings.php:830
 msgid "Enable Status Filter:"
-msgstr "ステータスフィルターを有効にする:"
+msgstr "ステータスフィルターを有効化:"
 
 #: modules/settings/settings.php:840
 msgid "Enable Duplicate Checklists:"
@@ -1251,15 +1250,15 @@ msgstr "タクソノミーフィルターを有効にする："
 
 #: modules/settings/settings.php:879
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
-msgstr "「クイック編集」を使用する際に「ステータス」オプションを無効にする："
+msgstr "「クイック編集」使用時に「ステータス」オプションを無効化:"
 
 #: modules/settings/settings.php:887
 msgid "Disable \"Quick Edit\" completely:"
-msgstr "「クイック編集」を完全に無効にする："
+msgstr "「クイック編集」を完全無効化:"
 
 #: modules/settings/settings.php:895
 msgid "Disable \"Publish\" button:"
-msgstr "「公開」ボタンを無効にする："
+msgstr "「公開」ボタンを無効化:"
 
 #: modules/settings/settings.php:913
 msgid "Complete Icon:"
@@ -1290,16 +1289,16 @@ msgid "Recommended Incomplete Color:"
 msgstr "推奨される未完成の色："
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "エディタパネルでラベルの名前変更を有効にする:"
+msgid "Rename task labels:"
+msgstr "タスクラベルの名前を変更:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "チェックリスト項目のソート順:"
+msgid "Checklist task sort order:"
+msgstr "チェックリストタスクのソート順:"
 
-#: modules/settings/settings.php:995
+#: modules/settings/settings.php:995, fuzzy
 msgid "OpenAI API Key:"
-msgstr "OpenAI APIキー："
+msgstr "OpenAI API Key:"
 
 #: modules/settings/settings.php:1010
 msgid "Reset Renamed Checklist:"
@@ -1313,7 +1312,7 @@ msgstr "投稿タイプ："
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
-msgstr "これにより、\"ドラフト\"や\"公開済み\"などの特定のステータスに対してタスクを無効にできます。"
+msgstr "これにより、「下書き」や「公開済み」などの特定のステータスに対してタスクを無効にすることができます。"
 
 #: modules/settings/settings.php:1083
 msgid "This allows users to duplicate existing checklist tasks."
@@ -1357,23 +1356,23 @@ msgstr "これは「ユーザーロールを除外」オプションを表示し
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
-msgstr "「ステータス」オプションを無効にすることが推奨されます。これはチェックリストの要件を避けるために使用できます。"
+msgstr "Checklists の要件使用を回避できるため、「ステータス」オプションの無効化を推奨します。"
 
 #: modules/settings/settings.php:1251
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
-msgstr "これにより、\"manage_options\"権限を持つユーザーを除いて、すべてのユーザーに対して\"クイック編集\"が無効になります。"
+msgstr "「manage_options」機能を持つユーザーを除いたすべてのユーザーの「クイック編集」を無効化する。"
 
 #: modules/settings/settings.php:1272
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
-msgstr "これにより、チェックリスト要件が満たされていない場合、\"公開\"ボタンが無効になります。"
+msgstr "チェックリストの要件を満たしていない場合、「公開」ボタンを無効化する。"
 
 #: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
-msgstr "チェックリストタスクでOpenAIプロンプトを使用するためのAPIキーを入力してください。"
+msgstr "Checklist のタスクで OpenAI プロンプトを使用するには、API キーを入力します。"
 
 #: modules/settings/settings.php:1364
 msgid "Post Types"
@@ -1381,7 +1380,7 @@ msgstr "投稿タイプ"
 
 #: modules/settings/settings.php:1365
 msgid "General"
-msgstr "一般"
+msgstr "全般設定"
 
 #: modules/settings/settings.php:1366
 msgid "Publishing Options"
@@ -1413,16 +1412,16 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Dashiconsクラス名を入力してください（例：dashicons-no、dashicons-dismiss）。 "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr "チェックリストエディタパネルでカスタムラベルの名前変更を有効にします。"
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "投稿エディタのために管理者がタスクラベルの名前を変更できるようにする。"
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "デフォルト"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "上部に必須、下部に推奨"
+msgid "Required on top and Recommended below"
+msgstr "上に必須、下に推奨"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"
@@ -1449,93 +1448,93 @@ msgstr "すべての名前変更されたラベルが正常にリセットされ
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
-msgstr "Yoast SEOのフォーカスキーワードの文字数"
+msgstr "Yoast SEO フォーカスキーワードの文字数"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
-msgstr "Yoast SEOのフォーカスキーワードの最小文字数は%d文字です"
+msgstr "Yoast SEO フォーカスキーワードは最低%d文字"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
-msgstr "Yoast SEOフォーカスキーワードの最小文字数は%dです"
+msgstr "Yoast SEO フォーカスキーワードは最低%d文字"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
-msgstr "Yoast SEO フォーカスキーワードに最大 %d 文字"
+msgstr "Yoast SEO フォーカスキーワードは最大%d文字"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
-msgstr "Yoast SEOのフォーカスキーワードの最大文字数は%d文字です"
+msgstr "Yoast SEO フォーカスキーワードは最大%d文字"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
-msgstr "%d 文字のYoast SEOフォーカスキーワード"
+msgstr "Yoast SEO のフォーカスキーワードは%d文字"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
-msgstr "%d 文字のYoast SEOフォーカスキーワード"
+msgstr "Yoast SEO フォーカスキーワードは%d文字"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
-msgstr "Yoast SEO のフォーカスキーワードの %d と %d 文字の間"
+msgstr "Yoast SEO フォーカスキーワードは%d～%d文字"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:39
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
-msgstr "Yoast SEOのメタ説明の文字数"
+msgstr "Yoast SEO メタディスクリプションの文字数"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
-msgstr "Yoast SEOメタディスクリプションの最小文字数は%dです"
+msgstr "Yoast SEO メタディスクリプションは最低%d文字"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
-msgstr "Yoast SEOメタディスクリプションの最小文字数は%dです"
+msgstr "Yoast SEO メタディスクリプションは最低%d文字"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
-msgstr "Yoast SEO メタディスクリプションに最大 %d 文字"
+msgstr "Yoast SEO メタディスクリプションは最大%d文字"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
-msgstr "Yoast SEOのメタディスクリプションの最大文字数は%d文字です"
+msgstr "Yoast SEO メタディスクリプションは最大%d文字"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "%d character in Yoast SEO meta description"
-msgstr "%d 文字のYoast SEOメタディスクリプション"
+msgstr "Yoast SEO メタディスクリプションは%d文字"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
-msgstr "%d 文字のYoast SEOメタディスクリプション"
+msgstr "Yoast SEO メタディスクリプションは%d文字"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
-msgstr "Yoast SEO のメタディスクリプションの %d と %d 文字の間"
+msgstr "Yoast SEO メタディスクリプションは%d～%d文字"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
 msgid "Minimum Yoast SEO readability score"
-msgstr "Yoast SEO可読性スコアの最小値"
+msgstr "Yoast SEO の読みやすさの最小スコア"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
 #. translators: %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
-msgstr "Yoastの読みやすさ: %s"
+msgstr "Yoast の読みやすさ: %s"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
@@ -1553,7 +1552,7 @@ msgstr "良い"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
 msgid "Minimum Yoast SEO analysis score"
-msgstr "Yoast SEO分析スコアの最小値"
+msgstr "Yoast SEO 分析の最小スコア"
 
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
 #: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
@@ -1564,7 +1563,7 @@ msgstr "Yoast SEO: %s"
 
 #: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
-msgstr "Yoast SEOに関連するタスクを定義"
+msgstr "Yoast SEO に関連するタスクを定義する"
 
 #: publishpress-checklists.php:103
 msgid "This plugin can be deleted."
@@ -1575,4 +1574,6 @@ msgstr "このプラグインは削除できます。"
 msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "
 "features and support. %sUpgrade to Pro%s"
-msgstr "あなたはPublishPressチェックリストFreeを使用しています。Pro版にはより多くの機能とサポートがあります。%sProにアップグレード%s"
+msgstr ""
+"PublishPress Checklists Free を使用しています。Pro バージョンには、より多くの機能とサポートがあります。%sPro "
+"にアップグレード%s"

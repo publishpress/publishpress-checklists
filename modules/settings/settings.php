@@ -654,7 +654,7 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (!isset($new_options['enable_rename_label_editor_panel'])) {
-                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_YES;
+                $new_options['enable_rename_label_editor_panel'] = Base_requirement::VALUE_NO;
             }
 
             $new_options['enable_rename_label_editor_panel'] =
@@ -966,7 +966,7 @@ if (!class_exists('PPCH_Settings')) {
 
             add_settings_field(
                 'enable_rename_label_editor_panel',
-                __('Enable rename label in editor panel:', 'publishpress-checklists'),
+                __('Rename task labels:', 'publishpress-checklists'),
                 [$this, 'settings_enable_rename_label_editor_panel_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_appearance'
@@ -974,7 +974,7 @@ if (!class_exists('PPCH_Settings')) {
 
             add_settings_field(
                 'checklist_items_sort_order',
-                __('Checklist item sort order:', 'publishpress-checklists'),
+                __('Checklist task sort order:', 'publishpress-checklists'),
                 [$this, 'settings_checklist_items_sort_order_option'],
                 $this->module->options_group_name,
                 $this->module->options_group_name . '_appearance'
@@ -1512,7 +1512,7 @@ if (!class_exists('PPCH_Settings')) {
             echo '<input type="checkbox" value="yes" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[enable_rename_label_editor_panel]" '
                 . checked($value, Base_requirement::VALUE_YES, false) . ' />';
             echo '&nbsp;&nbsp;&nbsp;' . esc_html__(
-                'Enable custom rename labels in the checklist editor panel.',
+                'Allow admins to rename task labels for the post editor.',
                 'publishpress-checklists'
             );
             echo '</label>';
@@ -1530,7 +1530,7 @@ if (!class_exists('PPCH_Settings')) {
 
             $sortOptions = [
                 'default'              => esc_html__('Default', 'publishpress-checklists'),
-                'required_recommended' => esc_html__('Required on top and recommended below', 'publishpress-checklists'),
+                'required_recommended' => esc_html__('Required on top and Recommended below', 'publishpress-checklists'),
                 'alphabetical'         => esc_html__('Sort alphabetically', 'publishpress-checklists'),
             ];
 

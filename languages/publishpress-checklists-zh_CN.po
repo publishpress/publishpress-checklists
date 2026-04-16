@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/publishpress-checklists\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese (Simplified Han script) "
 "<https://weblate.publishpress.com/projects/publishpress-checklists/"
@@ -12,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:57+0000\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:12+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Language: zh_CN\n"
@@ -48,7 +47,7 @@ msgid ""
 "your content."
 msgstr "使用 PublishPress Checklists，您可以为您的内容选择发布要求。"
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -726,7 +725,7 @@ msgstr "分类法"
 msgid "Accessibility"
 msgstr "无障碍性"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1291,12 +1290,12 @@ msgid "Recommended Incomplete Color:"
 msgstr "推荐的不完整颜色："
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "在编辑面板中启用重命名标签："
+msgid "Rename task labels:"
+msgstr "重命名任务标签："
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "检查列表项目排序顺序："
+msgid "Checklist task sort order:"
+msgstr "检查清单任务排序："
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1402,7 +1401,7 @@ msgstr "工具"
 
 #: modules/settings/settings.php:1416
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr "输入一个 Dashicons 类名（例如，dashicons-yes，dashicons-saved）。"
+msgstr "输入一个 Dashicons 类名（例如，dashicons-yes，dashicons-saved）。 "
 
 #: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
@@ -1411,19 +1410,19 @@ msgstr "查看 Dashicons"
 
 #: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr "输入一个 Dashicons 类名（例如，dashicons-no，dashicons-dismiss）。"
+msgstr "输入一个 Dashicons 类名（例如，dashicons-no，dashicons-dismiss）。 "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr "在检查列表编辑面板中启用自定义重命名标签。"
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "允许管理员为帖子编辑器重命名任务标签。"
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "默认"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "必需的在上方，推荐的在下方"
+msgid "Required on top and Recommended below"
+msgstr "必填在上，推荐在下"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"

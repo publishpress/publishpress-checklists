@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PublishPress Checklists Free plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: PublishPress Checklists Free 2.27.0\n"
+"Project-Id-Version: PublishPress Checklists Free 2.28.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-15T17:45:57+00:00\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: publishpress-checklists\n"
@@ -1264,11 +1264,11 @@ msgid "Recommended Incomplete Color:"
 msgstr ""
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
+msgid "Rename task labels:"
 msgstr ""
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
+msgid "Checklist task sort order:"
 msgstr ""
 
 #: modules/settings/settings.php:995
@@ -1369,7 +1369,7 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
 
 #: modules/settings/settings.php:1532
@@ -1377,7 +1377,7 @@ msgid "Default"
 msgstr ""
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
+msgid "Required on top and Recommended below"
 msgstr ""
 
 #: modules/settings/settings.php:1534

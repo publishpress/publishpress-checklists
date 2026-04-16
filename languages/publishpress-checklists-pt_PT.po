@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/publishpress-checklists\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Portuguese "
 "<https://weblate.publishpress.com/projects/publishpress-checklists/"
@@ -12,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:56+0000\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:12+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Language: pt_PT\n"
@@ -50,7 +49,7 @@ msgstr ""
 "Com as listas de verificação do PublishPress, você pode escolher os "
 "requisitos de publicação para seu conteúdo."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -730,7 +729,7 @@ msgstr "Taxonomias"
 msgid "Accessibility"
 msgstr "Acessibilidade"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1303,12 +1302,12 @@ msgid "Recommended Incomplete Color:"
 msgstr "Cor incompleta recomendada:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Ativar renomear rótulo no painel do editor:"
+msgid "Rename task labels:"
+msgstr "Renomear rótulos de tarefas:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Ordem de classificação dos itens da lista de verificação:"
+msgid "Checklist task sort order:"
+msgstr "Ordem de classificação das tarefas da lista de verificação:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1449,18 +1448,18 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Insira um nome de classe Dashicons (ex: dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
-"Ativar rótulos de renomeação personalizados no painel do editor de lista de "
-"verificação."
+"Permitir que os administradores renomeiem os rótulos das tarefas para o "
+"editor de publicações."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "Padrão"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "Obrigatório em cima e recomendado em baixo"
+msgid "Required on top and Recommended below"
+msgstr "Obrigatório em cima e Recomendada abaixo"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"

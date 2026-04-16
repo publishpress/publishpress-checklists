@@ -5,21 +5,23 @@ msgstr ""
 "Project-Id-Version: PublishPress Checklists Free 2.27.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Hungarian "
+"<https://weblate.publishpress.com/projects/publishpress-checklists/"
+"publishpress-checklists/hu/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-15T17:45:57+00:00\n"
-"PO-Revision-Date: 2026-04-15 18:00+0000\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:12+0000\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: hu-HU\n"
 
-#: publishpress-checklists.php:4
+#: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
-msgstr "PublishPress Ellenőrzőlisták Ingyenes"
+msgstr "PublishPress Checklists Free"
 
 #: publishpress-checklists.php:5, fuzzy
 #. Plugin URI of the plugin
@@ -32,10 +34,10 @@ msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr ""
-"A PublishPress Ellenőrzőlistákkal választhatja meg a közzétételi "
-"követelményeket a tartalmához."
+"A PublishPress Checklists segítségével kiválaszthatja a tartalmához "
+"szükséges kiadási követelményeket."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -64,20 +66,20 @@ msgstr "Ajánlott"
 #: modules/checklists/checklists.php:1303
 #: modules/checklists/assets/js/gutenberg-panel.jsx:436
 msgid "Required"
-msgstr "Szükséges"
+msgstr "Kötelező"
 
 #: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
-msgstr "Kérjük, javítsa ki az alábbi űrlap hibáit, és próbálja újra."
+msgstr "Kérjük, javítsa ki az űrlap hibáit alább, és próbálja újra."
 
 #: core/Legacy/LegacyPlugin.php:212
 #: modules/settings/settings.php:516
 msgid "Cheatin&#8217; uh?"
-msgstr "Csalás, mi?"
+msgstr "Csalás&#8217; uh?"
 
 #: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
-msgstr "Nincs megfelelő engedélye ennek a műveletnek a végrehajtásához."
+msgstr "Nincsenek szükséges jogosultságai ennek a műveletnek a végrehajtásához."
 
 #: core/Legacy/LegacyPlugin.php:217
 msgid "Post does not exist"
@@ -93,9 +95,9 @@ msgstr "A bejegyzés nem létezik"
 msgid "Checklists"
 msgstr "Ellenőrzőlisták"
 
-#: core/Legacy/Module.php:286
+#: core/Legacy/Module.php:286, fuzzy
 msgid "PublishPress Checklists"
-msgstr "PublishPress Ellenőrzőlisták"
+msgstr "PublishPress Checklists"
 
 #: core/Legacy/Module.php:289
 #, php-format
@@ -104,23 +106,23 @@ msgstr "Ha tetszik a %s, kérjük, hagyjon nekünk egy %s értékelést. Köszö
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
-msgstr "Szüksége van a PublishPress Ellenőrzőlisták támogatására?"
+msgstr "Szüksége van PublishPress Checklists támogatásra?"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
-msgstr "Ha segítségre van szüksége vagy új funkciót szeretne kérni, tudassa velünk."
+msgstr "Ha segítségre van szüksége vagy új funkciókérése van, tudassa velünk."
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
-msgstr "Támogatás Kérése"
+msgstr "Támogatás kérése"
 
 #: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
-msgstr "Részletes dokumentáció is elérhető a plugin weboldalán."
+msgstr "Részletes dokumentáció is elérhető a bővítmény weboldalán."
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "Tudásbázis Megtekintése"
+msgstr "Tudásbázis megtekintése"
 
 #: core/Plugin.php:104
 #: modules/settings/settings.php:134
@@ -135,11 +137,11 @@ msgstr "Frissítés Pro-ra"
 #: core/Requirement/Approved_by.php:48
 #, php-format
 msgid "Approved by %s"
-msgstr "Jóváhagyva: %s"
+msgstr "Jóváhagyta %s"
 
 #: core/Requirement/Approved_by.php:49
 msgid "Approved by a user in this role"
-msgstr "Jóváhagyva egy felhasználó által ebben a szerepben"
+msgstr "Jóváhagyta egy felhasználó ebben a szerepben"
 
 #: core/Requirement/Approved_by.php:161
 #: core/Requirement/Base_requirement.php:239
@@ -171,7 +173,7 @@ msgstr "Max"
 #. translators: %d: exact required value.
 #, php-format
 msgid "exact %d"
-msgstr "pontosan %d"
+msgstr "pontos %d"
 
 #: core/Requirement/Base_requirement.php:276
 #. translators: %d: minimum required value.
@@ -268,7 +270,7 @@ msgstr "Minimum %d külső link a tartalomban"
 #: core/Requirement/External_links.php:45
 #, php-format
 msgid "Minimum of %d external links in content"
-msgstr "Minimum %d külső linkek a tartalomban"
+msgstr "Minimum %d külső link a tartalomban"
 
 #: core/Requirement/External_links.php:46
 #, php-format
@@ -278,7 +280,7 @@ msgstr "Maximum %d külső link a tartalomban"
 #: core/Requirement/External_links.php:47
 #, php-format
 msgid "Maximum of %d external links in content"
-msgstr "Maximum %d külső linkek a tartalomban"
+msgstr "Maximum %d külső link a tartalomban"
 
 #: core/Requirement/External_links.php:48
 #, php-format
@@ -288,17 +290,17 @@ msgstr "%d külső link a tartalomban"
 #: core/Requirement/External_links.php:49
 #, php-format
 msgid "%d external links in content"
-msgstr "%d külső linkek a tartalomban"
+msgstr "%d külső link a tartalomban"
 
 #: core/Requirement/External_links.php:50
 #, php-format
 msgid "Between %d and %d external links in content"
-msgstr "Között %d és %d külső link a tartalomban"
+msgstr "%d és %d külső link között a tartalomban"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "A kiemelt kép hozzáadva"
+msgstr "Kiemelt kép hozzáadva"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
@@ -323,7 +325,7 @@ msgstr "Minimum %d karakter a kivonatban"
 #: core/Requirement/Filled_excerpt.php:45
 #, php-format
 msgid "Minimum of %d characters in excerpt"
-msgstr "Minimum %d karakterek a kivonatban"
+msgstr "Minimum %d karakter a kivonatban"
 
 #: core/Requirement/Filled_excerpt.php:46
 #, php-format
@@ -333,7 +335,7 @@ msgstr "Maximum %d karakter a kivonatban"
 #: core/Requirement/Filled_excerpt.php:47
 #, php-format
 msgid "Maximum of %d characters in excerpt"
-msgstr "Maximum %d karakterek a kivonatban"
+msgstr "Maximum %d karakter a kivonatban"
 
 #: core/Requirement/Filled_excerpt.php:48
 #, php-format
@@ -353,7 +355,7 @@ msgstr "%d és %d karakter között az idézetben"
 #: core/Requirement/Image_alt.php:44
 #: core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
-msgstr "Minden képnek van Alt szövege"
+msgstr "Az összes képnek van Alt szövege"
 
 #: core/Requirement/Image_alt_count.php:42
 #: core/Requirement/Image_alt_count.php:43
@@ -363,22 +365,22 @@ msgstr "Karakterek száma az Alt szövegben"
 #: core/Requirement/Image_alt_count.php:44
 #, php-format
 msgid "Minimum of %d character in Alt text"
-msgstr "Legalább %d karakter az Alt szövegben"
+msgstr "Minimum %d karakter az Alt szövegben"
 
 #: core/Requirement/Image_alt_count.php:45
 #, php-format
 msgid "Minimum of %d characters in Alt text"
-msgstr "Legalább %d karakter az Alt szövegben"
+msgstr "Minimum %d karakter az Alt szövegben"
 
 #: core/Requirement/Image_alt_count.php:46
 #, php-format
 msgid "Maximum of %d character in Alt text"
-msgstr "Legfeljebb %d karakter az Alt szövegben"
+msgstr "Maximum %d karakter az Alt szövegben"
 
 #: core/Requirement/Image_alt_count.php:47
 #, php-format
 msgid "Maximum of %d characters in Alt text"
-msgstr "Legfeljebb %d karakter az Alt szövegben"
+msgstr "Maximum %d karakter az Alt szövegben"
 
 #: core/Requirement/Image_alt_count.php:48
 #, php-format
@@ -402,22 +404,22 @@ msgstr "Belső linkek száma a tartalomban"
 #: core/Requirement/Internal_links.php:44
 #, php-format
 msgid "Minimum of %d internal link in content"
-msgstr "Legalább %d belső link a tartalomban"
+msgstr "Minimum %d belső link a tartalomban"
 
 #: core/Requirement/Internal_links.php:45
 #, php-format
 msgid "Minimum of %d internal links in content"
-msgstr "Legalább %d belső link a tartalomban"
+msgstr "Minimum %d belső link a tartalomban"
 
 #: core/Requirement/Internal_links.php:46
 #, php-format
 msgid "Maximum of %d internal link in content"
-msgstr "Legfeljebb %d belső link a tartalomban"
+msgstr "Maximum %d belső link a tartalomban"
 
 #: core/Requirement/Internal_links.php:47
 #, php-format
 msgid "Maximum of %d internal links in content"
-msgstr "Legfeljebb %d belső link a tartalomban"
+msgstr "Maximum %d belső link a tartalomban"
 
 #: core/Requirement/Internal_links.php:48
 #, php-format
@@ -442,7 +444,7 @@ msgstr "Openai"
 #: core/Requirement/Openai_item.php:100
 #: modules/checklists/checklists.php:776
 msgid "Enter OpenAI task prompt"
-msgstr "Írja be az OpenAI feladat promptját"
+msgstr "Írja be az OpenAI feladat promptot"
 
 #: core/Requirement/Openai_item.php:286
 msgid "An error occured."
@@ -461,13 +463,13 @@ msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
 msgstr ""
-"Az OpenAI feladatokhoz API kulcs szükséges. Kérjük, adja meg az API kulcsát "
-"a Beállítások területen."
+"Az OpenAI feladatokhoz API kulcs szükséges. Kérjük, adja hozzá az API "
+"kulcsát a Beállítások területen."
 
 #: core/Requirement/Openai_item.php:362
 #, php-format
 msgid "API Error: %1s."
-msgstr "API hiba: %1s."
+msgstr "API hiba: %1$s."
 
 #: core/Requirement/Openai_item.php:380
 msgid "See the full response."
@@ -498,20 +500,20 @@ msgstr "Tilos címkék"
 #: core/Requirement/Required_categories.php:87
 #, php-format
 msgid "Required categories: %s"
-msgstr "Kötelező kategóriák: %s"
+msgstr "Szükséges kategóriák: %s"
 
 #: core/Requirement/Required_categories.php:88
 msgid "Required categories"
-msgstr "Kötelező kategóriák"
+msgstr "Szükséges kategóriák"
 
 #: core/Requirement/Required_tags.php:87
 #, php-format
 msgid "Required tags: %s"
-msgstr "Kötelező címkék: %s"
+msgstr "Szükséges címkék: %s"
 
 #: core/Requirement/Required_tags.php:88
 msgid "Required tags"
-msgstr "Kötelező címkék"
+msgstr "Szükséges címkék"
 
 #: core/Requirement/Tags_count.php:47
 msgid "Number of tags"
@@ -530,12 +532,12 @@ msgstr "Minimum %d címke"
 #: core/Requirement/Tags_count.php:50
 #, php-format
 msgid "Maximum of %d tag"
-msgstr "Legfeljebb %d címke"
+msgstr "Maximum %d címke"
 
 #: core/Requirement/Tags_count.php:51
 #, php-format
 msgid "Maximum of %d tags"
-msgstr "Legfeljebb %d címke"
+msgstr "Maximum %d címke"
 
 #: core/Requirement/Tags_count.php:52
 #, php-format
@@ -554,7 +556,7 @@ msgstr "%d és %d címke között"
 
 #: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
-msgstr "Darabszám "
+msgstr "Szám "
 
 #: core/Requirement/Taxonomies_count.php:51
 #: core/Requirement/Taxonomies_count.php:52
@@ -582,7 +584,7 @@ msgstr "%d és %d között "
 #: core/Requirement/Title_count.php:40
 #: core/Requirement/Title_count.php:41
 msgid "Number of characters in title"
-msgstr "A cím karaktereinek száma"
+msgstr "Karakterek száma a címben"
 
 #: core/Requirement/Title_count.php:42
 #, php-format
@@ -661,7 +663,7 @@ msgstr "%d szó a tartalomban"
 #: core/Requirement/Words_count.php:50
 #, php-format
 msgid "Between %d and %d words in content"
-msgstr "%d és %d szó között a tartalomban"
+msgstr "Között %d és %d szó a tartalomban"
 
 #: core/Utils/FieldsTabs.php:21
 msgid "Title"
@@ -673,7 +675,7 @@ msgstr "Tartalom"
 
 #: core/Utils/FieldsTabs.php:29
 msgid "Publish Date / Time"
-msgstr "Közzététel Dátuma / Időpont"
+msgstr "Közzététel dátuma / időpontja"
 
 #: core/Utils/FieldsTabs.php:33
 msgid "Approval"
@@ -685,11 +687,11 @@ msgstr "Képek"
 
 #: core/Utils/FieldsTabs.php:41
 msgid "Audio / Video"
-msgstr "Audió / Videó"
+msgstr "Audio / Videó"
 
 #: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
-msgstr "Kiemelt Kép"
+msgstr "Kiemelt kép"
 
 #: core/Utils/FieldsTabs.php:49
 msgid "Links"
@@ -709,13 +711,13 @@ msgstr "Címkék"
 
 #: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
-msgstr "Taxonómiák"
+msgstr "Taxonomies"
 
 #: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
 msgstr "Hozzáférhetőség"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -742,27 +744,27 @@ msgstr "az opciók nem lehetnek üresek."
 
 #: modules/checklists/checklists.php:728
 msgid "Please make sure to add a name for all the custom tasks."
-msgstr "Kérjük, győződjön meg arról, hogy minden egyedi feladatnak adjon nevet."
+msgstr "Kérjük, győződjön meg arról, hogy minden egyedi feladatnak van neve."
 
 #: modules/checklists/checklists.php:732
 msgid "Rename task label"
-msgstr "Feladat címke átnevezése"
+msgstr "Feladat címének átnevezése"
 
 #: modules/checklists/checklists.php:736
 msgid "Label for the Checklists screen"
-msgstr "Címke a Ellenőrzőlisták képernyőhöz"
+msgstr "Cím a Ellenőrzőlisták képernyőhöz"
 
 #: modules/checklists/checklists.php:740
 msgid "Leave empty to use the default WP Admin label"
-msgstr "Hagyja üresen az alapértelmezett WP Admin címke használatához"
+msgstr "Hagyja üresen az alapértelmezett WP Admin cím használatához"
 
 #: modules/checklists/checklists.php:744
 msgid "Label for the post editing screen"
-msgstr "Címke a bejegyzés szerkesztő képernyőhöz"
+msgstr "Cím a bejegyzés szerkesztő képernyőhöz"
 
 #: modules/checklists/checklists.php:748
 msgid "Leave empty to use the default editing screen label"
-msgstr "Hagyja üresen az alapértelmezett szerkesztő képernyő címke használatához"
+msgstr "Hagyja üresen az alapértelmezett szerkesztő képernyő cím használatához"
 
 #: modules/checklists/checklists.php:752
 msgid "Preview in editing screen:"
@@ -770,7 +772,7 @@ msgstr "Előnézet a szerkesztő képernyőn:"
 
 #: modules/checklists/checklists.php:756
 msgid "Default checklist label will be used."
-msgstr "Az alapértelmezett ellenőrzőlista címkét fogják használni."
+msgstr "Az alapértelmezett ellenőrzőlista cím lesz használva."
 
 #: modules/checklists/checklists.php:760
 msgid "Save"
@@ -778,11 +780,11 @@ msgstr "Mentés"
 
 #: modules/checklists/checklists.php:764
 msgid "Cancel"
-msgstr "Mégs"
+msgstr "Mégse"
 
 #: modules/checklists/checklists.php:772
 msgid "No results found"
-msgstr "Nincsenek találatok"
+msgstr "Nincs találat"
 
 #: modules/checklists/checklists.php:773
 msgid "Searching…"
@@ -790,11 +792,11 @@ msgstr "Keresés…"
 
 #: modules/checklists/checklists.php:777
 msgid "Suggested Prompts"
-msgstr "Javasolt Kérdések"
+msgstr "Javasolt kérések"
 
 #: modules/checklists/checklists.php:778
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
-msgstr "Mi az elvárt OpenAI válasz a követelmény elfogadásához?"
+msgstr "Mi az elvárt OpenAI válasz, hogy a követelményt teljesítettnek jelöljük?"
 
 #: modules/checklists/checklists.php:781
 msgid "Clear Content"
@@ -855,29 +857,29 @@ msgstr "Ez a tartalom hangvétel promóciós?"
 #: modules/checklists/checklists.php:872
 #: modules/checklists/checklists.php:960
 msgid "Checklist"
-msgstr "Ellenőrző lista"
+msgstr "Ellenőrzőlista"
 
 #: modules/checklists/checklists.php:956
 #: modules/checklists/checklists.php:1301
 msgid "You don't have to complete any Checklist tasks."
-msgstr "Nincs szükség arra, hogy bármilyen ellenőrző lista feladatot teljesíts."
+msgstr "Nincs szükség semmilyen Ellenőrzőlista feladatot elvégezni."
 
 #: modules/checklists/checklists.php:961
 msgid "Are you sure you want to publish anyway?"
-msgstr "Biztos benne, hogy mégis közzé szeretné tenni?"
+msgstr "Biztos benne, hogy mégis szeretné közzétenni?"
 
 #: modules/checklists/checklists.php:965
 msgid "Are you sure you want to update the published post anyway?"
-msgstr "Biztos benne, hogy mégis frissíteni szeretné a közzétett bejegyzést?"
+msgstr "Biztos benne, hogy mégis szeretné frissíteni a közzétett bejegyzést?"
 
 #: modules/checklists/checklists.php:969
 msgid "Please complete the following tasks before publishing:"
-msgstr "Kérjük, teljesítse az alábbi feladatokat a közzététel előtt:"
+msgstr "Kérjük, végezze el az alábbi feladatokat a közzététel előtt:"
 
 #: modules/checklists/checklists.php:973
 msgid "Please complete the following tasks before updating the published post:"
 msgstr ""
-"Kérjük, teljesítse az alábbi feladatokat a közzétett bejegyzés frissítése "
+"Kérjük, végezze el az alábbi feladatokat a közzétett bejegyzés frissítése "
 "előtt:"
 
 #: modules/checklists/checklists.php:977
@@ -887,12 +889,12 @@ msgstr "Nem kötelező, de fontos: "
 
 #: modules/checklists/checklists.php:987
 msgid "One or more items in the checklist are not completed"
-msgstr "A ellenőrzőlistában egy vagy több elem nincs befejezve"
+msgstr "A ellenőrzőlistán egy vagy több tétel nincs befejezve"
 
 #: modules/checklists/checklists.php:1024
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
-msgstr "Nem kell teljesítened a %sEllenőrzőlistás feladatokat%s."
+msgstr "Nem kell befejeznie a %sEllenőrzőlista feladat%s-ot."
 
 #: modules/checklists/checklists.php:1030
 #: modules/checklists/assets/js/gutenberg-panel.jsx:473
@@ -921,7 +923,7 @@ msgstr "Letiltva, Ajánlott vagy Kötelező"
 
 #: modules/checklists/checklists.php:1199
 msgid "Options"
-msgstr "Opciók"
+msgstr "Beállítások"
 
 #: modules/checklists/checklists.php:1200
 msgid "Add custom task"
@@ -929,7 +931,7 @@ msgstr "Egyedi feladat hozzáadása"
 
 #: modules/checklists/checklists.php:1299
 msgid "Please complete the required(*) checklists task."
-msgstr "Kérlek, fejezd be a kötelező(*) ellenőrzőlistás feladatot."
+msgstr "Kérjük, fejezze be a kötelező(*) ellenőrzőlisták feladatot."
 
 #: modules/checklists/checklists.php:1302
 msgid "required"
@@ -938,11 +940,11 @@ msgstr "kötelező"
 #: modules/checklists/checklists.php:1307
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr "Az ellenőrzőlistás feladatok nem elérhetők az Elementor szerkesztőkben"
+msgstr "Az ellenőrzőlistás feladatok nem érhetők el az Elementor szerkesztőkben"
 
 #: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
-msgstr "All in One SEO Címpontszám"
+msgstr "All in One SEO Cím Pontszám"
 
 #: modules/checklists/pro-requirements.php:31
 msgid "All in One SEO Score"
@@ -950,35 +952,35 @@ msgstr "All in One SEO Pontszám"
 
 #: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr "Kiemelt kép magassága"
+msgstr "Kiemelt kép magasság"
 
 #: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr "Kiemelt kép szélessége"
+msgstr "Kiemelt kép szélesség"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "H1, H2, H3 etc tags are used in logical order"
-msgstr "A H1, H2, H3 stb. címkék logikai sorrendben használatosak"
+msgstr "A H1, H2, H3 stb. címkék logikus sorrendben vannak használva"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
-msgstr "A tartalomban található képek száma"
+msgstr "A tartalomban lévő képek száma"
 
 #: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
-msgstr "A karakterek száma a képfeliratokban"
+msgstr "A képaláírások karaktereinek száma"
 
 #: modules/checklists/pro-requirements.php:85
 msgid "Number of audio items in content"
-msgstr "A hanganyagok száma a tartalomban"
+msgstr "A tartalomban lévő audió elemek száma"
 
 #: modules/checklists/pro-requirements.php:94
 msgid "Number of video items in content"
-msgstr "A videóelemek száma a tartalomban"
+msgstr "A tartalomban lévő videó elemek száma"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr "Jóváhagyva szerepkör által"
+msgstr "Jóváhagyva szerepkör alapján"
 
 #: modules/checklists/pro-requirements.php:110
 msgid "Approved by specific user"
@@ -994,11 +996,11 @@ msgstr "Tiltott szavak"
 
 #: modules/checklists/pro-requirements.php:131
 msgid "Publish time should be at a specific time"
-msgstr "A közzétételi időpontnak egy adott időpontban kell lennie"
+msgstr "A közzététel időpontjának egy konkrét időben kell lennie"
 
 #: modules/checklists/pro-requirements.php:139
 msgid "Publish time should be in the future"
-msgstr "A közzétételi időpontnak a jövőben kell lennie"
+msgstr "A közzététel időpontjának a jövőben kell lennie"
 
 #: modules/checklists/pro-requirements.php:147
 msgid "Rank Math SEO Score"
@@ -1014,15 +1016,15 @@ msgstr "A táblázatoknak van fejléc sora"
 
 #: modules/checklists/pro-requirements.php:170
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Jelöld be a \"Visszajáró megrendelések engedélyezése?\" négyzetet"
+msgstr "Jelöld be a \"Vissza rendelhető?\" négyzetet"
 
 #: modules/checklists/pro-requirements.php:178
 msgid "Select some products for \"Cross-sells\""
-msgstr "Válassz ki néhány terméket a \"Keresztértékesítésekhez\""
+msgstr "Válassz ki néhány terméket a \"Kereszteladásokhoz\""
 
 #: modules/checklists/pro-requirements.php:186
 msgid "Discount for the \"Sale price\""
-msgstr "Kedvezmény a \"Kedvezményes ár\" számára"
+msgstr "Kedvezmény a \"Kedvezményes árhoz\""
 
 #: modules/checklists/pro-requirements.php:194
 msgid "Check the \"Downloadable\" box"
@@ -1034,35 +1036,35 @@ msgstr "Termék kép"
 
 #: modules/checklists/pro-requirements.php:210
 msgid "Check the \"Manage stock?\" box"
-msgstr "Jelöld be a \"Készlet kezelése?\" négyzetet"
+msgstr "Jelöld be a \"Készletkezelés?\" négyzetet"
 
 #: modules/checklists/pro-requirements.php:218
 msgid "Enter a \"Regular price\""
-msgstr "Írd be a \"Normál ár\" értéket"
+msgstr "Írj be egy \"Szokásos árat\""
 
 #: modules/checklists/pro-requirements.php:226
 msgid "Enter a \"Sale price\""
-msgstr "Írd be a \"Kedvezményes ár\" értéket"
+msgstr "Írj be egy \"Kedvezményes árat\""
 
 #: modules/checklists/pro-requirements.php:234
 msgid "Schedule the \"Sale price\""
-msgstr "Ütemezze a \"Kedvezményes árat\""
+msgstr "Ütemezze a \"Sale price\" értéket"
 
 #: modules/checklists/pro-requirements.php:242
 msgid "Enter a \"SKU\""
-msgstr "Adja meg a \"SKU\" azonosítót"
+msgstr "Adja meg a \"SKU\" értéket"
 
 #: modules/checklists/pro-requirements.php:250
 msgid "Check the \"Sold individually\" box"
-msgstr "Jelölje be a \"Külön értékesítve\" dobozt"
+msgstr "Jelölje be a \"Sold individually\" négyzetet"
 
 #: modules/checklists/pro-requirements.php:258
 msgid "Select some products for \"Upsells\""
-msgstr "Válasszon ki néhány terméket az \"Upsell\" lehetőségekhez"
+msgstr "Válasszon ki néhány terméket az \"Upsells\" számára"
 
 #: modules/checklists/pro-requirements.php:266
 msgid "Check the \"Virtual\" box"
-msgstr "Jelölje be a \"Virtuális\" dobozt"
+msgstr "Jelölje be a \"Virtual\" négyzetet"
 
 #: modules/checklists/pro-requirements.php:297
 #, php-format
@@ -1076,15 +1078,15 @@ msgstr "%s ki van töltve"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
-msgstr "A PublishPress Ellenőrzőlistákról"
+msgstr "A PublishPress Checklists-ről"
 
 #: modules/checklists/templates/footer.php:23
 msgid "About"
-msgstr "Rólunk"
+msgstr "Névjegy"
 
 #: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
-msgstr "PublishPress Ellenőrzőlisták Dokumentáció"
+msgstr "A PublishPress Checklists dokumentációja"
 
 #: modules/checklists/templates/footer.php:30
 msgid "Documentation"
@@ -1114,7 +1116,7 @@ msgstr "Pro funkció"
 #: modules/checklists/templates/global-checklists.php:165
 #, php-format
 msgid "No %s requirements for this post type."
-msgstr "Nincs %s követelmény ennek a bejegyzéstípusnak."
+msgstr "Nincsenek %s követelmények ehhez a post type-hoz."
 
 #: modules/checklists/templates/global-checklists.php:183
 msgid "New Item"
@@ -1130,7 +1132,7 @@ msgid ""
 "show they have completed the task."
 msgstr ""
 "A testreszabott feladatok nem teljesülnek automatikusan. A felhasználóknak "
-"be kell jelölniük a dobozt, hogy jelezzék, hogy befejezték a feladatot."
+"be kell jelölniük a négyzetet, hogy jelezzék, hogy befejezték a feladatot."
 
 #: modules/checklists/templates/global-checklists.php:203
 msgid "Add OpenAI Prompt task"
@@ -1138,11 +1140,11 @@ msgstr "OpenAI Prompt feladat hozzáadása"
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "The prompt should be in form of a question."
-msgstr "A kérdés formájában kell lennie a promptnak."
+msgstr "A kérdés formájában kell lennie a kérésnek."
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "This feature requires an OpenAI API Key."
-msgstr "Ehhez a funkcióhoz OpenAI API kulcs szükséges."
+msgstr "Ez a funkció OpenAI API kulcsot igényel."
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
@@ -1154,7 +1156,7 @@ msgstr "Permalinkek"
 
 #: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
-msgstr "Feladatok definiálása a permalinkekhez kapcsolódóan"
+msgstr "A permalinkekhez kapcsolódó feladatok meghatározása"
 
 #: modules/permissions/permissions.php:68
 msgid "Permissions"
@@ -1179,8 +1181,8 @@ msgid ""
 "labels? This action cannot be undone."
 msgstr ""
 "Biztos benne, hogy vissza szeretné állítani az összes átnevezett "
-"ellenőrzőlista elemet az alapértelmezett címkéjükre? Ezt a műveletet nem "
-"lehet visszavonni."
+"ellenőrzőlista elemet az alapértelmezett címkéikre? Ez a művelet nem "
+"vonható vissza."
 
 #: modules/settings/settings.php:156
 msgid "Resetting..."
@@ -1205,7 +1207,7 @@ msgstr "Engedélyezett funkciók"
 
 #: modules/settings/settings.php:384
 msgid "There are no PublishPress modules registered"
-msgstr "Nincsenek regisztrálva PublishPress modulok"
+msgstr "Nincsenek regisztrált PublishPress modulok"
 
 #: modules/settings/settings.php:480
 #, php-format
@@ -1213,8 +1215,8 @@ msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr ""
-"Letiltva, mert add_post_type_support('%1$s', '%2$s') egy betöltött fájlban "
-"található."
+"Kikapcsolva, mert az add_post_type_support('%1$s', '%2$s') szerepel egy "
+"betöltött fájlban."
 
 #: modules/settings/settings.php:797
 msgid "Enable User Roles Filter:"
@@ -1226,11 +1228,11 @@ msgstr "Figyelmeztető ikon megjelenítése:"
 
 #: modules/settings/settings.php:813
 msgid "Highlight failing blocks in the editor:"
-msgstr "Hibás blokkok kiemelése a szerkesztőben:"
+msgstr "Hangsúlyozza a hibás blokkokat a szerkesztőben:"
 
 #: modules/settings/settings.php:821
 msgid "Delete data on uninstall:"
-msgstr "Adatok törlése eltávolításkor:"
+msgstr "Adatok törlése a telepítés eltávolításakor:"
 
 #: modules/settings/settings.php:830
 msgid "Enable Status Filter:"
@@ -1242,7 +1244,7 @@ msgstr "Duplikált ellenőrzőlisták engedélyezése:"
 
 #: modules/settings/settings.php:850
 msgid "Show Checklists column in post lists:"
-msgstr "Ellenőrzőlisták oszlop megjelenítése a bejegyzéslistákban:"
+msgstr "A posztlistákban a ellenőrzőlisták oszlopának megjelenítése:"
 
 #: modules/settings/settings.php:860
 msgid "Enable Taxonomy Filter:"
@@ -1289,12 +1291,12 @@ msgid "Recommended Incomplete Color:"
 msgstr "Ajánlott hiányos szín:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Címke átnevezésének engedélyezése a szerkesztőpanelen:"
+msgid "Rename task labels:"
+msgstr "Feladatcímkék átnevezése:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Ellenőrzőlistás elem rendezési sorrend:"
+msgid "Checklist task sort order:"
+msgstr "Ellenőrzőlista feladat sorrend:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1302,25 +1304,25 @@ msgstr "OpenAI API kulcs:"
 
 #: modules/settings/settings.php:1010
 msgid "Reset Renamed Checklist:"
-msgstr "Átnevezett ellenőrzőlista visszaállítása:"
+msgstr "Átnevezett ellenőrzőlista alaphelyzetbe állítása:"
 
 #: modules/settings/settings.php:1029
 msgid "Post types:"
-msgstr "Bejegyzés típusok:"
+msgstr "Bejegyzéstípusok:"
 
 #: modules/settings/settings.php:1062
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr ""
-"Ez lehetővé teszi, hogy a feladatokat letiltsuk bizonyos állapotoknál, mint "
-"például a \"Vázlat\" vagy \"Megjelent\"."
+"Ez lehetővé teszi a feladatok letiltását bizonyos állapotoknál, mint "
+"például \"Terv\" vagy \"Közzétéve\"."
 
 #: modules/settings/settings.php:1083
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
-"Ez lehetővé teszi a felhasználók számára, hogy másolják a meglévő "
-"ellenőrzőlista feladatokat."
+"Ez lehetővé teszi a felhasználók számára, hogy megduplázzák a meglévő "
+"ellenőrzőlistás feladatokat."
 
 #: modules/settings/settings.php:1105
 msgid ""
@@ -1328,54 +1330,52 @@ msgid ""
 "are complete."
 msgstr ""
 "Adj hozzá egy Ellenőrzőlisták oszlopot a Bejegyzések képernyőhöz, amely "
-"megmutatja, hány követelmény teljesült."
+"megmutatja, hogy hány követelmény teljesült."
 
 #: modules/settings/settings.php:1126
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
-"Ez lehetővé teszi, hogy a feladatokat letiltsuk olyan bejegyzések esetében, "
-"amelyek specifikus taxonómiai kifejezésekkel rendelkeznek. Lépj a "
-"\"Bejegyzés típusok\" fülre a kifejezések kiválasztásához."
+"Ez lehetővé teszi a feladatok letiltását a bejegyzések esetében, amelyek "
+"speciális taxonómiai kifejezéseket tartalmaznak. Lépj a "
+"\"Bejegyzéstípusok\" fülre a kifejezések kiválasztásához."
 
 #: modules/settings/settings.php:1148
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr ""
-"Ez figyelmeztető ikont fog megjeleníteni az \"Ellenőrzőlisták\" dobozban, "
-"ha a követelmények nem teljesültek."
+"Ez egy figyelmeztető ikont fog megjeleníteni az \"ellenőrzőlisták\" "
+"dobozban, ha a követelmények nem teljesültek."
 
 #: modules/settings/settings.php:1168
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr ""
-"Ez kiemeli a Gutenberg blokkokat, amelyek nem teljesítik a blokk-specifikus "
-"ellenőrzőlista feladatokat."
+"Ez kiemeli azokat a Gutenberg blokkokat, amelyek nem teljesítik a "
+"blokk-specifikus ellenőrzőlistás feladatokat."
 
 #: modules/settings/settings.php:1188
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr ""
-"Ha engedélyezve van, az összes PublishPress Ellenőrzőlista adat törlésre "
-"kerül, ha a bővítmény eltávolításra kerül."
+"Ha engedélyezve van, akkor minden PublishPress Ellenőrzőlisták adat "
+"törlésre kerül, ha a bővítmény eltávolításra kerül."
 
 #: modules/settings/settings.php:1209
 msgid "This will show \"Exclude User Roles\" options."
-msgstr ""
-"Ez meg fogja jeleníteni az \"Felhasználói szerepkörök kizárása\" "
-"lehetőségeket."
+msgstr "Ez meg fogja mutatni az \"Felhasználói szerepek kizárása\" opciókat."
 
 #: modules/settings/settings.php:1230
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
 msgstr ""
-"A \"Státusz\" opció letiltása ajánlott, mivel elkerülhető vele az "
-"Ellenőrzőlisták követelményeinek használata."
+"Ajánlott a \"Státusz\" opció letiltása, mert ez használható az "
+"ellenőrzőlistás követelmények elkerülésére."
 
 #: modules/settings/settings.php:1251
 msgid ""
@@ -1383,25 +1383,25 @@ msgid ""
 "\"manage_options\" capability."
 msgstr ""
 "Ez letiltja a \"Gyors szerkesztés\" lehetőséget minden felhasználó számára, "
-"kivéve azokat, akik rendelkeznek a \"manage_options\" jogosultsággal."
+"kivéve azokat, akiknek \"manage_options\" jogosultságuk van."
 
 #: modules/settings/settings.php:1272
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr ""
-"Ez letiltja a \"Közzététel\" gombot, ha az ellenőrzőlista követelményei "
+"Ez letiltja a \"Közzététel\" gombot, ha az ellenőrzőlistás követelmények "
 "nincsenek teljesítve."
 
 #: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
-"Add meg az API kulcsodat, hogy OpenAI promptokat használhass az "
-"ellenőrzőlista feladatokban."
+"Add meg az API kulcsodat az OpenAI promptok használatához az "
+"ellenőrzőlistás feladatokban."
 
 #: modules/settings/settings.php:1364
 msgid "Post Types"
-msgstr "Bejegyzés típusok"
+msgstr "Bejegyzéstípusok"
 
 #: modules/settings/settings.php:1365
 msgid "General"
@@ -1425,7 +1425,7 @@ msgstr "Eszközök"
 
 #: modules/settings/settings.php:1416
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr "Írj be egy Dashicons osztálynevet (pl. dashicons-yes, dashicons-saved). "
+msgstr "Adj meg egy Dashicons osztálynevet (pl. dashicons-yes, dashicons-saved). "
 
 #: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
@@ -1434,21 +1434,21 @@ msgstr "Dashicons megtekintése"
 
 #: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr "Írja be a Dashicons osztály nevét (pl. dashicons-no, dashicons-dismiss). "
+msgstr "Adja meg a Dashicons osztály nevét (pl. dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
-"Engedélyezze a testreszabott átnevezési címkéket a ellenőrző lista "
-"szerkesztő panelen."
+"Engedélyezze az adminisztrátoroknak a feladatcímkék átnevezését a bejegyzés "
+"szerkesztőjében."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "Alapértelmezett"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "Kötelező felül és ajánlott alul"
+msgid "Required on top and Recommended below"
+msgstr "Kötelező felül és Ajánlott alul"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"
@@ -1460,11 +1460,11 @@ msgid ""
 "screen back to their default labels."
 msgstr ""
 "Ez visszaállítja az összes átnevezett ellenőrző lista címkét a WP Admin és "
-"a szerkesztési képernyő alapértelmezett címkéire."
+"a szerkesztési képernyőn az alapértelmezett címkéikre."
 
 #: modules/settings/settings.php:1568
 msgid "Security check failed."
-msgstr "Biztonsági ellenőrzés nem sikerült."
+msgstr "Biztonsági ellenőrzés sikertelen."
 
 #: modules/settings/settings.php:1573
 msgid "You do not have permission to perform this action."
@@ -1477,7 +1477,7 @@ msgstr "Minden átnevezett címke sikeresen vissza lett állítva."
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
-msgstr "Karakterek száma a Yoast SEO fókusz kulcsszóban"
+msgstr "A karakterek száma a Yoast SEO fókusz kulcsszóban"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 #, php-format
@@ -1517,7 +1517,7 @@ msgstr "%d és %d karakter között a Yoast SEO fókusz kulcsszóban"
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:39
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
-msgstr "Karakterek száma a Yoast SEO meta leírásban"
+msgstr "A karakterek száma a Yoast SEO meta leírásban"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 #, php-format
@@ -1552,7 +1552,7 @@ msgstr "%d karakter a Yoast SEO meta leírásban"
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
-msgstr "%d és %d karakter között a Yoast SEO meta leírásban"
+msgstr "Között %d és %d karakter a Yoast SEO meta leírásban"
 
 #: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
 msgid "Minimum Yoast SEO readability score"
@@ -1592,7 +1592,7 @@ msgstr "Yoast SEO: %s"
 
 #: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
-msgstr "Határozza meg a Yoast SEO-hoz kapcsolódó feladatokat"
+msgstr "Feladatok meghatározása a Yoast SEO-hoz kapcsolódóan"
 
 #: publishpress-checklists.php:103
 msgid "This plugin can be deleted."
@@ -1604,5 +1604,5 @@ msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "
 "features and support. %sUpgrade to Pro%s"
 msgstr ""
-"A PublishPress Ellenőrzőlisták ingyenes verzióját használja. A Pro verzió "
-"több funkciót és támogatást kínál. %sFrissítés Pro-ra%s"
+"A PublishPress Checklists Free-t használja. A Pro verzió több funkciót és "
+"támogatást kínál. %sFrissítés Pro-ba%s"

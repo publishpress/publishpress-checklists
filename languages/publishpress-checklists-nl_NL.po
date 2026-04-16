@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists 2.26.0\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/publishpress-checklists\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Dutch "
 "<https://weblate.publishpress.com/projects/publishpress-checklists/"
@@ -12,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:54+0000\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:11+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -38,7 +37,7 @@ msgstr ""
 "Met PublishPress Checklists kunt u publicatievereisten voor uw inhoud "
 "kiezen."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -722,7 +721,7 @@ msgstr "Taxonomieën"
 msgid "Accessibility"
 msgstr "Toegankelijkheid"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1293,12 +1292,12 @@ msgid "Recommended Incomplete Color:"
 msgstr "Aanbevolen Onvoltooid Kleur:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Schakel hernoemlabel in het editorpaneel in:"
+msgid "Rename task labels:"
+msgstr "Hernoem taaklabels:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Checklist-item sorteervolgorde:"
+msgid "Checklist task sort order:"
+msgstr "Checklist taak sorteervolgorde:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1435,16 +1434,16 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Voer een Dashicons klasse naam in (bijv., dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr "Schakel aangepaste hernoemlabels in het checklist-editorpaneel in."
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "Sta beheerders toe om taaklabels voor de posteditor te hernoemen."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "Standaard"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "Vereist bovenaan en aanbevolen onderaan"
+msgid "Required on top and Recommended below"
+msgstr "Vereist bovenaan en Aanbevolen hieronder"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"

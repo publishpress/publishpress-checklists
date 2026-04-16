@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/publishpress-checklists\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian "
 "<https://weblate.publishpress.com/projects/publishpress-checklists/"
@@ -12,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:54+0000\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:12+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
@@ -32,7 +31,6 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2);\n"
 
-#: publishpress-checklists.php:4
 #: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
@@ -52,7 +50,7 @@ msgstr ""
 "С помощью PublishPress Checklists вы можете выбрать требования к публикации "
 "для вашего контента."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -734,7 +732,7 @@ msgstr "Таксономии"
 msgid "Accessibility"
 msgstr "Доступность"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -1307,12 +1305,12 @@ msgid "Recommended Incomplete Color:"
 msgstr "Рекомендуемый незавершенный цвет:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Включить переименование меток в панели редактора:"
+msgid "Rename task labels:"
+msgstr "Переименовать метки задач:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Порядок сортировки элементов контрольного списка:"
+msgid "Checklist task sort order:"
+msgstr "Порядок сортировки задач в контрольном списке:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1450,18 +1448,16 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Введите имя класса Dashicons (например, dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr ""
-"Включить пользовательские переименованные метки в панели редактора "
-"контрольного списка."
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "Разрешить администраторам переименовывать метки задач для редактора постов."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "По умолчанию"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "Обязательные сверху и рекомендуемые снизу"
+msgid "Required on top and Recommended below"
+msgstr "Обязательно сверху и Рекомендуется внизу"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"

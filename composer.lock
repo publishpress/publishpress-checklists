@@ -5985,16 +5985,16 @@
         },
         {
             "name": "publishpress/translations",
-            "version": "1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/publishpress/library-publishpress-translator.git",
-                "reference": "ea40919b8737a17e7dd6453b438854a0e8036278"
+                "reference": "e9cea43e3a914cc7b861fc7840904e0379e158be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/publishpress/library-publishpress-translator/zipball/ea40919b8737a17e7dd6453b438854a0e8036278",
-                "reference": "ea40919b8737a17e7dd6453b438854a0e8036278",
+                "url": "https://api.github.com/repos/publishpress/library-publishpress-translator/zipball/e9cea43e3a914cc7b861fc7840904e0379e158be",
+                "reference": "e9cea43e3a914cc7b861fc7840904e0379e158be",
                 "shasum": ""
             },
             "require": {
@@ -6007,7 +6007,6 @@
                 "overtrue/phplint": "^2.1",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^9.0",
                 "publishpress/publishpress-phpcs-standards": "dev-main",
                 "sirbrillig/phpcs-variable-analysis": "^2.11",
                 "squizlabs/php_codesniffer": "^3.8",
@@ -6036,9 +6035,9 @@
             "description": "AI-powered translation automation for PublishPress plugins using Potomatic",
             "support": {
                 "issues": "https://github.com/publishpress/library-publishpress-translator/issues",
-                "source": "https://github.com/publishpress/library-publishpress-translator/tree/1.0.3"
+                "source": "https://github.com/publishpress/library-publishpress-translator/tree/v1.0.4"
             },
-            "time": "2026-03-24T12:44:13+00:00"
+            "time": "2026-04-16T08:46:26+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

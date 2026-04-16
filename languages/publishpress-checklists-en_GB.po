@@ -3,9 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress - PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/publishpress-"
-"checklists\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
 "PO-Revision-Date: 2024-10-17 20:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
@@ -18,15 +17,11 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
 #. Plugin Name of the plugin
-#. Plugin Name of the plugin
-#. Plugin Name of the plugin
-#. Plugin Name of the plugin
-#. Plugin Name of the plugin
-#, fuzzy
-msgid "PublishPress Checklists"
-msgstr "PublishPress Checklists"
+msgid "PublishPress Checklists Free"
+msgstr ""
 
 #. Plugin URI of the plugin
+#, fuzzy
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
@@ -70,6 +65,9 @@ msgstr "Post does not exist"
 msgid "Checklists"
 msgstr "Checklists"
 
+msgid "PublishPress Checklists"
+msgstr "PublishPress Checklists"
+
 #, fuzzy, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "If you like %s please leave us a %s rating. Thank you!"
@@ -102,11 +100,41 @@ msgstr "Approved by %s"
 msgid "Approved by a user in this role"
 msgstr "Approved by a user in this role"
 
+#. translators: 1: custom editor label, 2: selected role names.
+#. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
+#. translators: 1: custom editor label, 2: prohibited category names.
+#. translators: 1: custom editor label, 2: prohibited tag names.
+#. translators: 1: custom editor label, 2: required category names.
+#. translators: 1: custom editor label, 2: required tag names.
+#, fuzzy, php-format
+msgid "%1$s - %2$s"
+msgstr ""
+
 msgid "Min"
 msgstr "Min"
 
 msgid "Max"
 msgstr "Max"
+
+#. translators: %d: exact required value.
+#, php-format
+msgid "exact %d"
+msgstr ""
+
+#. translators: %d: minimum required value.
+#, php-format
+msgid "min %d"
+msgstr ""
+
+#. translators: %d: maximum allowed value.
+#, php-format
+msgid "max %d"
+msgstr ""
+
+#. translators: 1: minimum required value, 2: maximum allowed value.
+#, fuzzy, php-format
+msgid "min %1$d max %2$d"
+msgstr ""
 
 msgid "Edit label"
 msgstr ""
@@ -194,8 +222,8 @@ msgstr "Featured image has Alt text"
 msgid "Featured image has caption"
 msgstr ""
 
-msgid "Numbers of characters in excerpt"
-msgstr "Numbers of characters in excerpt"
+msgid "Number of characters in excerpt"
+msgstr ""
 
 #, fuzzy, php-format
 msgid "Minimum of %d character in excerpt"
@@ -530,6 +558,33 @@ msgstr ""
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr "Please make sure to add a name for all the custom tasks."
 
+msgid "Rename task label"
+msgstr ""
+
+msgid "Label for the Checklists screen"
+msgstr ""
+
+msgid "Leave empty to use the default WP Admin label"
+msgstr ""
+
+msgid "Label for the post editing screen"
+msgstr ""
+
+msgid "Leave empty to use the default editing screen label"
+msgstr ""
+
+msgid "Preview in editing screen:"
+msgstr ""
+
+msgid "Default checklist label will be used."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
 msgid "No results found"
 msgstr ""
 
@@ -658,7 +713,7 @@ msgstr ""
 msgid "Featured image width"
 msgstr ""
 
-msgid "Heading in hierarchy"
+msgid "H1, H2, H3 etc tags are used in logical order"
 msgstr ""
 
 msgid "Number of images in content"
@@ -667,22 +722,25 @@ msgstr ""
 msgid "Number of characters in image captions"
 msgstr ""
 
-msgid "Number of audio in content"
+msgid "Number of audio items in content"
 msgstr ""
 
-msgid "Number of video in content"
+msgid "Number of video items in content"
 msgstr ""
 
 msgid "Approved by role"
 msgstr ""
 
-msgid "Approved by user"
+msgid "Approved by specific user"
 msgstr ""
 
 msgid "Avoid heading tags in content"
 msgstr ""
 
-msgid "Published at exact time"
+msgid "Prohibited words"
+msgstr ""
+
+msgid "Publish time should be at a specific time"
 msgstr ""
 
 msgid "Publish time should be in the future"
@@ -823,6 +881,12 @@ msgid ""
 "labels? This action cannot be undone."
 msgstr ""
 
+msgid "Resetting..."
+msgstr ""
+
+msgid "Reset All Renamed Labels"
+msgstr ""
+
 msgid "Features"
 msgstr "Features"
 
@@ -843,11 +907,14 @@ msgstr ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 
-msgid "Enable Who Can Ignore:"
+msgid "Enable User Roles Filter:"
 msgstr ""
 
 msgid "Show warning icon:"
 msgstr "Show a warning icon:"
+
+msgid "Highlight failing blocks in the editor:"
+msgstr ""
 
 msgid "Delete data on uninstall:"
 msgstr ""
@@ -885,10 +952,19 @@ msgstr ""
 msgid "Required Incomplete Color:"
 msgstr ""
 
+msgid "Required Asterisk Color:"
+msgstr ""
+
 msgid "Recommended Complete Color:"
 msgstr ""
 
 msgid "Recommended Incomplete Color:"
+msgstr ""
+
+msgid "Enable rename label in editor panel:"
+msgstr ""
+
+msgid "Checklist item sort order:"
 msgstr ""
 
 msgid "OpenAI API Key:"
@@ -924,11 +1000,16 @@ msgid ""
 msgstr ""
 
 msgid ""
+"This will highlight Gutenberg blocks that fail block-specific checklist "
+"tasks."
+msgstr ""
+
+msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the plugin "
 "is uninstalled."
 msgstr ""
 
-msgid "This will show \"Who can ignore\" options."
+msgid "This will show \"Exclude User Roles\" options."
 msgstr ""
 
 msgid ""
@@ -976,11 +1057,21 @@ msgstr ""
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 
-msgid "Reset All Custom Labels"
+msgid "Enable custom rename labels in the checklist editor panel."
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Required on top and recommended below"
+msgstr ""
+
+msgid "Sort alphabetically"
 msgstr ""
 
 msgid ""
-"This will reset all renamed checklist items back to their default labels."
+"This will reset all renamed checklist labels for WP Admin and Editing screen "
+"back to their default labels."
 msgstr ""
 
 msgid "Security check failed."
@@ -989,7 +1080,7 @@ msgstr ""
 msgid "You do not have permission to perform this action."
 msgstr ""
 
-msgid "All custom labels have been reset successfully."
+msgid "All renamed labels have been reset successfully."
 msgstr ""
 
 msgid "Number of characters in Yoast SEO focus keyword"
@@ -1087,6 +1178,9 @@ msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more features "
 "and support. %sUpgrade to Pro%s"
 msgstr ""
+
+#~ msgid "Numbers of characters in excerpt"
+#~ msgstr "Numbers of characters in excerpt"
 
 #~ msgid "Who can ignore the task?"
 #~ msgstr "Who can ignore the task?"

@@ -5,22 +5,23 @@ msgstr ""
 "Project-Id-Version: PublishPress Checklists Free 2.27.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Swedish "
+"<https://weblate.publishpress.com/projects/publishpress-checklists/"
+"publishpress-checklists/sv/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-15T17:45:57+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:58+0000\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:12+0000\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: sv-SE\n"
 
 #: publishpress-checklists.php:4
-#: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
-msgstr "PublishPress Checklists Free"
+msgstr "PublishPress Checklists Gratis"
 
 #: publishpress-checklists.php:5, fuzzy
 #. Plugin URI of the plugin
@@ -34,7 +35,7 @@ msgid ""
 "your content."
 msgstr "Med PublishPress Checklists kan du välja publiceringskrav för ditt innehåll."
 
-#: publishpress-checklists.php:7, fuzzy
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -88,9 +89,9 @@ msgstr "Inlägget finns inte"
 #: modules/checklists/checklists.php:1132
 #: modules/checklists/checklists.php:1147
 #: modules/checklists/checklists.php:1300
-#: modules/checklists/assets/js/gutenberg-panel.jsx:411
+#: modules/checklists/assets/js/gutenberg-panel.jsx:411, fuzzy
 msgid "Checklists"
-msgstr "Checklister"
+msgstr "Checklists"
 
 #: core/Legacy/Module.php:286, fuzzy
 msgid "PublishPress Checklists"
@@ -99,11 +100,11 @@ msgstr "PublishPress Checklists"
 #: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
-msgstr "Om du gillar %s, vänligen ge oss en %s bedömning. Tack!"
+msgstr "Om du gillar %s, vänligen ge oss en %s betyg. Tack!"
 
 #: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
-msgstr "Behöver du support för PublishPress Checklists?"
+msgstr "Behöver du stöd för PublishPress Checklists?"
 
 #: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
@@ -111,7 +112,7 @@ msgstr "Om du behöver hjälp eller har en ny funktionsförfrågan, låt oss vet
 
 #: core/Legacy/Util.php:188
 msgid "Request Support"
-msgstr "Begär support"
+msgstr "Begär Stöd"
 
 #: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
@@ -119,7 +120,7 @@ msgstr "Detaljerad dokumentation finns också på pluginens webbplats."
 
 #: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
-msgstr "Visa kunskapsbas"
+msgstr "Visa Kunskapsbas"
 
 #: core/Plugin.php:104
 #: modules/settings/settings.php:134
@@ -257,47 +258,47 @@ msgstr "Ta bort"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
-msgstr "Antal externa länkar i innehållet"
+msgstr "Antal externa länkar i innehåll"
 
 #: core/Requirement/External_links.php:44
 #, php-format
 msgid "Minimum of %d external link in content"
-msgstr "Minst %d extern länk i innehållet"
+msgstr "Minst %d extern länk i innehåll"
 
 #: core/Requirement/External_links.php:45
 #, php-format
 msgid "Minimum of %d external links in content"
-msgstr "Minst %d externa länkar i innehållet"
+msgstr "Minst %d externa länkar i innehåll"
 
 #: core/Requirement/External_links.php:46
 #, php-format
 msgid "Maximum of %d external link in content"
-msgstr "Maximalt %d extern länk i innehållet"
+msgstr "Maximalt %d extern länk i innehåll"
 
 #: core/Requirement/External_links.php:47
 #, php-format
 msgid "Maximum of %d external links in content"
-msgstr "Maximalt %d externa länkar i innehållet"
+msgstr "Maximalt %d externa länkar i innehåll"
 
 #: core/Requirement/External_links.php:48
 #, php-format
 msgid "%d external link in content"
-msgstr "%d extern länk i innehållet"
+msgstr "%d extern länk i innehåll"
 
 #: core/Requirement/External_links.php:49
 #, php-format
 msgid "%d external links in content"
-msgstr "%d externa länkar i innehållet"
+msgstr "%d externa länkar i innehåll"
 
 #: core/Requirement/External_links.php:50
 #, php-format
 msgid "Between %d and %d external links in content"
-msgstr "Mellan %d och %d externa länkar i innehållet"
+msgstr "Mellan %d och %d externa länkar i innehåll"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "Utvald bild är tillagd"
+msgstr "Utvald bild har lagts till"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
@@ -337,17 +338,17 @@ msgstr "Maximalt %d tecken i utdrag"
 #: core/Requirement/Filled_excerpt.php:48
 #, php-format
 msgid "%d character in excerpt"
-msgstr "%d tecken i utdrag"
+msgstr "%d tecken i utdraget"
 
 #: core/Requirement/Filled_excerpt.php:49
 #, php-format
 msgid "%d characters in excerpt"
-msgstr "%d tecken i utdrag"
+msgstr "%d tecken i utdraget"
 
 #: core/Requirement/Filled_excerpt.php:50
 #, php-format
 msgid "Between %d and %d characters in excerpt"
-msgstr "Mellan %d och %d tecken i utdrag"
+msgstr "Mellan %d och %d tecken i utdraget"
 
 #: core/Requirement/Image_alt.php:44
 #: core/Requirement/Image_alt.php:45
@@ -396,42 +397,42 @@ msgstr "Mellan %d och %d tecken i Alt-text"
 
 #: core/Requirement/Internal_links.php:43
 msgid "Number of internal links in content"
-msgstr "Antal interna länkar i innehåll"
+msgstr "Antal interna länkar i innehållet"
 
 #: core/Requirement/Internal_links.php:44
 #, php-format
 msgid "Minimum of %d internal link in content"
-msgstr "Minst %d intern länk i innehåll"
+msgstr "Minst %d intern länk i innehållet"
 
 #: core/Requirement/Internal_links.php:45
 #, php-format
 msgid "Minimum of %d internal links in content"
-msgstr "Minst %d interna länkar i innehåll"
+msgstr "Minst %d interna länkar i innehållet"
 
 #: core/Requirement/Internal_links.php:46
 #, php-format
 msgid "Maximum of %d internal link in content"
-msgstr "Maximalt %d intern länk i innehåll"
+msgstr "Maximalt %d intern länk i innehållet"
 
 #: core/Requirement/Internal_links.php:47
 #, php-format
 msgid "Maximum of %d internal links in content"
-msgstr "Maximalt %d interna länkar i innehåll"
+msgstr "Maximalt %d interna länkar i innehållet"
 
 #: core/Requirement/Internal_links.php:48
 #, php-format
 msgid "%d internal link in content"
-msgstr "%d intern länk i innehåll"
+msgstr "%d intern länk i innehållet"
 
 #: core/Requirement/Internal_links.php:49
 #, php-format
 msgid "%d internal links in content"
-msgstr "%d interna länkar i innehåll"
+msgstr "%d interna länkar i innehållet"
 
 #: core/Requirement/Internal_links.php:50
 #, php-format
 msgid "Between %d and %d internal links in content"
-msgstr "Mellan %d och %d interna länkar i innehåll"
+msgstr "Mellan %d och %d interna länkar i innehållet"
 
 #: core/Requirement/Openai_item.php:69
 #: core/Requirement/Openai_item.php:70, fuzzy
@@ -445,11 +446,11 @@ msgstr "Ange OpenAI-uppgiftsprompt"
 
 #: core/Requirement/Openai_item.php:286
 msgid "An error occured."
-msgstr "Ett fel uppstod."
+msgstr "Ett fel inträffade."
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
-msgstr "Valideringsfel. Vänligen ladda om denna sida och försök igen."
+msgstr "Valideringsfel. Vänligen ladda om den här sidan och försök igen."
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
@@ -470,7 +471,7 @@ msgstr "API-fel: %1s."
 
 #: core/Requirement/Openai_item.php:380
 msgid "See the full response."
-msgstr "Se det fullständiga svaret."
+msgstr "Se hela svaret."
 
 #: core/Requirement/Openai_item.php:401
 msgid "Invalid response"
@@ -565,7 +566,7 @@ msgstr "Minst %d "
 #: core/Requirement/Taxonomies_count.php:54
 #, php-format
 msgid "Maximum of %d "
-msgstr "Maximalt %d "
+msgstr "Maximalt antal %d "
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
@@ -581,42 +582,42 @@ msgstr "Mellan %d och %d "
 #: core/Requirement/Title_count.php:40
 #: core/Requirement/Title_count.php:41
 msgid "Number of characters in title"
-msgstr "Antal tecken i titel"
+msgstr "Antal tecken i titeln"
 
 #: core/Requirement/Title_count.php:42
 #, php-format
 msgid "Minimum of %d character in title"
-msgstr "Minst %d tecken i titel"
+msgstr "Minst %d tecken i titeln"
 
 #: core/Requirement/Title_count.php:43
 #, php-format
 msgid "Minimum of %d characters in title"
-msgstr "Minst %d tecken i titel"
+msgstr "Minst %d tecken i titeln"
 
 #: core/Requirement/Title_count.php:44
 #, php-format
 msgid "Maximum of %d character in title"
-msgstr "Maximalt %d tecken i titel"
+msgstr "Maximalt antal %d tecken i titeln"
 
 #: core/Requirement/Title_count.php:45
 #, php-format
 msgid "Maximum of %d characters in title"
-msgstr "Maximalt %d tecken i titel"
+msgstr "Maximalt antal %d tecken i titeln"
 
 #: core/Requirement/Title_count.php:46
 #, php-format
 msgid "%d character in title"
-msgstr "%d tecken i titel"
+msgstr "%d tecken i titeln"
 
 #: core/Requirement/Title_count.php:47
 #, php-format
 msgid "%d characters in title"
-msgstr "%d tecken i titel"
+msgstr "%d tecken i titeln"
 
 #: core/Requirement/Title_count.php:48
 #, php-format
 msgid "Between %d and %d characters in title"
-msgstr "Mellan %d och %d tecken i titel"
+msgstr "Mellan %d och %d tecken i titeln"
 
 #: core/Requirement/Validate_links.php:65
 #: core/Requirement/Validate_links.php:66
@@ -625,7 +626,7 @@ msgstr "Alla länkar använder ett giltigt format"
 
 #: core/Requirement/Words_count.php:43
 msgid "Number of words in content"
-msgstr "Antal ord i innehåll"
+msgstr "Antal ord i innehållet"
 
 #: core/Requirement/Words_count.php:44
 #, php-format
@@ -694,9 +695,9 @@ msgstr "Utvald bild"
 msgid "Links"
 msgstr "Länkar"
 
-#: core/Utils/FieldsTabs.php:53, fuzzy
+#: core/Utils/FieldsTabs.php:53
 msgid "Permalink"
-msgstr "Permalink"
+msgstr "Permalänk"
 
 #: core/Utils/FieldsTabs.php:57
 msgid "Categories"
@@ -708,13 +709,13 @@ msgstr "Taggar"
 
 #: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
-msgstr "Taxonomier"
+msgstr "Taxonomies"
 
 #: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
 msgstr "Tillgänglighet"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -745,11 +746,11 @@ msgstr "Vänligen se till att lägga till ett namn för alla anpassade uppgifter
 
 #: modules/checklists/checklists.php:732
 msgid "Rename task label"
-msgstr "Ändra uppgiftsetikett"
+msgstr "Byt namn på uppgiftsetikett"
 
 #: modules/checklists/checklists.php:736
 msgid "Label for the Checklists screen"
-msgstr "Etikett för checklistor-skärmen"
+msgstr "Etikett för Checklists-skärmen"
 
 #: modules/checklists/checklists.php:740
 msgid "Leave empty to use the default WP Admin label"
@@ -761,7 +762,7 @@ msgstr "Etikett för inläggsredigeringsskärmen"
 
 #: modules/checklists/checklists.php:748
 msgid "Leave empty to use the default editing screen label"
-msgstr "Lämna tomt för att använda standardetikett för redigeringsskärmen"
+msgstr "Lämna tomt för att använda standardredigeringsskärmsetikett"
 
 #: modules/checklists/checklists.php:752
 msgid "Preview in editing screen:"
@@ -801,7 +802,7 @@ msgstr "Rensa innehåll"
 
 #: modules/checklists/checklists.php:782
 msgid "Is this content clear and easy to read?"
-msgstr "Är detta innehåll klart och lätt att läsa?"
+msgstr "Är detta innehåll tydligt och lättläst?"
 
 #: modules/checklists/checklists.php:785
 msgid "Friendly Tone Content"
@@ -871,7 +872,7 @@ msgstr "Är du säker på att du vill uppdatera det publicerade inlägget ändå
 
 #: modules/checklists/checklists.php:969
 msgid "Please complete the following tasks before publishing:"
-msgstr "Vänligen slutför följande uppgifter innan publicering:"
+msgstr "Vänligen slutför följande uppgifter innan du publicerar:"
 
 #: modules/checklists/checklists.php:973
 msgid "Please complete the following tasks before updating the published post:"
@@ -886,7 +887,7 @@ msgstr "Inte nödvändigt, men viktigt: "
 
 #: modules/checklists/checklists.php:987
 msgid "One or more items in the checklist are not completed"
-msgstr "Ett eller flera objekt i checklistan är inte slutförda"
+msgstr "En eller flera objekt i checklistan är inte slutförda"
 
 #: modules/checklists/checklists.php:1024
 #, php-format
@@ -916,7 +917,7 @@ msgstr "Uppgift"
 
 #: modules/checklists/checklists.php:1198
 msgid "Disabled, Recommended or Required"
-msgstr "Avaktiverad, Rekommenderad eller Obligatorisk"
+msgstr "Inaktiverad, Rekommenderad eller Obligatorisk"
 
 #: modules/checklists/checklists.php:1199
 msgid "Options"
@@ -957,7 +958,7 @@ msgstr "Bredd på utvald bild"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "H1, H2, H3 etc tags are used in logical order"
-msgstr "H1, H2, H3 etc. taggar används i logisk ordning"
+msgstr "H1, H2, H3 osv. taggar används i logisk ordning"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
@@ -973,7 +974,7 @@ msgstr "Antal ljudobjekt i innehållet"
 
 #: modules/checklists/pro-requirements.php:94
 msgid "Number of video items in content"
-msgstr "Antal videobjekt i innehållet"
+msgstr "Antal videoobjekt i innehållet"
 
 #: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
@@ -1013,7 +1014,7 @@ msgstr "Tabeller har en rubrikrad"
 
 #: modules/checklists/pro-requirements.php:170
 msgid "Check the \"Allow backorders?\" box"
-msgstr "Kontrollera rutan \"Tillåt beställningar på backorder?\""
+msgstr "Kontrollera rutan \"Tillåt backorders?\""
 
 #: modules/checklists/pro-requirements.php:178
 msgid "Select some products for \"Cross-sells\""
@@ -1057,7 +1058,7 @@ msgstr "Markera rutan \"Såld individuellt\""
 
 #: modules/checklists/pro-requirements.php:258
 msgid "Select some products for \"Upsells\""
-msgstr "Välj några produkter för \"Merförsäljning\""
+msgstr "Välj några produkter för \"Upsells\""
 
 #: modules/checklists/pro-requirements.php:266
 msgid "Check the \"Virtual\" box"
@@ -1083,7 +1084,7 @@ msgstr "Om"
 
 #: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
-msgstr "PublishPress Checklists Dokumentation"
+msgstr "Dokumentation för PublishPress Checklists"
 
 #: modules/checklists/templates/footer.php:30
 msgid "Documentation"
@@ -1113,7 +1114,7 @@ msgstr "Pro-funktion"
 #: modules/checklists/templates/global-checklists.php:165
 #, php-format
 msgid "No %s requirements for this post type."
-msgstr "Inga %s krav för den här inläggstypen."
+msgstr "Inga %s krav för denna post type."
 
 #: modules/checklists/templates/global-checklists.php:183
 msgid "New Item"
@@ -1133,7 +1134,7 @@ msgstr ""
 
 #: modules/checklists/templates/global-checklists.php:203
 msgid "Add OpenAI Prompt task"
-msgstr "Lägg till OpenAI Prompt-uppgift"
+msgstr "Lägg till OpenAI-promptuppgift"
 
 #: modules/checklists/templates/global-checklists.php:210
 msgid "The prompt should be in form of a question."
@@ -1145,7 +1146,7 @@ msgstr "Denna funktion kräver en OpenAI API-nyckel."
 
 #: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
-msgstr "Latinska tecken i permalink"
+msgstr "Latinska tecken i permalänk"
 
 #: modules/permalinks/permalinks.php:65
 msgid "Permalinks"
@@ -1177,8 +1178,8 @@ msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
-"Är du säker på att du vill återställa alla omdöpta checklistobjekt till "
-"sina standardetiketter? Denna åtgärd kan inte ångras."
+"Är du säker på att du vill återställa alla omdöpta checklistapunkter till "
+"deras standardetiketter? Denna åtgärd kan inte ångras."
 
 #: modules/settings/settings.php:156
 msgid "Resetting..."
@@ -1195,7 +1196,7 @@ msgstr "Funktioner"
 
 #: modules/settings/settings.php:321
 msgid "Feel free to select only the features you need."
-msgstr "Känn dig fri att välja endast de funktioner du behöver."
+msgstr "Känn dig fri att endast välja de funktioner du behöver."
 
 #: modules/settings/settings.php:329
 msgid "Enabled features"
@@ -1203,7 +1204,7 @@ msgstr "Aktiverade funktioner"
 
 #: modules/settings/settings.php:384
 msgid "There are no PublishPress modules registered"
-msgstr "Det finns inga PublishPress-moduler registrerade"
+msgstr "Det finns inga registrerade PublishPress-moduler"
 
 #: modules/settings/settings.php:480
 #, php-format
@@ -1228,7 +1229,7 @@ msgstr "Markera misslyckade block i redigeraren:"
 
 #: modules/settings/settings.php:821
 msgid "Delete data on uninstall:"
-msgstr "Ta bort data vid avinstallation:"
+msgstr "Radera data vid avinstallation:"
 
 #: modules/settings/settings.php:830
 msgid "Enable Status Filter:"
@@ -1236,19 +1237,19 @@ msgstr "Aktivera statusfilter:"
 
 #: modules/settings/settings.php:840
 msgid "Enable Duplicate Checklists:"
-msgstr "Aktivera dubblettkontrollistor:"
+msgstr "Aktivera duplicerade checklistor:"
 
 #: modules/settings/settings.php:850
 msgid "Show Checklists column in post lists:"
-msgstr "Visa kolumn för checklistor i inläggslistor:"
+msgstr "Visa kolumnen för checklistor i inläggslistor:"
 
 #: modules/settings/settings.php:860
 msgid "Enable Taxonomy Filter:"
-msgstr "Aktivera taksonomifilter:"
+msgstr "Aktivera taxonomifilter:"
 
 #: modules/settings/settings.php:879
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
-msgstr "Inaktivera alternativet \"Status\" när du använder \"Snabbredigering\":"
+msgstr "Inaktivera \"Status\"-alternativet när du använder \"Snabbredigering\":"
 
 #: modules/settings/settings.php:887
 msgid "Disable \"Quick Edit\" completely:"
@@ -1256,43 +1257,43 @@ msgstr "Inaktivera \"Snabbredigering\" helt:"
 
 #: modules/settings/settings.php:895
 msgid "Disable \"Publish\" button:"
-msgstr "Inaktivera \"Publicera\" knapp:"
+msgstr "Inaktivera \"Publicera\"-knappen:"
 
 #: modules/settings/settings.php:913
 msgid "Complete Icon:"
-msgstr "Fullständig ikon:"
+msgstr "Komplett ikon:"
 
 #: modules/settings/settings.php:921
 msgid "Incomplete Icon:"
-msgstr "Ofullständig ikon:"
+msgstr "Inkomplett ikon:"
 
 #: modules/settings/settings.php:929
 msgid "Required Complete Color:"
-msgstr "Obligatorisk färg för fullständig:"
+msgstr "Obligatorisk komplett färg:"
 
 #: modules/settings/settings.php:937
 msgid "Required Incomplete Color:"
-msgstr "Obligatorisk färg för ofullständig:"
+msgstr "Obligatorisk inkomplett färg:"
 
 #: modules/settings/settings.php:945
 msgid "Required Asterisk Color:"
-msgstr "Obligatorisk färg för asterisk:"
+msgstr "Obligatorisk asteriskfärg:"
 
 #: modules/settings/settings.php:953
 msgid "Recommended Complete Color:"
-msgstr "Rekommenderad färg för fullständig:"
+msgstr "Rekommenderad komplett färg:"
 
 #: modules/settings/settings.php:961
 msgid "Recommended Incomplete Color:"
-msgstr "Rekommenderad färg för ofullständig:"
+msgstr "Rekommenderad inkomplett färg:"
 
 #: modules/settings/settings.php:969
-msgid "Enable rename label in editor panel:"
-msgstr "Aktivera döp om etikett i redigerarpanelen:"
+msgid "Rename task labels:"
+msgstr "Byt namn på uppgiftsetiketter:"
 
 #: modules/settings/settings.php:977
-msgid "Checklist item sort order:"
-msgstr "Sorteringsordning för checklistaobjekt:"
+msgid "Checklist task sort order:"
+msgstr "Sorteringsordning för checklistauppgifter:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1311,8 +1312,8 @@ msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr ""
-"Detta gör att uppgifter kan inaktiveras för specifika statusar såsom "
-"\"Utkast\" eller \"Publicerad."
+"Detta gör att uppgifter kan inaktiveras för specifika statusar som "
+"\"Utkast\" eller \"Publicerad\"."
 
 #: modules/settings/settings.php:1083
 msgid "This allows users to duplicate existing checklist tasks."
@@ -1332,7 +1333,7 @@ msgid ""
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
 "Detta gör att uppgifter kan inaktiveras för inlägg med specifika "
-"taksonomitermer. Gå till fliken \"Inläggstyper\" för att välja termer."
+"taxonomiterm. Gå till fliken \"Inläggstyper\" för att välja termer."
 
 #: modules/settings/settings.php:1148
 msgid ""
@@ -1355,8 +1356,8 @@ msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr ""
-"När det är aktiverat kommer all PublishPress Checklists-data att tas bort "
-"om plugin-programmet avinstalleras."
+"När det är aktiverat kommer all PublishPress Checklists-data att raderas om "
+"pluginet avinstalleras."
 
 #: modules/settings/settings.php:1209
 msgid "This will show \"Exclude User Roles\" options."
@@ -1376,7 +1377,7 @@ msgid ""
 "\"manage_options\" capability."
 msgstr ""
 "Detta kommer att inaktivera \"Snabbredigera\" för alla användare utom de "
-"med \"manage_options\"-behörighet."
+"med \"manage_options\"-behörigheten."
 
 #: modules/settings/settings.php:1272
 msgid ""
@@ -1384,7 +1385,7 @@ msgid ""
 "not met."
 msgstr ""
 "Detta kommer att inaktivera \"Publicera\"-knappen när checklistkraven inte "
-"uppfylls."
+"är uppfyllda."
 
 #: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
@@ -1428,16 +1429,18 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Ange ett Dashicons klassnamn (t.ex. dashicons-no, dashicons-dismiss). "
 
 #: modules/settings/settings.php:1514
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr "Aktivera anpassade omdömen i panelen för checklistredigeraren."
+msgid "Allow admins to rename task labels for the post editor."
+msgstr ""
+"Tillåt administratörer att byta namn på uppgiftsetiketter för inläggets "
+"redigerare."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
 msgstr "Standard"
 
 #: modules/settings/settings.php:1533
-msgid "Required on top and recommended below"
-msgstr "Obligatorisk högst upp och rekommenderad nedan"
+msgid "Required on top and Recommended below"
+msgstr "Obligatoriska högst upp och Rekommenderade nedan"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"
@@ -1449,7 +1452,7 @@ msgid ""
 "screen back to their default labels."
 msgstr ""
 "Detta kommer att återställa alla omdöpta checklistetiketter för WP Admin "
-"och redigeringsskärmen tillbaka till sina standardetiketter."
+"och redigeringsskärmen tillbaka till deras standardetiketter."
 
 #: modules/settings/settings.php:1568
 msgid "Security check failed."
@@ -1481,12 +1484,12 @@ msgstr "Minst %d tecken i Yoast SEO fokusnyckelord"
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
-msgstr "Max %d tecken i Yoast SEO fokusnyckelord"
+msgstr "Maximalt %d tecken i Yoast SEO fokusnyckelord"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
-msgstr "Max %d tecken i Yoast SEO fokusnyckelord"
+msgstr "Maximalt %d tecken i Yoast SEO fokusnyckelord"
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
@@ -1506,12 +1509,12 @@ msgstr "Mellan %d och %d tecken i Yoast SEO fokusnyckelord"
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:39
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
-msgstr "Antal tecken i Yoast SEO meta beskrivning"
+msgstr "Antal tecken i Yoast SEO meta-beskrivning"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
-msgstr "Minst %d tecken i Yoast SEO meta beskrivning"
+msgstr "Minst %d tecken i Yoast SEO meta-beskrivning"
 
 #: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 #, php-format
