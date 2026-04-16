@@ -12,17 +12,18 @@
   "config": {
     "preferred-install": "dist",
     "allow-plugins": {
-            "publishpress/dev-workspace": true,
-            "php-http/discovery": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
-        }
+      "publishpress/dev-workspace": true,
+      "php-http/discovery": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true
+    }
   },
   "require": {
     "php": ">=7.2.5"
   },
   "require-dev": {
-    "publishpress/dev-workspace": "^1.0"
+    "publishpress/dev-workspace": "^1.0",
+    "symfony/cache": "~7.3.0"
   },
   "minimum-stability": "stable",
   "extra": {
