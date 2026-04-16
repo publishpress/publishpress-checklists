@@ -1,6 +1,17 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.28.0] - 17 April, 2026
+
+- Added: Add color option for aesterisk #1117
+- Added: New setting to sort the checklist in editing screen #1116
+- Added: Failed checklists will highlight the specific blocks #1127
+- Fixed: Pro Promo has some non-existent checklists #1142
+- Changed: Update readme file from WordPress.org #1137
+- Changed: Rename some label on setting page #1125
+- Changed: Gutenberg panel now use Icon instead of text #1135
+- Changed: Migrate to shared dev-workpace v6 #1131
+
 [2.27.0] - 26 March, 2026
 
 - Added: Allow rename label on post editing screen

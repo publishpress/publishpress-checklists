@@ -1,932 +1,1366 @@
+# Copyright (C) 2026 PublishPress
+# This file is distributed under the same license as the PublishPress Checklists Free plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/publishpress-"
-"checklists\n"
-"POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2025-12-10 18:01+0000\n"
-"Last-Translator: Anderson <anderson@publishpress.com>\n"
-"Language-Team: Hebrew <https://weblate.publishpress.com/projects/"
-"publishpress-checklists/publishpress-checklists/he/>\n"
-"Language: he\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Hebrew "
+"<https://weblate.publishpress.com/projects/publishpress-checklists/"
+"publishpress-checklists/he/>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
+"PO-Revision-Date: 2026-04-16 15:53+0000\n"
 "X-Generator: Weblate 5.14.3\n"
+"X-Domain: publishpress-checklists\n"
+"n % 10 == 0) ? 2 : 3));\n"
+"Language: he_IL\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: publishpress-checklists.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,"
+"2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__"
+"ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 ? 0 : (n == 2 ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3)));\n"
 
+#: publishpress-checklists.php:4
 #. Plugin Name of the plugin
-#. Plugin Name of the plugin
-msgid "PublishPress Checklists"
-msgstr "PublishPress Checklists"
+msgid "PublishPress Checklists Free"
+msgstr "PublishPress Checklists Free"
 
+#: publishpress-checklists.php:5, fuzzy
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
+#: publishpress-checklists.php:6
 #. Description of the plugin
 msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr "עם PublishPress Checklists, אתה יכול לבחור דרישות פרסום לתוכן שלך."
 
+#: publishpress-checklists.php:7
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
 
+#: publishpress-checklists.php:8, fuzzy
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
 
+#: core/API/LabelMapper.php:39
+#: modules/checklists/checklists.php:1222
 msgid "Disabled"
 msgstr "מושבת"
 
+#: core/API/LabelMapper.php:40
+#: modules/checklists/checklists.php:1029
+#: modules/checklists/checklists.php:1223
+#: modules/checklists/checklists.php:1304
+#: modules/checklists/assets/js/gutenberg-panel.jsx:437
 msgid "Recommended"
 msgstr "מומלץ"
 
+#: core/API/LabelMapper.php:41
+#: modules/checklists/checklists.php:1028
+#: modules/checklists/checklists.php:1224
+#: modules/checklists/checklists.php:1303
+#: modules/checklists/assets/js/gutenberg-panel.jsx:436
 msgid "Required"
 msgstr "נדרש"
 
+#: core/Legacy/LegacyPlugin.php:208
 msgid "Please correct your form errors below and try again."
 msgstr "אנא תקן את שגיאות הטופס שלך למטה ונסה שוב."
 
+#: core/Legacy/LegacyPlugin.php:212
+#: modules/settings/settings.php:516
 msgid "Cheatin&#8217; uh?"
 msgstr "רמאות&#8217; אה?"
 
+#: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
 msgstr "אין לך את ההרשאות הנדרשות כדי להשלים פעולה זו."
 
+#: core/Legacy/LegacyPlugin.php:217
 msgid "Post does not exist"
 msgstr "הפוסט אינו קיים"
 
+#: core/Legacy/LegacyPlugin.php:348
+#: core/Plugin.php:103
+#: modules/checklists/checklists.php:110
+#: modules/checklists/checklists.php:1132
+#: modules/checklists/checklists.php:1147
+#: modules/checklists/checklists.php:1300
+#: modules/checklists/assets/js/gutenberg-panel.jsx:411
 msgid "Checklists"
 msgstr "רשימות בדיקה"
 
+#: core/Legacy/Module.php:286, fuzzy
+msgid "PublishPress Checklists"
+msgstr "PublishPress Checklists"
+
+#: core/Legacy/Module.php:289
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "אם אתה אוהב %s בבקשה השאר לנו דירוג %s. תודה!"
 
+#: core/Legacy/Util.php:179
 msgid "Need PublishPress Checklists Support?"
 msgstr "צריך תמיכה ב-PublishPress Checklists?"
 
+#: core/Legacy/Util.php:185
 msgid "If you need help or have a new feature request, let us know."
 msgstr "אם אתה צריך עזרה או יש לך בקשה לתכונה חדשה, תן לנו לדעת."
 
+#: core/Legacy/Util.php:188
 msgid "Request Support"
 msgstr "בקש תמיכה"
 
+#: core/Legacy/Util.php:195
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "תיעוד מפורט זמין גם באתר הפלאגין."
 
+#: core/Legacy/Util.php:198
 msgid "View Knowledge Base"
 msgstr "צפה במאגר הידע"
 
+#: core/Plugin.php:104
+#: modules/settings/settings.php:134
 msgid "Settings"
 msgstr "הגדרות"
 
+#: core/Plugin.php:112
+#: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "שדרוג לגרסה מקצועית"
 
+#: core/Requirement/Approved_by.php:48
 #, php-format
 msgid "Approved by %s"
 msgstr "אושר על ידי %s"
 
+#: core/Requirement/Approved_by.php:49
 msgid "Approved by a user in this role"
 msgstr "אושר על ידי משתמש בתפקיד זה"
 
+#: core/Requirement/Approved_by.php:161
+#: core/Requirement/Base_requirement.php:239
+#: core/Requirement/Prohibited_categories.php:414
+#: core/Requirement/Prohibited_tags.php:383
+#: core/Requirement/Required_categories.php:422
+#: core/Requirement/Required_tags.php:383
+#. translators: 1: custom editor label, 2: selected role names.
+#. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
+#. translators: 1: custom editor label, 2: prohibited category names.
+#. translators: 1: custom editor label, 2: prohibited tag names.
+#. translators: 1: custom editor label, 2: required category names.
+#. translators: 1: custom editor label, 2: required tag names.
+#, fuzzy, php-format
+msgid "%1$s - %2$s"
+msgstr "%1$s - %2$s"
+
+#: core/Requirement/Base_counter.php:385
+#: core/Requirement/Pro_Requirement.php:112
 msgid "Min"
 msgstr "מינימום"
 
+#: core/Requirement/Base_counter.php:393
+#: core/Requirement/Pro_Requirement.php:113
 msgid "Max"
 msgstr "מקסימום"
 
-msgid "Edit label"
-msgstr ""
+#: core/Requirement/Base_requirement.php:268
+#. translators: %d: exact required value.
+#, php-format
+msgid "exact %d"
+msgstr "מדויק %d"
 
+#: core/Requirement/Base_requirement.php:276
+#. translators: %d: minimum required value.
+#, php-format
+msgid "min %d"
+msgstr "מינימום %d"
+
+#: core/Requirement/Base_requirement.php:284
+#. translators: %d: maximum allowed value.
+#, php-format
+msgid "max %d"
+msgstr "מקסימום %d"
+
+#: core/Requirement/Base_requirement.php:291
+#. translators: 1: minimum required value, 2: maximum allowed value.
+#, php-format
+msgid "min %1$d max %2$d"
+msgstr "מינימום %1$d מקסימום %2$d"
+
+#: core/Requirement/Base_requirement.php:346
+msgid "Edit label"
+msgstr "ערוך תווית"
+
+#: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
 msgstr "מספר קטגוריות"
 
+#: core/Requirement/Categories_count.php:48
 #, php-format
 msgid "Minimum of %s category"
 msgstr "מינימום של %s קטגוריה"
 
+#: core/Requirement/Categories_count.php:49
 #, php-format
 msgid "Minimum of %s categories"
 msgstr "מינימום של %s קטגוריות"
 
+#: core/Requirement/Categories_count.php:50
 #, php-format
 msgid "Maximum of %s category"
 msgstr "מקסימום של %s קטגוריה"
 
+#: core/Requirement/Categories_count.php:51
 #, php-format
 msgid "Maximum of %s categories"
 msgstr "מקסימום של %s קטגוריות"
 
+#: core/Requirement/Categories_count.php:52
 #, php-format
 msgid "%s category"
 msgstr "%s קטגוריה"
 
+#: core/Requirement/Categories_count.php:53
 #, php-format
 msgid "%s categories"
 msgstr "%s קטגוריות"
 
+#: core/Requirement/Categories_count.php:54
 #, php-format
 msgid "Between %s and %s categories"
 msgstr "בין %s ל-%s קטגוריות"
 
+#: core/Requirement/Custom_item.php:60
+#: core/Requirement/Custom_item.php:61
+#: core/Utils/FieldsTabs.php:73
 msgid "Custom"
 msgstr "מותאם אישית"
 
+#: core/Requirement/Custom_item.php:62
+#: modules/checklists/checklists.php:768
 msgid "Which roles can mark this task as complete?"
 msgstr "אילו תפקידים יכולים לסמן את המשימה הזו כהושלמה?"
 
+#: core/Requirement/Custom_item.php:81
+#: modules/checklists/checklists.php:775
 msgid "Enter name of custom task"
 msgstr "הזן שם של משימת מותאמת אישית"
 
+#: core/Requirement/Custom_item.php:129
+#: core/Requirement/Openai_item.php:147
+#: modules/checklists/checklists.php:774
 msgid "Remove"
 msgstr "הסר"
 
+#: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
 msgstr "מספר קישורים חיצוניים בתוכן"
 
+#: core/Requirement/External_links.php:44
 #, php-format
 msgid "Minimum of %d external link in content"
 msgstr "מינימום של %d קישור חיצוני בתוכן"
 
+#: core/Requirement/External_links.php:45
 #, php-format
 msgid "Minimum of %d external links in content"
 msgstr "מינימום של %d קישורים חיצוניים בתוכן"
 
+#: core/Requirement/External_links.php:46
 #, php-format
 msgid "Maximum of %d external link in content"
 msgstr "מקסימום של %d קישור חיצוני בתוכן"
 
+#: core/Requirement/External_links.php:47
 #, php-format
 msgid "Maximum of %d external links in content"
 msgstr "מקסימום של %d קישורים חיצוניים בתוכן"
 
+#: core/Requirement/External_links.php:48
 #, php-format
 msgid "%d external link in content"
 msgstr "%d קישור חיצוני בתוכן"
 
+#: core/Requirement/External_links.php:49
 #, php-format
 msgid "%d external links in content"
 msgstr "%d קישורים חיצוניים בתוכן"
 
+#: core/Requirement/External_links.php:50
 #, php-format
 msgid "Between %d and %d external links in content"
 msgstr "בין %d ל-%d קישורים חיצוניים בתוכן"
 
+#: core/Requirement/Featured_image.php:43
+#: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
 msgstr "התמונה המוצגת נוספה"
 
+#: core/Requirement/Featured_image_alt.php:43
+#: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
 msgstr "לתמונה המוצגת יש טקסט חלופי"
 
+#: core/Requirement/Featured_image_caption.php:43
+#: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
 msgstr "לתמונה המוצגת יש כותרת"
 
-msgid "Numbers of characters in excerpt"
+#: core/Requirement/Filled_excerpt.php:42
+#: core/Requirement/Filled_excerpt.php:43
+msgid "Number of characters in excerpt"
 msgstr "מספר תווים בציטוט"
 
+#: core/Requirement/Filled_excerpt.php:44
 #, php-format
 msgid "Minimum of %d character in excerpt"
 msgstr "מינימום של %d תו בציטוט"
 
+#: core/Requirement/Filled_excerpt.php:45
 #, php-format
 msgid "Minimum of %d characters in excerpt"
 msgstr "מינימום של %d תווים בציטוט"
 
+#: core/Requirement/Filled_excerpt.php:46
 #, php-format
 msgid "Maximum of %d character in excerpt"
 msgstr "מקסימום של %d תווים בציטוט"
 
+#: core/Requirement/Filled_excerpt.php:47
 #, php-format
 msgid "Maximum of %d characters in excerpt"
 msgstr "מקסימום של %d תווים בציטוט"
 
+#: core/Requirement/Filled_excerpt.php:48
 #, php-format
 msgid "%d character in excerpt"
 msgstr "%d תו בציטוט"
 
+#: core/Requirement/Filled_excerpt.php:49
 #, php-format
 msgid "%d characters in excerpt"
 msgstr "%d תווים בציטוט"
 
+#: core/Requirement/Filled_excerpt.php:50
 #, php-format
 msgid "Between %d and %d characters in excerpt"
 msgstr "בין %d ל-%d תווים בציטוט"
 
+#: core/Requirement/Image_alt.php:44
+#: core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
 msgstr "כל התמונות כוללות טקסט חלופי"
 
+#: core/Requirement/Image_alt_count.php:42
+#: core/Requirement/Image_alt_count.php:43
 msgid "Number of characters in Alt text"
 msgstr "מספר תווים בטקסט אלטרנטיבי"
 
+#: core/Requirement/Image_alt_count.php:44
 #, php-format
 msgid "Minimum of %d character in Alt text"
 msgstr "מינימום של %d תו בטקסט חלופי"
 
+#: core/Requirement/Image_alt_count.php:45
 #, php-format
 msgid "Minimum of %d characters in Alt text"
 msgstr "מינימום של %d תווים בטקסט חלופי"
 
+#: core/Requirement/Image_alt_count.php:46
 #, php-format
 msgid "Maximum of %d character in Alt text"
 msgstr "מקסימום של %d תווים בטקסט חלופי"
 
+#: core/Requirement/Image_alt_count.php:47
 #, php-format
 msgid "Maximum of %d characters in Alt text"
 msgstr "מקסימום של %d תווים בטקסט חלופי"
 
+#: core/Requirement/Image_alt_count.php:48
 #, php-format
 msgid "%d character in Alt text"
 msgstr "%d תו בטקסט חלופי"
 
+#: core/Requirement/Image_alt_count.php:49
 #, php-format
 msgid "%d characters in Alt text"
 msgstr "%d תווים בטקסט חלופי"
 
+#: core/Requirement/Image_alt_count.php:50
 #, php-format
 msgid "Between %d and %d characters in Alt text"
 msgstr "בין %d ל-%d תווים בטקסט חלופי"
 
+#: core/Requirement/Internal_links.php:43
 msgid "Number of internal links in content"
 msgstr "מספר קישורים פנימיים בתוכן"
 
+#: core/Requirement/Internal_links.php:44
 #, php-format
 msgid "Minimum of %d internal link in content"
 msgstr "מינימום של %d קישור פנימי בתוכן"
 
+#: core/Requirement/Internal_links.php:45
 #, php-format
 msgid "Minimum of %d internal links in content"
 msgstr "מינימום של %d קישורים פנימיים בתוכן"
 
+#: core/Requirement/Internal_links.php:46
 #, php-format
 msgid "Maximum of %d internal link in content"
 msgstr "מקסימום של %d קישור פנימי בתוכן"
 
+#: core/Requirement/Internal_links.php:47
 #, php-format
 msgid "Maximum of %d internal links in content"
 msgstr "מקסימום של %d קישורים פנימיים בתוכן"
 
+#: core/Requirement/Internal_links.php:48
 #, php-format
 msgid "%d internal link in content"
 msgstr "%d קישור פנימי בתוכן"
 
+#: core/Requirement/Internal_links.php:49
 #, php-format
 msgid "%d internal links in content"
 msgstr "%d קישורים פנימיים בתוכן"
 
+#: core/Requirement/Internal_links.php:50
 #, php-format
 msgid "Between %d and %d internal links in content"
 msgstr "בין %d ל-%d קישורים פנימיים בתוכן"
 
+#: core/Requirement/Openai_item.php:69
+#: core/Requirement/Openai_item.php:70, fuzzy
 msgid "Openai"
 msgstr "Openai"
 
+#: core/Requirement/Openai_item.php:100
+#: modules/checklists/checklists.php:776
 msgid "Enter OpenAI task prompt"
 msgstr "הזן פקודת משימה של OpenAI"
 
+#: core/Requirement/Openai_item.php:286
 msgid "An error occured."
 msgstr "אירעה שגיאה."
 
+#: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
-msgstr ""
+msgstr "שגיאת אימות. אנא טען מחדש את הדף הזה ונסה שוב."
 
+#: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
 msgstr "תוכן הפוסט ריק."
 
+#: core/Requirement/Openai_item.php:307
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
-msgstr ""
-"משימות OpenAI דורשות מפתח API. אנא הוסף את מפתח ה-API שלך באזור ההגדרות."
+msgstr "משימות OpenAI דורשות מפתח API. אנא הוסף את מפתח ה-API שלך באזור ההגדרות."
 
+#: core/Requirement/Openai_item.php:362
 #, php-format
 msgid "API Error: %1s."
 msgstr "שגיאת API: %1s."
 
+#: core/Requirement/Openai_item.php:380
 msgid "See the full response."
 msgstr "ראה את התגובה המלאה."
 
+#: core/Requirement/Openai_item.php:401
 msgid "Invalid response"
 msgstr "תגובה לא תקפה"
 
+#: core/Requirement/Prohibited_categories.php:87
 #, php-format
 msgid "Prohibited categories: %s"
 msgstr "קטגוריות אסורות: %s"
 
+#: core/Requirement/Prohibited_categories.php:88
 msgid "Prohibited categories"
 msgstr "קטגוריות אסורות"
 
+#: core/Requirement/Prohibited_tags.php:87
 #, php-format
 msgid "Prohibited tags: %s"
 msgstr "תגים אסורים: %s"
 
+#: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
 msgstr "תגים אסורים"
 
+#: core/Requirement/Required_categories.php:87
 #, php-format
 msgid "Required categories: %s"
 msgstr "קטגוריות נדרשות: %s"
 
+#: core/Requirement/Required_categories.php:88
 msgid "Required categories"
 msgstr "קטגוריות נדרשות"
 
+#: core/Requirement/Required_tags.php:87
 #, php-format
 msgid "Required tags: %s"
 msgstr "תגים נדרשים: %s"
 
+#: core/Requirement/Required_tags.php:88
 msgid "Required tags"
 msgstr "תגים נדרשים"
 
+#: core/Requirement/Tags_count.php:47
 msgid "Number of tags"
 msgstr "מספר תגיות"
 
+#: core/Requirement/Tags_count.php:48
 #, php-format
 msgid "Minimum of %d tag"
 msgstr "מינימום של %d תג"
 
+#: core/Requirement/Tags_count.php:49
 #, php-format
 msgid "Minimum of %d tags"
 msgstr "מינימום של %d תגים"
 
+#: core/Requirement/Tags_count.php:50
 #, php-format
 msgid "Maximum of %d tag"
 msgstr "מקסימום של %d תג"
 
+#: core/Requirement/Tags_count.php:51
 #, php-format
 msgid "Maximum of %d tags"
 msgstr "מקסימום של %d תגים"
 
+#: core/Requirement/Tags_count.php:52
 #, php-format
 msgid "%d tag"
 msgstr "%d תג"
 
+#: core/Requirement/Tags_count.php:53
 #, php-format
 msgid "%d tags"
 msgstr "%d תגים"
 
+#: core/Requirement/Tags_count.php:54
 #, php-format
 msgid "Between %d and %d tags"
 msgstr "בין %d ל-%d תגים"
 
+#: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
 msgstr "מספר של "
 
+#: core/Requirement/Taxonomies_count.php:51
+#: core/Requirement/Taxonomies_count.php:52
 #, php-format
 msgid "Minimum of %d "
 msgstr "מינימום של %d "
 
+#: core/Requirement/Taxonomies_count.php:53
+#: core/Requirement/Taxonomies_count.php:54
 #, php-format
 msgid "Maximum of %d "
 msgstr "מקסימום של %d "
 
-#, php-format
+#: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:56
+#, fuzzy, php-format
 msgid "%d "
 msgstr "%d "
 
+#: core/Requirement/Taxonomies_count.php:57
 #, php-format
 msgid "Between %d and %d "
 msgstr "בין %d ל-%d "
 
+#: core/Requirement/Title_count.php:40
+#: core/Requirement/Title_count.php:41
 msgid "Number of characters in title"
 msgstr "מספר תווים בכותרת"
 
+#: core/Requirement/Title_count.php:42
 #, php-format
 msgid "Minimum of %d character in title"
 msgstr "מינימום של %d תו בכותרת"
 
+#: core/Requirement/Title_count.php:43
 #, php-format
 msgid "Minimum of %d characters in title"
 msgstr "מינימום של %d תווים בכותרת"
 
+#: core/Requirement/Title_count.php:44
 #, php-format
 msgid "Maximum of %d character in title"
 msgstr "מקסימום של %d תווים בכותרת"
 
+#: core/Requirement/Title_count.php:45
 #, php-format
 msgid "Maximum of %d characters in title"
 msgstr "מקסימום של %d תווים בכותרת"
 
+#: core/Requirement/Title_count.php:46
 #, php-format
 msgid "%d character in title"
 msgstr "%d תו בכותרת"
 
+#: core/Requirement/Title_count.php:47
 #, php-format
 msgid "%d characters in title"
 msgstr "%d תווים בכותרת"
 
+#: core/Requirement/Title_count.php:48
 #, php-format
 msgid "Between %d and %d characters in title"
 msgstr "בין %d ל-%d תווים בכותרת"
 
+#: core/Requirement/Validate_links.php:65
+#: core/Requirement/Validate_links.php:66
 msgid "All links use a valid format"
 msgstr "כל הקישורים משתמשים בפורמט תקף"
 
+#: core/Requirement/Words_count.php:43
 msgid "Number of words in content"
 msgstr "מספר מילים בתוכן"
 
+#: core/Requirement/Words_count.php:44
 #, php-format
 msgid "Minimum of %d word in content"
 msgstr "מינימום של %d מילה בתוכן"
 
+#: core/Requirement/Words_count.php:45
 #, php-format
 msgid "Minimum of %d words in content"
 msgstr "מינימום של %d מילים בתוכן"
 
+#: core/Requirement/Words_count.php:46
 #, php-format
 msgid "Maximum of %d word in content"
 msgstr "מקסימום של %d מילה בתוכן"
 
+#: core/Requirement/Words_count.php:47
 #, php-format
 msgid "Maximum of %d words in content"
 msgstr "מקסימום של %d מילים בתוכן"
 
+#: core/Requirement/Words_count.php:48
 #, php-format
 msgid "%d word in content"
 msgstr "%d מילה בתוכן"
 
+#: core/Requirement/Words_count.php:49
 #, php-format
 msgid "%d words in content"
 msgstr "%d מילים בתוכן"
 
+#: core/Requirement/Words_count.php:50
 #, php-format
 msgid "Between %d and %d words in content"
 msgstr "בין %d ל-%d מילים בתוכן"
 
+#: core/Utils/FieldsTabs.php:21
 msgid "Title"
 msgstr "כותרת"
 
+#: core/Utils/FieldsTabs.php:25
 msgid "Content"
 msgstr "תוכן"
 
+#: core/Utils/FieldsTabs.php:29
 msgid "Publish Date / Time"
 msgstr "תאריך / שעה פרסום"
 
+#: core/Utils/FieldsTabs.php:33
 msgid "Approval"
 msgstr "אישור"
 
+#: core/Utils/FieldsTabs.php:37
 msgid "Images"
 msgstr "תמונות"
 
+#: core/Utils/FieldsTabs.php:41
 msgid "Audio / Video"
 msgstr "אודיו / וידאו"
 
+#: core/Utils/FieldsTabs.php:45
 msgid "Featured Image"
 msgstr "תמונה מוצגת"
 
+#: core/Utils/FieldsTabs.php:49
 msgid "Links"
 msgstr "קישורים"
 
+#: core/Utils/FieldsTabs.php:53
 msgid "Permalink"
 msgstr "קישור קבוע"
 
+#: core/Utils/FieldsTabs.php:57
 msgid "Categories"
 msgstr "קטגוריות"
 
+#: core/Utils/FieldsTabs.php:61
 msgid "Tags"
 msgstr "תגים"
 
+#: core/Utils/FieldsTabs.php:65
 msgid "Taxonomies"
 msgstr "טקסונומיות"
 
+#: core/Utils/FieldsTabs.php:69
 msgid "Accessibility"
 msgstr "נגישות"
 
+#: core/Utils/FieldsTabs.php:97
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
+#: core/Utils/FieldsTabs.php:104, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
+#: core/Utils/FieldsTabs.php:111, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
+#: core/Utils/FieldsTabs.php:118
+#: modules/yoastseo/yoastseo.php:68, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
+#: core/Utils/FieldsTabs.php:126, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
+#: modules/checklists/checklists.php:724
 msgid "options cannot be empty."
 msgstr "אפשרויות אינן יכולות להיות ריקות."
 
+#: modules/checklists/checklists.php:728
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr "אנא ודא להוסיף שם לכל המשימות המותאמות אישית."
 
+#: modules/checklists/checklists.php:732
+msgid "Rename task label"
+msgstr "שנה את תווית המשימה"
+
+#: modules/checklists/checklists.php:736
+msgid "Label for the Checklists screen"
+msgstr "תווית למסך הצ'קליסטים"
+
+#: modules/checklists/checklists.php:740
+msgid "Leave empty to use the default WP Admin label"
+msgstr "השאר ריק כדי להשתמש בתווית ברירת המחדל של WP Admin"
+
+#: modules/checklists/checklists.php:744
+msgid "Label for the post editing screen"
+msgstr "תווית למסך עריכת הפוסט"
+
+#: modules/checklists/checklists.php:748
+msgid "Leave empty to use the default editing screen label"
+msgstr "השאר ריק כדי להשתמש בתווית ברירת המחדל של מסך העריכה"
+
+#: modules/checklists/checklists.php:752
+msgid "Preview in editing screen:"
+msgstr "תצוגה מקדימה במסך העריכה:"
+
+#: modules/checklists/checklists.php:756
+msgid "Default checklist label will be used."
+msgstr "תווית הצ'קליסט ברירת המחדל תשתמש."
+
+#: modules/checklists/checklists.php:760
+msgid "Save"
+msgstr "שמור"
+
+#: modules/checklists/checklists.php:764
+msgid "Cancel"
+msgstr "ביטול"
+
+#: modules/checklists/checklists.php:772
 msgid "No results found"
 msgstr "לא נמצאו תוצאות"
 
+#: modules/checklists/checklists.php:773
 msgid "Searching…"
 msgstr "מחפש…"
 
+#: modules/checklists/checklists.php:777
 msgid "Suggested Prompts"
 msgstr "הנחיות מוצעות"
 
+#: modules/checklists/checklists.php:778
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr "מה התגובה הצפויה של OpenAI כדי לסמן את הדרישה כהצלחה?"
 
+#: modules/checklists/checklists.php:781
 msgid "Clear Content"
 msgstr "נקה תוכן"
 
+#: modules/checklists/checklists.php:782
 msgid "Is this content clear and easy to read?"
 msgstr "האם התוכן הזה ברור ונוח לקריאה?"
 
+#: modules/checklists/checklists.php:785
 msgid "Friendly Tone Content"
 msgstr "תוכן בטון ידידותי"
 
+#: modules/checklists/checklists.php:786
 msgid "Is this content tone friendly?"
 msgstr "האם התוכן הזה בעל סגנון ידידותי?"
 
+#: modules/checklists/checklists.php:789
 msgid "Professional Tone Content"
 msgstr "תוכן בטון מקצועי"
 
+#: modules/checklists/checklists.php:790
 msgid "Is this content tone professional?"
 msgstr "האם התוכן הזה בעל סגנון מקצועי?"
 
+#: modules/checklists/checklists.php:793
 msgid "Persuasive Tone Content"
 msgstr "תוכן בטון משכנע"
 
+#: modules/checklists/checklists.php:794
 msgid "Is this content tone persuasive?"
 msgstr "האם התוכן הזה בעל סגנון משכנע?"
 
+#: modules/checklists/checklists.php:797
 msgid "Empathetic Tone Content"
 msgstr "תוכן בטון אמפתי"
 
+#: modules/checklists/checklists.php:798
 msgid "Is this content tone empathetic?"
 msgstr "האם התוכן הזה בעל סגנון אמפתי?"
 
+#: modules/checklists/checklists.php:801
 msgid "Adventurous Tone Content"
 msgstr "תוכן בטון הרפתקני"
 
+#: modules/checklists/checklists.php:802
 msgid "Is this content tone adventurous?"
 msgstr "האם התוכן הזה בעל סגנון הרפתקני?"
 
+#: modules/checklists/checklists.php:805
 msgid "Promotional Tone Content"
 msgstr "תוכן בטון פרסומי"
 
+#: modules/checklists/checklists.php:806
 msgid "Is this content tone promotional?"
 msgstr "האם התוכן הזה בעל סגנון פרסומי?"
 
+#: modules/checklists/checklists.php:872
+#: modules/checklists/checklists.php:960
 msgid "Checklist"
 msgstr "רשימת בדיקה"
 
+#: modules/checklists/checklists.php:956
+#: modules/checklists/checklists.php:1301
 msgid "You don't have to complete any Checklist tasks."
 msgstr "אינך חייב להשלים שום משימות Checklist."
 
+#: modules/checklists/checklists.php:961
 msgid "Are you sure you want to publish anyway?"
 msgstr "האם אתה בטוח שאתה רוצה לפרסם בכל מקרה?"
 
+#: modules/checklists/checklists.php:965
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "האם אתה בטוח שתרצה לעדכן את הפוסט שפורסם בכל מקרה?"
 
+#: modules/checklists/checklists.php:969
 msgid "Please complete the following tasks before publishing:"
 msgstr "אנא השלם את המשימות הבאות לפני פרסום:"
 
+#: modules/checklists/checklists.php:973
 msgid "Please complete the following tasks before updating the published post:"
 msgstr "אנא השלם את המשימות הבאות לפני עדכון הפוסט שפורסם:"
 
+#: modules/checklists/checklists.php:977
+#: modules/checklists/checklists.php:981
 msgid "Not required, but important: "
 msgstr "לא נדרש, אבל חשוב: "
 
+#: modules/checklists/checklists.php:987
 msgid "One or more items in the checklist are not completed"
 msgstr "פריט אחד או יותר ברשימת הבדיקה לא הושלמו"
 
+#: modules/checklists/checklists.php:1024
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "אינך חייב להשלים שום %sמשימות Checklist%s."
 
+#: modules/checklists/checklists.php:1030
+#: modules/checklists/assets/js/gutenberg-panel.jsx:473
 msgid "Check Now"
 msgstr "בדוק עכשיו"
 
+#: modules/checklists/checklists.php:1031
 msgid "Ok"
 msgstr "אוקי"
 
+#: modules/checklists/checklists.php:1032
 msgid "No"
 msgstr "לא"
 
+#: modules/checklists/checklists.php:1033
 msgid "Yes"
 msgstr "כן"
 
+#: modules/checklists/checklists.php:1197
 msgid "Task"
 msgstr "משימה"
 
+#: modules/checklists/checklists.php:1198
 msgid "Disabled, Recommended or Required"
 msgstr "מושבת, מומלץ או נדרש"
 
+#: modules/checklists/checklists.php:1199
 msgid "Options"
 msgstr "אפשרויות"
 
+#: modules/checklists/checklists.php:1200
 msgid "Add custom task"
 msgstr "הוסף משימה מותאמת"
 
+#: modules/checklists/checklists.php:1299
 msgid "Please complete the required(*) checklists task."
 msgstr "אנא השלם את רשימות הבדיקה הנדרשות(*)."
 
+#: modules/checklists/checklists.php:1302
 msgid "required"
 msgstr "נדרש"
 
+#: modules/checklists/checklists.php:1307
+#: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "משימות רשימות בדיקה אינן זמינות בעורכי Elementor"
 
+#: modules/checklists/pro-requirements.php:22
 msgid "All in One SEO Headline Score"
-msgstr ""
+msgstr "ציון כותרת של All in One SEO"
 
+#: modules/checklists/pro-requirements.php:31
 msgid "All in One SEO Score"
-msgstr ""
+msgstr "ציון All in One SEO"
 
+#: modules/checklists/pro-requirements.php:40
 msgid "Featured image height"
-msgstr ""
+msgstr "גובה התמונה המוצגת"
 
+#: modules/checklists/pro-requirements.php:49
 msgid "Featured image width"
-msgstr ""
+msgstr "רוחב התמונה המוצגת"
 
-msgid "Heading in hierarchy"
-msgstr ""
+#: modules/checklists/pro-requirements.php:58
+msgid "H1, H2, H3 etc tags are used in logical order"
+msgstr "תגי H1, H2, H3 וכו' משמשים בסדר לוגי"
 
+#: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
-msgstr ""
+msgstr "מספר התמונות בתוכן"
 
+#: modules/checklists/pro-requirements.php:76
 msgid "Number of characters in image captions"
-msgstr ""
+msgstr "מספר התווים בכותרות התמונות"
 
-msgid "Number of audio in content"
-msgstr ""
+#: modules/checklists/pro-requirements.php:85
+msgid "Number of audio items in content"
+msgstr "מספר פריטי האודיו בתוכן"
 
-msgid "Number of video in content"
-msgstr ""
+#: modules/checklists/pro-requirements.php:94
+msgid "Number of video items in content"
+msgstr "מספר פריטי הווידאו בתוכן"
 
+#: modules/checklists/pro-requirements.php:103
 msgid "Approved by role"
-msgstr ""
+msgstr "מאושר על ידי תפקיד"
 
-msgid "Approved by user"
-msgstr ""
+#: modules/checklists/pro-requirements.php:110
+msgid "Approved by specific user"
+msgstr "מאושר על ידי משתמש ספציפי"
 
+#: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
-msgstr ""
+msgstr "הימנע מתגי כותרת בתוכן"
 
-msgid "Published at exact time"
-msgstr ""
+#: modules/checklists/pro-requirements.php:124
+msgid "Prohibited words"
+msgstr "מילים אסורות"
 
+#: modules/checklists/pro-requirements.php:131
+msgid "Publish time should be at a specific time"
+msgstr "זמן הפרסום צריך להיות בזמן ספציפי"
+
+#: modules/checklists/pro-requirements.php:139
 msgid "Publish time should be in the future"
-msgstr ""
+msgstr "זמן הפרסום צריך להיות בעתיד"
 
+#: modules/checklists/pro-requirements.php:147
 msgid "Rank Math SEO Score"
-msgstr ""
+msgstr "ציון SEO של Rank Math"
 
+#: modules/checklists/pro-requirements.php:156
 msgid "Only one H1 tag in content"
-msgstr ""
+msgstr "רק תג H1 אחד בתוכן"
 
+#: modules/checklists/pro-requirements.php:163
 msgid "Tables have a header row"
-msgstr ""
+msgstr "לטבלאות יש שורת כותרת"
 
+#: modules/checklists/pro-requirements.php:170
 msgid "Check the \"Allow backorders?\" box"
-msgstr ""
+msgstr "סמן את תיבת \"אפשר הזמנות חוזרות?\""
 
+#: modules/checklists/pro-requirements.php:178
 msgid "Select some products for \"Cross-sells\""
-msgstr ""
+msgstr "בחר כמה מוצרים ל\"מכירות חוצות\""
 
+#: modules/checklists/pro-requirements.php:186
 msgid "Discount for the \"Sale price\""
-msgstr ""
+msgstr "הנחה עבור \"מחיר מכירה\""
 
+#: modules/checklists/pro-requirements.php:194
 msgid "Check the \"Downloadable\" box"
-msgstr ""
+msgstr "סמן את תיבת \"ניתן להורדה\""
 
+#: modules/checklists/pro-requirements.php:202
 msgid "Product image"
-msgstr ""
+msgstr "תמונת מוצר"
 
+#: modules/checklists/pro-requirements.php:210
 msgid "Check the \"Manage stock?\" box"
-msgstr ""
+msgstr "סמן את תיבת \"לנהל מלאי?\""
 
+#: modules/checklists/pro-requirements.php:218
 msgid "Enter a \"Regular price\""
-msgstr ""
+msgstr "הכנס \"מחיר רגיל\""
 
+#: modules/checklists/pro-requirements.php:226
 msgid "Enter a \"Sale price\""
-msgstr ""
+msgstr "הכנס \"מחיר מכירה\""
 
+#: modules/checklists/pro-requirements.php:234
 msgid "Schedule the \"Sale price\""
-msgstr ""
+msgstr "תזמן את \"מחיר המכירה\""
 
+#: modules/checklists/pro-requirements.php:242
 msgid "Enter a \"SKU\""
-msgstr ""
+msgstr "הכנס \"SKU\""
 
+#: modules/checklists/pro-requirements.php:250
 msgid "Check the \"Sold individually\" box"
-msgstr ""
+msgstr "סמן את תיבת \"נמכר בנפרד\""
 
+#: modules/checklists/pro-requirements.php:258
 msgid "Select some products for \"Upsells\""
-msgstr ""
+msgstr "בחר כמה מוצרים ל\"מכירות נוספות\""
 
+#: modules/checklists/pro-requirements.php:266
 msgid "Check the \"Virtual\" box"
-msgstr ""
+msgstr "סמן את תיבת \"וירטואלי\""
 
+#: modules/checklists/pro-requirements.php:297
 #, php-format
 msgid "Number of Characters in %s field"
 msgstr "מספר תווים בשדה %s"
 
+#: modules/checklists/pro-requirements.php:310
 #, php-format
 msgid "%s is filled"
 msgstr "%s מלא"
 
+#: modules/checklists/templates/footer.php:23
 msgid "About PublishPress Checklists"
 msgstr "על PublishPress Checklists"
 
+#: modules/checklists/templates/footer.php:23
 msgid "About"
 msgstr "על"
 
+#: modules/checklists/templates/footer.php:30
 msgid "PublishPress Checklists Documentation"
 msgstr "תיעוד של PublishPress Checklists"
 
+#: modules/checklists/templates/footer.php:30
 msgid "Documentation"
 msgstr "תיעוד"
 
+#: modules/checklists/templates/footer.php:37
 msgid "Contact the PublishPress team"
 msgstr "צור קשר עם צוות PublishPress"
 
+#: modules/checklists/templates/footer.php:37
 msgid "Contact"
 msgstr "צור קשר"
 
+#: modules/checklists/templates/global-checklists.php:6
 msgid "Settings saved successfully!"
 msgstr "ההגדרות נשמרו בהצלחה!"
 
+#: modules/checklists/templates/global-checklists.php:12
+#: modules/checklists/templates/global-checklists.php:217
 msgid "Save Changes"
 msgstr "שמור שינויים"
 
+#: modules/checklists/templates/global-checklists.php:152
 msgid "Pro feature"
 msgstr "תכונה פרו"
 
+#: modules/checklists/templates/global-checklists.php:165
 #, php-format
 msgid "No %s requirements for this post type."
 msgstr "אין דרישות %s לסוג פוסט זה."
 
+#: modules/checklists/templates/global-checklists.php:183
 msgid "New Item"
 msgstr "פריט חדש"
 
+#: modules/checklists/templates/global-checklists.php:184
 msgid "Description"
 msgstr "תיאור"
 
+#: modules/checklists/templates/global-checklists.php:196
 msgid ""
-"Custom tasks do not complete automatically. Users must check the box to show "
-"they have completed the task."
+"Custom tasks do not complete automatically. Users must check the box to "
+"show they have completed the task."
 msgstr ""
 "משימות מותאמות אישית אינן מסתיימות אוטומטית. משתמשים חייבים לסמן את התיבה "
 "כדי להראות שהם סיימו את המשימה."
 
+#: modules/checklists/templates/global-checklists.php:203
 msgid "Add OpenAI Prompt task"
 msgstr "הוסף משימת OpenAI Prompt"
 
+#: modules/checklists/templates/global-checklists.php:210
 msgid "The prompt should be in form of a question."
 msgstr "ההנחיה צריכה להיות בצורת שאלה."
 
+#: modules/checklists/templates/global-checklists.php:210
 msgid "This feature requires an OpenAI API Key."
 msgstr "תכונה זו דורשת מפתח API של OpenAI."
 
+#: modules/permalinks/lib/Requirement/ValidChars.php:44
 msgid "Latin characters in permalink"
 msgstr "תווים לטיניים בקישור הקבוע"
 
+#: modules/permalinks/permalinks.php:65
 msgid "Permalinks"
 msgstr "קישורים קבועים"
 
+#: modules/permalinks/permalinks.php:66
 msgid "Define tasks related to permalinks"
 msgstr "הגדר משימות הקשורות לקישורים קבועים"
 
+#: modules/permissions/permissions.php:68
 msgid "Permissions"
 msgstr "הרשאות"
 
+#: modules/permissions/permissions.php:107
 msgid "Exclude User Roles"
-msgstr ""
+msgstr "לשלול תפקידים של משתמשים"
 
+#: modules/reviews/reviews.php:61
 msgid "Reviews"
 msgstr "ביקורות"
 
+#: modules/settings/settings.php:62
+#: modules/settings/settings.php:132
 msgid "Checklists Settings"
 msgstr "הגדרות רשימות בדיקה"
 
+#: modules/settings/settings.php:155
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr ""
+"האם אתה בטוח שברצונך לאפס את כל הפריטים שנקראו מחדש לרשומות ברירת המחדל "
+"שלהם? פעולה זו אינה ניתנת לביטול."
 
+#: modules/settings/settings.php:156
+msgid "Resetting..."
+msgstr "מאפס..."
+
+#: modules/settings/settings.php:157
+#: modules/settings/settings.php:1556
+msgid "Reset All Renamed Labels"
+msgstr "אפס את כל התוויות שנקראו מחדש"
+
+#: modules/settings/settings.php:320
 msgid "Features"
 msgstr "תכונות"
 
+#: modules/settings/settings.php:321
 msgid "Feel free to select only the features you need."
 msgstr "מרגיש חופשי לבחור רק את התכונות שאתה צריך."
 
+#: modules/settings/settings.php:329
 msgid "Enabled features"
 msgstr "תכונות מופעלות"
 
+#: modules/settings/settings.php:384
 msgid "There are no PublishPress modules registered"
 msgstr "אין מודולי PublishPress רשומים"
 
+#: modules/settings/settings.php:480
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr "מושבת כי add_post_type_support('%1$s', '%2$s') כלול בקובץ שהוטען."
 
-msgid "Enable Who Can Ignore:"
-msgstr "אפשר מי יכול להתעלם:"
+#: modules/settings/settings.php:797
+msgid "Enable User Roles Filter:"
+msgstr "אפשר סינון תפקידים של משתמשים:"
 
+#: modules/settings/settings.php:805
 msgid "Show warning icon:"
 msgstr "הצג אייקון אזהרה:"
 
+#: modules/settings/settings.php:813
+msgid "Highlight failing blocks in the editor:"
+msgstr "הדגש בלוקים שנכשלו בעורך:"
+
+#: modules/settings/settings.php:821
 msgid "Delete data on uninstall:"
 msgstr "מחק נתונים בעת הסרה:"
 
+#: modules/settings/settings.php:830
 msgid "Enable Status Filter:"
 msgstr "אפשר מסנן מצב:"
 
+#: modules/settings/settings.php:840
 msgid "Enable Duplicate Checklists:"
 msgstr "אפשר בדיקת רשימות כפולות:"
 
+#: modules/settings/settings.php:850
 msgid "Show Checklists column in post lists:"
 msgstr "הצג עמודת רשימות בדו\"ח הפוסטים:"
 
+#: modules/settings/settings.php:860
 msgid "Enable Taxonomy Filter:"
-msgstr ""
+msgstr "אפשר סינון טקסונומיה:"
 
+#: modules/settings/settings.php:879
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "השבת את אפשרות \"סטטוס\" בעת שימוש ב-\"עריכה מהירה\":"
 
+#: modules/settings/settings.php:887
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "השבת לחלוטין את \"עריכה מהירה\":"
 
+#: modules/settings/settings.php:895
 msgid "Disable \"Publish\" button:"
 msgstr "השבת את כפתור \"פרסם\":"
 
+#: modules/settings/settings.php:913
 msgid "Complete Icon:"
-msgstr ""
+msgstr "אייקון מושלם:"
 
+#: modules/settings/settings.php:921
 msgid "Incomplete Icon:"
-msgstr ""
+msgstr "אייקון לא מושלם:"
 
+#: modules/settings/settings.php:929
 msgid "Required Complete Color:"
-msgstr ""
+msgstr "צבע דרוש מושלם:"
 
+#: modules/settings/settings.php:937
 msgid "Required Incomplete Color:"
-msgstr ""
+msgstr "צבע דרוש לא מושלם:"
 
+#: modules/settings/settings.php:945
+msgid "Required Asterisk Color:"
+msgstr "צבע האסטריסק הנדרש:"
+
+#: modules/settings/settings.php:953
 msgid "Recommended Complete Color:"
-msgstr ""
+msgstr "צבע מומלץ להשלמה:"
 
+#: modules/settings/settings.php:961
 msgid "Recommended Incomplete Color:"
-msgstr ""
+msgstr "צבע מומלץ לחוסר השלמה:"
 
+#: modules/settings/settings.php:969
+msgid "Rename task labels:"
+msgstr "שנה את שמות המשימות:"
+
+#: modules/settings/settings.php:977
+msgid "Checklist task sort order:"
+msgstr "סדר מיון משימות ברשימת בדיקה:"
+
+#: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
 msgstr "מפתח API של OpenAI:"
 
+#: modules/settings/settings.php:1010
 msgid "Reset Renamed Checklist:"
-msgstr ""
+msgstr "אפס רשימת בדיקה ששונה שמה:"
 
+#: modules/settings/settings.php:1029
 msgid "Post types:"
-msgstr ""
+msgstr "סוגי פוסטים:"
 
+#: modules/settings/settings.php:1062
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
-msgstr ""
-"זה מאפשר להשבית משימות עבור סטטוסים ספציפיים כמו \"טיוטה\" או \"פורסם\"."
+msgstr "זה מאפשר להשבית משימות עבור סטטוסים ספציפיים כמו \"טיוטה\" או \"פורסם\"."
 
+#: modules/settings/settings.php:1083
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr ""
+msgstr "זה מאפשר למשתמשים לשכפל משימות קיימות של רשימות בדיקה."
 
+#: modules/settings/settings.php:1105
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr "הוסף עמודה של רשימות בדיקות למסך הפוסטים שמראה כמה דרישות הושלמו."
 
+#: modules/settings/settings.php:1126
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr ""
+"זה מאפשר להשבית משימות לפוסטים עם מונחים ספציפיים במס שפתיים. עבור לטאב "
+"\"סוגי פוסטים\" כדי לבחור את המונחים."
 
+#: modules/settings/settings.php:1148
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "זה יציג אייקון אזהרה בקופסת \"רשימות\" אם הדרישות אינן שלמות."
 
+#: modules/settings/settings.php:1168
 msgid ""
-"When enabled, all PublishPress Checklists data will be deleted if the plugin "
-"is uninstalled."
-msgstr ""
-"כאשר זה מופעל, כל הנתונים של PublishPress Checklists יימחקו אם התוסף יוסר."
+"This will highlight Gutenberg blocks that fail block-specific checklist "
+"tasks."
+msgstr "זה ידגיש בלוקים של גוטנברג שנכשלו במשימות רשימת בדיקה ספציפיות לבלוק."
 
-msgid "This will show \"Who can ignore\" options."
-msgstr "זה יראה את האפשרויות של \"מי יכול להתעלם\"."
+#: modules/settings/settings.php:1188
+msgid ""
+"When enabled, all PublishPress Checklists data will be deleted if the "
+"plugin is uninstalled."
+msgstr "כאשר זה מופעל, כל הנתונים של PublishPress Checklists יימחקו אם התוסף יוסר."
 
+#: modules/settings/settings.php:1209
+msgid "This will show \"Exclude User Roles\" options."
+msgstr "זה יראה אפשרויות \"לשלול תפקידי משתמש\"."
+
+#: modules/settings/settings.php:1230
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -934,6 +1368,7 @@ msgstr ""
 "מומלץ להשבית את אפשרות \"סטטוס\" מכיוון שניתן להשתמש בה כדי להימנע מהדרישות "
 "של רשימות בדיקה."
 
+#: modules/settings/settings.php:1251
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -941,163 +1376,218 @@ msgstr ""
 "זה ישבית את \"עריכה מהירה\" עבור כל המשתמשים מלבד אלה עם יכולת "
 "\"manage_options\"."
 
+#: modules/settings/settings.php:1272
 msgid ""
-"This will disable the \"Publish\" button when checklist requirements are not "
-"met."
+"This will disable the \"Publish\" button when checklist requirements are "
+"not met."
 msgstr "זה ישבית את כפתור \"פרסם\" כאשר דרישות הרשימה לא מולאו."
 
+#: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "הזן את מפתח ה-API שלך כדי להשתמש בפקודות OpenAI במשימות רשימה."
 
+#: modules/settings/settings.php:1364
 msgid "Post Types"
 msgstr "סוגי פוסטים"
 
+#: modules/settings/settings.php:1365
 msgid "General"
 msgstr "כללי"
 
+#: modules/settings/settings.php:1366
 msgid "Publishing Options"
 msgstr "אפשרויות פרסום"
 
+#: modules/settings/settings.php:1367
 msgid "Appearance"
-msgstr ""
+msgstr "מראה"
 
+#: modules/settings/settings.php:1368
 msgid "Integration"
 msgstr "אינטגרציה"
 
+#: modules/settings/settings.php:1369
 msgid "Tools"
 msgstr "כלים"
 
+#: modules/settings/settings.php:1416
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr ""
+msgstr "הזן שם מחלקת Dashicons (למשל, dashicons-yes, dashicons-saved). "
 
+#: modules/settings/settings.php:1417
+#: modules/settings/settings.php:1432
 msgid "View Dashicons"
-msgstr ""
+msgstr "צפה ב-Dashicons"
 
+#: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr ""
+msgstr "הזן שם מחלקת Dashicons (למשל, dashicons-no, dashicons-dismiss). "
 
-msgid "Reset All Custom Labels"
-msgstr ""
+#: modules/settings/settings.php:1514
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "אפשר למנהלי מערכת לשנות את שמות המשימות עבור עורך הפוסטים."
 
+#: modules/settings/settings.php:1532
+msgid "Default"
+msgstr "ברירת מחדל"
+
+#: modules/settings/settings.php:1533
+msgid "Required on top and Recommended below"
+msgstr "נדרש למעלה ומומלץ למטה"
+
+#: modules/settings/settings.php:1534
+msgid "Sort alphabetically"
+msgstr "מיין באלפבית"
+
+#: modules/settings/settings.php:1558
 msgid ""
-"This will reset all renamed checklist items back to their default labels."
+"This will reset all renamed checklist labels for WP Admin and Editing "
+"screen back to their default labels."
 msgstr ""
+"זה יאפס את כל תוויות הרשימה ששונו עבור WP Admin ומסך העריכה חזרה לתוויות "
+"ברירת המחדל שלהן."
 
+#: modules/settings/settings.php:1568
 msgid "Security check failed."
-msgstr ""
+msgstr "בדיקת אבטחה נכשלה."
 
+#: modules/settings/settings.php:1573
 msgid "You do not have permission to perform this action."
-msgstr ""
+msgstr "אין לך הרשאה לבצע פעולה זו."
 
-msgid "All custom labels have been reset successfully."
-msgstr ""
+#: modules/settings/settings.php:1618
+msgid "All renamed labels have been reset successfully."
+msgstr "כל התוויות ששונו הוחזרו בהצלחה."
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
 msgid "Number of characters in Yoast SEO focus keyword"
 msgstr "מספר תווים במילת המפתח הממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
 msgstr "מינימום של %d תו במילת מפתח ממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
 msgstr "מינימום של %d תווים במילת המפתח הממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
 msgstr "מקסימום של %d תווים במילת המפתח הממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
 msgstr "מקסימום של %d תווים במילת מפתח ממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
 msgstr "%d תו במילת המפתח הממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
 msgstr "%d תווים במילת המפתח הממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
 msgstr "בין %d ל-%d תווים במילת מפתח ממוקדת של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:39
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:40
 msgid "Number of characters in Yoast SEO meta description"
 msgstr "מספר תווים בתיאור המטא של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
 msgstr "מינימום של %d תו בתיאור המטא של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
 msgstr "מינימום של %d תו בתיאור המטא של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
 msgstr "מקסימום של %d תווים בתיאור המטה של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
 msgstr "מקסימום של %d תווים בתיאור מטא של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "%d character in Yoast SEO meta description"
 msgstr "%d תו בתיאור המטא של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
 msgstr "%d תווים בתיאור המטא של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
 msgstr "בין %d ל-%d תווים בתיאור המטה של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
 msgid "Minimum Yoast SEO readability score"
 msgstr "ציון קריאות מינימלי של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
 #. translators: %s expands to the readability score
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
 msgid "OK"
 msgstr "אוקי"
 
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
 msgid "Good"
 msgstr "טוב"
 
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
 msgid "Minimum Yoast SEO analysis score"
 msgstr "ציון ניתוח מינימלי של Yoast SEO"
 
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
 #. translators: %s expands to the seo score
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
+#: modules/yoastseo/yoastseo.php:69
 msgid "Define tasks related to Yoast SEO"
 msgstr "הגדר משימות הקשורות ל- Yoast SEO"
 
+#: publishpress-checklists.php:103
 msgid "This plugin can be deleted."
 msgstr "ניתן למחוק את התוסף הזה."
 
+#: publishpress-checklists.php:154
 #, php-format
 msgid ""
-"You're using PublishPress Checklists Free. The Pro version has more features "
-"and support. %sUpgrade to Pro%s"
+"You're using PublishPress Checklists Free. The Pro version has more "
+"features and support. %sUpgrade to Pro%s"
 msgstr ""
 "אתה משתמש ב-PublishPress Checklists Free. הגרסה המקצועית כוללת יותר תכונות "
 "ותמיכה. %sשדרג לגרסה מקצועית%s"
-
-#~ msgid "Who can ignore the task?"
-#~ msgstr "מי יכול להתעלם מהמשימה?"
-
-#~ msgid "Add to these post types:"
-#~ msgstr "הוסף לסוגי הפוסטים האלה:"
-
-#~ msgid "This allows users to duplicate existing checklist task."
-#~ msgstr "זה מאפשר למשתמשים לשכפל משימת רשימה קיימת."
-
-#~ msgid "Validation error. Kindly reload this page and try agai.n"
-#~ msgstr "שגיאת אימות. אנא טען מחדש את הדף הזה וניסה שוב."
