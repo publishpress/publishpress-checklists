@@ -23,7 +23,7 @@
   },
   "require-dev": {
     "publishpress/dev-workspace": "^1.0",
-    "symfony/cache": "~7.3.0"
+    "symfony/cache": "^7.4.12"
   },
   "minimum-stability": "stable",
   "extra": {
