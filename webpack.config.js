@@ -1,6 +1,7 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 let path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     mode: NODE_ENV,
@@ -11,6 +12,19 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'modules/checklists/assets/js'),
         filename: '[name].min.js'
+    },
+    optimization: {
+        minimize: NODE_ENV === 'production',
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,
+                terserOptions: {
+                    format: {
+                        comments: false
+                    }
+                }
+            })
+        ]
     },
     module: {
         rules: [
