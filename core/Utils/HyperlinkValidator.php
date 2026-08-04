@@ -19,7 +19,11 @@ class HyperlinkValidator
      */
     public function isValidLink($link)
     {
-        $link = trim((string)$link);
+        if (!is_string($link)) {
+            return false;
+        }
+
+        $link = trim($link);
 
         if ($link === '') {
             return false;
@@ -29,25 +33,22 @@ class HyperlinkValidator
             return true;
         }
 
+        // tel: and mailto: are opaque: a "#" is part of the value, not a fragment.
+        if ($this->isValidTelephoneLink($link)) {
+            return true;
+        }
+
+        if ($this->isValidMailtoLink($link)) {
+            return true;
+        }
+
         $linkWithoutFragment = $this->removeFragment($link);
 
         if ($this->isValidHttpLink($linkWithoutFragment)) {
             return true;
         }
 
-        if ($this->isValidRelativeLink($linkWithoutFragment)) {
-            return true;
-        }
-
-        if ($this->isValidTelephoneLink($linkWithoutFragment)) {
-            return true;
-        }
-
-        if ($this->isValidMailtoLink($linkWithoutFragment)) {
-            return true;
-        }
-
-        return false;
+        return $this->isValidRelativeLink($linkWithoutFragment);
     }
 
     /**
@@ -77,7 +78,7 @@ class HyperlinkValidator
      */
     private function isValidAnchorLink($link)
     {
-        return (bool)preg_match('/^#[-a-zA-Z0-9@:%._\+~#=]{1,256}$/', $link);
+        return (bool)preg_match('/^#[-a-zA-Z0-9@:%._\+~=]{1,256}$/', $link);
     }
 
     /**
@@ -95,7 +96,18 @@ class HyperlinkValidator
             return false;
         }
 
-        return filter_var($link, FILTER_VALIDATE_URL) !== false;
+        if (filter_var($link, FILTER_VALIDATE_URL) === false) {
+            return false;
+        }
+
+        // FILTER_VALIDATE_URL accepts dotless hosts such as "http://invalidlinkcom".
+        $host = parse_url($link, PHP_URL_HOST);
+
+        if (empty($host)) {
+            return false;
+        }
+
+        return (bool)preg_match('/\.[a-z0-9-]{2,63}$/i', $host);
     }
 
     /**
@@ -105,7 +117,16 @@ class HyperlinkValidator
      */
     private function isValidRelativeLink($link)
     {
-        return (bool)preg_match('/^(?:\/|\.\.?\/|\?)[^\s]*$/', $link);
+        if (preg_match('/^\?[^\s]+$/', $link)) {
+            return true;
+        }
+
+        if (!preg_match('/^(?:\.\.?)?\/[^\s]*$/', $link)) {
+            return false;
+        }
+
+        // Reject paths made only of separators, such as "/", "//" or "../".
+        return trim($link, './') !== '';
     }
 
     /**
@@ -129,18 +150,11 @@ class HyperlinkValidator
             return false;
         }
 
-        $addressAndQuery = substr($link, 7);
+        $addressAndQuery = substr($link, strlen('mailto:'));
         $parts = explode('?', $addressAndQuery, 2);
-        $address = $parts[0];
 
-        if (filter_var($address, FILTER_VALIDATE_EMAIL) === false) {
-            return false;
-        }
-
-        if (!isset($parts[1]) || $parts[1] === '') {
-            return true;
-        }
-
-        return (bool)preg_match('/^[^?\s]+$/', $parts[1]);
+        // Only the address is validated. Query values such as "subject" or "body"
+        // are free text and may legitimately contain spaces and commas.
+        return filter_var($parts[0], FILTER_VALIDATE_EMAIL) !== false;
     }
 }
