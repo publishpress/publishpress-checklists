@@ -93,6 +93,10 @@ class Validate_linksCest
      * @example ["mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News"]
      * @example ["mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here"]
      * @example ["mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&amp;bcc=lastperson@theirsite.com&amp;subject=Big%20News&amp;body=Body-goes-here"]
+     * @example ["#checklist-item"]
+     * @example ["/sample-page"]
+     * @example ["../sample-page"]
+     * @example ["?preview=true"]
      */
     public function getCurrentStatusForContentWithValidLinkReturnsTrue(WpunitTester $I, Example $example)
     {

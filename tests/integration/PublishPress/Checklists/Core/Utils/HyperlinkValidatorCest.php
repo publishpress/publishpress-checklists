@@ -30,6 +30,14 @@ class HyperlinkValidatorCest
      * @example ["mailto:testexample.com?subject=Mail from Our Site"]
      * @example ["mailt:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News"]
      * @example ["mailtosomeone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here"]
+     * @example ["#"]
+     * @example ["/relative path/with spaces"]
+     * @example ["../relative path/with spaces"]
+     * @example ["?invalid query"]
+     * @example ["/"]
+     * @example ["//"]
+     * @example ["../"]
+     * @example ["?"]
      */
     public function isValidLinkWithInvalidLinkReturnsFalse(WpunitTester $I, Example $example)
     {
@@ -59,6 +67,15 @@ class HyperlinkValidatorCest
      * @example ["mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News"]
      * @example ["mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here"]
      * @example ["mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&amp;subject=Big%20News&body=Body-goes-here"]
+     * @example ["#checklist-item"]
+     * @example ["/sample-page"]
+     * @example ["/sample-page?preview=true"]
+     * @example ["../sample-page"]
+     * @example ["./sample-page"]
+     * @example ["?preview=true"]
+     * @example ["//cdn.example.com/image.jpg"]
+     * @example ["https://validlink.com/#section"]
+     * @example ["mailto:test@example.com?subject=Issue #12 from Our Site"]
      */
     public function isValidLinkWithValidLinkReturnsTrue(WpunitTester $I, Example $example)
     {
