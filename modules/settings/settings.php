@@ -637,6 +637,14 @@ if (!class_exists('PPCH_Settings')) {
                 $new_options['show_warning_icon_submit'] = Base_requirement::VALUE_NO;
             }
 
+            if (!isset($new_options['enable_block_highlighting'])) {
+                $new_options['enable_block_highlighting'] = Base_requirement::VALUE_NO;
+            }
+            $new_options['enable_block_highlighting'] =
+                Base_requirement::VALUE_YES === $new_options['enable_block_highlighting']
+                ? Base_requirement::VALUE_YES
+                : Base_requirement::VALUE_NO;
+
             if (!isset($new_options['who_can_ignore_option'])) {
                 $new_options['who_can_ignore_option'] = Base_requirement::VALUE_NO;
             }
