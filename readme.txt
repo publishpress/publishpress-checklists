@@ -68,7 +68,7 @@ Each task on your pre-publish checklist can be configured to meet your site’s 
 ## Audio / Video Tasks ##
 
 * [Number of audio items in content](https://publishpress.com/knowledge-base/number-of-audio-items-in-content/) (Pro version): You can require a maximum and minimum number of audio items for your WordPress posts. This covers native HTML players, WordPress shortcodes, and third-party audio embeds such as SoundCloud, Spotify, Mixcloud, and PocketCasts.
-* [Number of video items in content] (https://publishpress.com/knowledge-base/number-of-video-items-in-content/) (Pro version): you can require a maximum and minimum number of audio items for your WordPress posts. This cover a wide range of video content from self-hosted video to YouTube, Vimeo, VideoPress and more.
+* [Number of video items in content](https://publishpress.com/knowledge-base/number-of-video-items-in-content/) (Pro version): You can require a maximum and minimum number of video items for your WordPress posts. This covers a wide range of video content from self-hosted video to YouTube, Vimeo, VideoPress and more.
 
 ## Featured Image Tasks ##
 
