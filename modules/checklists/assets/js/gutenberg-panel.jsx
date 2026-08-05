@@ -1,10 +1,23 @@
 const { registerPlugin } = wp.plugins;
-const { PluginSidebarMoreMenuItem, PluginSidebar } = wp.editPost;
+const editorComponents = wp.editor || {};
+const editPostComponents = wp.editPost || {};
+const PluginSidebarMoreMenuItem = editorComponents.PluginSidebarMoreMenuItem || editPostComponents.PluginSidebarMoreMenuItem;
+const PluginSidebar = editorComponents.PluginSidebar || editPostComponents.PluginSidebar;
 const { Fragment, Component } = wp.element;
 const { __ } = wp.i18n;
 const { hooks } = wp;
 
 import CheckListIcon from './CheckListIcon.jsx';
+
+const SUPPORTED_RENDERING_MODES = ['post-only', 'template-locked'];
+
+const isSupportedEditorContext = ({ renderingMode, currentPostType, supportedPostTypes }) => {
+    if (renderingMode && !SUPPORTED_RENDERING_MODES.includes(renderingMode)) {
+        return false;
+    }
+
+    return Array.isArray(supportedPostTypes) && supportedPostTypes.includes(currentPostType);
+};
 
 class PPChecklistsPanel extends Component {
     isMounted = false;
@@ -200,15 +213,11 @@ class PPChecklistsPanel extends Component {
     };
 
     isSupportedContext = () => {
-        const renderingMode = this.getEditorRenderingMode();
-        if (renderingMode && renderingMode !== 'post-only') {
-            return false;
-        }
-
-        const supportedPostTypes = Array.isArray(i18n.supportedPostTypes) ? i18n.supportedPostTypes : [];
-        const currentPostType = this.getCurrentPostType();
-
-        return supportedPostTypes.includes(currentPostType);
+        return isSupportedEditorContext({
+            renderingMode: this.getEditorRenderingMode(),
+            currentPostType: this.getCurrentPostType(),
+            supportedPostTypes: i18n.supportedPostTypes,
+        });
     };
 
     updateEditorContext = () => {
