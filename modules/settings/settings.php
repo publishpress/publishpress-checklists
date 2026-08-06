@@ -142,11 +142,18 @@ if (!class_exists('PPCH_Settings')) {
         {
             if ($this->isWhitelistedSettingsView()) {
                 if (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') {
+                    $settingsScriptPath = __DIR__ . '/lib/settings.js';
+                    $settingsScriptVersion = PPCH_VERSION;
+
+                    if (file_exists($settingsScriptPath)) {
+                        $settingsScriptVersion .= '-' . filemtime($settingsScriptPath);
+                    }
+
                     wp_enqueue_script(
                         'ppch-settings',
                         $this->module_url . 'lib/settings.js',
                         ['jquery', 'wp-color-picker'],
-                        PPCH_VERSION
+                        $settingsScriptVersion
                     );
 
                     wp_localize_script('ppch-settings', 'ppchToolsSettings', [
@@ -1538,12 +1545,31 @@ if (!class_exists('PPCH_Settings')) {
 
             $sortOptions = [
                 'default'              => esc_html__('Default', 'publishpress-checklists'),
-                'required_recommended' => esc_html__('Required on top and Recommended below', 'publishpress-checklists'),
-                'alphabetical'         => esc_html__('Sort alphabetically', 'publishpress-checklists'),
+                'required_recommended' => esc_html__('Priority', 'publishpress-checklists'),
+                'alphabetical'         => esc_html__('Alphabetical', 'publishpress-checklists'),
+            ];
+
+            $sortDescriptions = [
+                'default'              => esc_html__(
+                    'Keeps tasks in the order configured on the Checklists screen.',
+                    'publishpress-checklists'
+                ),
+                'required_recommended' => esc_html__(
+                    'Shows Required tasks before Recommended tasks.',
+                    'publishpress-checklists'
+                ),
+                'alphabetical'         => esc_html__(
+                    'Sorts tasks alphabetically by task label.',
+                    'publishpress-checklists'
+                ),
             ];
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<select id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[checklist_items_sort_order]">';
+            echo '<select class="ppch-checklist-items-sort-order"'
+                . ' id="' . esc_attr($id) . '"'
+                . ' name="' . esc_attr($this->module->options_group_name)
+                . '[checklist_items_sort_order]"'
+                . ' aria-describedby="' . esc_attr($id) . '_description">';
 
             foreach ($sortOptions as $optionValue => $optionLabel) {
                 echo '<option value="' . esc_attr($optionValue) . '" ' . selected($value, $optionValue, false) . '>';
@@ -1553,6 +1579,18 @@ if (!class_exists('PPCH_Settings')) {
 
             echo '</select>';
             echo '</label>';
+            echo '<div id="' . esc_attr($id) . '_description" aria-live="polite">';
+
+            foreach ($sortDescriptions as $sortValue => $sortDescription) {
+                $hidden = $value === $sortValue ? '' : ' hidden';
+                echo '<p class="description ppch-sort-order-description"'
+                    . ' data-sort-order="' . esc_attr($sortValue) . '"'
+                    . $hidden . '>';
+                echo esc_html($sortDescription);
+                echo '</p>';
+            }
+
+            echo '</div>';
         }
 
         /**
