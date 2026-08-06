@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Changed: Rename some label on setting page #1125
 - Changed: Gutenberg panel now use Icon instead of text #1135
 - Changed: Migrate to shared dev-workpace v6 #1131
-- Changed: Removed obsolete legacy PublishPress Content Checklist compatibility check #380
 
 [2.27.0] - 26 March, 2026
 
