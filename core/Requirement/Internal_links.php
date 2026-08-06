@@ -66,23 +66,29 @@ class Internal_links extends Base_counter
         $post_content = isset($post->post_content) ? $post->post_content : '';
         $count = count($this->extract_internal_links($post_content));
 
-        $min_value = $option_value[0];
-        $max_value = $option_value[1];
+        $min_value = (int)($option_value[0] ?? 0);
+        $max_value = (int)($option_value[1] ?? 0);
 
-        $status = ($count >= $min_value); // Check if minimum requirement is met.
-
-        // Apply maximum requirement check.
-        // If max_value is 0, count must be exactly 0.
-        // If max_value > 0, count must be less than or equal to max_value.
-        if (isset($max_value)) { // max_value should always be set by Base_counter
-            if ($max_value == 0) {
-                $status = $status && ($count == 0);
-            } else { // max_value > 0
-                $status = $status && ($count <= $max_value);
-            }
+        // Keep the server-side status in sync with check_valid_quantity() in
+        // the editor. A blank maximum is serialized as 0, which means a
+        // minimum-only rule when the configured minimum is greater than 0.
+        if ($min_value === $max_value) {
+            return $count === $min_value;
         }
 
-        return $status;
+        if ($min_value > 0 && $max_value < $min_value) {
+            return $count >= $min_value;
+        }
+
+        if ($min_value > 0 && $max_value > $min_value) {
+            return $count >= $min_value && $count <= $max_value;
+        }
+
+        if ($min_value === 0 && $max_value > $min_value) {
+            return $count <= $max_value;
+        }
+
+        return false;
     }
 
     /**
