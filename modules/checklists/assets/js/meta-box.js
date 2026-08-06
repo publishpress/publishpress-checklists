@@ -1849,13 +1849,16 @@
      * For the Classic Editor
      */
     var $content = $('#content');
-    var lastInternalCount = 0;
+    var lastInternalCount;
     var editor;
+    var boundEditor;
+    var waitingEditor;
+    var initialRefreshPending = true;
 
     /**
      * Get the words count from TinyMCE and update the status of the requirement
      */
-    function update() {
+    function update(force) {
       var text, count;
 
       if ($internalLinksElements.length === 0) {
@@ -1872,9 +1875,7 @@
 
       count = PP_Checklists.extract_internal_links(text).length;
 
-      console.log('[PublishPress Checklists] Internal Links Count:', count);
-
-      if (lastInternalCount === count) {
+      if (!force && lastInternalCount === count) {
         return;
       }
 
@@ -1903,29 +1904,93 @@
       lastInternalCount = count;
     }
 
+    /**
+     * Bind TinyMCE updates once and refresh the requirement when the editor is
+     * ready. The tinymce_loaded event can be fired before or after TinyMCE has
+     * initialized the editor, so handle both lifecycle states.
+     *
+     * @param {Object} editorInstance TinyMCE content editor.
+     * @return {void}
+     */
+    function bindEditor(editorInstance) {
+      if (!editorInstance || editorInstance.id !== 'content') {
+        return;
+      }
+
+      editor = editorInstance;
+
+      if (editor === boundEditor) {
+        update(true);
+        return;
+      }
+
+      boundEditor = editor;
+      waitingEditor = null;
+
+      if (typeof editor.on !== 'function') {
+        update(true);
+        return;
+      }
+
+      editor.on('nodechange keyup', _.debounce(function () {
+        update();
+      }, 500));
+      update(true);
+    }
+
+    /**
+     * Wait for TinyMCE's init event when the editor is not ready yet.
+     *
+     * @param {Object} editorInstance TinyMCE content editor.
+     * @return {void}
+     */
+    function waitForEditor(editorInstance) {
+      if (!editorInstance || editorInstance.id !== 'content') {
+        return;
+      }
+
+      if (editorInstance.initialized) {
+        bindEditor(editorInstance);
+        return;
+      }
+
+      if (editorInstance === waitingEditor) {
+        return;
+      }
+
+      if (editorInstance.onInit && typeof editorInstance.onInit.add === 'function') {
+        waitingEditor = editorInstance;
+        editorInstance.onInit.add(function () {
+          bindEditor(editorInstance);
+        });
+      } else if (typeof editorInstance.on === 'function') {
+        waitingEditor = editorInstance;
+        editorInstance.on('init', function () {
+          bindEditor(editorInstance);
+        });
+      }
+    }
+
     // For the editor.
     $(document).on(PP_Checklists.EVENT_TINYMCE_LOADED, function (event, tinymce) {
-      editor = tinymce.editors['content'];
-
-      if (typeof editor !== 'undefined') {
-        editor.onInit.add(function () {
-          /**
-           * Bind the words count update triggers.
-           *
-           * When a node change in the main TinyMCE editor has been triggered.
-           * When a key has been released in the plain text content editor.
-           */
-
-          if (editor.id !== 'content') {
-            return;
-          }
-
-          editor.on('nodechange keyup', _.debounce(update, 500));
-        });
+      if (tinymce && tinymce.editors) {
+        waitForEditor(tinymce.editors['content']);
       }
     });
 
-    $content.on('input keyup', _.debounce(update, 500));
+    // PP_Checklists.init() can be delayed by SEO plugins. Refresh once on the
+    // first tick after initialization so an eager editor update cannot be
+    // lost before the requirement-state event handler is registered.
+    $(document).on(PP_Checklists.EVENT_TIC, function () {
+      if (initialRefreshPending) {
+        initialRefreshPending = false;
+        update(true);
+      }
+    });
+
+    $content.on('input keyup', _.debounce(function () {
+      update();
+    }, 500));
     update();
   }
 
