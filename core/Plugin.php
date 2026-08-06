@@ -11,8 +11,6 @@
 
 namespace PublishPress\Checklists\Core;
 
-use Exception;
-
 defined('ABSPATH') or die('No direct script access allowed.');
 
 class Plugin
@@ -50,8 +48,6 @@ class Plugin
      */
     public function init()
     {
-        add_action('init', [$this, 'deactivateLegacyPlugin']);
-
         $this->loadTextDomain();
 
         // Initialize the API
@@ -74,27 +70,6 @@ class Plugin
             false,
             dirname(plugin_basename(PPCH_FILE)) . '/languages/'
         );
-    }
-
-    public function deactivateLegacyPlugin()
-    {
-        try {
-            if (!function_exists('get_plugins')) {
-                require_once ABSPATH . 'wp-admin/includes/plugin.php';
-            }
-
-            $all_plugins = get_plugins();
-
-            // Check if Content Checklist is installed. The folder changes sometimes.
-            foreach ($all_plugins as $pluginFile => $data) {
-                if (isset($data['TextDomain']) && 'publishpress-content-checklist' === $data['TextDomain'] && is_plugin_active(
-                        $pluginFile
-                    )) {
-                    deactivate_plugins($pluginFile);
-                }
-            }
-        } catch (Exception $e) {
-        }
     }
 
     public function add_plugin_meta($links, $file)
