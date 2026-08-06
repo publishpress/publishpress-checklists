@@ -25,7 +25,8 @@
   },
   "scripts": {
     "dev": "webpack --watch",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "test:gutenberg": "node --test tests/scripts/gutenberg-block-highlighting.test.js"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4"
