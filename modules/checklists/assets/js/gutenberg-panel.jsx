@@ -19,6 +19,19 @@ const isSupportedEditorContext = ({ renderingMode, currentPostType, supportedPos
     return Array.isArray(supportedPostTypes) && supportedPostTypes.includes(currentPostType);
 };
 
+const getIsPublishSidebarOpened = () => {
+    const editorStore = wp.data.select('core/editor');
+    if (editorStore && typeof editorStore.isPublishSidebarOpened === 'function') {
+        return editorStore.isPublishSidebarOpened();
+    }
+
+    // The selector lived in core/edit-post before WordPress 6.6.
+    const editPostStore = wp.data.select('core/edit-post');
+    return editPostStore && typeof editPostStore.isPublishSidebarOpened === 'function'
+        ? editPostStore.isPublishSidebarOpened()
+        : false;
+};
+
 class PPChecklistsPanel extends Component {
     isMounted = false;
     oldStatus = '';
@@ -136,11 +149,16 @@ class PPChecklistsPanel extends Component {
             } else if (this.currentStatus !== '') {
                 publishing_post = mapStatusPublishAllowed[this.currentStatus] ?? false;
             } else {
-                if (!wp.data.select('core/edit-post').isPublishSidebarOpened() && wp.data.select('core/editor').getEditedPostAttribute('status') !== 'publish' && wp.data.select('core/editor').getCurrentPost()['status'] !== 'publish') {
+                const editorStore = wp.data.select('core/editor');
+                const isPublishSidebarOpened = getIsPublishSidebarOpened();
+                const editedPostStatus = editorStore.getEditedPostAttribute('status');
+                const currentPost = editorStore.getCurrentPost() || {};
+
+                if (!isPublishSidebarOpened && editedPostStatus !== 'publish' && currentPost.status !== 'publish') {
                     publishing_post = false;
-                } else if (wp.data.select('core/edit-post').isPublishSidebarOpened() && wp.data.select('core/editor').getEditedPostAttribute('status') == 'publish') {
+                } else if (isPublishSidebarOpened && editedPostStatus === 'publish') {
                     publishing_post = true;
-                } else if (!wp.data.select('core/edit-post').isPublishSidebarOpened() && wp.data.select('core/editor').getEditedPostAttribute('status') == 'publish') {
+                } else if (!isPublishSidebarOpened && editedPostStatus === 'publish') {
                     publishing_post = true;
                 }
             }

@@ -124,6 +124,28 @@
     },
 
     /**
+     * Returns whether the Gutenberg publish sidebar is open.
+     *
+     * @return {boolean} True if the publish sidebar is open.
+     */
+    get_is_publish_sidebar_opened: function () {
+      if (typeof wp.data === 'undefined') {
+        return false;
+      }
+
+      var editorStore = wp.data.select('core/editor');
+      if (editorStore && typeof editorStore.isPublishSidebarOpened === 'function') {
+        return editorStore.isPublishSidebarOpened();
+      }
+
+      // The selector lived in core/edit-post before WordPress 6.6.
+      var editPostStore = wp.data.select('core/edit-post');
+      return editPostStore && typeof editPostStore.isPublishSidebarOpened === 'function'
+        ? editPostStore.isPublishSidebarOpened()
+        : false;
+    },
+
+    /**
      * Initialize the object and events
      * @return {void}
      */
@@ -183,7 +205,7 @@
               return;
             }
 
-            var isSidebarOpened = wp.data.select('core/edit-post').isPublishSidebarOpened();
+            var isSidebarOpened = this.get_is_publish_sidebar_opened();
 
             if (isSidebarOpened && !this.state.is_validating) {
               this.elems.document.trigger(this.EVENT_VALIDATE_REQUIREMENTS);
@@ -409,7 +431,7 @@
       checkRequirementAction('block');
 
       if (this.is_gutenberg_active()) {
-        this.state.is_publishing = wp.data.select('core/edit-post').isPublishSidebarOpened();
+        this.state.is_publishing = this.get_is_publish_sidebar_opened();
       }
 
       var originalPostStatus = this.elems.original_post_status.val(),
