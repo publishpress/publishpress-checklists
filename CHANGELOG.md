@@ -1,6 +1,22 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.29.0] - 10 August, 2026
+
+- Fixed: Deprecation notices in the Gutenberg editor #1193
+- Fixed: Block highlighting tooltip did not always start correctly #1196
+- Fixed: Internal and external link tasks failed when only a minimum was set #1128
+- Fixed: Internal link task reported a false negative after reloading a Classic Editor post #1190
+- Fixed: Checklists icon did not show on the template screen #1174
+- Fixed: The block highlighter could not be disabled #1178
+- Fixed: Overlapping dropdowns on the Checklists screen #1176
+- Fixed: Link validation for anchor and relative links #1148
+- Changed: Improved the description of the checklist task sort order setting #1179
+- Changed: Removed the legacy plugin compatibility check to improve performance #380
+- Changed: Corrected the text of a checklist item string #1167
+- Changed: Updated dev-workspace and the GitHub workflows #1164
+- Changed: Updated the readme file from WordPress.org #1171
+
 [2.28.0] - 17 April, 2026
 
 - Added: Add color option for aesterisk #1117
