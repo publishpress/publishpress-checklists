@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-04-16 15:53+0000\n"
+"PO-Revision-Date: 2026-08-10 01:26+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Language: ja\n"
@@ -84,7 +84,7 @@ msgstr "公開する前に次のタスクを完了してください。"
 #: core/Legacy/LegacyPlugin.php:212
 #: modules/settings/settings.php:516
 msgid "Cheatin&#8217; uh?"
-msgstr "間違えましたか ?"
+msgstr "許可されていない操作です。"
 
 #: core/Legacy/LegacyPlugin.php:213
 msgid "You do not have necessary permissions to complete this action."
@@ -150,7 +150,7 @@ msgstr "%sが承認"
 
 #: core/Requirement/Approved_by.php:49
 msgid "Approved by a user in this role"
-msgstr "ロールのユーザーによる承認"
+msgstr "権限グループのユーザーによる承認"
 
 #: core/Requirement/Approved_by.php:161
 #: core/Requirement/Base_requirement.php:239
@@ -254,7 +254,7 @@ msgstr "カスタム"
 #: core/Requirement/Custom_item.php:62
 #: modules/checklists/checklists.php:768
 msgid "Which roles can mark this task as complete?"
-msgstr "タスクを完了としてマークできるロールはどれか ?"
+msgstr "※タスクを完了に設定できる権限グループ"
 
 #: core/Requirement/Custom_item.php:81
 #: modules/checklists/checklists.php:775
@@ -304,22 +304,22 @@ msgstr "コンテンツ内に外部リンクは%d件"
 #: core/Requirement/External_links.php:50
 #, php-format
 msgid "Between %d and %d external links in content"
-msgstr "コンテンツ内に外部リンクは%d～%d個"
+msgstr "コンテンツ内の外部リンク数は%d～%d個"
 
 #: core/Requirement/Featured_image.php:43
 #: core/Requirement/Featured_image.php:44
 msgid "Featured image is added"
-msgstr "アイキャッチ画像を追加しました"
+msgstr "アイキャッチ画像を設定済"
 
 #: core/Requirement/Featured_image_alt.php:43
 #: core/Requirement/Featured_image_alt.php:44
 msgid "Featured image has Alt text"
-msgstr "アイキャッチ画像には代替テキストが付いています"
+msgstr "アイキャッチ画像に代替テキストを設定"
 
 #: core/Requirement/Featured_image_caption.php:43
 #: core/Requirement/Featured_image_caption.php:44
 msgid "Featured image has caption"
-msgstr "フィーチャー画像にはキャプションがあります"
+msgstr "アイキャッチ画像の説明文がある"
 
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
@@ -364,7 +364,7 @@ msgstr "抜粋は%d～%d文字"
 #: core/Requirement/Image_alt.php:44
 #: core/Requirement/Image_alt.php:45
 msgid "All images have Alt text"
-msgstr "すべての画像に代替テキストが付いています"
+msgstr "全画像に ALT テキストを設定済"
 
 #: core/Requirement/Image_alt_count.php:42
 #: core/Requirement/Image_alt_count.php:43
@@ -443,7 +443,7 @@ msgstr "コンテンツ内に内部リンクは%d件"
 #: core/Requirement/Internal_links.php:50
 #, php-format
 msgid "Between %d and %d internal links in content"
-msgstr "コンテンツ内に内部リンクは%d～%d個"
+msgstr "コンテンツ内の内部リンク数%d～%d個"
 
 #: core/Requirement/Openai_item.php:69
 #: core/Requirement/Openai_item.php:70, fuzzy
@@ -563,19 +563,19 @@ msgstr "%d～%d個のタグ"
 
 #: core/Requirement/Taxonomies_count.php:50
 msgid "Number of "
-msgstr "制限数 "
+msgstr "制限数: "
 
 #: core/Requirement/Taxonomies_count.php:51
 #: core/Requirement/Taxonomies_count.php:52
 #, php-format
 msgid "Minimum of %d "
-msgstr "最低%d個 "
+msgstr "最低%d個の "
 
 #: core/Requirement/Taxonomies_count.php:53
 #: core/Requirement/Taxonomies_count.php:54
 #, php-format
 msgid "Maximum of %d "
-msgstr "最大%d個 "
+msgstr "最大%d個の "
 
 #: core/Requirement/Taxonomies_count.php:55
 #: core/Requirement/Taxonomies_count.php:56
@@ -586,7 +586,7 @@ msgstr "%d "
 #: core/Requirement/Taxonomies_count.php:57
 #, php-format
 msgid "Between %d and %d "
-msgstr "%dから%dの間 "
+msgstr "%d～%d個の "
 
 #: core/Requirement/Title_count.php:40
 #: core/Requirement/Title_count.php:41
@@ -631,7 +631,7 @@ msgstr "タイトルは%d～%d文字"
 #: core/Requirement/Validate_links.php:65
 #: core/Requirement/Validate_links.php:66
 msgid "All links use a valid format"
-msgstr "全リンクで有効な形式を使用"
+msgstr "全リンクに有効な形式を設定済"
 
 #: core/Requirement/Words_count.php:43
 msgid "Number of words in content"
@@ -751,7 +751,7 @@ msgstr "オプションは空にできません。"
 
 #: modules/checklists/checklists.php:728
 msgid "Please make sure to add a name for all the custom tasks."
-msgstr "すべてのカスタムタスクに必ず名前を追加してください。"
+msgstr "すべてのカスタムタスクに名前を必ず付けてください。"
 
 #: modules/checklists/checklists.php:732
 msgid "Rename task label"
@@ -869,7 +869,7 @@ msgstr "チェックリスト"
 #: modules/checklists/checklists.php:956
 #: modules/checklists/checklists.php:1301
 msgid "You don't have to complete any Checklist tasks."
-msgstr "Checklist のタスクを完了する必要はありません。"
+msgstr "チェックリストのタスクを完了する必要はありません。"
 
 #: modules/checklists/checklists.php:961
 msgid "Are you sure you want to publish anyway?"
@@ -936,7 +936,7 @@ msgstr "カスタムタスクの追加"
 
 #: modules/checklists/checklists.php:1299
 msgid "Please complete the required(*) checklists task."
-msgstr "必須 (*) 項目を完了してください。"
+msgstr "必須 (*) のチェックリストを完了してください。"
 
 #: modules/checklists/checklists.php:1302
 msgid "required"
@@ -1107,7 +1107,7 @@ msgstr "連絡"
 
 #: modules/checklists/templates/global-checklists.php:6
 msgid "Settings saved successfully!"
-msgstr "設定が正常に保存されました！"
+msgstr "設定を保存しました。"
 
 #: modules/checklists/templates/global-checklists.php:12
 #: modules/checklists/templates/global-checklists.php:217
@@ -1135,7 +1135,7 @@ msgstr "説明"
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
-msgstr "カスタムタスクは自動的に完了しません。ユーザーはタスクを完了したことを示すためにチェックボックスをオンにする必要があります。"
+msgstr "カスタムタスクは自動的に完了しません。ユーザーはタスクを完了したことを示すためにチェックボックスにチェックを入れる必要があります。"
 
 #: modules/checklists/templates/global-checklists.php:203
 msgid "Add OpenAI Prompt task"
@@ -1242,7 +1242,7 @@ msgstr "重複チェックリストを有効にする:"
 
 #: modules/settings/settings.php:850
 msgid "Show Checklists column in post lists:"
-msgstr "投稿リストにチェックリストの列を表示："
+msgstr "投稿一覧に Checklists の列を表示:"
 
 #: modules/settings/settings.php:860
 msgid "Enable Taxonomy Filter:"
@@ -1372,7 +1372,7 @@ msgstr "チェックリストの要件を満たしていない場合、「公開
 
 #: modules/settings/settings.php:1291
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
-msgstr "Checklist のタスクで OpenAI プロンプトを使用するには、API キーを入力します。"
+msgstr "チェックリストのタスクで OpenAI プロンプトを使用するには、API キーを入力します。"
 
 #: modules/settings/settings.php:1364
 msgid "Post Types"

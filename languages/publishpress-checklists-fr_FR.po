@@ -555,7 +555,7 @@ msgid "Rename task label"
 msgstr "Renommer le libellé de tâche"
 
 msgid "Label for the Checklists screen"
-msgstr "Libellé de l’écran « Listes de contrôle »"
+msgstr "Libellé de l’écran « Listes de contrôle »"
 
 msgid "Leave empty to use the default WP Admin label"
 msgstr "Laisser vide pour utiliser le libellé par défaut de l’administrateur/administratrice WP"
@@ -990,9 +990,7 @@ msgstr "Ceci affichera une icône d’avertissement dans la case « Listes à c
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
-msgstr ""
-"Ceci mettra en évidence les blocs Gutenberg qui ne satisfont pas aux tâches "
-"de la liste de contrôle spécifique à chaque bloc."
+msgstr "Ceci mettra en évidence les blocs Gutenberg qui ne satisfont pas aux tâches de la liste de contrôle spécifique à chaque bloc."
 
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the plugin "

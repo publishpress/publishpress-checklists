@@ -990,9 +990,7 @@ msgstr "Questo mostrerà un'icona di avvertenza nel riquadro \"liste di controll
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
-msgstr ""
-"Questo metterà in evidenza i blocchi Gutenberg che non superano i controlli "
-"specifici previsti dalla lista di controllo."
+msgstr "Questo metterà in evidenza i blocchi Gutenberg che non superano i controlli specifici previsti dalla lista di controllo."
 
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the plugin "
