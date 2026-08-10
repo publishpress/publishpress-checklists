@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress - PublishPress Checklists\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
-"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
 "PO-Revision-Date: 2024-10-17 20:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
@@ -21,7 +21,6 @@ msgid "PublishPress Checklists Free"
 msgstr ""
 
 #. Plugin URI of the plugin
-#, fuzzy
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
@@ -68,7 +67,7 @@ msgstr "Checklists"
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
-#, fuzzy, php-format
+#, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "If you like %s please leave us a %s rating. Thank you!"
 
@@ -93,7 +92,7 @@ msgstr "Settings"
 msgid "Upgrade to Pro"
 msgstr ""
 
-#, fuzzy, php-format
+#, php-format
 msgid "Approved by %s"
 msgstr "Approved by %s"
 
@@ -106,7 +105,7 @@ msgstr "Approved by a user in this role"
 #. translators: 1: custom editor label, 2: prohibited tag names.
 #. translators: 1: custom editor label, 2: required category names.
 #. translators: 1: custom editor label, 2: required tag names.
-#, fuzzy, php-format
+#, php-format
 msgid "%1$s - %2$s"
 msgstr ""
 
@@ -132,7 +131,7 @@ msgid "max %d"
 msgstr ""
 
 #. translators: 1: minimum required value, 2: maximum allowed value.
-#, fuzzy, php-format
+#, php-format
 msgid "min %1$d max %2$d"
 msgstr ""
 
@@ -142,31 +141,31 @@ msgstr ""
 msgid "Number of categories"
 msgstr "Number of categories"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %s category"
 msgstr "Minimum of %s category"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %s categories"
 msgstr "Minimum of %s categories"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %s category"
 msgstr "Maximum of %s category"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %s categories"
 msgstr "Maximum of %s categories"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%s category"
 msgstr "%s category"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%s categories"
 msgstr "%s categories"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %s and %s categories"
 msgstr "Between %s and %s categories"
 
@@ -185,31 +184,31 @@ msgstr "Remove"
 msgid "Number of external links in content"
 msgstr "Number of external links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d external link in content"
 msgstr "Minimum of %d external link in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d external links in content"
 msgstr "Minimum of %d external links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d external link in content"
 msgstr "Maximum of %d external link in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d external links in content"
 msgstr "Maximum of %d external links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d external link in content"
 msgstr "%d external link in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d external links in content"
 msgstr "%d external links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d external links in content"
 msgstr "Between %d and %d external links in content"
 
@@ -225,31 +224,31 @@ msgstr ""
 msgid "Number of characters in excerpt"
 msgstr ""
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d character in excerpt"
 msgstr "Minimum of %d character in excerpt"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d characters in excerpt"
 msgstr "Minimum of %d characters in excerpt"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d character in excerpt"
 msgstr "Maximum of %d character in excerpt"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d characters in excerpt"
 msgstr "Maximum of %d characters in excerpt"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d character in excerpt"
 msgstr "%d character in excerpt"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d characters in excerpt"
 msgstr "%d characters in excerpt"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d characters in excerpt"
 msgstr "Between %d and %d characters in excerpt"
 
@@ -283,38 +282,38 @@ msgstr ""
 msgid "%d characters in Alt text"
 msgstr ""
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d characters in Alt text"
 msgstr ""
 
 msgid "Number of internal links in content"
 msgstr "Number of internal links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d internal link in content"
 msgstr "Minimum of %d internal link in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d internal links in content"
 msgstr "Minimum of %d internal links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d internal link in content"
 msgstr "Maximum of %d internal link in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d internal links in content"
 msgstr "Maximum of %d internal links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d internal link in content"
 msgstr "%d internal link in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d internal links in content"
 msgstr "%d internal links in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d internal links in content"
 msgstr "Between %d and %d internal links in content"
 
@@ -340,7 +339,7 @@ msgstr ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
 
-#, fuzzy, php-format
+#, php-format
 msgid "API Error: %1s."
 msgstr "API Error: %1s."
 
@@ -350,28 +349,28 @@ msgstr "See the full response."
 msgid "Invalid response"
 msgstr "Invalid response"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Prohibited categories: %s"
 msgstr "Prohibited categories: %s"
 
 msgid "Prohibited categories"
 msgstr "Prohibited categories"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Prohibited tags: %s"
 msgstr "Prohibited tags: %s"
 
 msgid "Prohibited tags"
 msgstr "Prohibited tags"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Required categories: %s"
 msgstr "Required categories: %s"
 
 msgid "Required categories"
 msgstr "Required categories"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Required tags: %s"
 msgstr "Required tags: %s"
 
@@ -401,30 +400,30 @@ msgstr "Maximum of %s tag"
 msgid "Maximum of %d tags"
 msgstr "Maximum of %s tags"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d tag"
 msgstr "%d tag"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d tags"
 msgstr "%d tags"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d tags"
 msgstr "Between %d and %d tags"
 
 msgid "Number of "
 msgstr "Number of"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d "
 msgstr "Minimum of %d "
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d "
 msgstr "Maximum of %d "
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d "
 msgstr "%d "
 
@@ -436,31 +435,31 @@ msgstr "Between %s and %s "
 msgid "Number of characters in title"
 msgstr "Number of characters in title"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d character in title"
 msgstr "Minimum of %d character in title"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d characters in title"
 msgstr "Minimum of %d characters in title"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d character in title"
 msgstr "Maximum of %d character in title"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d characters in title"
 msgstr "Maximum of %d characters in title"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d character in title"
 msgstr "%d character in title"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d characters in title"
 msgstr "%d characters in title"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d characters in title"
 msgstr "Between %d and %d characters in title"
 
@@ -470,31 +469,31 @@ msgstr "All links use a valid format"
 msgid "Number of words in content"
 msgstr "Number of words in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d word in content"
 msgstr "Minimum of %d word in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Minimum of %d words in content"
 msgstr "Minimum of %d words in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d word in content"
 msgstr "Maximum of %d word in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Maximum of %d words in content"
 msgstr "Maximum of %d words in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d word in content"
 msgstr "%d word in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d words in content"
 msgstr "%d words in content"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d words in content"
 msgstr "Between %d and %d words in content"
 
@@ -664,7 +663,7 @@ msgstr "Not required, but important: "
 msgid "One or more items in the checklist are not completed"
 msgstr ""
 
-#, fuzzy, php-format
+#, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "You don't have to complete any %sChecklist tasks%s."
 
@@ -798,7 +797,7 @@ msgstr ""
 msgid "Number of Characters in %s field"
 msgstr ""
 
-#, fuzzy, php-format
+#, php-format
 msgid "%s is filled"
 msgstr ""
 
@@ -829,7 +828,7 @@ msgstr "Save Changes"
 msgid "Pro feature"
 msgstr ""
 
-#, fuzzy, php-format
+#, php-format
 msgid "No %s requirements for this post type."
 msgstr "No %s requirements for this post type."
 
@@ -899,7 +898,7 @@ msgstr "Enabled features"
 msgid "There are no PublishPress modules registered"
 msgstr "There are no PublishPress modules registered"
 
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
@@ -961,10 +960,10 @@ msgstr ""
 msgid "Recommended Incomplete Color:"
 msgstr ""
 
-msgid "Enable rename label in editor panel:"
+msgid "Rename task labels:"
 msgstr ""
 
-msgid "Checklist item sort order:"
+msgid "Checklist task sort order:"
 msgstr ""
 
 msgid "OpenAI API Key:"
@@ -1057,13 +1056,13 @@ msgstr ""
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
 
 msgid "Default"
 msgstr ""
 
-msgid "Required on top and recommended below"
+msgid "Required on top and Recommended below"
 msgstr ""
 
 msgid "Sort alphabetically"
@@ -1141,7 +1140,7 @@ msgstr ""
 msgid "%d characters in Yoast SEO meta description"
 msgstr ""
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
 msgstr ""
 
@@ -1149,7 +1148,7 @@ msgid "Minimum Yoast SEO readability score"
 msgstr "Minimum Yoast SEO readability score"
 
 #. translators: %s expands to the readability score
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
@@ -1163,7 +1162,7 @@ msgid "Minimum Yoast SEO analysis score"
 msgstr "Minimum Yoast SEO analysis score"
 
 #. translators: %s expands to the seo score
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 

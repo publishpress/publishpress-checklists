@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
-"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
 "PO-Revision-Date: 2026-01-30 15:14+0000\n"
 "Last-Translator: Riza Maulana Ardiyanto <riza@publishpress.com>\n"
 "Language-Team: Yoruba <https://weblate.publishpress.com/projects/"
@@ -29,7 +29,6 @@ msgid "PublishPress Checklists Free"
 msgstr ""
 
 #. Plugin URI of the plugin
-#, fuzzy
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
@@ -322,7 +321,7 @@ msgstr "%d ọna asopọ inu ninu akoonu"
 msgid "%d internal links in content"
 msgstr "%d awọn ọna asopọ inu ninu akoonu"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d internal links in content"
 msgstr "Laarin %d ati %d awọn ìjápọ inu ni akoonu"
 
@@ -427,7 +426,7 @@ msgstr "kekere ti %d "
 msgid "Maximum of %d "
 msgstr "Ìkànsí tó pọ̀jù %d "
 
-#, fuzzy, php-format
+#, php-format
 msgid "%d "
 msgstr "%d "
 
@@ -496,7 +495,7 @@ msgstr "%d ọrọ ninu akoonu"
 msgid "%d words in content"
 msgstr "%d awọn ọrọ ninu akoonu"
 
-#, fuzzy, php-format
+#, php-format
 msgid "Between %d and %d words in content"
 msgstr "Laarin %d ati %d awọn ọrọ ni akoonu"
 
@@ -834,7 +833,7 @@ msgstr "Fipamọ Awọn Ayipada"
 msgid "Pro feature"
 msgstr "Ẹya Pro"
 
-#, fuzzy, php-format
+#, php-format
 msgid "No %s requirements for this post type."
 msgstr "Ko si awọn ibeere %s fun iru ifiweranṣẹ yii."
 
@@ -968,10 +967,10 @@ msgstr "Ẹ̀dá Pipe ti a ṣe iṣeduro:"
 msgid "Recommended Incomplete Color:"
 msgstr "Àwọ̀ tí a ṣàkóso tí kò pé:"
 
-msgid "Enable rename label in editor panel:"
+msgid "Rename task labels:"
 msgstr ""
 
-msgid "Checklist item sort order:"
+msgid "Checklist task sort order:"
 msgstr ""
 
 msgid "OpenAI API Key:"
@@ -1079,13 +1078,13 @@ msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 "Tẹ orúkọ kilasi Dashicons kan (àpẹẹrẹ, dashicons-no, dashicons-dismiss). "
 
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
 
 msgid "Default"
 msgstr ""
 
-msgid "Required on top and recommended below"
+msgid "Required on top and Recommended below"
 msgstr ""
 
 msgid "Sort alphabetically"
@@ -1185,7 +1184,7 @@ msgid "Minimum Yoast SEO analysis score"
 msgstr "Iwọn iṣiro itupalẹ Yoast SEO ti o kere ju"
 
 #. translators: %s expands to the seo score
-#, fuzzy, php-format
+#, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
