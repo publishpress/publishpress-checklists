@@ -14,6 +14,9 @@
     isStoreRegistered: false,
     isBlockFilterRegistered: false,
     isTooltipBehaviorBound: false,
+    tooltipBehaviorDocument: null,
+    tooltipCanvasFrame: null,
+    tooltipCanvasLoadHandler: null,
 
     getAllBlocks: function () {
       if (!window.PP_Checklists.is_gutenberg_active() || !wp.data.select('core/block-editor')) {
@@ -59,7 +62,11 @@
     ensureEditorCanvasWarningStyles: function () {
       const canvasDocument = PP_Checklists_Block_Highlighting.getEditorCanvasDocument();
 
-      if (!canvasDocument || canvasDocument.getElementById('pp-checklists-warning-styles')) {
+      if (
+        !canvasDocument
+        || !canvasDocument.head
+        || canvasDocument.getElementById('pp-checklists-warning-styles')
+      ) {
         return;
       }
 
@@ -123,9 +130,46 @@
     },
 
     ensureEditorCanvasTooltipBehavior: function () {
+      const canvasFrame = document.querySelector('iframe[name="editor-canvas"]');
       const canvasDocument = PP_Checklists_Block_Highlighting.getEditorCanvasDocument();
 
-      if (!canvasDocument || PP_Checklists_Block_Highlighting.isTooltipBehaviorBound) {
+      if (!canvasFrame) {
+        return;
+      }
+
+      if (canvasFrame !== PP_Checklists_Block_Highlighting.tooltipCanvasFrame) {
+        const previousFrame = PP_Checklists_Block_Highlighting.tooltipCanvasFrame;
+        const previousLoadHandler = PP_Checklists_Block_Highlighting.tooltipCanvasLoadHandler;
+
+        if (previousFrame && previousLoadHandler && previousFrame.removeEventListener) {
+          previousFrame.removeEventListener('load', previousLoadHandler);
+        }
+
+        PP_Checklists_Block_Highlighting.tooltipCanvasFrame = canvasFrame;
+        PP_Checklists_Block_Highlighting.tooltipBehaviorDocument = null;
+        PP_Checklists_Block_Highlighting.isTooltipBehaviorBound = false;
+
+        if (canvasFrame.addEventListener) {
+          const loadHandler = function () {
+            PP_Checklists_Block_Highlighting.tooltipBehaviorDocument = null;
+            PP_Checklists_Block_Highlighting.isTooltipBehaviorBound = false;
+            PP_Checklists_Block_Highlighting.queueSyncCurrentWarnings();
+          };
+
+          PP_Checklists_Block_Highlighting.tooltipCanvasLoadHandler = loadHandler;
+          canvasFrame.addEventListener('load', loadHandler);
+        }
+      }
+
+      if (
+        !canvasDocument
+        || !canvasDocument.body
+        || !canvasDocument.defaultView
+        || (
+          PP_Checklists_Block_Highlighting.isTooltipBehaviorBound
+          && PP_Checklists_Block_Highlighting.tooltipBehaviorDocument === canvasDocument
+        )
+      ) {
         return;
       }
 
@@ -227,8 +271,11 @@
       });
 
       canvasDocument.addEventListener('scroll', updateTooltipPosition, true);
-      win.addEventListener('resize', updateTooltipPosition);
+      if (win.addEventListener) {
+        win.addEventListener('resize', updateTooltipPosition);
+      }
 
+      PP_Checklists_Block_Highlighting.tooltipBehaviorDocument = canvasDocument;
       PP_Checklists_Block_Highlighting.isTooltipBehaviorBound = true;
     },
 

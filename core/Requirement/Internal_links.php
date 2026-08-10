@@ -69,10 +69,9 @@ class Internal_links extends Base_counter
         $min_value = (int)($option_value[0] ?? 0);
         $max_value = (int)($option_value[1] ?? 0);
 
-        // Keep the server-side status in sync with the editor-side quantity
-        // check. A blank maximum is serialized as 0, which means "minimum
-        // only" when a positive minimum is configured; an explicit 0/0 rule
-        // remains an exact-zero rule.
+        // Keep the server-side status in sync with check_valid_quantity() in
+        // the editor. A blank maximum is serialized as 0, which means a
+        // minimum-only rule when the configured minimum is greater than 0.
         if ($min_value === $max_value) {
             return $count === $min_value;
         }
