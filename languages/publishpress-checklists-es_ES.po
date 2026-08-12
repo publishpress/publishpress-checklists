@@ -23,6 +23,7 @@ msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
 #. Plugin URI of the plugin
+#, fuzzy
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
@@ -30,9 +31,7 @@ msgstr "https://publishpress.com/"
 msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
-msgstr ""
-"Con las listas de verificación de PublishPress, puede elegir los requisitos "
-"de publicación para su contenido."
+msgstr "Con PublishPress Checklists, puedes elegir los requisitos de publicación para tu contenido."
 
 #. Author of the plugin
 msgid "PublishPress"
@@ -52,14 +51,13 @@ msgid "Required"
 msgstr "Obligatorio"
 
 msgid "Please correct your form errors below and try again."
-msgstr ""
-"Por favor, corrige tus errores en el formulario de abajo y prueba otra vez."
+msgstr "Por favor, corrige tus errores en el formulario de abajo y prueba otra vez."
 
 msgid "Cheatin&#8217; uh?"
 msgstr "Haciendo trampas, ¿eh?"
 
 msgid "You do not have necessary permissions to complete this action."
-msgstr "No tienes los permisos necesarios para completar esta acción."
+msgstr "No tienes los permisos necesarios para realizar esta acción."
 
 msgid "Post does not exist"
 msgstr "La entrada no existe"
@@ -78,9 +76,7 @@ msgid "Need PublishPress Checklists Support?"
 msgstr "¿Necesitas ayuda con PublishPress Checklists?"
 
 msgid "If you need help or have a new feature request, let us know."
-msgstr ""
-"Si necesitas ayuda o quieres solicitar alguna nueva característica, háznoslo "
-"saber."
+msgstr "Si necesitas ayuda o quieres solicitar alguna nueva característica, háznoslo saber."
 
 msgid "Request Support"
 msgstr "Solicitar soporte"
@@ -110,7 +106,7 @@ msgstr "Aprobado por un usuario con este perfil"
 #. translators: 1: custom editor label, 2: prohibited tag names.
 #. translators: 1: custom editor label, 2: required category names.
 #. translators: 1: custom editor label, 2: required tag names.
-#, php-format
+#, fuzzy, php-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
@@ -126,17 +122,17 @@ msgid "exact %d"
 msgstr "%d exacto"
 
 #. translators: %d: minimum required value.
-#, php-format
+#, fuzzy, php-format
 msgid "min %d"
 msgstr "min %d"
 
 #. translators: %d: maximum allowed value.
-#, php-format
+#, fuzzy, php-format
 msgid "max %d"
 msgstr "max %d"
 
 #. translators: 1: minimum required value, 2: maximum allowed value.
-#, php-format
+#, fuzzy, php-format
 msgid "min %1$d max %2$d"
 msgstr "min %1$d max %2$d"
 
@@ -218,7 +214,7 @@ msgid "Between %d and %d external links in content"
 msgstr "Entre %d y %d enlaces externos en el contenido"
 
 msgid "Featured image is added"
-msgstr "Se agregó la imagen destacada"
+msgstr "La imagen destacada ha sido añadida"
 
 msgid "Featured image has Alt text"
 msgstr "La imagen destacada tiene texto alternativo"
@@ -261,7 +257,7 @@ msgid "All images have Alt text"
 msgstr "Todas las imágenes tienen texto alternativo"
 
 msgid "Number of characters in Alt text"
-msgstr "Número de caracteres en el texto Alt"
+msgstr "Número de caracter en el texto alternativo"
 
 #, php-format
 msgid "Minimum of %d character in Alt text"
@@ -318,7 +314,7 @@ msgstr "%d enlace interno en el contenido"
 msgid "%d internal links in content"
 msgstr "%d enlaces internos en el contenido"
 
-#, php-format
+#, fuzzy, php-format
 msgid "Between %d and %d internal links in content"
 msgstr "Entre %d y %d enlaces internos en el contenido"
 
@@ -332,19 +328,15 @@ msgid "An error occured."
 msgstr "Se ha producido un error."
 
 msgid "Validation error. Kindly reload this page and try again."
-msgstr ""
-"Error de validación. Por favor, vuelve a cargar esta página e inténtalo de "
-"nuevo."
+msgstr "Error de validación. Por favor, vuelve a cargar esta página e inténtalo de nuevo."
 
 msgid "Post content is empty."
-msgstr "El contenido de la entrada es vacío."
+msgstr "El contenido de la entrada está vacío."
 
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
-msgstr ""
-"Las tareas de OpenAI requieren una clave API. Por favor, añade tu clave API "
-"en los ajustes."
+msgstr "Las tareas de OpenAI requieren una clave de API. Por favor, añade tu clave de API en los ajustes."
 
 #, php-format
 msgid "API Error: %1s."
@@ -372,17 +364,17 @@ msgstr "Etiquetas prohibidas"
 
 #, php-format
 msgid "Required categories: %s"
-msgstr "Categorías requeridas: %s"
+msgstr "Categorías obligatorias: %s"
 
 msgid "Required categories"
-msgstr "Categorías requeridas"
+msgstr "Categorías obligatorias"
 
 #, php-format
 msgid "Required tags: %s"
-msgstr "Etiquetas requeridas: %s"
+msgstr "Etiquetas obligatorias: %s"
 
 msgid "Required tags"
-msgstr "Etiquetas requeridas"
+msgstr "Etiquetas obligatorias"
 
 msgid "Number of tags"
 msgstr "Número de etiquetas"
@@ -426,7 +418,7 @@ msgstr "Mínimo de %d "
 msgid "Maximum of %d "
 msgstr "Máximo de %d "
 
-#, php-format
+#, fuzzy, php-format
 msgid "%d "
 msgstr "%d "
 
@@ -495,7 +487,7 @@ msgstr "%d palabra en el contenido"
 msgid "%d words in content"
 msgstr "%d palabras en el contenido"
 
-#, php-format
+#, fuzzy, php-format
 msgid "Between %d and %d words in content"
 msgstr "Entre %d y %d palabras en el contenido"
 
@@ -557,8 +549,7 @@ msgid "options cannot be empty."
 msgstr "las opciones no pueden ser vacías."
 
 msgid "Please make sure to add a name for all the custom tasks."
-msgstr ""
-"Por favor asegúrate de añadirle un nombre a todas las tareas personalizadas."
+msgstr "Por favor asegúrate de añadirle un nombre a todas las tareas personalizadas."
 
 msgid "Rename task label"
 msgstr "Renombrar etiqueta de tarea"
@@ -567,16 +558,13 @@ msgid "Label for the Checklists screen"
 msgstr "Etiqueta para la pantalla de listas de verificación"
 
 msgid "Leave empty to use the default WP Admin label"
-msgstr ""
-"Dejar en blanco para utilizar la etiqueta por defecto del administrador de WP"
+msgstr "Dejar en blanco para utilizar la etiqueta por defecto del administrador de WP"
 
 msgid "Label for the post editing screen"
 msgstr "Etiqueta para la pantalla de edición de la entrada"
 
 msgid "Leave empty to use the default editing screen label"
-msgstr ""
-"Dejar en blanco para utilizar la etiqueta por defecto de la pantalla de "
-"edición"
+msgstr "Dejar en blanco para utilizar la etiqueta por defecto de la pantalla de edición"
 
 msgid "Preview in editing screen:"
 msgstr "Vista previa en la pantalla de edición:"
@@ -600,15 +588,13 @@ msgid "Suggested Prompts"
 msgstr "Indicaciones sugeridas"
 
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
-msgstr ""
-"¿Cuál es la respuesta esperada de OpenAI para marcar el requisito como "
-"aprobado?"
+msgstr "¿Cuál es la respuesta esperada de OpenAI para marcar el requisito como aprobado?"
 
 msgid "Clear Content"
 msgstr "Vaciar el contenido"
 
 msgid "Is this content clear and easy to read?"
-msgstr "¿Este contenido es claro y fácil de leer?"
+msgstr "¿El contenido es claro y fácil de leer?"
 
 msgid "Friendly Tone Content"
 msgstr "Tono del contenido amigable"
@@ -662,8 +648,7 @@ msgid "Please complete the following tasks before publishing:"
 msgstr "Por favor, completa las siguientes tareas antes de publicar:"
 
 msgid "Please complete the following tasks before updating the published post:"
-msgstr ""
-"Por favor, completa estas tareas antes de actualizar la estrada publicada:"
+msgstr "Por favor, completa estas tareas antes de actualizar la estrada publicada:"
 
 msgid "Not required, but important: "
 msgstr "No es obligatorio, pero es importante: "
@@ -671,11 +656,9 @@ msgstr "No es obligatorio, pero es importante: "
 msgid "One or more items in the checklist are not completed"
 msgstr "No se han completado uno o más elementos de la lista de verificación"
 
-#, php-format
+#, fuzzy, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
-msgstr ""
-"No tienes que completar ninguna de las %stareas de la lista de "
-"verificación%s."
+msgstr "No tienes que completar ninguna de las %stareas de la lista de verificación%s."
 
 msgid "Check Now"
 msgstr "Comprobar ahora"
@@ -702,16 +685,13 @@ msgid "Add custom task"
 msgstr "Añadir tarea personalizada"
 
 msgid "Please complete the required(*) checklists task."
-msgstr ""
-"Por favor, completa la tarea obligatoria(*) de las listas de verificación."
+msgstr "Por favor, completa la tarea obligatoria(*) de las listas de verificación."
 
 msgid "required"
 msgstr "obligatorio"
 
 msgid "Checklists tasks are not available in Elementor editors"
-msgstr ""
-"Las tareas de las listas de verificación no están disponibles en los "
-"editores de Elementor"
+msgstr "Las tareas de las listas de verificación no están disponibles en los editores de Elementor"
 
 msgid "All in One SEO Headline Score"
 msgstr "Puntuación del titular SEO de All in One"
@@ -843,7 +823,7 @@ msgstr "Característica Pro"
 
 #, php-format
 msgid "No %s requirements for this post type."
-msgstr "No hay %s requisitos para este tipo de publicación."
+msgstr "No hay requisitos %s para este tipo de contenido."
 
 msgid "New Item"
 msgstr "Nuevo elemento"
@@ -854,9 +834,7 @@ msgstr "Descripción"
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to show "
 "they have completed the task."
-msgstr ""
-"Las tareas personalizadas no se completan automáticamente. Los usuarios "
-"deben marcar la caja para indicar que han completado la tarea."
+msgstr "Las tareas personalizadas no se completan automáticamente. Los usuarios deben marcar la caja para indicar que han completado la tarea."
 
 msgid "Add OpenAI Prompt task"
 msgstr "Añadir tarea de indicación de OpenAI"
@@ -865,9 +843,7 @@ msgid "The prompt should be in form of a question."
 msgstr "La indicación debe tener forma de pregunta."
 
 msgid "This feature requires an OpenAI API Key."
-msgstr ""
-"Para utilizar esta característica es obligatorio disponer de una clave API "
-"de OpenAI."
+msgstr "Para utilizar esta característica es obligatorio disponer de una clave API de OpenAI."
 
 msgid "Latin characters in permalink"
 msgstr "Caracteres latinos en el enlace permanente"
@@ -893,9 +869,7 @@ msgstr "Ajustes de las listas de verificación"
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
-msgstr ""
-"¿Seguro que quieres restablecer todos los elementos de la lista de "
-"verificación a sus etiquetas por defecto? Esta acción no se puede deshacer."
+msgstr "¿Seguro que quieres restablecer todos los elementos de la lista de verificación a sus etiquetas por defecto? Esta acción no se puede deshacer."
 
 msgid "Resetting..."
 msgstr "Restableciendo…"
@@ -915,13 +889,11 @@ msgstr "Características activadas"
 msgid "There are no PublishPress modules registered"
 msgstr "No hay módulos de PublishPress registrados"
 
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
-msgstr ""
-"Desactivado porque `add_post_type_support('%1$s', '%2$s')` está incluido en "
-"un archivo cargado."
+msgstr "Desactivado porque `add_post_type_support('%1$s', '%2$s')` está incluido en un archivo cargado."
 
 msgid "Enable User Roles Filter:"
 msgstr "Activar el filtro de perfiles de usuario:"
@@ -978,7 +950,7 @@ msgid "Recommended Incomplete Color:"
 msgstr "Color incompleto recomendado:"
 
 msgid "Rename task labels:"
-msgstr "Renombrar etiquetas de tarea:"
+msgstr "Renombrar etiqueta de tarea"
 
 msgid "Checklist task sort order:"
 msgstr "Orden de clasificación de las tareas de la lista de verificación:"
@@ -995,49 +967,35 @@ msgstr "Tipos de contenido:"
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
-msgstr ""
-"Esto permite desactivar tareas para estados específicos, como «Borrador» o "
-"«Publicado»."
+msgstr "Esto permite desactivar tareas para estados específicos, como «Borrador» o «Publicado»."
 
 msgid "This allows users to duplicate existing checklist tasks."
-msgstr ""
-"Esto permite a los usuarios duplicar tareas existentes de la lista de "
-"verificación."
+msgstr "Esto permite a los usuarios duplicar tareas existentes de la lista de verificación."
 
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
-msgstr ""
-"Añade una columna de listas de comprobación a la pantalla «Entradas» que "
-"muestre cuántos requisitos se han completado."
+msgstr "Añade una columna de listas de verificación a la pantalla «Entradas» que muestre cuántos requisitos se han completado."
 
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
-msgstr ""
-"Esto permite desactivar tareas para entradas con términos de taxonomía "
-"específicos. Ve a la pestaña «Tipos de contenido» y selecciona los términos."
+msgstr "Esto permite desactivar tareas para entradas con términos de taxonomía específicos. Ve a la pestaña «Tipos de contenido» y selecciona los términos."
 
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
-msgstr ""
-"Esto mostrará un icono de advertencia en el cuadro «Listas de verificación» "
-"si los requisitos están incompletos."
+msgstr "Esto mostrará un icono de advertencia en el cuadro «Listas de verificación» si los requisitos están incompletos."
 
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
-msgstr ""
-"Esto resaltará los bloques de Gutenberg que no superen las tareas de la "
-"lista de verificación específicas de cada bloque."
+msgstr "Esto resaltará los bloques de Gutenberg que no superen las tareas de la lista de verificación específicas de cada bloque."
 
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the plugin "
 "is uninstalled."
-msgstr ""
-"Cuando esté activado, todos los datos de PublishPress Checklists se borrarán "
-"si se desinstala el plugin."
+msgstr "Cuando esté activado, todos los datos de PublishPress Checklists se borrarán si se desinstala el plugin."
 
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "Esto mostrará las opciones de «Excluir perfiles de usuario»."
@@ -1045,28 +1003,20 @@ msgstr "Esto mostrará las opciones de «Excluir perfiles de usuario»."
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
-msgstr ""
-"Se recomienda desactivar la opción «Estado» porque puede utilizarse para "
-"evitar el uso de los requisitos de las listas de control."
+msgstr "Se recomienda desactivar la opción «Estado» porque puede utilizarse para evitar el uso de los requisitos de las listas de control."
 
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
-msgstr ""
-"Esto desactivará la «Edición rápida» para todos los usuarios, excepto "
-"aquellos con la capacidad «manage_options»."
+msgstr "Esto desactivará la «Edición rápida» para todos los usuarios, excepto aquellos con la capacidad «manage_options»."
 
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are not "
 "met."
-msgstr ""
-"Esto desactivará el botón «Publicar» cuando no se cumplan los requisitos de "
-"la lista de verificación."
+msgstr "Esto desactivará el botón «Publicar» cuando no se cumplan los requisitos de la lista de verificación."
 
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
-msgstr ""
-"Introduce tu clave API para utilizar las indicaciones de OpenAI en las "
-"tareas de las listas de verificación."
+msgstr "Introduce tu clave API para utilizar las indicaciones de OpenAI en las tareas de las listas de verificación."
 
 msgid "Post Types"
 msgstr "Tipos de contenido"
@@ -1087,22 +1037,16 @@ msgid "Tools"
 msgstr "Herramientas"
 
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
-msgstr ""
-"Introduce un nombre de clase Dashicons (por ejemplo, dashicons-yes, "
-"dashicons-saved). "
+msgstr "Introduce un nombre de clase Dashicons (por ejemplo, dashicons-yes, dashicons-saved). "
 
 msgid "View Dashicons"
 msgstr "Ver Dashicons"
 
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
-msgstr ""
-"Introduce un nombre de clase Dashicons (por ejemplo, dashicons-no, dashicons-"
-"dismiss). "
+msgstr "Introduce un nombre de clase Dashicons (por ejemplo, dashicons-no, dashicons-dismiss). "
 
 msgid "Allow admins to rename task labels for the post editor."
-msgstr ""
-"Permitir a los administradores de renombrar las etiquetas de la tarea para "
-"el editor de entrada."
+msgstr "Permitir a los administradores de renombrar las etiquetas de la tarea para el editor de entrada."
 
 msgid "Default"
 msgstr "Por defecto"
@@ -1116,16 +1060,13 @@ msgstr "Ordenar alfabéticamente"
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing screen "
 "back to their default labels."
-msgstr ""
-"Esto restablecerá todas las etiquetas de las listas de verificación que se "
-"hayan renombrado en el panel de administración de WordPress y en la pantalla "
-"de edición, devolviéndolas a sus etiquetas por defecto."
+msgstr "Esto restablecerá todas las etiquetas de las listas de verificación que se hayan renombrado en el panel de administración de WordPress y en la pantalla de edición, devolviéndolas a sus etiquetas por defecto."
 
 msgid "Security check failed."
 msgstr "La comprobación de seguridad ha fallado."
 
 msgid "You do not have permission to perform this action."
-msgstr "No tienes los permisos para realizar esta acción."
+msgstr "No tienes los permisos necesarios para realizar esta acción."
 
 msgid "All renamed labels have been reset successfully."
 msgstr "Todas las etiquetas renombradas han sido restablecidas correctamente."
@@ -1198,7 +1139,7 @@ msgstr "Mínima puntuación de legibilidad en Yoast SEO"
 #. translators: %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
-msgstr "Legibilidad de Yoast: %s"
+msgstr "Legibilidad Yoast: %s"
 
 msgid "OK"
 msgstr "Correcto"
@@ -1210,9 +1151,9 @@ msgid "Minimum Yoast SEO analysis score"
 msgstr "Puntuación mínima del análisis Yoast SEO"
 
 #. translators: %s expands to the seo score
-#, php-format
+#, fuzzy, php-format
 msgid "Yoast SEO: %s"
-msgstr "SEO de Yoast: %s"
+msgstr "Yoast SEO: %s"
 
 msgid "Define tasks related to Yoast SEO"
 msgstr "Definir tareas de Yoast SEO"
@@ -1224,9 +1165,7 @@ msgstr "Este plugin puede ser borrado."
 msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more features "
 "and support. %sUpgrade to Pro%s"
-msgstr ""
-"Estás usando PublishPress Checklists Free. La versión Pro tiene más "
-"características y soporte. %sMejorar a Pro%s"
+msgstr "Estás usando PublishPress Checklists Free. La versión Pro tiene más características y soporte. %sMejorar a Pro%s"
 
 #~ msgid "Enable rename label in editor panel:"
 #~ msgstr "Activar el renombramiento de etiquetas en el panel del editor:"
