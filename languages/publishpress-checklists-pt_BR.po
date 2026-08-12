@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-04-16 15:53+0000\n"
+"PO-Revision-Date: 2026-08-10 15:20+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
@@ -174,25 +174,25 @@ msgstr "Máximo"
 #. translators: %d: exact required value.
 #, php-format
 msgid "exact %d"
-msgstr "exato %d"
+msgstr "exatamente %d"
 
 #: core/Requirement/Base_requirement.php:276
 #. translators: %d: minimum required value.
 #, php-format
 msgid "min %d"
-msgstr "mín %d"
+msgstr "mínimo %d"
 
 #: core/Requirement/Base_requirement.php:284
 #. translators: %d: maximum allowed value.
 #, php-format
 msgid "max %d"
-msgstr "máx %d"
+msgstr "máximo %d"
 
 #: core/Requirement/Base_requirement.php:291
 #. translators: 1: minimum required value, 2: maximum allowed value.
 #, php-format
 msgid "min %1$d max %2$d"
-msgstr "mín %1$d máx %2$d"
+msgstr "mínimo %1$d, máximo %2$d"
 
 #: core/Requirement/Base_requirement.php:346
 msgid "Edit label"
@@ -316,7 +316,7 @@ msgstr "Imagem destacada com legenda"
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
 msgid "Number of characters in excerpt"
-msgstr "Número de caracteres no excerto"
+msgstr "Números de caracteres no resumo"
 
 #: core/Requirement/Filled_excerpt.php:44
 #, php-format
@@ -753,27 +753,29 @@ msgstr "Renomear rótulo da tarefa"
 
 #: modules/checklists/checklists.php:736
 msgid "Label for the Checklists screen"
-msgstr "Rótulo para a tela de Checklists"
+msgstr "Rótulo da tela de listas de verificação"
 
 #: modules/checklists/checklists.php:740
 msgid "Leave empty to use the default WP Admin label"
-msgstr "Deixe vazio para usar o rótulo padrão do WP Admin"
+msgstr ""
+"Deixe em branco para usar o rótulo padrão no painel administrativo do "
+"WordPress"
 
 #: modules/checklists/checklists.php:744
 msgid "Label for the post editing screen"
-msgstr "Rótulo para a tela de edição de postagens"
+msgstr "Rótulo da tela de edição de posts"
 
 #: modules/checklists/checklists.php:748
 msgid "Leave empty to use the default editing screen label"
-msgstr "Deixe vazio para usar o rótulo padrão da tela de edição"
+msgstr "Deixe em branco para usar o rótulo padrão na tela de edição"
 
 #: modules/checklists/checklists.php:752
 msgid "Preview in editing screen:"
-msgstr "Visualização na tela de edição:"
+msgstr "Pré-visualização na tela de edição:"
 
 #: modules/checklists/checklists.php:756
 msgid "Default checklist label will be used."
-msgstr "O rótulo padrão da checklist será usado."
+msgstr "Será usado o rótulo padrão da lista de verificação."
 
 #: modules/checklists/checklists.php:760
 msgid "Save"
@@ -961,7 +963,7 @@ msgstr "Largura da imagem destacada"
 
 #: modules/checklists/pro-requirements.php:58
 msgid "H1, H2, H3 etc tags are used in logical order"
-msgstr "Tags H1, H2, H3 etc. são usadas em ordem lógica"
+msgstr "As tags H1, H2, H3 etc. são usadas em ordem lógica"
 
 #: modules/checklists/pro-requirements.php:67
 msgid "Number of images in content"
@@ -985,7 +987,7 @@ msgstr "Aprovado pela função"
 
 #: modules/checklists/pro-requirements.php:110
 msgid "Approved by specific user"
-msgstr "Aprovado por usuário específico"
+msgstr "Aprovado por um determinado usuário"
 
 #: modules/checklists/pro-requirements.php:117
 msgid "Avoid heading tags in content"
@@ -993,11 +995,11 @@ msgstr "Evite tags de título no conteúdo"
 
 #: modules/checklists/pro-requirements.php:124
 msgid "Prohibited words"
-msgstr "Palavras proibidas"
+msgstr "Palavras não permitidas"
 
 #: modules/checklists/pro-requirements.php:131
 msgid "Publish time should be at a specific time"
-msgstr "O horário de publicação deve ser em um horário específico"
+msgstr "O horário de publicação precisa ser definido como uma determinada hora"
 
 #: modules/checklists/pro-requirements.php:139
 msgid "Publish time should be in the future"
@@ -1186,7 +1188,7 @@ msgstr ""
 
 #: modules/settings/settings.php:156
 msgid "Resetting..."
-msgstr "Reiniciando..."
+msgstr "Redefinindo…"
 
 #: modules/settings/settings.php:157
 #: modules/settings/settings.php:1556
@@ -1220,7 +1222,7 @@ msgstr ""
 
 #: modules/settings/settings.php:797
 msgid "Enable User Roles Filter:"
-msgstr "Ativar filtro de funções de usuário:"
+msgstr "Ativar filtro de funções do usuário:"
 
 #: modules/settings/settings.php:805
 msgid "Show warning icon:"
@@ -1228,7 +1230,7 @@ msgstr "Mostrar ícone de alerta:"
 
 #: modules/settings/settings.php:813
 msgid "Highlight failing blocks in the editor:"
-msgstr "Destacar blocos com falha no editor:"
+msgstr "Destacar os blocos com falhas no editor:"
 
 #: modules/settings/settings.php:821
 msgid "Delete data on uninstall:"
@@ -1280,7 +1282,7 @@ msgstr "Cor obrigatória incompleta:"
 
 #: modules/settings/settings.php:945
 msgid "Required Asterisk Color:"
-msgstr "Cor do asterisco obrigatório:"
+msgstr "Cor do asterisco de item obrigatório:"
 
 #: modules/settings/settings.php:953
 msgid "Recommended Complete Color:"
@@ -1292,11 +1294,11 @@ msgstr "Cor recomendada incompleta:"
 
 #: modules/settings/settings.php:969
 msgid "Rename task labels:"
-msgstr "Renomear rótulos de tarefa:"
+msgstr "Renomear rótulos de tarefas:"
 
 #: modules/settings/settings.php:977
 msgid "Checklist task sort order:"
-msgstr "Ordem de classificação da tarefa de checklist:"
+msgstr "Definição da ordem das tarefas na lista de verificação:"
 
 #: modules/settings/settings.php:995
 msgid "OpenAI API Key:"
@@ -1354,8 +1356,8 @@ msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr ""
-"Isso destacará os blocos do Gutenberg que falham nas tarefas específicas da "
-"lista de verificação."
+"Isso irá destacar os blocos do Gutenberg que não cumprem as tarefas "
+"específicas da lista de verificação."
 
 #: modules/settings/settings.php:1188
 msgid ""
@@ -1367,7 +1369,7 @@ msgstr ""
 
 #: modules/settings/settings.php:1209
 msgid "This will show \"Exclude User Roles\" options."
-msgstr "Isso mostrará opções de \"Excluir Funções de Usuário\"."
+msgstr "Isso irá mostrar as opções de “Excluir funções do usuário”."
 
 #: modules/settings/settings.php:1230
 msgid ""
@@ -1441,8 +1443,8 @@ msgstr ""
 #: modules/settings/settings.php:1514
 msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
-"Permitir que administradores renomeiem rótulos de tarefa para o editor de "
-"postagens."
+"Permitir que os administradores renomeiem os rótulos de tarefas no editor "
+"de posts."
 
 #: modules/settings/settings.php:1532
 msgid "Default"
@@ -1450,19 +1452,20 @@ msgstr "Padrão"
 
 #: modules/settings/settings.php:1533
 msgid "Required on top and Recommended below"
-msgstr "Obrigatório no topo e Recomendado abaixo"
+msgstr "Obrigatório na parte superior e recomendado na parte inferior"
 
 #: modules/settings/settings.php:1534
 msgid "Sort alphabetically"
-msgstr "Classificar alfabeticamente"
+msgstr "Ordenar por ordem alfabética"
 
 #: modules/settings/settings.php:1558
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
 msgstr ""
-"Isso redefinirá todos os rótulos de lista de verificação renomeados para o "
-"WP Admin e a tela de Edição de volta aos seus rótulos padrão."
+"Isso irá redefinir todos os rótulos renomeados das listas de verificação, "
+"nas telas do painel administrativo e edição do WordPress, para seus rótulos "
+"padrão."
 
 #: modules/settings/settings.php:1568
 msgid "Security check failed."
@@ -1474,7 +1477,7 @@ msgstr "Você não tem permissão para executar esta ação."
 
 #: modules/settings/settings.php:1618
 msgid "All renamed labels have been reset successfully."
-msgstr "Todos os rótulos renomeados foram redefinidos com sucesso."
+msgstr "Todos os rótulos renomeados foram redefinidos."
 
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
 #: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40

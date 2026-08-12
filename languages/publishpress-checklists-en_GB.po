@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress - PublishPress Checklists\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
-"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
 "PO-Revision-Date: 2024-10-17 20:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
@@ -961,10 +961,10 @@ msgstr ""
 msgid "Recommended Incomplete Color:"
 msgstr ""
 
-msgid "Enable rename label in editor panel:"
+msgid "Rename task labels:"
 msgstr ""
 
-msgid "Checklist item sort order:"
+msgid "Checklist task sort order:"
 msgstr ""
 
 msgid "OpenAI API Key:"
@@ -1057,13 +1057,13 @@ msgstr ""
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 
-msgid "Enable custom rename labels in the checklist editor panel."
+msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
 
 msgid "Default"
 msgstr ""
 
-msgid "Required on top and recommended below"
+msgid "Required on top and Recommended below"
 msgstr ""
 
 msgid "Sort alphabetically"

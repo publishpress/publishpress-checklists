@@ -12,11 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-04-16 15:53+0000\n"
+"PO-Revision-Date: 2026-08-10 15:20+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
-"Language: cs_CZ\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : (n >= 2 && n <= 4) ? 1 : 2;\n"
+"Language: cs-CZ\n"
 
 #: publishpress-checklists.php:4
 #. Plugin Name of the plugin
@@ -540,9 +540,9 @@ msgid "Maximum of %d tags"
 msgstr "Maximálně %d tagů"
 
 #: core/Requirement/Tags_count.php:52
-#, fuzzy, php-format
+#, php-format
 msgid "%d tag"
-msgstr "%d tag"
+msgstr "%d značka"
 
 #: core/Requirement/Tags_count.php:53
 #, php-format
