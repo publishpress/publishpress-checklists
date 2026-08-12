@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Plugins - PublishPress Checklists: Pre-Publishing "
 "Approval Task Checklist for WordPress Content - Stable (latest release)\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
-"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
-"PO-Revision-Date: 2026-04-16 10:19+0200\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
+"PO-Revision-Date: 2026-04-17 12:43+0000\n"
 "Last-Translator: Angelo Giammarresi <info@wocmultimedia.biz>\n"
 "Language-Team: Italian <https://weblate.publishpress.com/projects/"
 "publishpress-checklists/publishpress-checklists/it/>\n"
@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
 #. Plugin Name of the plugin
-#, fuzzy
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
 #. Plugin URI of the plugin
+#, fuzzy
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
@@ -949,11 +949,11 @@ msgstr "Colore completato consigliato:"
 msgid "Recommended Incomplete Color:"
 msgstr "Colore incompleto consigliato:"
 
-msgid "Enable rename label in editor panel:"
-msgstr "Abilita la rinomina delle etichette nel pannello dell'editor:"
+msgid "Rename task labels:"
+msgstr "Rinomina le etichette delle attività:"
 
-msgid "Checklist item sort order:"
-msgstr "Ordine delle voci della lista di controllo:"
+msgid "Checklist task sort order:"
+msgstr "Ordine di visualizzazione delle attività della lista di controllo:"
 
 msgid "OpenAI API Key:"
 msgstr "Chiave API di OpenAI:"
@@ -990,9 +990,7 @@ msgstr "Questo mostrerà un'icona di avvertenza nel riquadro \"liste di controll
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
-msgstr ""
-"Questo metterà in evidenza i blocchi Gutenberg che non superano i controlli "
-"specifici previsti dalla lista di controllo."
+msgstr "Questo metterà in evidenza i blocchi Gutenberg che non superano i controlli specifici previsti dalla lista di controllo."
 
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the plugin "
@@ -1047,14 +1045,29 @@ msgstr "Vedi Dashicons"
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Inserisci un nome di classe Dashicons (es. dashicons-no, dashicons-dismiss). "
 
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr "Abilita la rinomina personalizzata delle etichette nel pannello dell'editor della lista di controllo."
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "Permetti agli amministratori di rinominare le etichette dell'attività per l'editor dell'articolo."
 
 msgid "Default"
 msgstr "Predefinito"
 
-msgid "Required on top and recommended below"
-msgstr "Obbligatorio in alto e consigliato sotto"
+msgid "Priority"
+msgstr "Priorità"
+
+msgid "Alphabetical"
+msgstr "Alfabetico"
+
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr "Mantiene le attività nell'ordine configurato nella schermata delle liste di controllo."
+
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "Mostra le attività richieste prima di quelle raccomandate."
+
+msgid "Sorts tasks alphabetically by task label."
+msgstr "Ordina le attività in ordine alfabetico in base all'etichetta dell'attività."
+
+msgid "Required on top and Recommended below"
+msgstr "Obbligatorio in alto e consigliato in basso"
 
 msgid "Sort alphabetically"
 msgstr "Ordina alfabeticamente"
@@ -1168,6 +1181,20 @@ msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more features "
 "and support. %sUpgrade to Pro%s"
 msgstr "Stai utilizzando PublishPress Checklists Free. La versione Pro ha più caratteristiche e supporto. %sAggiorna a Pro%s"
+
+#~ msgid "Enable rename label in editor panel:"
+#~ msgstr "Abilita la rinomina delle etichette nel pannello dell'editor:"
+
+#~ msgid "Checklist item sort order:"
+#~ msgstr "Ordine delle voci della lista di controllo:"
+
+#~ msgid "Enable custom rename labels in the checklist editor panel."
+#~ msgstr ""
+#~ "Abilita la rinomina personalizzata delle etichette nel pannello "
+#~ "dell'editor della lista di controllo."
+
+#~ msgid "Required on top and recommended below"
+#~ msgstr "Obbligatorio in alto e consigliato sotto"
 
 #~ msgid "Numbers of characters in excerpt"
 #~ msgstr "Numero di caratteri nel riassunto"

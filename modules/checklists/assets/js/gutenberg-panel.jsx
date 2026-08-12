@@ -1,10 +1,36 @@
 const { registerPlugin } = wp.plugins;
-const { PluginSidebarMoreMenuItem, PluginSidebar } = wp.editPost;
+const editorComponents = wp.editor || {};
+const editPostComponents = wp.editPost || {};
+const PluginSidebarMoreMenuItem = editorComponents.PluginSidebarMoreMenuItem || editPostComponents.PluginSidebarMoreMenuItem;
+const PluginSidebar = editorComponents.PluginSidebar || editPostComponents.PluginSidebar;
 const { Fragment, Component } = wp.element;
 const { __ } = wp.i18n;
 const { hooks } = wp;
 
 import CheckListIcon from './CheckListIcon.jsx';
+
+const SUPPORTED_RENDERING_MODES = ['post-only', 'template-locked'];
+
+const isSupportedEditorContext = ({ renderingMode, currentPostType, supportedPostTypes }) => {
+    if (renderingMode && !SUPPORTED_RENDERING_MODES.includes(renderingMode)) {
+        return false;
+    }
+
+    return Array.isArray(supportedPostTypes) && supportedPostTypes.includes(currentPostType);
+};
+
+const getIsPublishSidebarOpened = () => {
+    const editorStore = wp.data.select('core/editor');
+    if (editorStore && typeof editorStore.isPublishSidebarOpened === 'function') {
+        return editorStore.isPublishSidebarOpened();
+    }
+
+    // The selector lived in core/edit-post before WordPress 6.6.
+    const editPostStore = wp.data.select('core/edit-post');
+    return editPostStore && typeof editPostStore.isPublishSidebarOpened === 'function'
+        ? editPostStore.isPublishSidebarOpened()
+        : false;
+};
 
 class PPChecklistsPanel extends Component {
     isMounted = false;
@@ -123,11 +149,16 @@ class PPChecklistsPanel extends Component {
             } else if (this.currentStatus !== '') {
                 publishing_post = mapStatusPublishAllowed[this.currentStatus] ?? false;
             } else {
-                if (!wp.data.select('core/edit-post').isPublishSidebarOpened() && wp.data.select('core/editor').getEditedPostAttribute('status') !== 'publish' && wp.data.select('core/editor').getCurrentPost()['status'] !== 'publish') {
+                const editorStore = wp.data.select('core/editor');
+                const isPublishSidebarOpened = getIsPublishSidebarOpened();
+                const editedPostStatus = editorStore.getEditedPostAttribute('status');
+                const currentPost = editorStore.getCurrentPost() || {};
+
+                if (!isPublishSidebarOpened && editedPostStatus !== 'publish' && currentPost.status !== 'publish') {
                     publishing_post = false;
-                } else if (wp.data.select('core/edit-post').isPublishSidebarOpened() && wp.data.select('core/editor').getEditedPostAttribute('status') == 'publish') {
+                } else if (isPublishSidebarOpened && editedPostStatus === 'publish') {
                     publishing_post = true;
-                } else if (!wp.data.select('core/edit-post').isPublishSidebarOpened() && wp.data.select('core/editor').getEditedPostAttribute('status') == 'publish') {
+                } else if (!isPublishSidebarOpened && editedPostStatus === 'publish') {
                     publishing_post = true;
                 }
             }
@@ -200,15 +231,11 @@ class PPChecklistsPanel extends Component {
     };
 
     isSupportedContext = () => {
-        const renderingMode = this.getEditorRenderingMode();
-        if (renderingMode && renderingMode !== 'post-only') {
-            return false;
-        }
-
-        const supportedPostTypes = Array.isArray(i18n.supportedPostTypes) ? i18n.supportedPostTypes : [];
-        const currentPostType = this.getCurrentPostType();
-
-        return supportedPostTypes.includes(currentPostType);
+        return isSupportedEditorContext({
+            renderingMode: this.getEditorRenderingMode(),
+            currentPostType: this.getCurrentPostType(),
+            supportedPostTypes: i18n.supportedPostTypes,
+        });
     };
 
     updateEditorContext = () => {

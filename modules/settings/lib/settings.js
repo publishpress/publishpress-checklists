@@ -1,4 +1,24 @@
 jQuery(document).ready(function ($) {
+  // Show the description for the selected checklist task sort order.
+  $('.ppch-checklist-items-sort-order').each(function () {
+    var $select = $(this);
+    var $descriptions = $('#' + $select.attr('id') + '_description')
+      .find('.ppch-sort-order-description');
+
+    function updateSortOrderDescription() {
+      var selectedSortOrder = $select.val();
+
+      $descriptions.prop('hidden', true).filter(function () {
+        return $(this).data('sort-order') === selectedSortOrder;
+      }).prop('hidden', false);
+    }
+
+    $select.on('change', updateSortOrderDescription);
+    updateSortOrderDescription();
+  });
+});
+
+jQuery(document).ready(function ($) {
   // Initialize color pickers
   $('.pp-checklists-color-picker').wpColorPicker();
 

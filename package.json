@@ -13,13 +13,13 @@
   },
   "homepage": "https://github.com/publishpress/PublishPress-Content-Checklist#readme",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.29.6",
     "@wordpress/babel-preset-default": "^3.0.2",
     "babel-loader": "8.0.5",
-    "babel-minify-webpack-plugin": "^0.3.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-minify": "^0.5.0",
     "cross-env": "^5.2.1",
+    "terser-webpack-plugin": "5.3.17",
     "webpack": "5.105.0",
     "webpack-cli": "^5.1.4"
   },

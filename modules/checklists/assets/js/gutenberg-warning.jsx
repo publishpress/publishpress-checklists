@@ -1,7 +1,9 @@
 const {Component} = React;
 const {__} = wp.i18n;
 const {Fragment} = wp.element;
-const {PluginPrePublishPanel} = wp.editPost;
+const editorComponents = wp.editor || {};
+const editPostComponents = wp.editPost || {};
+const PluginPrePublishPanel = editorComponents.PluginPrePublishPanel || editPostComponents.PluginPrePublishPanel;
 const {registerPlugin} = wp.plugins;
 const {hooks} = wp;
 

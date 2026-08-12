@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Plugins - PublishPress Checklists: Pre-Publishing "
 "Approval Task Checklist for WordPress Content - Stable (latest release)\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
-"POT-Creation-Date: 2026-04-16T10:23:37+00:00\n"
-"PO-Revision-Date: 2026-04-16 10:55+0200\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
+"PO-Revision-Date: 2026-04-16 17:35+0200\n"
 "Last-Translator: Angelo Giammarresi <info@wocmultimedia.biz>\n"
 "Language-Team: French <https://weblate.publishpress.com/projects/"
 "publishpress-checklists/publishpress-checklists/fr/>\n"
@@ -19,11 +19,11 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
 #. Plugin Name of the plugin
-#, fuzzy
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
 #. Plugin URI of the plugin
+#, fuzzy
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
@@ -555,7 +555,7 @@ msgid "Rename task label"
 msgstr "Renommer le libellé de tâche"
 
 msgid "Label for the Checklists screen"
-msgstr "Libellé de l’écran « Listes de contrôle »"
+msgstr "Libellé de l’écran « Listes de contrôle »"
 
 msgid "Leave empty to use the default WP Admin label"
 msgstr "Laisser vide pour utiliser le libellé par défaut de l’administrateur/administratrice WP"
@@ -949,11 +949,11 @@ msgstr "Couleur terminé recommandée :"
 msgid "Recommended Incomplete Color:"
 msgstr "Couleur non terminé recommandée :"
 
-msgid "Enable rename label in editor panel:"
-msgstr "Activer le rénommage des libellés dans le panneau de modification :"
+msgid "Rename task labels:"
+msgstr "Renommer le libellé de tâche"
 
-msgid "Checklist item sort order:"
-msgstr "Ordre de tri des éléments de la liste de contrôle :"
+msgid "Checklist task sort order:"
+msgstr "Ordre de tri des tâches de la liste de contrôle :"
 
 msgid "OpenAI API Key:"
 msgstr "Clé API de OpenAI :"
@@ -990,9 +990,7 @@ msgstr "Ceci affichera une icône d’avertissement dans la case « Listes à c
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
-msgstr ""
-"Ceci mettra en évidence les blocs Gutenberg qui ne satisfont pas aux tâches "
-"de la liste de contrôle spécifique à chaque bloc."
+msgstr "Ceci mettra en évidence les blocs Gutenberg qui ne satisfont pas aux tâches de la liste de contrôle spécifique à chaque bloc."
 
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the plugin "
@@ -1047,14 +1045,14 @@ msgstr "Voir Dashicons"
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Saisir un nom de classe Dashicons (pour exemple, dashicons-no, dashicons-dismiss). "
 
-msgid "Enable custom rename labels in the checklist editor panel."
-msgstr "Activer le rénommage personnalisé des libellés dans le panneau de modification de la liste de contrôle."
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "Autoriser les administrateurs/administratrices à renommer les libellés des tâches dans l’éditeur de publication."
 
 msgid "Default"
 msgstr "Par défaut"
 
-msgid "Required on top and recommended below"
-msgstr "Obligatoire en haut et recommandé en bas"
+msgid "Required on top and Recommended below"
+msgstr "Obligatoire en haut et recommandé en dessous"
 
 msgid "Sort alphabetically"
 msgstr "Trier alphabétiquement"
@@ -1168,6 +1166,20 @@ msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more features "
 "and support. %sUpgrade to Pro%s"
 msgstr "Vous utilisez PublishPress Checklists Free. La version Pro offre plus de fonctionnalités et de support. %sPasser en version Pro%s"
+
+#~ msgid "Enable rename label in editor panel:"
+#~ msgstr "Activer le rénommage des libellés dans le panneau de modification :"
+
+#~ msgid "Checklist item sort order:"
+#~ msgstr "Ordre de tri des éléments de la liste de contrôle :"
+
+#~ msgid "Enable custom rename labels in the checklist editor panel."
+#~ msgstr ""
+#~ "Activer le rénommage personnalisé des libellés dans le panneau de "
+#~ "modification de la liste de contrôle."
+
+#~ msgid "Required on top and recommended below"
+#~ msgstr "Obligatoire en haut et recommandé en bas"
 
 #~ msgid "Numbers of characters in excerpt"
 #~ msgstr "Nombre de caractères dans l’extrait"

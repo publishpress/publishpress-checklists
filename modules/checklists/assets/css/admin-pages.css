@@ -762,6 +762,12 @@ textarea.pp-checklists-custom-item-title {
   min-width: 120px;
 }
 
+.pp-checklists-requirements-settings th.ppc-statuses-column,
+.pp-checklists-requirements-settings td.ppc-statuses-column {
+  width: 230px;
+  min-width: 230px;
+}
+
 @media only screen and (max-width: 900px) {
   .pp-checklists-custom-label-input {
     min-width: 120px;
