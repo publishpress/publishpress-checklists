@@ -1,5 +1,6 @@
 - *.code-workspace
 - .babelrc
+- .claude
 - .builder-post-rsync-filters-post
 - .builder-rsync-filters
 - .distignore
@@ -8,10 +9,12 @@
 - .github
 - .gitignore
 - .idea
+- .kombai
 - .php-cs-fixer.cache
 - .phpcs.xml
 - .phplint-cache
 - .phplint.yml
+- .playwright-mcp
 - .vscode
 - .wordpress-org
 - Gruntfile.js
