@@ -462,6 +462,7 @@ if (!class_exists('PPCH_Checklists')) {
             add_action('add_meta_boxes', [$this, 'handle_post_meta_boxes']);
             add_action('save_post', [$this, 'save_post_meta_box'], 10, 2);
             add_action('enqueue_block_editor_assets', [$this, 'enqueue_block_editor_assets']);
+            add_action('init', [$this, 'register_custom_item_rest_meta'], 20);
 
             add_filter(
                 'publishpress_checklists_post_type_requirements',
@@ -662,10 +663,14 @@ if (!class_exists('PPCH_Checklists')) {
                     wp_enqueue_script('pp-remodal');
 
                     if ($this->isBlockHighlightingEnabled() && $this->isBlockEditorPostType($screen->post_type)) {
+                        // Depends on the block editor panel bundle, which exposes
+                        // the shared PP_Checklists helpers and the localized
+                        // ppChecklists data this script needs. (Previously it
+                        // depended on the classic meta box script.) See #1208.
                         wp_register_script(
                             'pp-checklists-block-highlighting',
                             $this->module_url . 'assets/js/gutenberg-block-highlighting.js',
-                            ['pp-checklists-requirements', 'wp-data', 'wp-hooks', 'wp-compose', 'wp-element'],
+                            ['pp-checklists-panel-gutenberg', 'wp-data', 'wp-hooks', 'wp-compose', 'wp-element'],
                             PPCH_VERSION,
                             true
                         );
@@ -869,6 +874,20 @@ if (!class_exists('PPCH_Checklists')) {
          */
         public function handle_post_meta_boxes()
         {
+            // Do not register the classic meta box on block editor screens.
+            //
+            // WordPress disables Real Time Collaboration for any post that has a
+            // third-party meta box registered. The block editor renders its own
+            // checklist panel (see enqueue_block_editor_assets), so the classic
+            // meta box is only needed for the Classic Editor. See issue #1208.
+            $screen = get_current_screen();
+            if (!is_null($screen)
+                && method_exists($screen, 'is_block_editor')
+                && $screen->is_block_editor()
+            ) {
+                return;
+            }
+
             $title = esc_html__('Checklist', 'publishpress-checklists');
             $supported_post_types = $this->getSelectedPostTypes();
 
@@ -1081,6 +1100,62 @@ if (!class_exists('PPCH_Checklists')) {
             }
 
             return $use_block_editor;
+        }
+
+        /**
+         * Register the custom item post meta so the block editor can persist
+         * task completion through the REST API.
+         *
+         * The classic editor still saves these values through save_post_meta_box
+         * (a form POST). The block editor no longer submits the classic meta box,
+         * so custom/OpenAI task states are written as registered post meta by the
+         * checklist panel via editPost({ meta: ... }). See issue #1208.
+         *
+         * @return void
+         */
+        public function register_custom_item_rest_meta()
+        {
+            if (!function_exists('register_post_meta')) {
+                return;
+            }
+
+            $supported_post_types = $this->getSelectedPostTypes();
+            if (empty($supported_post_types)) {
+                return;
+            }
+
+            $item_ids = [];
+            if (isset($this->module->options->custom_items) && !empty($this->module->options->custom_items)) {
+                $item_ids = array_merge($item_ids, (array)$this->module->options->custom_items);
+            }
+            if (isset($this->module->options->openai_items) && !empty($this->module->options->openai_items)) {
+                $item_ids = array_merge($item_ids, (array)$this->module->options->openai_items);
+            }
+
+            $item_ids = array_unique(array_filter(array_map('trim', $item_ids)));
+            if (empty($item_ids)) {
+                return;
+            }
+
+            $auth_callback = function ($allowed, $meta_key, $post_id) {
+                return current_user_can('edit_post', $post_id);
+            };
+
+            foreach (array_keys($supported_post_types) as $post_type) {
+                foreach ($item_ids as $id) {
+                    register_post_meta(
+                        $post_type,
+                        self::POST_META_PREFIX . sanitize_key($id),
+                        [
+                            'type'              => 'string',
+                            'single'            => true,
+                            'show_in_rest'      => true,
+                            'sanitize_callback' => 'sanitize_text_field',
+                            'auth_callback'     => $auth_callback,
+                        ]
+                    );
+                }
+            }
         }
 
         /**
@@ -1317,6 +1392,87 @@ if (!class_exists('PPCH_Checklists')) {
                             ),
                         )
                     );
+
+                    // Build the requirements data the block editor engine needs.
+                    // This replaces the data the classic meta box used to localize,
+                    // so the panel no longer depends on a registered meta box.
+                    $post = get_post();
+                    $requirements = [];
+                    if ($post instanceof \WP_Post) {
+                        $requirements = apply_filters('publishpress_checklists_requirement_list', $requirements, $post);
+                        $requirements = $this->rearrange_requirement_array($requirements);
+                    }
+
+                    $options = get_option('publishpress_checklists_settings_options');
+
+                    wp_localize_script(
+                        'pp-checklists-requirements-gutenberg',
+                        'ppChecklists',
+                        [
+                            'requirements'                    => $requirements,
+                            'nonce'                           => wp_create_nonce('pp-checklists-requirements'),
+                            'label_checklist'                 => esc_html__('Checklist', 'publishpress-checklists'),
+                            'msg_missed_optional_publishing'  => esc_html__(
+                                'Are you sure you want to publish anyway?',
+                                'publishpress-checklists'
+                            ),
+                            'msg_missed_optional_updating'    => esc_html__(
+                                'Are you sure you want to update the published post anyway?',
+                                'publishpress-checklists'
+                            ),
+                            'msg_missed_required_publishing'  => esc_html__(
+                                'Please complete the following tasks before publishing:',
+                                'publishpress-checklists'
+                            ),
+                            'msg_missed_required_updating'    => esc_html__(
+                                'Please complete the following tasks before updating the published post:',
+                                'publishpress-checklists'
+                            ),
+                            'msg_missed_important_publishing' => esc_html__(
+                                'Not required, but important: ',
+                                'publishpress-checklists'
+                            ),
+                            'msg_missed_important_updating'   => esc_html__(
+                                'Not required, but important: ',
+                                'publishpress-checklists'
+                            ),
+                            'is_gutenberg_active'             => true,
+                            'status_filter_enabled'           => isset($options->status_filter_enabled) ? $options->status_filter_enabled : 'off',
+                            'customIcons'                     => [
+                                'complete'   => $complete_icon,
+                                'incomplete' => $incomplete_icon,
+                            ],
+                        ]
+                    );
+
+                    // Compatibility shim: satellite modules (Yoast SEO,
+                    // Permalinks, Pro) enqueue their editor scripts with a
+                    // dependency on the classic 'pp-checklists-requirements'
+                    // handle (meta-box.js), which no longer loads in the block
+                    // editor. Register that handle as a dependency-only alias of
+                    // the panel bundle so those scripts still load - and load
+                    // after the bundle, which sets up the compatibility bridge
+                    // (window.PP_Checklists + hidden requirement nodes). See #1208.
+                    if (!wp_script_is('pp-checklists-requirements', 'registered')) {
+                        wp_register_script(
+                            'pp-checklists-requirements',
+                            false,
+                            ['jquery', 'pp-checklists-panel-gutenberg'],
+                            PPCH_VERSION,
+                            true
+                        );
+                    }
+                    wp_enqueue_script('pp-checklists-requirements');
+
+                    do_action('publishpress_checklists_enqueue_scripts');
+
+                    // Block highlighting is optional. It is registered in
+                    // add_admin_scripts() with the panel bundle as a dependency;
+                    // enqueue it here now that the classic meta box no longer runs
+                    // on block editor screens. See #1208.
+                    if ($this->isBlockHighlightingEnabled() && $this->isBlockEditorPostType($screen->post_type)) {
+                        wp_enqueue_script('pp-checklists-block-highlighting');
+                    }
                 }
             }
         }

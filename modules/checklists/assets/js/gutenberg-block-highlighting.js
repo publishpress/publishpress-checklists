@@ -464,16 +464,53 @@
       });
     },
 
+    getRequirementLabelText: function (label) {
+      const container = document.createElement('div');
+      container.innerHTML = label || '';
+      return (container.textContent || container.innerText || '').trim();
+    },
+
+    // Find the first requirement config whose type exactly matches, using the
+    // data localized by PHP. Replaces the old classic meta box DOM lookups so
+    // block highlighting keeps working when no meta box is registered (#1208).
+    getRequirementConfigByType: function (type) {
+      if (typeof ppChecklists === 'undefined' || !ppChecklists.requirements) {
+        return null;
+      }
+
+      const entries = Object.entries(ppChecklists.requirements);
+      for (let i = 0; i < entries.length; i++) {
+        const config = entries[i][1];
+        if (config && config.type === type) {
+          return config;
+        }
+      }
+
+      return null;
+    },
+
+    // Return [requirementId, config] pairs whose type starts with the prefix.
+    getRequirementConfigsByTypePrefix: function (prefix) {
+      if (typeof ppChecklists === 'undefined' || !ppChecklists.requirements) {
+        return [];
+      }
+
+      return Object.entries(ppChecklists.requirements).filter(function (entry) {
+        const config = entry[1];
+        return config && typeof config.type === 'string' && config.type.indexOf(prefix) === 0;
+      });
+    },
+
     syncImageAltWarnings: function () {
       const content = wp.data.select('core/editor').getEditedPostAttribute('content');
-      const requirementElement = document.querySelector('#pp-checklists-req-image_alt');
+      const config = PP_Checklists_Block_Highlighting.getRequirementConfigByType('image_alt');
 
-      if (typeof content === 'undefined' || !requirementElement) {
+      if (typeof content === 'undefined' || !config) {
         return;
       }
 
       const missingAltImages = window.PP_Checklists.missing_alt_images(content, []);
-      const warningText = requirementElement.textContent.trim();
+      const warningText = PP_Checklists_Block_Highlighting.getRequirementLabelText(config.label);
       const imageBlocks = PP_Checklists_Block_Highlighting.getAllBlocks().filter((block) => block.name === 'core/image');
 
       imageBlocks.forEach(function (block) {
@@ -492,14 +529,14 @@
 
     syncInvalidLinkWarnings: function () {
       const content = wp.data.select('core/editor').getEditedPostAttribute('content');
-      const requirementElement = document.querySelector('#pp-checklists-req-validate_links');
+      const config = PP_Checklists_Block_Highlighting.getRequirementConfigByType('validate_links');
 
-      if (typeof content === 'undefined' || !requirementElement) {
+      if (typeof content === 'undefined' || !config) {
         return;
       }
 
       const invalidLinks = window.PP_Checklists.validate_links_format(content);
-      const warningText = requirementElement.textContent.trim();
+      const warningText = PP_Checklists_Block_Highlighting.getRequirementLabelText(config.label);
 
       PP_Checklists_Block_Highlighting.getAllBlocks().forEach(function (block) {
         const blockContent = JSON.stringify(block.attributes || {});
@@ -513,22 +550,18 @@
 
     syncImageAltCountWarnings: function () {
       const content = wp.data.select('core/editor').getEditedPostAttribute('content');
-      const requirementElements = Array.from(document.querySelectorAll('[id^="pp-checklists-req-image_alt_count"]'));
+      const requirementConfigs = PP_Checklists_Block_Highlighting.getRequirementConfigsByTypePrefix('image_alt_count');
 
-      if (typeof content === 'undefined' || requirementElements.length === 0) {
+      if (typeof content === 'undefined' || requirementConfigs.length === 0) {
         return;
       }
 
       const altLengths = window.PP_Checklists.get_image_alt_lengths(content);
       const imageBlocks = PP_Checklists_Block_Highlighting.getAllBlocks().filter((block) => block.name === 'core/image');
 
-      requirementElements.forEach(function (element) {
-        const requirementId = element.id.replace('pp-checklists-req-', '');
-        const config = (typeof ppChecklists !== 'undefined' && ppChecklists.requirements[requirementId])
-          ? ppChecklists.requirements[requirementId]
-          : (typeof ppChecklists !== 'undefined' && ppChecklists.requirements.image_alt_count)
-            ? ppChecklists.requirements.image_alt_count
-            : null;
+      requirementConfigs.forEach(function (entry) {
+        const requirementId = entry[0];
+        const config = entry[1];
 
         if (!config || !config.value) {
           return;
@@ -536,7 +569,7 @@
 
         const min = parseInt(config.value[0]);
         const max = parseInt(config.value[1]);
-        const warningText = element.textContent.trim();
+        const warningText = PP_Checklists_Block_Highlighting.getRequirementLabelText(config.label);
 
         imageBlocks.forEach(function (block, index) {
           if (!PP_Checklists_Block_Highlighting.hasChosenImage(block)) {
@@ -569,8 +602,8 @@
     },
 
     getImageAltCountSourceKeys: function () {
-      return Array.from(document.querySelectorAll('[id^="pp-checklists-req-image_alt_count"]')).map(function (element) {
-        return element.id.replace('pp-checklists-req-', '');
+      return PP_Checklists_Block_Highlighting.getRequirementConfigsByTypePrefix('image_alt_count').map(function (entry) {
+        return entry[0];
       });
     },
 

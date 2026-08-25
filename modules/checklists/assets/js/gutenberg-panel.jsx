@@ -5,6 +5,35 @@ const { __ } = wp.i18n;
 const { hooks } = wp;
 
 import CheckListIcon from './CheckListIcon.jsx';
+import { evaluateRequirement, helpers } from './checklist-evaluators.js';
+import { initChecklistBridge, BRIDGE_STATUS_ACTION } from './checklist-bridge.js';
+
+// Ensure the compatibility bridge is set up (window.PP_Checklists, hidden nodes,
+// tic loop) before third-party integration scripts run. See #1208.
+initChecklistBridge();
+
+/**
+ * Small debounce so the wp.data subscribe loop does not recompute on every
+ * single store tick. Kept local to avoid a lodash dependency.
+ */
+function debounce(fn, wait) {
+    let timer = null;
+    return function () {
+        const args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), wait);
+    };
+}
+
+/**
+ * Strip HTML tags and collapse whitespace, returning plain text. Used to build
+ * the failed-requirements messages consumed by the pre-publish warning panel.
+ */
+function toPlainText(html) {
+    const container = document.createElement('div');
+    container.innerHTML = html || '';
+    return (container.textContent || container.innerText || '').trim();
+}
 
 class PPChecklistsPanel extends Component {
     isMounted = false;
@@ -29,16 +58,13 @@ class PPChecklistsPanel extends Component {
         this.isMounted = true;
         const isSupportedContext = this.updateEditorContext();
 
-        if (isSupportedContext && typeof ppChecklists !== "undefined") {
-            this.updateRequirements(ppChecklists.requirements);
+        if (isSupportedContext) {
+            this.setState({ requirements: this.buildInitialRequirements() }, () => this.recompute());
         }
 
-        hooks.addAction('pp-checklists.update-failed-requirements', 'publishpress/checklists', this.updateFailedRequirements.bind(this), 10);
-        hooks.addAction('pp-checklists.requirements-updated', 'publishpress/checklists', this.handleRequirementStatusChange.bind(this), 10);
-
         /**
-         * Our less problematic solution till gutenberg Add a way 
-         * for third parties to perform additional save validation 
+         * Our less problematic solution till gutenberg Add a way
+         * for third parties to perform additional save validation
          * in this issue https://github.com/WordPress/gutenberg/issues/13413
          * is this solution as it also solves third party conflict with
          * locking post (Rankmath, Yoast SEO etc)
@@ -48,56 +74,42 @@ class PPChecklistsPanel extends Component {
         let coreSavePost = coreEditor.savePost;
         let coreEdiPost  = coreEditor.editPost;
 
-        // Add Gutenberg validation that triggers failed requirements
-        let validateRequirements = () => {
-            
-            let uncheckedItems = {
-                block: [],
-                warning: []
-            };
-
-            // Check each requirement from the requirements array
-            this.state.requirements.forEach(req => {
-                if (!req.status) {
-                    // This requirement is not met
-                    if (req.rule === 'block') {
-                        uncheckedItems.block.push(req.label);
-                    } else if (req.rule === 'warning') {
-                        uncheckedItems.warning.push(req.label);
-                    }
-                }
-            });
-
-            this.updateFailedRequirements(uncheckedItems);
-        };
-
-        // Subscribe to changes to trigger validation
-        this.contextSubscription = wp.data.subscribe(() => {
-            const currentContextSupported = this.updateEditorContext();
-            if (this.isMounted && currentContextSupported && this.state.requirements.length > 0) {
-                validateRequirements();
+        this.onEditorChange = debounce(() => {
+            if (!this.isMounted) {
+                return;
             }
-        });
+            const currentContextSupported = this.updateEditorContext();
+            if (currentContextSupported) {
+                this.recompute();
+            }
+        }, 300);
+
+        // Recompute requirement statuses whenever the editor state changes.
+        this.contextSubscription = wp.data.subscribe(this.onEditorChange);
+
+        // Reflect status updates coming from third-party integration scripts
+        // (Yoast SEO, Permalinks, Pro) through the compatibility bridge.
+        hooks.addAction(BRIDGE_STATUS_ACTION, 'publishpress/checklists', this.applyBridgeStatus, 10);
 
         if (!this.oldStatus || this.oldStatus == '') {
             const currentPost = wp.data.select('core/editor').getCurrentPost();
             this.oldStatus = currentPost && currentPost.status ? currentPost.status : '';
-        }    
-        
+        }
+
         /**
-        *  This is the best way to get edited post status. 
-        * For now, both getEditedPostAttribute('status') and 
+        *  This is the best way to get edited post status.
+        * For now, both getEditedPostAttribute('status') and
         * getCurrentPost()['status'] are not helpful because they don't usually return same
         * status or valid status between when a post Publish button is used / Save draft is clicked
         * for new and already published post.
        */
-        
+
         wp.data.dispatch('core/editor').editPost = async (edits, options) => {
             options = options || {};
             if (options.pp_checklists_edit_filtered === 1 || options.pp_checklists_post_status_edit === 1) {
                 return coreEdiPost(edits, options);
             }
-            
+
             if (typeof edits === 'object' && edits.status) {
                 // set status to be used later when preventing publish for posts that doesn't meet requirement.
                 this.currentStatus = edits.status;
@@ -131,10 +143,9 @@ class PPChecklistsPanel extends Component {
                     publishing_post = true;
                 }
             }
-            
+
             const hasBlockRequirements = this.state.failedRequirements.block && this.state.failedRequirements.block.length > 0;
-            const hasWarningRequirements = this.state.failedRequirements.warning && this.state.failedRequirements.warning.length > 0;
-            
+
             if (!publishing_post || !hasBlockRequirements) {
                 return coreSavePost(options);
             } else {
@@ -143,11 +154,11 @@ class PPChecklistsPanel extends Component {
                     isDismissible: true
                 });
                 wp.data.dispatch('core/edit-post').openGeneralSidebar('publishpress-checklists-panel/checklists-sidebar');
-                
+
                 /**
-                 * change status to draft or old status if failed to 
+                 * change status to draft or old status if failed to
                  * solve further save draft button not working. This is
-                 * because at this state, the status has been updated to publish 
+                 * because at this state, the status has been updated to publish
                  * and further click on "Save draft" from editor UI won't work
                  * as that doesn't update the status to publish
                  */
@@ -159,26 +170,39 @@ class PPChecklistsPanel extends Component {
         };
     }
 
-    componentDidUpdate(_, prevState) {
-        if (!this.state.isSupportedContext) {
-            return;
-        }
-
-        if (typeof ppChecklists !== "undefined") {
-            this.updateRequirements(ppChecklists.requirements);
-        }
-    }
-
     componentWillUnmount() {
-
-        hooks.removeAction('pp-checklists.update-failed-requirements', 'publishpress/checklists');
-        hooks.removeAction('pp-checklists.requirements-updated', 'publishpress/checklists');
         if (typeof this.contextSubscription === 'function') {
             this.contextSubscription();
         }
 
+        hooks.removeAction(BRIDGE_STATUS_ACTION, 'publishpress/checklists');
+
         this.isMounted = false;
     }
+
+    /**
+     * Apply a status update relayed from a third-party integration script via
+     * the compatibility bridge, keeping the panel in sync for requirements the
+     * React engine does not evaluate itself.
+     */
+    applyBridgeStatus = (id, status) => {
+        if (!this.isMounted) {
+            return;
+        }
+
+        let changed = false;
+        const updated = this.state.requirements.map((req) => {
+            if (req.id === id && !!req.status !== !!status) {
+                changed = true;
+                return { ...req, status: !!status };
+            }
+            return req;
+        });
+
+        if (changed) {
+            this.setState({ requirements: updated }, () => this.computeFailedRequirements());
+        }
+    };
 
     getCurrentPostType = () => {
         const selectedPostType = wp.data.select('core/editor').getCurrentPostType();
@@ -246,53 +270,155 @@ class PPChecklistsPanel extends Component {
     };
 
     /**
-     * Hook to failed requirement to update block requirements.
-     * 
-     * @param {Array} failedRequirements 
+     * Build the initial requirement list from the data localized by PHP.
+     * The server provides the initial (last saved) status for each requirement.
      */
-    updateFailedRequirements(failedRequirements) {
-        if (this.isMounted) {
-            this.setState({ failedRequirements: failedRequirements });
+    buildInitialRequirements = () => {
+        const source = (typeof ppChecklists !== 'undefined' && ppChecklists.requirements)
+            ? ppChecklists.requirements
+            : {};
+
+        return Object.entries(source).map(([key, req]) => {
+            const id = req.id || key;
+            return { ...req, id, status: !!req.status };
+        });
+    };
+
+    /**
+     * Recompute the status of every requirement against the current editor
+     * state, then refresh the panel and the failed-requirements consumers.
+     */
+    recompute = () => {
+        if (!this.isMounted || !this.state.isSupportedContext) {
+            return;
+        }
+
+        const current = this.state.requirements.length
+            ? this.state.requirements
+            : this.buildInitialRequirements();
+
+        const updated = current.map((req) => {
+            const result = evaluateRequirement(req);
+            return {
+                ...req,
+                status: !!result.status,
+                label: result.label !== undefined ? result.label : req.label,
+            };
+        });
+
+        const sorted = this.sortRequirements(updated);
+        const showRequiredLegend = sorted.some((req) => req.rule === 'block');
+
+        const prevHash = this.getRequirementsHash(this.state.requirements);
+        const nextHash = this.getRequirementsHash(sorted);
+
+        if (prevHash !== nextHash || this.state.showRequiredLegend !== showRequiredLegend) {
+            this.setState({ requirements: sorted, showRequiredLegend }, () => this.computeFailedRequirements());
+        } else {
+            this.computeFailedRequirements();
         }
     };
 
     /**
-     * Handle requirement status change
+     * Build the { block, warning } list of failed requirements from the current
+     * state and broadcast it. The pre-publish warning panel and the publish
+     * lock in savePost both rely on this data.
      */
-    handleRequirementStatusChange = () => {
-        this.updateRequirements(this.state.requirements);
-    };
+    computeFailedRequirements = () => {
+        const failed = { block: [], warning: [] };
 
-    /**
-     * Update sidebar requirements
-     * 
-     * @param {Array} Requirements 
-     */
-    updateRequirements = (Requirements) => {
-        if (this.isMounted && this.state.isSupportedContext) {
-            const sourceRequirements = Requirements || {};
-            const showRequiredLegend = Object.values(sourceRequirements).some((req) => req.rule === 'block');
-
-            const updatedRequirements = Object.entries(sourceRequirements).map(([key, req]) => {
-                const id = req.id || key;
-                const element = document.querySelector(`#ppch_item_${id}`);
-
-                if (element) {
-                    req.status = element.value == 'yes' ? true : false;
+        this.state.requirements.forEach((req) => {
+            if (!req.status) {
+                const label = toPlainText(req.label);
+                if (req.rule === 'block') {
+                    failed.block.push(label);
+                } else if (req.rule === 'warning') {
+                    failed.warning.push(label);
                 }
-                req.id = id;
-
-                return req;
-            });
-
-            const sortedRequirements = this.sortRequirements(updatedRequirements);
-            const prevHash = this.getRequirementsHash(this.state.requirements);
-            const nextHash = this.getRequirementsHash(sortedRequirements);
-
-            if (prevHash !== nextHash || this.state.showRequiredLegend !== showRequiredLegend) {
-                this.setState({ showRequiredLegend, requirements: sortedRequirements });
             }
+        });
+
+        const prev = this.state.failedRequirements;
+        const changed = prev.block.join('|') !== failed.block.join('|')
+            || prev.warning.join('|') !== failed.warning.join('|');
+
+        if (changed && this.isMounted) {
+            this.setState({ failedRequirements: failed });
+
+            // Notify external consumers (pre-publish warning panel, third parties).
+            hooks.doAction('pp-checklists.update-failed-requirements', failed);
         }
+    };
+
+    /**
+     * Toggle a custom (manually checked) requirement and persist it as post
+     * meta so it is saved through the REST API - no classic meta box needed.
+     */
+    toggleCustomItem = (req) => {
+        if (!req.is_custom) {
+            return;
+        }
+
+        const newStatus = !req.status;
+        const updated = this.state.requirements.map((item) =>
+            item.id === req.id ? { ...item, status: newStatus } : item
+        );
+
+        this.setState({ requirements: updated }, () => this.computeFailedRequirements());
+        this.persistCustomItem(req.id, newStatus);
+    };
+
+    persistCustomItem = (id, status) => {
+        const metaKey = 'pp_checklist_custom_item_' + id;
+        wp.data.dispatch('core/editor').editPost({ meta: { [metaKey]: status ? 'yes' : 'no' } });
+    };
+
+    /**
+     * Handle the "Check Now" button for button-based requirements (e.g. OpenAI).
+     * Mirrors the AJAX call the classic engine used to make.
+     */
+    checkRequirementButton = (req, event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (typeof window.jQuery === 'undefined' || typeof ppChecklists === 'undefined') {
+            return;
+        }
+
+        const $ = window.jQuery;
+        const button = $(event.currentTarget);
+        const wrap = button.closest('.requirement-button-task-wrap');
+        wrap.find('.request-response').html('');
+        button.prop('disabled', true);
+        wrap.find('.spinner').addClass('is-active');
+
+        const data = {
+            action: 'pp_checklists_' + req.source + '_requirement',
+            requirement: ppChecklists.requirements[req.id],
+            content: helpers.getContent(),
+            nonce: ppChecklists.nonce,
+        };
+
+        $.post(ajaxurl, data, (response) => {
+            const status = response.yes_no === 'yes';
+            const updated = this.state.requirements.map((item) =>
+                item.id === req.id ? { ...item, status } : item
+            );
+            this.setState({ requirements: updated }, () => this.computeFailedRequirements());
+            this.persistCustomItem(req.id, status);
+
+            const content = (response.content || '').replace(/\n/g, '<br>');
+            wrap.find('.request-response').html(
+                '<div class="ppch-message notice is-dismissible updated published"><p>' + content + '</p></div>'
+            );
+        }).fail((jqXHR, textStatus, errorThrown) => {
+            wrap.find('.request-response').html(
+                '<div class="ppch-message notice is-dismissible error"><p>' + errorThrown + ' ' + textStatus + '</p></div>'
+            );
+        }).always(() => {
+            button.prop('disabled', false);
+            wrap.find('.spinner').removeClass('is-active');
+        });
     };
 
     getRequirementsHash = (requirements) => {
@@ -312,9 +438,7 @@ class PPChecklistsPanel extends Component {
     };
 
     normalizeLabelForSort = (label) => {
-        const container = document.createElement('div');
-        container.innerHTML = label || '';
-        return (container.textContent || container.innerText || '').trim().toLowerCase();
+        return toPlainText(label).toLowerCase();
     };
 
     isRequirementCompliant = (req) => {
@@ -377,14 +501,14 @@ class PPChecklistsPanel extends Component {
 
     /**
      * Get the icon class based on status
-     * 
+     *
      * @param {string} rule - 'block' (Required) or 'warning' (Recommended) - not used anymore
      * @param {boolean} status - true (complete) or false (incomplete)
      * @returns {string} - Dashicon class name
      */
     getIconClass = (rule, status) => {
         const customIcons = i18n.customIcons || {};
-        
+
         // Use the same icons for both Required and Recommended
         return status ? (customIcons.complete || 'dashicons-yes') : (customIcons.incomplete || 'dashicons-no');
     };
@@ -397,7 +521,7 @@ class PPChecklistsPanel extends Component {
         if (!isSupportedContext) {
             return null;
         }
-        
+
         return requirements.length > 0 ? (
             <Fragment>
                 <PluginSidebarMoreMenuItem
@@ -451,16 +575,10 @@ class PPChecklistsPanel extends Component {
                                                     data-source={req.source || ''}
                                                     onClick={() => {
                                                         if (req.is_custom) {
-                                                            const element = document.querySelector(`#pp-checklists-req-${req.id}` + ' .status-label');
-                                                            if (element) {
-                                                                element.click();
-                                                            }
+                                                            this.toggleCustomItem(req);
                                                         }
                                                     }}
                                                 >
-                                                    {req.is_custom || req.require_button ? (
-                                                        <input type="hidden" name={`_PPCH_custom_item[${req.id}]`} value={req.status ? 'yes' : 'no'} />
-                                                    ) : null}
                                                     <div className={`status-icon dashicons ${this.getIconClass(req.rule, req.status)}`}></div>
                                                     <div className="status-label">
                                                         <span className="req-label" dangerouslySetInnerHTML={{ __html: req.label }} />
@@ -469,7 +587,11 @@ class PPChecklistsPanel extends Component {
                                                         ) : null}
                                                         {req.require_button ? (
                                                             <div className="requirement-button-task-wrap">
-                                                                <button type="button" className="button button-secondary pp-checklists-check-item">
+                                                                <button
+                                                                    type="button"
+                                                                    className="button button-secondary pp-checklists-check-item"
+                                                                    onClick={(event) => this.checkRequirementButton(req, event)}
+                                                                >
                                                                     {__("Check Now", "publishpress-checklists")}
                                                                     <span className="spinner"></span>
                                                                 </button>
