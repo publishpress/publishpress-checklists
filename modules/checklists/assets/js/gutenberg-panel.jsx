@@ -348,6 +348,66 @@ class PPChecklistsPanel extends Component {
             // Notify external consumers (pre-publish warning panel, third parties).
             hooks.doAction('pp-checklists.update-failed-requirements', failed);
         }
+
+        // Run these every recompute (not only on change): post status and
+        // requirement completeness can both move the lock / icon state.
+        this.updatePublishButtonLock(failed);
+        this.updateWarningIcon();
+    };
+
+    /**
+     * When the "Disable publish button" setting is on, proactively lock saving
+     * while required (block) tasks are incomplete - mirroring the classic
+     * meta-box.js behaviour. Publishing is already blocked by the savePost
+     * override; this also disables the button up-front. See #1212.
+     */
+    updatePublishButtonLock = (failed) => {
+        if (typeof ppChecklists === 'undefined' || !ppChecklists.disable_publish_button) {
+            return;
+        }
+
+        const dispatch = wp.data.dispatch('core/editor');
+        if (!dispatch || typeof dispatch.lockPostSaving !== 'function') {
+            return;
+        }
+
+        const currentPost = wp.data.select('core/editor').getCurrentPost();
+        const status = currentPost && currentPost.status ? currentPost.status : '';
+        const isPublished = status === 'publish';
+        const isPending = status === 'pending';
+
+        // Pro can opt out of locking already-published posts via this flag.
+        // When it is not set (default / free) the lock applies regardless.
+        const applyToPublished = !ppChecklists.disable_published_block_feature;
+        const shouldConsider = (!isPublished && !isPending) || applyToPublished;
+
+        if (shouldConsider && failed.block.length > 0) {
+            dispatch.lockPostSaving('ppcPublishButton');
+        } else {
+            dispatch.unlockPostSaving('ppcPublishButton');
+        }
+    };
+
+    /**
+     * Toggle the body class used by the Pro status-filter warning icon when any
+     * requirement is incomplete. Mirrors the classic meta-box.js behaviour.
+     * See #1212.
+     */
+    updateWarningIcon = () => {
+        if (typeof ppChecklists === 'undefined'
+            || !ppChecklists.show_warning_icon_submit
+            || !ppChecklists.status_filter_enabled
+            || ppChecklists.status_filter_enabled === 'off'
+        ) {
+            return;
+        }
+
+        if (typeof document === 'undefined' || !document.body) {
+            return;
+        }
+
+        const anyIncomplete = this.state.requirements.some((req) => !req.status);
+        document.body.classList.toggle('ppch-show-publishing-warning-icon', anyIncomplete);
     };
 
     /**
