@@ -1438,6 +1438,12 @@ if (!class_exists('PPCH_Checklists')) {
                             ),
                             'is_gutenberg_active'             => true,
                             'status_filter_enabled'           => isset($options->status_filter_enabled) ? $options->status_filter_enabled : 'off',
+                            'show_warning_icon_submit'        => isset($settings_options->show_warning_icon_submit)
+                                ? (Base_requirement::VALUE_YES === $settings_options->show_warning_icon_submit)
+                                : false,
+                            'disable_publish_button'          => isset($settings_options->disable_publish_button)
+                                ? (Base_requirement::VALUE_YES === $settings_options->disable_publish_button)
+                                : false,
                             'customIcons'                     => [
                                 'complete'   => $complete_icon,
                                 'incomplete' => $incomplete_icon,
