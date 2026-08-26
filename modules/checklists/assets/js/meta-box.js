@@ -625,6 +625,27 @@
     },
 
     /**
+     * Returns the hosts that should be treated as internal for the
+     * internal/external links checks, localized server-side as
+     * ppChecklists.internal_link_hosts. Falls back to the host this script
+     * is running on if that wasn't localized (e.g. an older cached copy of
+     * the object), matching the previous single-host behaviour.
+     *
+     * @return {Array}
+     */
+    get_internal_link_hosts: function () {
+      if (
+        typeof ppChecklists !== 'undefined' &&
+        Array.isArray(ppChecklists.internal_link_hosts) &&
+        ppChecklists.internal_link_hosts.length > 0
+      ) {
+        return ppChecklists.internal_link_hosts;
+      }
+
+      return [window.location.host];
+    },
+
+    /**
      * Check for internal link from content and return result as array
      *
      *  - remove image inside tags so we don't count them as link
@@ -634,11 +655,15 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {String} website
+     * @param  {Array} websites Hosts treated as internal. Defaults to the
+     *                          site's real hosts (localized as
+     *                          ppChecklists.internal_link_hosts), which is
+     *                          not necessarily the host this admin script is
+     *                          running on.
      *
      * @return {Array}
      */
-    extract_internal_links: function (content, links = [], website = window.location.host) {
+    extract_internal_links: function (content, links = [], websites = PP_Checklists.get_internal_link_hosts()) {
       var link;
       if (content) {
         //remove image inside tags so we don't count them as link
@@ -656,8 +681,8 @@
           for (link of content) {
             //skip if link is image
             if (link.match(/\.(jpeg|jpg|gif|png|svg)$/)) continue;
-            //skip if link has different host than current website
-            if (link.indexOf(website) < 0) continue;
+            //skip if link doesn't match any of the site's hosts
+            if (!websites.some(function (website) { return link.indexOf(website) >= 0; })) continue;
             //add valid link to array
             links.push(link);
           }
@@ -677,11 +702,13 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {String} website
+     * @param  {Array} websites Hosts treated as internal (i.e. excluded from
+     *                          the external count). Defaults to the site's
+     *                          real hosts, see get_internal_link_hosts().
      *
      * @return {Array}
      */
-    extract_external_links: function (content, links = [], website = window.location.host) {
+    extract_external_links: function (content, links = [], websites = PP_Checklists.get_internal_link_hosts()) {
       var link,
         match,
         regex = /<a.*?href=["\']([^"\']+)["\'].*?\>(.*?)\<\/a\>/gi;
@@ -692,8 +719,8 @@
 
           //skip if link is image
           if (link.match(/\.(jpeg|jpg|gif|png|svg)$/)) continue;
-          //skip if link point to the current website host
-          if (link.indexOf(website) > 0) continue;
+          //skip if link points to one of the site's own hosts
+          if (websites.some(function (website) { return link.indexOf(website) > 0; })) continue;
           //add valid link to array
           links.push(link);
         }

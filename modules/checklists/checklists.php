@@ -993,6 +993,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'complete'   => $complete_icon,
                             'incomplete' => $incomplete_icon,
                         ],
+                        'internal_link_hosts'      => $this->get_internal_link_hosts(),
                     ]
                 );
 
@@ -1035,6 +1036,38 @@ if (!class_exists('PPCH_Checklists')) {
                     ],
                 ]
             );
+        }
+
+        /**
+         * Returns the hosts that should be treated as "internal" for the
+         * internal/external links checklist items. Includes the front-end
+         * site host and the host WordPress core is installed on, since they
+         * can differ (e.g. a front-end domain separate from wp-admin).
+         *
+         * @return array
+         */
+        private function get_internal_link_hosts()
+        {
+            $hosts = [];
+
+            foreach ([home_url(), site_url()] as $url) {
+                $host = parse_url($url, PHP_URL_HOST);
+                if (!empty($host)) {
+                    $hosts[] = $host;
+                }
+            }
+
+            $hosts = array_values(array_unique($hosts));
+
+            /**
+             * Filters the hosts treated as "internal" for the internal and
+             * external links checklist items. Useful when the front-end runs
+             * on a host that is neither home_url() nor site_url(), such as a
+             * headless or multi-domain setup.
+             *
+             * @param array $hosts
+             */
+            return apply_filters('publishpress_checklists_internal_link_hosts', $hosts);
         }
 
         private function is_gutenberg_active()
