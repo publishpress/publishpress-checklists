@@ -213,6 +213,7 @@ ul#pp-checklists-req-box span.required {
 
 .pp-checklists-req.pp-checklists-custom-item .status-label {
     padding-left: 1px;
+    white-space: pre-line;
 }
 
 #pp-checklists-sidebar-content .pp-checklists-req.pp-checklists-custom-item .status-label {
