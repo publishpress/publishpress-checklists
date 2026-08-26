@@ -643,7 +643,7 @@
       }
 
       if (min_value > 0) {
-        return count + ' (min ' + min_value + ')';
+        return count + ', min ' + min_value;
       }
 
       return String(count);
