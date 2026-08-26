@@ -1067,7 +1067,14 @@ if (!class_exists('PPCH_Checklists')) {
              *
              * @param array $hosts
              */
-            return apply_filters('publishpress_checklists_internal_link_hosts', $hosts);
+            $hosts = apply_filters('publishpress_checklists_internal_link_hosts', $hosts);
+
+            // A filter callback could introduce an empty entry (e.g. from an
+            // unset config value). An empty host would match every link via
+            // strpos(), so keep only non-empty strings.
+            return array_values(array_filter((array)$hosts, function ($host) {
+                return is_string($host) && '' !== $host;
+            }));
         }
 
         private function is_gutenberg_active()

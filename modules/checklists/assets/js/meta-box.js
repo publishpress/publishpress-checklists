@@ -634,12 +634,17 @@
      * @return {Array}
      */
     get_internal_link_hosts: function () {
-      if (
-        typeof ppChecklists !== 'undefined' &&
-        Array.isArray(ppChecklists.internal_link_hosts) &&
-        ppChecklists.internal_link_hosts.length > 0
-      ) {
-        return ppChecklists.internal_link_hosts;
+      if (typeof ppChecklists !== 'undefined' && Array.isArray(ppChecklists.internal_link_hosts)) {
+        // Drop any empty entry a 'publishpress_checklists_internal_link_hosts'
+        // filter callback might introduce: an empty string matches every
+        // link via indexOf, which would make every link look internal.
+        var hosts = ppChecklists.internal_link_hosts.filter(function (host) {
+          return typeof host === 'string' && host !== '';
+        });
+
+        if (hosts.length > 0) {
+          return hosts;
+        }
       }
 
       return [window.location.host];
