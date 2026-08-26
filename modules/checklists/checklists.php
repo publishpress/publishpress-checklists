@@ -958,6 +958,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'label_checklist'                 => esc_html__('Checklist', 'publishpress-checklists'),
+                        'label_open_checklist'            => esc_html__('Open checklist', 'publishpress-checklists'),
                         'msg_missed_optional_publishing'  => esc_html__(
                             'Are you sure you want to publish anyway?',
                             'publishpress-checklists'
@@ -1300,6 +1301,7 @@ if (!class_exists('PPCH_Checklists')) {
                         array(
                             'completeRequirementMessage' => __("Please complete the required(*) checklists task.", "publishpress-checklists"),
                             'checklistLabel' => __("Checklists", "publishpress-checklists"),
+                            'openChecklistLabel' => __("Open checklist", "publishpress-checklists"),
                             'noTaskLabel' => __("You don't have to complete any Checklist tasks.", "publishpress-checklists"),
                             'required' => __("required", "publishpress-checklists"),
                             'requiredHeading' => __("Required", "publishpress-checklists"),
