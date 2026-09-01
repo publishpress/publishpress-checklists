@@ -2,7 +2,7 @@
     <?php wp_nonce_field('ppch-global-checklists'); ?>
 
     <?php if (isset($context['success']) && $context['success']) : ?>
-        <div class="notice notice-success is-dismissible">
+        <div class="notice notice-success is-dismissible checklists-save-notice" role="status" aria-live="polite">
             <p><?php esc_html_e('Settings saved successfully!', 'publishpress-checklists'); ?></p>
         </div>
     <?php endif; ?>
@@ -11,13 +11,26 @@
         <input type="submit" name="submit" id="submit-top" class="button button-primary"
             value="<?php echo esc_attr__('Save Changes', 'publishpress-checklists'); ?>">
     </div>
-    <ul id="pp-checklists-post-type-filter" class="nav-tab-wrapper">
-        <?php foreach ($context['post_types'] as $post_type_key => $post_type_label) : ?>
-            <li class="nav-tab post-type-<?php echo esc_attr($post_type_key); ?>">
-                <a href="#<?php echo esc_attr($post_type_key); ?>"><?php echo esc_html($post_type_label); ?></a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+    <div id="pp-checklists-status" class="screen-reader-text" role="status" aria-live="polite" aria-atomic="true"></div>
+    <nav aria-label="<?php esc_attr_e('Post types', 'publishpress-checklists'); ?>">
+        <ul id="pp-checklists-post-type-filter" class="nav-tab-wrapper" role="tablist">
+            <?php $post_type_index = 0; ?>
+            <?php foreach ($context['post_types'] as $post_type_key => $post_type_label) : ?>
+                <?php $post_type_is_active = $post_type_index === 0; ?>
+                <li class="nav-tab post-type-<?php echo esc_attr($post_type_key); ?>" role="presentation">
+                    <a id="ppch-post-type-tab-<?php echo esc_attr($post_type_key); ?>"
+                        href="#<?php echo esc_attr($post_type_key); ?>"
+                        role="tab"
+                        aria-controls="pp-checklists-tab-body-<?php echo esc_attr($post_type_key); ?>"
+                        aria-selected="<?php echo $post_type_is_active ? 'true' : 'false'; ?>"
+                        tabindex="<?php echo $post_type_is_active ? '0' : '-1'; ?>">
+                        <?php echo esc_html($post_type_label); ?>
+                    </a>
+                </li>
+                <?php $post_type_index++; ?>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
 
 
 
@@ -29,7 +42,12 @@
              */
             $i = 0;
             foreach ($context['post_types'] as $post_type_key => $post_type_label) { ?>
-                <ul id="list-<?php echo esc_attr($post_type_key); ?>" class="pp-checklists-tabs-list <?php echo $i === 0 ? 'active' : ''; ?>">
+                <ul id="list-<?php echo esc_attr($post_type_key); ?>"
+                    class="pp-checklists-tabs-list <?php echo $i === 0 ? 'active' : ''; ?>"
+                    role="tablist"
+                    aria-label="<?php echo esc_attr(sprintf(__('Checklist sections for %s', 'publishpress-checklists'), $post_type_label)); ?>"
+                    aria-hidden="<?php echo $i === 0 ? 'false' : 'true'; ?>">
+                    <?php $inner_tab_index = 0; ?>
                     <?php foreach ($context['tabs'][$post_type_key] as $key => $args) {
                         $has_requirements = array_filter($context['requirements'][$post_type_key], function ($requirement) use ($key) {
                             return $requirement->group === $key;
@@ -53,12 +71,18 @@
                         // Show Pro tabs even if they have no requirements, so they can display the promo
                         $is_pro_tab = isset($args['pro']) && $args['pro'];
                         if (empty($has_requirements) && $key !== 'custom' && !$is_pro_tab) continue;
+                        $inner_tab_is_active = $inner_tab_index === 0;
                     ?>
-                        <li class="<?php echo esc_attr($post_type_key); ?>">
+                        <li class="<?php echo esc_attr($post_type_key); ?>" role="presentation">
                             <a data-tab="<?php echo esc_attr($key); ?>"
                                 data-post-type="<?php echo esc_attr($post_type_key); ?>"
-                                href="#">
-                                <span class="<?php echo esc_attr($args['icon']); ?>">
+                                id="ppch-<?php echo esc_attr($post_type_key . '-' . $key); ?>-tab"
+                                href="#"
+                                role="tab"
+                                aria-controls="pp-checklists-requirements"
+                                aria-selected="<?php echo $inner_tab_is_active ? 'true' : 'false'; ?>"
+                                tabindex="<?php echo $inner_tab_is_active ? '0' : '-1'; ?>">
+                                <span class="<?php echo esc_attr($args['icon']); ?>" aria-hidden="true">
                                     <?php if (isset($args['svg']) && !empty($args['svg'])) : echo $args['svg']; endif; ?>
                                 </span>
                                 <span class="item"><?php echo esc_html($args['label']); ?></span>
@@ -67,17 +91,18 @@
                                 <?php endif; ?>
                             </a>
                         </li>
+                        <?php $inner_tab_index++; ?>
                     <?php }
                     $i++; ?>
                 </ul>
             <?php } ?>
         </div>
         <div class="pp-checklists-content-wrapper wrapper-column">
-            <table class="form-table pp-checklists-content-table fixed wp-list-table pp-checklists-requirements-settings" id="pp-checklists-requirements" role="presentation">
+            <table class="form-table pp-checklists-content-table fixed wp-list-table pp-checklists-requirements-settings" id="pp-checklists-requirements">
                 <thead>
                     <tr>
-                        <th><?php echo esc_html($context['lang']['description']); ?></th>
-                        <th><?php echo esc_html($context['lang']['action']); ?></th>
+                        <th scope="col"><?php echo esc_html($context['lang']['description']); ?></th>
+                        <th scope="col"><?php echo esc_html($context['lang']['action']); ?></th>
                         <?php
                         /**
                          * @param string $html
@@ -87,15 +112,15 @@
                          */
                         do_action('publishpress_checklists_tasks_list_th');
                         ?>
-                        <th><?php echo esc_html($context['lang']['params']); ?></th>
+                        <th scope="col"><?php echo esc_html($context['lang']['params']); ?></th>
                         <!-- We need this empty th for pro badge layout so it's not cramped -->
-                        <th id="pp-checklists-pro-badge-heading"></th>
+                        <th id="pp-checklists-pro-badge-heading" aria-hidden="true"></th>
                     </tr>
                 </thead>
                 <?php
                 $i = 0;
                 foreach ($context['post_types'] as $post_type_key => $post_type_label) : ?>
-                    <tbody id="<?php echo 'pp-checklists-tab-body-' . esc_attr($post_type_key); ?>" class="pp-checklists-tab-body <?php echo $i === 0 ? 'active' : ''; ?>" style="display: none;">
+                    <tbody id="<?php echo 'pp-checklists-tab-body-' . esc_attr($post_type_key); ?>" class="pp-checklists-tab-body <?php echo $i === 0 ? 'active' : ''; ?>" aria-hidden="true" style="display: none;">
                         <?php
                         foreach ($context['tabs'][$post_type_key] as $group => $tabInfo) :
                             foreach ($context['requirements'] as $post_type => $post_type_requirements) : ?>
@@ -149,7 +174,7 @@
                                                     <td class="ppc-pro-overlay-cell" colspan="4">
                                                         <a href="https://publishpress.com/links/publishpress-checklists-nudge" target="_blank">
                                                         <div class="ppc-pro-overlay-text">
-                                                            <span class="dashicons dashicons-lock"></span> <?php esc_html_e('Pro feature', 'publishpress-checklists'); ?>
+                                                            <span class="dashicons dashicons-lock" aria-hidden="true"></span> <?php esc_html_e('Pro feature', 'publishpress-checklists'); ?>
                                                         </div>
                                                         </a>
                                                     </td>
@@ -180,16 +205,16 @@
     <table class="wp-list-table striped pp-custom-checklists-table">
         <thead>
             <tr>
-                <th><strong><?php esc_html_e('New Item', 'publishpress-checklists'); ?></strong></th>
-                <th><strong><?php esc_html_e('Description', 'publishpress-checklists'); ?></strong></th>
+                <th scope="col"><strong><?php esc_html_e('New Item', 'publishpress-checklists'); ?></strong></th>
+                <th scope="col"><strong><?php esc_html_e('Description', 'publishpress-checklists'); ?></strong></th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>
-                    <a id="pp-checklists-add-button" href="javascript:void(0);" class="button button-secondary">
-                        <span class="dashicons dashicons-plus-alt"></span> <?php echo esc_html($context['lang']['add_custom_item']); ?>
-                    </a>
+                    <button type="button" id="pp-checklists-add-button" class="button button-secondary">
+                        <span class="dashicons dashicons-plus-alt" aria-hidden="true"></span> <?php echo esc_html($context['lang']['add_custom_item']); ?>
+                    </button>
                 </td>
                 <td>
                     <span class="pp-checklists-field-description">
@@ -199,9 +224,9 @@
             </tr>
             <tr>
                 <td>
-                    <a id="pp-checklists-openai-promt-button" href="javascript:void(0);" class="button button-secondary">
-                        <span class="dashicons dashicons-plus-alt"></span> <?php esc_html_e('Add OpenAI Prompt task', 'publishpress-checklists'); ?>
-                    </a>
+                    <button type="button" id="pp-checklists-openai-promt-button" class="button button-secondary">
+                        <span class="dashicons dashicons-plus-alt" aria-hidden="true"></span> <?php esc_html_e('Add OpenAI Prompt task', 'publishpress-checklists'); ?>
+                    </button>
                 </td>
                 <td>
                     <span class="pp-checklists-field-description">

@@ -55,14 +55,14 @@
     });
 
     // Set the event for the post type filter
-    $('#pp-checklists-post-type-filter a').on('click', function (event) {
+    $('#pp-checklists-post-type-filter a[role="tab"]').on('click', function (event) {
       event.preventDefault();
 
       // Hide all requirements except the first one (title)
       $('.pp-checklists-requirement-row:not(.ppch-title-group)').hide();
 
-      var $target = $(event.toElement || event.target),
-        post_type = $target.attr('href').substring(1);
+      var $target = $(event.currentTarget),
+        post_type = ($target.attr('href') || '').substring(1);
 
       // Save the selected post type
       if (typeof saveToStorage === 'function') {
@@ -70,6 +70,33 @@
       }
 
       show_post_type_requirements(post_type);
+    });
+
+    $('#pp-checklists-post-type-filter a[role="tab"]').on('keydown', function (event) {
+      var $tabs = $('#pp-checklists-post-type-filter a[role="tab"]');
+      var currentIndex = $tabs.index(event.currentTarget);
+      var targetIndex = currentIndex;
+
+      if (event.key === 'Enter' || event.key === ' ' || event.keyCode === 13 || event.keyCode === 32) {
+        event.preventDefault();
+        $(event.currentTarget).trigger('click');
+        return;
+      }
+
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown' || event.keyCode === 39 || event.keyCode === 40) {
+        targetIndex = (currentIndex + 1) % $tabs.length;
+      } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp' || event.keyCode === 37 || event.keyCode === 38) {
+        targetIndex = (currentIndex - 1 + $tabs.length) % $tabs.length;
+      } else if (event.key === 'Home' || event.keyCode === 36) {
+        targetIndex = 0;
+      } else if (event.key === 'End' || event.keyCode === 35) {
+        targetIndex = $tabs.length - 1;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      $tabs.eq(targetIndex).trigger('click').focus();
     });
 
     // Set the mask for settings fields
@@ -154,34 +181,45 @@
      * @param  {string} post_type
      */
     function show_post_type_requirements(post_type) {
+      var $postTypeTab = $('#pp-checklists-post-type-filter a[href="#' + post_type + '"]');
+      if (!$postTypeTab.length) {
+        $postTypeTab = $('#pp-checklists-post-type-filter a[role="tab"]').first();
+        post_type = ($postTypeTab.attr('href') || '').substring(1);
+      }
+
       // Mark the filter as selected
       $('#pp-checklists-post-type-filter li.nav-tab-active').removeClass('nav-tab-active');
       $('#pp-checklists-post-type-filter li.post-type-' + post_type).addClass('nav-tab-active');
+      $('#pp-checklists-post-type-filter a[role="tab"]')
+        .attr('aria-selected', 'false')
+        .attr('tabindex', '-1');
+      $postTypeTab.attr('aria-selected', 'true').attr('tabindex', '0');
 
-      $('.pp-checklists-tabs-list li a').removeClass('active');
+      $('.pp-checklists-tabs-list li a').removeClass('active').attr('aria-selected', 'false').attr('tabindex', '-1');
 
-      //remove active class from all tabs
-      $('.pp-checklists-tabs a').removeClass('active');
-
-      $('.pp-checklists-tabs ul').removeClass('active');
-      $('.pp-checklists-tabs ul#list-' + post_type).addClass('active');
+      var $tabList = $('.pp-checklists-tabs ul').removeClass('active').attr('aria-hidden', 'true').filter('#list-' + post_type);
+      $tabList.addClass('active').attr('aria-hidden', 'false');
 
       //add active class to title tab
-      $('.pp-checklists-tabs li:first-child a').addClass('active');
+      var $firstInnerTab = $tabList.find('a[role="tab"]').first();
+      $firstInnerTab.addClass('active').attr('aria-selected', 'true').attr('tabindex', '0');
 
-      $('.pp-checklists-tab-body').hide();
-      $('#pp-checklists-tab-body-' + post_type).show();
+      $('.pp-checklists-tab-body').hide().attr('aria-hidden', 'true');
+      $('#pp-checklists-tab-body-' + post_type)
+        .show()
+        .attr('aria-hidden', 'false')
+        .attr('aria-labelledby', $postTypeTab.attr('id'));
 
       const current_data_tab =
         $('#list-' + post_type)
           .find('li a.active')
           .attr('data-tab') || 'title';
       // Hide the requirements which are not for the current post type
-      $('#pp-checklists-requirements tr.pp-checklists-requirement-row').hide();
+      $('#pp-checklists-requirements tr.pp-checklists-requirement-row').hide().attr('aria-hidden', 'true');
       // Display the correct requirements
       $(
         '#pp-checklists-requirements tr.ppch-' + current_data_tab + '-group[data-post-type="' + post_type + '"]',
-      ).show();
+      ).show().attr('aria-hidden', 'false');
     }
 
     /**
@@ -190,13 +228,17 @@
      * @return string
      */
     function get_current_post_type() {
-      var post_type = $('#pp-checklists-post-type-filter li.nav-tab-active a').attr('href').substring(1);
+      var post_type = ($('#pp-checklists-post-type-filter li.nav-tab-active a').attr('href') || '').substring(1);
 
-      if (post_type === '' || post_type === false || post_type === null || typeof post_type === undefined) {
+      if (!post_type) {
         post_type = objectL10n_checklists_global_checklist.first_post_type;
       }
 
       return post_type;
+    }
+
+    function announceStatus(message) {
+      $('#pp-checklists-status').text(message);
     }
 
     /**
@@ -251,6 +293,7 @@
         .appendTo($('#pp-checklists-requirements'));
 
       $('tr[data-id="' + id + '"]').remove();
+      announceStatus(objectL10n_checklists_global_checklist[type + '_task_removed']);
           }
 
     /**
@@ -260,7 +303,7 @@
      * @param  {Event} event
      */
     function callback_remove_row(event) {
-      var $target = $(event.target);
+      var $target = $(event.currentTarget);
 
       remove_row($target.data('id'), $target.data('type'));
     }
@@ -309,12 +352,14 @@
       // Title cell
       $titleField
         .attr('name', 'publishpress_checklists_checklists_options[' + id + '_title][' + post_type + ']')
+        .attr('id', post_type + '-checklists-' + id + '_title')
         .val(title)
         .addClass('pp-checklists-custom-item-title')
-        .focus()
         .attr('data-id', id)
+        .attr('aria-label', objectL10n_checklists_global_checklist[type + '_task_title'])
         .attr('placeholder', objectL10n_checklists_global_checklist[type + '_enter_name'])
-        .appendTo($td);
+        .appendTo($td)
+        .focus();
 
       // Suggestion
       if (typeof $suggestionsObject !== 'undefined') {
@@ -324,13 +369,13 @@
         for (var key in $suggestionsObject) {
           if ($suggestionsObject.hasOwnProperty(key)) {
             $suggestionItem.append(
-              '<span>&#x2022; <a href="javascript:void(0);" class="' +
+              '<span>&#x2022; <button type="button" class="' +
                 key +
                 '" data-prompt="' +
                 $suggestionsObject[key].prompt +
                 '">' +
                 $suggestionsObject[key].label +
-                '</a></span> ',
+                '</button></span> ',
             );
           }
         }
@@ -342,6 +387,7 @@
       $actionField
         .attr('name', 'publishpress_checklists_checklists_options[' + id + '_rule][' + post_type + ']')
         .attr('data-id', id)
+        .attr('aria-label', objectL10n_checklists_global_checklist.custom_task_action)
         .appendTo($td);
 
       $.each(objectL10n_checklists_global_checklist.rules, function (value, label) {
@@ -354,6 +400,7 @@
         .attr('class', 'pp-checklists-can-ignore')
         .attr('name', 'publishpress_checklists_checklists_options[' + id + '_can_ignore][' + post_type + '][]')
         .attr('multiple', 'multiple')
+        .attr('aria-label', objectL10n_checklists_global_checklist.custom_task_roles)
         .appendTo($td);
 
       $option = $('<option value=""></option>').appendTo($canIgnoreField);
@@ -369,6 +416,7 @@
           .attr('id', '' + post_type + '-checklists-' + id + '_editable_by')
           .attr('name', 'publishpress_checklists_checklists_options[' + id + '_editable_by][' + post_type + '][]')
           .attr('multiple', 'multiple')
+          .attr('aria-label', objectL10n_checklists_global_checklist.custom_task_editable_by)
           .appendTo($td);
 
         $option = $('<option value=""></option>').appendTo($optionsField);
@@ -382,14 +430,14 @@
         $optionsField.after($label);
       }
 
-      $a = $('<a>')
-        .attr('href', 'javascript:void(0);')
+      $a = $('<button type="button">')
         .addClass('pp-checklists-remove-custom-item')
+        .attr('aria-label', objectL10n_checklists_global_checklist.remove_custom_task)
         .attr('title', objectL10n_checklists_global_checklist.remove)
         .attr('data-id', id)
         .attr('data-type', type)
         .appendTo($td);
-      $icon = $('<span>').addClass('dashicons dashicons-no').attr('data-id', id).attr('data-type', type).appendTo($a);
+      $icon = $('<span>').addClass('dashicons dashicons-no').attr('aria-hidden', 'true').appendTo($a);
 
       // Re-initialize select 2
       $('#pp-checklists-global select').select2({
@@ -411,6 +459,7 @@
       
       // Update count indicators after adding new item
       setTimeout(update_count_indicators, 100);
+      announceStatus(objectL10n_checklists_global_checklist[type + '_task_added']);
     }
 
     /*----------  Custom items  ----------*/
@@ -435,17 +484,21 @@
     /**
      * Requirements tab switch
      */
-    $(document).on('click', '.pp-checklists-tabs a', function (event) {
+    $(document).on('click', '.pp-checklists-tabs a[role="tab"]', function (event) {
       event.preventDefault();
 
-      var clicked_tab = $(this).attr('data-tab');
+      var $tab = $(this);
+      var clicked_tab = $tab.attr('data-tab');
       var current_post_type = get_current_post_type();
 
-      //remove active class from all tabs
-      $('.pp-checklists-tabs a').removeClass('active');
+      // Remove the active state from all tabs before selecting the current tab.
+      $('.pp-checklists-tabs a[role="tab"]')
+        .removeClass('active')
+        .attr('aria-selected', 'false')
+        .attr('tabindex', '-1');
 
-      //add active class to current tab
-      $(this).addClass('active');
+      // Add the active state to the current tab.
+      $tab.addClass('active').attr('aria-selected', 'true').attr('tabindex', '0');
 
       // Save the selected inner tab for the current post type
       if (typeof saveToStorage === 'function') {
@@ -453,10 +506,40 @@
       }
 
       // hide all tabs contents
-      $('.pp-checklists-requirement-row').hide();
+      $('.pp-checklists-requirement-row').hide().attr('aria-hidden', 'true');
 
       // Show the current tab contents that also have the matching data-post-type attribute
-      $('.ppch-' + clicked_tab + '-group[data-post-type="' + current_post_type + '"]').show();
+      $('.ppch-' + clicked_tab + '-group[data-post-type="' + current_post_type + '"]')
+        .show()
+        .attr('aria-hidden', 'false');
+    });
+
+    $(document).on('keydown', '.pp-checklists-tabs a[role="tab"]', function (event) {
+      var $tab = $(event.currentTarget);
+      var $tabs = $tab.closest('[role="tablist"]').find('a[role="tab"]');
+      var currentIndex = $tabs.index($tab);
+      var targetIndex = currentIndex;
+
+      if (event.key === 'Enter' || event.key === ' ' || event.keyCode === 13 || event.keyCode === 32) {
+        event.preventDefault();
+        $tab.trigger('click');
+        return;
+      }
+
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown' || event.keyCode === 39 || event.keyCode === 40) {
+        targetIndex = (currentIndex + 1) % $tabs.length;
+      } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp' || event.keyCode === 37 || event.keyCode === 38) {
+        targetIndex = (currentIndex - 1 + $tabs.length) % $tabs.length;
+      } else if (event.key === 'Home' || event.keyCode === 36) {
+        targetIndex = 0;
+      } else if (event.key === 'End' || event.keyCode === 35) {
+        targetIndex = $tabs.length - 1;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      $tabs.eq(targetIndex).trigger('click').focus();
     });
 
     /*----------  OpenAI items  ----------*/
@@ -474,7 +557,7 @@
 
       create_row(newId, '', '', current_post_type, 'openai');
     });
-    $(document).on('click', '.pp-custom-suggestion a', function (event) {
+    $(document).on('click', '.pp-custom-suggestion button', function (event) {
       event.preventDefault();
       $(this).closest('td').find('.pp-checklists-custom-item-title').val($(this).data('prompt'));
     });
@@ -668,8 +751,8 @@
 
         $('body').append(
           '<div id="' + overlayId + '" class="pp-checklists-rename-modal-overlay"></div>' +
-          '<div id="' + modalId + '" class="pp-checklists-rename-modal" role="dialog" aria-modal="true" aria-hidden="true">' +
-            '<h3 class="pp-checklists-rename-modal-title">' + modalTitle + '</h3>' +
+          '<div id="' + modalId + '" class="pp-checklists-rename-modal" role="dialog" aria-modal="true" aria-labelledby="pp-checklists-rename-modal-title" aria-hidden="true">' +
+            '<h3 id="pp-checklists-rename-modal-title" class="pp-checklists-rename-modal-title">' + modalTitle + '</h3>' +
             '<label class="pp-checklists-rename-modal-label" for="pp-checklists-rename-admin-input">' + adminFieldLabel + '</label>' +
             '<input id="pp-checklists-rename-admin-input" type="text" class="pp-checklists-rename-modal-input" placeholder="' + adminPlaceholder + '" />' +
             (editorPanelRenameEnabled
@@ -686,8 +769,15 @@
       }
 
       function closeRenameModal() {
+        var $returnFocus = $activeWrapper ? $activeWrapper.find('.pp-checklists-edit-label').first() : $();
+
         $('#' + overlayId).removeClass('is-open');
         $('#' + modalId).removeClass('is-open').attr('aria-hidden', 'true');
+        $activeWrapper = null;
+
+        if ($returnFocus.length) {
+          $returnFocus.focus();
+        }
       }
 
       function toIntOrNull(rawValue) {

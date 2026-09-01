@@ -95,10 +95,11 @@ class Pro_Requirement extends Base_simple implements Interface_required
         if ($this->config['type'] === 'time') {
             $value = get_post_meta(get_the_ID(), $this->config['field_key'], true);
             return sprintf(
-                '<input type="time" name="%s" value="%s" class="%s" />',
+                '<input type="time" name="%s" value="%s" class="%s" aria-label="%s" />',
                 esc_attr($this->config['field_key']),
                 esc_attr($value),
-                esc_attr($css_class)
+                esc_attr($css_class),
+                esc_attr(sprintf(__('Set time for %s', 'publishpress-checklists'), $this->get_label()))
             );
         }
         if ($this->config['type'] === 'counter') {
@@ -107,19 +108,21 @@ class Pro_Requirement extends Base_simple implements Interface_required
             $max    = $this->config['max'] ?? '';
             $id_key = esc_attr($this->config['id']);
             return sprintf(
-                '<div class="pp-checklists-number"><label>%1$s</label><input type="number" name="min" value="%3$s" class="%4$s pp-checklists-small-input pp-checklists-number" /></div>' .
-                '<div class="pp-checklists-number"><label>%2$s</label><input type="number" name="max" value="%5$s" class="%4$s pp-checklists-small-input pp-checklists-number" /></div>',
+                '<div class="pp-checklists-number"><label for="%6$s-min">%1$s</label><input type="number" id="%6$s-min" name="min" value="%3$s" class="%4$s pp-checklists-small-input pp-checklists-number" /></div>' .
+                '<div class="pp-checklists-number"><label for="%6$s-max">%2$s</label><input type="number" id="%6$s-max" name="max" value="%5$s" class="%4$s pp-checklists-small-input pp-checklists-number" /></div>',
                 esc_html__('Min', 'publishpress-checklists'),
                 esc_html__('Max', 'publishpress-checklists'),
                 esc_attr($min),
                 esc_attr($css_class),
-                esc_attr($max)
+                esc_attr($max),
+                $id_key
             );
         }
         if ($this->config['type'] === 'multiple') {
             return sprintf(
-                '<select class="%s" multiple="multiple"></select>',
-                esc_attr($css_class)
+                '<select class="%s" multiple="multiple" aria-label="%s"></select>',
+                esc_attr($css_class),
+                esc_attr(sprintf(__('Select options for %s', 'publishpress-checklists'), $this->get_label()))
             );
         }
         return parent::get_setting_field_html($css_class);
