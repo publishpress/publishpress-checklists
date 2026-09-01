@@ -74,11 +74,11 @@ class Custom_item extends Base_multiple implements Interface_required
         $name = 'publishpress_checklists_checklists_options[' . $var_name . '][' . $this->post_type . ']';
 
         $html = sprintf(
-            '<input type="text" name="%s" value="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title" />',
+            '<textarea name="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title">%s</textarea>',
             $name,
-            esc_attr($this->get_title()),
             esc_attr($this->name),
-            esc_html__('Enter name of custom task', 'publishpress-checklists')
+            esc_html__('Enter name of custom task', 'publishpress-checklists'),
+            esc_textarea($this->get_title())
         );
 
         $html .= sprintf(

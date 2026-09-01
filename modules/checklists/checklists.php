@@ -1430,10 +1430,23 @@ if (!class_exists('PPCH_Checklists')) {
         }
 
         /**
+         * Whether an option key holds a value that should keep line breaks,
+         * such as a custom/OpenAI task title rendered in a textarea.
+         *
+         * @param string $option_key
+         *
+         * @return bool
+         */
+        protected function is_multiline_option($option_key)
+        {
+            return '_title' === substr($option_key, -6);
+        }
+
+        /**
          * Sanitize checklists options.
          *
          * @param array $new_options
-         * 
+         *
          * @return array $new_options
          */
         protected function sanitize_checklists_options($new_options)
@@ -1442,10 +1455,13 @@ if (!class_exists('PPCH_Checklists')) {
                 //sanitize original key
                 $sanitized_key = sanitize_key($option_key);
 
+                //title fields (e.g. custom/OpenAI task titles) keep line breaks
+                $sanitize_callback = $this->is_multiline_option($option_key) ? 'sanitize_textarea_field' : 'sanitize_text_field';
+
                 //option value is an array of keys => $value pair
                 $sanitized_value = [];
                 foreach ($option_value as $option_value_key => $option_value_value) {
-                    $sanitized_value[sanitize_key($option_value_key)] = is_array($option_value_value) ? array_map('sanitize_text_field', $option_value_value) : sanitize_text_field($option_value_value);
+                    $sanitized_value[sanitize_key($option_value_key)] = is_array($option_value_value) ? array_map($sanitize_callback, $option_value_value) : call_user_func($sanitize_callback, $option_value_value);
                 }
 
                 //unset original option sanitize_key can potentially change key value if they are manipulated ?
