@@ -8,6 +8,7 @@ const { __ } = wp.i18n;
 const { hooks } = wp;
 
 import CheckListIcon from './CheckListIcon.jsx';
+import { openChecklistFromWarning } from './open-checklist.js';
 
 const SUPPORTED_RENDERING_MODES = ['post-only', 'template-locked'];
 
@@ -171,9 +172,21 @@ class PPChecklistsPanel extends Component {
             } else {
                 notices.createErrorNotice(i18n.completeRequirementMessage, {
                     id: 'publishpress-checklists-validation',
-                    isDismissible: true
+                    isDismissible: true,
+                    actions: [
+                        {
+                            label: i18n.openChecklistLabel,
+                            onClick: openChecklistFromWarning
+                        }
+                    ]
                 });
-                wp.data.dispatch('core/edit-post').openGeneralSidebar('publishpress-checklists-panel/checklists-sidebar');
+
+                /**
+                 * The Checklists toolbar button is hidden while the publish panel is
+                 * open, so close the panel before revealing the sidebar. Otherwise the
+                 * user is asked to complete the checklist with no way to reach it.
+                 */
+                openChecklistFromWarning();
                 
                 /**
                  * change status to draft or old status if failed to 

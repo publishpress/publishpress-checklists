@@ -137,6 +137,11 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
     font-weight: bold;
 }
 
+.pp-checklists-failed-requirements-warning .pp-checklists-open-checklist-wrap {
+    font-weight: normal;
+    margin: 8px 0 0;
+}
+
 .pp-checklists-req.metabox-req,
 .pp-checklists-req.panel-req {
     display: block;
