@@ -238,6 +238,23 @@ textarea.pp-checklists-custom-item-title {
   line-height: 20px;
 }
 
+.pp-custom-suggestion button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #2271b1;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+
+.pp-custom-suggestion button:focus-visible,
+.pp-checklists-remove-custom-item:focus-visible,
+.pp-checklists-edit-label:focus-visible {
+  outline: 2px solid #2271b1;
+  outline-offset: 2px;
+}
+
 .pp-custom-checklists-table {
   margin-top: 10px;
 }
@@ -326,6 +343,12 @@ textarea.pp-checklists-custom-item-title {
   position: absolute;
   top: 10px;
   right: 10px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #b32d2e;
+  cursor: pointer;
+  font: inherit;
 }
 
 .pp-checklists-requirement-row {
@@ -415,6 +438,12 @@ textarea.pp-checklists-custom-item-title {
   text-decoration: none;
   line-height: 20px !important;
   border-bottom: 1px solid #eee;
+}
+
+.pp-checklists-tabs-wrapper .pp-checklists-tabs ul li a[role="tab"]:focus-visible,
+#pp-checklists-post-type-filter a[role="tab"]:focus-visible {
+  outline: 2px solid #2271b1;
+  outline-offset: -2px;
 }
 
 .pp-checklists-tabs-wrapper .pp-checklists-tabs ul li {
@@ -663,6 +692,9 @@ textarea.pp-checklists-custom-item-title {
   width: 24px;
   height: 24px;
   color: #2271b1;
+  border: 0;
+  padding: 0;
+  background: transparent;
   text-decoration: none;
   flex-shrink: 0;
   cursor: pointer;
