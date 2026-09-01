@@ -38,3 +38,5 @@ dev-workspace/.cache
 dev-workspace-cache/
 .cache
 .claude
+.web/
+.ddev/
