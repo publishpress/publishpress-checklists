@@ -31,6 +31,13 @@
     width: auto !important;
 }
 
+/* Publish blocked by an incomplete requirement. "Save draft" stays enabled. */
+body.ppch-publish-locked .editor-post-publish-button {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 /* Warning icon in the Publish button */
 body.ppch-show-publishing-warning-icon #publishing-action, /* Classic Editor */
 body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon {
