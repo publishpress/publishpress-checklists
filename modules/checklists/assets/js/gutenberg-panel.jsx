@@ -19,19 +19,6 @@ const isSupportedEditorContext = ({ renderingMode, currentPostType, supportedPos
     return Array.isArray(supportedPostTypes) && supportedPostTypes.includes(currentPostType);
 };
 
-const getIsPublishSidebarOpened = () => {
-    const editorStore = wp.data.select('core/editor');
-    if (editorStore && typeof editorStore.isPublishSidebarOpened === 'function') {
-        return editorStore.isPublishSidebarOpened();
-    }
-
-    // The selector lived in core/edit-post before WordPress 6.6.
-    const editPostStore = wp.data.select('core/edit-post');
-    return editPostStore && typeof editPostStore.isPublishSidebarOpened === 'function'
-        ? editPostStore.isPublishSidebarOpened()
-        : false;
-};
-
 class PPChecklistsPanel extends Component {
     isMounted = false;
     oldStatus = '';
@@ -140,27 +127,18 @@ class PPChecklistsPanel extends Component {
             }
 
             let publishing_post = false;
-            const mapStatusPublishAllowed = {
-                publish: true, // already published post
-                future: true, // scheduled post
-            }
+            const publishStatuses = ['publish', 'future'];
             if (options.isAutosave || options.isPreview) {
                 publishing_post = false
             } else if (this.currentStatus !== '') {
-                publishing_post = mapStatusPublishAllowed[this.currentStatus] ?? false;
+                publishing_post = publishStatuses.indexOf(this.currentStatus) !== -1 && this.currentStatus !== this.oldStatus;
             } else {
                 const editorStore = wp.data.select('core/editor');
-                const isPublishSidebarOpened = getIsPublishSidebarOpened();
                 const editedPostStatus = editorStore.getEditedPostAttribute('status');
                 const currentPost = editorStore.getCurrentPost() || {};
 
-                if (!isPublishSidebarOpened && editedPostStatus !== 'publish' && currentPost.status !== 'publish') {
-                    publishing_post = false;
-                } else if (isPublishSidebarOpened && editedPostStatus === 'publish') {
-                    publishing_post = true;
-                } else if (!isPublishSidebarOpened && editedPostStatus === 'publish') {
-                    publishing_post = true;
-                }
+                publishing_post =
+                    publishStatuses.indexOf(editedPostStatus) !== -1 && editedPostStatus !== currentPost.status;
             }
             
             const hasBlockRequirements = this.state.failedRequirements.block && this.state.failedRequirements.block.length > 0;

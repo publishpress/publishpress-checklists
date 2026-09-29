@@ -3,7 +3,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [2.29.1] - 28 September, 2026
 
-- Fixed: Incomplete checklist requirements could prevent draft saves in WordPress 7.1.2.
+- Fixed: Incomplete checklist requirements could prevent draft or published-post saves in WordPress 7.1.2.
 
 [2.29.0] - 10 August, 2026
 

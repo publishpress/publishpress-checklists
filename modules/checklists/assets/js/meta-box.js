@@ -143,15 +143,6 @@
     },
 
     /**
-     * Returns whether an already published post is being saved.
-     *
-     * @return {boolean} True when an existing published post is being updated.
-     */
-    is_updating_published_post: function () {
-      return this.getCurrentPostStatus() === 'publish' && this.elems.original_post_status.val() === 'publish';
-    },
-
-    /**
      * Returns whether an incomplete blocking requirement is present.
      *
      * @return {boolean} True when a blocking requirement is incomplete.
@@ -229,10 +220,9 @@
               return;
             }
 
-            var isPublishingThePost = this.is_publish_transition(),
-              isUpdatingPublishedPost = this.is_updating_published_post();
+            var isPublishingThePost = this.is_publish_transition();
 
-            if ((isPublishingThePost || isUpdatingPublishedPost) && !this.state.is_validating) {
+            if (isPublishingThePost && !this.state.is_validating) {
               this.elems.document.trigger(this.EVENT_VALIDATE_REQUIREMENTS);
             }
           }.bind(this),
@@ -459,10 +449,11 @@
         this.state.is_publishing = this.is_publish_transition();
       }
 
-      var isPublishingThePost = this.state.is_publishing,
-        isUpdatingPublishedPost = this.is_updating_published_post();
+      var originalPostStatus = this.elems.original_post_status.val(),
+        isPublishingThePost = this.state.is_publishing,
+        isUpdatingPublishedPost = this.getCurrentPostStatus() === 'publish' && originalPostStatus === 'publish';
 
-      if (isPublishingThePost || isUpdatingPublishedPost) {
+      if (isPublishingThePost) {
         var showBlockMessage = uncheckedItems.block.length > 0,
           showWarning = uncheckedItems.warning.length > 0,
           gutenbergLockName = 'pp-checklists';
@@ -977,8 +968,7 @@
       if (PP_Checklists.is_gutenberg_active()) {
         $(document).on(PP_Checklists.EVENT_TIC, function (event) {
           var shouldLock =
-            (PP_Checklists.is_publish_transition() || PP_Checklists.is_updating_published_post()) &&
-            PP_Checklists.has_unchecked_block_requirements();
+            PP_Checklists.is_publish_transition() && PP_Checklists.has_unchecked_block_requirements();
 
           if (shouldLock) {
             wp.data.dispatch('core/editor').lockPostSaving('ppcPublishButton');
