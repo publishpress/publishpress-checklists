@@ -119,30 +119,54 @@
       /**
        * Flag to say the validate method is already being executed.
        * @type {boolean}
-       */
+      */
       is_validating: false,
     },
 
     /**
-     * Returns whether the Gutenberg publish sidebar is open.
+     * Returns whether Gutenberg is changing the post to a publish-like status.
      *
-     * @return {boolean} True if the publish sidebar is open.
+     * @return {boolean} True when the edited status is publish or future and
+     *                   differs from the current status.
      */
-    get_is_publish_sidebar_opened: function () {
-      if (typeof wp.data === 'undefined') {
-        return false;
+    is_publish_transition: function () {
+      if (!this.is_gutenberg_active()) {
+        return this.state.is_publishing;
       }
 
-      var editorStore = wp.data.select('core/editor');
-      if (editorStore && typeof editorStore.isPublishSidebarOpened === 'function') {
-        return editorStore.isPublishSidebarOpened();
-      }
+      var editor = wp.data.select('core/editor'),
+        currentPost = editor.getCurrentPost(),
+        currentStatus = currentPost && currentPost.status,
+        editedStatus = editor.getEditedPostAttribute('status');
 
-      // The selector lived in core/edit-post before WordPress 6.6.
-      var editPostStore = wp.data.select('core/edit-post');
-      return editPostStore && typeof editPostStore.isPublishSidebarOpened === 'function'
-        ? editPostStore.isPublishSidebarOpened()
-        : false;
+      return ['publish', 'future'].indexOf(editedStatus) !== -1 && editedStatus !== currentStatus;
+    },
+
+    /**
+     * Returns whether an already published post is being saved.
+     *
+     * @return {boolean} True when an existing published post is being updated.
+     */
+    is_updating_published_post: function () {
+      return this.getCurrentPostStatus() === 'publish' && this.elems.original_post_status.val() === 'publish';
+    },
+
+    /**
+     * Returns whether an incomplete blocking requirement is present.
+     *
+     * @return {boolean} True when a blocking requirement is incomplete.
+     */
+    has_unchecked_block_requirements: function () {
+      var hasUncheckedRequirements = false;
+
+      $('.pp-checklists-req.metabox-req.pp-checklists-block').each(function () {
+        if ($(this).hasClass('status-no') && $(this).find('.status-label').length > 0) {
+          hasUncheckedRequirements = true;
+          return false;
+        }
+      });
+
+      return hasUncheckedRequirements;
     },
 
     /**
@@ -205,9 +229,10 @@
               return;
             }
 
-            var isSidebarOpened = this.get_is_publish_sidebar_opened();
+            var isPublishingThePost = this.is_publish_transition(),
+              isUpdatingPublishedPost = this.is_updating_published_post();
 
-            if (isSidebarOpened && !this.state.is_validating) {
+            if ((isPublishingThePost || isUpdatingPublishedPost) && !this.state.is_validating) {
               this.elems.document.trigger(this.EVENT_VALIDATE_REQUIREMENTS);
             }
           }.bind(this),
@@ -431,12 +456,11 @@
       checkRequirementAction('block');
 
       if (this.is_gutenberg_active()) {
-        this.state.is_publishing = this.get_is_publish_sidebar_opened();
+        this.state.is_publishing = this.is_publish_transition();
       }
 
-      var originalPostStatus = this.elems.original_post_status.val(),
-        isPublishingThePost = this.state.is_publishing,
-        isUpdatingPublishedPost = this.getCurrentPostStatus() === 'publish' && originalPostStatus === 'publish';
+      var isPublishingThePost = this.state.is_publishing,
+        isUpdatingPublishedPost = this.is_updating_published_post();
 
       if (isPublishingThePost || isUpdatingPublishedPost) {
         var showBlockMessage = uncheckedItems.block.length > 0,
@@ -950,14 +974,13 @@
   // @TODO Figure out how to get the status of "Include pre-publish checklist" and add it to the if() below
   if (ppChecklists.disable_publish_button) {
     $(window).on('load', function () {
-      if (
-        PP_Checklists.is_gutenberg_active() &&
-        ((PP_Checklists.is_published() !== true && PP_Checklists.is_pending() !== true) ||
-          !ppChecklists.disable_published_block_feature)
-      ) {
+      if (PP_Checklists.is_gutenberg_active()) {
         $(document).on(PP_Checklists.EVENT_TIC, function (event) {
-          var has_unchecked_block = $('#pp-checklists-req-box').children('.status-no.pp-checklists-block');
-          if (has_unchecked_block.length > 0) {
+          var shouldLock =
+            (PP_Checklists.is_publish_transition() || PP_Checklists.is_updating_published_post()) &&
+            PP_Checklists.has_unchecked_block_requirements();
+
+          if (shouldLock) {
             wp.data.dispatch('core/editor').lockPostSaving('ppcPublishButton');
           } else {
             wp.data.dispatch('core/editor').unlockPostSaving('ppcPublishButton');

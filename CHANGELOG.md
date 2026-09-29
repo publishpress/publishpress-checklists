@@ -1,6 +1,10 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.29.1] - 28 September, 2026
+
+- Fixed: Incomplete checklist requirements could prevent draft saves in WordPress 7.1.2.
+
 [2.29.0] - 10 August, 2026
 
 - Fixed: Deprecation notices in the Gutenberg editor #1193
