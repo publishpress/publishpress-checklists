@@ -9,6 +9,10 @@
     vertical-align: middle;
 }
 
+.pp-checklists-req .status-label {
+    white-space: pre-line;
+}
+
 .pp-checklists-req.status-yes
     *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(
         .request-response *
