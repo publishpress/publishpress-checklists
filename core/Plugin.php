@@ -48,8 +48,6 @@ class Plugin
      */
     public function init()
     {
-        $this->loadTextDomain();
-
         // Initialize the API
         \PublishPress\Checklists\Core\API\Bootstrap::init();
 
@@ -58,18 +56,6 @@ class Plugin
         add_filter('plugin_row_meta', [$this, 'add_plugin_meta'], 10, 2);
 
         add_filter( 'plugin_action_links_' . plugin_basename(PPCH_FILE), [$this, 'add_action_links']);
-    }
-
-    /**
-     * Load the text domain.
-     */
-    public function loadTextDomain()
-    {
-        load_plugin_textdomain(
-            'publishpress-checklists',
-            false,
-            dirname(plugin_basename(PPCH_FILE)) . '/languages/'
-        );
     }
 
     public function add_plugin_meta($links, $file)

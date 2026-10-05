@@ -6,6 +6,8 @@
  * Description: With PublishPress Checklists, you can choose publishing requirements for your content.
  * Author:      PublishPress
  * Author URI:  https://publishpress.com
+ * License:     GPL-2.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Version: 2.29.0
  * Text Domain: publishpress-checklists
  * Domain Path: /languages
