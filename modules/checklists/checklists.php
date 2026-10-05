@@ -1102,17 +1102,17 @@ if (!class_exists('PPCH_Checklists')) {
 
             if ((defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
                 || !array_key_exists($post->post_type, $this->getSelectedPostTypes())
-                || $post->post_type == 'post' && !current_user_can('edit_post', $id)
-                || $post->post_type == 'page' && !current_user_can('edit_page', $id)
+                || ($post->post_type == 'post' && !current_user_can('edit_post', $id))
+                || ($post->post_type == 'page' && !current_user_can('edit_page', $id))
             ) {
                 return $id;
             }
 
             // Check if we have data coming from custom items
             if (isset($_POST['_PPCH_custom_item'])) {
-                if (!empty($_POST['_PPCH_custom_item'])) {
-                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-                    foreach ($_POST['_PPCH_custom_item'] as $item_id => $value) {
+                $custom_items = wp_unslash($_POST['_PPCH_custom_item']);
+                if (is_array($custom_items)) {
+                    foreach ($custom_items as $item_id => $value) {
                         update_post_meta($id, self::POST_META_PREFIX . sanitize_key($item_id), sanitize_text_field($value));
                     }
                 }
@@ -1336,7 +1336,7 @@ if (!class_exists('PPCH_Checklists')) {
                 return;
             }
 
-            if (!wp_verify_nonce(sanitize_key($_POST['_wpnonce']), 'ppch-global-checklists')) {
+            if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_key(wp_unslash($_POST['_wpnonce'])), 'ppch-global-checklists')) {
                 return;
             }
 
@@ -1348,8 +1348,10 @@ if (!class_exists('PPCH_Checklists')) {
                 return;
             }
 
-            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-            $new_options = $_POST['publishpress_checklists_checklists_options'];
+            $new_options = wp_unslash($_POST['publishpress_checklists_checklists_options']);
+            if (!is_array($new_options)) {
+                return;
+            }
 
             //sanitize checklists options
             $new_options = $this->sanitize_checklists_options($new_options);
@@ -1377,25 +1379,24 @@ if (!class_exists('PPCH_Checklists')) {
             update_option('publishpress_checklists_checklists_options', $options);
 
             // Reload the module's options after saving.
-            if (isset($_SERVER['HTTP_REFERER'])) {
-                $redirect_url = $_SERVER['HTTP_REFERER'];
-            } else {
+            $redirect_url = wp_get_referer();
+            if (!$redirect_url) {
                 $redirect_url = admin_url('admin.php?page=' . self::MENU_SLUG);
             }
             
             // Preserve tab state in redirect URL
             if (isset($_POST['ppch_active_post_type']) && !empty($_POST['ppch_active_post_type'])) {
-                $redirect_url = add_query_arg('post_type', sanitize_text_field($_POST['ppch_active_post_type']), $redirect_url);
+                $redirect_url = add_query_arg('post_type', sanitize_key(wp_unslash($_POST['ppch_active_post_type'])), $redirect_url);
             }
             
             if (isset($_POST['ppch_active_inner_tab']) && !empty($_POST['ppch_active_inner_tab'])) {
-                $redirect_url = add_query_arg('inner_tab', sanitize_text_field($_POST['ppch_active_inner_tab']), $redirect_url);
+                $redirect_url = add_query_arg('inner_tab', sanitize_key(wp_unslash($_POST['ppch_active_inner_tab'])), $redirect_url);
             }
             
             // Add success parameter to show success notice
             $redirect_url = add_query_arg('success', '1', $redirect_url);
             
-            wp_redirect($redirect_url);
+            wp_safe_redirect($redirect_url);
             exit();
         }
 
