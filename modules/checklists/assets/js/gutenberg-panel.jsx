@@ -341,6 +341,14 @@ class PPChecklistsPanel extends Component {
     normalizeLabelForSort = (label) => {
         const container = document.createElement('div');
         container.innerHTML = label || '';
+
+        // Live counter badges change as the user types (see PP_Checklists.update_live_count
+        // in meta-box.js) and must not affect alphabetical sort order.
+        const liveCountBadge = container.querySelector('.pp-checklists-live-count');
+        if (liveCountBadge) {
+            liveCountBadge.remove();
+        }
+
         return (container.textContent || container.innerText || '').trim().toLowerCase();
     };
 
