@@ -450,7 +450,7 @@
 
           if (showBlockMessage) {
             if (PP_Checklists.is_gutenberg_active()) {
-              wp.data.dispatch('core/editor').lockPostSaving(gutenbergLockName);
+              PP_Checklists.lock_publishing(gutenbergLockName);
               wp.hooks.doAction('pp-checklists.update-failed-requirements', uncheckedItems);
             } else {
               if (isUpdatingPublishedPost) {
@@ -483,7 +483,7 @@
             }
           } else if (showWarning) {
             if (PP_Checklists.is_gutenberg_active()) {
-              wp.data.dispatch('core/editor').unlockPostSaving(gutenbergLockName);
+              PP_Checklists.unlock_publishing(gutenbergLockName);
               wp.hooks.doAction('pp-checklists.update-failed-requirements', uncheckedItems);
             } else {
               // Only display a warning
@@ -513,7 +513,7 @@
           }
         } else {
           if (PP_Checklists.is_gutenberg_active()) {
-            wp.data.dispatch('core/editor').unlockPostSaving(gutenbergLockName);
+            PP_Checklists.unlock_publishing(gutenbergLockName);
             wp.hooks.doAction('pp-checklists.update-failed-requirements', uncheckedItems);
           }
 
@@ -529,6 +529,42 @@
 
       this.state.is_publishing = false;
       this.state.is_validating = false;
+    },
+
+    /**
+     * Names of the active publish locks.
+     *
+     * @type {Object}
+     */
+    publish_locks: {},
+
+    /**
+     * Disable the Gutenberg Publish/Update buttons without locking post saving.
+     *
+     * core/editor lockPostSaving() also disables "Save draft" and Ctrl+S since
+     * WordPress 7.1, so drafts could not be saved while a requirement was not met.
+     * Publishing is still blocked by the savePost() filter in gutenberg-panel.jsx.
+     *
+     * @param  {String} lockName
+     * @return {void}
+     */
+    lock_publishing: function (lockName) {
+      this.publish_locks[lockName] = true;
+      $('body').addClass('ppch-publish-locked');
+    },
+
+    /**
+     * Release a lock added by lock_publishing().
+     *
+     * @param  {String} lockName
+     * @return {void}
+     */
+    unlock_publishing: function (lockName) {
+      delete this.publish_locks[lockName];
+
+      if (Object.keys(this.publish_locks).length === 0) {
+        $('body').removeClass('ppch-publish-locked');
+      }
     },
 
     getCurrentPostStatus: function () {
@@ -958,9 +994,9 @@
         $(document).on(PP_Checklists.EVENT_TIC, function (event) {
           var has_unchecked_block = $('#pp-checklists-req-box').children('.status-no.pp-checklists-block');
           if (has_unchecked_block.length > 0) {
-            wp.data.dispatch('core/editor').lockPostSaving('ppcPublishButton');
+            PP_Checklists.lock_publishing('ppcPublishButton');
           } else {
-            wp.data.dispatch('core/editor').unlockPostSaving('ppcPublishButton');
+            PP_Checklists.unlock_publishing('ppcPublishButton');
           }
         });
       }

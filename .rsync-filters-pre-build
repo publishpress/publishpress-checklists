@@ -68,3 +68,5 @@
 - assets_wp
 - .phplint-cache
 - .phplint.cache
+- .web
+- .ddev

@@ -17,4 +17,6 @@ exclude:
   - cache
   - languages
   - .wordpress-org
+  - .web
+  - .ddev
 warning: false
