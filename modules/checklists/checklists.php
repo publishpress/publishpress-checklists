@@ -1738,7 +1738,7 @@ if (!class_exists('PPCH_Checklists')) {
         {
             if (get_option('ppch_activated')) {
                 delete_option('ppch_activated');
-                wp_redirect(admin_url("admin.php?page=ppch-checklists"));
+                wp_safe_redirect(admin_url("admin.php?page=ppch-checklists"));
                 exit;
             }
         }

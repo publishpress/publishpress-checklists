@@ -1585,7 +1585,7 @@ if (!class_exists('PPCH_Settings')) {
                 $hidden = $value === $sortValue ? '' : ' hidden';
                 echo '<p class="description ppch-sort-order-description"'
                     . ' data-sort-order="' . esc_attr($sortValue) . '"'
-                    . $hidden . '>';
+                    . esc_attr($hidden) . '>';
                 echo esc_html($sortDescription);
                 echo '</p>';
             }

@@ -194,12 +194,15 @@ class Required_categories extends Base_multiple
      */
     private function get_total_count($args = array('search' => '', 'hide_empty' => 0))
     {
-        $args_key = base64_encode($args['search']);
+        $args_key = hash('sha256', (string) $args['search']);
         $cache_key = 'total_require_category_count_' . $args_key;
 
         $total_categories = get_transient($cache_key);
         if ($total_categories === false) {
-            $total_categories = wp_count_terms('category', $args);
+            // get_terms() with 'fields' => 'count' works the same from WP 5.5 to current,
+            // unlike the two wp_count_terms() signatures.
+            $total_categories = get_terms(array_merge($args, ['taxonomy' => 'category', 'fields' => 'count']));
+            $total_categories = is_wp_error($total_categories) ? 0 : (int) $total_categories;
             set_transient($cache_key, $total_categories, $this->cache_expiration);
         }
 
