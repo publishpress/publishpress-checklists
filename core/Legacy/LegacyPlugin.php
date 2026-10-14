@@ -457,7 +457,7 @@ class LegacyPlugin
      */
     public function isClassicEditorInstalled()
     {
-        return is_plugin_active('classic-editor/classic-editor.php');
+        return Util::isPluginActive('classic-editor/classic-editor.php');
     }
 
     public function setCustomMenuOrder($menu_ord)
