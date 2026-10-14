@@ -16,7 +16,8 @@ class ErrorHandler
     {
         if (!empty($errorData)) {
             if (!is_string($errorData)) {
-                $errorData = print_r($errorData, true);
+                $encoded_data = wp_json_encode($errorData);
+                $errorData    = false !== $encoded_data ? $encoded_data : '';
             }
 
             $errorMessage .= ': ' . $errorData;

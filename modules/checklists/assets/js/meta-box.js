@@ -180,6 +180,24 @@
         }.bind(this),
       );
 
+      // The user dismissed the modal with No, Escape or the close button. The
+      // submission was blocked, so put the form back in a state the user can act on.
+      this.elems.document.on(
+        'closed',
+        '.remodal',
+        function (event) {
+          if (event.reason === 'confirmation') {
+            return;
+          }
+
+          this.state.is_confirmed = false;
+          this.state.is_publishing = false;
+          this.state.should_block = false;
+
+          this.restore_submit_buttons();
+        }.bind(this),
+      );
+
       if (!this.is_gutenberg_active()) {
         // Hook to the submit button
         $('form#post').submit(
@@ -368,6 +386,87 @@
      * Check if the current post status is draft
      * @return {Boolean} True if draft.
      */
+    /**
+     * Returns the Remodal instance of one of the checklist modals, or null when
+     * the modal is not on the page.
+     *
+     * @param  {String} id The data-remodal-id of the modal
+     * @return {Object|null}
+     */
+    get_modal: function (id) {
+      var $modal = $('[data-remodal-id=' + id + ']');
+
+      return $modal.length > 0 ? $modal.remodal() : null;
+    },
+
+    /**
+     * Both modals share a single overlay element, so opening one while the other
+     * is not fully closed leaves Remodal in a state it never recovers from.
+     *
+     * @return {Boolean}
+     */
+    is_any_modal_open: function () {
+      var ids = ['pp-checklists-modal-alert', 'pp-checklists-modal-confirm'],
+        instance;
+
+      for (var i = 0; i < ids.length; i++) {
+        instance = this.get_modal(ids[i]);
+
+        if (instance && instance.getState() !== 'closed') {
+          return true;
+        }
+      }
+
+      return false;
+    },
+
+    /**
+     * Fills and opens one of the checklist modals, unless one is already open.
+     *
+     * @param  {String} id              The data-remodal-id of the modal
+     * @param  {String} contentSelector Selector of the element holding the message
+     * @param  {String} message         The message to display
+     * @return {void}
+     */
+    open_modal: function (id, contentSelector, message) {
+      if (this.is_any_modal_open()) {
+        return;
+      }
+
+      var instance = this.get_modal(id);
+
+      if (!instance) {
+        return;
+      }
+
+      $(contentSelector).html(message);
+      instance.open();
+    },
+
+    /**
+     * Puts the submit box back in a usable state after a blocked submission.
+     *
+     * The handler in wp-admin/js/post.js disables the submit buttons and starts the
+     * spinner as soon as the form is submitted, and it never restores them when
+     * another handler blocks the submission.
+     *
+     * @return {void}
+     */
+    restore_submit_buttons: function () {
+      if (PP_Checklists.is_gutenberg_active()) {
+        return;
+      }
+
+      var $submitpost = $('#submitpost');
+
+      $submitpost.find(':submit, a.submitdelete, #post-preview').removeClass('disabled');
+      $submitpost.find('.spinner').removeClass('is-active');
+
+      if (typeof wp !== 'undefined' && wp.autosave && wp.autosave.server) {
+        wp.autosave.server.resume();
+      }
+    },
+
     is_draft: function () {
       return (
         'draft' === this.elems.original_post_status.val() || 'auto-draft' === this.elems.original_post_status.val()
@@ -478,37 +577,40 @@
               }
 
               // Display the alert
-              $('#pp-checklists-modal-alert-content').html(message);
-              $('[data-remodal-id=pp-checklists-modal-alert]').remodal().open();
+              PP_Checklists.open_modal(
+                'pp-checklists-modal-alert',
+                '#pp-checklists-modal-alert-content',
+                message,
+              );
             }
           } else if (showWarning) {
             if (PP_Checklists.is_gutenberg_active()) {
               PP_Checklists.unlock_publishing(gutenbergLockName);
               wp.hooks.doAction('pp-checklists.update-failed-requirements', uncheckedItems);
             } else {
-              // Only display a warning
-              if (isUpdatingPublishedPost) {
-                message = ppChecklists.msg_missed_optional_updating;
-              } else {
-                message = ppChecklists.msg_missed_optional_publishing;
-              }
+              // Only display a warning. The list is introduced by a heading, so the
+              // user can tell what the items below the question actually are.
+              var question = isUpdatingPublishedPost
+                ? ppChecklists.msg_missed_optional_updating
+                : ppChecklists.msg_missed_optional_publishing;
 
-              message +=
+              message =
+                '<p class="pp-checklists-modal-heading">' +
+                ppChecklists.msg_recommendations_heading +
+                '</p>' +
                 '<div class="pp-checklists-modal-list"><ul><li>' +
                 uncheckedItems.warning.join('</li><li>') +
-                '</li></ul></div>';
-
-              if (uncheckedItems.block.length > 0) {
-                message +=
-                  ppChecklists.msg_missed_required +
-                  '<div class="pp-checklists-modal-list"><ul><li>' +
-                  uncheckedItems.block.join('</li><li>') +
-                  '</li></ul></div>';
-              }
+                '</li></ul></div>' +
+                '<p class="pp-checklists-modal-question">' +
+                question +
+                '</p>';
 
               // Display the confirm
-              $('#pp-checklists-modal-confirm-content').html(message);
-              $('[data-remodal-id=pp-checklists-modal-confirm]').remodal().open();
+              PP_Checklists.open_modal(
+                'pp-checklists-modal-confirm',
+                '#pp-checklists-modal-confirm-content',
+                message,
+              );
             }
           }
         } else {
@@ -661,6 +763,49 @@
     },
 
     /**
+     * Returns the hosts that should be treated as internal for the
+     * internal/external links checks, localized server-side as
+     * ppChecklists.internal_link_hosts. Falls back to the host this script
+     * is running on if that wasn't localized (e.g. an older cached copy of
+     * the object), matching the previous single-host behaviour.
+     *
+     * @return {Array}
+     */
+    get_internal_link_hosts: function () {
+      if (typeof ppChecklists !== 'undefined' && Array.isArray(ppChecklists.internal_link_hosts)) {
+        // Drop any empty entry a 'publishpress_checklists_internal_link_hosts'
+        // filter callback might introduce: an empty string matches every
+        // link via indexOf, which would make every link look internal.
+        var hosts = ppChecklists.internal_link_hosts.filter(function (host) {
+          return typeof host === 'string' && host !== '';
+        });
+
+        if (hosts.length > 0) {
+          return hosts;
+        }
+      }
+
+      return [window.location.host];
+    },
+
+    /**
+     * Normalize the websites argument of the extract_*_links() helpers.
+     *
+     * Before 2.30.0 it was a single host string, so keep accepting one.
+     *
+     * @param  {Array|String} websites
+     *
+     * @return {Array}
+     */
+    normalize_link_hosts: function (websites) {
+      if (typeof websites === 'string') {
+        return [websites];
+      }
+
+      return Array.isArray(websites) ? websites : PP_Checklists.get_internal_link_hosts();
+    },
+
+    /**
      * Check for internal link from content and return result as array
      *
      *  - remove image inside tags so we don't count them as link
@@ -670,12 +815,17 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {String} website
+     * @param  {Array|String} websites Host or hosts treated as internal. Defaults to the
+     *                          site's real hosts (localized as
+     *                          ppChecklists.internal_link_hosts), which is
+     *                          not necessarily the host this admin script is
+     *                          running on.
      *
      * @return {Array}
      */
-    extract_internal_links: function (content, links = [], website = window.location.host) {
+    extract_internal_links: function (content, links = [], websites = PP_Checklists.get_internal_link_hosts()) {
       var link;
+      websites = PP_Checklists.normalize_link_hosts(websites);
       if (content) {
         //remove image inside tags so we don't count them as link
         content = content.replace(/<img[^>]*>/g, '');
@@ -692,8 +842,8 @@
           for (link of content) {
             //skip if link is image
             if (link.match(/\.(jpeg|jpg|gif|png|svg)$/)) continue;
-            //skip if link has different host than current website
-            if (link.indexOf(website) < 0) continue;
+            //skip if link doesn't match any of the site's hosts
+            if (!websites.some(function (website) { return link.indexOf(website) >= 0; })) continue;
             //add valid link to array
             links.push(link);
           }
@@ -713,14 +863,17 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {String} website
+     * @param  {Array|String} websites Host or hosts treated as internal (i.e. excluded from
+     *                          the external count). Defaults to the site's
+     *                          real hosts, see get_internal_link_hosts().
      *
      * @return {Array}
      */
-    extract_external_links: function (content, links = [], website = window.location.host) {
+    extract_external_links: function (content, links = [], websites = PP_Checklists.get_internal_link_hosts()) {
       var link,
         match,
         regex = /<a.*?href=["\']([^"\']+)["\'].*?\>(.*?)\<\/a\>/gi;
+      websites = PP_Checklists.normalize_link_hosts(websites);
       if (content) {
         //check for external link and return array excluding other images url
         while ((match = regex.exec(content)) !== null) {
@@ -728,8 +881,8 @@
 
           //skip if link is image
           if (link.match(/\.(jpeg|jpg|gif|png|svg)$/)) continue;
-          //skip if link point to the current website host
-          if (link.indexOf(website) > 0) continue;
+          //skip if link points to one of the site's own hosts
+          if (websites.some(function (website) { return link.indexOf(website) > 0; })) continue;
           //add valid link to array
           links.push(link);
         }
