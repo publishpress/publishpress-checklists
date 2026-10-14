@@ -60,6 +60,8 @@ if (!class_exists('PPCH_Checklists')) {
 
         const FLAG_OPTIONS_MIGRATED_2_6_0 = 'publishpress_checklists_options_migrated_2_6_0';
 
+        const FLAG_OPTIONS_UNSLASHED_2_30_0 = 'publishpress_checklists_options_unslashed_2_30_0';
+
         /**
          * @var string
          */
@@ -178,6 +180,49 @@ if (!class_exists('PPCH_Checklists')) {
 
                 update_option(self::FLAG_OPTIONS_MIGRATED_2_6_0, true);
             }
+        }
+
+        /**
+         * Before 2.30.0 the checklist options were stored slashed and the labels
+         * were unslashed on display. They are now stored unslashed, so unslash
+         * the labels saved by older versions once.
+         */
+        public function unslashStoredLabels()
+        {
+            if ((bool)get_option(self::FLAG_OPTIONS_UNSLASHED_2_30_0)) {
+                return;
+            }
+
+            $options = get_option('publishpress_checklists_checklists_options');
+
+            if (is_object($options) || is_array($options)) {
+                $changed = false;
+
+                foreach ($options as $key => $value) {
+                    if (!is_array($value) || !preg_match('/_(title|custom_label|editor_label)$/', $key)) {
+                        continue;
+                    }
+
+                    foreach ($value as $post_type => $label) {
+                        if (is_string($label) && $label !== stripslashes($label)) {
+                            $value[$post_type] = stripslashes($label);
+                            $changed           = true;
+                        }
+                    }
+
+                    if (is_object($options)) {
+                        $options->$key = $value;
+                    } else {
+                        $options[$key] = $value;
+                    }
+                }
+
+                if ($changed) {
+                    update_option('publishpress_checklists_checklists_options', $options);
+                }
+            }
+
+            update_option(self::FLAG_OPTIONS_UNSLASHED_2_30_0, true);
         }
 
         /**
@@ -472,6 +517,7 @@ if (!class_exists('PPCH_Checklists')) {
             add_filter('publishpress_checklists_post_types', [$this, 'filter_post_types']);
 
             add_action('admin_init', [$this, 'migrateLegacyOptions']);
+            add_action('admin_init', [$this, 'unslashStoredLabels']);
             add_action('admin_init', [$this, 'save_global_checklist']);
 
             // Editor

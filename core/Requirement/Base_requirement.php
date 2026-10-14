@@ -155,7 +155,7 @@ class Base_requirement
         $option_name = $this->name . '_custom_label';
         
         if (isset($this->module->options->{$option_name}[$this->post_type])) {
-            return stripslashes($this->module->options->{$option_name}[$this->post_type]);
+            return $this->module->options->{$option_name}[$this->post_type];
         }
         
         return '';
@@ -175,7 +175,7 @@ class Base_requirement
         $option_name = $this->name . '_editor_label';
 
         if (isset($this->module->options->{$option_name}[$this->post_type])) {
-            return stripslashes($this->module->options->{$option_name}[$this->post_type]);
+            return $this->module->options->{$option_name}[$this->post_type];
         }
 
         return '';

@@ -104,7 +104,7 @@ class Custom_item extends Base_multiple implements Interface_required
         $var_name = $this->name . '_title';
 
         if (isset($this->module->options->{$var_name}[$this->post_type])) {
-            $title = stripslashes($this->module->options->{$var_name}[$this->post_type]);
+            $title = $this->module->options->{$var_name}[$this->post_type];
         }
 
         $this->title = $title;
