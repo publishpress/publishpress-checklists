@@ -72,8 +72,21 @@ function publishpress_checklists_uninstall_cleanup()
 
     // Delete any transients (only if they exist)
     global $wpdb;
-    $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '_transient_publishpress_checklists_%'");
-    $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '_transient_timeout_publishpress_checklists_%'");
+    $transient_prefix = $wpdb->esc_like('_transient_publishpress_checklists_') . '%';
+    $timeout_prefix   = $wpdb->esc_like('_transient_timeout_publishpress_checklists_') . '%';
+
+    $wpdb->query(
+        $wpdb->prepare(
+            "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
+            $transient_prefix
+        )
+    );
+    $wpdb->query(
+        $wpdb->prepare(
+            "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
+            $timeout_prefix
+        )
+    );
 
     // Clear any cached data
     wp_cache_flush();
