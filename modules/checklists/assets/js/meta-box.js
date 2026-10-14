@@ -687,6 +687,23 @@
     },
 
     /**
+     * Normalize the websites argument of the extract_*_links() helpers.
+     *
+     * Before 2.30.0 it was a single host string, so keep accepting one.
+     *
+     * @param  {Array|String} websites
+     *
+     * @return {Array}
+     */
+    normalize_link_hosts: function (websites) {
+      if (typeof websites === 'string') {
+        return [websites];
+      }
+
+      return Array.isArray(websites) ? websites : PP_Checklists.get_internal_link_hosts();
+    },
+
+    /**
      * Check for internal link from content and return result as array
      *
      *  - remove image inside tags so we don't count them as link
@@ -696,7 +713,7 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {Array} websites Hosts treated as internal. Defaults to the
+     * @param  {Array|String} websites Host or hosts treated as internal. Defaults to the
      *                          site's real hosts (localized as
      *                          ppChecklists.internal_link_hosts), which is
      *                          not necessarily the host this admin script is
@@ -706,6 +723,7 @@
      */
     extract_internal_links: function (content, links = [], websites = PP_Checklists.get_internal_link_hosts()) {
       var link;
+      websites = PP_Checklists.normalize_link_hosts(websites);
       if (content) {
         //remove image inside tags so we don't count them as link
         content = content.replace(/<img[^>]*>/g, '');
@@ -743,7 +761,7 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {Array} websites Hosts treated as internal (i.e. excluded from
+     * @param  {Array|String} websites Host or hosts treated as internal (i.e. excluded from
      *                          the external count). Defaults to the site's
      *                          real hosts, see get_internal_link_hosts().
      *
@@ -753,6 +771,7 @@
       var link,
         match,
         regex = /<a.*?href=["\']([^"\']+)["\'].*?\>(.*?)\<\/a\>/gi;
+      websites = PP_Checklists.normalize_link_hosts(websites);
       if (content) {
         //check for external link and return array excluding other images url
         while ((match = regex.exec(content)) !== null) {
