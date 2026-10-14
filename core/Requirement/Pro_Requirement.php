@@ -106,7 +106,8 @@ class Pro_Requirement extends Base_simple implements Interface_required
             // Inline counter fields HTML
             $min    = $this->config['min'] ?? '';
             $max    = $this->config['max'] ?? '';
-            $id_key = esc_attr($this->config['id']);
+            // Include the post type: the requirement is rendered once per post type.
+            $id_key = esc_attr($this->post_type . '-' . $this->config['id']);
             return sprintf(
                 '<div class="pp-checklists-number"><label for="%6$s-min">%1$s</label><input type="number" id="%6$s-min" name="min" value="%3$s" class="%4$s pp-checklists-small-input pp-checklists-number" /></div>' .
                 '<div class="pp-checklists-number"><label for="%6$s-max">%2$s</label><input type="number" id="%6$s-max" name="max" value="%5$s" class="%4$s pp-checklists-small-input pp-checklists-number" /></div>',
