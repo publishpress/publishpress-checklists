@@ -274,8 +274,7 @@ if (!class_exists('PPCH_Settings')) {
                          */
                         $tabs = apply_filters('publishpress_checklists_settings_tabs', []);
                         if (!empty($tabs)) {
-                            echo '<nav aria-label="' . esc_attr__('Settings sections', 'publishpress-checklists') . '">';
-                            echo '<ul id="publishpress-checklists-settings-tabs" class="nav-tab-wrapper" role="tablist">';
+                            echo '<ul id="publishpress-checklists-settings-tabs" class="nav-tab-wrapper" role="tablist" aria-label="' . esc_attr__('Settings sections', 'publishpress-checklists') . '">';
                             $i = 0;
                             foreach ($tabs as $tabLink => $tabLabel) {
                                 $tab_id = ltrim((string) $tabLink, '#');
@@ -288,7 +287,6 @@ if (!class_exists('PPCH_Settings')) {
                                 $i++;
                             }
                             echo '</ul>';
-                            echo '</nav>';
                         }
                         ?>
 

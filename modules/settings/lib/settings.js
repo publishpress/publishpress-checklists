@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
       saveStorageData('ppch_settings_active_tab', panel.slice(1));
     }
 
-    $('table[id^="ppch-"]').hide().attr('aria-hidden', 'true');
+    $('div[role="tabpanel"][id^="ppch-tab-"]').hide().attr('aria-hidden', 'true');
     $(panel).show().attr('aria-hidden', 'false');
 
     if (moveFocus) {
@@ -54,6 +54,16 @@ jQuery(document).ready(function ($) {
   $tabs.on('click', function (e) {
     e.preventDefault();
     activateTab($(this), false);
+  });
+
+  // Keep the whole tab box clickable, not only the link text inside it.
+  $tabsWrapper.children('li').on('click', function (e) {
+    if ($(e.target).closest('a[role="tab"]').length) {
+      return;
+    }
+
+    e.preventDefault();
+    activateTab($(this).find('a[role="tab"]').first(), true);
   });
 
   $tabs.on('keydown', function (e) {
@@ -97,7 +107,8 @@ jQuery(document).ready(function ($) {
 
   $hiddenFields.each(function () {
     var $this = $(this);
-    var $wrapper = $this.next('table');
+    // Wrap the table in the tab panel so the table keeps its own semantics.
+    var $wrapper = $this.next('table').wrap('<div role="tabpanel"></div>').parent();
     $wrapper.attr('id', $this.attr('id'));
     $this.remove();
 
