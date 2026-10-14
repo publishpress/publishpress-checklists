@@ -23,3 +23,5 @@
 - .prettierrc
 - .rsync-filters-post-build
 - .rsync-filters-pre-build
+- .web
+- .ddev
