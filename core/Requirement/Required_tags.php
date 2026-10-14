@@ -204,7 +204,10 @@ class Required_tags extends Base_multiple
 
         $total_tags = get_transient($cache_key);
         if ($total_tags === false) {
-            $total_tags = wp_count_terms(array_merge(['taxonomy' => 'post_tag'], $args));
+            // get_terms() with 'fields' => 'count' works the same from WP 5.5 to current,
+            // unlike the two wp_count_terms() signatures.
+            $total_tags = get_terms(array_merge($args, ['taxonomy' => 'post_tag', 'fields' => 'count']));
+            $total_tags = is_wp_error($total_tags) ? 0 : (int) $total_tags;
             set_transient($cache_key, $total_tags, $this->cache_expiration);
         }
 
