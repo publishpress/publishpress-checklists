@@ -196,7 +196,7 @@ if (!class_exists('PPCH_Settings')) {
 
             $status = isset($this->module->options->disable_quick_edit_publish) ? $this->module->options->disable_quick_edit_publish : 'yes';
             if ($status == 'yes') :
-                $post_type = (!empty($_GET['post_type'])) ? sanitize_text_field($_GET['post_type']) : 'post';
+                $post_type = (!empty($_GET['post_type'])) ? sanitize_key(wp_unslash($_GET['post_type'])) : 'post';
                 $post_types = array_keys($this->get_post_types());
                 if (in_array($post_type, $post_types)) :
 ?>
@@ -224,7 +224,7 @@ if (!class_exists('PPCH_Settings')) {
 
             $status = isset($this->module->options->disable_quick_edit_completely) ? $this->module->options->disable_quick_edit_completely : 'yes';
             if ($status == 'yes') :
-                $post_type = (!empty($_GET['post_type'])) ? sanitize_text_field($_GET['post_type']) : 'post';
+                $post_type = (!empty($_GET['post_type'])) ? sanitize_key(wp_unslash($_GET['post_type'])) : 'post';
                 $post_types = array_keys($this->get_post_types());
                 if (in_array($post_type, $post_types)) :
                 ?>
@@ -513,7 +513,7 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (
-                $_POST['action'] != 'update'
+                sanitize_key(wp_unslash($_POST['action'])) !== 'update'
                 || !isset($_GET['page'])
                 || (isset($_GET['page']) && $_GET['page'] != 'ppch-settings')
             ) {
@@ -521,7 +521,7 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (!current_user_can('manage_options') || !wp_verify_nonce(
-                sanitize_key($_POST['_wpnonce']),
+                sanitize_key(wp_unslash($_POST['_wpnonce'])),
                 'edit-publishpress-settings'
             )) {
                 wp_die(esc_html__('Cheatin&#8217; uh?', 'publishpress-checklists'));
@@ -534,7 +534,7 @@ if (!class_exists('PPCH_Settings')) {
             $legacyPlugin = Factory::getLegacyPlugin();
 
             if (isset($_POST['publishpress_checklists_settings_options']['features'])) {
-                $enabledFeatures = sanitize_text_field($_POST['publishpress_checklists_settings_options']['features']);
+                $enabledFeatures = sanitize_text_field(wp_unslash($_POST['publishpress_checklists_settings_options']['features']));
 
                 // Run through all the modules updating their statuses
                 foreach ($legacyPlugin->modules as $mod_data) {
@@ -555,8 +555,7 @@ if (!class_exists('PPCH_Settings')) {
             foreach ($modules as $moduleSlug) {
                 $module_name = sanitize_key(Util::sanitizeModuleName($moduleSlug));
 
-                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-                $new_options = (isset($_POST[$legacyPlugin->$module_name->module->options_group_name])) ? $this->sanitize_module_options($_POST[$legacyPlugin->$module_name->module->options_group_name]) : [];
+                $new_options = (isset($_POST[$legacyPlugin->$module_name->module->options_group_name])) ? $this->sanitize_module_options(wp_unslash($_POST[$legacyPlugin->$module_name->module->options_group_name])) : [];
 
                 /**
                  * Legacy way to validate the settings. Hook to the filter
@@ -705,17 +704,17 @@ if (!class_exists('PPCH_Settings')) {
         {
             $legacyPlugin = Factory::getLegacyPlugin();
 
-            $module_settings_slug = isset($_GET['module']) && !empty($_GET['module']) ? sanitize_text_field($_GET['module']) : PPCH_Settings::SETTINGS_SLUG;
+            $module_settings_slug = isset($_GET['module']) && !empty($_GET['module']) ? sanitize_key(wp_unslash($_GET['module'])) : PPCH_Settings::SETTINGS_SLUG;
             $requested_module     = $legacyPlugin->getModuleBy('settings_slug', $module_settings_slug);
             $display_text         = '';
 
             // If there's been a message, let's display it
             if (isset($_GET['message'])) {
-                $message = sanitize_text_field($_GET['message']);
+                $message = sanitize_text_field(wp_unslash($_GET['message']));
             } elseif (isset($_REQUEST['message'])) {
-                $message = sanitize_text_field($_REQUEST['message']);
+                $message = sanitize_text_field(wp_unslash($_REQUEST['message']));
             } elseif (isset($_POST['message'])) {
-                $message = sanitize_text_field($_POST['message']);
+                $message = sanitize_text_field(wp_unslash($_POST['message']));
             } else {
                 $message = false;
             }
@@ -727,11 +726,11 @@ if (!class_exists('PPCH_Settings')) {
 
             // If there's been an error, let's display it
             if (isset($_GET['error'])) {
-                $error = sanitize_text_field($_GET['error']);
+                $error = sanitize_text_field(wp_unslash($_GET['error']));
             } elseif (isset($_REQUEST['error'])) {
-                $error = sanitize_text_field($_REQUEST['error']);
+                $error = sanitize_text_field(wp_unslash($_REQUEST['error']));
             } elseif (isset($_POST['error'])) {
-                $error = sanitize_text_field($_POST['error']);
+                $error = sanitize_text_field(wp_unslash($_POST['error']));
             } else {
                 $error = false;
             }
@@ -1614,7 +1613,7 @@ if (!class_exists('PPCH_Settings')) {
         public function ajax_reset_custom_labels()
         {
             // Verify nonce
-            if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'ppch_reset_custom_labels')) {
+            if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_key(wp_unslash($_POST['nonce'])), 'ppch_reset_custom_labels')) {
                 wp_send_json_error(['message' => __('Security check failed.', 'publishpress-checklists')]);
             }
 

@@ -124,7 +124,7 @@ class Openai_item extends Base_simple implements Interface_required
         $var_name = $this->name . '_title';
 
         if (isset($this->module->options->{$var_name}[$this->post_type])) {
-            $title = stripslashes($this->module->options->{$var_name}[$this->post_type]);
+            $title = $this->module->options->{$var_name}[$this->post_type];
         }
 
         $this->title = $title;
@@ -288,20 +288,20 @@ class Openai_item extends Base_simple implements Interface_required
 
         if (
             empty($_POST['nonce'])
-            || !wp_verify_nonce(sanitize_key($_POST['nonce']), 'pp-checklists-requirements')
+            || !wp_verify_nonce(sanitize_key(wp_unslash($_POST['nonce'])), 'pp-checklists-requirements')
         ) {
             $response['content'] = esc_html__(
                 'Validation error. Kindly reload this page and try again.',
                 'publishpress-checklists'
             );
-        } elseif (empty(trim(sanitize_text_field($_POST['content'])))) {
+        } elseif (empty(trim(sanitize_text_field(wp_unslash($_POST['content']))))) {
             $response['content'] = esc_html__(
                 'Post content is empty.',
                 'publishpress-checklists'
             );
         } else {
-            $content     = $this->clean_up_content(wp_kses_post($_POST['content']));
-            $requirement = map_deep($_POST['requirement'], 'sanitize_text_field');
+            $content     = $this->clean_up_content(wp_kses_post(wp_unslash($_POST['content'])));
+            $requirement = map_deep(wp_unslash($_POST['requirement']), 'sanitize_text_field');
             $api_key     = !empty($legacyPlugin->settings->module->options->openai_api_key) ? $legacyPlugin->settings->module->options->openai_api_key : '';
             if (empty(trim($api_key))) {
                 $response['content'] = esc_html__(

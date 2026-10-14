@@ -220,7 +220,7 @@ class Required_categories extends Base_multiple
         check_ajax_referer('pp-checklists-rules', 'nonce');
 
         // Get the search query and page number from the request
-        $search = isset($_POST['q']) ? sanitize_text_field($_POST['q']) : '';
+        $search = isset($_POST['q']) ? sanitize_text_field(wp_unslash($_POST['q'])) : '';
         $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
         $per_page = 10;
 

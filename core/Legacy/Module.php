@@ -212,11 +212,11 @@ class Module
 
         // If there's been a message, let's display it
         if (isset($_GET['message'])) {
-            $message = sanitize_text_field($_GET['message']);
+            $message = sanitize_text_field(wp_unslash($_GET['message']));
         } elseif (isset($_REQUEST['message'])) {
-            $message = sanitize_text_field($_REQUEST['message']);
+            $message = sanitize_text_field(wp_unslash($_REQUEST['message']));
         } elseif (isset($_POST['message'])) {
-            $message = sanitize_text_field($_POST['message']);
+            $message = sanitize_text_field(wp_unslash($_POST['message']));
         } else {
             $message = false;
         }
@@ -229,11 +229,11 @@ class Module
 
         // If there's been an error, let's display it
         if (isset($_GET['error'])) {
-            $error = sanitize_text_field($_GET['error']);
+            $error = sanitize_text_field(wp_unslash($_GET['error']));
         } elseif (isset($_REQUEST['error'])) {
-            $error = sanitize_text_field($_REQUEST['error']);
+            $error = sanitize_text_field(wp_unslash($_REQUEST['error']));
         } elseif (isset($_POST['error'])) {
-            $error = sanitize_text_field($_POST['error']);
+            $error = sanitize_text_field(wp_unslash($_POST['error']));
         } else {
             $error = false;
         }
