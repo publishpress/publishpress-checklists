@@ -9,7 +9,8 @@
     vertical-align: middle;
 }
 
-.pp-checklists-req .status-label {
+/* Keep the line breaks of multi-line custom task titles. */
+.pp-checklists-req.pp-checklists-custom-item .req-label {
     white-space: pre-line;
 }
 

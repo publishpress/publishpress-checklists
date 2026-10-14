@@ -70,7 +70,12 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
                             ?>
                             <div class="status-icon dashicons <?php echo esc_attr($icon_class); ?>"></div>
                             <div class="status-label">
-                                <?php echo wp_kses_post($req['label']); ?>
+                                <?php if (!empty($req['is_custom'])) : ?>
+                                    <?php // Custom task titles can be multi-line; only this span gets white-space: pre-line. ?>
+                                    <span class="req-label"><?php echo wp_kses_post($req['label']); ?></span>
+                                <?php else : ?>
+                                    <?php echo wp_kses_post($req['label']); ?>
+                                <?php endif; ?>
                                 <?php if ($req['rule'] === 'block') : ?>
                                     <span class="required">*</span>
                                     <?php $show_required_legend = true; ?>
