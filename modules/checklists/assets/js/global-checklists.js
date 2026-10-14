@@ -277,7 +277,7 @@
       var $table = $('#pp-checklists-requirements'),
         $tr = $('<tr>'),
         $td = null,
-        $titleField = type == 'openai' ? $('<textarea>') : $('<input type="text" />'),
+        $titleField = $('<textarea>'),
         $idField = $('<input type="hidden" />'),
         $actionField = $('<select>'),
         $canIgnoreField = $('<select>'),
