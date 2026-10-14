@@ -124,6 +124,13 @@ $static = [
         'label'    => __('Prohibited words', 'publishpress-checklists'),
     ],
     [
+        'id'       => 'required_words',
+        'type'     => 'multiple',
+        'support'  => 'editor',
+        'group'    => 'content',
+        'label'    => __('Required words', 'publishpress-checklists'),
+    ],
+    [
         'id'        => 'publish_time_exact',
         'type'      => 'time',
         'support'   => 'editor',
