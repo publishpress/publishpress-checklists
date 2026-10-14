@@ -63,7 +63,7 @@ jQuery(document).ready(function ($) {
     }
 
     e.preventDefault();
-    activateTab($(this).find('a[role="tab"]').first(), true);
+    activateTab($(this).find('a[role="tab"]').first(), false);
   });
 
   $tabs.on('keydown', function (e) {
