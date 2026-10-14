@@ -763,6 +763,49 @@
     },
 
     /**
+     * Returns the hosts that should be treated as internal for the
+     * internal/external links checks, localized server-side as
+     * ppChecklists.internal_link_hosts. Falls back to the host this script
+     * is running on if that wasn't localized (e.g. an older cached copy of
+     * the object), matching the previous single-host behaviour.
+     *
+     * @return {Array}
+     */
+    get_internal_link_hosts: function () {
+      if (typeof ppChecklists !== 'undefined' && Array.isArray(ppChecklists.internal_link_hosts)) {
+        // Drop any empty entry a 'publishpress_checklists_internal_link_hosts'
+        // filter callback might introduce: an empty string matches every
+        // link via indexOf, which would make every link look internal.
+        var hosts = ppChecklists.internal_link_hosts.filter(function (host) {
+          return typeof host === 'string' && host !== '';
+        });
+
+        if (hosts.length > 0) {
+          return hosts;
+        }
+      }
+
+      return [window.location.host];
+    },
+
+    /**
+     * Normalize the websites argument of the extract_*_links() helpers.
+     *
+     * Before 2.30.0 it was a single host string, so keep accepting one.
+     *
+     * @param  {Array|String} websites
+     *
+     * @return {Array}
+     */
+    normalize_link_hosts: function (websites) {
+      if (typeof websites === 'string') {
+        return [websites];
+      }
+
+      return Array.isArray(websites) ? websites : PP_Checklists.get_internal_link_hosts();
+    },
+
+    /**
      * Check for internal link from content and return result as array
      *
      *  - remove image inside tags so we don't count them as link
@@ -772,12 +815,17 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {String} website
+     * @param  {Array|String} websites Host or hosts treated as internal. Defaults to the
+     *                          site's real hosts (localized as
+     *                          ppChecklists.internal_link_hosts), which is
+     *                          not necessarily the host this admin script is
+     *                          running on.
      *
      * @return {Array}
      */
-    extract_internal_links: function (content, links = [], website = window.location.host) {
+    extract_internal_links: function (content, links = [], websites = PP_Checklists.get_internal_link_hosts()) {
       var link;
+      websites = PP_Checklists.normalize_link_hosts(websites);
       if (content) {
         //remove image inside tags so we don't count them as link
         content = content.replace(/<img[^>]*>/g, '');
@@ -794,8 +842,8 @@
           for (link of content) {
             //skip if link is image
             if (link.match(/\.(jpeg|jpg|gif|png|svg)$/)) continue;
-            //skip if link has different host than current website
-            if (link.indexOf(website) < 0) continue;
+            //skip if link doesn't match any of the site's hosts
+            if (!websites.some(function (website) { return link.indexOf(website) >= 0; })) continue;
             //add valid link to array
             links.push(link);
           }
@@ -815,14 +863,17 @@
      *
      * @param  {String} content
      * @param  {Array} links
-     * @param  {String} website
+     * @param  {Array|String} websites Host or hosts treated as internal (i.e. excluded from
+     *                          the external count). Defaults to the site's
+     *                          real hosts, see get_internal_link_hosts().
      *
      * @return {Array}
      */
-    extract_external_links: function (content, links = [], website = window.location.host) {
+    extract_external_links: function (content, links = [], websites = PP_Checklists.get_internal_link_hosts()) {
       var link,
         match,
         regex = /<a.*?href=["\']([^"\']+)["\'].*?\>(.*?)\<\/a\>/gi;
+      websites = PP_Checklists.normalize_link_hosts(websites);
       if (content) {
         //check for external link and return array excluding other images url
         while ((match = regex.exec(content)) !== null) {
@@ -830,8 +881,8 @@
 
           //skip if link is image
           if (link.match(/\.(jpeg|jpg|gif|png|svg)$/)) continue;
-          //skip if link point to the current website host
-          if (link.indexOf(website) > 0) continue;
+          //skip if link points to one of the site's own hosts
+          if (websites.some(function (website) { return link.indexOf(website) > 0; })) continue;
           //add valid link to array
           links.push(link);
         }
