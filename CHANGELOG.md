@@ -1,6 +1,10 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.29.1] - 9 September, 2026
+
+- Fixed: Rank Math's block editor panel could remain stuck at 0/100 when checklist watchers ran during editor initialization #1169
+
 [2.29.0] - 10 August, 2026
 
 - Fixed: Deprecation notices in the Gutenberg editor #1193

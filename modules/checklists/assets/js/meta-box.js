@@ -121,6 +121,16 @@
        * @type {boolean}
        */
       is_validating: false,
+
+      /**
+       * Flag set once init() has run. The wp.data.subscribe watchers bail out
+       * until this is true so they respect the delayed initialization used when
+       * SEO plugins are active (e.g. Rank Math's 3s delay). This prevents heavy
+       * synchronous work from firing during those plugins' React panel mount.
+       * See https://github.com/publishpress/publishpress-checklists/issues/1169
+       * @type {boolean}
+       */
+      is_ready: false,
     },
 
     /**
@@ -346,6 +356,10 @@
         }.bind(this),
         this.TIC_INTERVAL,
       );
+
+      // Activate the wp.data.subscribe watchers now that initialization has
+      // completed (which may have been delayed for SEO plugin compatibility).
+      this.state.is_ready = true;
     },
 
     /**
@@ -952,6 +966,32 @@
   // Exposes and initialize the object
   window.PP_Checklists = PP_Checklists;
 
+  /**
+   * Registers a wp.data.subscribe watcher whose callback only runs once
+   * PP_Checklists.init() has completed (state.is_ready).
+   *
+   * The subscription itself is still registered immediately, but the callback
+   * bails out cheaply until initialization finishes. When SEO plugins such as
+   * Rank Math or Yoast SEO are active, init() is delayed a few seconds, so the
+   * heavy content-parsing work in these watchers no longer fires during those
+   * plugins' block editor panel mount - which previously blocked the JS thread
+   * and left their panels stuck (e.g. Rank Math's "0/100").
+   *
+   * See https://github.com/publishpress/publishpress-checklists/issues/1169
+   *
+   * @param {Function} callback
+   * @return {Function} The unsubscribe function returned by wp.data.subscribe.
+   */
+  function subscribeWhenReady(callback) {
+    return wp.data.subscribe(function () {
+      if (!PP_Checklists.state.is_ready) {
+        return;
+      }
+
+      callback();
+    });
+  }
+
   if (typeof rankMath !== 'undefined' && typeof YoastSEO !== 'undefined') {
     setTimeout(function () {
       PP_Checklists.init();
@@ -1054,7 +1094,7 @@
         loaded = true;
       };
       if (PP_Checklists.is_gutenberg_active()) {
-        wp.data.subscribe(function () {
+        subscribeWhenReady(function () {
           if (loaded) return;
           const mediaId = PP_Checklists.getEditor().getEditedPostAttribute('featured_media');
           if (mediaId) {
@@ -1127,7 +1167,7 @@
         loaded = true;
       };
       if (PP_Checklists.is_gutenberg_active()) {
-        wp.data.subscribe(function () {
+        subscribeWhenReady(function () {
           if (loaded) return;
           const mediaId = PP_Checklists.getEditor().getEditedPostAttribute('featured_media');
           if (mediaId) {
@@ -1731,7 +1771,7 @@
      * For Gutenberg
      */
     if ($wordCountElements.length > 0) {
-      wp.data.subscribe(function () {
+      subscribeWhenReady(function () {
         // @todo: why does Multiple Authors "Remove author from new posts" setting cause this to return null?
         var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
 
@@ -1862,7 +1902,7 @@
      * For Gutenberg
      */
     if ($internalLinksElements.length > 0) {
-      wp.data.subscribe(function () {
+      subscribeWhenReady(function () {
         setTimeout(function () {
           var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
 
@@ -2061,7 +2101,7 @@
      * For Gutenberg
      */
     if ($externalLinksElements.length > 0) {
-      wp.data.subscribe(function () {
+      subscribeWhenReady(function () {
         setTimeout(function () {
           var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
 
@@ -2194,7 +2234,7 @@
     if ($imageAltElements.length > 0) {
       let lastMissingCounts = {};
 
-      wp.data.subscribe(function () {
+      subscribeWhenReady(function () {
         var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
 
         if (typeof content == 'undefined') {
@@ -2316,7 +2356,7 @@
     if ($validateLinksElements.length > 0) {
       let lastInvalidCount = 0;
 
-      wp.data.subscribe(function () {
+      subscribeWhenReady(function () {
         var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
 
         if (typeof content === 'undefined') {
@@ -2418,7 +2458,7 @@
     if ($imageAltCountElements.length > 0) {
       let lastSignature = '';
 
-      wp.data.subscribe(function () {
+      subscribeWhenReady(function () {
         var content = PP_Checklists.getEditor().getEditedPostAttribute('content');
         if (typeof content === 'undefined') {
           return;
