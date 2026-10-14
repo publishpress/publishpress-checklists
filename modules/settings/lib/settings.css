@@ -318,6 +318,11 @@ h3.nav-tab-wrapper {
     margin-bottom: -1px;
 }
 
+#publishpress-checklists-settings-tabs a[role="tab"]:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: -2px;
+}
+
 
 .ppch-advertisement-right-sidebar .upgrade-btn a {
     background: #FCB223;
@@ -445,4 +450,3 @@ h3.nav-tab-wrapper {
         max-width: 170px;
     }
 }
-

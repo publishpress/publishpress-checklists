@@ -37,6 +37,31 @@
     <div class="pressshack-admin-wrapper pp-checklists-tabs-wrapper">
         <div class="pp-checklists-tabs">
             <?php
+            $allowed_svg_tags = [
+                'svg'  => [
+                    'aria-hidden' => true,
+                    'class'       => true,
+                    'focusable'   => true,
+                    'height'      => true,
+                    'role'        => true,
+                    'version'     => true,
+                    'viewbox'     => true,
+                    'width'       => true,
+                    'xmlns'       => true,
+                ],
+                'g'    => [
+                    'clip-rule' => true,
+                    'fill'      => true,
+                    'fill-rule' => true,
+                ],
+                'path' => [
+                    'clip-rule' => true,
+                    'd'         => true,
+                    'fill'      => true,
+                    'fill-rule' => true,
+                ],
+            ];
+
             /**
              * Render field tabs
              */
@@ -83,7 +108,7 @@
                                 aria-selected="<?php echo $inner_tab_is_active ? 'true' : 'false'; ?>"
                                 tabindex="<?php echo $inner_tab_is_active ? '0' : '-1'; ?>">
                                 <span class="<?php echo esc_attr($args['icon']); ?>" aria-hidden="true">
-                                    <?php if (isset($args['svg']) && !empty($args['svg'])) : echo $args['svg']; endif; ?>
+                                    <?php if (isset($args['svg']) && !empty($args['svg'])) : echo wp_kses($args['svg'], $allowed_svg_tags); endif; ?>
                                 </span>
                                 <span class="item"><?php echo esc_html($args['label']); ?></span>
                                 <?php if ($enabled_count > 0) : ?>
@@ -123,10 +148,10 @@
                     <tbody id="<?php echo 'pp-checklists-tab-body-' . esc_attr($post_type_key); ?>" class="pp-checklists-tab-body <?php echo $i === 0 ? 'active' : ''; ?>" aria-hidden="true" style="display: none;">
                         <?php
                         foreach ($context['tabs'][$post_type_key] as $group => $tabInfo) :
-                            foreach ($context['requirements'] as $post_type => $post_type_requirements) : ?>
+                            foreach ($context['requirements'] as $requirements_post_type => $post_type_requirements) : ?>
                                 <?php
                                 // Skip if the post type is not the current one
-                                if ($post_type !== $post_type_key) continue;
+                                if ($requirements_post_type !== $post_type_key) continue;
                                 $group_has_requirements = false;
                                     foreach ($post_type_requirements as $requirement) :
                                         if ($requirement->group === $group) :
@@ -142,7 +167,7 @@
                                                 class="pp-checklists-requirement-row ppch-<?php echo esc_attr($requirement->group); ?>-group <?php echo $is_locked ? ' ppc-pro-locked-row' : ''; ?>"
                                                 style="display: none;"
                                                 data-id="<?php echo esc_attr($requirement->name); ?>"
-                                                data-post-type="<?php echo esc_attr($post_type); ?>">
+                                                data-post-type="<?php echo esc_attr($requirements_post_type); ?>">
                                                
                                                 <td>
                                                     <?php
@@ -162,7 +187,7 @@
                                                  *
                                                  * @return string
                                                  */
-                                                do_action('publishpress_checklists_tasks_list_td', $requirement, $post_type);
+                                                do_action('publishpress_checklists_tasks_list_td', $requirement, $requirements_post_type);
                                                 ?>
                                                 <td class="pp-checklists-task-params">
                                                     <?php
@@ -184,8 +209,8 @@
                                         endif;
                                     endforeach;
                                 ?>
-                                <?php if ($post_type === $post_type_key && !$group_has_requirements) : ?>
-                                    <tr class="pp-checklists-requirement-row ppch-<?php echo esc_attr($group); ?>-group" data-post-type="<?php echo esc_attr($post_type); ?>">
+                                <?php if ($requirements_post_type === $post_type_key && !$group_has_requirements) : ?>
+                                    <tr class="pp-checklists-requirement-row ppch-<?php echo esc_attr($group); ?>-group" data-post-type="<?php echo esc_attr($requirements_post_type); ?>">
                                         <td colspan="4" id="empty-custom-rule">
                                             <?php echo esc_html(sprintf(__('No %s requirements for this post type.', 'publishpress-checklists'), $group)); ?>
                                         </td>

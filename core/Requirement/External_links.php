@@ -100,9 +100,19 @@ class External_links extends Base_counter
      */
     public function extract_external_links($content, $external_links = array(), $website = '')
     {
-        //website host
-        if (!$website) {
-            $website = parse_url(home_url())['host'];
+        //website host(s). A single $website keeps working for backward
+        //compatibility with existing callers; otherwise fall back to every
+        //host the site is reachable on (front-end and wp-admin can differ).
+        if ($website) {
+            $websites = [$website];
+        } else {
+            $websites = apply_filters(
+                'publishpress_checklists_internal_link_hosts',
+                array_values(array_unique(array_filter([
+                    parse_url(home_url(), PHP_URL_HOST),
+                    parse_url(site_url(), PHP_URL_HOST),
+                ])))
+            );
         }
 
         //remove images from content
@@ -120,8 +130,15 @@ class External_links extends Base_counter
                 if (in_array($current_extension, $image_extension)) {
                     continue;
                 }
-                //skip if link point to the current website host
-                if (strpos($current_link, $website) !== false) {
+                //skip if link points to one of the site's own hosts
+                $is_internal_link = false;
+                foreach ($websites as $host) {
+                    if ($host !== '' && strpos($current_link, $host) !== false) {
+                        $is_internal_link = true;
+                        break;
+                    }
+                }
+                if ($is_internal_link) {
                     continue;
                 }
                 //add valid link to array

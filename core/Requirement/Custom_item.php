@@ -75,14 +75,14 @@ class Custom_item extends Base_multiple implements Interface_required
         $id = $this->post_type . '-checklists-' . $this->name . '_title';
 
         $html = sprintf(
-            '<label class="screen-reader-text" for="%s">%s</label><input type="text" id="%s" name="%s" value="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title" />',
+            '<label class="screen-reader-text" for="%s">%s</label><textarea id="%s" name="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title">%s</textarea>',
             esc_attr($id),
             esc_html__('Custom task title', 'publishpress-checklists'),
             esc_attr($id),
             esc_attr($name),
-            esc_attr($this->get_title()),
             esc_attr($this->name),
-            esc_html__('Enter name of custom task', 'publishpress-checklists')
+            esc_html__('Enter name of custom task', 'publishpress-checklists'),
+            esc_textarea($this->get_title())
         );
 
         $html .= sprintf(
@@ -108,7 +108,7 @@ class Custom_item extends Base_multiple implements Interface_required
         $var_name = $this->name . '_title';
 
         if (isset($this->module->options->{$var_name}[$this->post_type])) {
-            $title = stripslashes($this->module->options->{$var_name}[$this->post_type]);
+            $title = $this->module->options->{$var_name}[$this->post_type];
         }
 
         $this->title = $title;
