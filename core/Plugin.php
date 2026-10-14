@@ -48,6 +48,8 @@ class Plugin
      */
     public function init()
     {
+        $this->loadTextDomain();
+
         // Initialize the API
         \PublishPress\Checklists\Core\API\Bootstrap::init();
 
@@ -56,6 +58,28 @@ class Plugin
         add_filter('plugin_row_meta', [$this, 'add_plugin_meta'], 10, 2);
 
         add_filter( 'plugin_action_links_' . plugin_basename(PPCH_FILE), [$this, 'add_action_links']);
+    }
+
+    /**
+     * Load the bundled translations on WordPress versions before 6.8.
+     *
+     * WordPress 6.8 and later load them just in time from the plugin's
+     * Domain Path header, so the call is only needed on older versions.
+     */
+    public function loadTextDomain()
+    {
+        global $wp_version;
+
+        if (version_compare($wp_version, '6.8', '>=')) {
+            return;
+        }
+
+        // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Required before WP 6.8, see above.
+        load_plugin_textdomain(
+            'publishpress-checklists',
+            false,
+            dirname(plugin_basename(PPCH_FILE)) . '/languages/'
+        );
     }
 
     public function add_plugin_meta($links, $file)
