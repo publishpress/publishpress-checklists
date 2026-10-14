@@ -659,6 +659,7 @@ if (!class_exists('PPCH_Checklists')) {
                     );
 
                     wp_enqueue_style('pp-remodal-default-theme');
+                    wp_add_inline_style('pp-remodal-default-theme', $this->get_modal_inline_style());
                     wp_enqueue_script('pp-remodal');
 
                     if ($this->isBlockHighlightingEnabled() && $this->isBlockEditorPostType($screen->post_type)) {
@@ -909,6 +910,55 @@ if (!class_exists('PPCH_Checklists')) {
         }
 
         /**
+         * Extra styles for the pre-publish modals.
+         *
+         * Remodal only leaves its "opening" / "closing" state when the CSS animation
+         * fires animationstart and animationend. Both modals share a single overlay
+         * element, so opening one while the other is still animating swallows those
+         * events, the instance stays in the "opening" state forever and close() bails
+         * out at its first guard. The overlay then stays on top of the editor and
+         * every click, including the ones on the Publish button, is absorbed by it.
+         *
+         * Removing the animation from these two modals makes Remodal take its
+         * synchronous path instead, where the state is always settled.
+         *
+         * @see https://github.com/publishpress/publishpress-checklists/issues/1209
+         *
+         * @return string
+         */
+        private function get_modal_inline_style()
+        {
+            return '
+                .remodal-bg.pp-checklists-modal,
+                .remodal-overlay.pp-checklists-modal,
+                .remodal-wrapper.pp-checklists-modal,
+                .remodal.pp-checklists-modal {
+                    -webkit-animation: none !important;
+                    animation: none !important;
+                    -webkit-animation-duration: 0s !important;
+                    animation-duration: 0s !important;
+                    -webkit-animation-delay: 0s !important;
+                    animation-delay: 0s !important;
+                }
+
+                .remodal.pp-checklists-modal .pp-checklists-modal-heading {
+                    margin: 0 0 8px;
+                    font-weight: 600;
+                }
+
+                .remodal.pp-checklists-modal .pp-checklists-modal-question {
+                    margin: 16px 0 0;
+                }
+
+                .remodal.pp-checklists-modal .pp-checklists-modal-list ul {
+                    margin: 0;
+                    text-align: left;
+                    display: inline-block;
+                }
+            ';
+        }
+
+        /**
          * Displays HTML output for Checklist post meta box
          *
          * @param object $post Current post
@@ -980,6 +1030,10 @@ if (!class_exists('PPCH_Checklists')) {
                         ),
                         'msg_missed_important_updating'   => esc_html__(
                             'Not required, but important: ',
+                            'publishpress-checklists'
+                        ),
+                        'msg_recommendations_heading'     => esc_html__(
+                            'These recommendations are missing:',
                             'publishpress-checklists'
                         ),
                         'show_warning_icon_submit' => Base_requirement::VALUE_YES === $legacyPlugin->settings->module->options->show_warning_icon_submit,

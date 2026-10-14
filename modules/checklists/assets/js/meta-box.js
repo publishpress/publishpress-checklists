@@ -180,6 +180,24 @@
         }.bind(this),
       );
 
+      // The user dismissed the modal with No, Escape or the close button. The
+      // submission was blocked, so put the form back in a state the user can act on.
+      this.elems.document.on(
+        'closed',
+        '.remodal',
+        function (event) {
+          if (event.reason === 'confirmation') {
+            return;
+          }
+
+          this.state.is_confirmed = false;
+          this.state.is_publishing = false;
+          this.state.should_block = false;
+
+          this.restore_submit_buttons();
+        }.bind(this),
+      );
+
       if (!this.is_gutenberg_active()) {
         // Hook to the submit button
         $('form#post').submit(
@@ -368,6 +386,87 @@
      * Check if the current post status is draft
      * @return {Boolean} True if draft.
      */
+    /**
+     * Returns the Remodal instance of one of the checklist modals, or null when
+     * the modal is not on the page.
+     *
+     * @param  {String} id The data-remodal-id of the modal
+     * @return {Object|null}
+     */
+    get_modal: function (id) {
+      var $modal = $('[data-remodal-id=' + id + ']');
+
+      return $modal.length > 0 ? $modal.remodal() : null;
+    },
+
+    /**
+     * Both modals share a single overlay element, so opening one while the other
+     * is not fully closed leaves Remodal in a state it never recovers from.
+     *
+     * @return {Boolean}
+     */
+    is_any_modal_open: function () {
+      var ids = ['pp-checklists-modal-alert', 'pp-checklists-modal-confirm'],
+        instance;
+
+      for (var i = 0; i < ids.length; i++) {
+        instance = this.get_modal(ids[i]);
+
+        if (instance && instance.getState() !== 'closed') {
+          return true;
+        }
+      }
+
+      return false;
+    },
+
+    /**
+     * Fills and opens one of the checklist modals, unless one is already open.
+     *
+     * @param  {String} id              The data-remodal-id of the modal
+     * @param  {String} contentSelector Selector of the element holding the message
+     * @param  {String} message         The message to display
+     * @return {void}
+     */
+    open_modal: function (id, contentSelector, message) {
+      if (this.is_any_modal_open()) {
+        return;
+      }
+
+      var instance = this.get_modal(id);
+
+      if (!instance) {
+        return;
+      }
+
+      $(contentSelector).html(message);
+      instance.open();
+    },
+
+    /**
+     * Puts the submit box back in a usable state after a blocked submission.
+     *
+     * The handler in wp-admin/js/post.js disables the submit buttons and starts the
+     * spinner as soon as the form is submitted, and it never restores them when
+     * another handler blocks the submission.
+     *
+     * @return {void}
+     */
+    restore_submit_buttons: function () {
+      if (PP_Checklists.is_gutenberg_active()) {
+        return;
+      }
+
+      var $submitpost = $('#submitpost');
+
+      $submitpost.find(':submit, a.submitdelete, #post-preview').removeClass('disabled');
+      $submitpost.find('.spinner').removeClass('is-active');
+
+      if (typeof wp !== 'undefined' && wp.autosave && wp.autosave.server) {
+        wp.autosave.server.resume();
+      }
+    },
+
     is_draft: function () {
       return (
         'draft' === this.elems.original_post_status.val() || 'auto-draft' === this.elems.original_post_status.val()
@@ -478,37 +577,40 @@
               }
 
               // Display the alert
-              $('#pp-checklists-modal-alert-content').html(message);
-              $('[data-remodal-id=pp-checklists-modal-alert]').remodal().open();
+              PP_Checklists.open_modal(
+                'pp-checklists-modal-alert',
+                '#pp-checklists-modal-alert-content',
+                message,
+              );
             }
           } else if (showWarning) {
             if (PP_Checklists.is_gutenberg_active()) {
               PP_Checklists.unlock_publishing(gutenbergLockName);
               wp.hooks.doAction('pp-checklists.update-failed-requirements', uncheckedItems);
             } else {
-              // Only display a warning
-              if (isUpdatingPublishedPost) {
-                message = ppChecklists.msg_missed_optional_updating;
-              } else {
-                message = ppChecklists.msg_missed_optional_publishing;
-              }
+              // Only display a warning. The list is introduced by a heading, so the
+              // user can tell what the items below the question actually are.
+              var question = isUpdatingPublishedPost
+                ? ppChecklists.msg_missed_optional_updating
+                : ppChecklists.msg_missed_optional_publishing;
 
-              message +=
+              message =
+                '<p class="pp-checklists-modal-heading">' +
+                ppChecklists.msg_recommendations_heading +
+                '</p>' +
                 '<div class="pp-checklists-modal-list"><ul><li>' +
                 uncheckedItems.warning.join('</li><li>') +
-                '</li></ul></div>';
-
-              if (uncheckedItems.block.length > 0) {
-                message +=
-                  ppChecklists.msg_missed_required +
-                  '<div class="pp-checklists-modal-list"><ul><li>' +
-                  uncheckedItems.block.join('</li><li>') +
-                  '</li></ul></div>';
-              }
+                '</li></ul></div>' +
+                '<p class="pp-checklists-modal-question">' +
+                question +
+                '</p>';
 
               // Display the confirm
-              $('#pp-checklists-modal-confirm-content').html(message);
-              $('[data-remodal-id=pp-checklists-modal-confirm]').remodal().open();
+              PP_Checklists.open_modal(
+                'pp-checklists-modal-confirm',
+                '#pp-checklists-modal-confirm-content',
+                message,
+              );
             }
           }
         } else {

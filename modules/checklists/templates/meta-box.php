@@ -103,14 +103,14 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
 
 <?php # Modal Windows; ?>
 <div class="remodal" data-remodal-id="pp-checklists-modal-alert"
-     data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+     data-remodal-options="hashTracking: false, closeOnOutsideClick: false, modifier: pp-checklists-modal">
     <div id="pp-checklists-modal-alert-content"></div>
     <br>
     <button data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['ok']); ?></button>
 </div>
 
 <div class="remodal" data-remodal-id="pp-checklists-modal-confirm"
-     data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+     data-remodal-options="hashTracking: false, closeOnOutsideClick: false, modifier: pp-checklists-modal">
     <div id="pp-checklists-modal-confirm-content"></div>
     <br>
     <button data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['no']); ?></button>
