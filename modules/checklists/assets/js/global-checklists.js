@@ -579,15 +579,21 @@
       
       // Handle empty multiselects - ensure they submit an empty value
       // This fixes the issue where deselecting all options doesn't clear the saved values
+      $('input[data-ppch-empty-multiple]').remove();
       $('select[multiple]').each(function() {
         if ($(this).val() === null || $(this).val().length === 0) {
           // Create a hidden input with the same name and empty value
           var hiddenInput = $('<input type="hidden">');
           hiddenInput.attr('name', $(this).attr('name'));
+          hiddenInput.attr('data-ppch-empty-multiple', '1');
           hiddenInput.val('');
           $(this).after(hiddenInput);
         }
       });
+
+      if (submit_form) {
+        compactChecklistOptionsForSubmission($('#pp-checklists-global'));
+      }
 
       return submit_form;
     });
@@ -1069,6 +1075,105 @@
         }
       }
       return null;
+    }
+
+    /**
+     * Convert a bracket-notation form name into its individual keys.
+     *
+     * @param  {string} name
+     * @return {Array}
+     */
+    function getChecklistFieldPath(name) {
+      var parts = name.match(/^[^\[]+|\[[^\]]*\]/g);
+
+      if (!parts) {
+        return [];
+      }
+
+      return parts.map(function (part, index) {
+        return index === 0 ? part : part.substring(1, part.length - 1);
+      });
+    }
+
+    /**
+     * Add one submitted form value to a nested object.
+     *
+     * @param {Object|Array} target
+     * @param {Array}        path
+     * @param {string}       value
+     */
+    function setChecklistFieldValue(target, path, value) {
+      var current = target;
+
+      for (var index = 0; index < path.length; index++) {
+        var key = path[index];
+        var isLast = index === path.length - 1;
+        var nextKey = path[index + 1];
+
+        if (key === '') {
+          if (!Array.isArray(current)) {
+            return;
+          }
+
+          if (isLast) {
+            current.push(value);
+            return;
+          }
+
+          var arrayChild = nextKey === '' ? [] : {};
+          current.push(arrayChild);
+          current = arrayChild;
+          continue;
+        }
+
+        if (isLast) {
+          if (Object.prototype.hasOwnProperty.call(current, key)) {
+            if (!Array.isArray(current[key])) {
+              current[key] = [current[key]];
+            }
+            current[key].push(value);
+          } else {
+            current[key] = value;
+          }
+          return;
+        }
+
+        if (!Object.prototype.hasOwnProperty.call(current, key)) {
+          current[key] = nextKey === '' ? [] : {};
+        }
+
+        current = current[key];
+      }
+    }
+
+    /**
+     * Replace the many per-post-type inputs with one JSON input before submit.
+     * PHP's max_input_vars limit counts every bracket-notation field, including
+     * fields in hidden tabs. A single JSON value keeps the complete settings
+     * payload intact without changing how the settings are stored.
+     *
+     * @param {jQuery} $form
+     */
+    function compactChecklistOptionsForSubmission($form) {
+      var optionPrefix = 'publishpress_checklists_checklists_options';
+      var options = {};
+
+      $form.find(':input[name^="' + optionPrefix + '["]').serializeArray().forEach(function (field) {
+        var path = getChecklistFieldPath(field.name);
+
+        if (path.length > 1 && path[0] === optionPrefix) {
+          setChecklistFieldValue(options, path.slice(1), field.value);
+        }
+      });
+
+      $form.find('input[name="' + optionPrefix + '_json"]').remove();
+      $('<input>', {
+        type: 'hidden',
+        name: optionPrefix + '_json',
+        value: JSON.stringify(options),
+      }).appendTo($form);
+
+      $form.find(':input[name^="' + optionPrefix + '["]').prop('disabled', true);
     }
   });
 

@@ -1332,7 +1332,14 @@ if (!class_exists('PPCH_Checklists')) {
                 return;
             }
 
-            if (!isset($_POST['publishpress_checklists_checklists_options']) || empty($_POST['publishpress_checklists_checklists_options'])) {
+            $serialized_options_field = 'publishpress_checklists_checklists_options_json';
+            $has_serialized_options = isset($_POST[$serialized_options_field])
+                && is_string($_POST[$serialized_options_field])
+                && trim($_POST[$serialized_options_field]) !== '';
+            $has_regular_options = isset($_POST['publishpress_checklists_checklists_options'])
+                && !empty($_POST['publishpress_checklists_checklists_options']);
+
+            if (!$has_regular_options && !$has_serialized_options) {
                 return;
             }
 
@@ -1348,8 +1355,23 @@ if (!class_exists('PPCH_Checklists')) {
                 return;
             }
 
-            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-            $new_options = $_POST['publishpress_checklists_checklists_options'];
+            if ($has_serialized_options) {
+                $new_options = json_decode(
+                    wp_unslash($_POST[$serialized_options_field]),
+                    true
+                );
+
+                if (JSON_ERROR_NONE !== json_last_error() || !is_array($new_options)) {
+                    return;
+                }
+
+                // Keep the decoded payload available to existing validation
+                // callbacks that inspect the regular form field directly.
+                $_POST['publishpress_checklists_checklists_options'] = $new_options;
+            } else {
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+                $new_options = $_POST['publishpress_checklists_checklists_options'];
+            }
 
             //sanitize checklists options
             $new_options = $this->sanitize_checklists_options($new_options);
