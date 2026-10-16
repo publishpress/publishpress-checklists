@@ -149,6 +149,11 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
     font-weight: bold;
 }
 
+.pp-checklists-failed-requirements-warning .pp-checklists-open-checklist-wrap {
+    font-weight: normal;
+    margin: 8px 0 0;
+}
+
 .pp-checklists-req.metabox-req,
 .pp-checklists-req.panel-req {
     display: block;
@@ -316,4 +321,38 @@ ul#pp-checklists-req-box span.required {
     background-size: 28px 28px;
     pointer-events: none;
     filter: drop-shadow(0 4px 8px rgba(223, 0, 0, 0.18));
+}
+
+/* Direct action link shown under an unmet requirement. */
+.pp-checklists-req .pp-checklists-req-action {
+    display: block;
+    margin: 2px 0 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    line-height: 1.4;
+    text-align: left;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pp-checklists-req .pp-checklists-req-action:hover,
+.pp-checklists-req .pp-checklists-req-action:focus {
+    text-decoration: none;
+}
+
+/* Temporary highlight applied to the panel the user was sent to. */
+.pp-checklists-highlight-target {
+    animation: pp-checklists-highlight-fade 2s ease-out;
+}
+
+@keyframes pp-checklists-highlight-fade {
+    0% {
+        box-shadow: inset 0 0 0 2px var(--wp-admin-theme-color, #3858e9);
+    }
+    100% {
+        box-shadow: inset 0 0 0 2px transparent;
+    }
 }

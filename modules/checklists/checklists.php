@@ -536,6 +536,8 @@ if (!class_exists('PPCH_Checklists')) {
 
             add_filter('publishpress_checklists_requirement_list', [$this, 'filterRequirementsRule'], 1000);
 
+            add_filter('publishpress_checklists_requirement_list', [$this, 'filterRequirementActions'], 1010, 2);
+
             // Redirect on plugin activation
             add_action('admin_init', [$this, 'redirect_on_activate'], 2000);
         }
@@ -1064,6 +1066,7 @@ if (!class_exists('PPCH_Checklists')) {
                             'publishpress-checklists'
                         ),
                         'label_checklist'                 => esc_html__('Checklist', 'publishpress-checklists'),
+                        'label_open_checklist'            => esc_html__('Open checklist', 'publishpress-checklists'),
                         'msg_missed_optional_publishing'  => esc_html__(
                             'Are you sure you want to publish anyway?',
                             'publishpress-checklists'
@@ -1376,6 +1379,250 @@ if (!class_exists('PPCH_Checklists')) {
             );
         }
 
+
+        /**
+         * Adds an optional "direct action" to each requirement, pointing the user to the
+         * place in the editor where the requirement can be resolved.
+         *
+         * Each action is an array with the following keys:
+         *  - label:  the text displayed in the checklist, e.g. "Select category".
+         *  - panel:  the block editor panel name, used with toggleEditorPanelOpened().
+         *  - titles: localized panel titles, used to locate the panel in the DOM.
+         *  - focus:  optional CSS selector, relative to the panel, to focus after scrolling.
+         *  - target: optional special target handled by the JS ("title" or "content").
+         *
+         * @param array $requirements
+         * @param object $post
+         *
+         * @return array
+         */
+        public function filterRequirementActions($requirements, $post = null)
+        {
+            $post_type = is_object($post) && isset($post->post_type) ? $post->post_type : '';
+
+            foreach ($requirements as $name => $requirement) {
+                // Never override an action that was already provided by another add-on.
+                if (isset($requirement['action'])) {
+                    continue;
+                }
+
+                $action = $this->get_default_requirement_action($name, $requirement, $post_type);
+
+                /**
+                 * Filters the direct action of a single requirement. Return an empty value
+                 * to remove the action, or an array to add/replace one.
+                 *
+                 * @param array|null $action
+                 * @param string $name
+                 * @param array $requirement
+                 * @param string $post_type
+                 */
+                $action = apply_filters(
+                    'publishpress_checklists_requirement_action',
+                    $action,
+                    $name,
+                    $requirement,
+                    $post_type
+                );
+
+                $requirements[$name]['action'] = empty($action) ? null : $action;
+            }
+
+            return $requirements;
+        }
+
+        /**
+         * Returns the default direct action for the given requirement, or null when the
+         * requirement is resolved inside the checklist itself.
+         *
+         * @param string $name
+         * @param array $requirement
+         * @param string $post_type
+         *
+         * @return array|null
+         */
+        protected function get_default_requirement_action($name, $requirement, $post_type)
+        {
+            $type = isset($requirement['type']) ? (string)$requirement['type'] : '';
+
+            // Custom and button based tasks are completed inside the checklist itself.
+            if (!empty($requirement['is_custom']) || !empty($requirement['require_button'])) {
+                return null;
+            }
+
+            // Taxonomy tasks registered for any taxonomy, including the dynamic ones.
+            $taxonomy = $this->get_requirement_taxonomy($name, $type);
+            if (!empty($taxonomy)) {
+                return $this->get_taxonomy_requirement_action($taxonomy);
+            }
+
+            switch ($name) {
+                case 'title_count':
+                    return [
+                        'label'  => esc_html__('Edit the title', 'publishpress-checklists'),
+                        'target' => 'title',
+                    ];
+
+                case 'words_count':
+                case 'internal_links':
+                case 'external_links':
+                case 'validate_links':
+                case 'image_alt':
+                case 'image_alt_count':
+                case 'image_count':
+                case 'image_caption_count':
+                case 'audio_count':
+                case 'video_count':
+                case 'heading_in_hierarchy':
+                case 'no_heading_tags':
+                case 'single_h1_per_page':
+                case 'table_header':
+                case 'prohibited_words':
+                    return [
+                        'label'  => esc_html__('Edit the content', 'publishpress-checklists'),
+                        'target' => 'content',
+                    ];
+
+                case 'featured_image':
+                case 'featured_image_alt':
+                case 'featured_image_caption':
+                case 'featured_image_width':
+                case 'featured_image_height':
+                    return [
+                        'label'  => esc_html__('Set the featured image', 'publishpress-checklists'),
+                        'panel'  => 'featured-image',
+                        'titles' => $this->get_post_type_label($post_type, 'featured_image', esc_html__('Featured image')),
+                        'focus'  => 'button',
+                    ];
+
+                case 'filled_excerpt':
+                    return [
+                        'label'  => esc_html__('Write the excerpt', 'publishpress-checklists'),
+                        'panel'  => 'post-excerpt',
+                        'titles' => [esc_html__('Excerpt')],
+                        'focus'  => 'textarea',
+                    ];
+
+                case 'permalink_valid_chars':
+                    return [
+                        'label'  => esc_html__('Edit the permalink', 'publishpress-checklists'),
+                        'panel'  => 'post-link',
+                        'titles' => [esc_html__('Link'), esc_html__('Permalink')],
+                        'focus'  => 'input',
+                    ];
+
+                case 'publish_time_exact':
+                case 'publish_time_future':
+                    return [
+                        'label'  => esc_html__('Set the publish date', 'publishpress-checklists'),
+                        'panel'  => 'post-status',
+                        'titles' => [esc_html__('Summary'), esc_html__('Status & visibility')],
+                        'focus'  => 'button',
+                    ];
+
+                case 'yoast_seo_analysis':
+                case 'yoast_readability_analysis':
+                case 'focus_keyword':
+                case 'meta_description':
+                    return [
+                        'label'  => esc_html__('Open the SEO settings', 'publishpress-checklists'),
+                        'target' => 'yoast',
+                    ];
+            }
+
+            return null;
+        }
+
+        /**
+         * Returns the taxonomy slug handled by the given requirement, if any.
+         *
+         * @param string $name
+         * @param string $type
+         *
+         * @return string
+         */
+        protected function get_requirement_taxonomy($name, $type)
+        {
+            $map = [
+                'categories_count'      => 'category',
+                'required_categories'   => 'category',
+                'prohibited_categories' => 'category',
+                'tags_count'            => 'post_tag',
+                'required_tags'         => 'post_tag',
+                'prohibited_tags'       => 'post_tag',
+            ];
+
+            if (isset($map[$name])) {
+                return $map[$name];
+            }
+
+            // Dynamic taxonomy counters use a type like "taxonomy_counter_hierarchical_genre".
+            if (0 === strpos($type, 'taxonomy_counter_hierarchical_')) {
+                return substr($type, strlen('taxonomy_counter_hierarchical_'));
+            }
+
+            if (0 === strpos($type, 'taxonomy_counter_non_hierarchical_')) {
+                return substr($type, strlen('taxonomy_counter_non_hierarchical_'));
+            }
+
+            return '';
+        }
+
+        /**
+         * Builds the direct action for a taxonomy requirement.
+         *
+         * @param string $taxonomy
+         *
+         * @return array|null
+         */
+        protected function get_taxonomy_requirement_action($taxonomy)
+        {
+            $taxonomy_object = get_taxonomy($taxonomy);
+
+            if (!is_object($taxonomy_object)) {
+                return null;
+            }
+
+            $labels          = get_taxonomy_labels($taxonomy_object);
+            $singular_label  = isset($labels->singular_name) ? $labels->singular_name : $taxonomy;
+            $is_hierarchical = !empty($taxonomy_object->hierarchical);
+
+            $label = $is_hierarchical
+                /* translators: %s: singular taxonomy name, e.g. "category". */
+                ? sprintf(esc_html__('Select %s', 'publishpress-checklists'), strtolower($singular_label))
+                /* translators: %s: singular taxonomy name, e.g. "tag". */
+                : sprintf(esc_html__('Add %s', 'publishpress-checklists'), strtolower($singular_label));
+
+            return [
+                'label'  => $label,
+                'panel'  => 'taxonomy-panel-' . $taxonomy,
+                'titles' => array_values(array_unique(array_filter([
+                    isset($labels->name) ? $labels->name : '',
+                    $singular_label,
+                ]))),
+                'focus'  => $is_hierarchical
+                    ? '.editor-post-taxonomies__hierarchical-terms-list input, input[type="checkbox"]'
+                    : '.components-form-token-field__input, input',
+            ];
+        }
+
+        /**
+         * Returns the given post type label as a single item array, falling back to a default.
+         *
+         * @param string $post_type
+         * @param string $label_key
+         * @param string $fallback
+         *
+         * @return array
+         */
+        protected function get_post_type_label($post_type, $label_key, $fallback)
+        {
+            $labels = $post_type ? get_post_type_labels(get_post_type_object($post_type)) : null;
+            $label  = is_object($labels) && !empty($labels->{$label_key}) ? $labels->{$label_key} : '';
+
+            return array_values(array_unique(array_filter([$label, $fallback])));
+        }
+
         /**
          * Recognize RULE_ONLY_DISPLAY rule as RULE_WARNING
          *
@@ -1450,6 +1697,7 @@ if (!class_exists('PPCH_Checklists')) {
                         array(
                             'completeRequirementMessage' => __("Please complete the required(*) checklists task.", "publishpress-checklists"),
                             'checklistLabel' => __("Checklists", "publishpress-checklists"),
+                            'openChecklistLabel' => __("Open checklist", "publishpress-checklists"),
                             'noTaskLabel' => __("You don't have to complete any Checklist tasks.", "publishpress-checklists"),
                             'required' => __("required", "publishpress-checklists"),
                             'requiredHeading' => __("Required", "publishpress-checklists"),

@@ -6,6 +6,9 @@ const editPostComponents = wp.editPost || {};
 const PluginPrePublishPanel = editorComponents.PluginPrePublishPanel || editPostComponents.PluginPrePublishPanel;
 const {registerPlugin} = wp.plugins;
 const {hooks} = wp;
+const {Button} = wp.components;
+
+import {openChecklistFromWarning} from './open-checklist.js';
 
 String.prototype.stripTags = function () {
     return this.replace(/(<([^>]+)>)/ig, "");
@@ -42,6 +45,22 @@ class PPChecklistsWarning extends Component {
             this.setState({requirements: failedRequirements});
         }
     };
+
+    renderOpenChecklistLink() {
+        const label = (typeof ppChecklists !== "undefined" && ppChecklists.label_open_checklist)
+            ? ppChecklists.label_open_checklist
+            : __('Open checklist', 'publishpress-checklists');
+
+        return (<p className="pp-checklists-open-checklist-wrap">
+            <Button
+                variant="link"
+                className="pp-checklists-open-checklist-link"
+                onClick={openChecklistFromWarning}
+            >
+                {label}
+            </Button>
+        </p>);
+    }
 
     render() {
         if (typeof this.state.requirements.block === "undefined" ||
@@ -88,6 +107,7 @@ class PPChecklistsWarning extends Component {
                 <div className="pp-checklists-failed-requirements-warning">
                     {messageBlock}
                     {messageWarning}
+                    {this.renderOpenChecklistLink()}
                 </div>
             </PluginPrePublishPanel>
         </Fragment>);
