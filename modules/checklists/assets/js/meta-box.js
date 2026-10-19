@@ -776,15 +776,34 @@
       min_value = parseInt(min_value) || 0;
       max_value = parseInt(max_value) || 0;
 
-      if (max_value > 0) {
-        return count + ' / ' + max_value;
+      var strings = typeof ppChecklists !== 'undefined' ? ppChecklists : {};
+
+      // Mirror check_valid_quantity(): a maximum lower than the minimum is
+      // ignored, so the rule is minimum-only.
+      if (min_value > 0 && max_value < min_value) {
+        return PP_Checklists.sprintf_live_count(strings.live_count_min || '%1$s, min %2$s', count, min_value);
       }
 
-      if (min_value > 0) {
-        return count + ', min ' + min_value;
+      if (max_value > 0) {
+        return PP_Checklists.sprintf_live_count(strings.live_count_max || '%1$s / %2$s', count, max_value);
       }
 
       return String(count);
+    },
+
+    /**
+     * Replaces the %1$s / %2$s placeholders of a localized live count format.
+     *
+     * @param  {String} format
+     * @param  {Number} count
+     * @param  {Number} limit
+     *
+     * @return {String}
+     */
+    sprintf_live_count: function (format, count, limit) {
+      return String(format)
+        .replace(/%1\$s|%1\$d/g, String(count))
+        .replace(/%2\$s|%2\$d/g, String(limit));
     },
 
     /**
@@ -810,7 +829,9 @@
         req.pp_base_label = req.label;
       }
 
-      req.label = req.pp_base_label + ' <span class="pp-checklists-live-count">(' + displayText + ')</span>';
+      // displayText may come from a translation, so escape it before it goes
+      // into the label HTML that the Gutenberg sidebar renders.
+      req.label = req.pp_base_label + ' <span class="pp-checklists-live-count">(' + $('<div>').text(displayText).html() + ')</span>';
 
       var $statusLabel = $('#pp-checklists-req-' + requirementId).find('.status-label').first();
 
@@ -1967,7 +1988,7 @@
   });
 
   /*----------  Word Count ----------*/
-  var lastCount = 0;
+  var lastCount = null;
   var $wordCountElements = $('[id^="pp-checklists-req-words_count"]');
 
   if (PP_Checklists.is_gutenberg_active()) {
@@ -2021,7 +2042,7 @@
      * For the Classic Editor
      */
     var $content = $('#content');
-    var lastCount = 0;
+    var lastCount = null;
     var editor;
 
     /**
@@ -2102,7 +2123,7 @@
   }
 
   /*----------  Internal Links ----------*/
-  var lastInternalCount = 0;
+  var lastInternalCount = null;
   var $internalLinksElements = $('[id^="pp-checklists-req-internal_links"]');
 
   if (PP_Checklists.is_gutenberg_active()) {
@@ -2305,7 +2326,7 @@
   }
 
   /*----------  External Links ----------*/
-  var lastExternalCount = 0;
+  var lastExternalCount = null;
   var $externalLinksElements = $('[id^="pp-checklists-req-external_links"]');
 
   if (PP_Checklists.is_gutenberg_active()) {
@@ -2360,7 +2381,7 @@
      * For the Classic Editor
      */
     var $content = $('#content');
-    var lastExternalCount = 0;
+    var lastExternalCount = null;
     var editor;
 
     /**

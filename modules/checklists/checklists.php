@@ -1104,6 +1104,10 @@ if (!class_exists('PPCH_Checklists')) {
                             'incomplete' => $incomplete_icon,
                         ],
                         'internal_link_hosts'      => $this->get_internal_link_hosts(),
+                        /* translators: Live count badge next to a counter task with a maximum. %1$s is the current count, %2$s is the maximum. */
+                        'live_count_max'           => __('%1$s / %2$s', 'publishpress-checklists'),
+                        /* translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum. */
+                        'live_count_min'           => __('%1$s, min %2$s', 'publishpress-checklists'),
                     ]
                 );
 
