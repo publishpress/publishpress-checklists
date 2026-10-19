@@ -323,4 +323,5 @@ ul#pp-checklists-req-box span.required {
     opacity: 0.65;
     font-size: 0.9em;
     margin-left: 2px;
+    white-space: nowrap;
 }
