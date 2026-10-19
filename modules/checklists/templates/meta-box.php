@@ -70,7 +70,12 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
                             ?>
                             <div class="status-icon dashicons <?php echo esc_attr($icon_class); ?>"></div>
                             <div class="status-label">
-                                <?php echo wp_kses_post($req['label']); ?>
+                                <?php if (!empty($req['is_custom'])) : ?>
+                                    <?php // Custom task titles can be multi-line; only this span gets white-space: pre-line. ?>
+                                    <span class="req-label"><?php echo wp_kses_post($req['label']); ?></span>
+                                <?php else : ?>
+                                    <?php echo wp_kses_post($req['label']); ?>
+                                <?php endif; ?>
                                 <?php if ($req['rule'] === 'block') : ?>
                                     <span class="required">*</span>
                                     <?php $show_required_legend = true; ?>
@@ -103,14 +108,14 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
 
 <?php # Modal Windows; ?>
 <div class="remodal" data-remodal-id="pp-checklists-modal-alert"
-     data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+     data-remodal-options="hashTracking: false, closeOnOutsideClick: false, modifier: pp-checklists-modal">
     <div id="pp-checklists-modal-alert-content"></div>
     <br>
     <button data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['ok']); ?></button>
 </div>
 
 <div class="remodal" data-remodal-id="pp-checklists-modal-confirm"
-     data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+     data-remodal-options="hashTracking: false, closeOnOutsideClick: false, modifier: pp-checklists-modal">
     <div id="pp-checklists-modal-confirm-content"></div>
     <br>
     <button data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['no']); ?></button>

@@ -101,7 +101,7 @@ class Base_multiple extends Base_simple implements Interface_required
         $name = "{$this->module->options_group_name}[{$option_name_multiple}][{$post_type}][]";
 
         if (isset($this->lang['label_option_title'])) {
-            $html .= '<label class="pp-checklists-editable-by-label">' . $this->lang['label_option_title'] . '</label>';
+            $html .= '<label for="' . esc_attr($id) . '" class="pp-checklists-editable-by-label">' . esc_html($this->lang['label_option_title']) . '</label>';
         }
 
         $html .= sprintf(

@@ -105,9 +105,10 @@ class Base_dropdown extends Base_simple implements Interface_required
         $name = "{$this->module->options_group_name}[{$option_name_dropdown}][{$post_type}]";
 
         $html = sprintf(
-            '<select id="%s" name="%s">',
+            '<select id="%s" name="%s" aria-label="%s">',
             $id,
-            $name
+            $name,
+            esc_attr(sprintf(__('Set option for %s', 'publishpress-checklists'), $this->lang['label_settings']))
         );
 
         $labels = [];

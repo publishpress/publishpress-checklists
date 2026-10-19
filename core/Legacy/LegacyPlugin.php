@@ -394,7 +394,8 @@ class LegacyPlugin
         /**
          * If show_in_rest is not true for the post type, the block editor is not available.
          */
-        if ($postTypeObject = get_post_type_object($postType)) {
+        $postTypeObject = get_post_type_object($postType);
+        if ($postTypeObject) {
             if (empty($postTypeObject->show_in_rest)) {
                 return false;
             }
@@ -457,7 +458,7 @@ class LegacyPlugin
      */
     public function isClassicEditorInstalled()
     {
-        return is_plugin_active('classic-editor/classic-editor.php');
+        return Util::isPluginActive('classic-editor/classic-editor.php');
     }
 
     public function setCustomMenuOrder($menu_ord)

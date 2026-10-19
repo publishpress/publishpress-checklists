@@ -139,11 +139,12 @@ class Base_time extends Base_requirement implements Interface_required
 
         // Render time input
         $html = sprintf(
-            '<input type="time" id="%s" name="%s" value="%s" class="%s" />',
+            '<input type="time" id="%s" name="%s" value="%s" class="%s" aria-label="%s" />',
             $id,
             $name,
             esc_attr($option_value),
-            $css_class
+            $css_class,
+            esc_attr(sprintf(__('Set time for %s', 'publishpress-checklists'), $this->lang['label_settings']))
         );
 
         return $html;

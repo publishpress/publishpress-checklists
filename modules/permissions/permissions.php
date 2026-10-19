@@ -104,7 +104,7 @@ class PPCH_Permissions extends Module
 
     public function actionTasksListTh($postType)
     {
-        echo '<th>' . esc_html__('Exclude User Roles', 'publishpress-checklists') . '</th>';
+        echo '<th scope="col">' . esc_html__('Exclude User Roles', 'publishpress-checklists') . '</th>';
     }
 
     public function actionTasksListTd($requirement, $postType)
@@ -122,7 +122,7 @@ class PPCH_Permissions extends Module
 
         $userRoles = get_editable_roles();
 
-        $rolesSelect = '<select class="pp-checklists-can-ignore" name="'. esc_attr('publishpress_checklists_checklists_options[' . $requirement->name . '_can_ignore][' . $postType . '][]') .'" multiple="multiple" class="user-roles-list">';
+        $rolesSelect = '<select class="pp-checklists-can-ignore user-roles-list" name="'. esc_attr('publishpress_checklists_checklists_options[' . $requirement->name . '_can_ignore][' . $postType . '][]') .'" aria-label="' . esc_attr(sprintf(__('Roles that can ignore %s', 'publishpress-checklists'), $requirement->lang['label_settings'])) . '" multiple="multiple">';
         $rolesSelect .= '<option value=""></option>';
         foreach ($userRoles as $slug => $role) {
             $rolesSelect .= '<option value="' . esc_attr($slug) . '" ' . selected(

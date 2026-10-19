@@ -9,6 +9,11 @@
     vertical-align: middle;
 }
 
+/* Keep the line breaks of multi-line custom task titles. */
+.pp-checklists-req.pp-checklists-custom-item .req-label {
+    white-space: pre-line;
+}
+
 .pp-checklists-req.status-yes
     *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(
         .request-response *
@@ -29,6 +34,13 @@
     padding: 0 !important;
     background: transparent !important;
     width: auto !important;
+}
+
+/* Publish blocked by an incomplete requirement. "Save draft" stays enabled. */
+body.ppch-publish-locked .editor-post-publish-button {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 /* Warning icon in the Publish button */
