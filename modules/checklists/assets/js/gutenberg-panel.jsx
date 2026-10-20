@@ -287,7 +287,10 @@ class PPChecklistsPanel extends Component {
      * Handle requirement status change
      */
     handleRequirementStatusChange = () => {
-        this.updateRequirements(this.state.requirements);
+        // Read from ppChecklists.requirements, not this.state: the state holds
+        // copies, while meta-box.js updates the source objects (status, live
+        // count label).
+        this.updateRequirements(typeof ppChecklists !== "undefined" ? ppChecklists.requirements : this.state.requirements);
     };
 
     /**
@@ -309,7 +312,10 @@ class PPChecklistsPanel extends Component {
                 }
                 req.id = id;
 
-                return req;
+                // Store a copy so that later in-place changes to the source
+                // object (e.g. the live count in req.label) show up as a hash
+                // difference and re-render the sidebar.
+                return { ...req };
             });
 
             const sortedRequirements = this.sortRequirements(updatedRequirements);
@@ -341,6 +347,14 @@ class PPChecklistsPanel extends Component {
     normalizeLabelForSort = (label) => {
         const container = document.createElement('div');
         container.innerHTML = label || '';
+
+        // Live counter badges change as the user types (see PP_Checklists.update_live_count
+        // in meta-box.js) and must not affect alphabetical sort order.
+        const liveCountBadge = container.querySelector('.pp-checklists-live-count');
+        if (liveCountBadge) {
+            liveCountBadge.remove();
+        }
+
         return (container.textContent || container.innerText || '').trim().toLowerCase();
     };
 

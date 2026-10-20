@@ -763,6 +763,99 @@
     },
 
     /**
+     * Formats a live count value for display next to a counter task,
+     * showing progress against the configured min/max when one is set.
+     *
+     * @param  {Number} count
+     * @param  {Number} min_value
+     * @param  {Number} max_value
+     *
+     * @return {String}
+     */
+    format_live_count: function (count, min_value, max_value) {
+      min_value = parseInt(min_value) || 0;
+      max_value = parseInt(max_value) || 0;
+
+      var strings = typeof ppChecklists !== 'undefined' ? ppChecklists : {};
+
+      // Mirror check_valid_quantity(): a maximum lower than the minimum is
+      // ignored, so the rule is minimum-only.
+      if (min_value > 0 && max_value < min_value) {
+        return PP_Checklists.sprintf_live_count(strings.live_count_min || '%1$s, min %2$s', count, min_value);
+      }
+
+      if (max_value > 0) {
+        return PP_Checklists.sprintf_live_count(strings.live_count_max || '%1$s / %2$s', count, max_value);
+      }
+
+      return String(count);
+    },
+
+    /**
+     * Replaces the %1$s / %2$s placeholders of a localized live count format.
+     *
+     * @param  {String} format
+     * @param  {Number} count
+     * @param  {Number} limit
+     *
+     * @return {String}
+     */
+    sprintf_live_count: function (format, count, limit) {
+      return String(format)
+        .replace(/%1\$s|%1\$d/g, String(count))
+        .replace(/%2\$s|%2\$d/g, String(limit));
+    },
+
+    /**
+     * Shows the current live value next to a counter task, both in the
+     * metabox list item and in the requirement's label so the Gutenberg
+     * sidebar (which renders ppChecklists.requirements[id].label) picks it
+     * up too. The original label is cached so repeated updates replace the
+     * badge instead of stacking it.
+     *
+     * @param  {String} requirementId
+     * @param  {String} displayText
+     *
+     * @return {void}
+     */
+    update_live_count: function (requirementId, displayText) {
+      var req = (typeof ppChecklists !== 'undefined') ? ppChecklists.requirements[requirementId] : null;
+
+      if (!req) {
+        return;
+      }
+
+      if (typeof req.pp_base_label === 'undefined') {
+        req.pp_base_label = req.label;
+      }
+
+      // displayText may come from a translation, so escape it before it goes
+      // into the label HTML that the Gutenberg sidebar renders.
+      req.label = req.pp_base_label + ' <span class="pp-checklists-live-count">(' + $('<div>').text(displayText).html() + ')</span>';
+
+      var $statusLabel = $('#pp-checklists-req-' + requirementId).find('.status-label').first();
+
+      if ($statusLabel.length === 0) {
+        return;
+      }
+
+      var $badge = $statusLabel.find('.pp-checklists-live-count');
+
+      if ($badge.length === 0) {
+        $badge = $('<span class="pp-checklists-live-count"></span>');
+        var $required = $statusLabel.find('.required').first();
+
+        if ($required.length > 0) {
+          $badge.insertBefore($required);
+        } else {
+          $statusLabel.append($badge);
+        }
+      }
+
+      $badge.text('(' + displayText + ')');
+    },
+
+    /**
      * Returns the hosts that should be treated as internal for the
      * internal/external links checks, localized server-side as
      * ppChecklists.internal_link_hosts. Falls back to the host this script
@@ -1371,6 +1464,11 @@
         if (typeof obj !== 'undefined') {
           count = obj.length;
 
+          PP_Checklists.update_live_count(
+            requirementId,
+            PP_Checklists.format_live_count(count, min_value, max_value),
+          );
+
           $element.trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
             PP_Checklists.check_valid_quantity(count, min_value, max_value),
@@ -1553,6 +1651,11 @@
         if (typeof obj !== 'undefined') {
           count = obj.length;
 
+          PP_Checklists.update_live_count(
+            requirementId,
+            PP_Checklists.format_live_count(count, min_value, max_value),
+          );
+
           $element.trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
             PP_Checklists.check_valid_quantity(count, min_value, max_value),
@@ -1731,6 +1834,7 @@
         if (lastHierCounts[requirementId] === count) {
           return;
         }
+        PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
         $element.trigger(
           PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
           PP_Checklists.check_valid_quantity(count, min, max),
@@ -1778,6 +1882,7 @@
         if (lastNonHierCounts[requirementId] === count) {
           return;
         }
+        PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
         $element.trigger(
           PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
           PP_Checklists.check_valid_quantity(count, min, max),
@@ -1825,6 +1930,8 @@
       var min = parseInt(config.value[0]);
       var max = parseInt(config.value[1]);
 
+      PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
+
       $element.trigger(
         PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
         PP_Checklists.check_valid_quantity(count, min, max),
@@ -1866,6 +1973,11 @@
         if (typeof obj !== 'undefined') {
           count = obj.length;
 
+          PP_Checklists.update_live_count(
+            requirementId,
+            PP_Checklists.format_live_count(count, min_value, max_value),
+          );
+
           $element.trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
             PP_Checklists.check_valid_quantity(count, min_value, max_value),
@@ -1876,7 +1988,7 @@
   });
 
   /*----------  Word Count ----------*/
-  var lastCount = 0;
+  var lastCount = null;
   var $wordCountElements = $('[id^="pp-checklists-req-words_count"]');
 
   if (PP_Checklists.is_gutenberg_active()) {
@@ -1913,6 +2025,8 @@
             var min = parseInt(config.value[0]),
               max = parseInt(config.value[1]);
 
+            PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
+
             $element.trigger(
               PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
               PP_Checklists.check_valid_quantity(count, min, max),
@@ -1928,7 +2042,7 @@
      * For the Classic Editor
      */
     var $content = $('#content');
-    var lastCount = 0;
+    var lastCount = null;
     var editor;
 
     /**
@@ -1970,6 +2084,8 @@
           var min = parseInt(config.value[0]),
             max = parseInt(config.value[1]);
 
+          PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
+
           $element.trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
             PP_Checklists.check_valid_quantity(count, min, max),
@@ -2007,7 +2123,7 @@
   }
 
   /*----------  Internal Links ----------*/
-  var lastInternalCount = 0;
+  var lastInternalCount = null;
   var $internalLinksElements = $('[id^="pp-checklists-req-internal_links"]');
 
   if (PP_Checklists.is_gutenberg_active()) {
@@ -2043,6 +2159,8 @@
             if (config && config.value) {
               var min = parseInt(config.value[0]),
                 max = parseInt(config.value[1]);
+
+              PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
 
               $element.trigger(
                 PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
@@ -2104,6 +2222,8 @@
         if (config && config.value) {
           var min = parseInt(config.value[0]),
             max = parseInt(config.value[1]);
+
+          PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
 
           $element.trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
@@ -2206,7 +2326,7 @@
   }
 
   /*----------  External Links ----------*/
-  var lastExternalCount = 0;
+  var lastExternalCount = null;
   var $externalLinksElements = $('[id^="pp-checklists-req-external_links"]');
 
   if (PP_Checklists.is_gutenberg_active()) {
@@ -2243,6 +2363,8 @@
               var min = parseInt(config.value[0]),
                 max = parseInt(config.value[1]);
 
+              PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
+
               $element.trigger(
                 PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
                 PP_Checklists.check_valid_quantity(count, min, max),
@@ -2259,7 +2381,7 @@
      * For the Classic Editor
      */
     var $content = $('#content');
-    var lastExternalCount = 0;
+    var lastExternalCount = null;
     var editor;
 
     /**
@@ -2300,6 +2422,8 @@
         if (config && config.value) {
           var min = parseInt(config.value[0]),
             max = parseInt(config.value[1]);
+
+          PP_Checklists.update_live_count(requirementId, PP_Checklists.format_live_count(count, min, max));
 
           $element.trigger(
             PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
