@@ -122,6 +122,12 @@ if (!defined('PPCH_LOADED')) {
         require_once $autoloadFilePath;
     }
 
+    // Loaded on every request: the block editor saves custom task states through the REST API.
+    if (!class_exists('PublishPress\\Checklists\\Core\\Utils\\CustomItemsMeta')) {
+        require_once __DIR__ . '/core/Utils/CustomItemsMeta.php';
+    }
+    \PublishPress\Checklists\Core\Utils\CustomItemsMeta::init();
+
     // Activation
     register_activation_hook(__FILE__, function () {
         $role = get_role('administrator');

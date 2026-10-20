@@ -3,6 +3,7 @@ const editorComponents = wp.editor || {};
 const editPostComponents = wp.editPost || {};
 const PluginSidebarMoreMenuItem = editorComponents.PluginSidebarMoreMenuItem || editPostComponents.PluginSidebarMoreMenuItem;
 const PluginSidebar = editorComponents.PluginSidebar || editPostComponents.PluginSidebar;
+const PluginDocumentSettingPanel = editorComponents.PluginDocumentSettingPanel || editPostComponents.PluginDocumentSettingPanel;
 const { Fragment, Component } = wp.element;
 const { __ } = wp.i18n;
 const { hooks } = wp;
@@ -438,15 +439,125 @@ class PPChecklistsPanel extends Component {
         return status ? (customIcons.complete || 'dashicons-yes') : (customIcons.incomplete || 'dashicons-no');
     };
 
-    render() {
-        const { isSupportedContext, showRequiredLegend, requirements } = this.state;
+    /**
+     * The checklist, shown in the Checklists sidebar and in the Post sidebar.
+     * Only one of them is open at a time, so they share the element ids that
+     * add-ons look for.
+     */
+    renderChecklist(inDocumentPanel = false) {
+        const { showRequiredLegend, requirements } = this.state;
         const showRuleHeadings = i18n.showRuleHeadings === '1';
         let lastHeadingRule = '';
+
+        return (
+            <div id="pp-checklists-sidebar-content" className={inDocumentPanel ? 'pp-checklists-document-panel-content' : 'components-panel__body is-opened'} tabIndex={-1}>
+                {i18n.isElementorEnabled == "1" ? (
+                    <p><em>{i18n.elementorNotice}</em></p>
+                ) : (
+                    <Fragment>
+                        {requirements.length === 0 ? (
+                            <p>
+                                <em>
+                                    {i18n.noTaskLabel}
+                                </em>
+                            </p>
+                        ) : (
+                            <ul id="pp-checklists-sidebar-req-box">
+                                {requirements.flatMap((req, key) => {
+                                    const nodes = [];
+                                    const shouldPrintHeading = showRuleHeadings
+                                        && (req.rule === 'block' || req.rule === 'warning')
+                                        && lastHeadingRule !== req.rule;
+
+                                    if (shouldPrintHeading) {
+                                        nodes.push(
+                                            <li key={`pp-checklists-heading-${req.rule}-${key}`} className="pp-checklists-group-heading">
+                                                {req.rule === 'block'
+                                                    ? (i18n.requiredHeading || __("Required", "publishpress-checklists"))
+                                                    : (i18n.recommendedHeading || __("Recommended", "publishpress-checklists"))}
+                                            </li>
+                                        );
+                                        lastHeadingRule = req.rule;
+                                    }
+
+                                    nodes.push(
+                                        <li
+                                            key={`pp-checklists-req-panel-${key}`}
+                                            className={`pp-checklists-req panel-req pp-checklists-${req.rule} status-${req.status ? 'yes' : 'no'} ${req.is_custom ? 'pp-checklists-custom-item' : ''
+                                                }`}
+                                            data-id={req.id}
+                                            data-type={req.type}
+                                            data-extra={req.extra || ''}
+                                            data-source={req.source || ''}
+                                            onClick={() => {
+                                                if (req.is_custom) {
+                                                    toggleCustomItem(req.id);
+                                                }
+                                            }}
+                                        >
+                                            {req.is_custom || req.require_button ? (
+                                                <input type="hidden" name={`_PPCH_custom_item[${req.id}]`} value={req.status ? 'yes' : 'no'} />
+                                            ) : null}
+                                            <div className={`status-icon dashicons ${this.getIconClass(req.rule, req.status)}`} aria-hidden="true"></div>
+                                            <div
+                                                className="status-label"
+                                                {...(req.is_custom ? {
+                                                    role: 'checkbox',
+                                                    tabIndex: 0,
+                                                    'aria-checked': req.status ? 'true' : 'false',
+                                                    onKeyDown: (event) => {
+                                                        if (event.key === ' ' || event.key === 'Enter') {
+                                                            event.preventDefault();
+                                                            toggleCustomItem(req.id);
+                                                        }
+                                                    },
+                                                } : {})}
+                                            >
+                                                <span className="screen-reader-text">
+                                                    {(req.status ? i18n.statusCompleted : i18n.statusNotCompleted) + ':'}
+                                                </span>
+                                                <span className="req-label" dangerouslySetInnerHTML={{ __html: req.label }} />
+                                                {req.rule === 'block' ? (
+                                                    <Fragment>
+                                                        <span className="required" aria-hidden="true">*</span>
+                                                        <span className="screen-reader-text">({i18n.requiredHeading})</span>
+                                                    </Fragment>
+                                                ) : null}
+                                                {req.require_button ? (
+                                                    <div className="requirement-button-task-wrap">
+                                                        <button type="button" className="button button-secondary pp-checklists-check-item">
+                                                            {__("Check Now", "publishpress-checklists")}
+                                                            <span className="spinner"></span>
+                                                        </button>
+                                                        <div className="request-response" role="status"></div>
+                                                    </div>
+                                                ) : null}
+                                            </div>
+                                        </li>
+                                    );
+
+                                    return nodes;
+                                })}
+                            </ul>
+                        )}
+                    </Fragment>
+                )}
+                {showRequiredLegend ? (
+                    <em aria-hidden="true">
+                        (*) {i18n.required}
+                    </em>
+                ) : null}
+            </div>
+        );
+    }
+
+    render() {
+        const { isSupportedContext, requirements } = this.state;
 
         if (!isSupportedContext) {
             return null;
         }
-        
+
         return requirements.length > 0 ? (
             <Fragment>
                 <PluginSidebarMoreMenuItem
@@ -459,105 +570,20 @@ class PPChecklistsPanel extends Component {
                     name="checklists-sidebar"
                     title={__("Checklists", "publishpress-checklists")}
                 >
-                    <div id="pp-checklists-sidebar-content" className="components-panel__body is-opened" tabIndex={-1}>
-                        {i18n.isElementorEnabled == "1" ? (
-                            <p><em>{i18n.elementorNotice}</em></p>
-                        ) : (
-                            <Fragment>
-                                {requirements.length === 0 ? (
-                                    <p>
-                                        <em>
-                                            {i18n.noTaskLabel}
-                                        </em>
-                                    </p>
-                                ) : (
-                                    <ul id="pp-checklists-sidebar-req-box">
-                                        {requirements.flatMap((req, key) => {
-                                            const nodes = [];
-                                            const shouldPrintHeading = showRuleHeadings
-                                                && (req.rule === 'block' || req.rule === 'warning')
-                                                && lastHeadingRule !== req.rule;
-
-                                            if (shouldPrintHeading) {
-                                                nodes.push(
-                                                    <li key={`pp-checklists-heading-${req.rule}-${key}`} className="pp-checklists-group-heading">
-                                                        {req.rule === 'block'
-                                                            ? (i18n.requiredHeading || __("Required", "publishpress-checklists"))
-                                                            : (i18n.recommendedHeading || __("Recommended", "publishpress-checklists"))}
-                                                    </li>
-                                                );
-                                                lastHeadingRule = req.rule;
-                                            }
-
-                                            nodes.push(
-                                                <li
-                                                    key={`pp-checklists-req-panel-${key}`}
-                                                    className={`pp-checklists-req panel-req pp-checklists-${req.rule} status-${req.status ? 'yes' : 'no'} ${req.is_custom ? 'pp-checklists-custom-item' : ''
-                                                        }`}
-                                                    data-id={req.id}
-                                                    data-type={req.type}
-                                                    data-extra={req.extra || ''}
-                                                    data-source={req.source || ''}
-                                                    onClick={() => {
-                                                        if (req.is_custom) {
-                                                            toggleCustomItem(req.id);
-                                                        }
-                                                    }}
-                                                >
-                                                    {req.is_custom || req.require_button ? (
-                                                        <input type="hidden" name={`_PPCH_custom_item[${req.id}]`} value={req.status ? 'yes' : 'no'} />
-                                                    ) : null}
-                                                    <div className={`status-icon dashicons ${this.getIconClass(req.rule, req.status)}`} aria-hidden="true"></div>
-                                                    <div
-                                                        className="status-label"
-                                                        {...(req.is_custom ? {
-                                                            role: 'checkbox',
-                                                            tabIndex: 0,
-                                                            'aria-checked': req.status ? 'true' : 'false',
-                                                            onKeyDown: (event) => {
-                                                                if (event.key === ' ' || event.key === 'Enter') {
-                                                                    event.preventDefault();
-                                                                    toggleCustomItem(req.id);
-                                                                }
-                                                            },
-                                                        } : {})}
-                                                    >
-                                                        <span className="screen-reader-text">
-                                                            {(req.status ? i18n.statusCompleted : i18n.statusNotCompleted) + ':'}
-                                                        </span>
-                                                        <span className="req-label" dangerouslySetInnerHTML={{ __html: req.label }} />
-                                                        {req.rule === 'block' ? (
-                                                            <Fragment>
-                                                                <span className="required" aria-hidden="true">*</span>
-                                                                <span className="screen-reader-text">({i18n.requiredHeading})</span>
-                                                            </Fragment>
-                                                        ) : null}
-                                                        {req.require_button ? (
-                                                            <div className="requirement-button-task-wrap">
-                                                                <button type="button" className="button button-secondary pp-checklists-check-item">
-                                                                    {__("Check Now", "publishpress-checklists")}
-                                                                    <span className="spinner"></span>
-                                                                </button>
-                                                                <div className="request-response" role="status"></div>
-                                                            </div>
-                                                        ) : null}
-                                                    </div>
-                                                </li>
-                                            );
-
-                                            return nodes;
-                                        })}
-                                    </ul>
-                                )}
-                            </Fragment>
-                        )}
-                        {showRequiredLegend ? (
-                            <em aria-hidden="true">
-                                (*) {i18n.required}
-                            </em>
-                        ) : null}
-                    </div>
+                    {this.renderChecklist()}
                 </PluginSidebar>
+                {PluginDocumentSettingPanel ? (
+                    // Where the Checklist meta box used to be. The block editor has
+                    // no meta box: it turns off visual revisions and real-time
+                    // collaboration (#1208).
+                    <PluginDocumentSettingPanel
+                        name="checklists-document-panel"
+                        title={i18n.documentPanelLabel || __("Checklist", "publishpress-checklists")}
+                        className="pp-checklists-document-panel"
+                    >
+                        {this.renderChecklist(true)}
+                    </PluginDocumentSettingPanel>
+                ) : null}
             </Fragment>
         ) : null;
     }
