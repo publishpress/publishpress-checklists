@@ -10,15 +10,25 @@
 namespace PublishPress\Checklists\Core\Utils;
 
 /**
- * Registers the post meta that stores the state of tasks the user ticks by hand
- * (custom tasks, OpenAI tasks, "Approved by") so the block editor can save it
- * through the REST API.
+ * Saves the state of tasks the user ticks by hand (custom tasks, OpenAI tasks,
+ * "Approved by") in the block editor.
  *
  * The block editor has no Checklist meta box (a classic meta box turns off
- * visual revisions and real-time collaboration, see #1208), so these states are
- * edited as post meta with editPost(). Real-time collaboration syncs registered
- * post meta between editors. The Classic Editor still saves the same meta keys
- * through the meta box form.
+ * visual revisions and real-time collaboration, see #1208). The Classic Editor
+ * still saves the same meta keys (META_PREFIX . id) through the meta box form.
+ *
+ * In the block editor there are two ways to save a task:
+ * - Tasks anyone who can edit the post may tick are registered as REST post
+ *   meta and edited with editPost(). They are saved with the post, and
+ *   real-time collaboration shares them between editors.
+ * - Restricted tasks ("Approved by", Pro's "Approved by user", custom tasks
+ *   limited to some roles) are not REST meta. Real-time collaboration shares
+ *   registered meta between everyone who can edit the post, so an author
+ *   could put an approval into the shared state and let an editor's save
+ *   store it. These tasks are saved by the user who clicks them, through
+ *   admin-ajax, which checks that this user may tick them. Other editors get
+ *   the saved state through the Heartbeat API. Tasks of post types that don't
+ *   expose post meta to the REST API are saved the same way.
  *
  * This runs on every request, not only in wp-admin, because block editor saves
  * are REST requests.
@@ -223,7 +233,7 @@ class CustomItemsMeta
 
         if (
             !$post
-            || !self::isRegisteredItem($post->post_type, $id)
+            || !(self::isRegisteredItem($post->post_type, $id) || self::isRestrictedItem($post->post_type, $id))
             || self::userCanComplete($post->post_type, $id)
         ) {
             return $check;
@@ -233,7 +243,7 @@ class CustomItemsMeta
     }
 
     /**
-     * Returns whether a requirement id is saved as REST post meta for the post type.
+     * Returns whether a requirement id is a ticked-by-hand task configured for the post type.
      *
      * @param string $postType
      * @param string $id
@@ -245,6 +255,72 @@ class CustomItemsMeta
         $items = self::getItemsByPostType();
 
         return isset($items[$postType]) && in_array(sanitize_key($id), $items[$postType], true);
+    }
+
+    /**
+     * Returns whether only some users may tick the task: "Approved by", Pro's
+     * "Approved by user" and custom tasks limited to some roles.
+     *
+     * @param string $postType
+     * @param string $id
+     *
+     * @return bool
+     */
+    public static function isRestrictedItem($postType, $id)
+    {
+        $id = sanitize_key((string)$id);
+
+        if (in_array($id, self::APPROVAL_ITEMS, true)) {
+            return true;
+        }
+
+        $options    = self::getOptions();
+        $optionName = $id . '_editable_by';
+        $allowed    = isset($options->{$optionName}) ? (array)$options->{$optionName} : [];
+
+        return isset($allowed[$postType]);
+    }
+
+    /**
+     * Returns whether the block editor saves the task as REST post meta. Other
+     * tasks are saved through admin-ajax by the user who ticks them.
+     *
+     * @param string $postType
+     * @param string $id
+     *
+     * @return bool
+     */
+    public static function isRestItem($postType, $id)
+    {
+        return self::isRegisteredItem($postType, $id)
+            && !self::isRestrictedItem($postType, $id)
+            && post_type_supports($postType, 'custom-fields');
+    }
+
+    /**
+     * Returns the saved state of the tasks of a post that the block editor
+     * saves through admin-ajax, so other editors of the post can show it.
+     *
+     * @param \WP_Post $post
+     *
+     * @return array requirement id => 'yes' or 'no'
+     */
+    public static function getAjaxItemStates($post)
+    {
+        $items  = self::getItemsByPostType();
+        $states = [];
+
+        if (empty($items[$post->post_type])) {
+            return $states;
+        }
+
+        foreach ($items[$post->post_type] as $id) {
+            if (!self::isRestItem($post->post_type, $id)) {
+                $states[$id] = 'yes' === get_post_meta($post->ID, self::getMetaKey($id), true) ? 'yes' : 'no';
+            }
+        }
+
+        return $states;
     }
 
     public static function register()
@@ -271,7 +347,17 @@ class CustomItemsMeta
                 add_post_type_support($postType, 'custom-fields');
             }
 
+            // Without custom-fields the REST API doesn't return the meta, so
+            // the tasks are saved through admin-ajax instead.
+            if (!post_type_supports($postType, 'custom-fields')) {
+                continue;
+            }
+
             foreach ($ids as $id) {
+                if (self::isRestrictedItem($postType, $id)) {
+                    continue;
+                }
+
                 register_post_meta(
                     $postType,
                     self::getMetaKey($id),

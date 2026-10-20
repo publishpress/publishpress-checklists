@@ -515,6 +515,7 @@ if (!class_exists('PPCH_Checklists')) {
             add_action('add_meta_boxes', [$this, 'handle_post_meta_boxes']);
             add_action('save_post', [$this, 'save_post_meta_box'], 10, 2);
             add_action('wp_ajax_pp_checklists_save_custom_items', [$this, 'ajax_save_custom_items']);
+            add_filter('heartbeat_received', [$this, 'heartbeat_custom_items'], 10, 2);
             add_action('enqueue_block_editor_assets', [$this, 'enqueue_block_editor_assets']);
 
             add_filter(
@@ -1200,6 +1201,7 @@ if (!class_exists('PPCH_Checklists')) {
                         'live_count_max'           => __('%1$s / %2$s', 'publishpress-checklists'),
                         /* translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum. */
                         'live_count_min'           => __('%1$s, min %2$s', 'publishpress-checklists'),
+                        'custom_item_save_error'   => __('The checklist task could not be saved. Please try again.', 'publishpress-checklists'),
                     ],
                     $extra_data
                 )
@@ -1274,7 +1276,8 @@ if (!class_exists('PPCH_Checklists')) {
          * a hidden container instead of a meta box (see
          * print_block_editor_checklist()). The Checklists sidebar panel shows
          * the list. Tasks the user ticks by hand are saved as REST post meta,
-         * which real-time collaboration shares between editors. See #1208.
+         * which real-time collaboration shares between editors, or through
+         * admin-ajax for restricted tasks. See #1208 and CustomItemsMeta.
          */
         public function enqueue_block_editor_checklist()
         {
@@ -1305,7 +1308,7 @@ if (!class_exists('PPCH_Checklists')) {
             foreach ($requirements as $key => $requirement) {
                 $id = isset($requirement['id']) ? $requirement['id'] : $key;
 
-                if (CustomItemsMeta::isRegisteredItem($post->post_type, $id)) {
+                if (CustomItemsMeta::isRestItem($post->post_type, $id)) {
                     $requirements[$key]['meta_key'] = CustomItemsMeta::getMetaKey($id);
                 }
             }
@@ -1458,9 +1461,11 @@ if (!class_exists('PPCH_Checklists')) {
         }
 
         /**
-         * Saves, in the block editor, the state of tasks ticked by hand that
-         * have no REST post meta (see CustomItemsMeta). meta-box.js calls this
-         * after the post is saved, as the meta box form did before.
+         * Saves, in the block editor, the state of a task the current user
+         * ticked: restricted tasks ("Approved by", Pro's "Approved by user",
+         * custom tasks limited to some roles), tasks of post types without
+         * REST post meta and tasks added by other plugins. meta-box.js calls
+         * this when the user ticks the task. See CustomItemsMeta.
          */
         public function ajax_save_custom_items()
         {
@@ -1479,21 +1484,62 @@ if (!class_exists('PPCH_Checklists')) {
 
             $custom_items = isset($_POST['items']) ? wp_unslash($_POST['items']) : [];// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
-            if (is_array($custom_items)) {
-                foreach ($custom_items as $item_id => $value) {
-                    // Items with REST post meta are saved with the post.
-                    if (
-                        CustomItemsMeta::isRegisteredItem($post->post_type, $item_id)
-                        || !CustomItemsMeta::userCanComplete($post->post_type, $item_id)
-                    ) {
-                        continue;
-                    }
-
-                    update_post_meta($post_id, self::POST_META_PREFIX . sanitize_key($item_id), sanitize_text_field($value));
-                }
+            if (!is_array($custom_items) || empty($custom_items)) {
+                wp_send_json_error(null, 400);
             }
 
-            wp_send_json_success();
+            $items = [];
+
+            // Check every item before saving any, so a request is saved in full or not at all.
+            foreach ($custom_items as $item_id => $value) {
+                $item_id = sanitize_key($item_id);
+                $value   = sanitize_text_field((string)$value);
+
+                if ('' === $item_id || !in_array($value, ['yes', 'no'], true)) {
+                    wp_send_json_error(null, 400);
+                }
+
+                if (!CustomItemsMeta::userCanComplete($post->post_type, $item_id)) {
+                    wp_send_json_error(null, 403);
+                }
+
+                $items[$item_id] = $value;
+            }
+
+            foreach ($items as $item_id => $value) {
+                update_post_meta($post_id, self::POST_META_PREFIX . $item_id, $value);
+            }
+
+            wp_send_json_success(['items' => $items]);
+        }
+
+        /**
+         * Sends the saved state of the tasks saved through admin-ajax to the
+         * block editor, so every editor of the post sees the same state.
+         *
+         * @param array $response
+         * @param array $data
+         *
+         * @return array
+         */
+        public function heartbeat_custom_items($response, $data)
+        {
+            if (empty($data['ppch_custom_items']['post_id'])) {
+                return $response;
+            }
+
+            $post_id = absint($data['ppch_custom_items']['post_id']);
+            $post    = $post_id ? get_post($post_id) : null;
+
+            if (
+                $post
+                && current_user_can('edit_post', $post_id)
+                && array_key_exists($post->post_type, $this->getSelectedPostTypes())
+            ) {
+                $response['ppch_custom_items'] = CustomItemsMeta::getAjaxItemStates($post);
+            }
+
+            return $response;
         }
 
         /**
