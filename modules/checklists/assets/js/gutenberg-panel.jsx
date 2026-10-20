@@ -98,6 +98,9 @@ class PPChecklistsPanel extends Component {
             this.updateFailedRequirements(uncheckedItems);
         };
 
+        // Also run by updateRequirements(), so savePost() doesn't check stale results.
+        this.validateRequirements = validateRequirements;
+
         // Subscribe to changes to trigger validation
         this.contextSubscription = wp.data.subscribe(() => {
             const currentContextSupported = this.updateEditorContext();
@@ -332,7 +335,14 @@ class PPChecklistsPanel extends Component {
             const nextHash = this.getRequirementsHash(sortedRequirements);
 
             if (prevHash !== nextHash || this.state.showRequiredLegend !== showRequiredLegend) {
-                this.setState({ showRequiredLegend, requirements: sortedRequirements });
+                // Validate once the new list is in the state. The store
+                // subscription can run before it (a ticked task edits the post
+                // meta first), and some changes don't touch the store at all.
+                this.setState({ showRequiredLegend, requirements: sortedRequirements }, () => {
+                    if (typeof this.validateRequirements === 'function') {
+                        this.validateRequirements();
+                    }
+                });
             }
         }
     };
