@@ -3,6 +3,7 @@
 use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Legacy\LegacyPlugin;
 use PublishPress\Checklists\Core\Legacy\Module;
+use PublishPress\Checklists\Core\Legacy\Util;
 use PublishPress\Checklists\Yoastseo\Requirement\Readability_Analysis;
 use PublishPress\Checklists\Yoastseo\Requirement\Seo_Analysis;
 use PublishPress\Checklists\Yoastseo\Requirement\Focus_Keyword;
@@ -117,9 +118,7 @@ class PPCH_Yoastseo extends Module
      */
     private function isYoastSEOActivated()
     {
-        return class_exists('WPSEO_Options') || is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active(
-                'wordpress-seo-premium/wp-seo-premium.php'
-            );
+        return Util::isYoastSeoActivated();
     }
 
     /**
