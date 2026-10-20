@@ -21,7 +21,7 @@ class Requirements
     /**
      * Rule mapping from frontend to backend
      */
-    const RULE_MAPPING = [
+    public const RULE_MAPPING = [
         'required' => Plugin::RULE_BLOCK,
         'recommended' => Plugin::RULE_WARNING,
         'disabled' => Plugin::RULE_DISABLED

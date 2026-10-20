@@ -147,6 +147,7 @@ class PPCH_Permissions extends Module
         // Make sure to remove the options that were cleaned up
         foreach ($options as $key => $value) {
             if (preg_match('/_can_ignore$/', $key)) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Runs from the publishpress_checklists_validate_requirement_settings filter inside save_global_checklist(), after its nonce and capability checks.
                 if (!isset($_POST['publishpress_checklists_checklists_options'][$key])) {
                     unset($options[$key]);
                 }

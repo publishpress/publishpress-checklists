@@ -16,7 +16,7 @@ class Tags_count extends Base_counter
     /**
      * The priority for the action to load the requirement
      */
-    const PRIORITY = 10;
+    public const PRIORITY = 10;
 
     /**
      * The name of the requirement, in a slug format

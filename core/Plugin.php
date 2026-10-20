@@ -19,22 +19,22 @@ class Plugin
     /**
      * The rule that disables
      */
-    const RULE_DISABLED = 'off';
+    public const RULE_DISABLED = 'off';
 
     /**
      * The rule that do not warning, or block
      */
-    const RULE_ONLY_DISPLAY = 'only_display';
+    public const RULE_ONLY_DISPLAY = 'only_display';
 
     /**
      * The rule that displays a warning
      */
-    const RULE_WARNING = 'warning';
+    public const RULE_WARNING = 'warning';
 
     /**
      * The rule that blocks
      */
-    const RULE_BLOCK = 'block';
+    public const RULE_BLOCK = 'block';
 
     /**
      * Flag for debug

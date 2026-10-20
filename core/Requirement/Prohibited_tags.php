@@ -148,7 +148,7 @@ class Prohibited_tags extends Base_multiple
                 'include'    => $selected_tags,
                 'search'     => $args['q'],
             );
-            $cache_key_selected = md5('prohib_tag_selected' . json_encode($args_selected));
+            $cache_key_selected = md5('prohib_tag_selected' . wp_json_encode($args_selected));
             $tags_selected = get_transient($cache_key_selected);
             if ($tags_selected === false) {
                 $tags_selected = get_tags($args_selected);
@@ -160,12 +160,12 @@ class Prohibited_tags extends Base_multiple
         $args_limited = array(
             'taxonomy'   => 'post_tag',
             'hide_empty' => 0,
-            'exclude'    => $selected_tags,
+            'exclude'    => $selected_tags, // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude -- A term query that leaves out the few tags already selected in the field.
             'search'     => $args['q'],
             'number'     => $args['per_page'],
             'offset'     => ($args['page'] - 1) * $args['per_page'],
         );
-        $cache_key = md5('prohib_tag' . json_encode($args_limited));
+        $cache_key = md5('prohib_tag' . wp_json_encode($args_limited));
         $tags_limited = get_transient($cache_key);
         if ($tags_limited === false) {
             $tags_limited = get_tags($args_limited);

@@ -101,7 +101,7 @@ class HyperlinkValidator
         }
 
         // FILTER_VALIDATE_URL accepts dotless hosts such as "http://invalidlinkcom".
-        $host = parse_url($link, PHP_URL_HOST);
+        $host = wp_parse_url($link, PHP_URL_HOST);
 
         if (empty($host)) {
             return false;

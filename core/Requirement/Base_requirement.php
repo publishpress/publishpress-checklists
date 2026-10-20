@@ -19,17 +19,17 @@ class Base_requirement
     /**
      * The Yes value
      */
-    const VALUE_YES = 'yes';
+    public const VALUE_YES = 'yes';
 
     /**
      * The No value
      */
-    const VALUE_NO = 'no';
+    public const VALUE_NO = 'no';
 
     /**
      * The priority for the action to load the requirement
      */
-    const PRIORITY = 10;
+    public const PRIORITY = 10;
 
     /**
      * A reference for the current module

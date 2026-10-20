@@ -75,12 +75,14 @@ function publishpress_checklists_uninstall_cleanup()
     $transient_prefix = $wpdb->esc_like('_transient_publishpress_checklists_') . '%';
     $timeout_prefix   = $wpdb->esc_like('_transient_timeout_publishpress_checklists_') . '%';
 
+    // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching -- Uninstall cleanup; wp_cache_flush() runs below.
     $wpdb->query(
         $wpdb->prepare(
             "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
             $transient_prefix
         )
     );
+    // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching -- Uninstall cleanup; wp_cache_flush() runs below.
     $wpdb->query(
         $wpdb->prepare(
             "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",

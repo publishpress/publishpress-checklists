@@ -21,7 +21,7 @@ use PublishPress\Checklists\Permalinks\Requirement\ValidChars;
 #[\AllowDynamicProperties]
 class PPCH_Permalinks extends Module
 {
-    const SETTINGS_SLUG = 'pp-permalinks';
+    public const SETTINGS_SLUG = 'pp-permalinks';
 
     public $module_name = 'permalinks';
 

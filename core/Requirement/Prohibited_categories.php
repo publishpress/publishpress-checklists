@@ -260,7 +260,7 @@ class Prohibited_categories extends Base_multiple
     {
         if (!isset($args['parent'])) $args['parent'] = 0;
 
-        $cache_key = md5('prohib_category' . json_encode($args));
+        $cache_key = md5('prohib_category' . wp_json_encode($args));
         $categories = get_transient($cache_key);
 
         // if cache is empty, get value from database

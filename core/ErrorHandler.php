@@ -23,6 +23,6 @@ class ErrorHandler
             $errorMessage .= ': ' . $errorData;
         }
 
-        error_log($errorMessage);
+        error_log($errorMessage); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- This is the plugin's error handler; logging is its job.
     }
 }

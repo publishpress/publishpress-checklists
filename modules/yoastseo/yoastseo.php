@@ -25,7 +25,7 @@ use PublishPress\Checklists\Yoastseo\Requirement\Meta_Description;
 #[\AllowDynamicProperties]
 class PPCH_Yoastseo extends Module
 {
-    const SETTINGS_SLUG = 'pp-yoastseo';
+    public const SETTINGS_SLUG = 'pp-yoastseo';
 
     public $module_name = 'yoastseo';
 

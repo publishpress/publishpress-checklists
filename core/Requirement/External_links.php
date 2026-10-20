@@ -109,8 +109,8 @@ class External_links extends Base_counter
             $websites = apply_filters(
                 'publishpress_checklists_internal_link_hosts',
                 array_values(array_unique(array_filter([
-                    parse_url(home_url(), PHP_URL_HOST),
-                    parse_url(site_url(), PHP_URL_HOST),
+                    wp_parse_url(home_url(), PHP_URL_HOST),
+                    wp_parse_url(site_url(), PHP_URL_HOST),
                 ])))
             );
         }
