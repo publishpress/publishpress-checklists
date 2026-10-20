@@ -1446,6 +1446,11 @@ if (!class_exists('PPCH_Checklists')) {
                 $custom_items = wp_unslash($_POST['_PPCH_custom_item']);
                 if (is_array($custom_items)) {
                     foreach ($custom_items as $item_id => $value) {
+                        // The form only has the tasks this user may tick.
+                        if (!CustomItemsMeta::userCanComplete($post->post_type, $item_id)) {
+                            continue;
+                        }
+
                         update_post_meta($id, self::POST_META_PREFIX . sanitize_key($item_id), sanitize_text_field($value));
                     }
                 }
@@ -1477,7 +1482,10 @@ if (!class_exists('PPCH_Checklists')) {
             if (is_array($custom_items)) {
                 foreach ($custom_items as $item_id => $value) {
                     // Items with REST post meta are saved with the post.
-                    if (CustomItemsMeta::isRegisteredItem($post->post_type, $item_id)) {
+                    if (
+                        CustomItemsMeta::isRegisteredItem($post->post_type, $item_id)
+                        || !CustomItemsMeta::userCanComplete($post->post_type, $item_id)
+                    ) {
                         continue;
                     }
 

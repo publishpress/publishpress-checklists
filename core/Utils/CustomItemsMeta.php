@@ -47,6 +47,10 @@ class CustomItemsMeta
     {
         add_action('init', [__CLASS__, 'register'], 100);
         add_action('update_option_' . self::OPTION_NAME, [__CLASS__, 'flushCache']);
+
+        foreach (['add', 'update', 'delete'] as $action) {
+            add_filter($action . '_post_metadata', [__CLASS__, 'filterRestWrite'], 10, 3);
+        }
     }
 
     public static function flushCache()
@@ -77,8 +81,7 @@ class CustomItemsMeta
             return self::$itemsByPostType;
         }
 
-        $options = get_option(self::OPTION_NAME);
-        $options = is_object($options) ? $options : (object)(is_array($options) ? $options : []);
+        $options = self::getOptions();
         $items   = [];
 
         $addItem = function ($postType, $id) use (&$items) {
@@ -139,6 +142,94 @@ class CustomItemsMeta
         self::$itemsByPostType = is_array($items) ? $items : [];
 
         return self::$itemsByPostType;
+    }
+
+    /**
+     * @return object The Checklists options.
+     */
+    private static function getOptions()
+    {
+        $options = get_option(self::OPTION_NAME);
+
+        return is_object($options) ? $options : (object)(is_array($options) ? $options : []);
+    }
+
+    /**
+     * Returns whether a user may tick a task, with the same rules the
+     * requirements use to make the task clickable: the roles of "Approved by",
+     * the users of Pro's "Approved by user" and the roles allowed to mark a
+     * custom task. Other tasks can be ticked by anyone who can edit the post.
+     *
+     * @param string       $postType
+     * @param string       $id   Requirement id
+     * @param WP_User|null $user Defaults to the current user.
+     *
+     * @return bool
+     */
+    public static function userCanComplete($postType, $id, $user = null)
+    {
+        $user    = $user instanceof \WP_User ? $user : wp_get_current_user();
+        $id      = sanitize_key((string)$id);
+        $options = self::getOptions();
+
+        if ('approved_by_user' === $id) {
+            $optionName = 'approved_by_user_users';
+        } elseif ('approved_by' === $id) {
+            $optionName = 'approved_by_roles';
+        } else {
+            $optionName = $id . '_editable_by';
+        }
+
+        $allowed = isset($options->{$optionName}) ? (array)$options->{$optionName} : [];
+
+        if (!isset($allowed[$postType])) {
+            return true;
+        }
+
+        if ('approved_by_user' === $id) {
+            return in_array($user->ID, (array)$allowed[$postType]);
+        }
+
+        return (bool)array_intersect((array)$allowed[$postType], (array)$user->roles);
+    }
+
+    /**
+     * Keeps the stored state of a task when a REST request (the block editor
+     * saves through the REST API) comes from a user who may not tick it.
+     *
+     * The block editor sends every registered meta field with the post, so
+     * refusing the request would also refuse the user's other changes. The
+     * write is skipped instead.
+     *
+     * @param mixed  $check   Null to let WordPress write the meta.
+     * @param int    $postId
+     * @param string $metaKey
+     *
+     * @return mixed
+     */
+    public static function filterRestWrite($check, $postId, $metaKey)
+    {
+        if (
+            null !== $check
+            || !defined('REST_REQUEST')
+            || !REST_REQUEST
+            || 0 !== strpos((string)$metaKey, self::META_PREFIX)
+        ) {
+            return $check;
+        }
+
+        $post = get_post($postId);
+        $id   = substr((string)$metaKey, strlen(self::META_PREFIX));
+
+        if (
+            !$post
+            || !self::isRegisteredItem($post->post_type, $id)
+            || self::userCanComplete($post->post_type, $id)
+        ) {
+            return $check;
+        }
+
+        return true;
     }
 
     /**
