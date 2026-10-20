@@ -34,7 +34,7 @@ class CustomItemsMeta
 
     /**
      * Ticked-by-hand tasks with a fixed name, saved under META_PREFIX . name.
-     * approved_by_user comes from Checklists Pro.
+     * approved_by_user comes from Checklists Pro and is only registered when Pro is loaded.
      */
     const APPROVAL_ITEMS = ['approved_by', 'approved_by_user'];
 
@@ -114,6 +114,11 @@ class CustomItemsMeta
         }
 
         foreach (self::APPROVAL_ITEMS as $id) {
+            // Without Pro, "Approved by user" is only a placeholder that can't be ticked.
+            if ('approved_by_user' === $id && !defined('PPCHPRO_VERSION')) {
+                continue;
+            }
+
             $rules = isset($options->{$id . '_rule'}) ? (array)$options->{$id . '_rule'} : [];
 
             foreach ($rules as $postType => $rule) {
