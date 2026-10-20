@@ -194,8 +194,14 @@ class PPChecklistsPanel extends Component {
                  * and further click on "Save draft" from editor UI won't work
                  * as that doesn't update the status to publish
                  */
-                if (this.oldStatus !== '') {
-                    wp.data.dispatch('core/editor').editPost({status: this.oldStatus, pp_checklists_post_status_edit: true});
+                // Use the saved status: the one read when the editor opened is
+                // out of date once the post is saved (a post published since
+                // would get 'auto-draft' back, and the REST API rejects it).
+                const savedPost = wp.data.select('core/editor').getCurrentPost() || {};
+                const restoreStatus = savedPost.status || this.oldStatus;
+
+                if (restoreStatus) {
+                    wp.data.dispatch('core/editor').editPost({status: restoreStatus, pp_checklists_post_status_edit: true});
                 }
                 return;
             }
