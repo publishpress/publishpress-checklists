@@ -16,7 +16,7 @@ class Categories_count extends Base_counter
     /**
      * The priority for the action to load the requirement
      */
-    const PRIORITY = 8;
+    public const PRIORITY = 8;
 
     /**
      * The name of the requirement, in a slug format

@@ -16,11 +16,11 @@ defined('ABSPATH') or die('No direct script access allowed.');
 
 class Openai_item extends Base_simple implements Interface_required
 {
-    const VALUE_YES = 'yes';
+    public const VALUE_YES = 'yes';
 
-    const OPEN_AI_MODEL = 'gpt-3.5-turbo';
+    public const OPEN_AI_MODEL = 'gpt-3.5-turbo';
 
-    const OPEN_AI_API_URL = 'https://api.openai.com/v1/chat/completions';
+    public const OPEN_AI_API_URL = 'https://api.openai.com/v1/chat/completions';
 
     /**
      * The title.
@@ -306,7 +306,7 @@ class Openai_item extends Base_simple implements Interface_required
             );
         } else {
             $content     = $this->clean_up_content(wp_kses_post(wp_unslash($_POST['content'])));
-            $requirement = map_deep(wp_unslash($_POST['requirement']), 'sanitize_text_field');
+            $requirement = isset($_POST['requirement']) ? map_deep(wp_unslash($_POST['requirement']), 'sanitize_text_field') : [];
             $api_key     = !empty($legacyPlugin->settings->module->options->openai_api_key) ? $legacyPlugin->settings->module->options->openai_api_key : '';
             if (empty(trim($api_key))) {
                 $response['content'] = esc_html__(
@@ -348,7 +348,7 @@ class Openai_item extends Base_simple implements Interface_required
             
                 // send request and get response
                 $http_response = wp_remote_post(self::OPEN_AI_API_URL, array(
-                    'timeout' => 60,
+                    'timeout' => 60, // phpcs:ignore WordPressVIPMinimum.Performance.RemoteRequestTimeout.timeout_timeout -- OpenAI answers can take longer than 3 seconds; this runs in an AJAX request, not a page load.
                     'headers' => $headers,
                     'body' => wp_json_encode($body_data),
                 ));
@@ -454,13 +454,11 @@ class Openai_item extends Base_simple implements Interface_required
         // Combine post title and content if both are available
         if (!empty($post_content) && !empty($post_title)) {
             $cleaned_up_content = $post_title . ".\n\n" . $post_content;
-        } 
-        // Use post content if title is empty
-        elseif (!empty($post_content)) {
+        } elseif (!empty($post_content)) {
+            // Use post content if title is empty
             $cleaned_up_content = $post_content;
-        } 
-        // Use post title if content is empty
-        elseif (!empty($post_title)) {
+        } elseif (!empty($post_title)) {
+            // Use post title if content is empty
             $cleaned_up_content = $post_title;
         }
     

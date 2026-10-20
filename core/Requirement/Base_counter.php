@@ -16,7 +16,7 @@ class Base_counter extends Base_simple implements Interface_required
     /**
      * The default value for the option related to the value.
      */
-    const DEFAULT_OPTION_VALUE = 0;
+    public const DEFAULT_OPTION_VALUE = 0;
 
     /**
      * @var string
@@ -74,7 +74,7 @@ class Base_counter extends Base_simple implements Interface_required
 
         // If enabled, ensure count is a non-negative int. Default to 1 if invalid/empty, allows 0.
         if (static::VALUE_YES === $new_options[$this->name][$this->post_type]) {
-            // Note: $new_options[$index][$this->post_type] was previously sanitized using FILTER_SANITIZE_NUMBER_INT (lines 68-72).
+            // Note: the counter value was previously sanitized using FILTER_SANITIZE_NUMBER_INT (lines 68-72).
             $current_value = $new_options[$index][$this->post_type] ?? null;
 
             if (

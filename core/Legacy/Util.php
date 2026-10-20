@@ -21,6 +21,7 @@ class Util
     {
         global $post, $typenow, $pagenow, $current_screen;
 
+        // phpcs:disable WordPress.Security.NonceVerification.Recommended -- Read-only: the post and post_type query args only tell which post type the current screen is for. Nothing is saved.
         // get_post() needs a variable
         $post_id = isset($_REQUEST['post']) ? (int)$_REQUEST['post'] : false;
 
@@ -43,6 +44,7 @@ class Util
         } else {
             $post_type = null;
         }
+        // phpcs:enable WordPress.Security.NonceVerification.Recommended
 
         return $post_type;
     }

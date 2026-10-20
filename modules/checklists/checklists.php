@@ -49,24 +49,24 @@ if (!class_exists('PPCH_Checklists')) {
     class PPCH_Checklists extends Module
     {
 
-        const METADATA_TAXONOMY = 'pp_checklist_meta';
+        public const METADATA_TAXONOMY = 'pp_checklist_meta';
 
-        const METADATA_POSTMETA_KEY = "_pp_checklist_meta";
+        public const METADATA_POSTMETA_KEY = "_pp_checklist_meta";
 
-        const SETTINGS_SLUG = 'pp-checklists-settings';
+        public const SETTINGS_SLUG = 'pp-checklists-settings';
 
-        const POST_META_PREFIX = 'pp_checklist_custom_item_';
+        public const POST_META_PREFIX = 'pp_checklist_custom_item_';
 
-        const FLAG_OPTIONS_MIGRATED_2_0_0 = 'publishpress_checklists_options_migrated_2_0_0';
+        public const FLAG_OPTIONS_MIGRATED_2_0_0 = 'publishpress_checklists_options_migrated_2_0_0';
 
-        const FLAG_OPTIONS_MIGRATED_2_6_0 = 'publishpress_checklists_options_migrated_2_6_0';
+        public const FLAG_OPTIONS_MIGRATED_2_6_0 = 'publishpress_checklists_options_migrated_2_6_0';
 
-        const FLAG_OPTIONS_UNSLASHED_2_30_0 = 'publishpress_checklists_options_unslashed_2_30_0';
+        public const FLAG_OPTIONS_UNSLASHED_2_30_0 = 'publishpress_checklists_options_unslashed_2_30_0';
 
         /**
          * @var string
          */
-        const MENU_SLUG = 'ppch-checklists';
+        public const MENU_SLUG = 'ppch-checklists';
 
         public $module_name = 'checklists';
 
@@ -729,7 +729,7 @@ if (!class_exists('PPCH_Checklists')) {
                         );
                     }
                 }
-            } elseif (isset($_GET['page']) && $_GET['page'] === 'ppch-checklists') {
+            } elseif (isset($_GET['page']) && $_GET['page'] === 'ppch-checklists') { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the page query arg only decides which assets to load.
                 // Admin pages
                 wp_enqueue_style(
                     'pp-checklists-global-checklists',
@@ -876,7 +876,7 @@ if (!class_exists('PPCH_Checklists')) {
                         ],
                     ]
                 );
-            } elseif (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') {
+            } elseif (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the page query arg only decides which assets to load.
                 // Admin pages
                 wp_enqueue_style(
                     'pp-checklists-global-checklists',
@@ -893,6 +893,7 @@ if (!class_exists('PPCH_Checklists')) {
          */
         public function enqueueAdminScripts()
         {
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the page query arg only decides which assets to load.
             if (isset($_GET['page']) && $_GET['page'] === 'ppch-checklists') {
                 wp_enqueue_script(
                     'publishpress-select2-js',
@@ -1347,7 +1348,7 @@ if (!class_exists('PPCH_Checklists')) {
             $hosts = [];
 
             foreach ([home_url(), site_url()] as $url) {
-                $host = parse_url($url, PHP_URL_HOST);
+                $host = wp_parse_url($url, PHP_URL_HOST);
                 if (!empty($host)) {
                     $hosts[] = $host;
                 }
@@ -1408,10 +1409,12 @@ if (!class_exists('PPCH_Checklists')) {
 
             $use_block_editor = $replaceOption === 'no-replace' || $replaceOption === 'block';
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: Classic Editor's own query arg, used only to tell which editor loads.
             if (!$use_block_editor && isset($_GET['classic-editor__forget'])) {
                 $use_block_editor = true;
             }
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: Classic Editor's own query arg, used only to tell which editor loads.
             if (isset($_GET['classic-editor'])) {
                 $use_block_editor = false;
             }
@@ -1446,7 +1449,7 @@ if (!class_exists('PPCH_Checklists')) {
 
             // Check if we have data coming from custom items
             if (isset($_POST['_PPCH_custom_item'])) {
-                $custom_items = wp_unslash($_POST['_PPCH_custom_item']);
+                $custom_items = wp_unslash($_POST['_PPCH_custom_item']); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Each key and value is sanitized below with sanitize_key() and sanitize_text_field().
                 if (is_array($custom_items)) {
                     foreach ($custom_items as $item_id => $value) {
                         // The form only has the tasks this user may tick.
@@ -1615,7 +1618,7 @@ if (!class_exists('PPCH_Checklists')) {
                     'requirements' => $new_requirements_array,
                     'tabs'         => $this->field_tabs,
                     'post_types'   => $post_types,
-                    'success'      => isset($_GET['success']) && $_GET['success'] === '1',
+                    'success'      => isset($_GET['success']) && $_GET['success'] === '1', // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: shows the "saved" notice after the redirect.
                     'lang'         => [
                         'description'     => esc_html__('Task', 'publishpress-checklists'),
                         'action'          => esc_html__('Disabled, Recommended or Required', 'publishpress-checklists'),
@@ -1758,18 +1761,18 @@ if (!class_exists('PPCH_Checklists')) {
                 return;
             }
 
+            if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_key(wp_unslash($_POST['_wpnonce'])), 'ppch-global-checklists')) {
+                return;
+            }
+
             $serialized_options_field = 'publishpress_checklists_checklists_options_json';
             $has_serialized_options = isset($_POST[$serialized_options_field])
                 && is_string($_POST[$serialized_options_field])
-                && trim($_POST[$serialized_options_field]) !== '';
+                && trim(wp_unslash($_POST[$serialized_options_field])) !== ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Only checked for emptiness here.
             $has_regular_options = isset($_POST['publishpress_checklists_checklists_options'])
                 && !empty($_POST['publishpress_checklists_checklists_options']);
 
             if (!$has_regular_options && !$has_serialized_options) {
-                return;
-            }
-
-            if (!isset($_POST['_wpnonce']) || !wp_verify_nonce(sanitize_key(wp_unslash($_POST['_wpnonce'])), 'ppch-global-checklists')) {
                 return;
             }
 
@@ -1784,7 +1787,7 @@ if (!class_exists('PPCH_Checklists')) {
             if ($has_serialized_options) {
                 // wp_unslash() runs once, on the JSON string, before decoding.
                 $new_options = json_decode(
-                    wp_unslash($_POST[$serialized_options_field]),
+                    wp_unslash($_POST[$serialized_options_field]), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized below by sanitize_checklists_options().
                     true
                 );
 
@@ -1796,7 +1799,7 @@ if (!class_exists('PPCH_Checklists')) {
                 // callbacks that inspect the regular form field directly.
                 $_POST['publishpress_checklists_checklists_options'] = $new_options;
             } else {
-                $new_options = wp_unslash($_POST['publishpress_checklists_checklists_options']);
+                $new_options = wp_unslash($_POST['publishpress_checklists_checklists_options']); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized below by sanitize_checklists_options().
                 if (!is_array($new_options)) {
                     return;
                 }

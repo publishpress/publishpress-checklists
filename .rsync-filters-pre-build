@@ -12,6 +12,8 @@
 - .kombai
 - .php-cs-fixer.cache
 - .phpcs.xml
+- .phpcs-php-compatibility.xml
+- .phpcs-plugin-review.xml
 - .phplint-cache
 - .phplint.yml
 - .playwright-mcp

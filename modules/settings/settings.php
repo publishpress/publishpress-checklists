@@ -38,12 +38,12 @@ if (!class_exists('PPCH_Settings')) {
     #[\AllowDynamicProperties]
     class PPCH_Settings extends Module
     {
-        const SETTINGS_SLUG = 'ppch-settings';
+        public const SETTINGS_SLUG = 'ppch-settings';
 
         /**
          * @var string
          */
-        const MENU_SLUG = 'ppch-settings';
+        public const MENU_SLUG = 'ppch-settings';
 
         public $module;
 
@@ -141,6 +141,7 @@ if (!class_exists('PPCH_Settings')) {
         public function action_admin_enqueue_scripts()
         {
             if ($this->isWhitelistedSettingsView()) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the page query arg only decides which assets to load.
                 if (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') {
                     $settingsScriptPath = __DIR__ . '/lib/settings.js';
                     $settingsScriptVersion = PPCH_VERSION;
@@ -181,6 +182,7 @@ if (!class_exists('PPCH_Settings')) {
                 );
             }
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the page query arg only decides which assets to load.
             if (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') {
                 wp_enqueue_style('wp-color-picker');
                 wp_enqueue_script('jquery-ui-core');
@@ -196,6 +198,7 @@ if (!class_exists('PPCH_Settings')) {
 
             $status = isset($this->module->options->disable_quick_edit_publish) ? $this->module->options->disable_quick_edit_publish : 'yes';
             if ($status == 'yes') :
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the post_type query arg only decides whether to hide a Quick Edit field.
                 $post_type = (!empty($_GET['post_type'])) ? sanitize_key(wp_unslash($_GET['post_type'])) : 'post';
                 $post_types = array_keys($this->get_post_types());
                 if (in_array($post_type, $post_types)) :
@@ -224,6 +227,7 @@ if (!class_exists('PPCH_Settings')) {
 
             $status = isset($this->module->options->disable_quick_edit_completely) ? $this->module->options->disable_quick_edit_completely : 'yes';
             if ($status == 'yes') :
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the post_type query arg only decides whether to hide a Quick Edit field.
                 $post_type = (!empty($_GET['post_type'])) ? sanitize_key(wp_unslash($_GET['post_type'])) : 'post';
                 $post_types = array_keys($this->get_post_types());
                 if (in_array($post_type, $post_types)) :
@@ -446,13 +450,15 @@ if (!class_exists('PPCH_Settings')) {
          */
         public function helper_print_error_or_description($field, $description)
         {
+            // phpcs:disable WordPress.Security.NonceVerification.Recommended -- Read-only: shows a form error message, escaped on output. Nothing is saved.
             if (isset($_REQUEST['form-errors'][$field])): ?>
                 <div class="form-error">
-                    <p><?php echo esc_html(sanitize_text_field($_REQUEST['form-errors'][$field])); ?></p>
+                    <p><?php echo esc_html(sanitize_text_field(wp_unslash($_REQUEST['form-errors'][$field]))); ?></p>
                 </div>
             <?php else: ?>
                 <p class="description"><?php echo esc_html($description); ?></p>
 <?php endif;
+            // phpcs:enable WordPress.Security.NonceVerification.Recommended
         }
 
         /**
@@ -555,6 +561,7 @@ if (!class_exists('PPCH_Settings')) {
             foreach ($modules as $moduleSlug) {
                 $module_name = sanitize_key(Util::sanitizeModuleName($moduleSlug));
 
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized by sanitize_module_options().
                 $new_options = (isset($_POST[$legacyPlugin->$module_name->module->options_group_name])) ? $this->sanitize_module_options(wp_unslash($_POST[$legacyPlugin->$module_name->module->options_group_name])) : [];
 
                 /**
@@ -704,6 +711,7 @@ if (!class_exists('PPCH_Settings')) {
         {
             $legacyPlugin = Factory::getLegacyPlugin();
 
+            // phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing -- Read-only: the module, message and error args pick the settings tab and a notice from a fixed list, escaped on output. Nothing is saved.
             $module_settings_slug = isset($_GET['module']) && !empty($_GET['module']) ? sanitize_key(wp_unslash($_GET['module'])) : PPCH_Settings::SETTINGS_SLUG;
             $requested_module     = $legacyPlugin->getModuleBy('settings_slug', $module_settings_slug);
             $display_text         = '';
@@ -734,6 +742,7 @@ if (!class_exists('PPCH_Settings')) {
             } else {
                 $error = false;
             }
+            // phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
             if ($error && isset($requested_module->messages[$error])) {
                 $display_text .= '<div class="is-dismissible notice notice-error"><p>' . esc_html(
                     $requested_module->messages[$error]

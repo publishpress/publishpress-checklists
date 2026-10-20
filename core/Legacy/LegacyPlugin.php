@@ -418,12 +418,12 @@ class LegacyPlugin
         $conditions[] = $this->isWp5()
             && $pluginsState['classic-editor']
             && (get_option('classic-editor-replace') === 'block'
-                && !isset($_GET['classic-editor__forget']));
+                && !isset($_GET['classic-editor__forget'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: Classic Editor's own query arg, used only to tell which editor loads.
 
         $conditions[] = $this->isWp5()
             && $pluginsState['classic-editor']
             && (get_option('classic-editor-replace') === 'classic'
-                && isset($_GET['classic-editor__forget']));
+                && isset($_GET['classic-editor__forget'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: Classic Editor's own query arg, used only to tell which editor loads.
 
         /**
          * < 5.0 but Gutenberg plugin is active.

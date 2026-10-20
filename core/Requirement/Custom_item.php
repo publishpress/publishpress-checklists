@@ -15,7 +15,7 @@ defined('ABSPATH') or die('No direct script access allowed.');
 
 class Custom_item extends Base_multiple implements Interface_required
 {
-    const VALUE_YES = 'yes';
+    public const VALUE_YES = 'yes';
 
     /**
      * The title.
@@ -113,8 +113,6 @@ class Custom_item extends Base_multiple implements Interface_required
 
         $this->title = $title;
 
-        // echo '<pre>'; echo $var_name; print_r($this->module->options); die;
-
         return $this->title;
     }
 
@@ -206,6 +204,7 @@ class Custom_item extends Base_multiple implements Interface_required
         // Make sure to remove the options that were cleaned up
         foreach ($new_options as $key => $value) {
             if (preg_match('/_' . $this->field_name . '/', $key)) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Runs from the publishpress_checklists_validate_requirement_settings filter inside save_global_checklist(), after its nonce and capability checks.
                 if (!isset($_POST['publishpress_checklists_checklists_options'][$key])) {
                     unset($new_options[$key]);
                 }

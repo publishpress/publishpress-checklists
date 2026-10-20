@@ -38,15 +38,15 @@ class CustomItemsMeta
     /**
      * Same prefix as PPCH_Checklists::POST_META_PREFIX.
      */
-    const META_PREFIX = 'pp_checklist_custom_item_';
+    public const META_PREFIX = 'pp_checklist_custom_item_';
 
-    const OPTION_NAME = 'publishpress_checklists_checklists_options';
+    public const OPTION_NAME = 'publishpress_checklists_checklists_options';
 
     /**
      * Ticked-by-hand tasks with a fixed name, saved under META_PREFIX . name.
      * approved_by_user comes from Checklists Pro and is only registered when Pro is loaded.
      */
-    const APPROVAL_ITEMS = ['approved_by', 'approved_by_user'];
+    public const APPROVAL_ITEMS = ['approved_by', 'approved_by_user'];
 
     /**
      * @var array|null
