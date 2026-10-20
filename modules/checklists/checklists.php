@@ -942,7 +942,18 @@ if (!class_exists('PPCH_Checklists')) {
                 $requirements = apply_filters('publishpress_checklists_requirement_list', $requirements, $dummy_post);
 
                 if (!empty($requirements)) {
-                    add_meta_box(self::METADATA_TAXONOMY, $title, [$this, 'display_meta_box'], $post_type, 'side', 'high');
+                    // Mark the meta box as compatible with real-time collaboration so the
+                    // block editor doesn't fall back to one editor at a time. Only the
+                    // collaboration code reads this flag; everything else ignores it.
+                    add_meta_box(
+                        self::METADATA_TAXONOMY,
+                        $title,
+                        [$this, 'display_meta_box'],
+                        $post_type,
+                        'side',
+                        'high',
+                        ['__rtc_compatible_meta_box' => true]
+                    );
                 }
             }
         }
