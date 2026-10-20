@@ -38,6 +38,7 @@ use PublishPress\Checklists\Core\Requirement\Custom_item;
 use PublishPress\Checklists\Core\Requirement\Openai_item;
 use PublishPress\Checklists\Core\Utils\FieldsTabs;
 use PublishPress\Checklists\Core\Utils\ElementorUtils;
+use PublishPress\Checklists\Core\Utils\CustomItemsMeta;
 use PublishPress\Checklists\Core\Requirement\Pro_Requirement;
 
 if (!class_exists('PPCH_Checklists')) {
@@ -88,6 +89,13 @@ if (!class_exists('PPCH_Checklists')) {
          * List of tab for settings page
          */
         protected $field_tabs = [];
+
+        /**
+         * Requirements printed by print_block_editor_checklist().
+         *
+         * @var array
+         */
+        protected $block_editor_requirements = [];
 
         /**
          * Instace for the module
@@ -506,6 +514,8 @@ if (!class_exists('PPCH_Checklists')) {
             add_action('publishpress_checklists_admin_submenu', [$this, 'action_admin_submenu']);
             add_action('add_meta_boxes', [$this, 'handle_post_meta_boxes']);
             add_action('save_post', [$this, 'save_post_meta_box'], 10, 2);
+            add_action('wp_ajax_pp_checklists_save_custom_items', [$this, 'ajax_save_custom_items']);
+            add_filter('heartbeat_received', [$this, 'heartbeat_custom_items'], 10, 2);
             add_action('enqueue_block_editor_assets', [$this, 'enqueue_block_editor_assets']);
 
             add_filter(
@@ -525,6 +535,7 @@ if (!class_exists('PPCH_Checklists')) {
 
             add_action('admin_enqueue_scripts', [$this, 'add_admin_scripts']);
             add_action('admin_enqueue_scripts', [$this, 'enqueueAdminScripts']);
+            add_action('admin_enqueue_scripts', [$this, 'enqueue_block_editor_checklist'], 20);
 
             do_action('publishpress_checklists_load_addons');
 
@@ -926,6 +937,13 @@ if (!class_exists('PPCH_Checklists')) {
          */
         public function handle_post_meta_boxes()
         {
+            // The block editor shows the checklist in its own panel. Any classic
+            // meta box there turns off visual revisions and real-time
+            // collaboration, so the meta box is only for the Classic Editor. See #1208.
+            if ($this->is_block_editor_screen()) {
+                return;
+            }
+
             $title = esc_html__('Checklist', 'publishpress-checklists');
             $supported_post_types = $this->getSelectedPostTypes();
 
@@ -1046,42 +1064,87 @@ if (!class_exists('PPCH_Checklists')) {
          */
         public function display_meta_box($post)
         {
+            $requirements = $this->get_post_requirements($post);
+
+            if (!empty($requirements)) {
+                $this->enqueue_requirements_script($requirements);
+            }
+
+            $this->render_checklist($requirements);
+        }
+
+        /**
+         * Returns the requirements of a post, in display order.
+         *
+         * @param object $post
+         *
+         * @return array
+         */
+        protected function get_post_requirements($post)
+        {
             $requirements = [];
 
             // Apply filters to the list of requirements
             $requirements = apply_filters('publishpress_checklists_requirement_list', $requirements, $post);
 
-            $new_requirements_array = $this->rearrange_requirement_array($requirements);
+            return $this->rearrange_requirement_array($requirements);
+        }
 
+        /**
+         * @return string
+         */
+        protected function get_checklist_sort_mode()
+        {
             $legacyPlugin = Factory::getLegacyPlugin();
             $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
-            $sort_mode = isset($settings_options->checklist_items_sort_order)
+
+            return isset($settings_options->checklist_items_sort_order)
                 ? (string)$settings_options->checklist_items_sort_order
                 : 'default';
+        }
+
+        /**
+         * @return string
+         */
+        protected function get_checklists_page_link()
+        {
+            return add_query_arg(['page' => 'ppch-checklists'], get_admin_url(null, 'admin.php'));
+        }
+
+        /**
+         * Enqueues the requirements script (meta-box.js), which evaluates the
+         * requirements in both editors, and the add-on scripts that extend it.
+         *
+         * @param array $requirements Requirements returned by get_post_requirements().
+         * @param array $extra_data   Extra data for the ppChecklists object.
+         */
+        protected function enqueue_requirements_script($requirements, $extra_data = [])
+        {
+            $legacyPlugin = Factory::getLegacyPlugin();
+            $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
 
             $options = get_option('publishpress_checklists_settings_options');
 
-            $checklistsLink = add_query_arg(['page' => 'ppch-checklists'], get_admin_url(null, 'admin.php'));
+            $checklistsLink = $this->get_checklists_page_link();
 
-            // Add the scripts
-            if (!empty($requirements)) {
-                wp_enqueue_script(
-                    'pp-checklists-requirements',
-                    $this->module_url . 'assets/js/meta-box.js',
-                    ['jquery', 'word-count', 'wp-a11y'],
-                    PPCH_VERSION,
-                    true
-                );
+            wp_enqueue_script(
+                'pp-checklists-requirements',
+                $this->module_url . 'assets/js/meta-box.js',
+                ['jquery', 'word-count', 'wp-a11y'],
+                PPCH_VERSION,
+                true
+            );
 
-                // Get custom icon settings
-                $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
-                $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
+            // Get custom icon settings
+            $complete_icon = (!empty($settings_options->complete_icon) && trim($settings_options->complete_icon) !== '') ? trim($settings_options->complete_icon) : 'dashicons-yes';
+            $incomplete_icon = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
 
-                wp_localize_script(
-                    'pp-checklists-requirements',
-                    'ppChecklists',
+            wp_localize_script(
+                'pp-checklists-requirements',
+                'ppChecklists',
+                array_merge(
                     [
-                        'requirements'                    => $new_requirements_array,
+                        'requirements'                    => $requirements,
                         'configure_link'                  => $checklistsLink,
                         'nonce'                           => wp_create_nonce('pp-checklists-requirements'),
                         'empty_checklist_message'         => esc_html__(
@@ -1138,22 +1201,31 @@ if (!class_exists('PPCH_Checklists')) {
                         'live_count_max'           => __('%1$s / %2$s', 'publishpress-checklists'),
                         /* translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum. */
                         'live_count_min'           => __('%1$s, min %2$s', 'publishpress-checklists'),
-                    ]
-                );
+                        'custom_item_save_error'   => __('The checklist task could not be saved. Please try again.', 'publishpress-checklists'),
+                    ],
+                    $extra_data
+                )
+            );
 
-                $screen = get_current_screen();
-                if (
-                    !is_null($screen)
-                    && $this->isBlockHighlightingEnabled()
-                    && $this->isBlockEditorPostType($screen->post_type)
-                ) {
-                    wp_enqueue_script('pp-checklists-block-highlighting');
-                }
-
-                do_action('publishpress_checklists_enqueue_scripts');
+            $screen = get_current_screen();
+            if (
+                !is_null($screen)
+                && $this->isBlockHighlightingEnabled()
+                && $this->isBlockEditorPostType($screen->post_type)
+            ) {
+                wp_enqueue_script('pp-checklists-block-highlighting');
             }
 
-            // Render the box
+            do_action('publishpress_checklists_enqueue_scripts');
+        }
+
+        /**
+         * Renders the checklist (the meta box template).
+         *
+         * @param array $requirements Requirements returned by get_post_requirements().
+         */
+        protected function render_checklist($requirements)
+        {
             $templateLoader = Factory::getTemplateLoader();
 
             $templateLoader->load(
@@ -1161,9 +1233,9 @@ if (!class_exists('PPCH_Checklists')) {
                 'meta-box',
                 [
                     'metadata_taxonomy' => self::METADATA_TAXONOMY,
-                    'requirements'      => $new_requirements_array,
-                    'show_rule_headings' => $sort_mode === 'required_recommended',
-                    'configure_link'    => $checklistsLink,
+                    'requirements'      => $requirements,
+                    'show_rule_headings' => $this->get_checklist_sort_mode() === 'required_recommended',
+                    'configure_link'    => $this->get_checklists_page_link(),
                     'nonce'             => wp_create_nonce(__FILE__),
                     'lang'              => [
                         'empty_checklist_message' => esc_html__(
@@ -1182,6 +1254,84 @@ if (!class_exists('PPCH_Checklists')) {
                     ],
                 ]
             );
+        }
+
+        /**
+         * Returns whether the current screen is the block editor.
+         *
+         * @return bool
+         */
+        protected function is_block_editor_screen()
+        {
+            $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+            return !is_null($screen) && method_exists($screen, 'is_block_editor') && $screen->is_block_editor();
+        }
+
+        /**
+         * Loads the checklist engine in the block editor, without a meta box.
+         *
+         * meta-box.js still evaluates the requirements, and add-ons (Pro,
+         * Yoast SEO, Permalinks...) still extend it, but its list is printed in
+         * a hidden container instead of a meta box (see
+         * print_block_editor_checklist()). The Checklists sidebar panel shows
+         * the list. Tasks the user ticks by hand are saved as REST post meta,
+         * which real-time collaboration shares between editors, or through
+         * admin-ajax for restricted tasks. See #1208 and CustomItemsMeta.
+         */
+        public function enqueue_block_editor_checklist()
+        {
+            $screen = get_current_screen();
+
+            if (
+                is_null($screen)
+                || $screen->base !== 'post'
+                || $screen->post_type === 'acf-field-group'
+                || !$this->is_block_editor_screen()
+                || !array_key_exists($screen->post_type, $this->getSelectedPostTypes())
+            ) {
+                return;
+            }
+
+            $post = get_post();
+
+            if (!$post instanceof \WP_Post) {
+                return;
+            }
+
+            $requirements = $this->get_post_requirements($post);
+
+            if (empty($requirements)) {
+                return;
+            }
+
+            foreach ($requirements as $key => $requirement) {
+                $id = isset($requirement['id']) ? $requirement['id'] : $key;
+
+                if (CustomItemsMeta::isRestItem($post->post_type, $id)) {
+                    $requirements[$key]['meta_key'] = CustomItemsMeta::getMetaKey($id);
+                }
+            }
+
+            $this->block_editor_requirements = $requirements;
+
+            $this->enqueue_requirements_script($requirements, ['is_block_editor_checklist' => true]);
+
+            add_action('admin_footer', [$this, 'print_block_editor_checklist']);
+        }
+
+        /**
+         * Prints the hidden checklist that meta-box.js and add-ons work on in the block editor.
+         */
+        public function print_block_editor_checklist()
+        {
+            if (empty($this->block_editor_requirements)) {
+                return;
+            }
+
+            echo '<div id="ppch-block-editor-checklist" class="ppch-block-editor-checklist" hidden>';
+            $this->render_checklist($this->block_editor_requirements);
+            echo '</div>';
         }
 
         /**
@@ -1299,10 +1449,97 @@ if (!class_exists('PPCH_Checklists')) {
                 $custom_items = wp_unslash($_POST['_PPCH_custom_item']);
                 if (is_array($custom_items)) {
                     foreach ($custom_items as $item_id => $value) {
+                        // The form only has the tasks this user may tick.
+                        if (!CustomItemsMeta::userCanComplete($post->post_type, $item_id)) {
+                            continue;
+                        }
+
                         update_post_meta($id, self::POST_META_PREFIX . sanitize_key($item_id), sanitize_text_field($value));
                     }
                 }
             }
+        }
+
+        /**
+         * Saves, in the block editor, the state of a task the current user
+         * ticked: restricted tasks ("Approved by", Pro's "Approved by user",
+         * custom tasks limited to some roles), tasks of post types without
+         * REST post meta and tasks added by other plugins. meta-box.js calls
+         * this when the user ticks the task. See CustomItemsMeta.
+         */
+        public function ajax_save_custom_items()
+        {
+            check_ajax_referer('pp-checklists-requirements', 'nonce');
+
+            $post_id = isset($_POST['post_id']) ? absint($_POST['post_id']) : 0;
+            $post    = $post_id ? get_post($post_id) : null;
+
+            if (
+                !$post
+                || !current_user_can('edit_post', $post_id)
+                || !array_key_exists($post->post_type, $this->getSelectedPostTypes())
+            ) {
+                wp_send_json_error(null, 403);
+            }
+
+            $custom_items = isset($_POST['items']) ? wp_unslash($_POST['items']) : [];// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+
+            if (!is_array($custom_items) || empty($custom_items)) {
+                wp_send_json_error(null, 400);
+            }
+
+            $items = [];
+
+            // Check every item before saving any, so a request is saved in full or not at all.
+            foreach ($custom_items as $item_id => $value) {
+                $item_id = sanitize_key($item_id);
+                $value   = sanitize_text_field((string)$value);
+
+                if ('' === $item_id || !in_array($value, ['yes', 'no'], true)) {
+                    wp_send_json_error(null, 400);
+                }
+
+                if (!CustomItemsMeta::userCanComplete($post->post_type, $item_id)) {
+                    wp_send_json_error(null, 403);
+                }
+
+                $items[$item_id] = $value;
+            }
+
+            foreach ($items as $item_id => $value) {
+                update_post_meta($post_id, self::POST_META_PREFIX . $item_id, $value);
+            }
+
+            wp_send_json_success(['items' => $items]);
+        }
+
+        /**
+         * Sends the saved state of the tasks saved through admin-ajax to the
+         * block editor, so every editor of the post sees the same state.
+         *
+         * @param array $response
+         * @param array $data
+         *
+         * @return array
+         */
+        public function heartbeat_custom_items($response, $data)
+        {
+            if (empty($data['ppch_custom_items']['post_id'])) {
+                return $response;
+            }
+
+            $post_id = absint($data['ppch_custom_items']['post_id']);
+            $post    = $post_id ? get_post($post_id) : null;
+
+            if (
+                $post
+                && current_user_can('edit_post', $post_id)
+                && array_key_exists($post->post_type, $this->getSelectedPostTypes())
+            ) {
+                $response['ppch_custom_items'] = CustomItemsMeta::getAjaxItemStates($post);
+            }
+
+            return $response;
         }
 
         /**
@@ -1486,6 +1723,7 @@ if (!class_exists('PPCH_Checklists')) {
                         array(
                             'completeRequirementMessage' => __("Please complete the required(*) checklists task.", "publishpress-checklists"),
                             'checklistLabel' => __("Checklists", "publishpress-checklists"),
+                            'documentPanelLabel' => __("Checklist", "publishpress-checklists"),
                             'noTaskLabel' => __("You don't have to complete any Checklist tasks.", "publishpress-checklists"),
                             'required' => __("required", "publishpress-checklists"),
                             'requiredHeading' => __("Required", "publishpress-checklists"),

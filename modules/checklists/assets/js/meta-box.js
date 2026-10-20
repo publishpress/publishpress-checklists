@@ -339,35 +339,26 @@
         this.EVENT_TOGGLE_CUSTOM_ITEM,
         function (event, item) {
           var $item = $(item),
-            $icon = $item.children('.dashicons'),
             customIcons = ppChecklists.customIcons || {},
             completeIcon = customIcons.complete || 'dashicons-yes',
-            incompleteIcon = customIcons.incomplete || 'dashicons-no',
-            checked = $icon.hasClass(completeIcon);
+            checked = $item.children('.dashicons').hasClass(completeIcon);
 
-          this.set_requirement_a11y_state($item, !checked);
-
-          $icon.removeClass(incompleteIcon);
-
-          if (checked) {
-            $icon.removeClass(completeIcon);
-            $icon.addClass(incompleteIcon);
-            $item.removeClass('status-yes');
-            $item.addClass('status-no');
-            $item.find('.ppch_item_requirement').val('no');
-            wp.hooks.doAction('pp-checklists.requirements-updated', $item);
-          } else {
-            $icon.removeClass(incompleteIcon);
-            $icon.addClass(completeIcon);
-            $item.addClass('status-yes');
-            $item.removeClass('status-no');
-            $item.find('.ppch_item_requirement').val('yes');
-            wp.hooks.doAction('pp-checklists.requirements-updated', $item);
-          }
-
-          $item.children('input[type="hidden"]').val($item.hasClass('status-yes') ? 'yes' : 'no');
+          this.set_custom_item_state($item, !checked);
+          this.save_custom_item_state($item, !checked);
         }.bind(this),
       );
+
+      if (this.is_block_editor_checklist()) {
+        // Ticks made by other editors (real-time collaboration) arrive as post meta.
+        $(document).on(
+          this.EVENT_TIC,
+          function () {
+            this.sync_custom_items_from_meta();
+          }.bind(this),
+        );
+
+        this.init_custom_items_heartbeat();
+      }
 
       // Start the tic event
       setInterval(
@@ -375,6 +366,259 @@
           $(document).trigger(this.EVENT_TIC);
         }.bind(this),
         this.TIC_INTERVAL,
+      );
+    },
+
+    /**
+     * Updates the state of a task the user ticks by hand (custom tasks,
+     * OpenAI tasks, "Approved by").
+     *
+     * @param  {Object}  $item
+     * @param  {Boolean} is_completed
+     * @return {void}
+     */
+    set_custom_item_state: function ($item, is_completed) {
+      var $icon = $item.children('.dashicons'),
+        customIcons = ppChecklists.customIcons || {},
+        completeIcon = customIcons.complete || 'dashicons-yes',
+        incompleteIcon = customIcons.incomplete || 'dashicons-no';
+
+      this.set_requirement_a11y_state($item, is_completed);
+
+      $icon.removeClass(is_completed ? incompleteIcon : completeIcon);
+      $icon.addClass(is_completed ? completeIcon : incompleteIcon);
+      $item.toggleClass('status-yes', is_completed);
+      $item.toggleClass('status-no', !is_completed);
+      $item.find('.ppch_item_requirement').val(is_completed ? 'yes' : 'no');
+      $item.children('input[type="hidden"]').val(is_completed ? 'yes' : 'no');
+
+      wp.hooks.doAction('pp-checklists.requirements-updated', $item);
+    },
+
+    /**
+     * Whether the checklist runs in the block editor, where it has no meta box
+     * and tasks ticked by hand are saved as post meta.
+     *
+     * @return {Boolean}
+     */
+    is_block_editor_checklist: function () {
+      return !!ppChecklists.is_block_editor_checklist && this.is_gutenberg_active();
+    },
+
+    /**
+     * Returns the edited post meta in the block editor, or null.
+     *
+     * @return {Object|null}
+     */
+    get_edited_post_meta: function () {
+      var meta = wp.data.select('core/editor').getEditedPostAttribute('meta');
+
+      return meta && typeof meta === 'object' ? meta : null;
+    },
+
+    /**
+     * Returns the REST post meta key of a task ticked by hand, or '' when the
+     * post has no such meta (for example a task added by another plugin).
+     *
+     * @param  {String} id Requirement id
+     * @return {String}
+     */
+    get_custom_item_meta_key: function (id) {
+      if (!this.is_block_editor_checklist()) {
+        return '';
+      }
+
+      var requirement = ppChecklists.requirements ? ppChecklists.requirements[id] : null,
+        meta = this.get_edited_post_meta();
+
+      if (!requirement || !requirement.meta_key || !meta || !(requirement.meta_key in meta)) {
+        return '';
+      }
+
+      return requirement.meta_key;
+    },
+
+    /**
+     * In the block editor, saves a task the user ticked by hand.
+     *
+     * Tasks with REST post meta are saved as an edit of that meta: the editor
+     * saves it with the post, and real-time collaboration shares it with the
+     * other editors. Other tasks (restricted tasks such as "Approved by", and
+     * tasks of post types without REST post meta) are saved right away through
+     * admin-ajax, which checks that this user may tick them. See CustomItemsMeta.
+     *
+     * @param  {Object}  $item
+     * @param  {Boolean} is_completed
+     * @return {void}
+     */
+    save_custom_item_state: function ($item, is_completed) {
+      if (!this.is_block_editor_checklist()) {
+        return;
+      }
+
+      var value = is_completed ? 'yes' : 'no',
+        key = this.get_custom_item_meta_key($item.attr('data-id'));
+
+      if (!key) {
+        this.save_custom_item_now($item, value);
+        return;
+      }
+
+      if (this.get_edited_post_meta()[key] === value) {
+        return;
+      }
+
+      var edit = {};
+      edit[key] = value;
+
+      wp.data.dispatch('core/editor').editPost({meta: edit});
+    },
+
+    /**
+     * Requests to save a task through admin-ajax, by requirement id. Each one
+     * waits for the previous one, so the last click is the one that is saved.
+     *
+     * @type {Object}
+     */
+    custom_item_requests: {},
+
+    /**
+     * Saves a task through admin-ajax. If the save fails, the task goes back
+     * to its previous state and the user is told.
+     *
+     * @param  {Object} $item
+     * @param  {String} value 'yes' or 'no'
+     * @return {void}
+     */
+    save_custom_item_now: function ($item, value) {
+      var id = $item.attr('data-id'),
+        $input = $item.children('input[name^="_PPCH_custom_item["]'),
+        item_id = $input.length ? $input.attr('name').slice('_PPCH_custom_item['.length, -1) : id,
+        items = {},
+        previous = this.custom_item_requests[id];
+
+      items[item_id] = value;
+
+      var send = function () {
+        return $.post(ajaxurl, {
+          action: 'pp_checklists_save_custom_items',
+          post_id: wp.data.select('core/editor').getCurrentPostId(),
+          items: items,
+          nonce: ppChecklists.nonce,
+        }).then(
+          function (response) {
+            if (!response || !response.success) {
+              return $.Deferred().reject().promise();
+            }
+          },
+        ).fail(
+          function () {
+            this.set_custom_item_state($item, value !== 'yes');
+            this.notify_custom_item_save_error();
+          }.bind(this),
+        );
+      }.bind(this);
+
+      var request = previous ? previous.then(send, send) : send();
+
+      this.custom_item_requests[id] = request;
+
+      request.always(
+        function () {
+          if (this.custom_item_requests[id] === request) {
+            delete this.custom_item_requests[id];
+          }
+        }.bind(this),
+      );
+    },
+
+    /**
+     * @return {void}
+     */
+    notify_custom_item_save_error: function () {
+      var message = ppChecklists.custom_item_save_error || '';
+
+      if (wp.data && wp.data.dispatch('core/notices')) {
+        wp.data.dispatch('core/notices').createErrorNotice(message, {
+          id: 'pp-checklists-custom-item-save',
+          isDismissible: true,
+        });
+      } else if (wp.a11y && wp.a11y.speak) {
+        wp.a11y.speak(message, 'assertive');
+      }
+    },
+
+    /**
+     * Shows the post meta state of the tasks ticked by hand, which another
+     * editor may have changed.
+     *
+     * @return {void}
+     */
+    sync_custom_items_from_meta: function () {
+      var meta = this.get_edited_post_meta();
+
+      if (!meta) {
+        return;
+      }
+
+      $.each(
+        ppChecklists.requirements || {},
+        function (id, requirement) {
+          if (!requirement || !requirement.meta_key || !(requirement.meta_key in meta)) {
+            return;
+          }
+
+          var $item = $('#pp-checklists-req-' + id),
+            is_completed = meta[requirement.meta_key] === 'yes';
+
+          if ($item.length === 0 || $item.hasClass('status-yes') === is_completed) {
+            return;
+          }
+
+          this.set_custom_item_state($item, is_completed);
+        }.bind(this),
+      );
+    },
+
+    /**
+     * Shows the saved state of the tasks saved through admin-ajax, which
+     * another editor of the post may have changed. The Heartbeat API brings it.
+     *
+     * @return {void}
+     */
+    init_custom_items_heartbeat: function () {
+      $(document).on('heartbeat-send', function (event, data) {
+        data.ppch_custom_items = {post_id: wp.data.select('core/editor').getCurrentPostId()};
+      });
+
+      $(document).on(
+        'heartbeat-tick',
+        function (event, data) {
+          if (!data || !data.ppch_custom_items) {
+            return;
+          }
+
+          $.each(
+            data.ppch_custom_items,
+            function (id, value) {
+              var $item = $('#pp-checklists-req-' + id),
+                is_completed = value === 'yes';
+
+              // Skip tasks with REST post meta (real-time collaboration shares those)
+              // and tasks this user's own save is still sending.
+              if (
+                $item.length === 0
+                || this.get_custom_item_meta_key(id)
+                || this.custom_item_requests[id]
+                || $item.hasClass('status-yes') === is_completed
+              ) {
+                return;
+              }
+
+              this.set_custom_item_state($item, is_completed);
+            }.bind(this),
+          );
+        }.bind(this),
       );
     },
 
