@@ -270,6 +270,13 @@
         }
       });
 
+      // Escape dismisses the tooltip without moving focus or the pointer (WCAG 1.4.13)
+      canvasDocument.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && activeWarningElement) {
+          hideTooltip();
+        }
+      });
+
       canvasDocument.addEventListener('scroll', updateTooltipPosition, true);
       if (win.addEventListener) {
         win.addEventListener('resize', updateTooltipPosition);
@@ -431,12 +438,13 @@
             wrapperProps['data-warning'] = 'true';
             wrapperProps['data-warning-text'] = warningState.mergedWarningText;
             wrapperProps.title = warningState.mergedWarningTitle;
-            wrapperProps['aria-label'] = warningState.mergedWarningTitle;
+            // A description, not a label: the block keeps its own name ("Block: Image")
+            wrapperProps['aria-description'] = warningState.mergedWarningTitle;
           } else {
             delete wrapperProps['data-warning'];
             delete wrapperProps['data-warning-text'];
             delete wrapperProps.title;
-            delete wrapperProps['aria-label'];
+            delete wrapperProps['aria-description'];
           }
 
           return createElement(BlockListBlock, Object.assign({}, props, {

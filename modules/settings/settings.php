@@ -80,11 +80,11 @@ if (!class_exists('PPCH_Settings')) {
                     // Custom icons and colors for checklist items
                     'complete_icon'               => 'dashicons-yes',
                     'incomplete_icon'             => 'dashicons-no',
-                    'required_complete_color'     => '#66bb6a',
-                    'required_incomplete_color'   => '#ef5350',
-                    'required_asterisk_color'     => '#ef5350',
-                    'recommended_complete_color'  => '#66bb6a',
-                    'recommended_incomplete_color' => '#ef5350',
+                    'required_complete_color'     => '#2e7d32',
+                    'required_incomplete_color'   => '#c62828',
+                    'required_asterisk_color'     => '#c62828',
+                    'recommended_complete_color'  => '#2e7d32',
+                    'recommended_incomplete_color' => '#c62828',
                     'enable_rename_label_editor_panel' => Base_requirement::VALUE_YES,
                     'checklist_items_sort_order' => 'default',
                 ],
@@ -1457,10 +1457,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_required_complete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_required_complete_color';
-            $value = isset($this->module->options->required_complete_color) ? $this->module->options->required_complete_color : '#66bb6a';
+            $value = isset($this->module->options->required_complete_color) ? $this->module->options->required_complete_color : '#2e7d32';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_complete_color]" class="pp-checklists-color-picker" data-default-color="#66bb6a" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_complete_color]" class="pp-checklists-color-picker" data-default-color="#2e7d32" />';
             echo '</label>';
         }
 
@@ -1470,10 +1470,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_required_incomplete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_required_incomplete_color';
-            $value = isset($this->module->options->required_incomplete_color) ? $this->module->options->required_incomplete_color : '#ef5350';
+            $value = isset($this->module->options->required_incomplete_color) ? $this->module->options->required_incomplete_color : '#c62828';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#c62828" />';
             echo '</label>';
         }
 
@@ -1483,10 +1483,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_required_asterisk_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_required_asterisk_color';
-            $value = isset($this->module->options->required_asterisk_color) ? $this->module->options->required_asterisk_color : '#ef5350';
+            $value = isset($this->module->options->required_asterisk_color) ? $this->module->options->required_asterisk_color : '#c62828';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_asterisk_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_asterisk_color]" class="pp-checklists-color-picker" data-default-color="#c62828" />';
             echo '</label>';
         }
 
@@ -1496,10 +1496,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_recommended_complete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_recommended_complete_color';
-            $value = isset($this->module->options->recommended_complete_color) ? $this->module->options->recommended_complete_color : '#66bb6a';
+            $value = isset($this->module->options->recommended_complete_color) ? $this->module->options->recommended_complete_color : '#2e7d32';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_complete_color]" class="pp-checklists-color-picker" data-default-color="#66bb6a" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_complete_color]" class="pp-checklists-color-picker" data-default-color="#2e7d32" />';
             echo '</label>';
         }
 
@@ -1509,10 +1509,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_recommended_incomplete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_recommended_incomplete_color';
-            $value = isset($this->module->options->recommended_incomplete_color) ? $this->module->options->recommended_incomplete_color : '#ef5350';
+            $value = isset($this->module->options->recommended_incomplete_color) ? $this->module->options->recommended_incomplete_color : '#c62828';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#c62828" />';
             echo '</label>';
         }
 

@@ -60,7 +60,7 @@ class PPChecklistsWarning extends Component {
                 <ul>
                     {this.state.requirements.block.map(
                         (item, i) => <li key={i}>
-                            <span className="dashicons dashicons-no"></span><span>{item.stripTags()}</span></li>
+                            <span className="dashicons dashicons-no" aria-hidden="true"></span><span>{item.stripTags()}</span></li>
                     )}
                 </ul>
             </div>);
@@ -76,7 +76,7 @@ class PPChecklistsWarning extends Component {
                 <ul>
                     {this.state.requirements.warning.map(
                         (item, i) => <li key={i}>
-                            <span className="dashicons dashicons-no"></span><span>{item.stripTags()}</span>
+                            <span className="dashicons dashicons-no" aria-hidden="true"></span><span>{item.stripTags()}</span>
                         </li>
                     )}
                 </ul>

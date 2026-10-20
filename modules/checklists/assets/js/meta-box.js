@@ -121,6 +121,12 @@
        * @type {boolean}
        */
       is_validating: false,
+
+      /**
+       * Element that had focus before a checklist modal opened
+       * @type {Element|null}
+       */
+      modal_return_focus: null,
     },
 
     /**
@@ -198,6 +204,8 @@
         }.bind(this),
       );
 
+      this.init_modal_focus();
+
       if (!this.is_gutenberg_active()) {
         // Hook to the submit button
         $('form#post').submit(
@@ -243,17 +251,21 @@
       // Add event to the custom items
       $('.pp-checklists-custom-item').click(
         function (event) {
-          var target = event.target;
-
-          if ('LI' !== target.nodeNAME) {
-            target = $(target).parent('li')[0];
-          }
+          var target = $(event.target).closest('li')[0];
 
           if (typeof target !== 'undefined') {
             this.elems.document.trigger(this.EVENT_TOGGLE_CUSTOM_ITEM, $(target));
           }
         }.bind(this),
       );
+
+      // Custom items expose role="checkbox" on their label, so Space and Enter toggle them
+      $('#pp-checklists-req-box .pp-checklists-custom-item > .status-label').on('keydown', function (event) {
+        if (event.key === ' ' || event.key === 'Spacebar' || event.key === 'Enter') {
+          event.preventDefault();
+          $(this).trigger('click');
+        }
+      });
 
       // Add event to the button custom items
       this.elems.document.on(
@@ -265,10 +277,15 @@
           var target_li = target.closest('li');
           var global_this = this;
 
+          if (target.closest('.pp-checklists-check-item').attr('aria-disabled') === 'true') {
+            return;
+          }
+
           $('.pp-checklists-req').find('.request-response').html('');
 
           if (typeof target_li !== 'undefined') {
-            target_li.find('.pp-checklists-check-item').prop('disabled', true);
+            // aria-disabled instead of disabled keeps focus on the button during the request
+            target_li.find('.pp-checklists-check-item').attr({'aria-disabled': 'true', 'aria-busy': 'true'});
             target_li.find('.spinner').addClass('is-active');
 
             var data = {
@@ -300,24 +317,17 @@
               }
               target_li
                 .find('.request-response')
-                .html(
-                  '<div id="message" class="ppch-message notice is-dismissible updated published"><p>' +
-                  response_content +
-                  '</p><button type="button" class="notice-dismiss" onclick="this.closest(\'#message\').remove();"><span class="screen-reader-text">Dismiss this notice.</span></button></div>',
-                );
-              target_li.find('.pp-checklists-check-item').prop('disabled', false);
+                .html(global_this.get_check_response_notice(response_content, 'notice-success'));
+              target_li.find('.pp-checklists-check-item').removeAttr('aria-disabled aria-busy');
               target_li.find('.spinner').removeClass('is-active');
             }).fail(function (jqXHR, textStatus, errorThrown) {
               target_li
                 .find('.request-response')
-                .html(
-                  '<div id="message" class="ppch-message notice is-dismissible updated published"><p>' +
-                  errorThrown +
-                  ' ' +
-                  textStatus +
-                  '</p><button type="button" class="notice-dismiss" onclick="this.closest(\'#message\').remove();"><span class="screen-reader-text">Dismiss this notice.</span></button></div>',
-                );
-              target_li.find('.pp-checklists-check-item').prop('disabled', false);
+                .html(global_this.get_check_response_notice(
+                  $('<div>').text(errorThrown + ' ' + textStatus).html(),
+                  'notice-error',
+                ));
+              target_li.find('.pp-checklists-check-item').removeAttr('aria-disabled aria-busy');
               target_li.find('.spinner').removeClass('is-active');
             });
           }
@@ -334,6 +344,8 @@
             completeIcon = customIcons.complete || 'dashicons-yes',
             incompleteIcon = customIcons.incomplete || 'dashicons-no',
             checked = $icon.hasClass(completeIcon);
+
+          this.set_requirement_a11y_state($item, !checked);
 
           $icon.removeClass(incompleteIcon);
 
@@ -440,7 +452,128 @@
       }
 
       $(contentSelector).html(message);
+
+      // Remember where focus was so it can go back there when the modal closes
+      this.state.modal_return_focus = document.activeElement;
       instance.open();
+    },
+
+    /**
+     * Updates the text alternatives of a requirement item and announces the
+     * change to screen readers. Only real state changes are announced, so the
+     * periodic re-validation stays silent.
+     *
+     * @param  {Object}  $item        The requirement <li>
+     * @param  {Boolean} is_completed The new state
+     * @return {void}
+     */
+    set_requirement_a11y_state: function ($item, is_completed) {
+      if (!$item || $item.length === 0) {
+        return;
+      }
+
+      var was_completed = $item.hasClass('status-yes'),
+        $label = $item.children('.status-label');
+
+      $item.find('.ppch-status-text').text(
+        (is_completed ? ppChecklists.a11y_status_completed : ppChecklists.a11y_status_not_completed) + ':'
+      );
+
+      if ($label.is('[role="checkbox"]')) {
+        $label.attr('aria-checked', is_completed ? 'true' : 'false');
+      }
+
+      if (was_completed === is_completed || typeof wp === 'undefined' || !wp.a11y || !wp.a11y.speak) {
+        return;
+      }
+
+      var label_text = $label.clone().find('.screen-reader-text, .required').remove().end().text().trim();
+
+      wp.a11y.speak(
+        label_text + ': ' + (is_completed ? ppChecklists.a11y_completed : ppChecklists.a11y_not_completed),
+        'polite'
+      );
+    },
+
+    /**
+     * Builds the dismissible notice shown below a "Check Now" button.
+     *
+     * @param  {String} content    HTML content of the notice
+     * @param  {String} type_class notice-success or notice-error
+     * @return {String}
+     */
+    get_check_response_notice: function (content, type_class) {
+      return (
+        '<div class="ppch-message notice is-dismissible ' + type_class + '"><p>' +
+        content +
+        '</p><button type="button" class="notice-dismiss" onclick="this.closest(\'.ppch-message\').remove();"><span class="screen-reader-text">' +
+        ppChecklists.a11y_dismiss_notice +
+        '</span></button></div>'
+      );
+    },
+
+    /**
+     * Keeps keyboard focus inside an open checklist modal and returns it to
+     * where it was once the modal closes. Remodal does neither on its own.
+     *
+     * @return {void}
+     */
+    init_modal_focus: function () {
+      this.elems.document.on(
+        'opened',
+        '.remodal',
+        function (event) {
+          $(event.target).find('button').first().trigger('focus');
+        },
+      );
+
+      this.elems.document.on(
+        'keydown',
+        '.remodal.pp-checklists-modal',
+        function (event) {
+          if (event.key !== 'Tab') {
+            return;
+          }
+
+          var $buttons = $(this).find('button:visible'),
+            first = $buttons.get(0),
+            last = $buttons.get($buttons.length - 1);
+
+          if (!first) {
+            return;
+          }
+
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          } else if ($buttons.index(document.activeElement) === -1) {
+            event.preventDefault();
+            first.focus();
+          }
+        },
+      );
+
+      this.elems.document.on(
+        'closed',
+        '.remodal',
+        function (event) {
+          if (event.reason === 'confirmation') {
+            return;
+          }
+
+          var $target = $(this.state.modal_return_focus);
+
+          if (!$target.length || !$target.is(':visible')) {
+            $target = this.elems.publish_button;
+          }
+
+          $target.trigger('focus');
+          this.state.modal_return_focus = null;
+        }.bind(this),
+      );
     },
 
     /**
@@ -669,6 +802,52 @@
       }
     },
 
+    /**
+     * Exposes the visual "locked" and "warning" states of the publish buttons to
+     * assistive technology. Runs on every tic because the block editor re-renders
+     * its button and drops attributes it does not manage.
+     *
+     * @return {void}
+     */
+    sync_publish_button_a11y: function () {
+      var $body = $('body'),
+        is_locked = $body.hasClass('ppch-publish-locked'),
+        has_warning = is_locked || $body.hasClass('ppch-show-publishing-warning-icon'),
+        note_id = 'ppch-publish-requirements-note',
+        $buttons = $('#publish, .editor-post-publish-button');
+
+      if (has_warning && $('#' + note_id).length === 0) {
+        $('<span>', {id: note_id, 'class': 'screen-reader-text'})
+          .text(ppChecklists.title_warning_icon)
+          .appendTo($body);
+      }
+
+      $buttons.each(function () {
+        var $button = $(this),
+          described_by = ($button.attr('aria-describedby') || '').split(/\s+/).filter(function (id) {
+            return id && id !== note_id;
+          });
+
+        if (has_warning) {
+          described_by.push(note_id);
+        }
+
+        if (described_by.length) {
+          $button.attr('aria-describedby', described_by.join(' '));
+        } else {
+          $button.removeAttr('aria-describedby');
+        }
+      });
+
+      var $block_button = $('.editor-post-publish-button');
+
+      if (is_locked) {
+        $block_button.attr('aria-disabled', 'true').data('ppch-aria-disabled', true);
+      } else if ($block_button.data('ppch-aria-disabled')) {
+        $block_button.removeAttr('aria-disabled').removeData('ppch-aria-disabled');
+      }
+    },
+
     getCurrentPostStatus: function () {
       if (PP_Checklists.is_gutenberg_active()) {
         return wp.data.select('core/editor').getEditedPostAttribute('status');
@@ -692,7 +871,9 @@
       var customIcons = ppChecklists.customIcons || {};
       var completeIcon = customIcons.complete || 'dashicons-yes';
       var incompleteIcon = customIcons.incomplete || 'dashicons-no';
-      
+
+      this.set_requirement_a11y_state($element, !!is_completed);
+
       if (is_completed) {
         // Ok
         $icon_element.removeClass(incompleteIcon);
@@ -1226,6 +1407,10 @@
       }
     });
   }
+
+  $(document).on(PP_Checklists.EVENT_TIC, function () {
+    PP_Checklists.sync_publish_button_a11y();
+  });
 
   /*----------  Disable publish button  ----------*/
   // Disable first save button until requirements are meet when "Include pre-publish checklist" is disabled

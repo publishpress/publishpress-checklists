@@ -641,15 +641,15 @@ if (!class_exists('PPCH_Checklists')) {
                     $legacyPlugin = Factory::getLegacyPlugin();
                     $settings_options = isset($legacyPlugin->settings->module->options) ? $legacyPlugin->settings->module->options : null;
                     
-                    $required_complete_color = isset($settings_options->required_complete_color) ? $settings_options->required_complete_color : '#66bb6a';
-                    $required_incomplete_color = isset($settings_options->required_incomplete_color) ? $settings_options->required_incomplete_color : '#ef5350';
-                    $required_asterisk_color = isset($settings_options->required_asterisk_color) ? $settings_options->required_asterisk_color : '#ef5350';
-                    $recommended_complete_color = isset($settings_options->recommended_complete_color) ? $settings_options->recommended_complete_color : '#66bb6a';
-                    $recommended_incomplete_color = isset($settings_options->recommended_incomplete_color) ? $settings_options->recommended_incomplete_color : '#ef5350';
+                    $required_complete_color = isset($settings_options->required_complete_color) ? $settings_options->required_complete_color : '#2e7d32';
+                    $required_incomplete_color = isset($settings_options->required_incomplete_color) ? $settings_options->required_incomplete_color : '#c62828';
+                    $required_asterisk_color = isset($settings_options->required_asterisk_color) ? $settings_options->required_asterisk_color : '#c62828';
+                    $recommended_complete_color = isset($settings_options->recommended_complete_color) ? $settings_options->recommended_complete_color : '#2e7d32';
+                    $recommended_incomplete_color = isset($settings_options->recommended_incomplete_color) ? $settings_options->recommended_incomplete_color : '#c62828';
 
                     $required_asterisk_color = sanitize_hex_color($required_asterisk_color);
                     if (empty($required_asterisk_color)) {
-                        $required_asterisk_color = '#ef5350';
+                        $required_asterisk_color = '#c62828';
                     }
 
                     $custom_css = "
@@ -1011,6 +1011,31 @@ if (!class_exists('PPCH_Checklists')) {
                     text-align: left;
                     display: inline-block;
                 }
+
+                .remodal.pp-checklists-modal .remodal-confirm {
+                    background: #2e7d32;
+                }
+
+                .remodal.pp-checklists-modal .remodal-confirm:hover,
+                .remodal.pp-checklists-modal .remodal-confirm:focus {
+                    background: #1b5e20;
+                }
+
+                .remodal.pp-checklists-modal .remodal-cancel {
+                    background: #c62828;
+                }
+
+                .remodal.pp-checklists-modal .remodal-cancel:hover,
+                .remodal.pp-checklists-modal .remodal-cancel:focus {
+                    background: #b71c1c;
+                }
+
+                .remodal.pp-checklists-modal .remodal-confirm:focus-visible,
+                .remodal.pp-checklists-modal .remodal-cancel:focus-visible {
+                    outline: 2px solid #2271b1;
+                    outline-offset: 2px;
+                    box-shadow: 0 0 0 4px #fff;
+                }
             ';
         }
 
@@ -1043,7 +1068,7 @@ if (!class_exists('PPCH_Checklists')) {
                 wp_enqueue_script(
                     'pp-checklists-requirements',
                     $this->module_url . 'assets/js/meta-box.js',
-                    ['jquery', 'word-count'],
+                    ['jquery', 'word-count', 'wp-a11y'],
                     PPCH_VERSION,
                     true
                 );
@@ -1104,6 +1129,11 @@ if (!class_exists('PPCH_Checklists')) {
                             'incomplete' => $incomplete_icon,
                         ],
                         'internal_link_hosts'      => $this->get_internal_link_hosts(),
+                        'a11y_completed'           => esc_html__('completed', 'publishpress-checklists'),
+                        'a11y_not_completed'       => esc_html__('not completed', 'publishpress-checklists'),
+                        'a11y_status_completed'    => esc_html__('Completed', 'publishpress-checklists'),
+                        'a11y_status_not_completed' => esc_html__('Not completed', 'publishpress-checklists'),
+                        'a11y_dismiss_notice'      => esc_html__('Dismiss this notice.', 'publishpress-checklists'),
                         /* translators: Live count badge next to a counter task with a maximum. %1$s is the current count, %2$s is the maximum. */
                         'live_count_max'           => __('%1$s / %2$s', 'publishpress-checklists'),
                         /* translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum. */
@@ -1146,7 +1176,9 @@ if (!class_exists('PPCH_Checklists')) {
                         'ok'                      => esc_html__('Ok', 'publishpress-checklists'),
                         'no'                      => esc_html__('No', 'publishpress-checklists'),
                         'yes'                     => esc_html__('Yes', 'publishpress-checklists'),
-
+                        'completed'               => esc_html__('Completed', 'publishpress-checklists'),
+                        'not_completed'           => esc_html__('Not completed', 'publishpress-checklists'),
+                        'modal_label'             => esc_html__('Checklist requirements', 'publishpress-checklists'),
                     ],
                 ]
             );
@@ -1458,6 +1490,8 @@ if (!class_exists('PPCH_Checklists')) {
                             'required' => __("required", "publishpress-checklists"),
                             'requiredHeading' => __("Required", "publishpress-checklists"),
                             'recommendedHeading' => __("Recommended", "publishpress-checklists"),
+                            'statusCompleted' => __("Completed", "publishpress-checklists"),
+                            'statusNotCompleted' => __("Not completed", "publishpress-checklists"),
                             'checklistItemsSortOrder' => $checklist_items_sort_order,
                             'showRuleHeadings' => $checklist_items_sort_order === 'required_recommended' ? "1" : "0",
                             'elementorNotice' => __("Checklists tasks are not available in Elementor editors", "publishpress-checklists"),
@@ -1468,8 +1502,8 @@ if (!class_exists('PPCH_Checklists')) {
                                 'incomplete' => $incomplete_icon,
                             ),
                             'customColors' => array(
-                                'complete' => isset($settings_options->complete_color) ? $settings_options->complete_color : '#66bb6a',
-                                'incomplete' => isset($settings_options->incomplete_color) ? $settings_options->incomplete_color : '#ef5350',
+                                'complete' => isset($settings_options->complete_color) ? $settings_options->complete_color : '#2e7d32',
+                                'incomplete' => isset($settings_options->incomplete_color) ? $settings_options->incomplete_color : '#c62828',
                             ),
                         )
                     );
