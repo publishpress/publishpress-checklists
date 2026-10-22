@@ -8,7 +8,7 @@
  * Author URI:  https://publishpress.com
  * License:     GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Version: 2.29.0
+ * Version: 2.30.0
  * Text Domain: publishpress-checklists
  * Domain Path: /languages
  * Requires at least: 5.5
@@ -63,7 +63,7 @@ if (class_exists('PublishPressInstanceProtection\\Config')) {
 if (!defined('PPCH_LOADED')) {
     define('PPCH_LOADED', 1);
     define('PPCH_PATH_BASE', plugin_dir_path(__FILE__));
-    define('PPCH_VERSION', '2.29.0');
+    define('PPCH_VERSION', '2.30.0');
     define('PPCH_FILE', __DIR__ . '/publishpress-checklists.php');
     define('PPCH_MODULES_PATH', PPCH_PATH_BASE . '/modules');
     define('PPCH_RELATIVE_PATH', 'publishpress-checklists');

@@ -236,6 +236,20 @@ textarea.pp-checklists-custom-item-title {
   border: 1px solid silver;
   padding: 10px;
   line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/*
+ * WordPress core gives ".button .dashicons" a 1.9 line-height (38px here),
+ * which draws the plus icon below the label. Centre it with the text instead.
+ */
+#pp-checklists-add-button .dashicons,
+#pp-checklists-openai-promt-button .dashicons {
+  flex-shrink: 0;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 /*
