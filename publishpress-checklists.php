@@ -12,7 +12,7 @@
  * Text Domain: publishpress-checklists
  * Domain Path: /languages
  * Requires at least: 5.5
- * Requires PHP: 7.2.5
+ * Requires PHP: 8.2
  *
  * PublishPress Checklists plugin bootstrap file.
  *
@@ -33,7 +33,7 @@ use PublishPress\Checklists\Core\Plugin;
 
 global $wp_version;
 
-$min_php_version = '7.2.5';
+$min_php_version = '8.2';
 $min_wp_version  = '5.5';
 
 // If the PHP or WP version is not compatible, terminate the plugin execution.

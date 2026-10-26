@@ -5,7 +5,7 @@ Author: PublishPress
 Author URI: https://publishpress.com
 Tags: approval, checklist, maximum, minimum, requirement
 Requires at least: 5.5
-Requires PHP: 7.2.5
+Requires PHP: 8.2
 Tested up to: 7.1
 Stable tag: 2.30.0
 License: GPLv2 or later

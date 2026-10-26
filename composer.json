@@ -23,7 +23,7 @@
     }
   },
   "require": {
-    "php": ">=7.2.5"
+    "php": ">=8.2"
   },
   "require-dev": {
     "publishpress/dev-workspace": "^2.0.4",
