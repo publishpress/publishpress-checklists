@@ -1,6 +1,6 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-[2.30.0] - 20 October, 2026
+[2.30.0] - 27 October, 2026
 
 - Added: Counter tasks now show a live count in the editor #1218
 - Added: Custom tasks can have multi-line titles #1219
