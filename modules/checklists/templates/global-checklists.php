@@ -1,3 +1,4 @@
+<?php defined('ABSPATH') || exit; ?>
 <form method="post" id="pp-checklists-global">
     <?php wp_nonce_field('ppch-global-checklists'); ?>
 

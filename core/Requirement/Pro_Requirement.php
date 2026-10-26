@@ -5,7 +5,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 use PublishPress\Checklists\Core\Requirement\Base_simple;
 use PublishPress\Checklists\Core\Requirement\Interface_required;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 /**
  * Generic runner for Pro requirements defined in config.

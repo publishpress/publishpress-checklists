@@ -10,7 +10,7 @@
 
 namespace PublishPress\Checklists\Core\Requirement;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Featured_image_alt extends Base_simple
 {

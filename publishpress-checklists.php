@@ -31,6 +31,8 @@ use PPVersionNotices\Module\MenuLink\Module;
 use PublishPress\Checklists\Core\Autoloader;
 use PublishPress\Checklists\Core\Plugin;
 
+defined('ABSPATH') || exit;
+
 global $wp_version;
 
 $min_php_version = '8.2';

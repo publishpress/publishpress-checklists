@@ -13,6 +13,8 @@ namespace PublishPress\Checklists\Yoastseo\Requirement;
 use PublishPress\Checklists\Core\Requirement\Base_dropdown;
 use stdClass;
 
+\defined('ABSPATH') || exit;
+
 class Readability_Analysis extends Base_dropdown
 {
 

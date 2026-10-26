@@ -9,6 +9,8 @@ use PublishPress\Checklists\Yoastseo\Requirement\Seo_Analysis;
 use PublishPress\Checklists\Yoastseo\Requirement\Focus_Keyword;
 use PublishPress\Checklists\Yoastseo\Requirement\Meta_Description;
 
+defined('ABSPATH') || exit;
+
 /**
  * @package     PublishPress\Checklists
  * @author      PublishPress <help@publishpress.com>

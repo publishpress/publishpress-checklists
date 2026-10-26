@@ -12,7 +12,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 use PublishPress\Checklists\Core\Factory;
 use PPCH_Checklists;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Openai_item extends Base_simple implements Interface_required
 {

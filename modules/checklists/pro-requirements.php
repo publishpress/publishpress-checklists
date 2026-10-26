@@ -13,6 +13,8 @@
  *
  * @since 1.0.0
  */
+defined('ABSPATH') || exit;
+
 $static = [
     [
         'id'       => 'all_in_one_seo_headline_score',

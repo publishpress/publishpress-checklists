@@ -9,6 +9,8 @@
 
 namespace PublishPress\Checklists\Core\Utils;
 
+\defined('ABSPATH') || exit;
+
 /**
  * Saves the state of tasks the user ticks by hand (custom tasks, OpenAI tasks,
  * "Approved by") in the block editor.

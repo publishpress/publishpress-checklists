@@ -4,6 +4,8 @@ use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Legacy\LegacyPlugin;
 use PublishPress\Checklists\Core\Legacy\Module;
 
+defined('ABSPATH') || exit;
+
 /**
  * @package     PublishPress\Checklists
  * @author      PublishPress <help@publishpress.com>

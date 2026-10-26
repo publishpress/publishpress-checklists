@@ -11,7 +11,7 @@ namespace PublishPress\Checklists\Core\API;
 
 use PublishPress\Checklists\Core\Plugin;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 /**
  * Class to map frontend labels to backend rules

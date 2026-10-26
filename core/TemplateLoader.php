@@ -10,6 +10,8 @@
 namespace PublishPress\Checklists\Core;
 
 
+\defined('ABSPATH') || exit;
+
 class TemplateLoader
 {
     /**

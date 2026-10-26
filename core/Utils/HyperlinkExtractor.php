@@ -10,6 +10,8 @@
 namespace PublishPress\Checklists\Core\Utils;
 
 
+\defined('ABSPATH') || exit;
+
 class HyperlinkExtractor
 {
     /**

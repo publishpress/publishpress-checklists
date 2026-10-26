@@ -11,6 +11,8 @@ namespace PublishPress\Checklists\Core\Utils;
 
 use PublishPress\Checklists\Core\Legacy\Util;
 
+\defined('ABSPATH') || exit;
+
 class FieldsTabs {
     private static $instance = null;
     private $fields_tabs;

@@ -12,6 +12,8 @@ namespace PublishPress\Checklists\Core\Legacy;
 
 use PublishPress\Checklists\Core\Factory;
 
+\defined('ABSPATH') || exit;
+
 /**
  * Module
  */

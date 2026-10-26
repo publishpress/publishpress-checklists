@@ -1,3 +1,4 @@
+<?php defined('ABSPATH') || exit; ?>
 <br style="clear: both;">
 <footer>
     <div class="pp-rating">

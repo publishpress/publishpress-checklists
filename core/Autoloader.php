@@ -2,6 +2,8 @@
 
 namespace PublishPress\Checklists\Core;
 
+\defined('ABSPATH') || exit;
+
 class Autoloader
 {
     private static $namespaces = [];

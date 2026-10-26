@@ -10,6 +10,8 @@
 
 namespace PublishPress\Checklists\Core\Legacy;
 
+\defined('ABSPATH') || exit;
+
 class Util
 {
     /**

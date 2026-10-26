@@ -1,3 +1,4 @@
+<?php defined('ABSPATH') || exit; ?>
 <form class="basic-settings" action="<?php echo esc_url($context['form_action']); ?>" method="post">
     <?php settings_fields($context['options_group_name']); ?>
     <?php do_settings_sections($context['options_group_name']); ?>

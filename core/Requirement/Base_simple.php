@@ -11,7 +11,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 
 use PublishPress\Checklists\Core\Plugin;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Base_simple extends Base_requirement implements Interface_required
 {

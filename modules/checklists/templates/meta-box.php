@@ -1,11 +1,14 @@
 <?php
+use PublishPress\Checklists\Core\Utils\ElementorUtils;
+
+defined('ABSPATH') || exit;
+
 $show_required_legend = false;
 $show_rule_headings = !empty($context['show_rule_headings']);
 $rule_heading_shown = [
     'block' => false,
     'warning' => false,
 ];
-use PublishPress\Checklists\Core\Utils\ElementorUtils;
 ?>
 
 <div class="pp-checklists">
