@@ -11,6 +11,8 @@ namespace PublishPress\Checklists\Core\Legacy;
 
 use stdClass;
 
+\defined('ABSPATH') || exit;
+
 /**
  * Legacy plugin class, porting the PublishPress dependencies.
  */

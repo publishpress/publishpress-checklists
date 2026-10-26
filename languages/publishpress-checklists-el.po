@@ -12,8 +12,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-08-10 15:20+0000\n"
-"X-Generator: Weblate 5.14.3\n"
+"PO-Revision-Date: 2026-10-26 16:54+0000\n"
+"X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: el\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
-#: publishpress-checklists.php:5, fuzzy
+#: publishpress-checklists.php:5
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: publishpress-checklists.php:8, fuzzy
+#: publishpress-checklists.php:8
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
@@ -55,16 +55,16 @@ msgstr "Απενεργοποιημένο"
 #: core/API/LabelMapper.php:40
 #: modules/checklists/checklists.php:1029
 #: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1304
-#: modules/checklists/assets/js/gutenberg-panel.jsx:437
+#: modules/checklists/checklists.php:1306
+#: modules/checklists/assets/js/gutenberg-panel.jsx:464
 msgid "Recommended"
 msgstr "Συνιστώμενο"
 
 #: core/API/LabelMapper.php:41
 #: modules/checklists/checklists.php:1028
 #: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1303
-#: modules/checklists/assets/js/gutenberg-panel.jsx:436
+#: modules/checklists/checklists.php:1305
+#: modules/checklists/assets/js/gutenberg-panel.jsx:463
 msgid "Required"
 msgstr "Απαιτείται"
 
@@ -73,7 +73,7 @@ msgid "Please correct your form errors below and try again."
 msgstr "Παρακαλώ διορθώστε τα σφάλματα της φόρμας σας παρακάτω και προσπαθήστε ξανά."
 
 #: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:516, fuzzy
+#: modules/settings/settings.php:523, fuzzy
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
@@ -86,12 +86,12 @@ msgid "Post does not exist"
 msgstr "Η ανάρτηση δεν υπάρχει"
 
 #: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:103
+#: core/Plugin.php:78
 #: modules/checklists/checklists.php:110
 #: modules/checklists/checklists.php:1132
 #: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1300
-#: modules/checklists/assets/js/gutenberg-panel.jsx:411
+#: modules/checklists/checklists.php:1302
+#: modules/checklists/assets/js/gutenberg-panel.jsx:438
 msgid "Checklists"
 msgstr "Λίστες ελέγχου"
 
@@ -126,12 +126,12 @@ msgstr "Λεπτομερής τεκμηρίωση είναι επίσης δια
 msgid "View Knowledge Base"
 msgstr "Δείτε τη βάση γνώσεων"
 
-#: core/Plugin.php:104
+#: core/Plugin.php:79
 #: modules/settings/settings.php:134
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: core/Plugin.php:112
+#: core/Plugin.php:87
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "Αναβάθμιση σε Pro"
@@ -868,7 +868,7 @@ msgid "Checklist"
 msgstr "Λίστα Ελέγχου"
 
 #: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1303
 msgid "You don't have to complete any Checklist tasks."
 msgstr "Δεν χρειάζεται να ολοκληρώσετε καμία εργασία της Λίστας Ελέγχου."
 
@@ -907,7 +907,7 @@ msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "Δεν χρειάζεται να ολοκληρώσετε καμία %sεργασία λίστας ελέγχου%s."
 
 #: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:473
+#: modules/checklists/assets/js/gutenberg-panel.jsx:500
 msgid "Check Now"
 msgstr "Ελέγξτε τώρα"
 
@@ -939,15 +939,15 @@ msgstr "Επιλογές"
 msgid "Add custom task"
 msgstr "Προσθήκη προσαρμοσμένης εργασίας"
 
-#: modules/checklists/checklists.php:1299
+#: modules/checklists/checklists.php:1301
 msgid "Please complete the required(*) checklists task."
 msgstr "Παρακαλώ ολοκληρώστε την απαιτούμενη(*) εργασία λίστας ελέγχου."
 
-#: modules/checklists/checklists.php:1302
+#: modules/checklists/checklists.php:1304
 msgid "required"
 msgstr "απαιτείται"
 
-#: modules/checklists/checklists.php:1307
+#: modules/checklists/checklists.php:1309
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Οι εργασίες λίστας ελέγχου δεν είναι διαθέσιμες στους επεξεργαστές Elementor"
@@ -1185,7 +1185,7 @@ msgstr "Κριτικές"
 msgid "Checklists Settings"
 msgstr "Ρυθμίσεις Λιστών Ελέγχου"
 
-#: modules/settings/settings.php:155
+#: modules/settings/settings.php:162
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
@@ -1194,32 +1194,32 @@ msgstr ""
 "λίστας ελέγχου στις προεπιλεγμένες ετικέτες τους; Αυτή η ενέργεια δεν "
 "μπορεί να αναιρεθεί."
 
-#: modules/settings/settings.php:156
+#: modules/settings/settings.php:163
 msgid "Resetting..."
 msgstr "Επαναφορά..."
 
-#: modules/settings/settings.php:157
-#: modules/settings/settings.php:1556
+#: modules/settings/settings.php:164
+#: modules/settings/settings.php:1602
 msgid "Reset All Renamed Labels"
 msgstr "Επαναφορά Όλων των Μετονομασμένων Ετικετών"
 
-#: modules/settings/settings.php:320
+#: modules/settings/settings.php:327
 msgid "Features"
 msgstr "Δυνατότητες"
 
-#: modules/settings/settings.php:321
+#: modules/settings/settings.php:328
 msgid "Feel free to select only the features you need."
 msgstr "Μη διστάσετε να επιλέξετε μόνο τις δυνατότητες που χρειάζεστε."
 
-#: modules/settings/settings.php:329
+#: modules/settings/settings.php:336
 msgid "Enabled features"
 msgstr "Ενεργοποιημένες δυνατότητες"
 
-#: modules/settings/settings.php:384
+#: modules/settings/settings.php:391
 msgid "There are no PublishPress modules registered"
 msgstr "Δεν υπάρχουν καταχωρημένα modules PublishPress"
 
-#: modules/settings/settings.php:480
+#: modules/settings/settings.php:487
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
@@ -1228,101 +1228,101 @@ msgstr ""
 "Απενεργοποιημένο επειδή το add_post_type_support('%1$s', '%2$s') "
 "περιλαμβάνεται σε ένα φορτωμένο αρχείο."
 
-#: modules/settings/settings.php:797
+#: modules/settings/settings.php:812
 msgid "Enable User Roles Filter:"
 msgstr "Ενεργοποίηση φίλτρου Ρόλων Χρηστών:"
 
-#: modules/settings/settings.php:805
+#: modules/settings/settings.php:820
 msgid "Show warning icon:"
 msgstr "Εμφάνιση εικονιδίου προειδοποίησης:"
 
-#: modules/settings/settings.php:813
+#: modules/settings/settings.php:828
 msgid "Highlight failing blocks in the editor:"
 msgstr "Επισήμανση αποτυχημένων μπλοκ στο επεξεργαστή:"
 
-#: modules/settings/settings.php:821
+#: modules/settings/settings.php:836
 msgid "Delete data on uninstall:"
 msgstr "Διαγραφή δεδομένων κατά την απεγκατάσταση:"
 
-#: modules/settings/settings.php:830
+#: modules/settings/settings.php:845
 msgid "Enable Status Filter:"
 msgstr "Ενεργοποίηση φίλτρου κατάστασης:"
 
-#: modules/settings/settings.php:840
+#: modules/settings/settings.php:855
 msgid "Enable Duplicate Checklists:"
 msgstr "Ενεργοποίηση διπλών λιστών ελέγχου:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:865
 msgid "Show Checklists column in post lists:"
 msgstr "Εμφάνιση στήλης λιστών ελέγχου στις λίστες αναρτήσεων:"
 
-#: modules/settings/settings.php:860
+#: modules/settings/settings.php:875
 msgid "Enable Taxonomy Filter:"
 msgstr "Ενεργοποίηση φίλτρου κατηγοριών:"
 
-#: modules/settings/settings.php:879
+#: modules/settings/settings.php:894
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr ""
 "Απενεργοποίηση της επιλογής \"Κατάσταση\" κατά τη χρήση \"Γρήγορης "
 "Επεξεργασίας\":"
 
-#: modules/settings/settings.php:887
+#: modules/settings/settings.php:902
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Απενεργοποίηση της \"Γρήγορης Επεξεργασίας\" εντελώς:"
 
-#: modules/settings/settings.php:895
+#: modules/settings/settings.php:910
 msgid "Disable \"Publish\" button:"
 msgstr "Απενεργοποίηση του κουμπιού \"Δημοσίευση\":"
 
-#: modules/settings/settings.php:913
+#: modules/settings/settings.php:928
 msgid "Complete Icon:"
 msgstr "Εικονίδιο Ολοκλήρωσης:"
 
-#: modules/settings/settings.php:921
+#: modules/settings/settings.php:936
 msgid "Incomplete Icon:"
 msgstr "Εικονίδιο Μη Ολοκλήρωσης:"
 
-#: modules/settings/settings.php:929
+#: modules/settings/settings.php:944
 msgid "Required Complete Color:"
 msgstr "Απαιτούμενο Χρώμα Ολοκλήρωσης:"
 
-#: modules/settings/settings.php:937
+#: modules/settings/settings.php:952
 msgid "Required Incomplete Color:"
 msgstr "Απαιτούμενο Χρώμα Μη Ολοκλήρωσης:"
 
-#: modules/settings/settings.php:945
+#: modules/settings/settings.php:960
 msgid "Required Asterisk Color:"
 msgstr "Απαιτούμενο Χρώμα Αστερίσκου:"
 
-#: modules/settings/settings.php:953
+#: modules/settings/settings.php:968
 msgid "Recommended Complete Color:"
 msgstr "Συνιστώμενο Χρώμα Ολοκλήρωσης:"
 
-#: modules/settings/settings.php:961
+#: modules/settings/settings.php:976
 msgid "Recommended Incomplete Color:"
 msgstr "Συνιστώμενο Χρώμα Μη Ολοκλήρωσης:"
 
-#: modules/settings/settings.php:969
+#: modules/settings/settings.php:984
 msgid "Rename task labels:"
 msgstr "Μετονομασία ετικετών εργασιών:"
 
-#: modules/settings/settings.php:977
+#: modules/settings/settings.php:992
 msgid "Checklist task sort order:"
 msgstr "Σειρά ταξινόμησης εργασιών λίστας ελέγχου:"
 
-#: modules/settings/settings.php:995
+#: modules/settings/settings.php:1010
 msgid "OpenAI API Key:"
 msgstr "Κλειδί API OpenAI:"
 
-#: modules/settings/settings.php:1010
+#: modules/settings/settings.php:1025
 msgid "Reset Renamed Checklist:"
 msgstr "Επαναφορά μετονομασμένης λίστας ελέγχου:"
 
-#: modules/settings/settings.php:1029
+#: modules/settings/settings.php:1044
 msgid "Post types:"
 msgstr "Τύποι δημοσιεύσεων:"
 
-#: modules/settings/settings.php:1062
+#: modules/settings/settings.php:1077
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1330,13 +1330,13 @@ msgstr ""
 "Αυτό επιτρέπει την απενεργοποίηση εργασιών για συγκεκριμένες καταστάσεις "
 "όπως \"Πρόχειρο\" ή \"Δημοσιευμένο.\""
 
-#: modules/settings/settings.php:1083
+#: modules/settings/settings.php:1098
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
 "Αυτό επιτρέπει στους χρήστες να διπλασιάζουν υπάρχουσες εργασίες λίστας "
 "ελέγχου."
 
-#: modules/settings/settings.php:1105
+#: modules/settings/settings.php:1120
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1344,7 +1344,7 @@ msgstr ""
 "Προσθέστε μια στήλη Λιστών Ελέγχου στην οθόνη Δημοσιεύσεων που να δείχνει "
 "πόσες απαιτήσεις έχουν ολοκληρωθεί."
 
-#: modules/settings/settings.php:1126
+#: modules/settings/settings.php:1141
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1353,7 +1353,7 @@ msgstr ""
 "συγκεκριμένους όρους ταξινόμησης. Μεταβείτε στην καρτέλα \"Τύποι "
 "Δημοσιεύσεων\" για να επιλέξετε τους όρους."
 
-#: modules/settings/settings.php:1148
+#: modules/settings/settings.php:1163
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1361,7 +1361,7 @@ msgstr ""
 "Αυτό θα εμφανίσει ένα εικονίδιο προειδοποίησης στο πλαίσιο \"Λίστες "
 "Ελέγχου\" αν οι απαιτήσεις είναι ατελείς."
 
-#: modules/settings/settings.php:1168
+#: modules/settings/settings.php:1183
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
@@ -1369,7 +1369,7 @@ msgstr ""
 "Αυτό θα επισημάνει τα μπλοκ Gutenberg που αποτυγχάνουν να ολοκληρώσουν τις "
 "εργασίες λίστας ελέγχου συγκεκριμένων μπλοκ."
 
-#: modules/settings/settings.php:1188
+#: modules/settings/settings.php:1203
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1377,11 +1377,11 @@ msgstr ""
 "Όταν είναι ενεργοποιημένο, όλα τα δεδομένα Λιστών Ελέγχου του PublishPress "
 "θα διαγραφούν αν το πρόσθετο απεγκατασταθεί."
 
-#: modules/settings/settings.php:1209
+#: modules/settings/settings.php:1224
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "Αυτό θα δείξει τις επιλογές \"Αποκλεισμός Ρόλων Χρηστών\"."
 
-#: modules/settings/settings.php:1230
+#: modules/settings/settings.php:1245
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1389,7 +1389,7 @@ msgstr ""
 "Συνιστάται η απενεργοποίηση της επιλογής \"Κατάσταση\" διότι μπορεί να "
 "χρησιμοποιηθεί για να αποφευχθεί η χρήση των απαιτήσεων λίστας ελέγχου."
 
-#: modules/settings/settings.php:1251
+#: modules/settings/settings.php:1266
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1397,7 +1397,7 @@ msgstr ""
 "Αυτό θα απενεργοποιήσει την \"Γρήγορη Επεξεργασία\" για όλους τους χρήστες "
 "εκτός από αυτούς με τη δυνατότητα \"manage_options\"."
 
-#: modules/settings/settings.php:1272
+#: modules/settings/settings.php:1287
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
@@ -1405,70 +1405,84 @@ msgstr ""
 "Αυτό θα απενεργοποιήσει το κουμπί \"Δημοσίευση\" όταν οι απαιτήσεις λίστας "
 "ελέγχου δεν πληρούνται."
 
-#: modules/settings/settings.php:1291
+#: modules/settings/settings.php:1306
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
 "Εισάγετε το API Key σας για να χρησιμοποιήσετε τις προτροπές OpenAI στις "
 "εργασίες λίστας ελέγχου."
 
-#: modules/settings/settings.php:1364
+#: modules/settings/settings.php:1379
 msgid "Post Types"
 msgstr "Τύποι Δημοσιεύσεων"
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1380
 msgid "General"
 msgstr "Γενικά"
 
-#: modules/settings/settings.php:1366
+#: modules/settings/settings.php:1381
 msgid "Publishing Options"
 msgstr "Επιλογές Δημοσίευσης"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1382
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: modules/settings/settings.php:1368
+#: modules/settings/settings.php:1383
 msgid "Integration"
 msgstr "Ενσωμάτωση"
 
-#: modules/settings/settings.php:1369
+#: modules/settings/settings.php:1384
 msgid "Tools"
 msgstr "Εργαλεία"
 
-#: modules/settings/settings.php:1416
+#: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "Εισάγετε ένα όνομα κλάσης Dashicons (π.χ., dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
+#: modules/settings/settings.php:1447
 msgid "View Dashicons"
 msgstr "Δείτε τα Dashicons"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 "Εισάγετε ένα όνομα κλάσης Dashicons (π.χ., dashicons-no, "
 "dashicons-dismiss). "
 
-#: modules/settings/settings.php:1514
+#: modules/settings/settings.php:1529
 msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
 "Επιτρέπεται στους διαχειριστές να μετονομάζουν τις ετικέτες εργασιών για "
 "τον επεξεργαστή αναρτήσεων."
 
-#: modules/settings/settings.php:1532
+#: modules/settings/settings.php:1547
 msgid "Default"
 msgstr "Προεπιλογή"
 
-#: modules/settings/settings.php:1533
-msgid "Required on top and Recommended below"
-msgstr "Απαιτείται στην κορυφή και Συνιστάται παρακάτω"
+#: modules/settings/settings.php:1548
+msgid "Priority"
+msgstr "Προτεραιότητα"
 
-#: modules/settings/settings.php:1534
-msgid "Sort alphabetically"
-msgstr "Ταξινόμηση αλφαβητικά"
+#: modules/settings/settings.php:1549
+msgid "Alphabetical"
+msgstr "Αλφαβητικά"
 
-#: modules/settings/settings.php:1558
+#: modules/settings/settings.php:1553
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr ""
+"Διατηρεί τις εργασίες στην παραγγελία που έχει ρυθμιστεί στην οθόνη Λιστών "
+"Ελέγχου."
+
+#: modules/settings/settings.php:1557
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "Εμφανίζει τις Απαιτούμενες εργασίες πριν από τις Προτεινόμενες εργασίες."
+
+#: modules/settings/settings.php:1561
+msgid "Sorts tasks alphabetically by task label."
+msgstr "Ταξινομεί τις εργασίες αλφαβητικά κατά ετικέτα εργασίας."
+
+#: modules/settings/settings.php:1604
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
@@ -1476,15 +1490,15 @@ msgstr ""
 "Αυτό θα επαναφέρει όλες τις μετονομασμένες ετικέτες λίστας ελέγχου για το "
 "WP Admin και την οθόνη επεξεργασίας πίσω στις προεπιλεγμένες ετικέτες τους."
 
-#: modules/settings/settings.php:1568
+#: modules/settings/settings.php:1614
 msgid "Security check failed."
 msgstr "Η έλεγχος ασφαλείας απέτυχε."
 
-#: modules/settings/settings.php:1573
+#: modules/settings/settings.php:1619
 msgid "You do not have permission to perform this action."
 msgstr "Δεν έχετε άδεια να εκτελέσετε αυτήν την ενέργεια."
 
-#: modules/settings/settings.php:1618
+#: modules/settings/settings.php:1664
 msgid "All renamed labels have been reset successfully."
 msgstr "Όλες οι μετονομασμένες ετικέτες έχουν επαναφερθεί με επιτυχία."
 

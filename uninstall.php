@@ -6,6 +6,8 @@
  * It will remove all plugin data if the user has enabled the "Delete All Data on Uninstall" option.
  */
 
+defined('ABSPATH') || exit;
+
 // If uninstall not called from WordPress, then exit.
 if (!defined('WP_UNINSTALL_PLUGIN')) {
     exit;

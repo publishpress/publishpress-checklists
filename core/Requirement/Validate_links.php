@@ -12,7 +12,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 use PublishPress\Checklists\Core\Utils\HyperlinkExtractor;
 use PublishPress\Checklists\Core\Utils\HyperlinkValidator;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 
 class Validate_links extends Base_simple

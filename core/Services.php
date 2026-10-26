@@ -13,7 +13,7 @@ use PublishPress\Pimple\Container as PimpleContainer;
 use PublishPress\Pimple\ServiceProviderInterface;
 use PublishPress\Checklists\Core\Legacy\LegacyPlugin;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 /**
  * Class Services

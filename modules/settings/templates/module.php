@@ -1,4 +1,6 @@
-<?php if (!empty($context['url'])) : ?>
+<?php defined('ABSPATH') || exit;
+
+if (!empty($context['url'])) : ?>
 <a href="<?php echo esc_url($context['url']); ?>">
     <?php endif; ?>
 

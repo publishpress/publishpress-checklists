@@ -12,8 +12,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-08-10 15:20+0000\n"
-"X-Generator: Weblate 5.14.3\n"
+"PO-Revision-Date: 2026-10-26 16:53+0000\n"
+"X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: nl-NL\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
-#: publishpress-checklists.php:5, fuzzy
+#: publishpress-checklists.php:5
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: publishpress-checklists.php:8, fuzzy
+#: publishpress-checklists.php:8
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
@@ -55,16 +55,16 @@ msgstr "Uitgeschakeld"
 #: core/API/LabelMapper.php:40
 #: modules/checklists/checklists.php:1029
 #: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1304
-#: modules/checklists/assets/js/gutenberg-panel.jsx:437
+#: modules/checklists/checklists.php:1306
+#: modules/checklists/assets/js/gutenberg-panel.jsx:464
 msgid "Recommended"
 msgstr "Aanbevolen"
 
 #: core/API/LabelMapper.php:41
 #: modules/checklists/checklists.php:1028
 #: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1303
-#: modules/checklists/assets/js/gutenberg-panel.jsx:436
+#: modules/checklists/checklists.php:1305
+#: modules/checklists/assets/js/gutenberg-panel.jsx:463
 msgid "Required"
 msgstr "Vereist"
 
@@ -73,7 +73,7 @@ msgid "Please correct your form errors below and try again."
 msgstr "Corrigeer alstublieft uw formulierfouten hieronder en probeer het opnieuw."
 
 #: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:516, fuzzy
+#: modules/settings/settings.php:523, fuzzy
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
@@ -86,12 +86,12 @@ msgid "Post does not exist"
 msgstr "Bericht bestaat niet"
 
 #: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:103
+#: core/Plugin.php:78
 #: modules/checklists/checklists.php:110
 #: modules/checklists/checklists.php:1132
 #: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1300
-#: modules/checklists/assets/js/gutenberg-panel.jsx:411, fuzzy
+#: modules/checklists/checklists.php:1302
+#: modules/checklists/assets/js/gutenberg-panel.jsx:438, fuzzy
 msgid "Checklists"
 msgstr "Checklists"
 
@@ -126,12 +126,12 @@ msgstr "Gedetailleerde documentatie is ook beschikbaar op de pluginwebsite."
 msgid "View Knowledge Base"
 msgstr "Bekijk de kennisbank"
 
-#: core/Plugin.php:104
+#: core/Plugin.php:79
 #: modules/settings/settings.php:134
 msgid "Settings"
 msgstr "Instellingen"
 
-#: core/Plugin.php:112
+#: core/Plugin.php:87
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "Upgrade naar Pro"
@@ -864,7 +864,7 @@ msgid "Checklist"
 msgstr "Checklist"
 
 #: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1303
 msgid "You don't have to complete any Checklist tasks."
 msgstr "Je hoeft geen Checklist-taken te voltooien."
 
@@ -899,7 +899,7 @@ msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "Je hoeft geen %sChecklist-taken%s te voltooien."
 
 #: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:473
+#: modules/checklists/assets/js/gutenberg-panel.jsx:500
 msgid "Check Now"
 msgstr "Nu controleren"
 
@@ -931,15 +931,15 @@ msgstr "Opties"
 msgid "Add custom task"
 msgstr "Voeg een aangepaste taak toe"
 
-#: modules/checklists/checklists.php:1299
+#: modules/checklists/checklists.php:1301
 msgid "Please complete the required(*) checklists task."
 msgstr "Voltooi de vereiste(*) checklist-taak."
 
-#: modules/checklists/checklists.php:1302
+#: modules/checklists/checklists.php:1304
 msgid "required"
 msgstr "vereist"
 
-#: modules/checklists/checklists.php:1307
+#: modules/checklists/checklists.php:1309
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Checklist-taken zijn niet beschikbaar in Elementor-editors"
@@ -1177,7 +1177,7 @@ msgstr "Recensies"
 msgid "Checklists Settings"
 msgstr "Instellingen voor checklists"
 
-#: modules/settings/settings.php:155
+#: modules/settings/settings.php:162
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
@@ -1185,32 +1185,32 @@ msgstr ""
 "Weet u zeker dat u alle hernoemde checklistitems naar hun standaardlabels "
 "wilt terugzetten? Deze actie kan niet ongedaan worden gemaakt."
 
-#: modules/settings/settings.php:156
+#: modules/settings/settings.php:163
 msgid "Resetting..."
 msgstr "Resetten..."
 
-#: modules/settings/settings.php:157
-#: modules/settings/settings.php:1556
+#: modules/settings/settings.php:164
+#: modules/settings/settings.php:1602
 msgid "Reset All Renamed Labels"
 msgstr "Reset Alle Hernoemde Labels"
 
-#: modules/settings/settings.php:320
+#: modules/settings/settings.php:327
 msgid "Features"
 msgstr "Functies"
 
-#: modules/settings/settings.php:321
+#: modules/settings/settings.php:328
 msgid "Feel free to select only the features you need."
 msgstr "Voel je vrij om alleen de functies te selecteren die je nodig hebt."
 
-#: modules/settings/settings.php:329
+#: modules/settings/settings.php:336
 msgid "Enabled features"
 msgstr "Ingeschakelde functies"
 
-#: modules/settings/settings.php:384
+#: modules/settings/settings.php:391
 msgid "There are no PublishPress modules registered"
 msgstr "Er zijn geen PublishPress-modules geregistreerd"
 
-#: modules/settings/settings.php:480
+#: modules/settings/settings.php:487
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
@@ -1219,99 +1219,99 @@ msgstr ""
 "Uitgeschakeld omdat add_post_type_support(''%1$s', ''%2$s') is opgenomen in "
 "een geladen bestand."
 
-#: modules/settings/settings.php:797
+#: modules/settings/settings.php:812
 msgid "Enable User Roles Filter:"
 msgstr "Schakel Gebruikersrollenfilter in:"
 
-#: modules/settings/settings.php:805
+#: modules/settings/settings.php:820
 msgid "Show warning icon:"
 msgstr "Waarschuwingsicoon weergeven:"
 
-#: modules/settings/settings.php:813
+#: modules/settings/settings.php:828
 msgid "Highlight failing blocks in the editor:"
 msgstr "Markeer falende blokken in de editor:"
 
-#: modules/settings/settings.php:821
+#: modules/settings/settings.php:836
 msgid "Delete data on uninstall:"
 msgstr "Verwijder gegevens bij de-installatie:"
 
-#: modules/settings/settings.php:830
+#: modules/settings/settings.php:845
 msgid "Enable Status Filter:"
 msgstr "Schakel Statusfilter in:"
 
-#: modules/settings/settings.php:840
+#: modules/settings/settings.php:855
 msgid "Enable Duplicate Checklists:"
 msgstr "Schakel Dubbele Checklist in:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:865
 msgid "Show Checklists column in post lists:"
 msgstr "Toon Checklist-kolom in berichtenlijsten:"
 
-#: modules/settings/settings.php:860
+#: modules/settings/settings.php:875
 msgid "Enable Taxonomy Filter:"
 msgstr "Schakel Taxonomiefilter in:"
 
-#: modules/settings/settings.php:879
+#: modules/settings/settings.php:894
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Deactiveer de \"Status\" optie bij gebruik van \"Snelle Bewerking\":"
 
-#: modules/settings/settings.php:887
+#: modules/settings/settings.php:902
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Deactiveer \"Snelle Bewerking\" volledig:"
 
-#: modules/settings/settings.php:895
+#: modules/settings/settings.php:910
 msgid "Disable \"Publish\" button:"
 msgstr "Deactiveer \"Publiceren\" knop:"
 
-#: modules/settings/settings.php:913
+#: modules/settings/settings.php:928
 msgid "Complete Icon:"
 msgstr "Voltooid Icoon:"
 
-#: modules/settings/settings.php:921
+#: modules/settings/settings.php:936
 msgid "Incomplete Icon:"
 msgstr "Onvoltooid Icoon:"
 
-#: modules/settings/settings.php:929
+#: modules/settings/settings.php:944
 msgid "Required Complete Color:"
 msgstr "Vereiste Voltooid Kleur:"
 
-#: modules/settings/settings.php:937
+#: modules/settings/settings.php:952
 msgid "Required Incomplete Color:"
 msgstr "Vereiste Onvoltooid Kleur:"
 
-#: modules/settings/settings.php:945
+#: modules/settings/settings.php:960
 msgid "Required Asterisk Color:"
 msgstr "Vereiste Asterisk Kleur:"
 
-#: modules/settings/settings.php:953
+#: modules/settings/settings.php:968
 msgid "Recommended Complete Color:"
 msgstr "Aanbevolen Voltooid Kleur:"
 
-#: modules/settings/settings.php:961
+#: modules/settings/settings.php:976
 msgid "Recommended Incomplete Color:"
 msgstr "Aanbevolen Onvoltooid Kleur:"
 
-#: modules/settings/settings.php:969
+#: modules/settings/settings.php:984
 msgid "Rename task labels:"
 msgstr "Hernoem taaklabels:"
 
-#: modules/settings/settings.php:977
+#: modules/settings/settings.php:992
 msgid "Checklist task sort order:"
 msgstr "Checklist taak sorteervolgorde:"
 
-#: modules/settings/settings.php:995
+#: modules/settings/settings.php:1010
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Sleutel:"
 
-#: modules/settings/settings.php:1010
+#: modules/settings/settings.php:1025
 msgid "Reset Renamed Checklist:"
 msgstr "Reset Veranderde Checklist:"
 
-#: modules/settings/settings.php:1029
+#: modules/settings/settings.php:1044
 msgid "Post types:"
 msgstr "Berichttypen:"
 
-#: modules/settings/settings.php:1062
+#: modules/settings/settings.php:1077
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1319,11 +1319,11 @@ msgstr ""
 "Dit stelt taken in staat om uitgeschakeld te worden voor specifieke "
 "statussen zoals \"Concept\" of \"Gepubliceerd."
 
-#: modules/settings/settings.php:1083
+#: modules/settings/settings.php:1098
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "Dit stelt gebruikers in staat om bestaande checklisttaken te dupliceren."
 
-#: modules/settings/settings.php:1105
+#: modules/settings/settings.php:1120
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1331,7 +1331,7 @@ msgstr ""
 "Voeg een Checklist-kolom toe aan het Berichten-scherm dat toont hoeveel "
 "vereisten zijn voltooid."
 
-#: modules/settings/settings.php:1126
+#: modules/settings/settings.php:1141
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1340,7 +1340,7 @@ msgstr ""
 "specifieke taxonomievoorwaarden. Ga naar het tabblad \"Berichttypen\" om de "
 "voorwaarden te kiezen."
 
-#: modules/settings/settings.php:1148
+#: modules/settings/settings.php:1163
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1348,7 +1348,7 @@ msgstr ""
 "Dit zal een waarschuwing pictogram weergeven in de \"Checklists\" box als "
 "vereisten onvoltooid zijn."
 
-#: modules/settings/settings.php:1168
+#: modules/settings/settings.php:1183
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
@@ -1356,7 +1356,7 @@ msgstr ""
 "Dit markeert Gutenberg-blokken die falen voor blok-specifieke "
 "checklisttaken."
 
-#: modules/settings/settings.php:1188
+#: modules/settings/settings.php:1203
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1364,11 +1364,11 @@ msgstr ""
 "Wanneer ingeschakeld, worden alle PublishPress Checklists-gegevens "
 "verwijderd als de plugin wordt verwijderd."
 
-#: modules/settings/settings.php:1209
+#: modules/settings/settings.php:1224
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "Dit toont \"Uitsluiten Gebruikersrollen\" opties."
 
-#: modules/settings/settings.php:1230
+#: modules/settings/settings.php:1245
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1376,7 +1376,7 @@ msgstr ""
 "Het wordt aanbevolen om de optie \"Status\" uit te schakelen omdat deze kan "
 "worden gebruikt om te voorkomen dat de checklistvereisten worden gebruikt."
 
-#: modules/settings/settings.php:1251
+#: modules/settings/settings.php:1266
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1384,7 +1384,7 @@ msgstr ""
 "Dit zal \"Snelle Bewerking\" uitschakelen voor alle gebruikers behalve "
 "degenen met de \"manage_options\" bevoegdheid."
 
-#: modules/settings/settings.php:1272
+#: modules/settings/settings.php:1287
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
@@ -1392,64 +1392,76 @@ msgstr ""
 "Dit zal de \"Publiceer\" knop uitschakelen wanneer checklistvereisten niet "
 "zijn voldaan."
 
-#: modules/settings/settings.php:1291
+#: modules/settings/settings.php:1306
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "Voer uw API-sleutel in om OpenAI-prompts te gebruiken in checklisttaken."
 
-#: modules/settings/settings.php:1364
+#: modules/settings/settings.php:1379
 msgid "Post Types"
 msgstr "Berichttypen"
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1380
 msgid "General"
 msgstr "Algemeen"
 
-#: modules/settings/settings.php:1366
+#: modules/settings/settings.php:1381
 msgid "Publishing Options"
 msgstr "Publicatie-opties"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1382
 msgid "Appearance"
 msgstr "Uiterlijk"
 
-#: modules/settings/settings.php:1368
+#: modules/settings/settings.php:1383
 msgid "Integration"
 msgstr "Integratie"
 
-#: modules/settings/settings.php:1369
+#: modules/settings/settings.php:1384
 msgid "Tools"
 msgstr "Hulpmiddelen"
 
-#: modules/settings/settings.php:1416
+#: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "Voer een Dashicons klasse naam in (bijv., dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
+#: modules/settings/settings.php:1447
 msgid "View Dashicons"
 msgstr "Bekijk Dashicons"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Voer een Dashicons klasse naam in (bijv., dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1514
+#: modules/settings/settings.php:1529
 msgid "Allow admins to rename task labels for the post editor."
 msgstr "Sta beheerders toe om taaklabels voor de posteditor te hernoemen."
 
-#: modules/settings/settings.php:1532
+#: modules/settings/settings.php:1547
 msgid "Default"
 msgstr "Standaard"
 
-#: modules/settings/settings.php:1533
-msgid "Required on top and Recommended below"
-msgstr "Vereist bovenaan en Aanbevolen hieronder"
+#: modules/settings/settings.php:1548
+msgid "Priority"
+msgstr "Prioriteit"
 
-#: modules/settings/settings.php:1534
-msgid "Sort alphabetically"
-msgstr "Sorteer alfabetisch"
+#: modules/settings/settings.php:1549
+msgid "Alphabetical"
+msgstr "Alfabetisch"
 
-#: modules/settings/settings.php:1558
+#: modules/settings/settings.php:1553
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr "Houdt taken in de volgorde die op het Checklists-scherm is geconfigureerd."
+
+#: modules/settings/settings.php:1557
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "Toont Vereiste taken vóór Aanbevolen taken."
+
+#: modules/settings/settings.php:1561
+msgid "Sorts tasks alphabetically by task label."
+msgstr "Sorteert taken alfabetisch op taaklabel."
+
+#: modules/settings/settings.php:1604
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
@@ -1457,15 +1469,15 @@ msgstr ""
 "Dit zal alle hernoemde checklistlabels voor WP Admin en bewerkingsscherm "
 "terugzetten naar hun standaardlabels."
 
-#: modules/settings/settings.php:1568
+#: modules/settings/settings.php:1614
 msgid "Security check failed."
 msgstr "Beveiligingscontrole is mislukt."
 
-#: modules/settings/settings.php:1573
+#: modules/settings/settings.php:1619
 msgid "You do not have permission to perform this action."
 msgstr "Je hebt geen toestemming om deze actie uit te voeren."
 
-#: modules/settings/settings.php:1618
+#: modules/settings/settings.php:1664
 msgid "All renamed labels have been reset successfully."
 msgstr "Alle hernoemde labels zijn succesvol gereset."
 

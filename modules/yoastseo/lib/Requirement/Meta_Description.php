@@ -13,6 +13,8 @@ namespace PublishPress\Checklists\Yoastseo\Requirement;
 use PublishPress\Checklists\Core\Requirement\Base_counter;
 use stdClass;
 
+\defined('ABSPATH') || exit;
+
 class Meta_Description extends Base_counter
 {
     /**

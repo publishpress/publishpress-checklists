@@ -11,7 +11,7 @@ namespace PublishPress\Checklists\Core;
 
 use PublishPress\Checklists\Core\Legacy\LegacyPlugin;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 if (!defined('PPCH_LOADED')) {
     require_once __DIR__ . '/../includes.php';

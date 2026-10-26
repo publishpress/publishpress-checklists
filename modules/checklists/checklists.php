@@ -41,6 +41,8 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
 use PublishPress\Checklists\Core\Utils\CustomItemsMeta;
 use PublishPress\Checklists\Core\Requirement\Pro_Requirement;
 
+defined('ABSPATH') || exit;
+
 if (!class_exists('PPCH_Checklists')) {
     /**
      * class PPCH_Checklists

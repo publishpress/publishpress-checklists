@@ -1,5 +1,24 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.30.0] - 27 October, 2026
+
+- Added: Counter tasks now show a live count in the editor #1218
+- Added: Custom tasks can have multi-line titles #1219
+- Added: The Pro teaser now lists the Required Words task #1220
+- Fixed: Visual revisions and real-time collaboration did not work in the block editor because of the Checklist meta box #1208
+- Fixed: Save draft was blocked by incomplete requirements on WordPress 7.1 #1232
+- Fixed: The editor locked up after clicking "No" in the pre-publish modal #1209
+- Fixed: Fatal error in wp-admin on WordPress 6.7 and older when Yoast SEO is not active #1238
+- Fixed: Checklist settings were not saved completely when many post types were enabled #1229
+- Fixed: Internal and external link tasks used the admin host instead of the site's real host #1217
+- Fixed: Translations were not loaded on WordPress 6.8 and later when the plugin is bundled inside Pro
+- Changed: The minimum PHP version is now 8.2
+- Changed: Updated the dev-workspace library to 2.0.4 and the translations library to 1.6.1
+- Changed: Improved accessibility of the post editor checklist, the settings navigation and the Checklist configuration screen #1222, #1223, #1241
+- Changed: Hardened input handling, output escaping, term counting and uninstall cleanup #1233, #1234, #1235, #1236
+- Changed: Fixed coding standards so the code-standards check can block releases again #1207
+- Changed: Joined the CHANGELOG.md introduction onto one line #1240
+
 [2.29.0] - 10 August, 2026
 
 - Fixed: Deprecation notices in the Gutenberg editor #1193

@@ -12,7 +12,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Plugin;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Base_requirement
 {

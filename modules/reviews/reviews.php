@@ -12,6 +12,8 @@ use PublishPress\Checklists\Core\Legacy\Module;
 use PublishPress\Checklists\Core\Legacy\Util;
 use PublishPress\WordPressReviews\ReviewsController;
 
+defined('ABSPATH') || exit;
+
 /**
  * Class PPCH_Reviews
  *

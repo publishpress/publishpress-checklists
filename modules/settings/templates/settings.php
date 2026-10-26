@@ -1,3 +1,4 @@
+<?php defined('ABSPATH') || exit; ?>
 <div class="wrap content_checklist-admin <?php echo $context['show_sidebar'] ? 'allex_container_with_sidebar checklists_with_sidebar container' : ''; ?>">
     <div class="allex-row">
         <div class="<?php echo $context['show_sidebar'] ? 'allex-col-3-4' : 'allex-col-1'; ?>">

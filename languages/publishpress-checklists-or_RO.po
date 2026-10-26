@@ -1,0 +1,1627 @@
+# Copyright (C) 2026 PublishPress
+# This file is distributed under the same license as the PublishPress Checklists Free plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: PublishPress Checklists Free 2.28.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
+"PO-Revision-Date: 2026-10-26 16:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: publishpress-checklists\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: or-RO\n"
+
+#: publishpress-checklists.php:4
+#. Plugin Name of the plugin
+msgid "PublishPress Checklists Free"
+msgstr "PublishPress Checklists Free"
+
+#: publishpress-checklists.php:5
+#. Plugin URI of the plugin
+msgid "https://publishpress.com/"
+msgstr "https://publishpress.com/"
+
+#: publishpress-checklists.php:6
+#. Description of the plugin
+msgid ""
+"With PublishPress Checklists, you can choose publishing requirements for "
+"your content."
+msgstr ""
+"PublishPress Checklists ସହିତ, ଆପଣ ଆପଣଙ୍କର ସାମଗ୍ରୀ ପାଇଁ ପ୍ରକାଶନ ଆବଶ୍ୟକତା ଚୟନ "
+"କରିପାରିବେ।"
+
+#: publishpress-checklists.php:7
+#. Author of the plugin
+msgid "PublishPress"
+msgstr "PublishPress"
+
+#: publishpress-checklists.php:8
+#. Author URI of the plugin
+msgid "https://publishpress.com"
+msgstr "https://publishpress.com"
+
+#: core/API/LabelMapper.php:39
+#: modules/checklists/checklists.php:1222
+msgid "Disabled"
+msgstr "ବନ୍ଦ"
+
+#: core/API/LabelMapper.php:40
+#: modules/checklists/checklists.php:1029
+#: modules/checklists/checklists.php:1223
+#: modules/checklists/checklists.php:1306
+#: modules/checklists/assets/js/gutenberg-panel.jsx:464
+msgid "Recommended"
+msgstr "ସୁପାରିଶ କରାଯାଇଛି"
+
+#: core/API/LabelMapper.php:41
+#: modules/checklists/checklists.php:1028
+#: modules/checklists/checklists.php:1224
+#: modules/checklists/checklists.php:1305
+#: modules/checklists/assets/js/gutenberg-panel.jsx:463
+msgid "Required"
+msgstr "ଆବଶ୍ୟକ"
+
+#: core/Legacy/LegacyPlugin.php:208
+msgid "Please correct your form errors below and try again."
+msgstr "ଦୟାକରି ତଳେ ଆପଣଙ୍କର ଫର୍ମ ତ୍ରୁଟିଗୁଡ଼ିକୁ ସଂଶୋଧନ କରନ୍ତୁ ଏବଂ ପୁନଃଯାଞ୍ଚ କରନ୍ତୁ।"
+
+#: core/Legacy/LegacyPlugin.php:212
+#: modules/settings/settings.php:523, fuzzy
+msgid "Cheatin&#8217; uh?"
+msgstr "Cheatin&#8217; uh?"
+
+#: core/Legacy/LegacyPlugin.php:213
+msgid "You do not have necessary permissions to complete this action."
+msgstr "ଆପଣଙ୍କର ଏହି କାର୍ଯ୍ୟ ପୂରଣ କରିବାକୁ ଆବଶ୍ୟକ ସୂଚନା ନାହିଁ।"
+
+#: core/Legacy/LegacyPlugin.php:217
+msgid "Post does not exist"
+msgstr "ପୋଷ୍ଟ ଅସ୍ତିତ୍ବ ନାହିଁ"
+
+#: core/Legacy/LegacyPlugin.php:348
+#: core/Plugin.php:78
+#: modules/checklists/checklists.php:110
+#: modules/checklists/checklists.php:1132
+#: modules/checklists/checklists.php:1147
+#: modules/checklists/checklists.php:1302
+#: modules/checklists/assets/js/gutenberg-panel.jsx:438
+msgid "Checklists"
+msgstr "ଚେକଲିଷ୍ଟ"
+
+#: core/Legacy/Module.php:286, fuzzy
+msgid "PublishPress Checklists"
+msgstr "PublishPress Checklists"
+
+#: core/Legacy/Module.php:289
+#, php-format
+msgid "If you like %s please leave us a %s rating. Thank you!"
+msgstr "ଯଦି ଆପଣ %s କୁ ଭଲ ପାଆନ୍ତି, ଦୟାକରି ଆମକୁ %s ରେଟିଂ ଦିଅନ୍ତୁ। ଧନ୍ୟବାଦ!"
+
+#: core/Legacy/Util.php:179
+msgid "Need PublishPress Checklists Support?"
+msgstr "PublishPress Checklists ସହାୟତା ଆବଶ୍ୟକ?"
+
+#: core/Legacy/Util.php:185
+msgid "If you need help or have a new feature request, let us know."
+msgstr ""
+"ଯଦି ଆପଣଙ୍କୁ ସହାୟତା ଆବଶ୍ୟକ କିମ୍ବା କୌଣସି ନୂତନ ବୈଶିଷ୍ଟ୍ୟ ଅନୁରୋଧ ଅଛି, ଆମକୁ "
+"ଜଣାନ୍ତୁ।"
+
+#: core/Legacy/Util.php:188
+msgid "Request Support"
+msgstr "ସହାୟତା ଅନୁରୋଧ"
+
+#: core/Legacy/Util.php:195
+msgid "Detailed documentation is also available on the plugin website."
+msgstr "ବିସ୍ତୃତ ଡକ୍ୟୁମେଣ୍ଟେସନ୍ ମଧ୍ୟରେ ପ୍ଲଗଇନ୍ ୱେବସାଇଟ୍ ଉପଲବ୍ଧ ଅଛି।"
+
+#: core/Legacy/Util.php:198
+msgid "View Knowledge Base"
+msgstr "ଜ୍ଞାନ ଆଧାର ଦେଖନ୍ତୁ"
+
+#: core/Plugin.php:79
+#: modules/settings/settings.php:134
+msgid "Settings"
+msgstr "ସେଟିଂସ୍"
+
+#: core/Plugin.php:87
+#: publishpress-checklists.php:183
+msgid "Upgrade to Pro"
+msgstr "ପ୍ରୋ ଅପଗ୍ରେଡ୍ କରନ୍ତୁ"
+
+#: core/Requirement/Approved_by.php:48
+#, php-format
+msgid "Approved by %s"
+msgstr "%s ଦ୍ୱାରା ମଞ୍ଜୁର"
+
+#: core/Requirement/Approved_by.php:49
+msgid "Approved by a user in this role"
+msgstr "ଏହି ଭୂମିକାରେ ଏକ ବ୍ୟବହାରକାରୀ ଦ୍ୱାରା ମଞ୍ଜୁର"
+
+#: core/Requirement/Approved_by.php:161
+#: core/Requirement/Base_requirement.php:239
+#: core/Requirement/Prohibited_categories.php:414
+#: core/Requirement/Prohibited_tags.php:383
+#: core/Requirement/Required_categories.php:422
+#: core/Requirement/Required_tags.php:383
+#. translators: 1: custom editor label, 2: selected role names.
+#. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
+#. translators: 1: custom editor label, 2: prohibited category names.
+#. translators: 1: custom editor label, 2: prohibited tag names.
+#. translators: 1: custom editor label, 2: required category names.
+#. translators: 1: custom editor label, 2: required tag names.
+#, fuzzy, php-format
+msgid "%1$s - %2$s"
+msgstr "%1$s - %2$s"
+
+#: core/Requirement/Base_counter.php:385
+#: core/Requirement/Pro_Requirement.php:112
+msgid "Min"
+msgstr "ନ୍ୟୁନତମ"
+
+#: core/Requirement/Base_counter.php:393
+#: core/Requirement/Pro_Requirement.php:113
+msgid "Max"
+msgstr "ସର୍ବାଧିକ"
+
+#: core/Requirement/Base_requirement.php:268
+#. translators: %d: exact required value.
+#, php-format
+msgid "exact %d"
+msgstr "ନିର୍ଦ୍ଦିଷ୍ଟ %d"
+
+#: core/Requirement/Base_requirement.php:276
+#. translators: %d: minimum required value.
+#, php-format
+msgid "min %d"
+msgstr "ନ୍ୟୁନତମ %d"
+
+#: core/Requirement/Base_requirement.php:284
+#. translators: %d: maximum allowed value.
+#, php-format
+msgid "max %d"
+msgstr "ସର୍ବାଧିକ %d"
+
+#: core/Requirement/Base_requirement.php:291
+#. translators: 1: minimum required value, 2: maximum allowed value.
+#, php-format
+msgid "min %1$d max %2$d"
+msgstr "ନ୍ୟୁନତମ %1$d ସର୍ବାଧିକ %2$d"
+
+#: core/Requirement/Base_requirement.php:346
+msgid "Edit label"
+msgstr "ଲେବଲ୍ ସଂପାଦନ କରନ୍ତୁ"
+
+#: core/Requirement/Categories_count.php:47
+msgid "Number of categories"
+msgstr "ଶ୍ରେଣୀଗୁଡ଼ିକର ସଂଖ୍ୟା"
+
+#: core/Requirement/Categories_count.php:48
+#, php-format
+msgid "Minimum of %s category"
+msgstr "%s ଶ୍ରେଣୀର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Categories_count.php:49
+#, php-format
+msgid "Minimum of %s categories"
+msgstr "%s ଶ୍ରେଣୀଗୁଡିକର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Categories_count.php:50
+#, php-format
+msgid "Maximum of %s category"
+msgstr "%s ଶ୍ରେଣୀର ସର୍ବାଧିକ"
+
+#: core/Requirement/Categories_count.php:51
+#, php-format
+msgid "Maximum of %s categories"
+msgstr "%s ଶ୍ରେଣୀଗୁଡିକର ସର୍ବାଧିକ"
+
+#: core/Requirement/Categories_count.php:52
+#, php-format
+msgid "%s category"
+msgstr "%s ଶ୍ରେଣୀ"
+
+#: core/Requirement/Categories_count.php:53
+#, php-format
+msgid "%s categories"
+msgstr "%s ଶ୍ରେଣୀଗୁଡିକ"
+
+#: core/Requirement/Categories_count.php:54
+#, php-format
+msgid "Between %s and %s categories"
+msgstr "%s ଏବଂ %s ଶ୍ରେଣୀଗୁଡିକର ମଧ୍ୟରେ"
+
+#: core/Requirement/Custom_item.php:60
+#: core/Requirement/Custom_item.php:61
+#: core/Utils/FieldsTabs.php:73
+msgid "Custom"
+msgstr "କଷ୍ଟମ୍"
+
+#: core/Requirement/Custom_item.php:62
+#: modules/checklists/checklists.php:768
+msgid "Which roles can mark this task as complete?"
+msgstr "କେଉଁଠି ଭୂମିକାଗୁଡିକ ଏହି କାମକୁ ସମ୍ପୂର୍ଣ୍ଣ ଭାବେ ଚିହ୍ନିତ କରିପାରିବେ?"
+
+#: core/Requirement/Custom_item.php:81
+#: modules/checklists/checklists.php:775
+msgid "Enter name of custom task"
+msgstr "କଷ୍ଟମ୍ କାମର ନାମ ଲେଖନ୍ତୁ"
+
+#: core/Requirement/Custom_item.php:129
+#: core/Requirement/Openai_item.php:147
+#: modules/checklists/checklists.php:774
+msgid "Remove"
+msgstr "ହଟାନ୍ତୁ"
+
+#: core/Requirement/External_links.php:43
+msgid "Number of external links in content"
+msgstr "ସାମଗ୍ରୀରେ ବାହ୍ୟ ଲିଙ୍କଗୁଡିକର ସଂଖ୍ୟା"
+
+#: core/Requirement/External_links.php:44
+#, php-format
+msgid "Minimum of %d external link in content"
+msgstr "ସାମଗ୍ରୀରେ %d ବାହ୍ୟ ଲିଙ୍କ୍‌ର ନ୍ୟୁନତମ"
+
+#: core/Requirement/External_links.php:45
+#, php-format
+msgid "Minimum of %d external links in content"
+msgstr "ସାମଗ୍ରୀରେ %d ବାହ୍ୟ ଲିଙ୍କ୍‌ଗୁଡିକର ନ୍ୟୁନତମ"
+
+#: core/Requirement/External_links.php:46
+#, php-format
+msgid "Maximum of %d external link in content"
+msgstr "ସାମଗ୍ରୀରେ %d ବାହ୍ୟ ଲିଙ୍କ୍‌ର ସର୍ବାଧିକ"
+
+#: core/Requirement/External_links.php:47
+#, php-format
+msgid "Maximum of %d external links in content"
+msgstr "ସାମଗ୍ରୀରେ %d ବାହ୍ୟ ଲିଙ୍କ୍‌ଗୁଡିକର ସର୍ବାଧିକ"
+
+#: core/Requirement/External_links.php:48
+#, php-format
+msgid "%d external link in content"
+msgstr "%d ବାହ୍ୟ ଲିଙ୍କ୍‌ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/External_links.php:49
+#, php-format
+msgid "%d external links in content"
+msgstr "%d ବାହ୍ୟ ଲିଙ୍କ୍‌ଗୁଡିକ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/External_links.php:50
+#, php-format
+msgid "Between %d and %d external links in content"
+msgstr "%d ଏବଂ %d ବାହ୍ୟ ଲିଙ୍କ୍‌ଗୁଡିକ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/Featured_image.php:43
+#: core/Requirement/Featured_image.php:44
+msgid "Featured image is added"
+msgstr "ବିଶେଷ ଚିତ୍ର ଯୋଡାଯାଇଛି"
+
+#: core/Requirement/Featured_image_alt.php:43
+#: core/Requirement/Featured_image_alt.php:44
+msgid "Featured image has Alt text"
+msgstr "ବିଶେଷ ଚିତ୍ରରେ ଆଲ୍ଟ୍ ଟେକ୍ସ୍ ଅଛି"
+
+#: core/Requirement/Featured_image_caption.php:43
+#: core/Requirement/Featured_image_caption.php:44
+msgid "Featured image has caption"
+msgstr "ବିଶେଷ ଚିତ୍ରରେ କ୍ୟାପ୍ସନ୍ ଅଛି"
+
+#: core/Requirement/Filled_excerpt.php:42
+#: core/Requirement/Filled_excerpt.php:43
+msgid "Number of characters in excerpt"
+msgstr "ଖଣ୍ଡରେ ଚରିତ୍ରଗୁଡିକର ସଂଖ୍ୟା"
+
+#: core/Requirement/Filled_excerpt.php:44
+#, php-format
+msgid "Minimum of %d character in excerpt"
+msgstr "ଖଣ୍ଡରେ %d ଚରିତ୍ରର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Filled_excerpt.php:45
+#, php-format
+msgid "Minimum of %d characters in excerpt"
+msgstr "ଖଣ୍ଡରେ %d ଚରିତ୍ରଗୁଡିକର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Filled_excerpt.php:46
+#, php-format
+msgid "Maximum of %d character in excerpt"
+msgstr "ଖଣ୍ଡରେ %d ଚରିତ୍ରର ସର୍ବାଧିକ"
+
+#: core/Requirement/Filled_excerpt.php:47
+#, php-format
+msgid "Maximum of %d characters in excerpt"
+msgstr "ଖଣ୍ଡରେ %d ଚରିତ୍ରଗୁଡିକର ସର୍ବାଧିକ"
+
+#: core/Requirement/Filled_excerpt.php:48
+#, php-format
+msgid "%d character in excerpt"
+msgstr "%d ଚରିତ୍ର ଖଣ୍ଡରେ"
+
+#: core/Requirement/Filled_excerpt.php:49
+#, php-format
+msgid "%d characters in excerpt"
+msgstr "%d ଚରିତ୍ରଗୁଡିକ ଖଣ୍ଡରେ"
+
+#: core/Requirement/Filled_excerpt.php:50
+#, php-format
+msgid "Between %d and %d characters in excerpt"
+msgstr "%d ଏବଂ %d ଚରିତ୍ରଗୁଡିକ ଖଣ୍ଡରେ"
+
+#: core/Requirement/Image_alt.php:44
+#: core/Requirement/Image_alt.php:45
+msgid "All images have Alt text"
+msgstr "ସମସ୍ତ ଚିତ୍ରଗୁଡିକରେ ଆଲ୍ଟ୍ ଟେକ୍ସ୍ ଅଛି"
+
+#: core/Requirement/Image_alt_count.php:42
+#: core/Requirement/Image_alt_count.php:43
+msgid "Number of characters in Alt text"
+msgstr "ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ ଚରିତ୍ରଗୁଡିକର ସଂଖ୍ୟା"
+
+#: core/Requirement/Image_alt_count.php:44
+#, php-format
+msgid "Minimum of %d character in Alt text"
+msgstr "ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ %d ଚରିତ୍ରର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Image_alt_count.php:45
+#, php-format
+msgid "Minimum of %d characters in Alt text"
+msgstr "ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ %d ଚରିତ୍ରଗୁଡିକର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Image_alt_count.php:46
+#, php-format
+msgid "Maximum of %d character in Alt text"
+msgstr "ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ %d ଚରିତ୍ରର ସର୍ବାଧିକ"
+
+#: core/Requirement/Image_alt_count.php:47
+#, php-format
+msgid "Maximum of %d characters in Alt text"
+msgstr "ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ %d ଚରିତ୍ରଗୁଡିକର ସର୍ବାଧିକ"
+
+#: core/Requirement/Image_alt_count.php:48
+#, php-format
+msgid "%d character in Alt text"
+msgstr "%d ଚରିତ୍ର ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ"
+
+#: core/Requirement/Image_alt_count.php:49
+#, php-format
+msgid "%d characters in Alt text"
+msgstr "%d ଚରିତ୍ରଗୁଡିକ ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ"
+
+#: core/Requirement/Image_alt_count.php:50
+#, php-format
+msgid "Between %d and %d characters in Alt text"
+msgstr "%d ଏବଂ %d ଚରିତ୍ରଗୁଡିକ ଆଲ୍ଟ୍ ଟେକ୍ସ୍‌ରେ"
+
+#: core/Requirement/Internal_links.php:43
+msgid "Number of internal links in content"
+msgstr "ସାମଗ୍ରୀରେ ଆନ୍ତରିକ ଲିଙ୍କଗୁଡିକର ସଂଖ୍ୟା"
+
+#: core/Requirement/Internal_links.php:44
+#, php-format
+msgid "Minimum of %d internal link in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଆନ୍ତରିକ ଲିଙ୍କ୍‌ର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Internal_links.php:45
+#, php-format
+msgid "Minimum of %d internal links in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଆନ୍ତରିକ ଲିଙ୍କ୍‌ଗୁଡିକର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Internal_links.php:46
+#, php-format
+msgid "Maximum of %d internal link in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଆନ୍ତରିକ ଲିଙ୍କ୍‌ର ସର୍ବାଧିକ"
+
+#: core/Requirement/Internal_links.php:47
+#, php-format
+msgid "Maximum of %d internal links in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଆନ୍ତରିକ ଲିଙ୍କ୍‌ଗୁଡିକର ସର୍ବାଧିକ"
+
+#: core/Requirement/Internal_links.php:48
+#, php-format
+msgid "%d internal link in content"
+msgstr "%d ଆନ୍ତରିକ ଲିଙ୍କ୍‌ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/Internal_links.php:49
+#, php-format
+msgid "%d internal links in content"
+msgstr "%d ଆନ୍ତରିକ ଲିଙ୍କ୍‌ଗୁଡିକ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/Internal_links.php:50
+#, php-format
+msgid "Between %d and %d internal links in content"
+msgstr "%d ଏବଂ %d ଆନ୍ତରିକ ଲିଙ୍କ୍‌ଗୁଡିକ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/Openai_item.php:69
+#: core/Requirement/Openai_item.php:70
+msgid "Openai"
+msgstr "ଓପେନଏଆଇ"
+
+#: core/Requirement/Openai_item.php:100
+#: modules/checklists/checklists.php:776
+msgid "Enter OpenAI task prompt"
+msgstr "ଓପେନଏଆଇ କାର୍ଯ୍ୟ ପ୍ରମ୍ପ୍ଟ ଦାଖଲ କରନ୍ତୁ"
+
+#: core/Requirement/Openai_item.php:286
+msgid "An error occured."
+msgstr "ଏକ ତ୍ରୁଟି ଘଟିଛି।"
+
+#: core/Requirement/Openai_item.php:293
+msgid "Validation error. Kindly reload this page and try again."
+msgstr ""
+"ମାନ୍ୟତା ତ୍ରୁଟି। ଦୟାକରି ଏହି ପୃଷ୍ଠାକୁ ପୁନର୍ଲୋଡ୍ କରନ୍ତୁ ଏବଂ ପুনର୍ଚ୍ଚାଷ୍ଟ "
+"କରନ୍ତୁ।"
+
+#: core/Requirement/Openai_item.php:298
+msgid "Post content is empty."
+msgstr "ପୋଷ୍ଟ ବାସ୍ତବ ଖାଲି।"
+
+#: core/Requirement/Openai_item.php:307
+msgid ""
+"OpenAI tasks require an API Key. Please add your API Key in the Settings "
+"area."
+msgstr ""
+"ଓପେନଏଆଇ କାର୍ଯ୍ୟଗୁଡିକ ପାଇଁ ଏକ API କୀ ଆବଶ୍ୟକ। ଦୟାକରି ସେଟିଂସ୍ ଅଞ୍ଚଳରେ ଆପଣଙ୍କର "
+"API କୀ ଯୋଗ କରନ୍ତୁ।"
+
+#: core/Requirement/Openai_item.php:362
+#, php-format
+msgid "API Error: %1s."
+msgstr "API ତ୍ରୁଟି: %1s。"
+
+#: core/Requirement/Openai_item.php:380
+msgid "See the full response."
+msgstr "ପୂର୍ଣ୍ଣ ପ୍ରତିକ୍ରିୟା ଦେଖନ୍ତୁ।"
+
+#: core/Requirement/Openai_item.php:401
+msgid "Invalid response"
+msgstr "ଅସ୍ୱୀକୃତ ପ୍ରତିକ୍ରିୟା"
+
+#: core/Requirement/Prohibited_categories.php:87
+#, php-format
+msgid "Prohibited categories: %s"
+msgstr "ବାର୍ଜିତ ବର୍ଗଗୁଡିକ: %s"
+
+#: core/Requirement/Prohibited_categories.php:88
+msgid "Prohibited categories"
+msgstr "ବାର୍ଜିତ ବର୍ଗଗୁଡିକ"
+
+#: core/Requirement/Prohibited_tags.php:87
+#, php-format
+msgid "Prohibited tags: %s"
+msgstr "ବାର୍ଜିତ ଟ୍ୟାଗ୍‌ଗୁଡିକ: %s"
+
+#: core/Requirement/Prohibited_tags.php:88
+msgid "Prohibited tags"
+msgstr "ବାର୍ଜିତ ଟ୍ୟାଗ୍‌ଗୁଡିକ"
+
+#: core/Requirement/Required_categories.php:87
+#, php-format
+msgid "Required categories: %s"
+msgstr "ଆବଶ୍ୟକ ବର୍ଗଗୁଡିକ: %s"
+
+#: core/Requirement/Required_categories.php:88
+msgid "Required categories"
+msgstr "ଆବଶ୍ୟକ ବର୍ଗଗୁଡିକ"
+
+#: core/Requirement/Required_tags.php:87
+#, php-format
+msgid "Required tags: %s"
+msgstr "ଆବଶ୍ୟକ ଟ୍ୟାଗ୍‌ଗୁଡିକ: %s"
+
+#: core/Requirement/Required_tags.php:88
+msgid "Required tags"
+msgstr "ଆବଶ୍ୟକ ଟ୍ୟାଗ୍‌ଗୁଡିକ"
+
+#: core/Requirement/Tags_count.php:47
+msgid "Number of tags"
+msgstr "ଟ୍ୟାଗ୍‌ଗୁଡିକର ସଂଖ୍ୟା"
+
+#: core/Requirement/Tags_count.php:48
+#, php-format
+msgid "Minimum of %d tag"
+msgstr "ଲଘୁତମ %d ଟ୍ୟାଗ୍"
+
+#: core/Requirement/Tags_count.php:49
+#, php-format
+msgid "Minimum of %d tags"
+msgstr "ଲଘୁତମ %d ଟ୍ୟାଗ୍‌ଗୁଡିକ"
+
+#: core/Requirement/Tags_count.php:50
+#, php-format
+msgid "Maximum of %d tag"
+msgstr "ସର୍ବାଧିକ %d ଟ୍ୟାଗ୍"
+
+#: core/Requirement/Tags_count.php:51
+#, php-format
+msgid "Maximum of %d tags"
+msgstr "ସର୍ବାଧିକ %d ଟ୍ୟାଗ୍‌ଗୁଡିକ"
+
+#: core/Requirement/Tags_count.php:52
+#, php-format
+msgid "%d tag"
+msgstr "%d ଟ୍ୟାଗ୍"
+
+#: core/Requirement/Tags_count.php:53
+#, php-format
+msgid "%d tags"
+msgstr "%d ଟ୍ୟାଗ୍‌ଗୁଡିକ"
+
+#: core/Requirement/Tags_count.php:54
+#, php-format
+msgid "Between %d and %d tags"
+msgstr "%d ଓ %d ଟ୍ୟାଗ୍‌ଗୁଡିକ ମଧ୍ୟରେ"
+
+#: core/Requirement/Taxonomies_count.php:50
+msgid "Number of "
+msgstr "ସଂଖ୍ୟା "
+
+#: core/Requirement/Taxonomies_count.php:51
+#: core/Requirement/Taxonomies_count.php:52
+#, php-format
+msgid "Minimum of %d "
+msgstr "ଲଘୁତମ %d "
+
+#: core/Requirement/Taxonomies_count.php:53
+#: core/Requirement/Taxonomies_count.php:54
+#, php-format
+msgid "Maximum of %d "
+msgstr "ସର୍ବାଧିକ %d "
+
+#: core/Requirement/Taxonomies_count.php:55
+#: core/Requirement/Taxonomies_count.php:56
+#, fuzzy, php-format
+msgid "%d "
+msgstr "%d "
+
+#: core/Requirement/Taxonomies_count.php:57
+#, php-format
+msgid "Between %d and %d "
+msgstr "%d ଓ %d "
+
+#: core/Requirement/Title_count.php:40
+#: core/Requirement/Title_count.php:41
+msgid "Number of characters in title"
+msgstr "ଶୀର୍ଷକରେ ଚରିତ୍ରର ସଂଖ୍ୟା"
+
+#: core/Requirement/Title_count.php:42
+#, php-format
+msgid "Minimum of %d character in title"
+msgstr "ଶୀର୍ଷକରେ ଲଘୁତମ %d ଚରିତ୍ର"
+
+#: core/Requirement/Title_count.php:43
+#, php-format
+msgid "Minimum of %d characters in title"
+msgstr "ଶୀର୍ଷକରେ ଲଘୁତମ %d ଚରିତ୍ରଗୁଡିକ"
+
+#: core/Requirement/Title_count.php:44
+#, php-format
+msgid "Maximum of %d character in title"
+msgstr "ଶୀର୍ଷକରେ ସର୍ବାଧିକ %d ଚରିତ୍ର"
+
+#: core/Requirement/Title_count.php:45
+#, php-format
+msgid "Maximum of %d characters in title"
+msgstr "ଶୀର୍ଷକରେ ସର୍ବାଧିକ %d ଚରିତ୍ରଗୁଡିକ"
+
+#: core/Requirement/Title_count.php:46
+#, php-format
+msgid "%d character in title"
+msgstr "%d ଚରିତ୍ର ଶୀର୍ଷକରେ"
+
+#: core/Requirement/Title_count.php:47
+#, php-format
+msgid "%d characters in title"
+msgstr "%d ଚରିତ୍ରଗୁଡିକ ଶୀର୍ଷକରେ"
+
+#: core/Requirement/Title_count.php:48
+#, php-format
+msgid "Between %d and %d characters in title"
+msgstr "%d ଓ %d ଚରିତ୍ରଗୁଡିକ ଶୀର୍ଷକରେ"
+
+#: core/Requirement/Validate_links.php:65
+#: core/Requirement/Validate_links.php:66
+msgid "All links use a valid format"
+msgstr "ସମସ୍ତ ଲିଙ୍କଗୁଡିକ ସଠିକ୍ ଫର୍ମାଟ୍ ବ୍ୟବହାର କରନ୍ତି"
+
+#: core/Requirement/Words_count.php:43
+msgid "Number of words in content"
+msgstr "ବାସ୍ତବରେ ବିଷୟରେ ଶବ୍ଦଗୁଡିକର ସଂଖ୍ୟା"
+
+#: core/Requirement/Words_count.php:44
+#, php-format
+msgid "Minimum of %d word in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଶବ୍ଦର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Words_count.php:45
+#, php-format
+msgid "Minimum of %d words in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଶବ୍ଦର ନ୍ୟୁନତମ"
+
+#: core/Requirement/Words_count.php:46
+#, php-format
+msgid "Maximum of %d word in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଶବ୍ଦର ଗରିମା"
+
+#: core/Requirement/Words_count.php:47
+#, php-format
+msgid "Maximum of %d words in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଶବ୍ଦର ଗରିମା"
+
+#: core/Requirement/Words_count.php:48
+#, php-format
+msgid "%d word in content"
+msgstr "%d ଶବ୍ଦ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/Words_count.php:49
+#, php-format
+msgid "%d words in content"
+msgstr "%d ଶବ୍ଦ ସାମଗ୍ରୀରେ"
+
+#: core/Requirement/Words_count.php:50
+#, php-format
+msgid "Between %d and %d words in content"
+msgstr "ସାମଗ୍ରୀରେ %d ଓ %d ଶବ୍ଦ ମଧ୍ୟରେ"
+
+#: core/Utils/FieldsTabs.php:21
+msgid "Title"
+msgstr "ଶୀର୍ଷକ"
+
+#: core/Utils/FieldsTabs.php:25
+msgid "Content"
+msgstr "ସାମଗ୍ରୀ"
+
+#: core/Utils/FieldsTabs.php:29
+msgid "Publish Date / Time"
+msgstr "ପ୍ରକାଶିତ ତାରିଖ / ସମୟ"
+
+#: core/Utils/FieldsTabs.php:33
+msgid "Approval"
+msgstr "ମଞ୍ଜୁରୀ"
+
+#: core/Utils/FieldsTabs.php:37
+msgid "Images"
+msgstr "ଛବିଗୁଡିକ"
+
+#: core/Utils/FieldsTabs.php:41
+msgid "Audio / Video"
+msgstr "ସ୍ୱର / ଭିଡିଓ"
+
+#: core/Utils/FieldsTabs.php:45
+msgid "Featured Image"
+msgstr "ବିଶେଷିତ ଛବି"
+
+#: core/Utils/FieldsTabs.php:49
+msgid "Links"
+msgstr "ଲିଙ୍କଗୁଡିକ"
+
+#: core/Utils/FieldsTabs.php:53
+msgid "Permalink"
+msgstr "ପରମଲିଙ୍କ"
+
+#: core/Utils/FieldsTabs.php:57
+msgid "Categories"
+msgstr "ଶ୍ରେଣୀଗୁଡିକ"
+
+#: core/Utils/FieldsTabs.php:61
+msgid "Tags"
+msgstr "ଟ୍ୟାଗଗୁଡିକ"
+
+#: core/Utils/FieldsTabs.php:65
+msgid "Taxonomies"
+msgstr "taxonomies"
+
+#: core/Utils/FieldsTabs.php:69
+msgid "Accessibility"
+msgstr "ସୁବିଧା"
+
+#: core/Utils/FieldsTabs.php:97
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: core/Utils/FieldsTabs.php:104, fuzzy
+msgid "Rank Math SEO"
+msgstr "Rank Math SEO"
+
+#: core/Utils/FieldsTabs.php:111, fuzzy
+msgid "All in One SEO"
+msgstr "All in One SEO"
+
+#: core/Utils/FieldsTabs.php:118
+#: modules/yoastseo/yoastseo.php:68, fuzzy
+msgid "Yoast SEO"
+msgstr "Yoast SEO"
+
+#: core/Utils/FieldsTabs.php:126, fuzzy
+msgid "ACF"
+msgstr "ACF"
+
+#: modules/checklists/checklists.php:724
+msgid "options cannot be empty."
+msgstr "ବିକଳ୍ପଗୁଡିକ ଖାଲି ହୋଇପାରେନି।"
+
+#: modules/checklists/checklists.php:728
+msgid "Please make sure to add a name for all the custom tasks."
+msgstr "ଦୟାକରି ସମସ୍ତ କଷ୍ଟମ୍ କାର୍ଯ୍ୟଗୁଡିକ ପାଇଁ ଏକ ନାମ ଯୋଡିବାକୁ ନିଶ୍ଚିତ କରନ୍ତୁ।"
+
+#: modules/checklists/checklists.php:732
+msgid "Rename task label"
+msgstr "କାର୍ଯ୍ୟ ଲେବଲ୍ ପୁନର୍ନାମକରଣ"
+
+#: modules/checklists/checklists.php:736
+msgid "Label for the Checklists screen"
+msgstr "ଚେକଲିଷ୍ଟ୍ ତାଳିକା ପାଇଁ ଲେବଲ୍"
+
+#: modules/checklists/checklists.php:740
+msgid "Leave empty to use the default WP Admin label"
+msgstr "ଡିଫଲ୍ଟ WP ଏଡମିନ୍ ଲେବଲ୍ ବ୍ୟବହାର କରିବାକୁ ଖାଲି ଛାଡ଼ନ୍ତୁ"
+
+#: modules/checklists/checklists.php:744
+msgid "Label for the post editing screen"
+msgstr "ପୋଷ୍ଟ ସମ୍ପାଦନ ପ୍ରଦର୍ଶନ ପାଇଁ ଲେବଲ୍"
+
+#: modules/checklists/checklists.php:748
+msgid "Leave empty to use the default editing screen label"
+msgstr "ଡିଫଲ୍ଟ ସମ୍ପାଦନ ତାଳିକାର ଲେବଲ୍ ବ୍ୟବହାର କରିବାକୁ ଖାଲି ଛାଡ଼ନ୍ତୁ"
+
+#: modules/checklists/checklists.php:752
+msgid "Preview in editing screen:"
+msgstr "ସମ୍ପାଦନ ତାଳିକାରେ ପ୍ରିଭ୍ୟୁ:"
+
+#: modules/checklists/checklists.php:756
+msgid "Default checklist label will be used."
+msgstr "ଡିଫଲ୍ଟ ଚେକଲିଷ୍ଟ୍ ଲେବଲ୍ ବ୍ୟବହାର କରାଯିବ।"
+
+#: modules/checklists/checklists.php:760
+msgid "Save"
+msgstr "ସଞ୍ଚୟ କରନ୍ତୁ"
+
+#: modules/checklists/checklists.php:764
+msgid "Cancel"
+msgstr "ବାତିଲ୍ କରନ୍ତୁ"
+
+#: modules/checklists/checklists.php:772
+msgid "No results found"
+msgstr "କୌଣସି ପରିଣାମ ମିଳିଲାନାହିଁ"
+
+#: modules/checklists/checklists.php:773
+msgid "Searching…"
+msgstr "ସନ୍ଧାନ କରୁଛି…"
+
+#: modules/checklists/checklists.php:777
+msgid "Suggested Prompts"
+msgstr "ସୁପାରିଶିତ ପ୍ରମ୍ପ୍ଟ"
+
+#: modules/checklists/checklists.php:778
+msgid "What's the expected OpenAI response to mark the requirement as pass?"
+msgstr ""
+"ଆବଶ୍ୟକତାକୁ ପାସ୍ ଭାବରେ ଚିହ୍ନଟ କରିବା ପାଇଁ OpenAI ପ୍ରତିସ୍ପନ୍ଦନ କ’ଣ ଆଶା "
+"କରାଯାଉଛି?"
+
+#: modules/checklists/checklists.php:781
+msgid "Clear Content"
+msgstr "ସଫା କଣ୍ଟେଣ୍ଟ"
+
+#: modules/checklists/checklists.php:782
+msgid "Is this content clear and easy to read?"
+msgstr "ଏହି କଣ୍ଟେଣ୍ଟ ସଫା ଓ ପଢିବାକୁ ସହଜ କି?"
+
+#: modules/checklists/checklists.php:785
+msgid "Friendly Tone Content"
+msgstr "ମିଳନସାର ଶବ୍ଦବାଣୀ କଣ୍ଟେଣ୍ଟ"
+
+#: modules/checklists/checklists.php:786
+msgid "Is this content tone friendly?"
+msgstr "ଏହି କଣ୍ଟେଣ୍ଟର ଶବ୍ଦବାଣୀ ମିଳନସାର କି?"
+
+#: modules/checklists/checklists.php:789
+msgid "Professional Tone Content"
+msgstr "ପେଶାଦାର ଶବ୍ଦବାଣୀ କଣ୍ଟେଣ୍ଟ"
+
+#: modules/checklists/checklists.php:790
+msgid "Is this content tone professional?"
+msgstr "ଏହି କଣ୍ଟେଣ୍ଟର ଶବ୍ଦବାଣୀ ପେଶାଦାର କି?"
+
+#: modules/checklists/checklists.php:793
+msgid "Persuasive Tone Content"
+msgstr "ପ୍ରେରଣାଦାୟକ ଶବ୍ଦବାଣୀ କଣ୍ଟେଣ୍ଟ"
+
+#: modules/checklists/checklists.php:794
+msgid "Is this content tone persuasive?"
+msgstr "ଏହି କଣ୍ଟେଣ୍ଟର ଶବ୍ଦବାଣୀ ପ୍ରେରଣାଦାୟକ କି?"
+
+#: modules/checklists/checklists.php:797
+msgid "Empathetic Tone Content"
+msgstr "ସମ୍ବେଦନଶୀଳ ଶବ୍ଦବାଣୀ କଣ୍ଟେଣ୍ଟ"
+
+#: modules/checklists/checklists.php:798
+msgid "Is this content tone empathetic?"
+msgstr "ଏହି କଣ୍ଟେଣ୍ଟର ଶବ୍ଦବାଣୀ ସମ୍ବେଦନଶୀଳ କି?"
+
+#: modules/checklists/checklists.php:801
+msgid "Adventurous Tone Content"
+msgstr "ସାହସିକ ଶବ୍ଦବାଣୀ କଣ୍ଟେଣ୍ଟ"
+
+#: modules/checklists/checklists.php:802
+msgid "Is this content tone adventurous?"
+msgstr "ଏହି କଣ୍ଟେଣ୍ଟର ଶବ୍ଦବାଣୀ ସାହସିକ କି?"
+
+#: modules/checklists/checklists.php:805
+msgid "Promotional Tone Content"
+msgstr "ପ୍ରଚାର ଶବ୍ଦବାଣୀ କଣ୍ଟେଣ୍ଟ"
+
+#: modules/checklists/checklists.php:806
+msgid "Is this content tone promotional?"
+msgstr "ଏହି କଣ୍ଟେଣ୍ଟର ଶବ୍ଦବାଣୀ ପ୍ରଚାର କି?"
+
+#: modules/checklists/checklists.php:872
+#: modules/checklists/checklists.php:960
+msgid "Checklist"
+msgstr "ଚେକଲିଷ୍ଟ"
+
+#: modules/checklists/checklists.php:956
+#: modules/checklists/checklists.php:1303
+msgid "You don't have to complete any Checklist tasks."
+msgstr "ଆପଣଙ୍କୁ କୌଣସି ଚେକଲିଷ୍ଟ କାର୍ଯ୍ୟ ପୂରଣ କରିବାକୁ ଆବଶ୍ୟକ ନୁହେଁ।"
+
+#: modules/checklists/checklists.php:961
+msgid "Are you sure you want to publish anyway?"
+msgstr "ଆପଣ ନିଶ୍ଚିତ କି ଆପଣ ପ୍ରକାଶିତ କରିବାକୁ ଚାହାଁଛନ୍ତି?"
+
+#: modules/checklists/checklists.php:965
+msgid "Are you sure you want to update the published post anyway?"
+msgstr "ଆପଣ ନିଶ୍ଚିତ କି ଆପଣ ପ୍ରକାଶିତ ପୋଷ୍ଟକୁ ଅଦ୍ୟତନ କରିବାକୁ ଚାହାଁଛନ୍ତି?"
+
+#: modules/checklists/checklists.php:969
+msgid "Please complete the following tasks before publishing:"
+msgstr "ପ୍ରକାଶିତ କରିବା ପୂର୍ବରୁ ଦୟାକରି ନିମ୍ନଲିଖିତ କାର୍ଯ୍ୟଗୁଡିକୁ ପୂରଣ କରନ୍ତୁ:"
+
+#: modules/checklists/checklists.php:973
+msgid "Please complete the following tasks before updating the published post:"
+msgstr ""
+"ପ୍ରକାଶିତ ପୋଷ୍ଟକୁ ଅଦ୍ୟତନ କରିବା ପୂର୍ବରୁ ଦୟାକରି ନିମ୍ନଲିଖିତ କାର୍ଯ୍ୟଗୁଡିକୁ ପୂରଣ "
+"କରନ୍ତୁ:"
+
+#: modules/checklists/checklists.php:977
+#: modules/checklists/checklists.php:981
+msgid "Not required, but important: "
+msgstr "ଆବଶ୍ୟକ ନୁହେଁ, କିନ୍ତୁ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ: "
+
+#: modules/checklists/checklists.php:987
+msgid "One or more items in the checklist are not completed"
+msgstr "ଚେକଲିଷ୍ଟର ଗୋଟିଏ କିମ୍ବା ତାରୁ ଅଧିକ ଆଇଟମ୍ସ ପୂରଣ ହୋଇନି"
+
+#: modules/checklists/checklists.php:1024
+#, php-format
+msgid "You don't have to complete any %sChecklist tasks%s."
+msgstr "ଆପଣଙ୍କୁ କୌଣସି %sଚେକଲିଷ୍ଟ କାର୍ଯ୍ୟ%s ପୂରଣ କରିବାକୁ ଆବଶ୍ୟକ ନୁହେଁ।"
+
+#: modules/checklists/checklists.php:1030
+#: modules/checklists/assets/js/gutenberg-panel.jsx:500
+msgid "Check Now"
+msgstr "ବର୍ତ୍ତମାନ ଯାଞ୍ଚ କରନ୍ତୁ"
+
+#: modules/checklists/checklists.php:1031
+msgid "Ok"
+msgstr "ଠିକ ଅଛି"
+
+#: modules/checklists/checklists.php:1032
+msgid "No"
+msgstr "ନା"
+
+#: modules/checklists/checklists.php:1033
+msgid "Yes"
+msgstr "ହଁ"
+
+#: modules/checklists/checklists.php:1197
+msgid "Task"
+msgstr "କାର୍ଯ୍ୟ"
+
+#: modules/checklists/checklists.php:1198
+msgid "Disabled, Recommended or Required"
+msgstr "ବନ୍ଦ କରାଯାଇଛି, ସୁପାରିଶ କିମ୍ବା ଆବଶ୍ୟକ"
+
+#: modules/checklists/checklists.php:1199
+msgid "Options"
+msgstr "ବିକଳ୍ପଗୁଡିକ"
+
+#: modules/checklists/checklists.php:1200
+msgid "Add custom task"
+msgstr "କଷ୍ଟମ୍ କାର୍ଯ୍ୟ ଯୋଗ କରନ୍ତୁ"
+
+#: modules/checklists/checklists.php:1301
+msgid "Please complete the required(*) checklists task."
+msgstr "ଦୟାକରି ଆବଶ୍ୟକ(*) ଚେକଲିଷ୍ଟର କାର୍ଯ୍ୟ ପୂରଣ କରନ୍ତୁ।"
+
+#: modules/checklists/checklists.php:1304
+msgid "required"
+msgstr "ଆବଶ୍ୟକ"
+
+#: modules/checklists/checklists.php:1309
+#: modules/checklists/templates/meta-box.php:16
+msgid "Checklists tasks are not available in Elementor editors"
+msgstr "Elementor ସମ୍ପାଦକରେ ଚେକଲିଷ୍ଟ କାର୍ଯ୍ୟଗୁଡିକ ଉପଲବ୍ଧ ନୁହେଁ"
+
+#: modules/checklists/pro-requirements.php:22
+msgid "All in One SEO Headline Score"
+msgstr "ସମସ୍ତରେ ଏକ ଏକସାଥେ SEO ହେଡଲାଇନ୍ ସ୍କୋର"
+
+#: modules/checklists/pro-requirements.php:31
+msgid "All in One SEO Score"
+msgstr "ସମସ୍ତରେ ଏକ ଏକସାଥେ SEO ସ୍କୋର"
+
+#: modules/checklists/pro-requirements.php:40
+msgid "Featured image height"
+msgstr "ବିଶେଷିତ ଚିତ୍ରର ଉଚ୍ଚତା"
+
+#: modules/checklists/pro-requirements.php:49
+msgid "Featured image width"
+msgstr "ବିଶେଷିତ ଚିତ୍ରର ପ୍ରସ୍ଥାନ"
+
+#: modules/checklists/pro-requirements.php:58
+msgid "H1, H2, H3 etc tags are used in logical order"
+msgstr "H1, H2, H3 ଇତ୍ୟାଦି ଟ୍ୟାଗଗୁଡିକ ଯୁକ୍ତିଗତ କ୍ରମରେ ବ୍ୟବହୃତ ହେଉଛି"
+
+#: modules/checklists/pro-requirements.php:67
+msgid "Number of images in content"
+msgstr "କଣ୍ଟେଣ୍ଟରେ ଚିତ୍ରଗୁଡିକର ସଂଖ୍ୟା"
+
+#: modules/checklists/pro-requirements.php:76
+msgid "Number of characters in image captions"
+msgstr "ଛବି ଶୀର୍ଷକରେ ଅକ୍ଷରର ସଂଖ୍ୟା"
+
+#: modules/checklists/pro-requirements.php:85
+msgid "Number of audio items in content"
+msgstr "ସାମଗ୍ରୀରେ ଅଡିଓ ଆଇଟମ୍‌ସର ସଂଖ୍ୟା"
+
+#: modules/checklists/pro-requirements.php:94
+msgid "Number of video items in content"
+msgstr "ସାମଗ୍ରୀରେ ଭିଡିଓ ଆଇଟମ୍‌ସର ସଂଖ୍ୟା"
+
+#: modules/checklists/pro-requirements.php:103
+msgid "Approved by role"
+msgstr "ଭୂମିକା ଦ୍ୱାରା ମାନ୍ୟତା ପ୍ରାପ୍ତ"
+
+#: modules/checklists/pro-requirements.php:110
+msgid "Approved by specific user"
+msgstr "ନିର୍ଦ୍ଦିଷ୍ଟ ବ୍ୟବହାରକାରୀ ଦ୍ୱାରା ମାନ୍ୟତା ପ୍ରାପ୍ତ"
+
+#: modules/checklists/pro-requirements.php:117
+msgid "Avoid heading tags in content"
+msgstr "ସାମଗ୍ରୀରେ ଶୀର୍ଷକ ଟ୍ୟାଗ୍‌ଗୁଡିକୁ ଏଡାଇବେ"
+
+#: modules/checklists/pro-requirements.php:124
+msgid "Prohibited words"
+msgstr "ରୋକାଯାଇଥିବା ଶବ୍ଦଗୁଡିକ"
+
+#: modules/checklists/pro-requirements.php:131
+msgid "Publish time should be at a specific time"
+msgstr "ପ୍ରକାଶିତ ସମୟ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସମୟରେ ହେବା ଚାହିଁ"
+
+#: modules/checklists/pro-requirements.php:139
+msgid "Publish time should be in the future"
+msgstr "ପ୍ରକାଶିତ ସମୟ ଭବିଷ୍ୟତରେ ହେବା ଚାହିଁ"
+
+#: modules/checklists/pro-requirements.php:147
+msgid "Rank Math SEO Score"
+msgstr "ର୍ୟାଙ୍କ୍ ମ୍ୟାଥ୍ SEO ସ୍କୋର"
+
+#: modules/checklists/pro-requirements.php:156
+msgid "Only one H1 tag in content"
+msgstr "ସାମଗ୍ରୀରେ କେବଳ ଗୋଟିଏ H1 ଟ୍ୟାଗ୍"
+
+#: modules/checklists/pro-requirements.php:163
+msgid "Tables have a header row"
+msgstr "ଟେବୁଲରେ ଏକ ହେଡର୍ ରୋ"
+
+#: modules/checklists/pro-requirements.php:170
+msgid "Check the \"Allow backorders?\" box"
+msgstr "\"ବ୍ୟାକ୍‌ଅର୍ଡର୍ ଅନୁମତି ଦେବା?\" ବକ୍ସକୁ ଯାଞ୍ଚ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:178
+msgid "Select some products for \"Cross-sells\""
+msgstr "\"କ୍ରସ-ସେଲ୍ସ\" ପାଇଁ କିଛି ଉତ୍ପାଦ ବାଛନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:186
+msgid "Discount for the \"Sale price\""
+msgstr "\"ବିକ୍ରୟ ମୂଲ୍ୟ\" ପାଇଁ ଛୁଟ"
+
+#: modules/checklists/pro-requirements.php:194
+msgid "Check the \"Downloadable\" box"
+msgstr "\"ଡାଉନଲୋଡ୍‌ଏବଳ\" ବକ୍ସକୁ ଯାଞ୍ଚ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:202
+msgid "Product image"
+msgstr "ଉତ୍ପାଦ ଛବି"
+
+#: modules/checklists/pro-requirements.php:210
+msgid "Check the \"Manage stock?\" box"
+msgstr "\"ସ୍ଟକ୍ ବ୍ୟବସ୍ଥାପନା?\" ବକ୍ସକୁ ଯାଞ୍ଚ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:218
+msgid "Enter a \"Regular price\""
+msgstr "\"ନିୟମିତ ମୂଲ୍ୟ\" ପ୍ରବେଶ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:226
+msgid "Enter a \"Sale price\""
+msgstr "\"ବିକ୍ରୟ ମୂଲ୍ୟ\" ପ୍ରବେଶ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:234
+msgid "Schedule the \"Sale price\""
+msgstr "\"ବିକ୍ରୟ ମୂଲ୍ୟ\" ନିୟୋଜନ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:242
+msgid "Enter a \"SKU\""
+msgstr "\"SKU\" ପ୍ରବେଶ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:250
+msgid "Check the \"Sold individually\" box"
+msgstr "\"ଗୋଟିଏ ଗୋଟିଏ ବିକ୍ରୟ ହେଇଛି\" ବକ୍ସକୁ ଯାଞ୍ଚ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:258
+msgid "Select some products for \"Upsells\""
+msgstr "\"ଅପ୍ସେଲ୍ସ\" ପାଇଁ କିଛି ଉତ୍ପାଦ ବାଛନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:266
+msgid "Check the \"Virtual\" box"
+msgstr "\"ଭର୍ଚୁଆଲ୍\" ବକ୍ସକୁ ଯାଞ୍ଚ କରନ୍ତୁ"
+
+#: modules/checklists/pro-requirements.php:297
+#, php-format
+msgid "Number of Characters in %s field"
+msgstr "%s ଫିଲ୍ଡରେ ଅକ୍ଷରର ସଂଖ୍ୟା"
+
+#: modules/checklists/pro-requirements.php:310
+#, php-format
+msgid "%s is filled"
+msgstr "%s ସଂପୂର୍ଣ୍ଣ ହୋଇଛି"
+
+#: modules/checklists/templates/footer.php:23
+msgid "About PublishPress Checklists"
+msgstr "PublishPress ଚେକ୍ଲିଷ୍ଟ ବିଷୟରେ"
+
+#: modules/checklists/templates/footer.php:23
+msgid "About"
+msgstr "ବିଷୟରେ"
+
+#: modules/checklists/templates/footer.php:30
+msgid "PublishPress Checklists Documentation"
+msgstr "PublishPress ଚେକ୍ଲିଷ୍ଟ ଡକ୍ୟୁମେଣ୍ଟେସନ"
+
+#: modules/checklists/templates/footer.php:30
+msgid "Documentation"
+msgstr "ଡକ୍ୟୁମେଣ୍ଟେସନ"
+
+#: modules/checklists/templates/footer.php:37
+msgid "Contact the PublishPress team"
+msgstr "PublishPress ଦଳ ସହିତ ସଂପର୍କ କରନ୍ତୁ"
+
+#: modules/checklists/templates/footer.php:37
+msgid "Contact"
+msgstr "ସଂପର୍କ"
+
+#: modules/checklists/templates/global-checklists.php:6
+msgid "Settings saved successfully!"
+msgstr "ସେଟିଂସ୍ ସଫଳତାର ସହିତ ସଂରକ୍ଷିତ!"
+
+#: modules/checklists/templates/global-checklists.php:12
+#: modules/checklists/templates/global-checklists.php:217
+msgid "Save Changes"
+msgstr "ପରିବର୍ତ୍ତନଗୁଡିକୁ ସଂରକ୍ଷଣ କରନ୍ତୁ"
+
+#: modules/checklists/templates/global-checklists.php:152
+msgid "Pro feature"
+msgstr "ପ୍ରୋ ବୈଶିଷ୍ଟ୍ୟ"
+
+#: modules/checklists/templates/global-checklists.php:165
+#, php-format
+msgid "No %s requirements for this post type."
+msgstr "ଏହି ପୋଷ୍ଟ ପ୍ରକାର ପାଇଁ କୌଣସି %s ଆବଶ୍ୟକତା ନାହିଁ।"
+
+#: modules/checklists/templates/global-checklists.php:183
+msgid "New Item"
+msgstr "ନୂତନ ଆଇଟମ୍"
+
+#: modules/checklists/templates/global-checklists.php:184
+msgid "Description"
+msgstr "ବିବରଣୀ"
+
+#: modules/checklists/templates/global-checklists.php:196
+msgid ""
+"Custom tasks do not complete automatically. Users must check the box to "
+"show they have completed the task."
+msgstr ""
+"କଷ୍ଟମ୍ କାର୍ୟ ସ୍ୱୟଂଚାଳିତ ଭାବେ ସମାପ୍ତ ହୁଏ ନାହିଁ। ବ୍ୟବହାରକାରୀଙ୍କୁ କାର୍ୟ ସମାପ୍ତ "
+"କରିବା ପାଇଁ ବକ୍ସକୁ ଯାଞ୍ଚ କରିବା ଆବଶ୍ୟକ।"
+
+#: modules/checklists/templates/global-checklists.php:203, fuzzy
+msgid "Add OpenAI Prompt task"
+msgstr "Add OpenAI Prompt task"
+
+#: modules/checklists/templates/global-checklists.php:210, fuzzy
+msgid "The prompt should be in form of a question."
+msgstr "The prompt should be in form of a question."
+
+#: modules/checklists/templates/global-checklists.php:210, fuzzy
+msgid "This feature requires an OpenAI API Key."
+msgstr "This feature requires an OpenAI API Key."
+
+#: modules/permalinks/lib/Requirement/ValidChars.php:44, fuzzy
+msgid "Latin characters in permalink"
+msgstr "Latin characters in permalink"
+
+#: modules/permalinks/permalinks.php:65, fuzzy
+msgid "Permalinks"
+msgstr "Permalinks"
+
+#: modules/permalinks/permalinks.php:66, fuzzy
+msgid "Define tasks related to permalinks"
+msgstr "Define tasks related to permalinks"
+
+#: modules/permissions/permissions.php:68, fuzzy
+msgid "Permissions"
+msgstr "Permissions"
+
+#: modules/permissions/permissions.php:107, fuzzy
+msgid "Exclude User Roles"
+msgstr "Exclude User Roles"
+
+#: modules/reviews/reviews.php:61, fuzzy
+msgid "Reviews"
+msgstr "Reviews"
+
+#: modules/settings/settings.php:62
+#: modules/settings/settings.php:132, fuzzy
+msgid "Checklists Settings"
+msgstr "Checklists Settings"
+
+#: modules/settings/settings.php:162
+msgid ""
+"Are you sure you want to reset all renamed checklist items to their default "
+"labels? This action cannot be undone."
+msgstr ""
+"Are you sure you want to reset all renamed checklist items to their default "
+"labels? This action cannot be undone."
+
+#: modules/settings/settings.php:163, fuzzy
+msgid "Resetting..."
+msgstr "Resetting..."
+
+#: modules/settings/settings.php:164
+#: modules/settings/settings.php:1602, fuzzy
+msgid "Reset All Renamed Labels"
+msgstr "Reset All Renamed Labels"
+
+#: modules/settings/settings.php:327, fuzzy
+msgid "Features"
+msgstr "Features"
+
+#: modules/settings/settings.php:328, fuzzy
+msgid "Feel free to select only the features you need."
+msgstr "Feel free to select only the features you need."
+
+#: modules/settings/settings.php:336, fuzzy
+msgid "Enabled features"
+msgstr "Enabled features"
+
+#: modules/settings/settings.php:391, fuzzy
+msgid "There are no PublishPress modules registered"
+msgstr "There are no PublishPress modules registered"
+
+#: modules/settings/settings.php:487
+#, php-format
+msgid ""
+"Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
+"loaded file."
+msgstr ""
+"Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
+"loaded file."
+
+#: modules/settings/settings.php:812, fuzzy
+msgid "Enable User Roles Filter:"
+msgstr "Enable User Roles Filter:"
+
+#: modules/settings/settings.php:820, fuzzy
+msgid "Show warning icon:"
+msgstr "Show warning icon:"
+
+#: modules/settings/settings.php:828, fuzzy
+msgid "Highlight failing blocks in the editor:"
+msgstr "Highlight failing blocks in the editor:"
+
+#: modules/settings/settings.php:836, fuzzy
+msgid "Delete data on uninstall:"
+msgstr "Delete data on uninstall:"
+
+#: modules/settings/settings.php:845, fuzzy
+msgid "Enable Status Filter:"
+msgstr "Enable Status Filter:"
+
+#: modules/settings/settings.php:855, fuzzy
+msgid "Enable Duplicate Checklists:"
+msgstr "Enable Duplicate Checklists:"
+
+#: modules/settings/settings.php:865, fuzzy
+msgid "Show Checklists column in post lists:"
+msgstr "Show Checklists column in post lists:"
+
+#: modules/settings/settings.php:875, fuzzy
+msgid "Enable Taxonomy Filter:"
+msgstr "Enable Taxonomy Filter:"
+
+#: modules/settings/settings.php:894, fuzzy
+msgid "Disable the \"Status\" option when using \"Quick Edit\":"
+msgstr "Disable the \"Status\" option when using \"Quick Edit\":"
+
+#: modules/settings/settings.php:902, fuzzy
+msgid "Disable \"Quick Edit\" completely:"
+msgstr "Disable \"Quick Edit\" completely:"
+
+#: modules/settings/settings.php:910, fuzzy
+msgid "Disable \"Publish\" button:"
+msgstr "Disable \"Publish\" button:"
+
+#: modules/settings/settings.php:928, fuzzy
+msgid "Complete Icon:"
+msgstr "Complete Icon:"
+
+#: modules/settings/settings.php:936, fuzzy
+msgid "Incomplete Icon:"
+msgstr "Incomplete Icon:"
+
+#: modules/settings/settings.php:944, fuzzy
+msgid "Required Complete Color:"
+msgstr "Required Complete Color:"
+
+#: modules/settings/settings.php:952, fuzzy
+msgid "Required Incomplete Color:"
+msgstr "Required Incomplete Color:"
+
+#: modules/settings/settings.php:960, fuzzy
+msgid "Required Asterisk Color:"
+msgstr "Required Asterisk Color:"
+
+#: modules/settings/settings.php:968, fuzzy
+msgid "Recommended Complete Color:"
+msgstr "Recommended Complete Color:"
+
+#: modules/settings/settings.php:976, fuzzy
+msgid "Recommended Incomplete Color:"
+msgstr "Recommended Incomplete Color:"
+
+#: modules/settings/settings.php:984, fuzzy
+msgid "Rename task labels:"
+msgstr "Rename task labels:"
+
+#: modules/settings/settings.php:992, fuzzy
+msgid "Checklist task sort order:"
+msgstr "Checklist task sort order:"
+
+#: modules/settings/settings.php:1010, fuzzy
+msgid "OpenAI API Key:"
+msgstr "OpenAI API Key:"
+
+#: modules/settings/settings.php:1025, fuzzy
+msgid "Reset Renamed Checklist:"
+msgstr "Reset Renamed Checklist:"
+
+#: modules/settings/settings.php:1044
+msgid "Post types:"
+msgstr "ପୋଷ୍ଟ ପ୍ରକାର:"
+
+#: modules/settings/settings.php:1077
+msgid ""
+"This allows tasks to be disabled for specific statuses such as \"Draft\" or "
+"\"Published."
+msgstr ""
+"ଏହା \"ଡ୍ରାଫ୍ଟ\" କିମ୍ବା \"ପ୍ରକାଶିତ\" ଭଳି ନିର୍ଦ୍ଧିଷ୍ଟ ସ୍ଥିତିଗୁଡିକ ପାଇଁ "
+"କାର୍ୟଗୁଡ଼ିକୁ ବନ୍ଦ କରିବାକୁ ସହାୟତା କରେ।"
+
+#: modules/settings/settings.php:1098
+msgid "This allows users to duplicate existing checklist tasks."
+msgstr ""
+"ଏହା ବ୍ୟବହାରକାରୀଙ୍କୁ ଅବସ୍ଥିତ ଚେକଲିସ୍ଟ କାର୍ୟଗୁଡ଼ିକୁ ପୁନରାବୃତ୍ତ କରିବାକୁ ଅନୁମତି "
+"ଦେଇଥାଏ।"
+
+#: modules/settings/settings.php:1120
+msgid ""
+"Add a Checklists column to the Posts screen showing how many requirements "
+"are complete."
+msgstr ""
+"ପୋଷ୍ଟ ସ୍କ୍ରିନ୍‌ରେ କେତେ ପାଇଁ ଆବଶ୍ୟକତା ସଂପୂର୍ଣ୍ଣ ହୋଇଛି ଦେଖାଇବାକୁ ଚେକଲିସ୍ଟ୍ "
+"କଲମ୍ ସଂଯୋଜନ କରନ୍ତୁ।"
+
+#: modules/settings/settings.php:1141
+msgid ""
+"This allows tasks to be disabled for posts with specific taxonomy terms. Go "
+"to the \"Post Types\" tab to choose the terms."
+msgstr ""
+"ଏହା ନିର୍ଦ୍ଧିଷ୍ଟ ଟ୍ୟାକ୍ସନୋମୀ ଶର୍ତ୍ତଗୁଡ଼ିକ ସହିତ ପୋଷ୍ଟଗୁଡିକ ପାଇଁ କାର୍ୟଗୁଡ଼ିକୁ "
+"ବନ୍ଦ କରିବାକୁ ସହାୟତା କରେ। ଶର୍ତ୍ତଗୁଡ଼ିକୁ ବାଛିବାକୁ \"ପୋଷ୍ଟ ପ୍ରକାର\" ଟ୍ୟାବକୁ "
+"ଯାଆନ୍ତୁ।"
+
+#: modules/settings/settings.php:1163
+msgid ""
+"This will display a warning icon in the \"Checklists\" box if requirements "
+"are incomplete."
+msgstr ""
+"ଯଦି ଆବଶ୍ୟକତା ସଂପୂର୍ଣ୍ଣ ନୁହେଁ, ତେବେ \"ଚେକଲିସ୍ଟ\" ବକ୍ସରେ ଏକ ସତର୍କତା ଚିହ୍ନ "
+"ପ୍ରଦର୍ଶିତ ହେବ।"
+
+#: modules/settings/settings.php:1183
+msgid ""
+"This will highlight Gutenberg blocks that fail block-specific checklist "
+"tasks."
+msgstr ""
+"ଏହା ଗୁଟେନବର୍ଗ୍ ବ୍ଲକ୍ଗୁଡ଼ିକୁ ହାଇଲାଇଟ୍ କରିବ ଯାହା ବ୍ଲକ୍-ନିର୍ଦ୍ଧିଷ୍ଟ ଚେକଲିସ୍ଟ "
+"କାର୍ୟଗୁଡ଼ିକୁ ବିଫଳ କରେ।"
+
+#: modules/settings/settings.php:1203
+msgid ""
+"When enabled, all PublishPress Checklists data will be deleted if the "
+"plugin is uninstalled."
+msgstr ""
+"ସକ୍ରିୟ କଲେ, ପ୍ଲଗଇନ୍ ଅନଇନ୍‌ଷ୍ଟଲ୍ ହେଲେ ସମସ୍ତ PublishPress Checklists ଡାଟା "
+"ମିଟାଯିବ।"
+
+#: modules/settings/settings.php:1224
+msgid "This will show \"Exclude User Roles\" options."
+msgstr "ଏହା \"ବ୍ୟବହାରକାରୀ ଭୌମାନକୁ ବାହାର କରନ୍ତୁ\" ବିକଳ୍ପଗୁଡ଼ିକୁ ପ୍ରଦର୍ଶିତ କରିବ।"
+
+#: modules/settings/settings.php:1245
+msgid ""
+"Disabling the \"Status\" option is recommended because it can be used to "
+"avoid using the Checklists requirements."
+msgstr ""
+"\"ସ୍ଥିତି\" ବିକଳ୍ପକୁ ବନ୍ଦ କରିବାକୁ ସୁପାରିଶ କରାଯାଇଛି କାରଣ ଏହା ଚେକଲିସ୍ଟ "
+"ଆବଶ୍ୟକତାଗୁଡ଼ିକୁ ବ୍ୟବହାର କରିବାରେ ବାରଣ କରିପାରିବ।"
+
+#: modules/settings/settings.php:1266
+msgid ""
+"This will disable \"Quick Edit\" for all users except those with the "
+"\"manage_options\" capability."
+msgstr ""
+"ଏହା \"କ୍ୱିକ୍ ଏଡିଟ୍\"କୁ ସମସ୍ତ ବ୍ୟବହାରକାରୀଙ୍କ ପାଇଁ ବନ୍ଦ କରିବ, "
+"\"manage_options\" ସମର୍ଥନ ଥିବା ବ୍ୟବହାରକାରୀଙ୍କୁ ଛାଡ଼ି।"
+
+#: modules/settings/settings.php:1287
+msgid ""
+"This will disable the \"Publish\" button when checklist requirements are "
+"not met."
+msgstr ""
+"ଯଦି ଚେକଲିସ୍ଟ ଆବଶ୍ୟକତାଗୁଡ଼ିକୁ ମିଟାଯିବାକୁ ନହେଁ, ତେବେ ଏହା \"ପ୍ରକାଶିତ\" ବଟନକୁ "
+"ବନ୍ଦ କରିବ।"
+
+#: modules/settings/settings.php:1306
+msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
+msgstr ""
+"ଚେକଲିସ୍ଟ କାର୍ୟଗୁଡ଼ିକରେ OpenAI ପ୍ରମ୍ପଟ୍ ବ୍ୟବହାର କରିବାକୁ ଆପଣଙ୍କର API Key ଦାଖଲ "
+"କରନ୍ତୁ।"
+
+#: modules/settings/settings.php:1379
+msgid "Post Types"
+msgstr "ପୋଷ୍ଟ ପ୍ରକାର"
+
+#: modules/settings/settings.php:1380
+msgid "General"
+msgstr "ସାଧାରଣ"
+
+#: modules/settings/settings.php:1381
+msgid "Publishing Options"
+msgstr "ପ୍ରକାଶନ ବିକଳ୍ପଗୁଡ଼ିକ"
+
+#: modules/settings/settings.php:1382
+msgid "Appearance"
+msgstr "ଦୃଶ୍ୟମାନ"
+
+#: modules/settings/settings.php:1383
+msgid "Integration"
+msgstr "ଏକତ୍ରିକରଣ"
+
+#: modules/settings/settings.php:1384
+msgid "Tools"
+msgstr "ଔଜାଗୁଡ଼ିକ"
+
+#: modules/settings/settings.php:1431
+msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
+msgstr ""
+"ଏକ Dashicons କ୍ଲାସ୍ ନାମ ଦାଖଲ କରନ୍ତୁ (ଉଦାହରଣ: dashicons-yes, "
+"dashicons-saved)."
+
+#: modules/settings/settings.php:1432
+#: modules/settings/settings.php:1447
+msgid "View Dashicons"
+msgstr "Dashicons ଦେଖନ୍ତୁ"
+
+#: modules/settings/settings.php:1446
+msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
+msgstr ""
+"ଏକ Dashicons କ୍ଲାସ୍ ନାମ ଦାଖଲ କରନ୍ତୁ (ଉଦାହରଣ: dashicons-no, "
+"dashicons-dismiss)."
+
+#: modules/settings/settings.php:1529
+msgid "Allow admins to rename task labels for the post editor."
+msgstr ""
+"ପୋଷ୍ଟ ସମ୍ପାଦକ ପାଇଁ କାର୍ୟ ଲେବଲ୍‌ଗୁଡ଼ିକୁ ପୁନର୍ନାମକରିବାକୁ ଏଡମିନ୍‌ଗୁଡ଼ିକୁ "
+"ଅନୁମତି ଦିଅନ୍ତୁ।"
+
+#: modules/settings/settings.php:1547
+msgid "Default"
+msgstr "ଡିଫଲ୍ଟ"
+
+#: modules/settings/settings.php:1548
+msgid "Priority"
+msgstr "ପ୍ରାଥମିକତା"
+
+#: modules/settings/settings.php:1549
+msgid "Alphabetical"
+msgstr "ବାର୍ତ୍ତାମାଳିକା"
+
+#: modules/settings/settings.php:1553
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr "ଚେକଲିସ୍ଟ୍ ସ୍କ୍ରିନ୍‌ରେ ସଂକଳନ କରାଯାଇଥିବା କ୍ରମରେ କାର୍ୟଗୁଡ଼ିକୁ ରଖେ।"
+
+#: modules/settings/settings.php:1557
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "ସୁପାରିଶିତ କାର୍ୟଗୁଡ଼ିକୁ ଆବଶ୍ୟକ କାର୍ୟଗୁଡ଼ିକର ପূର୍ବରୁ ଦେଖାଏ।"
+
+#: modules/settings/settings.php:1561
+msgid "Sorts tasks alphabetically by task label."
+msgstr "କାର୍ୟ ଲେବଲ୍‌ଅନୁସାରେ ଅକ୍ଷରାବଳୀ ଦ୍ୱାରା କାର୍ୟଗୁଡ଼ିକୁ ସଜାଇଥାଏ।"
+
+#: modules/settings/settings.php:1604
+msgid ""
+"This will reset all renamed checklist labels for WP Admin and Editing "
+"screen back to their default labels."
+msgstr ""
+"ଏହା WP Admin ଏବଂ ସମ୍ପାଦନା ସ୍କ୍ରିନ୍‌ର ପାଇଁ ସମସ୍ତ ପୁନର୍ନାମିତ ଚେକଲିସ୍ଟ୍ "
+"ଲେବଲ୍‌ଗୁଡ଼ିକୁ ତାଙ୍କର ଡିଫଲ୍ଟ ଲେବଲ୍‌ଗୁଡ଼ିକୁ ପୁନର୍ସେଟ କରିବ।"
+
+#: modules/settings/settings.php:1614
+msgid "Security check failed."
+msgstr "ସୁରକ୍ଷା ଯାଞ୍ଚ ବିଫଳ ହେଲା।"
+
+#: modules/settings/settings.php:1619
+msgid "You do not have permission to perform this action."
+msgstr "ଆପଣଙ୍କର ଏହି କାର୍ୟ କରିବାକୁ ଅନୁମତି ନାହିଁ।"
+
+#: modules/settings/settings.php:1664
+msgid "All renamed labels have been reset successfully."
+msgstr "ସମସ୍ତ ପୁନର୍ନାମିତ ଲେବଲ୍‌ଗୁଡ଼ିକୁ ସଫଳତାର ସହିତ ପୁନର୍ସେଟ କରାଯାଇଛି।"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
+msgid "Number of characters in Yoast SEO focus keyword"
+msgstr "Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ ଅକ୍ଷରଗୁଡ଼ିକର ସଂଖ୍ୟା"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#, php-format
+msgid "Minimum of %d character in Yoast SEO focus keyword"
+msgstr "Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ %d ଅକ୍ଷରର ନ୍ୟୁନତମ"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
+#, php-format
+msgid "Minimum of %d characters in Yoast SEO focus keyword"
+msgstr "Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ %d ଅକ୍ଷରର ନ୍ୟୁନତମ"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
+#, php-format
+msgid "Maximum of %d character in Yoast SEO focus keyword"
+msgstr "Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ %d ଅକ୍ଷରର ଅଧିକତମ"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
+#, php-format
+msgid "Maximum of %d characters in Yoast SEO focus keyword"
+msgstr "Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ %d ଅକ୍ଷରର ଅଧିକତମ"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
+#, php-format
+msgid "%d character in Yoast SEO focus keyword"
+msgstr "%d ଅକ୍ଷର Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
+#, php-format
+msgid "%d characters in Yoast SEO focus keyword"
+msgstr "%d ଅକ୍ଷର Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ"
+
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
+#, php-format
+msgid "Between %d and %d characters in Yoast SEO focus keyword"
+msgstr "Yoast SEO ଫୋକସ୍ କୀୱର୍ଡରେ %d ଏବଂ %d ମଧ୍ୟରେ ଚରିତ୍ର"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:39
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:40
+msgid "Number of characters in Yoast SEO meta description"
+msgstr "Yoast SEO ମେଟା ବିବରଣୀରେ ଚରିତ୍ରଙ୍କ ସଂଖ୍ୟା"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#, php-format
+msgid "Minimum of %d character in Yoast SEO meta description"
+msgstr "Yoast SEO ମେଟା ବିବରଣୀରେ %d ଚରିତ୍ରର ଅର୍ଥନୀତି"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
+#, php-format
+msgid "Minimum of %d characters in Yoast SEO meta description"
+msgstr "Yoast SEO ମେଟା ବିବରଣୀରେ %d ଚରିତ୍ରର ଅର୍ଥନୀତି"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
+#, php-format
+msgid "Maximum of %d character in Yoast SEO meta description"
+msgstr "Yoast SEO ମେଟା ବିବରଣୀରେ %d ଚରିତ୍ରର ଅଧିକତମ"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
+#, php-format
+msgid "Maximum of %d characters in Yoast SEO meta description"
+msgstr "Yoast SEO ମେଟା ବିବରଣୀରେ %d ଚରିତ୍ରର ଅଧିକତମ"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
+#, php-format
+msgid "%d character in Yoast SEO meta description"
+msgstr "%d ଚରିତ୍ର Yoast SEO ମେଟା ବିବରଣୀରେ"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
+#, php-format
+msgid "%d characters in Yoast SEO meta description"
+msgstr "%d ଚରିତ୍ର Yoast SEO ମେଟା ବିବରଣୀରେ"
+
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
+#, php-format
+msgid "Between %d and %d characters in Yoast SEO meta description"
+msgstr "Yoast SEO ମେଟା ବିବରଣୀରେ %d ଏବଂ %d ମଧ୍ୟରେ ଚରିତ୍ର"
+
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
+msgid "Minimum Yoast SEO readability score"
+msgstr "Yoast SEO ନିଖାର ସ୍କୋରର ନ୍ୟୁନତମ"
+
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
+#. translators: %s expands to the readability score
+#, php-format
+msgid "Yoast Readability: %s"
+msgstr "Yoast ପଢ଼ାଯୋଗ୍ୟତା: %s"
+
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
+msgid "OK"
+msgstr "ଓକେ"
+
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
+msgid "Good"
+msgstr "ଭଲ"
+
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
+msgid "Minimum Yoast SEO analysis score"
+msgstr "Yoast SEO ବିଶ୍ଳେଷଣ ସ୍କୋରର ନ୍ୟୁନତମ"
+
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
+#. translators: %s expands to the seo score
+#, fuzzy, php-format
+msgid "Yoast SEO: %s"
+msgstr "Yoast SEO: %s"
+
+#: modules/yoastseo/yoastseo.php:69
+msgid "Define tasks related to Yoast SEO"
+msgstr "Yoast SEO ସମ୍ବନ୍ଧୀୟ କାର୍ୟଗୁଡିକୁ ସଂଜ୍ଞା କରନ୍ତୁ"
+
+#: publishpress-checklists.php:103
+msgid "This plugin can be deleted."
+msgstr "ଏହି ପ୍ଲଗିନ୍ ବିଲୋପ କରାଯିବ।"
+
+#: publishpress-checklists.php:154
+#, php-format
+msgid ""
+"You're using PublishPress Checklists Free. The Pro version has more "
+"features and support. %sUpgrade to Pro%s"
+msgstr ""
+"ଆପଣ PublishPress Checklists Free ବ୍ୟବହାର କରୁଛନ୍ତି। Pro ସଂସ୍କରଣରେ ଅଧିକ "
+"ବିଶେଷତା ଏବଂ ସମର୍ଥନ ଅଛି। %sPro ପାଇଁ ଅପଗ୍ରେଡ୍ କରନ୍ତୁ%s"

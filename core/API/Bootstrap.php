@@ -9,7 +9,7 @@
 
 namespace PublishPress\Checklists\Core\API;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 /**
  * Bootstrap class for the API

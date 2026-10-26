@@ -12,7 +12,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 
 use PPCH_Checklists;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Required_tags extends Base_multiple
 {
