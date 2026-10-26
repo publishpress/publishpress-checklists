@@ -12,13 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-08-10 15:20+0000\n"
-"X-Generator: Weblate 5.14.3\n"
+"PO-Revision-Date: 2026-10-26 16:54+0000\n"
+"X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 ? 0 : (n == 2 ? 1 : ((n > 10 && n "
-"% 10 == 0) ? 2 : 3)));\n"
-"n % 10 == 0) ? 2: 3));\n"
-"Language: he-IL\n"
+"n % 10 == 0) ? 2 : 3));\n"
+"Language: he_IL\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: publishpress-checklists.php\n"
@@ -31,13 +29,14 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 ? 0 : (n == 2 ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3)));\n"
 
 #: publishpress-checklists.php:4
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
-#: publishpress-checklists.php:5, fuzzy
+#: publishpress-checklists.php:5
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
@@ -54,7 +53,7 @@ msgstr "עם PublishPress Checklists, אתה יכול לבחור דרישות פ
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: publishpress-checklists.php:8, fuzzy
+#: publishpress-checklists.php:8
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
@@ -67,16 +66,16 @@ msgstr "מושבת"
 #: core/API/LabelMapper.php:40
 #: modules/checklists/checklists.php:1029
 #: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1304
-#: modules/checklists/assets/js/gutenberg-panel.jsx:437
+#: modules/checklists/checklists.php:1306
+#: modules/checklists/assets/js/gutenberg-panel.jsx:464
 msgid "Recommended"
 msgstr "מומלץ"
 
 #: core/API/LabelMapper.php:41
 #: modules/checklists/checklists.php:1028
 #: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1303
-#: modules/checklists/assets/js/gutenberg-panel.jsx:436
+#: modules/checklists/checklists.php:1305
+#: modules/checklists/assets/js/gutenberg-panel.jsx:463
 msgid "Required"
 msgstr "נדרש"
 
@@ -85,7 +84,7 @@ msgid "Please correct your form errors below and try again."
 msgstr "אנא תקן את שגיאות הטופס שלך למטה ונסה שוב."
 
 #: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:516
+#: modules/settings/settings.php:523
 msgid "Cheatin&#8217; uh?"
 msgstr "רמאות&#8217; אה?"
 
@@ -98,12 +97,12 @@ msgid "Post does not exist"
 msgstr "הפוסט אינו קיים"
 
 #: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:103
+#: core/Plugin.php:78
 #: modules/checklists/checklists.php:110
 #: modules/checklists/checklists.php:1132
 #: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1300
-#: modules/checklists/assets/js/gutenberg-panel.jsx:411
+#: modules/checklists/checklists.php:1302
+#: modules/checklists/assets/js/gutenberg-panel.jsx:438
 msgid "Checklists"
 msgstr "רשימות בדיקה"
 
@@ -136,12 +135,12 @@ msgstr "תיעוד מפורט זמין גם באתר הפלאגין."
 msgid "View Knowledge Base"
 msgstr "צפה במאגר הידע"
 
-#: core/Plugin.php:104
+#: core/Plugin.php:79
 #: modules/settings/settings.php:134
 msgid "Settings"
 msgstr "הגדרות"
 
-#: core/Plugin.php:112
+#: core/Plugin.php:87
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "שדרוג לגרסה מקצועית"
@@ -870,7 +869,7 @@ msgid "Checklist"
 msgstr "רשימת בדיקה"
 
 #: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1303
 msgid "You don't have to complete any Checklist tasks."
 msgstr "אינך חייב להשלים שום משימות Checklist."
 
@@ -905,7 +904,7 @@ msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "אינך חייב להשלים שום %sמשימות Checklist%s."
 
 #: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:473
+#: modules/checklists/assets/js/gutenberg-panel.jsx:500
 msgid "Check Now"
 msgstr "בדוק עכשיו"
 
@@ -937,15 +936,15 @@ msgstr "אפשרויות"
 msgid "Add custom task"
 msgstr "הוסף משימה מותאמת"
 
-#: modules/checklists/checklists.php:1299
+#: modules/checklists/checklists.php:1301
 msgid "Please complete the required(*) checklists task."
 msgstr "אנא השלם את רשימות הבדיקה הנדרשות(*)."
 
-#: modules/checklists/checklists.php:1302
+#: modules/checklists/checklists.php:1304
 msgid "required"
 msgstr "נדרש"
 
-#: modules/checklists/checklists.php:1307
+#: modules/checklists/checklists.php:1309
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "משימות רשימות בדיקה אינן זמינות בעורכי Elementor"
@@ -1183,7 +1182,7 @@ msgstr "ביקורות"
 msgid "Checklists Settings"
 msgstr "הגדרות רשימות בדיקה"
 
-#: modules/settings/settings.php:155
+#: modules/settings/settings.php:162
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
@@ -1191,147 +1190,147 @@ msgstr ""
 "האם אתה בטוח שברצונך לאפס את כל הפריטים שנקראו מחדש לרשומות ברירת המחדל "
 "שלהם? פעולה זו אינה ניתנת לביטול."
 
-#: modules/settings/settings.php:156
+#: modules/settings/settings.php:163
 msgid "Resetting..."
 msgstr "מאפס..."
 
-#: modules/settings/settings.php:157
-#: modules/settings/settings.php:1556
+#: modules/settings/settings.php:164
+#: modules/settings/settings.php:1602
 msgid "Reset All Renamed Labels"
 msgstr "אפס את כל התוויות שנקראו מחדש"
 
-#: modules/settings/settings.php:320
+#: modules/settings/settings.php:327
 msgid "Features"
 msgstr "תכונות"
 
-#: modules/settings/settings.php:321
+#: modules/settings/settings.php:328
 msgid "Feel free to select only the features you need."
 msgstr "מרגיש חופשי לבחור רק את התכונות שאתה צריך."
 
-#: modules/settings/settings.php:329
+#: modules/settings/settings.php:336
 msgid "Enabled features"
 msgstr "תכונות מופעלות"
 
-#: modules/settings/settings.php:384
+#: modules/settings/settings.php:391
 msgid "There are no PublishPress modules registered"
 msgstr "אין מודולי PublishPress רשומים"
 
-#: modules/settings/settings.php:480
+#: modules/settings/settings.php:487
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr "מושבת כי add_post_type_support('%1$s', '%2$s') כלול בקובץ שהוטען."
 
-#: modules/settings/settings.php:797
+#: modules/settings/settings.php:812
 msgid "Enable User Roles Filter:"
 msgstr "אפשר סינון תפקידים של משתמשים:"
 
-#: modules/settings/settings.php:805
+#: modules/settings/settings.php:820
 msgid "Show warning icon:"
 msgstr "הצג אייקון אזהרה:"
 
-#: modules/settings/settings.php:813
+#: modules/settings/settings.php:828
 msgid "Highlight failing blocks in the editor:"
 msgstr "הדגש בלוקים שנכשלו בעורך:"
 
-#: modules/settings/settings.php:821
+#: modules/settings/settings.php:836
 msgid "Delete data on uninstall:"
 msgstr "מחק נתונים בעת הסרה:"
 
-#: modules/settings/settings.php:830
+#: modules/settings/settings.php:845
 msgid "Enable Status Filter:"
 msgstr "אפשר מסנן מצב:"
 
-#: modules/settings/settings.php:840
+#: modules/settings/settings.php:855
 msgid "Enable Duplicate Checklists:"
 msgstr "אפשר בדיקת רשימות כפולות:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:865
 msgid "Show Checklists column in post lists:"
 msgstr "הצג עמודת רשימות בדו\"ח הפוסטים:"
 
-#: modules/settings/settings.php:860
+#: modules/settings/settings.php:875
 msgid "Enable Taxonomy Filter:"
 msgstr "אפשר סינון טקסונומיה:"
 
-#: modules/settings/settings.php:879
+#: modules/settings/settings.php:894
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "השבת את אפשרות \"סטטוס\" בעת שימוש ב-\"עריכה מהירה\":"
 
-#: modules/settings/settings.php:887
+#: modules/settings/settings.php:902
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "השבת לחלוטין את \"עריכה מהירה\":"
 
-#: modules/settings/settings.php:895
+#: modules/settings/settings.php:910
 msgid "Disable \"Publish\" button:"
 msgstr "השבת את כפתור \"פרסם\":"
 
-#: modules/settings/settings.php:913
+#: modules/settings/settings.php:928
 msgid "Complete Icon:"
 msgstr "אייקון מושלם:"
 
-#: modules/settings/settings.php:921
+#: modules/settings/settings.php:936
 msgid "Incomplete Icon:"
 msgstr "אייקון לא מושלם:"
 
-#: modules/settings/settings.php:929
+#: modules/settings/settings.php:944
 msgid "Required Complete Color:"
 msgstr "צבע דרוש מושלם:"
 
-#: modules/settings/settings.php:937
+#: modules/settings/settings.php:952
 msgid "Required Incomplete Color:"
 msgstr "צבע דרוש לא מושלם:"
 
-#: modules/settings/settings.php:945
+#: modules/settings/settings.php:960
 msgid "Required Asterisk Color:"
 msgstr "צבע האסטריסק הנדרש:"
 
-#: modules/settings/settings.php:953
+#: modules/settings/settings.php:968
 msgid "Recommended Complete Color:"
 msgstr "צבע מומלץ להשלמה:"
 
-#: modules/settings/settings.php:961
+#: modules/settings/settings.php:976
 msgid "Recommended Incomplete Color:"
 msgstr "צבע מומלץ לחוסר השלמה:"
 
-#: modules/settings/settings.php:969
+#: modules/settings/settings.php:984
 msgid "Rename task labels:"
 msgstr "שנה את שמות המשימות:"
 
-#: modules/settings/settings.php:977
+#: modules/settings/settings.php:992
 msgid "Checklist task sort order:"
 msgstr "סדר מיון משימות ברשימת בדיקה:"
 
-#: modules/settings/settings.php:995
+#: modules/settings/settings.php:1010
 msgid "OpenAI API Key:"
 msgstr "מפתח API של OpenAI:"
 
-#: modules/settings/settings.php:1010
+#: modules/settings/settings.php:1025
 msgid "Reset Renamed Checklist:"
 msgstr "אפס רשימת בדיקה ששונה שמה:"
 
-#: modules/settings/settings.php:1029
+#: modules/settings/settings.php:1044
 msgid "Post types:"
 msgstr "סוגי פוסטים:"
 
-#: modules/settings/settings.php:1062
+#: modules/settings/settings.php:1077
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr "זה מאפשר להשבית משימות עבור סטטוסים ספציפיים כמו \"טיוטה\" או \"פורסם\"."
 
-#: modules/settings/settings.php:1083
+#: modules/settings/settings.php:1098
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "זה מאפשר למשתמשים לשכפל משימות קיימות של רשימות בדיקה."
 
-#: modules/settings/settings.php:1105
+#: modules/settings/settings.php:1120
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr "הוסף עמודה של רשימות בדיקות למסך הפוסטים שמראה כמה דרישות הושלמו."
 
-#: modules/settings/settings.php:1126
+#: modules/settings/settings.php:1141
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1339,29 +1338,29 @@ msgstr ""
 "זה מאפשר להשבית משימות לפוסטים עם מונחים ספציפיים במס שפתיים. עבור לטאב "
 "\"סוגי פוסטים\" כדי לבחור את המונחים."
 
-#: modules/settings/settings.php:1148
+#: modules/settings/settings.php:1163
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "זה יציג אייקון אזהרה בקופסת \"רשימות\" אם הדרישות אינן שלמות."
 
-#: modules/settings/settings.php:1168
+#: modules/settings/settings.php:1183
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr "זה ידגיש בלוקים של גוטנברג שנכשלו במשימות רשימת בדיקה ספציפיות לבלוק."
 
-#: modules/settings/settings.php:1188
+#: modules/settings/settings.php:1203
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr "כאשר זה מופעל, כל הנתונים של PublishPress Checklists יימחקו אם התוסף יוסר."
 
-#: modules/settings/settings.php:1209
+#: modules/settings/settings.php:1224
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "זה יראה אפשרויות \"לשלול תפקידי משתמש\"."
 
-#: modules/settings/settings.php:1230
+#: modules/settings/settings.php:1245
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1369,7 +1368,7 @@ msgstr ""
 "מומלץ להשבית את אפשרות \"סטטוס\" מכיוון שניתן להשתמש בה כדי להימנע מהדרישות "
 "של רשימות בדיקה."
 
-#: modules/settings/settings.php:1251
+#: modules/settings/settings.php:1266
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1377,70 +1376,82 @@ msgstr ""
 "זה ישבית את \"עריכה מהירה\" עבור כל המשתמשים מלבד אלה עם יכולת "
 "\"manage_options\"."
 
-#: modules/settings/settings.php:1272
+#: modules/settings/settings.php:1287
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr "זה ישבית את כפתור \"פרסם\" כאשר דרישות הרשימה לא מולאו."
 
-#: modules/settings/settings.php:1291
+#: modules/settings/settings.php:1306
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "הזן את מפתח ה-API שלך כדי להשתמש בפקודות OpenAI במשימות רשימה."
 
-#: modules/settings/settings.php:1364
+#: modules/settings/settings.php:1379
 msgid "Post Types"
 msgstr "סוגי פוסטים"
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1380
 msgid "General"
 msgstr "כללי"
 
-#: modules/settings/settings.php:1366
+#: modules/settings/settings.php:1381
 msgid "Publishing Options"
 msgstr "אפשרויות פרסום"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1382
 msgid "Appearance"
 msgstr "מראה"
 
-#: modules/settings/settings.php:1368
+#: modules/settings/settings.php:1383
 msgid "Integration"
 msgstr "אינטגרציה"
 
-#: modules/settings/settings.php:1369
+#: modules/settings/settings.php:1384
 msgid "Tools"
 msgstr "כלים"
 
-#: modules/settings/settings.php:1416
+#: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "הזן שם מחלקת Dashicons (למשל, dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
+#: modules/settings/settings.php:1447
 msgid "View Dashicons"
 msgstr "צפה ב-Dashicons"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "הזן שם מחלקת Dashicons (למשל, dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1514
+#: modules/settings/settings.php:1529
 msgid "Allow admins to rename task labels for the post editor."
 msgstr "אפשר למנהלי מערכת לשנות את שמות המשימות עבור עורך הפוסטים."
 
-#: modules/settings/settings.php:1532
+#: modules/settings/settings.php:1547
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: modules/settings/settings.php:1533
-msgid "Required on top and Recommended below"
-msgstr "נדרש למעלה ומומלץ למטה"
+#: modules/settings/settings.php:1548
+msgid "Priority"
+msgstr "עדיפות"
 
-#: modules/settings/settings.php:1534
-msgid "Sort alphabetically"
-msgstr "מיין באלפבית"
+#: modules/settings/settings.php:1549
+msgid "Alphabetical"
+msgstr "אלפביתי"
 
-#: modules/settings/settings.php:1558
+#: modules/settings/settings.php:1553
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr "שומר על המשימות בסדר שהוגדר במסך הרשימות בדיקה."
+
+#: modules/settings/settings.php:1557
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "מראה משימות נדרשות לפני משימות מומלצות."
+
+#: modules/settings/settings.php:1561
+msgid "Sorts tasks alphabetically by task label."
+msgstr "ממיין משימות לפי סדר אלפביתי על פי תווית המשימה."
+
+#: modules/settings/settings.php:1604
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
@@ -1448,15 +1459,15 @@ msgstr ""
 "זה יאפס את כל תוויות הרשימה ששונו עבור WP Admin ומסך העריכה חזרה לתוויות "
 "ברירת המחדל שלהן."
 
-#: modules/settings/settings.php:1568
+#: modules/settings/settings.php:1614
 msgid "Security check failed."
 msgstr "בדיקת אבטחה נכשלה."
 
-#: modules/settings/settings.php:1573
+#: modules/settings/settings.php:1619
 msgid "You do not have permission to perform this action."
 msgstr "אין לך הרשאה לבצע פעולה זו."
 
-#: modules/settings/settings.php:1618
+#: modules/settings/settings.php:1664
 msgid "All renamed labels have been reset successfully."
 msgstr "כל התוויות ששונו הוחזרו בהצלחה."
 

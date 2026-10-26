@@ -12,10 +12,9 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-08-10 15:20+0000\n"
-"X-Generator: Weblate 5.14.3\n"
+"PO-Revision-Date: 2026-10-26 16:53+0000\n"
+"X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Language: ja\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -35,7 +34,7 @@ msgstr ""
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
-#: publishpress-checklists.php:5, fuzzy
+#: publishpress-checklists.php:5
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
@@ -52,7 +51,7 @@ msgstr "PublishPress Checklists では、コンテンツの公開条件を設定
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: publishpress-checklists.php:8, fuzzy
+#: publishpress-checklists.php:8
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
@@ -65,16 +64,16 @@ msgstr "無効"
 #: core/API/LabelMapper.php:40
 #: modules/checklists/checklists.php:1029
 #: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1304
-#: modules/checklists/assets/js/gutenberg-panel.jsx:437
+#: modules/checklists/checklists.php:1306
+#: modules/checklists/assets/js/gutenberg-panel.jsx:464
 msgid "Recommended"
 msgstr "推奨"
 
 #: core/API/LabelMapper.php:41
 #: modules/checklists/checklists.php:1028
 #: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1303
-#: modules/checklists/assets/js/gutenberg-panel.jsx:436
+#: modules/checklists/checklists.php:1305
+#: modules/checklists/assets/js/gutenberg-panel.jsx:463
 msgid "Required"
 msgstr "必須"
 
@@ -83,7 +82,7 @@ msgid "Please correct your form errors below and try again."
 msgstr "公開する前に次のタスクを完了してください。"
 
 #: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:516
+#: modules/settings/settings.php:523
 msgid "Cheatin&#8217; uh?"
 msgstr "許可されていない操作です。"
 
@@ -96,12 +95,12 @@ msgid "Post does not exist"
 msgstr "投稿が存在しません"
 
 #: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:103
+#: core/Plugin.php:78
 #: modules/checklists/checklists.php:110
 #: modules/checklists/checklists.php:1132
 #: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1300
-#: modules/checklists/assets/js/gutenberg-panel.jsx:411, fuzzy
+#: modules/checklists/checklists.php:1302
+#: modules/checklists/assets/js/gutenberg-panel.jsx:438, fuzzy
 msgid "Checklists"
 msgstr "Checklists"
 
@@ -134,12 +133,12 @@ msgstr "詳細なドキュメントはプラグインのウェブサイトでも
 msgid "View Knowledge Base"
 msgstr "ナレッジベースを見る"
 
-#: core/Plugin.php:104
+#: core/Plugin.php:79
 #: modules/settings/settings.php:134
 msgid "Settings"
 msgstr "設定"
 
-#: core/Plugin.php:112
+#: core/Plugin.php:87
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "Pro にアップグレード"
@@ -325,7 +324,7 @@ msgstr "アイキャッチ画像の説明文がある"
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
 msgid "Number of characters in excerpt"
-msgstr "抜粋内の文字数"
+msgstr "抜粋の文字数"
 
 #: core/Requirement/Filled_excerpt.php:44
 #, php-format
@@ -462,7 +461,7 @@ msgstr "エラーが発生しました。"
 
 #: core/Requirement/Openai_item.php:293
 msgid "Validation error. Kindly reload this page and try again."
-msgstr "バリデーションエラーです。このページを再読み込みしてもう一度お試しください。"
+msgstr "バリデーションエラーです。このページを再読み込みしてください。"
 
 #: core/Requirement/Openai_item.php:298
 msgid "Post content is empty."
@@ -868,7 +867,7 @@ msgid "Checklist"
 msgstr "チェックリスト"
 
 #: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1303
 msgid "You don't have to complete any Checklist tasks."
 msgstr "チェックリストのタスクを完了する必要はありません。"
 
@@ -903,7 +902,7 @@ msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "%sチェックリストのタスク%sを完了する必要はありません。"
 
 #: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:473
+#: modules/checklists/assets/js/gutenberg-panel.jsx:500
 msgid "Check Now"
 msgstr "今すぐチェック"
 
@@ -935,15 +934,15 @@ msgstr "オプション"
 msgid "Add custom task"
 msgstr "カスタムタスクの追加"
 
-#: modules/checklists/checklists.php:1299
+#: modules/checklists/checklists.php:1301
 msgid "Please complete the required(*) checklists task."
 msgstr "必須 (*) のチェックリストを完了してください。"
 
-#: modules/checklists/checklists.php:1302
+#: modules/checklists/checklists.php:1304
 msgid "required"
 msgstr "必須"
 
-#: modules/checklists/checklists.php:1307
+#: modules/checklists/checklists.php:1309
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Checklists のタスクは、Elementor のエディターでは使用できません。"
@@ -1179,270 +1178,282 @@ msgstr "レビュー"
 msgid "Checklists Settings"
 msgstr "Checklists の設定"
 
-#: modules/settings/settings.php:155
+#: modules/settings/settings.php:162
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr "すべての名前変更されたチェックリスト項目をデフォルトのラベルにリセットしてもよろしいですか？この操作は元に戻せません。"
 
-#: modules/settings/settings.php:156
+#: modules/settings/settings.php:163
 msgid "Resetting..."
 msgstr "リセット中..."
 
-#: modules/settings/settings.php:157
-#: modules/settings/settings.php:1556
+#: modules/settings/settings.php:164
+#: modules/settings/settings.php:1602
 msgid "Reset All Renamed Labels"
 msgstr "すべての名前変更されたラベルをリセット"
 
-#: modules/settings/settings.php:320
+#: modules/settings/settings.php:327
 msgid "Features"
 msgstr "特長"
 
-#: modules/settings/settings.php:321
+#: modules/settings/settings.php:328
 msgid "Feel free to select only the features you need."
 msgstr "必要な機能だけを自由に選択してください。"
 
-#: modules/settings/settings.php:329
+#: modules/settings/settings.php:336
 msgid "Enabled features"
 msgstr "有効な機能"
 
-#: modules/settings/settings.php:384
+#: modules/settings/settings.php:391
 msgid "There are no PublishPress modules registered"
 msgstr "PublishPress モジュールが登録されていません"
 
-#: modules/settings/settings.php:480
+#: modules/settings/settings.php:487
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr "ロードしたファイルに add_post_type_support('%1$s', '%2$s') が含まれているため無効です。"
 
-#: modules/settings/settings.php:797
+#: modules/settings/settings.php:812
 msgid "Enable User Roles Filter:"
 msgstr "ユーザーロールフィルターを有効にする:"
 
-#: modules/settings/settings.php:805
+#: modules/settings/settings.php:820
 msgid "Show warning icon:"
 msgstr "警告アイコンを表示:"
 
-#: modules/settings/settings.php:813
+#: modules/settings/settings.php:828
 msgid "Highlight failing blocks in the editor:"
 msgstr "エディタ内の失敗したブロックをハイライト:"
 
-#: modules/settings/settings.php:821
+#: modules/settings/settings.php:836
 msgid "Delete data on uninstall:"
 msgstr "アンインストール時にデータを削除："
 
-#: modules/settings/settings.php:830
+#: modules/settings/settings.php:845
 msgid "Enable Status Filter:"
 msgstr "ステータスフィルターを有効化:"
 
-#: modules/settings/settings.php:840
+#: modules/settings/settings.php:855
 msgid "Enable Duplicate Checklists:"
 msgstr "重複チェックリストを有効にする:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:865
 msgid "Show Checklists column in post lists:"
 msgstr "投稿一覧に Checklists の列を表示:"
 
-#: modules/settings/settings.php:860
+#: modules/settings/settings.php:875
 msgid "Enable Taxonomy Filter:"
 msgstr "タクソノミーフィルターを有効にする："
 
-#: modules/settings/settings.php:879
+#: modules/settings/settings.php:894
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "「クイック編集」使用時に「ステータス」オプションを無効化:"
 
-#: modules/settings/settings.php:887
+#: modules/settings/settings.php:902
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "「クイック編集」を完全無効化:"
 
-#: modules/settings/settings.php:895
+#: modules/settings/settings.php:910
 msgid "Disable \"Publish\" button:"
 msgstr "「公開」ボタンを無効化:"
 
-#: modules/settings/settings.php:913
+#: modules/settings/settings.php:928
 msgid "Complete Icon:"
 msgstr "完了アイコン："
 
-#: modules/settings/settings.php:921
+#: modules/settings/settings.php:936
 msgid "Incomplete Icon:"
 msgstr "未完了アイコン："
 
-#: modules/settings/settings.php:929
+#: modules/settings/settings.php:944
 msgid "Required Complete Color:"
 msgstr "必須完了色："
 
-#: modules/settings/settings.php:937
+#: modules/settings/settings.php:952
 msgid "Required Incomplete Color:"
 msgstr "必須未完了色："
 
-#: modules/settings/settings.php:945
+#: modules/settings/settings.php:960
 msgid "Required Asterisk Color:"
 msgstr "必須アスタリスクの色:"
 
-#: modules/settings/settings.php:953
+#: modules/settings/settings.php:968
 msgid "Recommended Complete Color:"
 msgstr "推奨完了色："
 
-#: modules/settings/settings.php:961
+#: modules/settings/settings.php:976
 msgid "Recommended Incomplete Color:"
 msgstr "推奨される未完成の色："
 
-#: modules/settings/settings.php:969
+#: modules/settings/settings.php:984
 msgid "Rename task labels:"
 msgstr "タスクラベルの名前を変更:"
 
-#: modules/settings/settings.php:977
+#: modules/settings/settings.php:992
 msgid "Checklist task sort order:"
 msgstr "チェックリストタスクのソート順:"
 
-#: modules/settings/settings.php:995, fuzzy
+#: modules/settings/settings.php:1010, fuzzy
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
 
-#: modules/settings/settings.php:1010
+#: modules/settings/settings.php:1025
 msgid "Reset Renamed Checklist:"
 msgstr "名前が変更されたチェックリストをリセット："
 
-#: modules/settings/settings.php:1029
+#: modules/settings/settings.php:1044
 msgid "Post types:"
 msgstr "投稿タイプ："
 
-#: modules/settings/settings.php:1062
+#: modules/settings/settings.php:1077
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr "これにより、「下書き」や「公開済み」などの特定のステータスに対してタスクを無効にすることができます。"
 
-#: modules/settings/settings.php:1083
+#: modules/settings/settings.php:1098
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "これにより、ユーザーは既存のチェックリストタスクを複製できます。"
 
-#: modules/settings/settings.php:1105
+#: modules/settings/settings.php:1120
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr "投稿画面にチェックリスト列を追加し、完了した要件の数を表示します。"
 
-#: modules/settings/settings.php:1126
+#: modules/settings/settings.php:1141
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
 msgstr "これにより、特定のタクソノミー用語を持つ投稿に対してタスクを無効にすることができます。「投稿タイプ」タブに移動して用語を選択してください。"
 
-#: modules/settings/settings.php:1148
+#: modules/settings/settings.php:1163
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "要件が不完全な場合、\"チェックリスト\"ボックスに警告アイコンが表示されます。"
 
-#: modules/settings/settings.php:1168
+#: modules/settings/settings.php:1183
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr "これは、ブロック特有のチェックリストタスクに失敗したGutenbergブロックをハイライトします。"
 
-#: modules/settings/settings.php:1188
+#: modules/settings/settings.php:1203
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr "有効にすると、プラグインがアンインストールされた場合、すべてのPublishPressチェックリストデータが削除されます。"
 
-#: modules/settings/settings.php:1209
+#: modules/settings/settings.php:1224
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "これは「ユーザーロールを除外」オプションを表示します。"
 
-#: modules/settings/settings.php:1230
+#: modules/settings/settings.php:1245
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
 msgstr "Checklists の要件使用を回避できるため、「ステータス」オプションの無効化を推奨します。"
 
-#: modules/settings/settings.php:1251
+#: modules/settings/settings.php:1266
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
 msgstr "「manage_options」機能を持つユーザーを除いたすべてのユーザーの「クイック編集」を無効化する。"
 
-#: modules/settings/settings.php:1272
+#: modules/settings/settings.php:1287
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr "チェックリストの要件を満たしていない場合、「公開」ボタンを無効化する。"
 
-#: modules/settings/settings.php:1291
+#: modules/settings/settings.php:1306
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "チェックリストのタスクで OpenAI プロンプトを使用するには、API キーを入力します。"
 
-#: modules/settings/settings.php:1364
+#: modules/settings/settings.php:1379
 msgid "Post Types"
 msgstr "投稿タイプ"
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1380
 msgid "General"
 msgstr "全般設定"
 
-#: modules/settings/settings.php:1366
+#: modules/settings/settings.php:1381
 msgid "Publishing Options"
 msgstr "公開オプション"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1382
 msgid "Appearance"
 msgstr "外観"
 
-#: modules/settings/settings.php:1368
+#: modules/settings/settings.php:1383
 msgid "Integration"
 msgstr "統合"
 
-#: modules/settings/settings.php:1369
+#: modules/settings/settings.php:1384
 msgid "Tools"
 msgstr "ツール"
 
-#: modules/settings/settings.php:1416
+#: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "Dashiconsクラス名を入力してください（例：dashicons-yes、dashicons-saved）。 "
 
-#: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
+#: modules/settings/settings.php:1447
 msgid "View Dashicons"
 msgstr "Dashiconsを表示"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Dashiconsクラス名を入力してください（例：dashicons-no、dashicons-dismiss）。 "
 
-#: modules/settings/settings.php:1514
+#: modules/settings/settings.php:1529
 msgid "Allow admins to rename task labels for the post editor."
 msgstr "投稿エディタのために管理者がタスクラベルの名前を変更できるようにする。"
 
-#: modules/settings/settings.php:1532
+#: modules/settings/settings.php:1547
 msgid "Default"
 msgstr "デフォルト"
 
-#: modules/settings/settings.php:1533
-msgid "Required on top and Recommended below"
-msgstr "上に必須、下に推奨"
+#: modules/settings/settings.php:1548
+msgid "Priority"
+msgstr "優先度"
 
-#: modules/settings/settings.php:1534
-msgid "Sort alphabetically"
-msgstr "アルファベット順にソート"
+#: modules/settings/settings.php:1549
+msgid "Alphabetical"
+msgstr "アルファベット順"
 
-#: modules/settings/settings.php:1558
+#: modules/settings/settings.php:1553
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr "チェックリスト画面で設定された順序でタスクを保持します。"
+
+#: modules/settings/settings.php:1557
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "推奨タスクの前に必須タスクを表示します。"
+
+#: modules/settings/settings.php:1561
+msgid "Sorts tasks alphabetically by task label."
+msgstr "タスクラベルでタスクをアルファベット順に並べ替えます。"
+
+#: modules/settings/settings.php:1604
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
 msgstr "これは、WP管理画面および編集画面のすべての名前変更されたチェックリストラベルをデフォルトのラベルにリセットします。"
 
-#: modules/settings/settings.php:1568
+#: modules/settings/settings.php:1614
 msgid "Security check failed."
 msgstr "セキュリティチェックに失敗しました。"
 
-#: modules/settings/settings.php:1573
+#: modules/settings/settings.php:1619
 msgid "You do not have permission to perform this action."
 msgstr "この操作を実行する権限がありません。"
 
-#: modules/settings/settings.php:1618
+#: modules/settings/settings.php:1664
 msgid "All renamed labels have been reset successfully."
 msgstr "すべての名前変更されたラベルが正常にリセットされました。"
 
