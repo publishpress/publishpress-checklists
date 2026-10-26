@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Fixed: Fatal error in wp-admin on WordPress 6.7 and older when Yoast SEO is not active #1238
 - Fixed: Checklist settings were not saved completely when many post types were enabled #1229
 - Fixed: Internal and external link tasks used the admin host instead of the site's real host #1217
+- Fixed: Translations were not loaded on WordPress 6.8 and later when the plugin is bundled inside Pro
 - Changed: The minimum PHP version is now 8.2
 - Changed: Updated the dev-workspace library to 2.0.4 and the translations library to 1.6.1
 - Changed: Improved accessibility of the post editor checklist, the settings navigation and the Checklist configuration screen #1222, #1223, #1241
