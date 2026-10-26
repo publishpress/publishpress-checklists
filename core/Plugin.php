@@ -11,7 +11,7 @@
 
 namespace PublishPress\Checklists\Core;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Plugin
 {
@@ -19,22 +19,22 @@ class Plugin
     /**
      * The rule that disables
      */
-    const RULE_DISABLED = 'off';
+    public const RULE_DISABLED = 'off';
 
     /**
      * The rule that do not warning, or block
      */
-    const RULE_ONLY_DISPLAY = 'only_display';
+    public const RULE_ONLY_DISPLAY = 'only_display';
 
     /**
      * The rule that displays a warning
      */
-    const RULE_WARNING = 'warning';
+    public const RULE_WARNING = 'warning';
 
     /**
      * The rule that blocks
      */
-    const RULE_BLOCK = 'block';
+    public const RULE_BLOCK = 'block';
 
     /**
      * Flag for debug
@@ -61,10 +61,15 @@ class Plugin
     }
 
     /**
-     * Load the text domain.
+     * Load the bundled translations.
+     *
+     * WordPress 6.8 and later only load them just in time from the Domain Path
+     * header of an active plugin. When this plugin is bundled inside Pro, that
+     * header is not read, so the call is needed on all WordPress versions.
      */
     public function loadTextDomain()
     {
+        // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Required when bundled inside Pro, see above.
         load_plugin_textdomain(
             'publishpress-checklists',
             false,

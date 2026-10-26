@@ -12,18 +12,18 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-08-10 15:20+0000\n"
-"X-Generator: Weblate 5.14.3\n"
+"PO-Revision-Date: 2026-10-26 16:56+0000\n"
+"X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: publishpress-checklists.php:4
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
 
-#: publishpress-checklists.php:5, fuzzy
+#: publishpress-checklists.php:5
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: publishpress-checklists.php:8, fuzzy
+#: publishpress-checklists.php:8
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
@@ -55,16 +55,16 @@ msgstr "ปิดการใช้งาน"
 #: core/API/LabelMapper.php:40
 #: modules/checklists/checklists.php:1029
 #: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1304
-#: modules/checklists/assets/js/gutenberg-panel.jsx:437
+#: modules/checklists/checklists.php:1306
+#: modules/checklists/assets/js/gutenberg-panel.jsx:464
 msgid "Recommended"
 msgstr "แนะนำ"
 
 #: core/API/LabelMapper.php:41
 #: modules/checklists/checklists.php:1028
 #: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1303
-#: modules/checklists/assets/js/gutenberg-panel.jsx:436
+#: modules/checklists/checklists.php:1305
+#: modules/checklists/assets/js/gutenberg-panel.jsx:463
 msgid "Required"
 msgstr "จำเป็น"
 
@@ -73,7 +73,7 @@ msgid "Please correct your form errors below and try again."
 msgstr "โปรดแก้ไขข้อผิดพลาดในแบบฟอร์มของคุณด้านล่างและลองอีกครั้ง"
 
 #: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:516
+#: modules/settings/settings.php:523
 msgid "Cheatin&#8217; uh?"
 msgstr "โกงเหรอ&#8217; หรอ?"
 
@@ -86,12 +86,12 @@ msgid "Post does not exist"
 msgstr "โพสต์ไม่มีอยู่"
 
 #: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:103
+#: core/Plugin.php:78
 #: modules/checklists/checklists.php:110
 #: modules/checklists/checklists.php:1132
 #: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1300
-#: modules/checklists/assets/js/gutenberg-panel.jsx:411
+#: modules/checklists/checklists.php:1302
+#: modules/checklists/assets/js/gutenberg-panel.jsx:438
 msgid "Checklists"
 msgstr "รายการตรวจสอบ"
 
@@ -124,12 +124,12 @@ msgstr "เอกสารรายละเอียดยังมีให้
 msgid "View Knowledge Base"
 msgstr "ดูฐานความรู้"
 
-#: core/Plugin.php:104
+#: core/Plugin.php:79
 #: modules/settings/settings.php:134
 msgid "Settings"
 msgstr "การตั้งค่า"
 
-#: core/Plugin.php:112
+#: core/Plugin.php:87
 #: publishpress-checklists.php:183
 msgid "Upgrade to Pro"
 msgstr "อัปเกรดเป็น Pro"
@@ -858,7 +858,7 @@ msgid "Checklist"
 msgstr "รายการตรวจสอบ"
 
 #: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1303
 msgid "You don't have to complete any Checklist tasks."
 msgstr "คุณไม่จำเป็นต้องทำงานในรายการตรวจสอบใด ๆ."
 
@@ -893,7 +893,7 @@ msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "คุณไม่จำเป็นต้องทำงานใด ๆ ใน %sรายการตรวจสอบ%s."
 
 #: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:473
+#: modules/checklists/assets/js/gutenberg-panel.jsx:500
 msgid "Check Now"
 msgstr "ตรวจสอบตอนนี้"
 
@@ -925,15 +925,15 @@ msgstr "ตัวเลือก"
 msgid "Add custom task"
 msgstr "เพิ่มงานที่กำหนดเอง"
 
-#: modules/checklists/checklists.php:1299
+#: modules/checklists/checklists.php:1301
 msgid "Please complete the required(*) checklists task."
 msgstr "กรุณาเสร็จสิ้นงานในรายการตรวจสอบที่จำเป็น(*)"
 
-#: modules/checklists/checklists.php:1302
+#: modules/checklists/checklists.php:1304
 msgid "required"
 msgstr "จำเป็น"
 
-#: modules/checklists/checklists.php:1307
+#: modules/checklists/checklists.php:1309
 #: modules/checklists/templates/meta-box.php:16
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "งานในรายการตรวจสอบไม่สามารถใช้ได้ในตัวแก้ไข Elementor"
@@ -1171,7 +1171,7 @@ msgstr "การรีวิว"
 msgid "Checklists Settings"
 msgstr "การตั้งค่ารายการตรวจสอบ"
 
-#: modules/settings/settings.php:155
+#: modules/settings/settings.php:162
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
@@ -1179,32 +1179,32 @@ msgstr ""
 "คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตไอเท็มรายการตรวจสอบที่เปลี่ยนชื่อทั้งหมดกลับเ"
 "ป็นฉลากเริ่มต้น? การกระทำนี้ไม่สามารถทำให้ย้อนกลับได้"
 
-#: modules/settings/settings.php:156
+#: modules/settings/settings.php:163
 msgid "Resetting..."
 msgstr "กำลังรีเซ็ต..."
 
-#: modules/settings/settings.php:157
-#: modules/settings/settings.php:1556
+#: modules/settings/settings.php:164
+#: modules/settings/settings.php:1602
 msgid "Reset All Renamed Labels"
 msgstr "รีเซ็ตฉลากที่เปลี่ยนชื่อทั้งหมด"
 
-#: modules/settings/settings.php:320
+#: modules/settings/settings.php:327
 msgid "Features"
 msgstr "ฟีเจอร์"
 
-#: modules/settings/settings.php:321
+#: modules/settings/settings.php:328
 msgid "Feel free to select only the features you need."
 msgstr "คุณสามารถเลือกเฉพาะฟีเจอร์ที่คุณต้องการ"
 
-#: modules/settings/settings.php:329
+#: modules/settings/settings.php:336
 msgid "Enabled features"
 msgstr "ฟีเจอร์ที่เปิดใช้งาน"
 
-#: modules/settings/settings.php:384
+#: modules/settings/settings.php:391
 msgid "There are no PublishPress modules registered"
 msgstr "ไม่มีโมดูล PublishPress ที่ลงทะเบียน"
 
-#: modules/settings/settings.php:480
+#: modules/settings/settings.php:487
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
@@ -1213,115 +1213,115 @@ msgstr ""
 "ปิดใช้งานเนื่องจาก add_post_type_support('%1$s', '%2$s') "
 "ถูกรวมอยู่ในไฟล์ที่โหลด"
 
-#: modules/settings/settings.php:797
+#: modules/settings/settings.php:812
 msgid "Enable User Roles Filter:"
 msgstr "เปิดใช้งานตัวกรองบทบาทผู้ใช้:"
 
-#: modules/settings/settings.php:805
+#: modules/settings/settings.php:820
 msgid "Show warning icon:"
 msgstr "แสดงไอคอนเตือน:"
 
-#: modules/settings/settings.php:813
+#: modules/settings/settings.php:828
 msgid "Highlight failing blocks in the editor:"
 msgstr "เน้นบล็อกที่ล้มเหลวในตัวแก้ไข:"
 
-#: modules/settings/settings.php:821
+#: modules/settings/settings.php:836
 msgid "Delete data on uninstall:"
 msgstr "ลบข้อมูลเมื่อถอนการติดตั้ง:"
 
-#: modules/settings/settings.php:830
+#: modules/settings/settings.php:845
 msgid "Enable Status Filter:"
 msgstr "เปิดใช้งานตัวกรองสถานะ:"
 
-#: modules/settings/settings.php:840
+#: modules/settings/settings.php:855
 msgid "Enable Duplicate Checklists:"
 msgstr "เปิดใช้งานรายการตรวจสอบซ้ำ:"
 
-#: modules/settings/settings.php:850
+#: modules/settings/settings.php:865
 msgid "Show Checklists column in post lists:"
 msgstr "แสดงคอลัมน์รายการตรวจสอบในรายการโพสต์:"
 
-#: modules/settings/settings.php:860
+#: modules/settings/settings.php:875
 msgid "Enable Taxonomy Filter:"
 msgstr "เปิดใช้งานตัวกรอง taxonomy:"
 
-#: modules/settings/settings.php:879
+#: modules/settings/settings.php:894
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "ปิดใช้งานตัวเลือก \"สถานะ\" เมื่อใช้ \"แก้ไขด่วน\":"
 
-#: modules/settings/settings.php:887
+#: modules/settings/settings.php:902
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "ปิดใช้งาน \"แก้ไขด่วน\" โดยสิ้นเชิง:"
 
-#: modules/settings/settings.php:895
+#: modules/settings/settings.php:910
 msgid "Disable \"Publish\" button:"
 msgstr "ปิดใช้งานปุ่ม \"เผยแพร่\":"
 
-#: modules/settings/settings.php:913
+#: modules/settings/settings.php:928
 msgid "Complete Icon:"
 msgstr "ไอคอนที่สมบูรณ์:"
 
-#: modules/settings/settings.php:921
+#: modules/settings/settings.php:936
 msgid "Incomplete Icon:"
 msgstr "ไอคอนที่ไม่สมบูรณ์:"
 
-#: modules/settings/settings.php:929
+#: modules/settings/settings.php:944
 msgid "Required Complete Color:"
 msgstr "สีที่ต้องการสำหรับความสมบูรณ์:"
 
-#: modules/settings/settings.php:937
+#: modules/settings/settings.php:952
 msgid "Required Incomplete Color:"
 msgstr "สีที่ต้องการสำหรับความไม่สมบูรณ์:"
 
-#: modules/settings/settings.php:945
+#: modules/settings/settings.php:960
 msgid "Required Asterisk Color:"
 msgstr "สีที่ต้องการสำหรับดอกจัน:"
 
-#: modules/settings/settings.php:953
+#: modules/settings/settings.php:968
 msgid "Recommended Complete Color:"
 msgstr "สีที่แนะนำสำหรับความสมบูรณ์:"
 
-#: modules/settings/settings.php:961
+#: modules/settings/settings.php:976
 msgid "Recommended Incomplete Color:"
 msgstr "สีที่แนะนำสำหรับความไม่สมบูรณ์:"
 
-#: modules/settings/settings.php:969
+#: modules/settings/settings.php:984
 msgid "Rename task labels:"
 msgstr "เปลี่ยนชื่อป้ายงาน:"
 
-#: modules/settings/settings.php:977
+#: modules/settings/settings.php:992
 msgid "Checklist task sort order:"
 msgstr "ลำดับการจัดเรียงงานในรายการตรวจสอบ:"
 
-#: modules/settings/settings.php:995, fuzzy
+#: modules/settings/settings.php:1010, fuzzy
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
 
-#: modules/settings/settings.php:1010
+#: modules/settings/settings.php:1025
 msgid "Reset Renamed Checklist:"
 msgstr "รีเซ็ตรายการตรวจสอบที่เปลี่ยนชื่อ:"
 
-#: modules/settings/settings.php:1029
+#: modules/settings/settings.php:1044
 msgid "Post types:"
 msgstr "ประเภทโพสต์:"
 
-#: modules/settings/settings.php:1062
+#: modules/settings/settings.php:1077
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr "นี่อนุญาตให้ปิดใช้งานงานสำหรับสถานะเฉพาะเช่น \"ร่าง\" หรือ \"เผยแพร่\"."
 
-#: modules/settings/settings.php:1083
+#: modules/settings/settings.php:1098
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "นี่อนุญาตให้ผู้ใช้ทำสำเนางานเช็คลิสต์ที่มีอยู่."
 
-#: modules/settings/settings.php:1105
+#: modules/settings/settings.php:1120
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr "เพิ่มคอลัมน์เช็คลิสต์ไปยังหน้าบทความเพื่อแสดงจำนวนข้อกำหนดที่เสร็จสมบูรณ์."
 
-#: modules/settings/settings.php:1126
+#: modules/settings/settings.php:1141
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1329,19 +1329,19 @@ msgstr ""
 "นี่อนุญาตให้ปิดใช้งานงานสำหรับโพสต์ที่มีเงื่อนไขทาง taxonomy เฉพาะ "
 "ไปที่แท็บ \"ประเภทโพสต์\" เพื่อเลือกเงื่อนไข."
 
-#: modules/settings/settings.php:1148
+#: modules/settings/settings.php:1163
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "นี่จะแสดงไอคอนเตือนในกล่อง \"เช็คลิสต์\" หากข้อกำหนดยังไม่สมบูรณ์."
 
-#: modules/settings/settings.php:1168
+#: modules/settings/settings.php:1183
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr "นี่จะเน้นบล็อก Gutenberg ที่ไม่ผ่านงานเช็คลิสต์ที่เฉพาะเจาะจงสำหรับบล็อก."
 
-#: modules/settings/settings.php:1188
+#: modules/settings/settings.php:1203
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1349,11 +1349,11 @@ msgstr ""
 "เมื่อเปิดใช้งาน ข้อมูลเช็คลิสต์ทั้งหมดของ PublishPress "
 "จะถูกลบหากปิดการติดตั้งปลั๊กอิน."
 
-#: modules/settings/settings.php:1209
+#: modules/settings/settings.php:1224
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "นี่จะแสดงตัวเลือก \"Exclude User Roles\"."
 
-#: modules/settings/settings.php:1230
+#: modules/settings/settings.php:1245
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1361,7 +1361,7 @@ msgstr ""
 "แนะนำให้ปิดใช้งานตัวเลือก \"สถานะ\" "
 "เพราะสามารถใช้เพื่อหลีกเลี่ยงการใช้ข้อกำหนดเช็คลิสต์."
 
-#: modules/settings/settings.php:1251
+#: modules/settings/settings.php:1266
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1369,70 +1369,82 @@ msgstr ""
 "นี่จะปิดใช้งาน \"แก้ไขด่วน\" สำหรับผู้ใช้ทั้งหมด ยกเว้นผู้ที่มีความสามารถ "
 "\"manage_options\"."
 
-#: modules/settings/settings.php:1272
+#: modules/settings/settings.php:1287
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr "นี่จะปิดใช้งานปุ่ม \"เผยแพร่\" เมื่อข้อกำหนดเช็คลิสต์ยังไม่เป็นไปตาม."
 
-#: modules/settings/settings.php:1291
+#: modules/settings/settings.php:1306
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "กรอก API Key ของคุณเพื่อใช้ OpenAI prompts ในงานเช็คลิสต์."
 
-#: modules/settings/settings.php:1364
+#: modules/settings/settings.php:1379
 msgid "Post Types"
 msgstr "ประเภทโพสต์"
 
-#: modules/settings/settings.php:1365
+#: modules/settings/settings.php:1380
 msgid "General"
 msgstr "ทั่วไป"
 
-#: modules/settings/settings.php:1366
+#: modules/settings/settings.php:1381
 msgid "Publishing Options"
 msgstr "ตัวเลือกการเผยแพร่"
 
-#: modules/settings/settings.php:1367
+#: modules/settings/settings.php:1382
 msgid "Appearance"
 msgstr "รูปลักษณ์"
 
-#: modules/settings/settings.php:1368
+#: modules/settings/settings.php:1383
 msgid "Integration"
 msgstr "การรวม"
 
-#: modules/settings/settings.php:1369
+#: modules/settings/settings.php:1384
 msgid "Tools"
 msgstr "เครื่องมือ"
 
-#: modules/settings/settings.php:1416
+#: modules/settings/settings.php:1431
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "กรอกชื่อคลาส Dashicons (เช่น dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1417
 #: modules/settings/settings.php:1432
+#: modules/settings/settings.php:1447
 msgid "View Dashicons"
 msgstr "ดู Dashicons"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "ป้อนชื่อคลาส Dashicons (เช่น dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1514
+#: modules/settings/settings.php:1529
 msgid "Allow admins to rename task labels for the post editor."
 msgstr "อนุญาตให้ผู้ดูแลระบบเปลี่ยนชื่อป้ายงานสำหรับตัวแก้ไขโพสต์."
 
-#: modules/settings/settings.php:1532
+#: modules/settings/settings.php:1547
 msgid "Default"
 msgstr "ค่าเริ่มต้น"
 
-#: modules/settings/settings.php:1533
-msgid "Required on top and Recommended below"
-msgstr "ต้องการที่ด้านบนและแนะนำที่ด้านล่าง"
+#: modules/settings/settings.php:1548
+msgid "Priority"
+msgstr "ลำดับความสำคัญ"
 
-#: modules/settings/settings.php:1534
-msgid "Sort alphabetically"
-msgstr "จัดเรียงตามตัวอักษร"
+#: modules/settings/settings.php:1549
+msgid "Alphabetical"
+msgstr "ตามลำดับตัวอักษร"
 
-#: modules/settings/settings.php:1558
+#: modules/settings/settings.php:1553
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr "จัดเก็บงานตามลำดับที่กำหนดในหน้ารายการตรวจสอบ."
+
+#: modules/settings/settings.php:1557
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "แสดงงานที่จำเป็นก่อนงานที่แนะนำ."
+
+#: modules/settings/settings.php:1561
+msgid "Sorts tasks alphabetically by task label."
+msgstr "จัดเรียงงานตามลำดับตัวอักษรตามชื่องาน."
+
+#: modules/settings/settings.php:1604
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
@@ -1440,15 +1452,15 @@ msgstr ""
 "นี่จะรีเซ็ตฉลากตรวจสอบรายการที่ตั้งชื่อใหม่ทั้งหมดสำหรับ WP Admin "
 "และหน้าจอการแก้ไขกลับไปยังฉลากเริ่มต้นของพวกเขา."
 
-#: modules/settings/settings.php:1568
+#: modules/settings/settings.php:1614
 msgid "Security check failed."
 msgstr "การตรวจสอบความปลอดภัยล้มเหลว."
 
-#: modules/settings/settings.php:1573
+#: modules/settings/settings.php:1619
 msgid "You do not have permission to perform this action."
 msgstr "คุณไม่มีสิทธิ์ในการดำเนินการนี้."
 
-#: modules/settings/settings.php:1618
+#: modules/settings/settings.php:1664
 msgid "All renamed labels have been reset successfully."
 msgstr "ฉลากที่ตั้งชื่อใหม่ทั้งหมดได้รับการรีเซ็ตเรียบร้อยแล้ว."
 

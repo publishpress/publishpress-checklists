@@ -12,7 +12,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 
 use PPCH_Checklists;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Prohibited_tags extends Base_multiple
 {
@@ -148,7 +148,7 @@ class Prohibited_tags extends Base_multiple
                 'include'    => $selected_tags,
                 'search'     => $args['q'],
             );
-            $cache_key_selected = md5('prohib_tag_selected' . json_encode($args_selected));
+            $cache_key_selected = md5('prohib_tag_selected' . wp_json_encode($args_selected));
             $tags_selected = get_transient($cache_key_selected);
             if ($tags_selected === false) {
                 $tags_selected = get_tags($args_selected);
@@ -160,12 +160,12 @@ class Prohibited_tags extends Base_multiple
         $args_limited = array(
             'taxonomy'   => 'post_tag',
             'hide_empty' => 0,
-            'exclude'    => $selected_tags,
+            'exclude'    => $selected_tags, // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude -- A term query that leaves out the few tags already selected in the field.
             'search'     => $args['q'],
             'number'     => $args['per_page'],
             'offset'     => ($args['page'] - 1) * $args['per_page'],
         );
-        $cache_key = md5('prohib_tag' . json_encode($args_limited));
+        $cache_key = md5('prohib_tag' . wp_json_encode($args_limited));
         $tags_limited = get_transient($cache_key);
         if ($tags_limited === false) {
             $tags_limited = get_tags($args_limited);
@@ -199,12 +199,15 @@ class Prohibited_tags extends Base_multiple
      */
     private function get_total_count($args = array('search' => '', 'hide_empty' => 0))
     {
-        $args_key = base64_encode($args['search']);
+        $args_key = hash('sha256', (string) $args['search']);
         $cache_key = 'total_prohib_tag_count_' . $args_key;
 
         $total_tags = get_transient($cache_key);
         if ($total_tags === false) {
-            $total_tags = wp_count_terms('post_tag', $args);
+            // get_terms() with 'fields' => 'count' works the same from WP 5.5 to current,
+            // unlike the two wp_count_terms() signatures.
+            $total_tags = get_terms(array_merge($args, ['taxonomy' => 'post_tag', 'fields' => 'count']));
+            $total_tags = is_wp_error($total_tags) ? 0 : (int) $total_tags;
             set_transient($cache_key, $total_tags, $this->cache_expiration);
         }
 
@@ -222,7 +225,7 @@ class Prohibited_tags extends Base_multiple
         check_ajax_referer('pp-checklists-rules', 'nonce');
 
         // Get the search query and page number from the request
-        $search = isset($_POST['q']) ? sanitize_text_field($_POST['q']) : '';
+        $search = isset($_POST['q']) ? sanitize_text_field(wp_unslash($_POST['q'])) : '';
         $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
         $per_page = 10;
 

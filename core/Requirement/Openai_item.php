@@ -12,15 +12,15 @@ namespace PublishPress\Checklists\Core\Requirement;
 use PublishPress\Checklists\Core\Factory;
 use PPCH_Checklists;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Openai_item extends Base_simple implements Interface_required
 {
-    const VALUE_YES = 'yes';
+    public const VALUE_YES = 'yes';
 
-    const OPEN_AI_MODEL = 'gpt-3.5-turbo';
+    public const OPEN_AI_MODEL = 'gpt-3.5-turbo';
 
-    const OPEN_AI_API_URL = 'https://api.openai.com/v1/chat/completions';
+    public const OPEN_AI_API_URL = 'https://api.openai.com/v1/chat/completions';
 
     /**
      * The title.
@@ -92,10 +92,14 @@ class Openai_item extends Base_simple implements Interface_required
         $var_name = $this->name . '_title';
 
         $name = 'publishpress_checklists_checklists_options[' . $var_name . '][' . $this->post_type . ']';
+        $id = $this->post_type . '-checklists-' . $this->name . '_title';
 
         $html = sprintf(
-            '<textarea name="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title">%s</textarea>',
-            $name,
+            '<label class="screen-reader-text" for="%s">%s</label><textarea id="%s" name="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title">%s</textarea>',
+            esc_attr($id),
+            esc_html__('OpenAI task prompt', 'publishpress-checklists'),
+            esc_attr($id),
+            esc_attr($name),
             esc_attr($this->name),
             esc_html__('Enter OpenAI task prompt', 'publishpress-checklists'),
             esc_attr($this->get_title())
@@ -124,7 +128,7 @@ class Openai_item extends Base_simple implements Interface_required
         $var_name = $this->name . '_title';
 
         if (isset($this->module->options->{$var_name}[$this->post_type])) {
-            $title = stripslashes($this->module->options->{$var_name}[$this->post_type]);
+            $title = $this->module->options->{$var_name}[$this->post_type];
         }
 
         $this->title = $title;
@@ -142,9 +146,10 @@ class Openai_item extends Base_simple implements Interface_required
         $html = parent::get_setting_field_html(esc_attr($css_class));
 
         $html .= sprintf(
-            '<a href="javascript:void(0);" class="pp-checklists-remove-custom-item" data-id="%1$s" title="%2$s" data-type="openai"><span class="dashicons dashicons-no" data-id="%1$s" data-type="openai"></span></a>',
+            '<button type="button" class="pp-checklists-remove-custom-item" data-id="%1$s" title="%2$s" aria-label="%3$s" data-type="openai"><span class="dashicons dashicons-no" aria-hidden="true"></span></button>',
             esc_attr($this->name),
-            __('Remove', 'publishpress-checklists')
+            __('Remove', 'publishpress-checklists'),
+            __('Remove custom task', 'publishpress-checklists')
         );
 
         return $html;
@@ -288,20 +293,20 @@ class Openai_item extends Base_simple implements Interface_required
 
         if (
             empty($_POST['nonce'])
-            || !wp_verify_nonce(sanitize_key($_POST['nonce']), 'pp-checklists-requirements')
+            || !wp_verify_nonce(sanitize_key(wp_unslash($_POST['nonce'])), 'pp-checklists-requirements')
         ) {
             $response['content'] = esc_html__(
                 'Validation error. Kindly reload this page and try again.',
                 'publishpress-checklists'
             );
-        } elseif (empty(trim(sanitize_text_field($_POST['content'])))) {
+        } elseif (empty(trim(sanitize_text_field(wp_unslash($_POST['content']))))) {
             $response['content'] = esc_html__(
                 'Post content is empty.',
                 'publishpress-checklists'
             );
         } else {
-            $content     = $this->clean_up_content(wp_kses_post($_POST['content']));
-            $requirement = map_deep($_POST['requirement'], 'sanitize_text_field');
+            $content     = $this->clean_up_content(wp_kses_post(wp_unslash($_POST['content'])));
+            $requirement = isset($_POST['requirement']) ? map_deep(wp_unslash($_POST['requirement']), 'sanitize_text_field') : [];
             $api_key     = !empty($legacyPlugin->settings->module->options->openai_api_key) ? $legacyPlugin->settings->module->options->openai_api_key : '';
             if (empty(trim($api_key))) {
                 $response['content'] = esc_html__(
@@ -343,7 +348,7 @@ class Openai_item extends Base_simple implements Interface_required
             
                 // send request and get response
                 $http_response = wp_remote_post(self::OPEN_AI_API_URL, array(
-                    'timeout' => 60,
+                    'timeout' => 60, // phpcs:ignore WordPressVIPMinimum.Performance.RemoteRequestTimeout.timeout_timeout -- OpenAI answers can take longer than 3 seconds; this runs in an AJAX request, not a page load.
                     'headers' => $headers,
                     'body' => wp_json_encode($body_data),
                 ));
@@ -449,13 +454,11 @@ class Openai_item extends Base_simple implements Interface_required
         // Combine post title and content if both are available
         if (!empty($post_content) && !empty($post_title)) {
             $cleaned_up_content = $post_title . ".\n\n" . $post_content;
-        } 
-        // Use post content if title is empty
-        elseif (!empty($post_content)) {
+        } elseif (!empty($post_content)) {
+            // Use post content if title is empty
             $cleaned_up_content = $post_content;
-        } 
-        // Use post title if content is empty
-        elseif (!empty($post_title)) {
+        } elseif (!empty($post_title)) {
+            // Use post title if content is empty
             $cleaned_up_content = $post_title;
         }
     

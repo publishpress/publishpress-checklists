@@ -4,6 +4,8 @@ use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Legacy\LegacyPlugin;
 use PublishPress\Checklists\Core\Legacy\Module;
 
+defined('ABSPATH') || exit;
+
 /**
  * @package     PublishPress\Checklists
  * @author      PublishPress <help@publishpress.com>
@@ -104,7 +106,7 @@ class PPCH_Permissions extends Module
 
     public function actionTasksListTh($postType)
     {
-        echo '<th>' . esc_html__('Exclude User Roles', 'publishpress-checklists') . '</th>';
+        echo '<th scope="col">' . esc_html__('Exclude User Roles', 'publishpress-checklists') . '</th>';
     }
 
     public function actionTasksListTd($requirement, $postType)
@@ -122,7 +124,7 @@ class PPCH_Permissions extends Module
 
         $userRoles = get_editable_roles();
 
-        $rolesSelect = '<select class="pp-checklists-can-ignore" name="'. esc_attr('publishpress_checklists_checklists_options[' . $requirement->name . '_can_ignore][' . $postType . '][]') .'" multiple="multiple" class="user-roles-list">';
+        $rolesSelect = '<select class="pp-checklists-can-ignore user-roles-list" name="'. esc_attr('publishpress_checklists_checklists_options[' . $requirement->name . '_can_ignore][' . $postType . '][]') .'" aria-label="' . esc_attr(sprintf(__('Roles that can ignore %s', 'publishpress-checklists'), $requirement->lang['label_settings'])) . '" multiple="multiple">';
         $rolesSelect .= '<option value=""></option>';
         foreach ($userRoles as $slug => $role) {
             $rolesSelect .= '<option value="' . esc_attr($slug) . '" ' . selected(
@@ -147,6 +149,7 @@ class PPCH_Permissions extends Module
         // Make sure to remove the options that were cleaned up
         foreach ($options as $key => $value) {
             if (preg_match('/_can_ignore$/', $key)) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Runs from the publishpress_checklists_validate_requirement_settings filter inside save_global_checklist(), after its nonce and capability checks.
                 if (!isset($_POST['publishpress_checklists_checklists_options'][$key])) {
                     unset($options[$key]);
                 }

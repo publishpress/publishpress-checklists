@@ -13,6 +13,8 @@ namespace PublishPress\Checklists\Yoastseo\Requirement;
 use PublishPress\Checklists\Core\Requirement\Base_dropdown;
 use stdClass;
 
+\defined('ABSPATH') || exit;
+
 class Seo_Analysis extends Base_dropdown
 {
 
@@ -21,14 +23,14 @@ class Seo_Analysis extends Base_dropdown
      *
      * @var integer
      */
-    const OK = '41';
+    public const OK = '41';
 
     /**
      * Constant used for determining a good SEO rating.
      *
      * @var integer
      */
-    const GOOD = '71';
+    public const GOOD = '71';
 
     /**
      * The name of the requirement, in a slug format

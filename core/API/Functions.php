@@ -9,7 +9,7 @@
 
 use PublishPress\Checklists\Core\API\Facade;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+defined('ABSPATH') || exit;
 
 if (!function_exists('ppch_set_requirement')) {
     /**

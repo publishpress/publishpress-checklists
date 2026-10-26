@@ -18,3 +18,7 @@ webpack.config.js export-ignore
 CONTRIBUTING.md export-ignore
 .env.example export-ignore
 .wordpress-org export-ignore
+.phpcs.xml export-ignore
+README.md export-ignore
+dist export-ignore
+node_modules export-ignore

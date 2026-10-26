@@ -11,11 +11,11 @@ namespace PublishPress\Checklists\Core\Requirement;
 
 use PPCH_Checklists;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Custom_item extends Base_multiple implements Interface_required
 {
-    const VALUE_YES = 'yes';
+    public const VALUE_YES = 'yes';
 
     /**
      * The title.
@@ -72,13 +72,17 @@ class Custom_item extends Base_multiple implements Interface_required
         $var_name = $this->name . '_title';
 
         $name = 'publishpress_checklists_checklists_options[' . $var_name . '][' . $this->post_type . ']';
+        $id = $this->post_type . '-checklists-' . $this->name . '_title';
 
         $html = sprintf(
-            '<input type="text" name="%s" value="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title" />',
-            $name,
-            esc_attr($this->get_title()),
+            '<label class="screen-reader-text" for="%s">%s</label><textarea id="%s" name="%s" data-id="%s" placeholder="%s" class="pp-checklists-custom-item-title">%s</textarea>',
+            esc_attr($id),
+            esc_html__('Custom task title', 'publishpress-checklists'),
+            esc_attr($id),
+            esc_attr($name),
             esc_attr($this->name),
-            esc_html__('Enter name of custom task', 'publishpress-checklists')
+            esc_html__('Enter name of custom task', 'publishpress-checklists'),
+            esc_textarea($this->get_title())
         );
 
         $html .= sprintf(
@@ -104,12 +108,10 @@ class Custom_item extends Base_multiple implements Interface_required
         $var_name = $this->name . '_title';
 
         if (isset($this->module->options->{$var_name}[$this->post_type])) {
-            $title = stripslashes($this->module->options->{$var_name}[$this->post_type]);
+            $title = $this->module->options->{$var_name}[$this->post_type];
         }
 
         $this->title = $title;
-
-        // echo '<pre>'; echo $var_name; print_r($this->module->options); die;
 
         return $this->title;
     }
@@ -124,9 +126,10 @@ class Custom_item extends Base_multiple implements Interface_required
         $html = parent::get_setting_field_html(esc_attr($css_class));
 
         $html .= sprintf(
-            '<a href="javascript:void(0);" class="pp-checklists-remove-custom-item" data-id="%1$s" data-type="custom" title="%2$s"><span class="dashicons dashicons-no" data-id="%1$s" data-type="custom"></span></a>',
+            '<button type="button" class="pp-checklists-remove-custom-item" data-id="%1$s" data-type="custom" aria-label="%3$s" title="%2$s"><span class="dashicons dashicons-no" aria-hidden="true"></span></button>',
             esc_attr($this->name),
-            __('Remove', 'publishpress-checklists')
+            __('Remove', 'publishpress-checklists'),
+            __('Remove custom task', 'publishpress-checklists')
         );
 
         return $html;
@@ -201,6 +204,7 @@ class Custom_item extends Base_multiple implements Interface_required
         // Make sure to remove the options that were cleaned up
         foreach ($new_options as $key => $value) {
             if (preg_match('/_' . $this->field_name . '/', $key)) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Runs from the publishpress_checklists_validate_requirement_settings filter inside save_global_checklist(), after its nonce and capability checks.
                 if (!isset($_POST['publishpress_checklists_checklists_options'][$key])) {
                     unset($new_options[$key]);
                 }

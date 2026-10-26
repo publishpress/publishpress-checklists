@@ -116,6 +116,11 @@
         
               if (typeof obj !== 'undefined') {
                 count = obj.length;
+
+                PP_Checklists.update_live_count(
+                  'focus_keyword',
+                  PP_Checklists.format_live_count(count, min_value, max_value),
+                );
         
                 $('#pp-checklists-req-focus_keyword').trigger(
                   PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,
@@ -142,6 +147,11 @@
                 obj = $('#yoast-google-preview-description-metabox').find('span[data-text="true"]').text() || '';
             
                 count = obj.length;
+
+                PP_Checklists.update_live_count(
+                    'meta_description',
+                    PP_Checklists.format_live_count(count, min_value, max_value),
+                );
             
                 $('#pp-checklists-req-meta_description').trigger(
                     PP_Checklists.EVENT_UPDATE_REQUIREMENT_STATE,

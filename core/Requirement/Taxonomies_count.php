@@ -9,14 +9,14 @@
 
 namespace PublishPress\Checklists\Core\Requirement;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Taxonomies_count extends Base_counter implements Interface_parametrized
 {
     /**
      * The priority for the action to load the requirement
      */
-    const PRIORITY = 10;
+    public const PRIORITY = 10;
 
     /**
      * The name of the requirement, in a slug format. This is dynamic.

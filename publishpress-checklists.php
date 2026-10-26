@@ -6,11 +6,13 @@
  * Description: With PublishPress Checklists, you can choose publishing requirements for your content.
  * Author:      PublishPress
  * Author URI:  https://publishpress.com
- * Version: 2.29.0
+ * License:     GPL-2.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Version: 2.30.0
  * Text Domain: publishpress-checklists
  * Domain Path: /languages
  * Requires at least: 5.5
- * Requires PHP: 7.2.5
+ * Requires PHP: 8.2
  *
  * PublishPress Checklists plugin bootstrap file.
  *
@@ -29,9 +31,11 @@ use PPVersionNotices\Module\MenuLink\Module;
 use PublishPress\Checklists\Core\Autoloader;
 use PublishPress\Checklists\Core\Plugin;
 
+defined('ABSPATH') || exit;
+
 global $wp_version;
 
-$min_php_version = '7.2.5';
+$min_php_version = '8.2';
 $min_wp_version  = '5.5';
 
 // If the PHP or WP version is not compatible, terminate the plugin execution.
@@ -61,7 +65,7 @@ if (class_exists('PublishPressInstanceProtection\\Config')) {
 if (!defined('PPCH_LOADED')) {
     define('PPCH_LOADED', 1);
     define('PPCH_PATH_BASE', plugin_dir_path(__FILE__));
-    define('PPCH_VERSION', '2.29.0');
+    define('PPCH_VERSION', '2.30.0');
     define('PPCH_FILE', __DIR__ . '/publishpress-checklists.php');
     define('PPCH_MODULES_PATH', PPCH_PATH_BASE . '/modules');
     define('PPCH_RELATIVE_PATH', 'publishpress-checklists');
@@ -119,6 +123,12 @@ if (!defined('PPCH_LOADED')) {
     ) {
         require_once $autoloadFilePath;
     }
+
+    // Loaded on every request: the block editor saves custom task states through the REST API.
+    if (!class_exists('PublishPress\\Checklists\\Core\\Utils\\CustomItemsMeta')) {
+        require_once __DIR__ . '/core/Utils/CustomItemsMeta.php';
+    }
+    \PublishPress\Checklists\Core\Utils\CustomItemsMeta::init();
 
     // Activation
     register_activation_hook(__FILE__, function () {

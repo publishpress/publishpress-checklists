@@ -16,10 +16,16 @@ class PPChecklistsWarning extends Component {
 
     componentDidMount() {
         this.isMounted = true;
+
+        // Use our own namespace: the sidebar panel removes the
+        // 'publishpress/checklists' handlers of this hook when it unmounts,
+        // which also dropped this one, so the pre-publish panel never showed.
+        hooks.addAction('pp-checklists.update-failed-requirements', 'publishpress/checklists-warning', this.updateFailedRequirements, 10);
     }
 
     componentWillUnmount() {
         this.isMounted = false;
+        hooks.removeAction('pp-checklists.update-failed-requirements', 'publishpress/checklists-warning');
     }
 
     constructor() {
@@ -33,8 +39,6 @@ class PPChecklistsWarning extends Component {
         };
 
         this.updateFailedRequirements = this.updateFailedRequirements.bind(this);
-
-        hooks.addAction('pp-checklists.update-failed-requirements', 'publishpress/checklists', this.updateFailedRequirements, 10);
     };
 
     updateFailedRequirements(failedRequirements) {
@@ -56,7 +60,7 @@ class PPChecklistsWarning extends Component {
                 <ul>
                     {this.state.requirements.block.map(
                         (item, i) => <li key={i}>
-                            <span className="dashicons dashicons-no"></span><span>{item.stripTags()}</span></li>
+                            <span className="dashicons dashicons-no" aria-hidden="true"></span><span>{item.stripTags()}</span></li>
                     )}
                 </ul>
             </div>);
@@ -72,7 +76,7 @@ class PPChecklistsWarning extends Component {
                 <ul>
                     {this.state.requirements.warning.map(
                         (item, i) => <li key={i}>
-                            <span className="dashicons dashicons-no"></span><span>{item.stripTags()}</span>
+                            <span className="dashicons dashicons-no" aria-hidden="true"></span><span>{item.stripTags()}</span>
                         </li>
                     )}
                 </ul>

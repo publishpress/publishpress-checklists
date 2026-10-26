@@ -13,6 +13,8 @@
  *
  * @since 1.0.0
  */
+defined('ABSPATH') || exit;
+
 $static = [
     [
         'id'       => 'all_in_one_seo_headline_score',
@@ -122,6 +124,13 @@ $static = [
         'support'  => 'editor',
         'group'    => 'content',
         'label'    => __('Prohibited words', 'publishpress-checklists'),
+    ],
+    [
+        'id'       => 'required_words',
+        'type'     => 'multiple',
+        'support'  => 'editor',
+        'group'    => 'content',
+        'label'    => __('Required words', 'publishpress-checklists'),
     ],
     [
         'id'        => 'publish_time_exact',

@@ -1,6 +1,6 @@
 #pp_checklist_meta em,
 #pp-checklists-sidebar-content em {
-    color: #afafaf;
+    color: #646970;
 }
 
 .pp-checklists-req .status-icon,
@@ -9,11 +9,16 @@
     vertical-align: middle;
 }
 
+/* Keep the line breaks of multi-line custom task titles. */
+.pp-checklists-req.pp-checklists-custom-item .req-label {
+    white-space: pre-line;
+}
+
 .pp-checklists-req.status-yes
     *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(
         .request-response *
     ) {
-    color: #66bb6a;
+    color: #2e7d32;
     font-weight: normal;
 }
 
@@ -21,7 +26,7 @@
     *:not(.pp-checklists-check-item):not(.requirement-button-task-wrap):not(.request-response):not(
         .request-response *
     ) {
-    color: #ef5350;
+    color: #c62828;
     font-weight: bold;
 }
 
@@ -29,6 +34,15 @@
     padding: 0 !important;
     background: transparent !important;
     width: auto !important;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+/* Publish blocked by an incomplete requirement. "Save draft" stays enabled. */
+body.ppch-publish-locked .editor-post-publish-button {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 /* Warning icon in the Publish button */
@@ -48,7 +62,7 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:after {
     height: 23px;
     font-size: 18px;
     content: '\f147';
-    background-color: #66bb6a;
+    background-color: #2e7d32;
     color: #ffede8;
     font-weight: bold;
     border: 1px solid white;
@@ -63,7 +77,7 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:after {
 }
 
 body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
-    background: #66bb6a;
+    background: #2e7d32;
     font-size: 23px;
     width: 25px;
     height: 25px;
@@ -83,8 +97,8 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:after {
     height: 23px;
     font-size: 18px;
     content: '!';
-    background-color: #df0000;
-    color: #ffede8;
+    background-color: #c00000;
+    color: #ffffff;
     font-weight: bold;
     border: 1px solid white;
     -webkit-box-shadow: none;
@@ -99,7 +113,7 @@ body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:after {
 
 body.ppch-show-publishing-warning-icon #publishing-action:hover:after,
 body.ppch-show-publishing-warning-icon .pp-checklists-toolbar-icon:hover:after {
-    background: #ff0000;
+    background: #a00000;
     font-size: 23px;
     width: 25px;
     height: 25px;
@@ -133,7 +147,7 @@ body.ppch-show-publishing-warning-icon .interface-pinned-items .pp-checklists-to
 
 .pp-checklists-failed-requirements-warning ul {
     list-style-type: none;
-    color: #ef5350;
+    color: #c62828;
     font-weight: bold;
 }
 
@@ -186,19 +200,19 @@ ul#pp-checklists-req-box span.required {
     padding: 0 17px;
 }
 
-.pp-checklists-req .request-response #message {
+.pp-checklists-req .request-response .ppch-message {
     margin-left: 0;
     margin-right: 0;
 }
 
 .pp-checklists-custom-item {
     cursor: pointer;
-    color: #ef5350;
+    color: #c62828;
     font-weight: bold;
 }
 
 .pp-checklists-req.pp-checklists-custom-item .status-icon {
-    border: 1px solid silver;
+    border: 1px solid #8c8f94;
     border-radius: 4px;
     box-sizing: border-box;
     width: 20px;
@@ -213,6 +227,13 @@ ul#pp-checklists-req-box span.required {
 
 .pp-checklists-req.pp-checklists-custom-item .status-label {
     padding-left: 1px;
+}
+
+/* Custom items are toggled from the keyboard through their role="checkbox" label. */
+.pp-checklists-req.pp-checklists-custom-item .status-label:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 #pp-checklists-sidebar-content .pp-checklists-req.pp-checklists-custom-item .status-label {
@@ -279,7 +300,6 @@ ul#pp-checklists-req-box span.required {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-  }
 }
 
 .block-editor-block-list__block.pp-checklists-has-warning:not(:has(> .block-editor-block-list__block-edit)),
@@ -304,4 +324,12 @@ ul#pp-checklists-req-box span.required {
     background-size: 28px 28px;
     pointer-events: none;
     filter: drop-shadow(0 4px 8px rgba(223, 0, 0, 0.18));
+}
+
+.pp-checklists-live-count {
+    font-weight: normal;
+    opacity: 0.65;
+    font-size: 0.9em;
+    margin-left: 2px;
+    white-space: nowrap;
 }

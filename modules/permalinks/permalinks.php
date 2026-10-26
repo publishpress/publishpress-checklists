@@ -5,6 +5,8 @@ use PublishPress\Checklists\Core\Legacy\LegacyPlugin;
 use PublishPress\Checklists\Core\Legacy\Module;
 use PublishPress\Checklists\Permalinks\Requirement\ValidChars;
 
+defined('ABSPATH') || exit;
+
 /**
  * @package     PublishPress\Checklists
  * @author      PublishPress <help@publishpress.com>
@@ -21,7 +23,7 @@ use PublishPress\Checklists\Permalinks\Requirement\ValidChars;
 #[\AllowDynamicProperties]
 class PPCH_Permalinks extends Module
 {
-    const SETTINGS_SLUG = 'pp-permalinks';
+    public const SETTINGS_SLUG = 'pp-permalinks';
 
     public $module_name = 'permalinks';
 

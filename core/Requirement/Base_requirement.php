@@ -12,24 +12,24 @@ namespace PublishPress\Checklists\Core\Requirement;
 use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Plugin;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Base_requirement
 {
     /**
      * The Yes value
      */
-    const VALUE_YES = 'yes';
+    public const VALUE_YES = 'yes';
 
     /**
      * The No value
      */
-    const VALUE_NO = 'no';
+    public const VALUE_NO = 'no';
 
     /**
      * The priority for the action to load the requirement
      */
-    const PRIORITY = 10;
+    public const PRIORITY = 10;
 
     /**
      * A reference for the current module
@@ -155,7 +155,7 @@ class Base_requirement
         $option_name = $this->name . '_custom_label';
         
         if (isset($this->module->options->{$option_name}[$this->post_type])) {
-            return stripslashes($this->module->options->{$option_name}[$this->post_type]);
+            return $this->module->options->{$option_name}[$this->post_type];
         }
         
         return '';
@@ -175,7 +175,7 @@ class Base_requirement
         $option_name = $this->name . '_editor_label';
 
         if (isset($this->module->options->{$option_name}[$this->post_type])) {
-            return stripslashes($this->module->options->{$option_name}[$this->post_type]);
+            return $this->module->options->{$option_name}[$this->post_type];
         }
 
         return '';
@@ -343,9 +343,9 @@ class Base_requirement
             $editor_input_name,
             esc_attr($editor_label)
         );
-        $html .= '<a href="#" class="pp-checklists-edit-label" title="' . esc_attr__('Edit label', 'publishpress-checklists') . '" data-default-label="' . esc_attr($default_label) . '" data-editor-default-label="' . esc_attr($this->get_default_editor_label_for_settings()) . '" data-admin-label="' . esc_attr($custom_label) . '" data-editor-label="' . esc_attr($editor_label) . '">';
-        $html .= '<span class="dashicons dashicons-edit"></span>';
-        $html .= '</a>';
+        $html .= '<button type="button" class="pp-checklists-edit-label" aria-label="' . esc_attr(sprintf(__('Edit label for %s', 'publishpress-checklists'), $default_label)) . '" title="' . esc_attr__('Edit label', 'publishpress-checklists') . '" data-default-label="' . esc_attr($default_label) . '" data-editor-default-label="' . esc_attr($this->get_default_editor_label_for_settings()) . '" data-admin-label="' . esc_attr($custom_label) . '" data-editor-label="' . esc_attr($editor_label) . '">';
+        $html .= '<span class="dashicons dashicons-edit" aria-hidden="true"></span>';
+        $html .= '</button>';
         $html .= '</div>';
         
         return $html;
@@ -378,9 +378,10 @@ class Base_requirement
         $name = "{$this->module->options_group_name}[{$option_name}][{$post_type}]";
 
         $html = sprintf(
-            '<select id="%s" name="%s">',
+            '<select id="%s" name="%s" aria-label="%s">',
             $id,
-            $name
+            $name,
+            esc_attr(sprintf(__('Set requirement status for %s', 'publishpress-checklists'), $this->lang['label_settings']))
         );
 
         $rules = [];

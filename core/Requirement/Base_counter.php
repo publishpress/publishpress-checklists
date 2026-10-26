@@ -9,14 +9,14 @@
 
 namespace PublishPress\Checklists\Core\Requirement;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Base_counter extends Base_simple implements Interface_required
 {
     /**
      * The default value for the option related to the value.
      */
-    const DEFAULT_OPTION_VALUE = 0;
+    public const DEFAULT_OPTION_VALUE = 0;
 
     /**
      * @var string
@@ -74,7 +74,7 @@ class Base_counter extends Base_simple implements Interface_required
 
         // If enabled, ensure count is a non-negative int. Default to 1 if invalid/empty, allows 0.
         if (static::VALUE_YES === $new_options[$this->name][$this->post_type]) {
-            // Note: $new_options[$index][$this->post_type] was previously sanitized using FILTER_SANITIZE_NUMBER_INT (lines 68-72).
+            // Note: the counter value was previously sanitized using FILTER_SANITIZE_NUMBER_INT (lines 68-72).
             $current_value = $new_options[$index][$this->post_type] ?? null;
 
             if (
@@ -365,24 +365,27 @@ class Base_counter extends Base_simple implements Interface_required
         }
 
         // Get the field markup for min value
+        $min_id = "{$post_type}-{$this->module->slug}-{$option_name_min}";
+        $max_id = "{$post_type}-{$this->module->slug}-{$option_name_max}";
+
         $min_field = sprintf(
-            '<input type="text" " id="%s" name="%s" value="%s" class="pp-checklists-small-input pp-checklists-number" />',
-            "{$post_type}-{$this->module->slug}-{$option_name_min}",
+            '<input type="text" id="%s" name="%s" value="%s" class="pp-checklists-small-input pp-checklists-number" />',
+            $min_id,
             "{$this->module->options_group_name}[{$option_name_min}][{$post_type}]",
             $min_value
         );
 
         // Get the field markup for max value
         $max_field = sprintf(
-            '<input type="text" " id="%s" name="%s" value="%s" class="pp-checklists-small-input pp-checklists-number" />',
-            "{$post_type}-{$this->module->slug}-{$option_name_max}",
+            '<input type="text" id="%s" name="%s" value="%s" class="pp-checklists-small-input pp-checklists-number" />',
+            $max_id,
             "{$this->module->options_group_name}[{$option_name_max}][{$post_type}]",
             $max_value
         );
 
 
         $html .= '<div class="pp-checklists-number">';
-        $html .= '<label>'. esc_html__('Min', 'publishpress-checklists') .'</label>' . $min_field;
+        $html .= '<label for="' . esc_attr($min_id) . '">'. esc_html__('Min', 'publishpress-checklists') .'</label>' . $min_field;
 
         if (!empty($this->unitText)) {
             $html .= '<span class="pp-checklists-unit">' . $this->unitText . '</span>';
@@ -390,7 +393,7 @@ class Base_counter extends Base_simple implements Interface_required
 
         $html .= '</div>';
         $html .= '<div class="pp-checklists-number">';
-        $html .= '<label>'. esc_html__('Max', 'publishpress-checklists') .'</label>' . $max_field;
+        $html .= '<label for="' . esc_attr($max_id) . '">'. esc_html__('Max', 'publishpress-checklists') .'</label>' . $max_field;
 
         if (!empty($this->unitText)) {
             $html .= '<span class="pp-checklists-unit">' . $this->unitText . '</span>';

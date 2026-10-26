@@ -10,6 +10,8 @@
 
 namespace PublishPress\Checklists\Core\Legacy;
 
+\defined('ABSPATH') || exit;
+
 class Util
 {
     /**
@@ -21,6 +23,7 @@ class Util
     {
         global $post, $typenow, $pagenow, $current_screen;
 
+        // phpcs:disable WordPress.Security.NonceVerification.Recommended -- Read-only: the post and post_type query args only tell which post type the current screen is for. Nothing is saved.
         // get_post() needs a variable
         $post_id = isset($_REQUEST['post']) ? (int)$_REQUEST['post'] : false;
 
@@ -43,6 +46,7 @@ class Util
         } else {
             $post_type = null;
         }
+        // phpcs:enable WordPress.Security.NonceVerification.Recommended
 
         return $post_type;
     }
@@ -219,13 +223,32 @@ class Util
     }
 
     /**
+     * Check if a plugin is active.
+     *
+     * WordPress before 6.8 loads is_plugin_active() only for wp-admin, after the
+     * init hook, so load it here when it is not available yet.
+     *
+     * @param string $plugin Path to the plugin file relative to the plugins directory.
+     *
+     * @return bool
+     */
+    public static function isPluginActive($plugin)
+    {
+        if (!function_exists('is_plugin_active')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+
+        return is_plugin_active($plugin);
+    }
+
+    /**
      * Check if Rank Math plugin is activated
      * 
      * @return bool
      */
     public static function isRankMathActivated()
     {
-        return class_exists('RankMath') || is_plugin_active('seo-by-rank-math/rank-math.php');
+        return class_exists('RankMath') || self::isPluginActive('seo-by-rank-math/rank-math.php');
     }
 
     /**
@@ -235,7 +258,7 @@ class Util
      */
     public static function isAllInOneSeoActivated()
     {
-        return class_exists('AIOSEO\\Plugin\\AIOSEO') || is_plugin_active('all-in-one-seo-pack/all-in-one-seo-pack.php');
+        return class_exists('AIOSEO\\Plugin\\AIOSEO') || self::isPluginActive('all-in-one-seo-pack/all-in-one-seo-pack.php');
     }
 
     /**
@@ -243,7 +266,7 @@ class Util
      */
     public static function isWooCommerceActivated()
     {
-        return class_exists('WooCommerce') || is_plugin_active('woocommerce/woocommerce.php');
+        return class_exists('WooCommerce') || self::isPluginActive('woocommerce/woocommerce.php');
     }
 
     /**
@@ -251,7 +274,7 @@ class Util
      */
     public static function isYoastSeoActivated()
     {
-        return class_exists('WPSEO_Options') || is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active(
+        return class_exists('WPSEO_Options') || self::isPluginActive('wordpress-seo/wp-seo.php') || self::isPluginActive(
                 'wordpress-seo-premium/wp-seo-premium.php'
             );
     }
@@ -261,7 +284,7 @@ class Util
      */
     public static function isACFActivated()
     {
-        return class_exists('ACF') || is_plugin_active('advanced-custom-fields/advanced-custom-fields.php');
+        return class_exists('ACF') || self::isPluginActive('advanced-custom-fields/advanced-custom-fields.php');
     }
 
 

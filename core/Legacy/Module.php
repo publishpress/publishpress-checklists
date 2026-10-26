@@ -12,6 +12,8 @@ namespace PublishPress\Checklists\Core\Legacy;
 
 use PublishPress\Checklists\Core\Factory;
 
+\defined('ABSPATH') || exit;
+
 /**
  * Module
  */
@@ -134,6 +136,7 @@ class Module
     {
         global $pagenow;
 
+        // phpcs:disable WordPress.Security.NonceVerification.Recommended -- Read-only: compares the page and module query args to known slugs to tell which settings screen is open. Nothing is saved.
         // All of the settings views are based on admin.php and a $_GET['page'] parameter
         if ($pagenow != 'admin.php' || !isset($_GET['page'])) {
             return false;
@@ -155,6 +158,7 @@ class Module
                 return true;
             }
         }
+        // phpcs:enable WordPress.Security.NonceVerification.Recommended
 
         return false;
     }
@@ -210,13 +214,14 @@ class Module
     {
         $display_text = '';
 
+        // phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing -- Read-only: the message and error args only pick a notice from the module's fixed list, which is escaped on output. Nothing is saved.
         // If there's been a message, let's display it
         if (isset($_GET['message'])) {
-            $message = sanitize_text_field($_GET['message']);
+            $message = sanitize_text_field(wp_unslash($_GET['message']));
         } elseif (isset($_REQUEST['message'])) {
-            $message = sanitize_text_field($_REQUEST['message']);
+            $message = sanitize_text_field(wp_unslash($_REQUEST['message']));
         } elseif (isset($_POST['message'])) {
-            $message = sanitize_text_field($_POST['message']);
+            $message = sanitize_text_field(wp_unslash($_POST['message']));
         } else {
             $message = false;
         }
@@ -229,14 +234,15 @@ class Module
 
         // If there's been an error, let's display it
         if (isset($_GET['error'])) {
-            $error = sanitize_text_field($_GET['error']);
+            $error = sanitize_text_field(wp_unslash($_GET['error']));
         } elseif (isset($_REQUEST['error'])) {
-            $error = sanitize_text_field($_REQUEST['error']);
+            $error = sanitize_text_field(wp_unslash($_REQUEST['error']));
         } elseif (isset($_POST['error'])) {
-            $error = sanitize_text_field($_POST['error']);
+            $error = sanitize_text_field(wp_unslash($_POST['error']));
         } else {
             $error = false;
         }
+        // phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
         if ($error && isset($current_module->messages[$error])) {
             $display_text .= '<div class="is-dismissible notice notice-error"><p>' . esc_html(
                 $current_module->messages[$error]

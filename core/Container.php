@@ -9,7 +9,7 @@
 
 namespace PublishPress\Checklists\Core;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 /**
  * Class Container

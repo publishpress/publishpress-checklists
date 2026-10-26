@@ -9,7 +9,7 @@
 
 namespace PublishPress\Checklists\Core\Requirement;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 class Words_count extends Base_counter
 {
@@ -61,6 +61,7 @@ class Words_count extends Base_counter
     public function get_current_status($post, $option_value)
     {
         $post_content = isset($post->post_content) ? $post->post_content : '';
+        // phpcs:ignore WordPressVIPMinimum.Functions.StripTags.StripTagsOneParameter, WordPress.WP.AlternativeFunctions.strip_tags_strip_tags -- Keeps the word count unchanged; wp_strip_all_tags() also drops script/style contents and trims.
         $count = str_word_count(strip_tags($post_content));
 
         return ($count >= $option_value[0]) && ($option_value[1] == 0 || $count <= $option_value[1]);

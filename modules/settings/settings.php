@@ -34,16 +34,18 @@ use PublishPress\Checklists\Core\Legacy\Module;
 use PublishPress\Checklists\Core\Legacy\Util;
 use PublishPress\Checklists\Core\Requirement\Base_requirement;
 
+defined('ABSPATH') || exit;
+
 if (!class_exists('PPCH_Settings')) {
     #[\AllowDynamicProperties]
     class PPCH_Settings extends Module
     {
-        const SETTINGS_SLUG = 'ppch-settings';
+        public const SETTINGS_SLUG = 'ppch-settings';
 
         /**
          * @var string
          */
-        const MENU_SLUG = 'ppch-settings';
+        public const MENU_SLUG = 'ppch-settings';
 
         public $module;
 
@@ -80,11 +82,11 @@ if (!class_exists('PPCH_Settings')) {
                     // Custom icons and colors for checklist items
                     'complete_icon'               => 'dashicons-yes',
                     'incomplete_icon'             => 'dashicons-no',
-                    'required_complete_color'     => '#66bb6a',
-                    'required_incomplete_color'   => '#ef5350',
-                    'required_asterisk_color'     => '#ef5350',
-                    'recommended_complete_color'  => '#66bb6a',
-                    'recommended_incomplete_color' => '#ef5350',
+                    'required_complete_color'     => '#2e7d32',
+                    'required_incomplete_color'   => '#c62828',
+                    'required_asterisk_color'     => '#c62828',
+                    'recommended_complete_color'  => '#2e7d32',
+                    'recommended_incomplete_color' => '#c62828',
                     'enable_rename_label_editor_panel' => Base_requirement::VALUE_YES,
                     'checklist_items_sort_order' => 'default',
                 ],
@@ -141,6 +143,7 @@ if (!class_exists('PPCH_Settings')) {
         public function action_admin_enqueue_scripts()
         {
             if ($this->isWhitelistedSettingsView()) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the page query arg only decides which assets to load.
                 if (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') {
                     $settingsScriptPath = __DIR__ . '/lib/settings.js';
                     $settingsScriptVersion = PPCH_VERSION;
@@ -181,6 +184,7 @@ if (!class_exists('PPCH_Settings')) {
                 );
             }
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the page query arg only decides which assets to load.
             if (isset($_GET['page']) && $_GET['page'] === 'ppch-settings') {
                 wp_enqueue_style('wp-color-picker');
                 wp_enqueue_script('jquery-ui-core');
@@ -196,7 +200,8 @@ if (!class_exists('PPCH_Settings')) {
 
             $status = isset($this->module->options->disable_quick_edit_publish) ? $this->module->options->disable_quick_edit_publish : 'yes';
             if ($status == 'yes') :
-                $post_type = (!empty($_GET['post_type'])) ? sanitize_text_field($_GET['post_type']) : 'post';
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the post_type query arg only decides whether to hide a Quick Edit field.
+                $post_type = (!empty($_GET['post_type'])) ? sanitize_key(wp_unslash($_GET['post_type'])) : 'post';
                 $post_types = array_keys($this->get_post_types());
                 if (in_array($post_type, $post_types)) :
 ?>
@@ -224,7 +229,8 @@ if (!class_exists('PPCH_Settings')) {
 
             $status = isset($this->module->options->disable_quick_edit_completely) ? $this->module->options->disable_quick_edit_completely : 'yes';
             if ($status == 'yes') :
-                $post_type = (!empty($_GET['post_type'])) ? sanitize_text_field($_GET['post_type']) : 'post';
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: the post_type query arg only decides whether to hide a Quick Edit field.
+                $post_type = (!empty($_GET['post_type'])) ? sanitize_key(wp_unslash($_GET['post_type'])) : 'post';
                 $post_types = array_keys($this->get_post_types());
                 if (in_array($post_type, $post_types)) :
                 ?>
@@ -274,11 +280,15 @@ if (!class_exists('PPCH_Settings')) {
                          */
                         $tabs = apply_filters('publishpress_checklists_settings_tabs', []);
                         if (!empty($tabs)) {
-                            echo '<ul id="publishpress-checklists-settings-tabs" class="nav-tab-wrapper">';
+                            echo '<ul id="publishpress-checklists-settings-tabs" class="nav-tab-wrapper" role="tablist" aria-label="' . esc_attr__('Settings sections', 'publishpress-checklists') . '">';
                             $i = 0;
                             foreach ($tabs as $tabLink => $tabLabel) {
-                                echo '<li class="nav-tab ' . ($i === 0 ? 'nav-tab-active' : '') . '">';
-                                echo '<a href="' . esc_url($tabLink) . '">' . esc_html($tabLabel) . '</a>';
+                                $tab_id = ltrim((string) $tabLink, '#');
+                                $tab_dom_id = 'ppch-settings-tab-' . sanitize_key($tab_id);
+                                $tab_is_active = $i === 0;
+
+                                echo '<li role="presentation" class="nav-tab ' . ($tab_is_active ? 'nav-tab-active' : '') . '">';
+                                echo '<a id="' . esc_attr($tab_dom_id) . '" href="' . esc_url($tabLink) . '" role="tab" aria-controls="' . esc_attr($tab_id) . '" aria-selected="' . esc_attr($tab_is_active ? 'true' : 'false') . '" tabindex="' . esc_attr($tab_is_active ? '0' : '-1') . '">' . esc_html($tabLabel) . '</a>';
                                 echo '</li>';
                                 $i++;
                             }
@@ -442,13 +452,15 @@ if (!class_exists('PPCH_Settings')) {
          */
         public function helper_print_error_or_description($field, $description)
         {
+            // phpcs:disable WordPress.Security.NonceVerification.Recommended -- Read-only: shows a form error message, escaped on output. Nothing is saved.
             if (isset($_REQUEST['form-errors'][$field])): ?>
                 <div class="form-error">
-                    <p><?php echo esc_html(sanitize_text_field($_REQUEST['form-errors'][$field])); ?></p>
+                    <p><?php echo esc_html(sanitize_text_field(wp_unslash($_REQUEST['form-errors'][$field]))); ?></p>
                 </div>
             <?php else: ?>
                 <p class="description"><?php echo esc_html($description); ?></p>
 <?php endif;
+            // phpcs:enable WordPress.Security.NonceVerification.Recommended
         }
 
         /**
@@ -509,7 +521,7 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (
-                $_POST['action'] != 'update'
+                sanitize_key(wp_unslash($_POST['action'])) !== 'update'
                 || !isset($_GET['page'])
                 || (isset($_GET['page']) && $_GET['page'] != 'ppch-settings')
             ) {
@@ -517,7 +529,7 @@ if (!class_exists('PPCH_Settings')) {
             }
 
             if (!current_user_can('manage_options') || !wp_verify_nonce(
-                sanitize_key($_POST['_wpnonce']),
+                sanitize_key(wp_unslash($_POST['_wpnonce'])),
                 'edit-publishpress-settings'
             )) {
                 wp_die(esc_html__('Cheatin&#8217; uh?', 'publishpress-checklists'));
@@ -530,7 +542,7 @@ if (!class_exists('PPCH_Settings')) {
             $legacyPlugin = Factory::getLegacyPlugin();
 
             if (isset($_POST['publishpress_checklists_settings_options']['features'])) {
-                $enabledFeatures = sanitize_text_field($_POST['publishpress_checklists_settings_options']['features']);
+                $enabledFeatures = sanitize_text_field(wp_unslash($_POST['publishpress_checklists_settings_options']['features']));
 
                 // Run through all the modules updating their statuses
                 foreach ($legacyPlugin->modules as $mod_data) {
@@ -551,8 +563,8 @@ if (!class_exists('PPCH_Settings')) {
             foreach ($modules as $moduleSlug) {
                 $module_name = sanitize_key(Util::sanitizeModuleName($moduleSlug));
 
-                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-                $new_options = (isset($_POST[$legacyPlugin->$module_name->module->options_group_name])) ? $this->sanitize_module_options($_POST[$legacyPlugin->$module_name->module->options_group_name]) : [];
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized by sanitize_module_options().
+                $new_options = (isset($_POST[$legacyPlugin->$module_name->module->options_group_name])) ? $this->sanitize_module_options(wp_unslash($_POST[$legacyPlugin->$module_name->module->options_group_name])) : [];
 
                 /**
                  * Legacy way to validate the settings. Hook to the filter
@@ -701,17 +713,18 @@ if (!class_exists('PPCH_Settings')) {
         {
             $legacyPlugin = Factory::getLegacyPlugin();
 
-            $module_settings_slug = isset($_GET['module']) && !empty($_GET['module']) ? sanitize_text_field($_GET['module']) : PPCH_Settings::SETTINGS_SLUG;
+            // phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing -- Read-only: the module, message and error args pick the settings tab and a notice from a fixed list, escaped on output. Nothing is saved.
+            $module_settings_slug = isset($_GET['module']) && !empty($_GET['module']) ? sanitize_key(wp_unslash($_GET['module'])) : PPCH_Settings::SETTINGS_SLUG;
             $requested_module     = $legacyPlugin->getModuleBy('settings_slug', $module_settings_slug);
             $display_text         = '';
 
             // If there's been a message, let's display it
             if (isset($_GET['message'])) {
-                $message = sanitize_text_field($_GET['message']);
+                $message = sanitize_text_field(wp_unslash($_GET['message']));
             } elseif (isset($_REQUEST['message'])) {
-                $message = sanitize_text_field($_REQUEST['message']);
+                $message = sanitize_text_field(wp_unslash($_REQUEST['message']));
             } elseif (isset($_POST['message'])) {
-                $message = sanitize_text_field($_POST['message']);
+                $message = sanitize_text_field(wp_unslash($_POST['message']));
             } else {
                 $message = false;
             }
@@ -723,14 +736,15 @@ if (!class_exists('PPCH_Settings')) {
 
             // If there's been an error, let's display it
             if (isset($_GET['error'])) {
-                $error = sanitize_text_field($_GET['error']);
+                $error = sanitize_text_field(wp_unslash($_GET['error']));
             } elseif (isset($_REQUEST['error'])) {
-                $error = sanitize_text_field($_REQUEST['error']);
+                $error = sanitize_text_field(wp_unslash($_REQUEST['error']));
             } elseif (isset($_POST['error'])) {
-                $error = sanitize_text_field($_POST['error']);
+                $error = sanitize_text_field(wp_unslash($_POST['error']));
             } else {
                 $error = false;
             }
+            // phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
             if ($error && isset($requested_module->messages[$error])) {
                 $display_text .= '<div class="is-dismissible notice notice-error"><p>' . esc_html(
                     $requested_module->messages[$error]
@@ -1454,10 +1468,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_required_complete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_required_complete_color';
-            $value = isset($this->module->options->required_complete_color) ? $this->module->options->required_complete_color : '#66bb6a';
+            $value = isset($this->module->options->required_complete_color) ? $this->module->options->required_complete_color : '#2e7d32';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_complete_color]" class="pp-checklists-color-picker" data-default-color="#66bb6a" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_complete_color]" class="pp-checklists-color-picker" data-default-color="#2e7d32" />';
             echo '</label>';
         }
 
@@ -1467,10 +1481,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_required_incomplete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_required_incomplete_color';
-            $value = isset($this->module->options->required_incomplete_color) ? $this->module->options->required_incomplete_color : '#ef5350';
+            $value = isset($this->module->options->required_incomplete_color) ? $this->module->options->required_incomplete_color : '#c62828';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#c62828" />';
             echo '</label>';
         }
 
@@ -1480,10 +1494,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_required_asterisk_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_required_asterisk_color';
-            $value = isset($this->module->options->required_asterisk_color) ? $this->module->options->required_asterisk_color : '#ef5350';
+            $value = isset($this->module->options->required_asterisk_color) ? $this->module->options->required_asterisk_color : '#c62828';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_asterisk_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[required_asterisk_color]" class="pp-checklists-color-picker" data-default-color="#c62828" />';
             echo '</label>';
         }
 
@@ -1493,10 +1507,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_recommended_complete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_recommended_complete_color';
-            $value = isset($this->module->options->recommended_complete_color) ? $this->module->options->recommended_complete_color : '#66bb6a';
+            $value = isset($this->module->options->recommended_complete_color) ? $this->module->options->recommended_complete_color : '#2e7d32';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_complete_color]" class="pp-checklists-color-picker" data-default-color="#66bb6a" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_complete_color]" class="pp-checklists-color-picker" data-default-color="#2e7d32" />';
             echo '</label>';
         }
 
@@ -1506,10 +1520,10 @@ if (!class_exists('PPCH_Settings')) {
         public function settings_recommended_incomplete_color_option($args = [])
         {
             $id    = $this->module->options_group_name . '_recommended_incomplete_color';
-            $value = isset($this->module->options->recommended_incomplete_color) ? $this->module->options->recommended_incomplete_color : '#ef5350';
+            $value = isset($this->module->options->recommended_incomplete_color) ? $this->module->options->recommended_incomplete_color : '#c62828';
 
             echo '<label for="' . esc_attr($id) . '">';
-            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#ef5350" />';
+            echo '<input type="text" value="' . esc_attr($value) . '" id="' . esc_attr($id) . '" name="' . esc_attr($this->module->options_group_name) . '[recommended_incomplete_color]" class="pp-checklists-color-picker" data-default-color="#c62828" />';
             echo '</label>';
         }
 
@@ -1585,7 +1599,7 @@ if (!class_exists('PPCH_Settings')) {
                 $hidden = $value === $sortValue ? '' : ' hidden';
                 echo '<p class="description ppch-sort-order-description"'
                     . ' data-sort-order="' . esc_attr($sortValue) . '"'
-                    . $hidden . '>';
+                    . esc_attr($hidden) . '>';
                 echo esc_html($sortDescription);
                 echo '</p>';
             }
@@ -1610,7 +1624,7 @@ if (!class_exists('PPCH_Settings')) {
         public function ajax_reset_custom_labels()
         {
             // Verify nonce
-            if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'ppch_reset_custom_labels')) {
+            if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_key(wp_unslash($_POST['nonce'])), 'ppch_reset_custom_labels')) {
                 wp_send_json_error(['message' => __('Security check failed.', 'publishpress-checklists')]);
             }
 
@@ -1660,7 +1674,7 @@ if (!class_exists('PPCH_Settings')) {
             if ($notice === 'success') {
                 delete_transient('ppch_reset_labels_notice');
                 ?>
-                <div class="notice notice-success is-dismissible">
+                <div class="notice notice-success is-dismissible" role="status" aria-live="polite">
                     <p><?php esc_html_e('All renamed labels have been reset successfully.', 'publishpress-checklists'); ?></p>
                 </div>
                 <?php

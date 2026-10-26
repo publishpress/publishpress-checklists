@@ -11,6 +11,8 @@ namespace PublishPress\Checklists\Core\Legacy;
 
 use stdClass;
 
+\defined('ABSPATH') || exit;
+
 /**
  * Legacy plugin class, porting the PublishPress dependencies.
  */
@@ -394,7 +396,8 @@ class LegacyPlugin
         /**
          * If show_in_rest is not true for the post type, the block editor is not available.
          */
-        if ($postTypeObject = get_post_type_object($postType)) {
+        $postTypeObject = get_post_type_object($postType);
+        if ($postTypeObject) {
             if (empty($postTypeObject->show_in_rest)) {
                 return false;
             }
@@ -417,12 +420,12 @@ class LegacyPlugin
         $conditions[] = $this->isWp5()
             && $pluginsState['classic-editor']
             && (get_option('classic-editor-replace') === 'block'
-                && !isset($_GET['classic-editor__forget']));
+                && !isset($_GET['classic-editor__forget'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: Classic Editor's own query arg, used only to tell which editor loads.
 
         $conditions[] = $this->isWp5()
             && $pluginsState['classic-editor']
             && (get_option('classic-editor-replace') === 'classic'
-                && isset($_GET['classic-editor__forget']));
+                && isset($_GET['classic-editor__forget'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only: Classic Editor's own query arg, used only to tell which editor loads.
 
         /**
          * < 5.0 but Gutenberg plugin is active.
@@ -457,7 +460,7 @@ class LegacyPlugin
      */
     public function isClassicEditorInstalled()
     {
-        return is_plugin_active('classic-editor/classic-editor.php');
+        return Util::isPluginActive('classic-editor/classic-editor.php');
     }
 
     public function setCustomMenuOrder($menu_ord)

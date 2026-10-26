@@ -3,10 +3,13 @@
 use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Legacy\LegacyPlugin;
 use PublishPress\Checklists\Core\Legacy\Module;
+use PublishPress\Checklists\Core\Legacy\Util;
 use PublishPress\Checklists\Yoastseo\Requirement\Readability_Analysis;
 use PublishPress\Checklists\Yoastseo\Requirement\Seo_Analysis;
 use PublishPress\Checklists\Yoastseo\Requirement\Focus_Keyword;
 use PublishPress\Checklists\Yoastseo\Requirement\Meta_Description;
+
+defined('ABSPATH') || exit;
 
 /**
  * @package     PublishPress\Checklists
@@ -24,7 +27,7 @@ use PublishPress\Checklists\Yoastseo\Requirement\Meta_Description;
 #[\AllowDynamicProperties]
 class PPCH_Yoastseo extends Module
 {
-    const SETTINGS_SLUG = 'pp-yoastseo';
+    public const SETTINGS_SLUG = 'pp-yoastseo';
 
     public $module_name = 'yoastseo';
 
@@ -117,9 +120,7 @@ class PPCH_Yoastseo extends Module
      */
     private function isYoastSEOActivated()
     {
-        return class_exists('WPSEO_Options') || is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active(
-                'wordpress-seo-premium/wp-seo-premium.php'
-            );
+        return Util::isYoastSeoActivated();
     }
 
     /**

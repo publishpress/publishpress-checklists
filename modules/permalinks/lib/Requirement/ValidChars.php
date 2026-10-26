@@ -13,6 +13,8 @@ namespace PublishPress\Checklists\Permalinks\Requirement;
 use PublishPress\Checklists\Core\Requirement\Base_simple;
 use stdClass;
 
+\defined('ABSPATH') || exit;
+
 class ValidChars extends Base_simple
 {
     /**

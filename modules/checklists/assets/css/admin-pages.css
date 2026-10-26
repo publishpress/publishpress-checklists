@@ -236,6 +236,69 @@ textarea.pp-checklists-custom-item-title {
   border: 1px solid silver;
   padding: 10px;
   line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/*
+ * WordPress core gives ".button .dashicons" a 1.9 line-height (38px here),
+ * which draws the plus icon below the label. Centre it with the text instead.
+ */
+#pp-checklists-add-button .dashicons,
+#pp-checklists-openai-promt-button .dashicons {
+  flex-shrink: 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/*
+ * The edit-label, remove (×) and suggested-prompt controls are buttons, but
+ * they were links before and should look the same. Undo the global
+ * ".pressshack-admin-wrapper button" box styles (same specificity, later in
+ * the file) and keep the link colours they had.
+ */
+.pressshack-admin-wrapper button.pp-checklists-edit-label:not(.notice-dismiss),
+.pressshack-admin-wrapper button.pp-checklists-remove-custom-item:not(.notice-dismiss),
+.pressshack-admin-wrapper .pp-custom-suggestion button:not(.notice-dismiss) {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pressshack-admin-wrapper button.pp-checklists-edit-label:not(.notice-dismiss),
+.pressshack-admin-wrapper button.pp-checklists-remove-custom-item:not(.notice-dismiss) {
+  color: #655997;
+}
+
+.pressshack-admin-wrapper .pp-custom-suggestion button:not(.notice-dismiss) {
+  color: #2271b1;
+}
+
+.pressshack-admin-wrapper button.pp-checklists-edit-label:not(.notice-dismiss):hover,
+.pressshack-admin-wrapper button.pp-checklists-edit-label:not(.notice-dismiss):focus,
+.pressshack-admin-wrapper button.pp-checklists-edit-label:not(.notice-dismiss):active,
+.pressshack-admin-wrapper button.pp-checklists-remove-custom-item:not(.notice-dismiss):hover,
+.pressshack-admin-wrapper button.pp-checklists-remove-custom-item:not(.notice-dismiss):focus,
+.pressshack-admin-wrapper button.pp-checklists-remove-custom-item:not(.notice-dismiss):active,
+.pressshack-admin-wrapper .pp-custom-suggestion button:not(.notice-dismiss):hover,
+.pressshack-admin-wrapper .pp-custom-suggestion button:not(.notice-dismiss):focus,
+.pressshack-admin-wrapper .pp-custom-suggestion button:not(.notice-dismiss):active {
+  color: #5a4f87;
+}
+
+.pp-custom-suggestion button:focus-visible,
+.pp-checklists-remove-custom-item:focus-visible,
+.pp-checklists-edit-label:focus-visible {
+  outline: 2px solid #2271b1;
+  outline-offset: 2px;
 }
 
 .pp-custom-checklists-table {
@@ -415,6 +478,12 @@ textarea.pp-checklists-custom-item-title {
   text-decoration: none;
   line-height: 20px !important;
   border-bottom: 1px solid #eee;
+}
+
+.pp-checklists-tabs-wrapper .pp-checklists-tabs ul li a[role="tab"]:focus-visible,
+#pp-checklists-post-type-filter a[role="tab"]:focus-visible {
+  outline: 2px solid #2271b1;
+  outline-offset: -2px;
 }
 
 .pp-checklists-tabs-wrapper .pp-checklists-tabs ul li {

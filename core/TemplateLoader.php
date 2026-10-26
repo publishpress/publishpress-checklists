@@ -10,6 +10,8 @@
 namespace PublishPress\Checklists\Core;
 
 
+\defined('ABSPATH') || exit;
+
 class TemplateLoader
 {
     /**
@@ -62,8 +64,8 @@ class TemplateLoader
         $located = '';
 
         $paths = [
-            STYLESHEETPATH . '/' . PPCH_RELATIVE_PATH . '/' . $moduleName,
-            TEMPLATEPATH . '/' . PPCH_RELATIVE_PATH . '/' . $moduleName,
+            get_stylesheet_directory() . '/' . PPCH_RELATIVE_PATH . '/' . $moduleName,
+            get_template_directory() . '/' . PPCH_RELATIVE_PATH . '/' . $moduleName,
             ABSPATH . WPINC . '/theme-compat/' . PPCH_RELATIVE_PATH . '/' . $moduleName,
             PPCH_MODULES_PATH . '/' . $moduleName . '/templates',
         ];

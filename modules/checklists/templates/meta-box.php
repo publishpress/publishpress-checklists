@@ -1,11 +1,14 @@
 <?php
+use PublishPress\Checklists\Core\Utils\ElementorUtils;
+
+defined('ABSPATH') || exit;
+
 $show_required_legend = false;
 $show_rule_headings = !empty($context['show_rule_headings']);
 $rule_heading_shown = [
     'block' => false,
     'warning' => false,
 ];
-use PublishPress\Checklists\Core\Utils\ElementorUtils;
 ?>
 
 <div class="pp-checklists">
@@ -68,20 +71,31 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
                                 $icon_class = (!empty($settings_options->incomplete_icon) && trim($settings_options->incomplete_icon) !== '') ? trim($settings_options->incomplete_icon) : 'dashicons-no';
                             }
                             ?>
-                            <div class="status-icon dashicons <?php echo esc_attr($icon_class); ?>"></div>
-                            <div class="status-label">
-                                <?php echo wp_kses_post($req['label']); ?>
+                            <div class="status-icon dashicons <?php echo esc_attr($icon_class); ?>" aria-hidden="true"></div>
+                            <div class="status-label" id="pp-checklists-req-label-<?php echo esc_attr($key); ?>"
+                                <?php if (!empty($req['is_custom'])) : ?>
+                                    role="checkbox" tabindex="0" aria-checked="<?php echo $req['status'] ? 'true' : 'false'; ?>"
+                                <?php endif; ?>>
+                                <span class="screen-reader-text ppch-status-text"><?php echo esc_html($req['status'] ? $context['lang']['completed'] : $context['lang']['not_completed']); ?>:</span>
+                                <?php if (!empty($req['is_custom'])) : ?>
+                                    <?php // Custom task titles can be multi-line; only this span gets white-space: pre-line. ?>
+                                    <span class="req-label"><?php echo wp_kses_post($req['label']); ?></span>
+                                <?php else : ?>
+                                    <?php echo wp_kses_post($req['label']); ?>
+                                <?php endif; ?>
                                 <?php if ($req['rule'] === 'block') : ?>
-                                    <span class="required">*</span>
+                                    <span class="required" aria-hidden="true">*</span>
+                                    <span class="screen-reader-text">(<?php echo esc_html($context['lang']['required']); ?>)</span>
                                     <?php $show_required_legend = true; ?>
                                 <?php endif; ?>
                             </div>
                             <?php if (!empty($req['require_button'])) : ?>
-                                <button type="button" class="button button-secondary pp-checklists-check-item">
+                                <button type="button" class="button button-secondary pp-checklists-check-item"
+                                        aria-describedby="pp-checklists-req-label-<?php echo esc_attr($key); ?>">
                                     <?php echo esc_html($context['lang']['check']); ?>
                                     <span class="spinner"></span>
                                 </button>
-                                <div class="request-response"></div>
+                                <div class="request-response" role="status"></div>
                             <?php endif; ?>
 
                             <input type="hidden"
@@ -95,7 +109,7 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
             </ul>
 
             <?php if ($show_required_legend) : ?>
-                <em>(<span class="required">*</span>) <?php echo esc_html($context['lang']['required']); ?></em>
+                <em aria-hidden="true">(<span class="required">*</span>) <?php echo esc_html($context['lang']['required']); ?></em>
             <?php endif; ?>
         </div>
     <?php endif; ?>
@@ -103,17 +117,23 @@ use PublishPress\Checklists\Core\Utils\ElementorUtils;
 
 <?php # Modal Windows; ?>
 <div class="remodal" data-remodal-id="pp-checklists-modal-alert"
-     data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+     role="alertdialog" aria-modal="true"
+     aria-label="<?php echo esc_attr($context['lang']['modal_label']); ?>"
+     aria-describedby="pp-checklists-modal-alert-content"
+     data-remodal-options="hashTracking: false, closeOnOutsideClick: false, modifier: pp-checklists-modal">
     <div id="pp-checklists-modal-alert-content"></div>
     <br>
-    <button data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['ok']); ?></button>
+    <button type="button" data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['ok']); ?></button>
 </div>
 
 <div class="remodal" data-remodal-id="pp-checklists-modal-confirm"
-     data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+     role="alertdialog" aria-modal="true"
+     aria-label="<?php echo esc_attr($context['lang']['modal_label']); ?>"
+     aria-describedby="pp-checklists-modal-confirm-content"
+     data-remodal-options="hashTracking: false, closeOnOutsideClick: false, modifier: pp-checklists-modal">
     <div id="pp-checklists-modal-confirm-content"></div>
     <br>
-    <button data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['no']); ?></button>
-    <button data-remodal-action="confirm"
+    <button type="button" data-remodal-action="cancel" class="remodal-cancel"><?php echo esc_html($context['lang']['no']); ?></button>
+    <button type="button" data-remodal-action="confirm"
             class="remodal-confirm"><?php echo esc_html($context['lang']['yes']); ?></button>
 </div>

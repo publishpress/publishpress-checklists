@@ -11,7 +11,7 @@ namespace PublishPress\Checklists\Core\API;
 
 use PublishPress\Checklists\Core\Plugin;
 
-defined('ABSPATH') or die('No direct script access allowed.');
+\defined('ABSPATH') || exit;
 
 /**
  * API class for programmatically setting requirement values
@@ -21,7 +21,7 @@ class Requirements
     /**
      * Rule mapping from frontend to backend
      */
-    const RULE_MAPPING = [
+    public const RULE_MAPPING = [
         'required' => Plugin::RULE_BLOCK,
         'recommended' => Plugin::RULE_WARNING,
         'disabled' => Plugin::RULE_DISABLED
