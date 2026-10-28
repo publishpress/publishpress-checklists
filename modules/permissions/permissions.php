@@ -101,7 +101,7 @@ class PPCH_Permissions extends Module
         add_action('publishpress_checklists_tasks_list_td', [$this, 'actionTasksListTd'], 10, 2);
         add_filter('publishpress_checklists_ignore_item_capability', [$this, 'filterIgnoreItemCapability'], 10, 3);
         add_filter('publishpress_checklists_requirement_list', [$this, 'filterRequirementsList'], 30, 3);
-        add_filter('publishpress_checklists_validate_requirement_settings', [$this, 'validateRequirementSettings']);
+        add_filter('publishpress_checklists_validate_requirement_settings', [$this, 'validateRequirementSettings'], 10, 2);
     }
 
     public function actionTasksListTh($postType)
@@ -144,13 +144,13 @@ class PPCH_Permissions extends Module
         return sprintf('ppch_ignore_item_%s_%s', $postType, $requirementName);
     }
 
-    public function validateRequirementSettings($options)
+    public function validateRequirementSettings($options, $submitted = null)
     {
         // Make sure to remove the options that were cleaned up
         foreach ($options as $key => $value) {
             if (preg_match('/_can_ignore$/', $key)) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Runs from the publishpress_checklists_validate_requirement_settings filter inside save_global_checklist(), after its nonce and capability checks.
-                if (!isset($_POST['publishpress_checklists_checklists_options'][$key])) {
+                if (!array_key_exists($key, $submitted ?? ($_POST['publishpress_checklists_checklists_options'] ?? []))) {
                     unset($options[$key]);
                 }
             }

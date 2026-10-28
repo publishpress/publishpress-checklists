@@ -1826,7 +1826,7 @@ if (!class_exists('PPCH_Checklists')) {
 
             $options = array_merge($sorted_options, $new_options);
 
-            $options = apply_filters('publishpress_checklists_validate_requirement_settings', $options);
+            $options = apply_filters('publishpress_checklists_validate_requirement_settings', $options, $new_options);
 
             $options = (object)$options;
 
@@ -1852,6 +1852,48 @@ if (!class_exists('PPCH_Checklists')) {
             
             wp_safe_redirect($redirect_url);
             exit();
+        }
+
+        /**
+         * Validate a partial native configuration without modifying request globals.
+         *
+         * @since 2.31.0
+         */
+        public function validate_configuration_patch(array $patch): array
+        {
+            $original = array_merge((array) $this->module->default_options, (array) get_option($this->module->options_group_name, []));
+            $arrays = array_filter($patch, 'is_array');
+            $patch = array_replace($patch, $this->sanitize_checklists_options($arrays));
+            $options = $original;
+            foreach ($patch as $key => $values) {
+                $options[$key] = in_array($key, ['custom_items', 'openai_items'], true)
+                    ? $values : array_replace((array) ($original[$key] ?? []), $values);
+            }
+            $this->instantiate_custom_items_to_validate_settings($options);
+            $validated = apply_filters('publishpress_checklists_validate_requirement_settings', $options, $options);
+            // Admin validators can normalize every task. A partial API update owns only its supplied fields and post types.
+            foreach ($patch as $key => $values) {
+                $original[$key] = in_array($key, ['custom_items', 'openai_items'], true)
+                    ? $validated[$key]
+                    : array_replace((array) ($original[$key] ?? []), array_intersect_key((array) ($validated[$key] ?? []), $values));
+            }
+            return $original;
+        }
+
+        /**
+         * Expose the native requirement inventory for a registered post type.
+         *
+         * @since 2.31.0
+         */
+        public function get_requirement_instances(string $post_type): array
+        {
+            if (!isset($this->requirements[$post_type])) {
+                $this->instantiate_post_type_requirements($post_type);
+                foreach ($this->requirements[$post_type] as $requirement) {
+                    $requirement->init();
+                }
+            }
+            return $this->requirements[$post_type];
         }
 
         /**
