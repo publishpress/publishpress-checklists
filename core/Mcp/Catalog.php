@@ -194,6 +194,7 @@ class Catalog
             return Registry::error(__('Choose a requirement from this post type\'s discovery.', 'publishpress-checklists'), 404);
         }
         $fields = $item->get_configuration_fields();
+        $fields['can_ignore']['available'] = Settings::get()['settings']->who_can_ignore_option;
         $taxonomy = self::taxonomy($item);
         if ($taxonomy && isset($fields['multiple'])) {
             unset($fields['multiple']['items']['enum']);
@@ -204,6 +205,10 @@ class Catalog
         $values = [];
         foreach ($fields as $suffix => $field) {
             $value = $raw[$item->name . '_' . $suffix][$input['post_type']] ?? ($field['default'] ?? '');
+            if ($suffix === 'min' && $value === '' && ($item instanceof \PublishPress\Checklists\Core\Requirement\Base_counter || $item->get_requirement_type() === 'acf_base_counter')) {
+                $legacy = 'min_' . $item->name . '_value';
+                $value = $raw[$legacy][$input['post_type']] ?? $value;
+            }
             if (isset($field['anyOf']) && is_numeric($value)) {
                 $value = ($field['anyOf'][0]['type'] ?? '') === 'number' ? (float) $value : (int) $value;
             }

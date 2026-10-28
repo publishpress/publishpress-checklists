@@ -73,6 +73,9 @@ class Registry
     /** @since 2.31.0 */
     public static function strict($value, array $schema, int $depth = 0): bool
     {
+        if (is_object($value) && !$value instanceof \stdClass) {
+            return false;
+        }
         if ($depth > 40) {
             return false;
         }
@@ -92,6 +95,9 @@ class Registry
         if (is_array($value) && in_array('array', $types, true) && array_is_list($value)) {
             $actual = 'array';
         }
+        if ($actual === 'object' && is_array($value) && $value !== [] && array_is_list($value) && in_array('object', $types, true)) {
+            return false;
+        }
         if ($types && !in_array($actual, $types, true) && !($actual === 'integer' && in_array('number', $types, true))) {
             return false;
         }
@@ -104,6 +110,28 @@ class Registry
             }
         }
         return true;
+    }
+
+    /**
+     * Normalize declared JSON objects without coercing untyped children or array values.
+     *
+     * @since 2.31.0
+     */
+    private static function normalizeInput($value, array $schema)
+    {
+        if (($schema['type'] ?? '') === 'object' && $value instanceof \stdClass) {
+            $value = (array) $value;
+        }
+        if (!is_array($value)) {
+            return $value;
+        }
+        foreach ($value as $key => $child) {
+            $field = $schema['properties'][$key] ?? ($schema['items'] ?? ($schema['additionalProperties'] ?? null));
+            if (is_array($field)) {
+                $value[$key] = self::normalizeInput($child, $field);
+            }
+        }
+        return $value;
     }
 
     /** @since 2.31.0 */
@@ -135,24 +163,25 @@ class Registry
             'label' => $label, 'description' => $description, 'category' => 'publishpress',
             'input_schema' => $input, 'output_schema' => self::object($output, array_keys($output)),
             'permission_callback' => static function ($values = []) use ($input, $permission) {
-                if (!is_array($values) || is_wp_error(self::validate($values, $input))) {
+                if ((!is_array($values) && !$values instanceof \stdClass) || is_wp_error(self::validate($values, $input))) {
                     return false;
                 }
                 try {
-                    return (bool) $permission($values);
+                    return (bool) $permission(self::normalizeInput($values, $input));
                 } catch (\Throwable $error) {
                     return false;
                 }
             },
-            'execute_callback' => static function (array $values = []) use ($input, $execute, $permission, $write) {
+            'execute_callback' => static function ($values = []) use ($input, $execute, $permission, $write) {
+                $valid = self::validate($values, $input);
+                if (is_wp_error($valid) || strlen((string) wp_json_encode($values)) > 1048576) {
+                    return is_wp_error($valid) ? $valid : self::error(__('The request is too large.', 'publishpress-checklists'));
+                }
+                $values = self::normalizeInput($values, $input);
                 foreach ($input['properties'] ?? [] as $key => $field) {
                     if (!array_key_exists($key, $values) && array_key_exists('default', $field)) {
                         $values[$key] = $field['default'];
                     }
-                }
-                $valid = self::validate($values, $input);
-                if (is_wp_error($valid) || strlen((string) wp_json_encode($values)) > 1048576) {
-                    return is_wp_error($valid) ? $valid : self::error(__('The request is too large.', 'publishpress-checklists'));
                 }
                 try {
                     if (!$permission($values)) {

@@ -80,6 +80,9 @@ if (!class_exists('PPCH_Checklists')) {
          */
         protected $requirements = [];
 
+        /** @since 2.31.0 */
+        private array $validationItems = [];
+
         /**
          * List of post types which supports checklists
          *
@@ -1907,8 +1910,12 @@ if (!class_exists('PPCH_Checklists')) {
                 foreach ($new_options['custom_items'] as $id) {
                     if (isset($new_options[$id . '_title'])) {
                         foreach ($new_options[$id . '_title'] as $post_type => $title) {
-                            $custom_item = new Custom_item($id, $this->module, $post_type);
-                            $custom_item->init();
+                            $key = Custom_item::class . ':' . $id . ':' . $post_type;
+                            if (!isset($this->validationItems[$key])) {
+                                $custom_item = new Custom_item($id, $this->module, $post_type);
+                                $custom_item->init();
+                                $this->validationItems[$key] = $custom_item;
+                            }
                         }
                     }
                 }
@@ -1918,8 +1925,12 @@ if (!class_exists('PPCH_Checklists')) {
                 foreach ($new_options['openai_items'] as $id) {
                     if (isset($new_options[$id . '_title'])) {
                         foreach ($new_options[$id . '_title'] as $post_type => $title) {
-                            $openai_item = new Openai_item($id, $this->module, $post_type);
-                            $openai_item->init();
+                            $key = Openai_item::class . ':' . $id . ':' . $post_type;
+                            if (!isset($this->validationItems[$key])) {
+                                $openai_item = new Openai_item($id, $this->module, $post_type);
+                                $openai_item->init();
+                                $this->validationItems[$key] = $openai_item;
+                            }
                         }
                     }
                 }

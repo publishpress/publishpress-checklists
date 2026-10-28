@@ -107,6 +107,7 @@ try {
     }
     require __DIR__ . '/format-and-permission-cases.php';
     require __DIR__ . '/comparison-cases.php';
+    require __DIR__ . '/adapter-format-audit.php';
     $state = $call('get-requirement', ['post_type' => 'post', 'requirement' => $id]);
     $ok($call('delete-custom-task', ['post_type' => 'post', 'requirement' => $id, 'expected_hash' => $state['hash']]), 'Delete custom');
     $assert(is_wp_error($call('get-requirement', ['post_type' => 'post', 'requirement' => $id])), 'Deleted custom absent');

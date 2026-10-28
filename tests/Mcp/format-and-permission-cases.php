@@ -125,6 +125,7 @@ if (Options::pro()) {
     $backorder = new \PublishPress\ChecklistsPro\WooCommerce\Requirement\Backorder($module, 'post');
     $backorder->init_language();
     $assert($backorder->get_configuration_fields()['backorder']['enum'] === ['no', 'yes', 'notify'], 'Real Pro backorder choices');
+    $assert($backorder->get_option('backorder') === $backorder->get_configuration_fields()['backorder']['default'], 'Native backorder getter matches select and schema defaults');
     $selector = ['post_type' => 'post', 'requirement' => 'words_count'];
     $state = $call('get-requirement', $selector);
     $raw = Options::read('checklists');
