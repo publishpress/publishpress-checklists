@@ -8,7 +8,7 @@
  * Author URI:  https://publishpress.com
  * License:     GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Version: 2.30.0
+ * Version: 2.31.0-beta.1
  * Text Domain: publishpress-checklists
  * Domain Path: /languages
  * Requires at least: 5.5
@@ -65,7 +65,7 @@ if (class_exists('PublishPressInstanceProtection\\Config')) {
 if (!defined('PPCH_LOADED')) {
     define('PPCH_LOADED', 1);
     define('PPCH_PATH_BASE', plugin_dir_path(__FILE__));
-    define('PPCH_VERSION', '2.30.0');
+    define('PPCH_VERSION', '2.31.0-beta.1');
     define('PPCH_FILE', __DIR__ . '/publishpress-checklists.php');
     define('PPCH_MODULES_PATH', PPCH_PATH_BASE . '/modules');
     define('PPCH_RELATIVE_PATH', 'publishpress-checklists');
@@ -201,16 +201,18 @@ if (!defined('PPCH_LOADED')) {
             }
         }
 
+        if (! class_exists('PublishPress\\Checklists\\Core\\Autoloader')) {
+            require_once __DIR__ . '/core/Autoloader.php';
+        }
+
+        Autoloader::register();
+        Autoloader::addNamespace('PublishPress\\Checklists\\Core\\', __DIR__ . '/core/');
+        Autoloader::addNamespace('PublishPress\\Checklists\\Permalinks\\', __DIR__ . '/modules/permalinks/lib/');
+        Autoloader::addNamespace('PublishPress\\Checklists\\Yoastseo\\', __DIR__ . '/modules/yoastseo/lib/');
+
+        \PublishPress\Checklists\Core\Mcp\Bootstrap::init();
+
         if (is_admin()) {
-            if (! class_exists('PublishPress\\Checklists\\Core\\Autoloader')) {
-                require_once __DIR__ . '/core/Autoloader.php';
-            }
-
-            Autoloader::register();
-            Autoloader::addNamespace('PublishPress\\Checklists\\Core\\', __DIR__ . '/core/');
-            Autoloader::addNamespace('PublishPress\\Checklists\\Permalinks\\', __DIR__ . '/modules/permalinks/lib/');
-            Autoloader::addNamespace('PublishPress\\Checklists\\Yoastseo\\', __DIR__ . '/modules/yoastseo/lib/');
-
             $plugin = new Plugin();
             $plugin->init();
         }

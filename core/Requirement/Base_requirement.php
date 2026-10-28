@@ -96,7 +96,7 @@ class Base_requirement
     public function init()
     {
         add_filter('publishpress_checklists_requirements_default_options', [$this, 'filter_default_options']);
-        add_filter('publishpress_checklists_validate_requirement_settings', [$this, 'filter_settings_validate']);
+        add_filter('publishpress_checklists_validate_requirement_settings', [$this, 'filter_settings_validate'], 10, 2);
         add_filter('publishpress_checklists_requirement_list', [$this, 'filter_requirements_list'], 10, 3);
         add_filter('publishpress_checklists_requirement_instances', [$this, 'filter_requirement_instances'], 10, 4);
 
@@ -418,4 +418,65 @@ class Base_requirement
     {
         return $this->post_type;
     }
+    /**
+     * Describe native configuration fields without rendering an admin form.
+     *
+     * Field keys are suffixes of the requirement's native per-post-type options.
+     *
+     * @since 2.31.0
+     */
+    public function get_configuration_fields(): array
+    {
+        $roles = array_keys(\PPCH_Checklists::get_editable_roles_labels());
+        $fields = [
+            'rule' => ['type' => 'string', 'enum' => [Plugin::RULE_DISABLED, Plugin::RULE_WARNING, Plugin::RULE_BLOCK, Plugin::RULE_ONLY_DISPLAY],
+                'title' => __('Task status: Disabled, Recommended or Required', 'publishpress-checklists'), 'default' => Plugin::RULE_DISABLED],
+            'custom_label' => ['type' => 'string', 'maxLength' => 500, 'title' => __('WP Admin label', 'publishpress-checklists'), 'default' => ''],
+            'editor_label' => ['type' => 'string', 'maxLength' => 500, 'title' => __('Editing screen label', 'publishpress-checklists'), 'default' => ''],
+            'can_ignore' => ['type' => 'array', 'items' => ['type' => 'string', 'enum' => $roles], 'uniqueItems' => true, 'maxItems' => 100,
+                'title' => __('Who can ignore this task?', 'publishpress-checklists'), 'default' => []],
+        ];
+        if ($this instanceof Base_counter) {
+            $range = ['anyOf' => [['type' => 'integer', 'minimum' => 0, 'maximum' => 10000000], ['type' => 'string', 'enum' => ['']]], 'default' => ''];
+            $fields['min'] = $range + ['title' => __('Minimum', 'publishpress-checklists')];
+            $fields['max'] = $range + ['title' => __('Maximum; zero or empty has no upper limit', 'publishpress-checklists')];
+        }
+        if ($this instanceof Base_multiple || $this instanceof Base_dropdown) {
+            $choices = $this->field_name !== 'users' && method_exists($this, 'get_setting_drop_down_labels') ? $this->get_setting_drop_down_labels() : [];
+            $values = array_map('strval', array_keys($choices));
+            $item = ['type' => 'string'];
+            if ($values || in_array($this->field_name, ['roles', 'editable_by'], true)) {
+                $item['enum'] = $values;
+            }
+            if ($this instanceof Base_dropdown && $values) {
+                $item['enum'] = array_values(array_unique(array_merge([''], $values)));
+            }
+            $field = $this->field_name;
+            $fields[$field] = $this instanceof Base_multiple
+                ? ['type' => 'array', 'maxItems' => 100, 'uniqueItems' => true, 'items' => $item, 'default' => []]
+                : $item + ['default' => ''];
+            $fields[$field]['title'] = $this->lang['label_option_description'] ?? ($this->lang['label_settings'] ?? $field);
+            $fields[$field]['choices'] = array_map(static fn($value, $label) => ['value' => (string) $value, 'label' => wp_strip_all_tags((string) $label)], array_keys($choices), array_values($choices));
+        }
+        if ($this instanceof Base_time) {
+            $fields['value'] = ['type' => 'string', 'pattern' => '^$|^([01][0-9]|2[0-3]):[0-5][0-9]$', 'default' => '',
+                'title' => __('Time in 24-hour HH:MM format', 'publishpress-checklists')];
+        }
+        if ($this instanceof Custom_item || $this instanceof Openai_item) {
+            $fields['title'] = ['type' => 'string', 'minLength' => 1, 'maxLength' => 10000,
+                'title' => __('Task title or instruction', 'publishpress-checklists'), 'default' => ''];
+        }
+        return apply_filters('publishpress_checklists_configuration_fields', $fields, $this);
+    }
+
+    /**
+     * Identify the native evaluator without accessing protected fields externally.
+     *
+     * @since 2.31.0
+     */
+    public function get_requirement_type(): string
+    {
+        return $this->type;
+    }
+
 }

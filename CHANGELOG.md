@@ -1,5 +1,9 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.31.0] - Unreleased
+
+- Added: MCP actions for checklist configuration, settings and authorized post task completion.
+
 [2.30.0] - 27 October, 2026
 
 - Added: Counter tasks now show a live count in the editor #1218
