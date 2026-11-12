@@ -210,6 +210,9 @@ if (!defined('PPCH_LOADED')) {
         Autoloader::addNamespace('PublishPress\\Checklists\\Permalinks\\', __DIR__ . '/modules/permalinks/lib/');
         Autoloader::addNamespace('PublishPress\\Checklists\\Yoastseo\\', __DIR__ . '/modules/yoastseo/lib/');
 
+        // Before anything reads the settings: keep the pre-2.31.0 defaults on existing sites (#1254).
+        \PublishPress\Checklists\Core\Utils\InstallDefaults::maybeMigrate();
+
         \PublishPress\Checklists\Core\Mcp\Bootstrap::init();
 
         if (is_admin()) {
