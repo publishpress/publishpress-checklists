@@ -167,6 +167,32 @@ class CustomItemsMeta
     }
 
     /**
+     * Returns the roles selected under "Which roles can mark this task as
+     * complete?" for a post type, without the empty value the settings form
+     * can save when no role is chosen. An empty list means any user who can
+     * edit the post may tick the task.
+     *
+     * @param mixed  $option   The saved <id>_editable_by option.
+     * @param string $postType
+     *
+     * @return array|null Null when nothing is saved for the post type.
+     *
+     * @since 2.31.0
+     */
+    public static function getEditableByRoles($option, $postType)
+    {
+        $option = (array)$option;
+
+        if (!isset($option[$postType])) {
+            return null;
+        }
+
+        return array_values(array_filter((array)$option[$postType], static function ($role) {
+            return is_string($role) && '' !== $role;
+        }));
+    }
+
+    /**
      * Resolve the native authorization selector, including verified edition extensions.
      *
      * @since 2.31.0
@@ -203,6 +229,13 @@ class CustomItemsMeta
 
         if (!isset($allowed[$postType])) {
             return true;
+        }
+
+        if ($field === 'editable_by') {
+            // No role selected: anyone who can edit the post may tick it.
+            $roles = self::getEditableByRoles($allowed, $postType);
+
+            return empty($roles) || (bool)array_intersect($roles, (array)$user->roles);
         }
 
         if ($field === 'users') {
@@ -285,9 +318,9 @@ class CustomItemsMeta
 
         $options    = self::getOptions();
         $optionName = $id . '_editable_by';
-        $allowed    = isset($options->{$optionName}) ? (array)$options->{$optionName} : [];
+        $allowed    = isset($options->{$optionName}) ? $options->{$optionName} : [];
 
-        return isset($allowed[$postType]);
+        return !empty(self::getEditableByRoles($allowed, $postType));
     }
 
     /**
