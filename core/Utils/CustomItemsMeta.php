@@ -167,6 +167,44 @@ class CustomItemsMeta
     }
 
     /**
+     * Returns the roles selected under "Which roles can mark this task as
+     * complete?" for a post type, without the empty value the settings form
+     * can save when no role is chosen. An empty list means any user who can
+     * edit the post may tick the task.
+     *
+     * @param mixed  $option   The saved <id>_editable_by option.
+     * @param string $postType
+     *
+     * @return array|null Null when nothing is saved for the post type.
+     *
+     * @since 2.31.0
+     */
+    public static function getEditableByRoles($option, $postType)
+    {
+        $option = (array)$option;
+
+        if (!isset($option[$postType])) {
+            return null;
+        }
+
+        return array_values(array_filter((array)$option[$postType], static function ($role) {
+            return is_string($role) && '' !== $role;
+        }));
+    }
+
+    /**
+     * Resolve the native authorization selector, including verified edition extensions.
+     *
+     * @since 2.31.0
+     */
+    public static function getCompletionField(string $id): string
+    {
+        $field = $id === 'approved_by_user' ? 'users' : ($id === 'approved_by' ? 'roles' : 'editable_by');
+        $field = apply_filters('publishpress_checklists_completion_field', $field, $id);
+        return in_array($field, ['users', 'roles', 'editable_by'], true) ? $field : 'editable_by';
+    }
+
+    /**
      * Returns whether a user may tick a task, with the same rules the
      * requirements use to make the task clickable: the roles of "Approved by",
      * the users of Pro's "Approved by user" and the roles allowed to mark a
@@ -184,13 +222,8 @@ class CustomItemsMeta
         $id      = sanitize_key((string)$id);
         $options = self::getOptions();
 
-        if ('approved_by_user' === $id) {
-            $optionName = 'approved_by_user_users';
-        } elseif ('approved_by' === $id) {
-            $optionName = 'approved_by_roles';
-        } else {
-            $optionName = $id . '_editable_by';
-        }
+        $field = self::getCompletionField($id);
+        $optionName = $id . '_' . $field;
 
         $allowed = isset($options->{$optionName}) ? (array)$options->{$optionName} : [];
 
@@ -198,7 +231,14 @@ class CustomItemsMeta
             return true;
         }
 
-        if ('approved_by_user' === $id) {
+        if ($field === 'editable_by') {
+            // No role selected: anyone who can edit the post may tick it.
+            $roles = self::getEditableByRoles($allowed, $postType);
+
+            return empty($roles) || (bool)array_intersect($roles, (array)$user->roles);
+        }
+
+        if ($field === 'users') {
             return in_array($user->ID, (array)$allowed[$postType]);
         }
 
@@ -272,15 +312,15 @@ class CustomItemsMeta
     {
         $id = sanitize_key((string)$id);
 
-        if (in_array($id, self::APPROVAL_ITEMS, true)) {
+        if (in_array(self::getCompletionField($id), ['roles', 'users'], true)) {
             return true;
         }
 
         $options    = self::getOptions();
         $optionName = $id . '_editable_by';
-        $allowed    = isset($options->{$optionName}) ? (array)$options->{$optionName} : [];
+        $allowed    = isset($options->{$optionName}) ? $options->{$optionName} : [];
 
-        return isset($allowed[$postType]);
+        return !empty(self::getEditableByRoles($allowed, $postType));
     }
 
     /**

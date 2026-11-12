@@ -9,6 +9,8 @@
 
 namespace PublishPress\Checklists\Core\Requirement;
 
+use PublishPress\Checklists\Core\Utils\HelpTip;
+
 \defined('ABSPATH') || exit;
 
 class Base_multiple extends Base_simple implements Interface_required
@@ -104,11 +106,16 @@ class Base_multiple extends Base_simple implements Interface_required
             $html .= '<label for="' . esc_attr($id) . '" class="pp-checklists-editable-by-label">' . esc_html($this->lang['label_option_title']) . '</label>';
         }
 
+        $describedBy = !empty($this->lang['label_option_description'])
+            ? ' aria-describedby="' . esc_attr(HelpTip::getId($id)) . '"'
+            : '';
+
         $html .= sprintf(
-            '<select id="%s" name="%s" class="%s" multiple="multiple">',
+            '<select id="%s" name="%s" class="%s" multiple="multiple"%s>',
             $id,
             $name,
-            $css_class
+            $css_class,
+            $describedBy
         );
 
         $labels = $this->get_setting_drop_down_labels();
@@ -120,9 +127,7 @@ class Base_multiple extends Base_simple implements Interface_required
 
         $html .= '</select>';
 
-        if (isset($this->lang['label_option_description'])) {
-            $html .= '<p class="pp-checklists-editable-by-description">' . $this->lang['label_option_description'] . '</p>';
-        }
+        $html .= $this->get_option_description_html($id);
 
         return $html;
     }

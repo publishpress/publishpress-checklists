@@ -842,3 +842,94 @@ textarea.pp-checklists-custom-item-title {
     min-width: 120px;
   }
 }
+
+/* Help tooltips (core/Utils/HelpTip.php, assets/js/help-tip.js) */
+.ppch-help-tip {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+
+.ppch-help-tip__button,
+.pressshack-admin-wrapper button.ppch-help-tip__button:not(.notice-dismiss) {
+  display: inline-flex;
+  min-height: 0;
+  box-shadow: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #50575e;
+  cursor: help;
+}
+
+.ppch-help-tip__button:hover,
+.ppch-help-tip.is-open .ppch-help-tip__button,
+.pressshack-admin-wrapper button.ppch-help-tip__button:not(.notice-dismiss):hover {
+  color: #2271b1;
+}
+
+.ppch-help-tip__button:focus {
+  outline: 2px solid transparent;
+}
+
+.ppch-help-tip__button:focus-visible {
+  outline: 2px solid #2271b1;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.ppch-help-tip__bubble {
+  position: absolute;
+  z-index: 100100;
+  bottom: calc(100% + 6px);
+  inset-inline-start: 0;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(320px, calc(100vw - 16px));
+  padding: 8px 10px;
+  border-radius: 3px;
+  background: #1d2327;
+  color: #fff;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: start;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ppch-help-tip__bubble[hidden] {
+  display: none;
+}
+
+/* Bridge the gap between the button and the tooltip so moving the pointer onto it keeps it open. */
+.ppch-help-tip__bubble::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  height: 8px;
+}
+
+.ppch-help-tip--below .ppch-help-tip__bubble {
+  top: calc(100% + 6px);
+  bottom: auto;
+}
+
+.ppch-help-tip--below .ppch-help-tip__bubble::after {
+  top: auto;
+  bottom: 100%;
+}
+
+@media (forced-colors: active) {
+  .ppch-help-tip__bubble {
+    border: 1px solid CanvasText;
+  }
+}
