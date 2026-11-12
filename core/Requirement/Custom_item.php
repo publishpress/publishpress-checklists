@@ -10,6 +10,7 @@
 namespace PublishPress\Checklists\Core\Requirement;
 
 use PPCH_Checklists;
+use PublishPress\Checklists\Core\Utils\CustomItemsMeta;
 
 \defined('ABSPATH') || exit;
 
@@ -211,6 +212,19 @@ class Custom_item extends Base_multiple implements Interface_required
             }
         }
 
+        // Don't store the empty value the form sends when no role is selected.
+        $editable_by = $this->name . '_editable_by';
+        if (isset($new_options[$editable_by]) && is_array($new_options[$editable_by])) {
+            $roles = CustomItemsMeta::getEditableByRoles($new_options[$editable_by], $this->post_type);
+            if (null !== $roles) {
+                if (empty($roles)) {
+                    unset($new_options[$editable_by][$this->post_type]);
+                } else {
+                    $new_options[$editable_by][$this->post_type] = $roles;
+                }
+            }
+        }
+
         if (isset($new_options[$this->name . '_title'][$this->post_type])
             && empty($new_options[$this->name . '_title'][$this->post_type])) {
             // Look for empty title
@@ -260,10 +274,13 @@ class Custom_item extends Base_multiple implements Interface_required
         // Option name
         $option_name_multiple = $this->name . '_editable_by';
 
-        //Saved value
-        $option_value = isset($this->module->options->{$option_name_multiple}[$this->post_type]) ? $this->module->options->{$option_name_multiple}[$this->post_type] : array();
+        $option_value = CustomItemsMeta::getEditableByRoles(
+            isset($this->module->options->{$option_name_multiple}) ? $this->module->options->{$option_name_multiple} : [],
+            $this->post_type
+        );
 
-        if (!isset($this->module->options->{$option_name_multiple}[$this->post_type])) {
+        // Nothing saved, or saved with no role selected: anyone who can edit the post may tick it.
+        if (empty($option_value)) {
             return true;
         }
 
