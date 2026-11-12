@@ -27,6 +27,9 @@ class LegacyPlugin
     private $optionsGroup    = 'publishpress_checklists_';
     private $addedMenuPage   = false;
 
+    /** @since 2.31.0 */
+    private bool $initialized = false;
+
     public function __construct()
     {
         $this->modules = new stdClass();
@@ -62,6 +65,10 @@ class LegacyPlugin
      */
     public function init()
     {
+        if ($this->initialized) {
+            return;
+        }
+        $this->initialized = true;
         $this->loadModules();
 
         // Load all of the module options
@@ -246,6 +253,9 @@ class LegacyPlugin
      */
     public function adminInit()
     {
+        if (!is_admin()) {
+            return;
+        }
         $versionOption = $this->optionsGroup . 'version';
 
         // Upgrade if need be but don't run the upgrade if the plugin has never been used

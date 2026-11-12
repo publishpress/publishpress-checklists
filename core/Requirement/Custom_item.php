@@ -199,13 +199,13 @@ class Custom_item extends Base_multiple implements Interface_required
      *
      * @return array
      */
-    public function filter_settings_validate($new_options)
+    public function filter_settings_validate($new_options, $submitted = null)
     {
         // Make sure to remove the options that were cleaned up
         foreach ($new_options as $key => $value) {
             if (preg_match('/_' . $this->field_name . '/', $key)) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Runs from the publishpress_checklists_validate_requirement_settings filter inside save_global_checklist(), after its nonce and capability checks.
-                if (!isset($_POST['publishpress_checklists_checklists_options'][$key])) {
+                if (!array_key_exists($key, $submitted ?? ($_POST['publishpress_checklists_checklists_options'] ?? []))) {
                     unset($new_options[$key]);
                 }
             }
