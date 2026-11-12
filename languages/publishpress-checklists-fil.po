@@ -1,5 +1,5 @@
 # Copyright (C) 2026 PublishPress
-# This file is distributed under the same license as the PublishPress Checklists Free plugin.
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
@@ -12,10 +12,12 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-10-26 16:53+0000\n"
+"PO-Revision-Date: 2026-11-12 14:33+0000\n"
 "X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
+"Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 "
 "|| n % 10 == 6 || n % 10 == 9);\n"
+"|| n % 10 == 6 || n % 10 == 9);: \n"
 "Language: fil\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -29,9 +31,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
-"Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 || n % 10 == 6 || n % 10 == 9);\n"
 
-#: publishpress-checklists.php:4
+#: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
@@ -51,6 +52,8 @@ msgstr ""
 "pag-publish para sa iyong nilalaman."
 
 #: publishpress-checklists.php:7
+#: core/Mcp/Bootstrap.php:37
+#: modules/checklists/templates/footer.php:45
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -61,91 +64,598 @@ msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
 
 #: core/API/LabelMapper.php:39
-#: modules/checklists/checklists.php:1222
+#: modules/checklists/checklists.php:1661
 msgid "Disabled"
 msgstr "Hindi pinagana"
 
 #: core/API/LabelMapper.php:40
-#: modules/checklists/checklists.php:1029
-#: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1306
-#: modules/checklists/assets/js/gutenberg-panel.jsx:464
+#: modules/checklists/checklists.php:1260
+#: modules/checklists/checklists.php:1662
+#: modules/checklists/checklists.php:1746
+#: modules/checklists/assets/js/gutenberg-panel.jsx:493
 msgid "Recommended"
 msgstr "Inirerekomenda"
 
 #: core/API/LabelMapper.php:41
-#: modules/checklists/checklists.php:1028
-#: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1305
-#: modules/checklists/assets/js/gutenberg-panel.jsx:463
+#: modules/checklists/checklists.php:1259
+#: modules/checklists/checklists.php:1663
+#: modules/checklists/checklists.php:1745
+#: modules/checklists/assets/js/gutenberg-panel.jsx:492
 msgid "Required"
 msgstr "Kinakailangan"
 
-#: core/Legacy/LegacyPlugin.php:208
+#: core/Legacy/LegacyPlugin.php:217
 msgid "Please correct your form errors below and try again."
 msgstr "Mangyaring ituwid ang iyong mga error sa form sa ibaba at subukan muli."
 
-#: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:523, fuzzy
+#: core/Legacy/LegacyPlugin.php:221
+#: modules/settings/settings.php:536, fuzzy
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
-#: core/Legacy/LegacyPlugin.php:213
+#: core/Legacy/LegacyPlugin.php:222
 msgid "You do not have necessary permissions to complete this action."
 msgstr "Wala kang kinakailangang permiso upang makumpleto ang aksyong ito."
 
-#: core/Legacy/LegacyPlugin.php:217
+#: core/Legacy/LegacyPlugin.php:226
 msgid "Post does not exist"
 msgstr "Walang umiiral na post"
 
-#: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:78
-#: modules/checklists/checklists.php:110
-#: modules/checklists/checklists.php:1132
-#: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1302
-#: modules/checklists/assets/js/gutenberg-panel.jsx:438
+#: core/Legacy/LegacyPlugin.php:360
+#: core/Plugin.php:83
+#: modules/checklists/checklists.php:125
+#: modules/checklists/checklists.php:1571
+#: modules/checklists/checklists.php:1586
+#: modules/checklists/checklists.php:1741
+#: modules/checklists/assets/js/gutenberg-panel.jsx:587
 msgid "Checklists"
 msgstr "Mga Checklist"
 
-#: core/Legacy/Module.php:286, fuzzy
+#: core/Legacy/Module.php:292, fuzzy
 msgid "PublishPress Checklists"
 msgstr "PublishPress Checklists"
 
-#: core/Legacy/Module.php:289
+#: core/Legacy/Module.php:295
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "Kung gusto mo ang %s mangyaring iwanan kami ng %s rating. Salamat!"
 
-#: core/Legacy/Util.php:179
+#: core/Legacy/Util.php:183
 msgid "Need PublishPress Checklists Support?"
 msgstr "Kailangan ng PublishPress Checklists Support?"
 
-#: core/Legacy/Util.php:185
+#: core/Legacy/Util.php:189
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
 "Kung kailangan mo ng tulong o may bagong kahilingan para sa tampok, ipaalam "
 "sa amin."
 
-#: core/Legacy/Util.php:188
+#: core/Legacy/Util.php:192
 msgid "Request Support"
 msgstr "Humiling ng Suporta"
 
-#: core/Legacy/Util.php:195
+#: core/Legacy/Util.php:199
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "Ang detalyadong dokumentasyon ay magagamit din sa website ng plugin."
 
-#: core/Legacy/Util.php:198
+#: core/Legacy/Util.php:202
 msgid "View Knowledge Base"
 msgstr "Tingnan ang Knowledge Base"
 
-#: core/Plugin.php:79
-#: modules/settings/settings.php:134
+#: core/Mcp/Bootstrap.php:38
+msgid "Actions provided by PublishPress plugins."
+msgstr "Mga aksyon na ibinibigay ng mga plugin ng PublishPress."
+
+#: core/Mcp/Catalog.php:30
+msgid "Discover Checklists features"
+msgstr "Tuklasin ang mga tampok ng Checklist"
+
+#: core/Mcp/Catalog.php:31
+msgid ""
+"Discover native checklist configuration, custom and OpenAI tasks, "
+"publishing settings, appearance, per-post task states and active "
+"Pro/integration modules. Feature discovery grants no additional permissions."
+msgstr ""
+"Tuklasin ang katutubong pagsasaayos ng checklist, mga custom at OpenAI na "
+"gawain, mga setting ng publishing, hitsura, mga estado ng gawain sa bawat "
+"post at mga aktibong module ng Pro/integration. Ang pagtuklas ng tampok ay "
+"hindi nagbibigay ng karagdagang pahintulot."
+
+#: core/Mcp/Catalog.php:39
+msgid "Discover checklist post types"
+msgstr "Tuklasin ang mga uri ng post ng checklist"
+
+#: core/Mcp/Catalog.php:40
+msgid ""
+"Read native supported post type names, labels, enabled state and "
+"configuration locks. Requires the filtered checklist management capability."
+msgstr ""
+"Basahin ang mga pangalan ng katutubong sinusuportahang uri ng post, mga "
+"label, estado ng pag-enable at mga lock ng pagsasaayos. Kinakailangan ang "
+"na-filter na kakayahan ng pamamahala ng checklist."
+
+#: core/Mcp/Catalog.php:48
+msgid "Find checklist requirements"
+msgstr "Hanapin ang mga kinakailangan ng checklist"
+
+#: core/Mcp/Catalog.php:49
+msgid ""
+"Find native built-in, custom, OpenAI, duplicated and integration-specific "
+"task IDs for one post type. Includes labels, groups, configured rule and "
+"actual edition availability. Read one requirement for its exact fields and "
+"latest revision."
+msgstr ""
+"Hanapin ang mga katutubong built-in, custom, OpenAI, duplicated at mga task "
+"ID na tiyak sa integration para sa isang uri ng post. Kasama ang mga label, "
+"grupo, nakatakdang patakaran at aktwal na magagamit na edisyon. Basahin ang "
+"isang kinakailangan para sa mga eksaktong larangan nito at pinakabagong "
+"bersyon."
+
+#: core/Mcp/Catalog.php:57
+msgid "Read checklist requirement settings"
+msgstr "Basahin ang mga setting ng kinakailangan ng checklist"
+
+#: core/Mcp/Catalog.php:58
+msgid ""
+"Read one native task with exact per-post-type field names, types, choices, "
+"current settings and revision. Includes ranges, role/user selectors and "
+"labels when supported. Free Pro placeholders are unavailable for writes."
+msgstr ""
+"Basahin ang isang katutubong gawain na may eksaktong mga pangalan ng "
+"larangan sa bawat uri ng post, mga uri, mga pagpipilian, kasalukuyang mga "
+"setting at bersyon. Kasama ang mga saklaw, tagapili ng papel/gumagamit at "
+"mga label kapag sinusuportahan. Ang mga libreng placeholder ng Pro ay hindi "
+"magagamit para sa mga pagsusulat."
+
+#: core/Mcp/Catalog.php:66
+msgid "Discover checklist requirement choices"
+msgstr "Tuklasin ang mga pagpipilian ng kinakailangan ng checklist"
+
+#: core/Mcp/Catalog.php:67
+msgid ""
+"Read a bounded page of native field choices, including role/user choices "
+"and live assignable taxonomy term identifiers. Use returned values rather "
+"than inventing taxonomy IDs or names."
+msgstr ""
+"Basahin ang isang limitado na pahina ng mga katutubong pagpipilian sa "
+"larangan, kasama ang mga pagpipilian ng papel/gumagamit at mga live na "
+"maitalagang pagkakakilanlan ng taxonomy term. Gumamit ng mga ibinalik na "
+"halaga sa halip na mag-imbento ng mga ID o pangalan ng taxonomy."
+
+#: core/Mcp/Catalog.php:102
+msgid "Editable post; native task role/user restrictions also apply"
+msgstr ""
+"Maaaring i-edit na post; ang mga paghihigpit sa papel/gumagamit ng "
+"katutubong gawain ay nalalapat din"
+
+#: core/Mcp/Catalog.php:102
+msgid "Site configuration"
+msgstr "Pagsasaayos ng site"
+
+#: core/Mcp/Catalog.php:173
+#: core/Mcp/Requirements.php:225
+msgid "Choose a supported post type."
+msgstr "Pumili ng sinusuportahang uri ng post."
+
+#: core/Mcp/Catalog.php:194
+msgid "Choose a requirement from this post type's discovery."
+msgstr "Pumili ng kinakailangan mula sa pagtuklas ng uri ng post na ito."
+
+#: core/Mcp/Catalog.php:202
+msgid "Native taxonomy tokens from get-requirement-choices; do not invent names."
+msgstr ""
+"Katutubong mga token ng taxonomy mula sa get-requirement-choices; huwag "
+"mag-imbento ng mga pangalan."
+
+#: core/Mcp/Catalog.php:247
+msgid "Choose a discovered field."
+msgstr "Pumili ng isang natuklasang larangan."
+
+#: core/Mcp/Catalog.php:253
+msgid "You cannot list users."
+msgstr "Hindi mo maaaring ilista ang mga gumagamit."
+
+#: core/Mcp/Catalog.php:265
+msgid "You cannot access this taxonomy selector."
+msgstr "Hindi mo maaaring ma-access ang selector ng taxonomy na ito."
+
+#: core/Mcp/Options.php:96
+msgid "The settings could not be saved; original values were restored."
+msgstr "Hindi nai-save ang mga setting; naibalik ang mga orihinal na halaga."
+
+#: core/Mcp/Options.php:97
+msgid "Saving failed and recovery was incomplete. Read settings before retrying."
+msgstr ""
+"Nabigo ang pag-save at hindi kumpleto ang pagbawi. Basahin ang mga setting "
+"bago muling subukan."
+
+#: core/Mcp/Registry.php:68
+msgid "Use the exact field types returned by discovery."
+msgstr "Gamitin ang eksaktong mga uri ng larangan na ibinalik ng pagtuklas."
+
+#: core/Mcp/Registry.php:178
+msgid "The request is too large."
+msgstr "Mas mabigat ang request."
+
+#: core/Mcp/Registry.php:188
+msgid "You do not have permission for this action."
+msgstr "Wala kang pahintulot para sa aksyon na ito."
+
+#: core/Mcp/Registry.php:192
+msgid "The result is too large. Use narrower discovery or a smaller page."
+msgstr ""
+"Masyadong malaki ang resulta. Gumamit ng mas makitid na pagtuklas o mas "
+"maliit na pahina."
+
+#: core/Mcp/Registry.php:197
+msgid ""
+"The operation did not complete normally. Read the affected data before "
+"retrying; some changes may have been applied."
+msgstr ""
+"Hindi natapos ng normal ang operasyon. Basahin ang mga apektadong data bago "
+"muling subukan; maaaring may mga pagbabagong naipasa."
+
+#: core/Mcp/Registry.php:198
+msgid "The data could not be read. Check the active integrations before retrying."
+msgstr ""
+"Hindi mabasa ang data. Suriin ang mga aktibong integration bago muling "
+"subukan."
+
+#: core/Mcp/Requirements.php:34
+msgid "Update a checklist requirement"
+msgstr "I-update ang kinakailangan ng checklist"
+
+#: core/Mcp/Requirements.php:35
+msgid ""
+"Patch one discovered task for one post type using its latest hash. Supports "
+"native rule, ranges, selectors, role exceptions and labels. Preserves other "
+"tasks and post types. Native validation runs without simulated admin forms; "
+"dry_run previews without saving."
+msgstr ""
+"Patch ang isang natuklasang gawain para sa isang uri ng post gamit ang "
+"pinakabagong hash nito. Sinusuportahan ang katutubong patakaran, saklaw, "
+"tagapili, mga pagbubukod sa papel at mga label. Pinapanatili ang iba pang "
+"mga gawain at uri ng post. Ang katutubong pagpapatunay ay tumatakbo nang "
+"walang simulated admin forms; ang dry_run ay nag-preview nang hindi "
+"nagse-save."
+
+#: core/Mcp/Requirements.php:44
+msgid "Update several checklist requirements"
+msgstr "I-update ang ilang mga kinakailangan ng checklist"
+
+#: core/Mcp/Requirements.php:45
+msgid ""
+"Validate every explicit task/post-type target before one native "
+"configuration write. Each target needs its current hash. Preserves omitted "
+"configuration and accepts dry_run. Does not change post content or mark "
+"tasks completed."
+msgstr ""
+"I-validate ang bawat tahasang gawain/tinatarget na uri ng post bago ang "
+"isang katutubong pagsasaayos ng pagsusulat. Kinakailangan ng bawat target "
+"ang kasalukuyang hash nito. Pinapanatili ang mga nakaligtaang pagsasaayos "
+"at tumatanggap ng dry_run. Hindi binabago ang nilalaman ng post o "
+"minarkahan ang mga gawain bilang kumpleto."
+
+#: core/Mcp/Requirements.php:55
+msgid "Create or update a custom checklist task"
+msgstr "Lumikha o mag-update ng isang custom na checklist task"
+
+#: core/Mcp/Requirements.php:56
+msgid ""
+"Create a custom checkbox or OpenAI instruction task for one supported post "
+"type, disabled by default, or patch a discovered existing task using its "
+"latest hash. New IDs are generated by the plugin. OpenAI tasks configure "
+"instructions only; this action does not call an AI service or certify its "
+"result."
+msgstr ""
+"Lumikha ng isang custom na checkbox o OpenAI instruction task para sa isang "
+"sinusuportahang uri ng post, na hindi pinagana sa default, o patch ang "
+"isang natuklasang umiiral na gawain gamit ang pinakabagong hash nito. Ang "
+"mga bagong ID ay nabuo ng plugin. Ang mga gawain ng OpenAI ay nag-configure "
+"ng mga tagubilin lamang; ang aksyon na ito ay hindi tumatawag sa isang "
+"serbisyo ng AI o nagpapatunay sa resulta nito."
+
+#: core/Mcp/Requirements.php:69
+msgid "Remove a custom checklist task"
+msgstr "Tanggalin ang isang custom na checklist task"
+
+#: core/Mcp/Requirements.php:70
+msgid ""
+"Remove a verified custom or OpenAI task from one post type using its latest "
+"hash. Other post types and historic post completion metadata are retained. "
+"Native built-in tasks are disabled through their rule rather than deleted. "
+"dry_run checks only."
+msgstr ""
+"Tanggalin ang isang na-verify na custom o OpenAI na gawain mula sa isang "
+"uri ng post gamit ang pinakabagong hash nito. Ang iba pang mga uri ng post "
+"at nakaraang metadata ng pagkumpleto ng post ay pinananatili. Ang mga "
+"katutubong built-in na gawain ay hindi pinagana sa pamamagitan ng kanilang "
+"patakaran sa halip na tanggalin. dry_run lamang ang nag-check."
+
+#: core/Mcp/Requirements.php:79
+msgid "Reorder checklist tasks"
+msgstr "I-reorder ang mga gawain ng checklist"
+
+#: core/Mcp/Requirements.php:80
+msgid ""
+"Move discovered requirements into the supplied native shared order. Rule "
+"ordering is shared by post types, so this can change their default task "
+"ordering too; Appearance Priority/Alphabetical modes still apply. Uses one "
+"requirement hash from the current configuration. dry_run previews without "
+"saving."
+msgstr ""
+"Ilipat ang mga natuklasang kinakailangan sa ibinigay na katutubong "
+"ibinahaging pagkaka-order. Ang pag-order ng patakaran ay ibinabahagi ng mga "
+"uri ng post, kaya maaari itong baguhin ang kanilang default na pag-order ng "
+"gawain; ang mga mode ng Appearance Priority/Alphabetical ay nananatili "
+"pang-ako. Gumagamit ng isang requirement hash mula sa kasalukuyang "
+"pagsasaayos. Ang dry_run ay nag-preview nang hindi nagse-save."
+
+#: core/Mcp/Requirements.php:90
+msgid "Reset renamed checklist labels"
+msgstr "I-reset ang mga pinangalanang label ng checklist"
+
+#: core/Mcp/Requirements.php:91
+msgid ""
+"Reset native WP Admin and Editing screen task labels to their defaults. "
+"This affects all tasks/post types, preserves task titles/rules and requires "
+"manage_options. Use checklist_hash from get-plugin-settings; dry_run checks "
+"only."
+msgstr ""
+"I-reset ang mga label ng gawain ng katutubong WP Admin at Editing screen sa "
+"kanilang mga default. Nakakaapekto ito sa lahat ng mga gawain/uri ng post, "
+"pinapanatili ang mga pamagat/patakaran ng gawain at nangangailangan ng "
+"manage_options. Gumamit ng checklist_hash mula sa get-plugin-settings; "
+"dry_run lamang ang nag-check."
+
+#: core/Mcp/Requirements.php:108
+msgid "This requirement needs its active Pro integration."
+msgstr "Kailangan ng kinakailangan na ito ang aktibong Pro integration nito."
+
+#: core/Mcp/Requirements.php:111
+#: core/Mcp/Requirements.php:295
+#: core/Mcp/Requirements.php:325
+msgid "Checklist configuration changed. Read it again."
+msgstr "Nabago ang configuration ng Checklist. Basahin muli ito."
+
+#: core/Mcp/Requirements.php:118
+#: core/Mcp/Requirements.php:252
+msgid "Enter a task title that remains non-empty after sanitization."
+msgstr ""
+"Mag-enter ng pamagat ng gawain na mananatiling hindi walang laman "
+"pagkatapos ng sanitization."
+
+#: core/Mcp/Requirements.php:123
+msgid "You cannot select users."
+msgstr "Hindi ka makakapili ng mga gumagamit."
+
+#: core/Mcp/Requirements.php:128
+msgid "Select an eligible user from current choices."
+msgstr ""
+"Pumili ng isang karapat-dapat na gumagamit mula sa kasalukuyang mga "
+"pagpipilian."
+
+#: core/Mcp/Requirements.php:136
+msgid "You cannot assign this taxonomy."
+msgstr "Hindi mo maitalaga ang taxonomy na ito."
+
+#: core/Mcp/Requirements.php:142
+msgid "Read current taxonomy choices before saving."
+msgstr "Basahin ang kasalukuyang mga pagpipilian sa taxonomy bago mag-save."
+
+#: core/Mcp/Requirements.php:157
+msgid "The minimum cannot exceed a positive maximum."
+msgstr "Ang minimum ay hindi maaaring lumagpas sa isang positibong maximum."
+
+#: core/Mcp/Requirements.php:160
+#: core/Mcp/Requirements.php:255
+msgid "Enable Who can ignore in Settings before changing role exceptions."
+msgstr ""
+"I-enable ang Sino ang maaaring mag-ignor sa Mga Setting bago baguhin ang "
+"mga pagbubukod ng papel."
+
+#: core/Mcp/Requirements.php:180
+msgid "Include each requirement/post-type target only once."
+msgstr "Isama ang bawat kinakailangan/post-type target nang isang beses lamang."
+
+#: core/Mcp/Requirements.php:233
+msgid "Choose a configured custom or OpenAI task."
+msgstr "Pumili ng isang nakatakdang pasadya o OpenAI na gawain."
+
+#: core/Mcp/Requirements.php:236
+msgid "Task kind cannot be changed. Use its discovered kind or create a new task."
+msgstr ""
+"Hindi maaaring baguhin ang uri ng gawain. Gamitin ang natuklasang uri nito "
+"o lumikha ng isang bagong gawain."
+
+#: core/Mcp/Requirements.php:292
+msgid "Only custom and OpenAI tasks can be removed."
+msgstr "Tanging mga pasadyang gawain at mga gawain ng OpenAI ang maaaring tanggalin."
+
+#: core/Mcp/Requirements.php:329
+msgid "Use discovered requirement identifiers."
+msgstr "Gamitin ang mga natuklasang identifier ng kinakailangan."
+
+#: core/Mcp/Requirements.php:350
+msgid "Settings changed. Read them again."
+msgstr "Nabago ang mga setting. Basahin muli ang mga ito."
+
+#: core/Mcp/Settings.php:47
+msgid "Enable User Roles Filter (Who can ignore)"
+msgstr "I-enable ang User Roles Filter (Sino ang maaaring mag-ignor)"
+
+#: core/Mcp/Settings.php:48
+msgid "Show warning icon"
+msgstr "Ipakita ang icon ng babala"
+
+#: core/Mcp/Settings.php:49
+msgid "Highlight failing blocks in the editor"
+msgstr "I-highlight ang mga nabigong bloke sa editor"
+
+#: core/Mcp/Settings.php:50
+msgid "Disable the Status option when using Quick Edit"
+msgstr "I-disable ang opsyon sa Status kapag gumagamit ng Quick Edit"
+
+#: core/Mcp/Settings.php:51
+msgid "Disable Quick Edit completely"
+msgstr "Ganap na i-disable ang Quick Edit"
+
+#: core/Mcp/Settings.php:52
+msgid "Disable Publish button"
+msgstr "I-disable ang Publish button"
+
+#: core/Mcp/Settings.php:53
+msgid "Rename task labels"
+msgstr "Palitan ang pangalan ng mga label ng gawain"
+
+#: core/Mcp/Settings.php:54
+msgid "Checklist task sort order"
+msgstr "Ayusin ang pagkakasunod-sunod ng gawain ng Checklist"
+
+#: core/Mcp/Settings.php:69
+msgid "Read Checklists settings"
+msgstr "Basahin ang mga setting ng Checklists"
+
+#: core/Mcp/Settings.php:70
+msgid ""
+"Read Post Types, General, Publishing Options and Appearance settings with "
+"exact native fields, choices and revisions. Actual Pro adds available "
+"non-secret settings. OpenAI/license credentials are excluded. Requires "
+"manage_options."
+msgstr ""
+"Basahin ang mga setting ng Post Types, General, Publishing Options at "
+"Appearance kasama ang eksaktong katutubong mga field, pagpipilian at "
+"rebisyon. Ang aktwal na Pro ay nagdadagdag ng mga hindi lihim na setting. "
+"Ang mga kredensyal ng OpenAI/license ay hindi kasama. Nangangailangan ng "
+"manage_options."
+
+#: core/Mcp/Settings.php:78
+msgid "Update Checklists settings"
+msgstr "I-update ang mga setting ng Checklists"
+
+#: core/Mcp/Settings.php:79
+msgid ""
+"Patch supplied discovered settings using the latest hash. Boolean inputs "
+"map to native yes/no or on/off storage; post_types is a list of enabled "
+"names. Preserves omitted settings and credentials. dry_run previews native "
+"validation without saving. Feature-specific settings retain dependency and "
+"edition gates."
+msgstr ""
+"Patch ang ibinigay na natuklasang mga setting gamit ang pinakabagong hash. "
+"Ang mga Boolean na input ay umaangkop sa katutubong oo/hindi o on/off na "
+"imbakan; ang post_types ay isang listahan ng mga pinahihintulutang "
+"pangalan. Pinapangalagaan ang mga nawalang setting at mga kredensyal. Ang "
+"dry_run ay nag-preview ng katutubong validation nang hindi nagse-save. Ang "
+"mga setting na tiyak sa tampok ay nagtataglay ng dependency at mga gate ng "
+"edisyon."
+
+#: core/Mcp/Settings.php:89
+msgid "Enable an optional Checklists feature"
+msgstr "I-enable ang isang opsyonal na tampok na Checklists"
+
+#: core/Mcp/Settings.php:90
+msgid ""
+"Enable or disable one discovered optional module. Core/autoloaded modules "
+"cannot be disabled. Requires manage_options and actual module availability. "
+"Uses the latest feature inventory hash. Changes take effect in a fresh "
+"request."
+msgstr ""
+"I-enable o i-disable ang isang natuklasang opsyonal na module. Ang mga "
+"Core/autoloaded na module ay hindi maaaring i-disable. Nangangailangan ng "
+"manage_options at aktwal na pagkakaroon ng module. Gumagamit ng "
+"pinakabagong hash ng imbentaryo ng tampok. Ang mga pagbabago ay magkakaroon "
+"ng bisa sa isang bagong request."
+
+#: core/Mcp/Settings.php:129
+msgid "Settings changed. Read them again before saving."
+msgstr "Nabago ang mga setting. Basahin muli ang mga ito bago mag-save."
+
+#: core/Mcp/Settings.php:139
+msgid "This setting requires its active integration."
+msgstr "Ang setting na ito ay nangangailangan ng aktibong integrasyon nito."
+
+#: core/Mcp/Settings.php:170
+msgid "Native validation did not accept this setting."
+msgstr "Hindi tinanggap ng katutubong validation ang setting na ito."
+
+#: core/Mcp/Settings.php:192
+msgid "Feature settings changed. Discover them again."
+msgstr "Nabago ang mga setting ng tampok. Tuklasin muli ang mga ito."
+
+#: core/Mcp/Settings.php:200
+msgid "This core module cannot be switched through MCP."
+msgstr "Ang core module na ito ay hindi maaaring palitan sa pamamagitan ng MCP."
+
+#: core/Mcp/Settings.php:210
+msgid "Choose an available feature from discovery."
+msgstr "Pumili ng isang magagamit na tampok mula sa pagtuklas."
+
+#: core/Mcp/Tasks.php:38
+msgid "Read a post checklist"
+msgstr "Basahin ang checklist ng post"
+
+#: core/Mcp/Tasks.php:39
+msgid ""
+"Read the native checklist for an editable saved post, respecting ignored "
+"roles and active Pro status/taxonomy exclusions. Results are native server "
+"snapshots, not a guarantee about unsaved editor content or JavaScript-only "
+"checks. OpenAI calls are not performed. Includes manual completion "
+"permissions and current revision."
+msgstr ""
+"Basahin ang katutubong checklist para sa isang na-edit na na-save na post, "
+"na iginagalang ang mga na-ignor na papel at aktibong Pro status/taxonomy "
+"exclusions. Ang mga resulta ay mga katutubong snapshot ng server, hindi "
+"isang garantiya tungkol sa hindi nasave na nilalaman ng editor o mga "
+"JavaScript-only na pagsusuri. Ang mga tawag ng OpenAI ay hindi isinasagawa. "
+"Kabilang ang mga pahintulot sa manu-manong pagkumpleto at kasalukuyang "
+"rebisyon."
+
+#: core/Mcp/Tasks.php:47
+msgid "Complete or reopen manual checklist tasks"
+msgstr "Kumpletuhin o buksan muli ang mga manu-manong gawain sa checklist"
+
+#: core/Mcp/Tasks.php:48
+msgid ""
+"Set explicit boolean states for configured, enabled custom checkboxes or "
+"approvals on one editable post using its latest revision. Checks each "
+"task's native role/user restrictions and post-meta permission before any "
+"write. Automatic and OpenAI results cannot be forged. dry_run validates "
+"without saving."
+msgstr ""
+"Itakda ang mga tahasang boolean na estado para sa mga nakatakdang, pinagana "
+"ng pasadyang checkboxes o mga pag-apruba sa isang na-edit na post gamit ang "
+"pinakabagong rebisyon nito. Sinusuri ang mga katutubong restriksyon sa "
+"papel/gumagamit ng bawat gawain at pahintulot sa post-meta bago ang anumang "
+"pagsusulat. Ang mga resulta ng awtomatiko at OpenAI ay hindi maaaring "
+"ma-forge. Ang dry_run ay nag-validate nang hindi nagse-save."
+
+#: core/Mcp/Tasks.php:87
+msgid "The post or checklist changed. Read it again."
+msgstr "Nabago ang post o checklist. Basahin muli ito."
+
+#: core/Mcp/Tasks.php:93
+msgid "You cannot mark this task for this post."
+msgstr "Hindi mo maaaring markahan ang gawain na ito para sa post na ito."
+
+#: core/Mcp/Tasks.php:131
+msgid "Task state could not be saved; original states were restored."
+msgstr "Hindi na-save ang estado ng gawain; naibalik ang mga orihinal na estado."
+
+#: core/Mcp/Tasks.php:132
+msgid ""
+"Task state save failed and recovery was incomplete. Read the checklist "
+"before retrying."
+msgstr ""
+"Nabigo ang pag-save ng estado ng gawain at hindi kumpleto ang pagbawi. "
+"Basahin ang checklist bago subukang muli."
+
+#: core/Plugin.php:84
+#: modules/settings/settings.php:137
 msgid "Settings"
 msgstr "Mga Setting"
 
-#: core/Plugin.php:87
-#: publishpress-checklists.php:183
+#: core/Plugin.php:92
+#: publishpress-checklists.php:193
 msgid "Upgrade to Pro"
 msgstr "Mag-upgrade sa Pro"
 
@@ -159,11 +669,11 @@ msgid "Approved by a user in this role"
 msgstr "Naaprubahan ng isang gumagamit sa papel na ito"
 
 #: core/Requirement/Approved_by.php:161
-#: core/Requirement/Base_requirement.php:239
-#: core/Requirement/Prohibited_categories.php:414
-#: core/Requirement/Prohibited_tags.php:383
-#: core/Requirement/Required_categories.php:422
-#: core/Requirement/Required_tags.php:383
+#: core/Requirement/Base_requirement.php:251
+#: core/Requirement/Prohibited_categories.php:417
+#: core/Requirement/Prohibited_tags.php:386
+#: core/Requirement/Required_categories.php:425
+#: core/Requirement/Required_tags.php:386
 #. translators: 1: custom editor label, 2: selected role names.
 #. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
 #. translators: 1: custom editor label, 2: prohibited category names.
@@ -174,43 +684,101 @@ msgstr "Naaprubahan ng isang gumagamit sa papel na ito"
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
-#: core/Requirement/Base_counter.php:385
-#: core/Requirement/Pro_Requirement.php:112, fuzzy
+#: core/Requirement/Base_counter.php:388
+#: core/Requirement/Pro_Requirement.php:114, fuzzy
 msgid "Min"
 msgstr "Min"
 
-#: core/Requirement/Base_counter.php:393
-#: core/Requirement/Pro_Requirement.php:113
+#: core/Requirement/Base_counter.php:396
+#: core/Requirement/Pro_Requirement.php:115
 msgid "Max"
 msgstr "Sagad"
 
-#: core/Requirement/Base_requirement.php:268
+#: core/Requirement/Base_dropdown.php:111
+#, php-format
+msgid "Set option for %s"
+msgstr "Itakda ang opsyon para sa %s"
+
+#: core/Requirement/Base_requirement.php:280
 #. translators: %d: exact required value.
 #, php-format
 msgid "exact %d"
 msgstr "eksaktong %d"
 
-#: core/Requirement/Base_requirement.php:276
+#: core/Requirement/Base_requirement.php:288
 #. translators: %d: minimum required value.
 #, php-format
 msgid "min %d"
 msgstr "minimum %d"
 
-#: core/Requirement/Base_requirement.php:284
+#: core/Requirement/Base_requirement.php:296
 #. translators: %d: maximum allowed value.
 #, php-format
 msgid "max %d"
 msgstr "maximum %d"
 
-#: core/Requirement/Base_requirement.php:291
+#: core/Requirement/Base_requirement.php:303
 #. translators: 1: minimum required value, 2: maximum allowed value.
 #, php-format
 msgid "min %1$d max %2$d"
 msgstr "minimum %1$d maximum %2$d"
 
-#: core/Requirement/Base_requirement.php:346
+#: core/Requirement/Base_requirement.php:364
+#, php-format
+msgid "More information about %s"
+msgstr "Karagdagang impormasyon tungkol sa %s"
+
+#: core/Requirement/Base_requirement.php:367
+#, php-format
+msgid "Edit label for %s"
+msgstr "I-edit ang label para sa %s"
+
+#: core/Requirement/Base_requirement.php:367
 msgid "Edit label"
 msgstr "I-edit ang label"
+
+#: core/Requirement/Base_requirement.php:405
+#, php-format
+msgid "Set requirement status for %s"
+msgstr "Itakda ang katayuan ng kinakailangan para sa %s"
+
+#: core/Requirement/Base_requirement.php:454
+msgid "Task status: Disabled, Recommended or Required"
+msgstr "Katayuan ng gawain: Hindi pinagana, Inirerekomenda o Kinakailangan"
+
+#: core/Requirement/Base_requirement.php:455, fuzzy
+msgid "WP Admin label"
+msgstr "WP Admin label"
+
+#: core/Requirement/Base_requirement.php:456
+msgid "Editing screen label"
+msgstr "I-edit ang label ng screen"
+
+#: core/Requirement/Base_requirement.php:458
+msgid "Who can ignore this task?"
+msgstr "Sino ang maaaring balewalain ang gawain na ito?"
+
+#: core/Requirement/Base_requirement.php:462, fuzzy
+msgid "Minimum"
+msgstr "Minimum"
+
+#: core/Requirement/Base_requirement.php:463
+msgid "Maximum; zero or empty has no upper limit"
+msgstr "Maximum; ang zero o walang laman ay walang itaas na limitasyon"
+
+#: core/Requirement/Base_requirement.php:484
+msgid "Time in 24-hour HH:MM format"
+msgstr "Oras sa 24-oras na HH:MM format"
+
+#: core/Requirement/Base_requirement.php:488
+msgid "Task title or instruction"
+msgstr "Pamagat ng gawain o tagubilin"
+
+#: core/Requirement/Base_time.php:147
+#: core/Requirement/Pro_Requirement.php:102
+#, php-format
+msgid "Set time for %s"
+msgstr "Itakda ang oras para sa %s"
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
@@ -251,27 +819,38 @@ msgstr "%s mga kategorya"
 msgid "Between %s and %s categories"
 msgstr "Sa pagitan ng %s at %s na mga kategorya"
 
-#: core/Requirement/Custom_item.php:60
 #: core/Requirement/Custom_item.php:61
-#: core/Utils/FieldsTabs.php:73
+#: core/Requirement/Custom_item.php:62
+#: core/Utils/FieldsTabs.php:75
 msgid "Custom"
 msgstr "Pasadya"
 
-#: core/Requirement/Custom_item.php:62
-#: modules/checklists/checklists.php:768
+#: core/Requirement/Custom_item.php:63
+#: modules/checklists/checklists.php:839
 msgid "Which roles can mark this task as complete?"
 msgstr "Aling mga papel ang makakapagmarka sa gawaing ito bilang kumpleto?"
 
 #: core/Requirement/Custom_item.php:81
-#: modules/checklists/checklists.php:775
+#: modules/checklists/checklists.php:847
+msgid "Custom task title"
+msgstr "Pasadyang pamagat ng gawain"
+
+#: core/Requirement/Custom_item.php:85
+#: modules/checklists/checklists.php:856
 msgid "Enter name of custom task"
 msgstr "Ilagay ang pangalan ng pasadyang gawain"
 
-#: core/Requirement/Custom_item.php:129
-#: core/Requirement/Openai_item.php:147
-#: modules/checklists/checklists.php:774
+#: core/Requirement/Custom_item.php:132
+#: core/Requirement/Openai_item.php:151
+#: modules/checklists/checklists.php:845
 msgid "Remove"
 msgstr "Alisin"
+
+#: core/Requirement/Custom_item.php:133
+#: core/Requirement/Openai_item.php:152
+#: modules/checklists/checklists.php:846
+msgid "Remove custom task"
+msgstr "Alisin ang pasadyang gawain"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
@@ -457,25 +1036,30 @@ msgid "Openai"
 msgstr "Openai"
 
 #: core/Requirement/Openai_item.php:100
-#: modules/checklists/checklists.php:776
+#: modules/checklists/checklists.php:848, fuzzy
+msgid "OpenAI task prompt"
+msgstr "OpenAI task prompt"
+
+#: core/Requirement/Openai_item.php:104
+#: modules/checklists/checklists.php:857
 msgid "Enter OpenAI task prompt"
 msgstr "Ilagay ang OpenAI task prompt"
 
-#: core/Requirement/Openai_item.php:286
+#: core/Requirement/Openai_item.php:291
 msgid "An error occured."
 msgstr "Nagkaroon ng error."
 
-#: core/Requirement/Openai_item.php:293
+#: core/Requirement/Openai_item.php:298
 msgid "Validation error. Kindly reload this page and try again."
 msgstr ""
 "May error sa pagpapatunay. Mangyaring i-reload ang pahinang ito at subukang "
 "muli."
 
-#: core/Requirement/Openai_item.php:298
+#: core/Requirement/Openai_item.php:303
 msgid "Post content is empty."
 msgstr "Walang laman ang nilalaman ng post."
 
-#: core/Requirement/Openai_item.php:307
+#: core/Requirement/Openai_item.php:312
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
@@ -483,16 +1067,16 @@ msgstr ""
 "Ang mga gawain ng OpenAI ay nangangailangan ng API Key. Mangyaring idagdag "
 "ang iyong API Key sa lugar ng Mga Setting."
 
-#: core/Requirement/Openai_item.php:362
+#: core/Requirement/Openai_item.php:367
 #, php-format
 msgid "API Error: %1s."
 msgstr "API Error: %1$s."
 
-#: core/Requirement/Openai_item.php:380
+#: core/Requirement/Openai_item.php:385
 msgid "See the full response."
 msgstr "Tingnan ang buong tugon."
 
-#: core/Requirement/Openai_item.php:401
+#: core/Requirement/Openai_item.php:406
 msgid "Invalid response"
 msgstr "Hindi wastong tugon"
 
@@ -513,6 +1097,11 @@ msgstr "Mga ipinagbabawal na tag: %s"
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
 msgstr "Mga ipinagbabawal na tag"
+
+#: core/Requirement/Pro_Requirement.php:126
+#, php-format
+msgid "Select options for %s"
+msgstr "Pumili ng mga opsyon para sa %s"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
@@ -682,472 +1271,567 @@ msgstr "%d mga salita sa nilalaman"
 msgid "Between %d and %d words in content"
 msgstr "Sa pagitan ng %d at %d na mga salita sa nilalaman"
 
-#: core/Utils/FieldsTabs.php:21
+#: core/Utils/FieldsTabs.php:23
 msgid "Title"
 msgstr "Pamagat"
 
-#: core/Utils/FieldsTabs.php:25
+#: core/Utils/FieldsTabs.php:27
 msgid "Content"
 msgstr "Nilalaman"
 
-#: core/Utils/FieldsTabs.php:29
+#: core/Utils/FieldsTabs.php:31
 msgid "Publish Date / Time"
 msgstr "Petsa / Oras ng Pag-publish"
 
-#: core/Utils/FieldsTabs.php:33
+#: core/Utils/FieldsTabs.php:35
 msgid "Approval"
 msgstr "Pag-apruba"
 
-#: core/Utils/FieldsTabs.php:37
+#: core/Utils/FieldsTabs.php:39
 msgid "Images"
 msgstr "Mga Larawan"
 
-#: core/Utils/FieldsTabs.php:41, fuzzy
+#: core/Utils/FieldsTabs.php:43, fuzzy
 msgid "Audio / Video"
 msgstr "Audio / Video"
 
-#: core/Utils/FieldsTabs.php:45
+#: core/Utils/FieldsTabs.php:47
 msgid "Featured Image"
 msgstr "Itinatampok na Imahe"
 
-#: core/Utils/FieldsTabs.php:49
+#: core/Utils/FieldsTabs.php:51
 msgid "Links"
 msgstr "Mga Link"
 
-#: core/Utils/FieldsTabs.php:53, fuzzy
+#: core/Utils/FieldsTabs.php:55, fuzzy
 msgid "Permalink"
 msgstr "Permalink"
 
-#: core/Utils/FieldsTabs.php:57
+#: core/Utils/FieldsTabs.php:59
 msgid "Categories"
 msgstr "Mga Kategorya"
 
-#: core/Utils/FieldsTabs.php:61
+#: core/Utils/FieldsTabs.php:63
 msgid "Tags"
 msgstr "Mga Tag"
 
-#: core/Utils/FieldsTabs.php:65
+#: core/Utils/FieldsTabs.php:67
 msgid "Taxonomies"
 msgstr "Mga Taxonomies"
 
-#: core/Utils/FieldsTabs.php:69, fuzzy
+#: core/Utils/FieldsTabs.php:71, fuzzy
 msgid "Accessibility"
 msgstr "Accessibility"
 
-#: core/Utils/FieldsTabs.php:97
+#: core/Utils/FieldsTabs.php:99
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: core/Utils/FieldsTabs.php:104, fuzzy
+#: core/Utils/FieldsTabs.php:106, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
-#: core/Utils/FieldsTabs.php:111, fuzzy
+#: core/Utils/FieldsTabs.php:113, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
-#: core/Utils/FieldsTabs.php:118
-#: modules/yoastseo/yoastseo.php:68, fuzzy
+#: core/Utils/FieldsTabs.php:120
+#: modules/yoastseo/yoastseo.php:71, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
-#: core/Utils/FieldsTabs.php:126, fuzzy
+#: core/Utils/FieldsTabs.php:128, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
-#: modules/checklists/checklists.php:724
+#: core/Utils/HelpTip.php:63
+msgid "More information"
+msgstr "Karagdagang impormasyon"
+
+#: modules/checklists/checklists.php:795
 msgid "options cannot be empty."
 msgstr "hindi maaaring walang laman ang mga opsyon."
 
-#: modules/checklists/checklists.php:728
+#: modules/checklists/checklists.php:799
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr ""
 "Mangyaring siguraduhing magdagdag ng pangalan para sa lahat ng mga "
 "pasadyang gawain."
 
-#: modules/checklists/checklists.php:732
+#: modules/checklists/checklists.php:803
 msgid "Rename task label"
 msgstr "Palitan ang label ng gawain"
 
-#: modules/checklists/checklists.php:736
+#: modules/checklists/checklists.php:807
 msgid "Label for the Checklists screen"
 msgstr "Label para sa screen ng Checklists"
 
-#: modules/checklists/checklists.php:740
+#: modules/checklists/checklists.php:811
 msgid "Leave empty to use the default WP Admin label"
 msgstr "Iwanang blangko upang gamitin ang default na label ng WP Admin"
 
-#: modules/checklists/checklists.php:744
+#: modules/checklists/checklists.php:815
 msgid "Label for the post editing screen"
 msgstr "Label para sa screen ng pag-edit ng post"
 
-#: modules/checklists/checklists.php:748
+#: modules/checklists/checklists.php:819
 msgid "Leave empty to use the default editing screen label"
 msgstr "Iwanang blangko upang gamitin ang default na label ng screen ng pag-edit"
 
-#: modules/checklists/checklists.php:752
+#: modules/checklists/checklists.php:823
 msgid "Preview in editing screen:"
 msgstr "Preview sa screen ng pag-edit:"
 
-#: modules/checklists/checklists.php:756
+#: modules/checklists/checklists.php:827
 msgid "Default checklist label will be used."
 msgstr "Gagamitin ang default na label ng checklist."
 
-#: modules/checklists/checklists.php:760
+#: modules/checklists/checklists.php:831
 msgid "Save"
 msgstr "I-save"
 
-#: modules/checklists/checklists.php:764
+#: modules/checklists/checklists.php:835
 msgid "Cancel"
 msgstr "Kanselahin"
 
-#: modules/checklists/checklists.php:772
+#: modules/checklists/checklists.php:843
 msgid "No results found"
 msgstr "Walang natagpuang resulta"
 
-#: modules/checklists/checklists.php:773
+#: modules/checklists/checklists.php:844
 msgid "Searching…"
 msgstr "Naghahanap…"
 
-#: modules/checklists/checklists.php:777
+#: modules/checklists/checklists.php:849
+msgid "Set requirement status"
+msgstr "Itakda ang katayuan ng kinakailangan"
+
+#: modules/checklists/checklists.php:850
+msgid "Roles that can ignore this task"
+msgstr "Mga papel na maaaring balewalain ang gawain na ito"
+
+#: modules/checklists/checklists.php:851
+msgid "Roles that can mark this task as complete"
+msgstr "Mga papel na maaaring markahan ang gawain na ito bilang kumpleto"
+
+#: modules/checklists/checklists.php:852
+msgid "Custom task added."
+msgstr "Nagdagdag ng pasadyang gawain."
+
+#: modules/checklists/checklists.php:853
+msgid "Custom task removed."
+msgstr "Nalis ang pasadyang gawain."
+
+#: modules/checklists/checklists.php:854
+msgid "OpenAI prompt task added."
+msgstr "Nagdagdag ng OpenAI prompt task."
+
+#: modules/checklists/checklists.php:855
+msgid "OpenAI prompt task removed."
+msgstr "Nalis ang OpenAI prompt task."
+
+#: modules/checklists/checklists.php:858
 msgid "Suggested Prompts"
 msgstr "Inirerekomendang Mga Prompt"
 
-#: modules/checklists/checklists.php:778
+#: modules/checklists/checklists.php:859
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr ""
 "Ano ang inaasahang tugon ng OpenAI upang markahan ang kinakailangan bilang "
 "pumasa?"
 
-#: modules/checklists/checklists.php:781
+#: modules/checklists/checklists.php:862
 msgid "Clear Content"
 msgstr "Linisin ang Nilalaman"
 
-#: modules/checklists/checklists.php:782
+#: modules/checklists/checklists.php:863
 msgid "Is this content clear and easy to read?"
 msgstr "Malinaw at madaling basahin ba ang nilalaman na ito?"
 
-#: modules/checklists/checklists.php:785
+#: modules/checklists/checklists.php:866
 msgid "Friendly Tone Content"
 msgstr "Nilalaman na may Magandang Tono"
 
-#: modules/checklists/checklists.php:786
+#: modules/checklists/checklists.php:867
 msgid "Is this content tone friendly?"
 msgstr "Palakaibigan ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:789
+#: modules/checklists/checklists.php:870
 msgid "Professional Tone Content"
 msgstr "Nilalaman ng Propesyonal na Tono"
 
-#: modules/checklists/checklists.php:790
+#: modules/checklists/checklists.php:871
 msgid "Is this content tone professional?"
 msgstr "Propesyonal ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:793
+#: modules/checklists/checklists.php:874
 msgid "Persuasive Tone Content"
 msgstr "Nilalaman ng Nakakapaniwala na Tono"
 
-#: modules/checklists/checklists.php:794
+#: modules/checklists/checklists.php:875
 msgid "Is this content tone persuasive?"
 msgstr "Nakakapukaw ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:797
+#: modules/checklists/checklists.php:878
 msgid "Empathetic Tone Content"
 msgstr "Nilalaman na may Empatetikong Tono"
 
-#: modules/checklists/checklists.php:798
+#: modules/checklists/checklists.php:879
 msgid "Is this content tone empathetic?"
 msgstr "Empatik ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:801
+#: modules/checklists/checklists.php:882
 msgid "Adventurous Tone Content"
 msgstr "Mapangahas na Nilalaman"
 
-#: modules/checklists/checklists.php:802
+#: modules/checklists/checklists.php:883
 msgid "Is this content tone adventurous?"
 msgstr "Mapang-akit ba ang tono ng nilalaman na ito?"
 
-#: modules/checklists/checklists.php:805
+#: modules/checklists/checklists.php:886
 msgid "Promotional Tone Content"
 msgstr "Nilalaman na may tono ng promosyon"
 
-#: modules/checklists/checklists.php:806
+#: modules/checklists/checklists.php:887
 msgid "Is this content tone promotional?"
 msgstr "Pampromosyong tono ba ang nilalaman na ito?"
 
-#: modules/checklists/checklists.php:872
-#: modules/checklists/checklists.php:960, fuzzy
+#: modules/checklists/checklists.php:961
+#: modules/checklists/checklists.php:1168
+#: modules/checklists/checklists.php:1742
+#: modules/checklists/assets/js/gutenberg-panel.jsx:597, fuzzy
 msgid "Checklist"
 msgstr "Checklist"
 
-#: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1303
+#: modules/checklists/checklists.php:1164
+#: modules/checklists/checklists.php:1743
 msgid "You don't have to complete any Checklist tasks."
 msgstr "Hindi mo kailangang kumpletuhin ang anumang Checklist tasks."
 
-#: modules/checklists/checklists.php:961
+#: modules/checklists/checklists.php:1169
 msgid "Are you sure you want to publish anyway?"
 msgstr "Sigurado ka bang nais mong ipublish pa rin?"
 
-#: modules/checklists/checklists.php:965
+#: modules/checklists/checklists.php:1173
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "Sigurado ka bang nais mong i-update ang nai-publish na post kahit na?"
 
-#: modules/checklists/checklists.php:969
+#: modules/checklists/checklists.php:1177
 msgid "Please complete the following tasks before publishing:"
 msgstr "Mangyaring kumpletuhin ang mga sumusunod na gawain bago ilathala:"
 
-#: modules/checklists/checklists.php:973
+#: modules/checklists/checklists.php:1181
 msgid "Please complete the following tasks before updating the published post:"
 msgstr ""
 "Mangyaring kumpletuhin ang mga sumusunod na gawain bago i-update ang "
 "nailathalang post:"
 
-#: modules/checklists/checklists.php:977
-#: modules/checklists/checklists.php:981
+#: modules/checklists/checklists.php:1185
+#: modules/checklists/checklists.php:1189
 msgid "Not required, but important: "
 msgstr "Hindi kinakailangan, ngunit mahalaga: "
 
-#: modules/checklists/checklists.php:987
+#: modules/checklists/checklists.php:1193
+msgid "These recommendations are missing:"
+msgstr "Ang mga rekomendasyon na ito ay nawawala:"
+
+#: modules/checklists/checklists.php:1199
 msgid "One or more items in the checklist are not completed"
 msgstr "Isang o higit pang mga item sa checklist ang hindi natapos"
 
-#: modules/checklists/checklists.php:1024
+#: modules/checklists/checklists.php:1209
+msgid "completed"
+msgstr "natapos"
+
+#: modules/checklists/checklists.php:1210
+msgid "not completed"
+msgstr "hindi natapos"
+
+#: modules/checklists/checklists.php:1211
+#: modules/checklists/checklists.php:1265
+#: modules/checklists/checklists.php:1747
+msgid "Completed"
+msgstr "Natapos"
+
+#: modules/checklists/checklists.php:1212
+#: modules/checklists/checklists.php:1266
+#: modules/checklists/checklists.php:1748
+msgid "Not completed"
+msgstr "Hindi natapos"
+
+#: modules/checklists/checklists.php:1213
+msgid "Dismiss this notice."
+msgstr "I-dismiss ang abisong ito."
+
+#: modules/checklists/checklists.php:1215
+#. translators: Live count badge next to a counter task with a maximum. %1$s is the current count, %2$s is the maximum.
+#, fuzzy, php-format
+msgid "%1$s / %2$s"
+msgstr "%1$s / %2$s"
+
+#: modules/checklists/checklists.php:1217
+#. translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum.
+#, fuzzy, php-format
+msgid "%1$s, min %2$s"
+msgstr "%1$s, min %2$s"
+
+#: modules/checklists/checklists.php:1218
+msgid "The checklist task could not be saved. Please try again."
+msgstr "Hindi na-save ang checklist task. Pakisubukan muli."
+
+#: modules/checklists/checklists.php:1255
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "Hindi mo kailangang kumpletuhin ang anumang %sChecklist tasks%s."
 
-#: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:500
+#: modules/checklists/checklists.php:1261
+#: modules/checklists/assets/js/gutenberg-panel.jsx:545
 msgid "Check Now"
 msgstr "Suriin Ngayon"
 
-#: modules/checklists/checklists.php:1031
+#: modules/checklists/checklists.php:1262
 msgid "Ok"
 msgstr "Ayos"
 
-#: modules/checklists/checklists.php:1032
+#: modules/checklists/checklists.php:1263
 msgid "No"
 msgstr "Hindi"
 
-#: modules/checklists/checklists.php:1033
+#: modules/checklists/checklists.php:1264
 msgid "Yes"
 msgstr "Oo"
 
-#: modules/checklists/checklists.php:1197
+#: modules/checklists/checklists.php:1267
+msgid "Checklist requirements"
+msgstr "Mga kinakailangan sa checklist"
+
+#: modules/checklists/checklists.php:1636
 msgid "Task"
 msgstr "Gawain"
 
-#: modules/checklists/checklists.php:1198
+#: modules/checklists/checklists.php:1637
 msgid "Disabled, Recommended or Required"
 msgstr "Hindi pinagana, InirRecommended o Kinakailangan"
 
-#: modules/checklists/checklists.php:1199
+#: modules/checklists/checklists.php:1638
 msgid "Options"
 msgstr "Mga Pagpipilian"
 
-#: modules/checklists/checklists.php:1200
+#: modules/checklists/checklists.php:1639
 msgid "Add custom task"
 msgstr "Magdagdag ng pasadyang gawain"
 
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1740
 msgid "Please complete the required(*) checklists task."
 msgstr "Mangyaring kumpletuhin ang kinakailangang(*) mga checklist na gawain."
 
-#: modules/checklists/checklists.php:1304
+#: modules/checklists/checklists.php:1744
 msgid "required"
 msgstr "kinakailangan"
 
-#: modules/checklists/checklists.php:1309
-#: modules/checklists/templates/meta-box.php:16
+#: modules/checklists/checklists.php:1751
+#: modules/checklists/templates/meta-box.php:19
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Hindi available ang mga checklist na gawain sa Elementor editors"
 
-#: modules/checklists/pro-requirements.php:22, fuzzy
+#: modules/checklists/pro-requirements.php:24, fuzzy
 msgid "All in One SEO Headline Score"
 msgstr "All in One SEO Headline Score"
 
-#: modules/checklists/pro-requirements.php:31, fuzzy
+#: modules/checklists/pro-requirements.php:33, fuzzy
 msgid "All in One SEO Score"
 msgstr "All in One SEO Score"
 
-#: modules/checklists/pro-requirements.php:40
+#: modules/checklists/pro-requirements.php:42
 msgid "Featured image height"
 msgstr "Taas ng tampok na imahe"
 
-#: modules/checklists/pro-requirements.php:49
+#: modules/checklists/pro-requirements.php:51
 msgid "Featured image width"
 msgstr "Lapad ng tampok na imahe"
 
-#: modules/checklists/pro-requirements.php:58
+#: modules/checklists/pro-requirements.php:60
 msgid "H1, H2, H3 etc tags are used in logical order"
 msgstr "Ginagamit ang mga tag na H1, H2, H3 atbp sa lohikal na pagkakasunod-sunod"
 
-#: modules/checklists/pro-requirements.php:67
+#: modules/checklists/pro-requirements.php:69
 msgid "Number of images in content"
 msgstr "Bilang ng mga imahe sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:76
+#: modules/checklists/pro-requirements.php:78
 msgid "Number of characters in image captions"
 msgstr "Bilang ng mga karakter sa mga caption ng imahe"
 
-#: modules/checklists/pro-requirements.php:85
+#: modules/checklists/pro-requirements.php:87
 msgid "Number of audio items in content"
 msgstr "Bilang ng mga audio item sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:94
+#: modules/checklists/pro-requirements.php:96
 msgid "Number of video items in content"
 msgstr "Bilang ng mga video item sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:103
+#: modules/checklists/pro-requirements.php:105
 msgid "Approved by role"
 msgstr "Naaprubahan ng role"
 
-#: modules/checklists/pro-requirements.php:110
+#: modules/checklists/pro-requirements.php:112
 msgid "Approved by specific user"
 msgstr "Naaprubahan ng tiyak na gumagamit"
 
-#: modules/checklists/pro-requirements.php:117
+#: modules/checklists/pro-requirements.php:119
 msgid "Avoid heading tags in content"
 msgstr "Iwasan ang mga heading tag sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:124
+#: modules/checklists/pro-requirements.php:126
 msgid "Prohibited words"
 msgstr "Bawal na mga salita"
 
-#: modules/checklists/pro-requirements.php:131
+#: modules/checklists/pro-requirements.php:133
+msgid "Required words"
+msgstr "Mga kinakailangang salita"
+
+#: modules/checklists/pro-requirements.php:140
 msgid "Publish time should be at a specific time"
 msgstr "Dapat sa isang tiyak na oras ang oras ng pag-publish"
 
-#: modules/checklists/pro-requirements.php:139
+#: modules/checklists/pro-requirements.php:148
 msgid "Publish time should be in the future"
 msgstr "Dapat nasa hinaharap ang oras ng publikasyon"
 
-#: modules/checklists/pro-requirements.php:147, fuzzy
+#: modules/checklists/pro-requirements.php:156, fuzzy
 msgid "Rank Math SEO Score"
 msgstr "Rank Math SEO Score"
 
-#: modules/checklists/pro-requirements.php:156
+#: modules/checklists/pro-requirements.php:165
 msgid "Only one H1 tag in content"
 msgstr "Isang H1 tag lamang sa nilalaman"
 
-#: modules/checklists/pro-requirements.php:163
+#: modules/checklists/pro-requirements.php:172
 msgid "Tables have a header row"
 msgstr "May header row ang mga talahanayan"
 
-#: modules/checklists/pro-requirements.php:170
+#: modules/checklists/pro-requirements.php:179
 msgid "Check the \"Allow backorders?\" box"
 msgstr "Suriin ang kahon na \"Payagan ang backorders?\""
 
-#: modules/checklists/pro-requirements.php:178
+#: modules/checklists/pro-requirements.php:187
 msgid "Select some products for \"Cross-sells\""
 msgstr "Pumili ng ilang produkto para sa \"Cross-sells\""
 
-#: modules/checklists/pro-requirements.php:186
+#: modules/checklists/pro-requirements.php:195
 msgid "Discount for the \"Sale price\""
 msgstr "Diskwento para sa \"Sale price\""
 
-#: modules/checklists/pro-requirements.php:194
+#: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Downloadable\" box"
 msgstr "I-check ang kahon na \"Downloadable\""
 
-#: modules/checklists/pro-requirements.php:202
+#: modules/checklists/pro-requirements.php:211
 msgid "Product image"
 msgstr "Larawan ng produkto"
 
-#: modules/checklists/pro-requirements.php:210
+#: modules/checklists/pro-requirements.php:219
 msgid "Check the \"Manage stock?\" box"
 msgstr "I-check ang kahon na \"Manage stock?\""
 
-#: modules/checklists/pro-requirements.php:218
+#: modules/checklists/pro-requirements.php:227
 msgid "Enter a \"Regular price\""
 msgstr "Ilagay ang \"Regular price\""
 
-#: modules/checklists/pro-requirements.php:226
+#: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"Sale price\""
 msgstr "Ilagay ang \"Sale price\""
 
-#: modules/checklists/pro-requirements.php:234
+#: modules/checklists/pro-requirements.php:243
 msgid "Schedule the \"Sale price\""
 msgstr "Iskedyul ang \"Sale price\""
 
-#: modules/checklists/pro-requirements.php:242
+#: modules/checklists/pro-requirements.php:251
 msgid "Enter a \"SKU\""
 msgstr "Ilagay ang \"SKU\""
 
-#: modules/checklists/pro-requirements.php:250
+#: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Sold individually\" box"
 msgstr "I-check ang kahon na \"Sold individually\""
 
-#: modules/checklists/pro-requirements.php:258
+#: modules/checklists/pro-requirements.php:267
 msgid "Select some products for \"Upsells\""
 msgstr "Pumili ng ilang produkto para sa \"Upsells\""
 
-#: modules/checklists/pro-requirements.php:266
+#: modules/checklists/pro-requirements.php:275
 msgid "Check the \"Virtual\" box"
 msgstr "I-check ang kahon na \"Virtual\""
 
-#: modules/checklists/pro-requirements.php:297
+#: modules/checklists/pro-requirements.php:306
 #, php-format
 msgid "Number of Characters in %s field"
 msgstr "Bilang ng mga karakter sa %s na field"
 
-#: modules/checklists/pro-requirements.php:310
+#: modules/checklists/pro-requirements.php:319
 #, php-format
 msgid "%s is filled"
 msgstr "%s ay puno"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About PublishPress Checklists"
 msgstr "Tungkol sa PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About"
 msgstr "Tungkol"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "PublishPress Checklists Documentation"
 msgstr "Dokumentasyon ng PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "Documentation"
 msgstr "Dokumentasyon"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact the PublishPress team"
 msgstr "Kontakin ang pangkat ng PublishPress"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact"
 msgstr "Makipag-ugnayan"
 
-#: modules/checklists/templates/global-checklists.php:6
+#: modules/checklists/templates/global-checklists.php:7
 msgid "Settings saved successfully!"
 msgstr "Matagumpay na nai-save ang mga setting!"
 
-#: modules/checklists/templates/global-checklists.php:12
-#: modules/checklists/templates/global-checklists.php:217
+#: modules/checklists/templates/global-checklists.php:13
+#: modules/checklists/templates/global-checklists.php:268
 msgid "Save Changes"
 msgstr "I-save ang Mga Pagbabago"
 
-#: modules/checklists/templates/global-checklists.php:152
+#: modules/checklists/templates/global-checklists.php:16
+msgid "Post types"
+msgstr "Mga uri ng post"
+
+#: modules/checklists/templates/global-checklists.php:74
+#, php-format
+msgid "Checklist sections for %s"
+msgstr "Mga seksyon ng checklist para sa %s"
+
+#: modules/checklists/templates/global-checklists.php:203
 msgid "Pro feature"
 msgstr "Pro na tampok"
 
-#: modules/checklists/templates/global-checklists.php:165
+#: modules/checklists/templates/global-checklists.php:216
 #, php-format
 msgid "No %s requirements for this post type."
 msgstr "Walang %s na kinakailangan para sa uri ng post na ito."
 
-#: modules/checklists/templates/global-checklists.php:183
+#: modules/checklists/templates/global-checklists.php:234
 msgid "New Item"
 msgstr "Bagong Item"
 
-#: modules/checklists/templates/global-checklists.php:184
+#: modules/checklists/templates/global-checklists.php:235
 msgid "Description"
 msgstr "Paglalarawan"
 
-#: modules/checklists/templates/global-checklists.php:196
+#: modules/checklists/templates/global-checklists.php:247
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
@@ -1155,48 +1839,53 @@ msgstr ""
 "Ang mga pasadyang gawain ay hindi awtomatikong natatapos. Dapat markahan ng "
 "mga gumagamit ang kahon upang ipakita na natapos na nila ang gawain."
 
-#: modules/checklists/templates/global-checklists.php:203
+#: modules/checklists/templates/global-checklists.php:254
 msgid "Add OpenAI Prompt task"
 msgstr "Magdagdag ng OpenAI Prompt na gawain"
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "The prompt should be in form of a question."
 msgstr "Dapat nasa anyo ng tanong ang prompt."
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "This feature requires an OpenAI API Key."
 msgstr "Kailangan ng feature na ito ng OpenAI API Key."
 
-#: modules/permalinks/lib/Requirement/ValidChars.php:44
+#: modules/permalinks/lib/Requirement/ValidChars.php:46
 msgid "Latin characters in permalink"
 msgstr "Mga Latin na karakter sa permalink"
 
-#: modules/permalinks/permalinks.php:65
+#: modules/permalinks/permalinks.php:67
 msgid "Permalinks"
 msgstr "Mga Permalink"
 
-#: modules/permalinks/permalinks.php:66
+#: modules/permalinks/permalinks.php:68
 msgid "Define tasks related to permalinks"
 msgstr "Tukuyin ang mga gawain na may kaugnayan sa mga permalink"
 
-#: modules/permissions/permissions.php:68
+#: modules/permissions/permissions.php:70
 msgid "Permissions"
 msgstr "Mga Pahintulot"
 
-#: modules/permissions/permissions.php:107
+#: modules/permissions/permissions.php:109
 msgid "Exclude User Roles"
 msgstr "I-exclude ang User Roles"
 
-#: modules/reviews/reviews.php:61
+#: modules/permissions/permissions.php:127
+#, php-format
+msgid "Roles that can ignore %s"
+msgstr "Mga tungkulin na maaaring balewalain ang %s"
+
+#: modules/reviews/reviews.php:63
 msgid "Reviews"
 msgstr "Mga pagsusuri"
 
-#: modules/settings/settings.php:62
-#: modules/settings/settings.php:132
+#: modules/settings/settings.php:64
+#: modules/settings/settings.php:135
 msgid "Checklists Settings"
 msgstr "Mga Setting ng Checklist"
 
-#: modules/settings/settings.php:162
+#: modules/settings/settings.php:166
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
@@ -1204,32 +1893,36 @@ msgstr ""
 "Sigurado ka bang nais mong i-reset ang lahat ng mga na-renamed na checklist "
 "item sa kanilang default na label? Hindi maibabalik ang aksyong ito."
 
-#: modules/settings/settings.php:163
+#: modules/settings/settings.php:167
 msgid "Resetting..."
 msgstr "Nire-reset..."
 
-#: modules/settings/settings.php:164
-#: modules/settings/settings.php:1602
+#: modules/settings/settings.php:168
+#: modules/settings/settings.php:1617
 msgid "Reset All Renamed Labels"
 msgstr "I-reset ang Lahat ng Pinalitang Labels"
 
-#: modules/settings/settings.php:327
+#: modules/settings/settings.php:284
+msgid "Settings sections"
+msgstr "Mga seksyon ng mga setting"
+
+#: modules/settings/settings.php:338
 msgid "Features"
 msgstr "Mga Tampok"
 
-#: modules/settings/settings.php:328
+#: modules/settings/settings.php:339
 msgid "Feel free to select only the features you need."
 msgstr "Huwag mag-atubiling pumili lamang ng mga tampok na kailangan mo."
 
-#: modules/settings/settings.php:336
+#: modules/settings/settings.php:347
 msgid "Enabled features"
 msgstr "Mga pinagana na tampok"
 
-#: modules/settings/settings.php:391
+#: modules/settings/settings.php:402
 msgid "There are no PublishPress modules registered"
 msgstr "Walang nakarehistrong mga module ng PublishPress"
 
-#: modules/settings/settings.php:487
+#: modules/settings/settings.php:500
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
@@ -1238,99 +1931,99 @@ msgstr ""
 "Hindi pinagana dahil ang add_post_type_support('%1$s', '%2$s') ay kasama sa "
 "isang na-load na file."
 
-#: modules/settings/settings.php:812
+#: modules/settings/settings.php:827
 msgid "Enable User Roles Filter:"
 msgstr "I-enable ang Filter ng User Roles:"
 
-#: modules/settings/settings.php:820
+#: modules/settings/settings.php:835
 msgid "Show warning icon:"
 msgstr "Ipakita ang icon ng babala:"
 
-#: modules/settings/settings.php:828
+#: modules/settings/settings.php:843
 msgid "Highlight failing blocks in the editor:"
 msgstr "I-highlight ang mga bumagsak na bloke sa editor:"
 
-#: modules/settings/settings.php:836
+#: modules/settings/settings.php:851
 msgid "Delete data on uninstall:"
 msgstr "Burahin ang data sa pag-uninstall:"
 
-#: modules/settings/settings.php:845
+#: modules/settings/settings.php:860
 msgid "Enable Status Filter:"
 msgstr "Paganahin ang Status Filter:"
 
-#: modules/settings/settings.php:855
+#: modules/settings/settings.php:870
 msgid "Enable Duplicate Checklists:"
 msgstr "Paganahin ang Duplicate Checklists:"
 
-#: modules/settings/settings.php:865
+#: modules/settings/settings.php:880
 msgid "Show Checklists column in post lists:"
 msgstr "Ipakita ang kolum ng Checklist sa mga listahan ng post:"
 
-#: modules/settings/settings.php:875
+#: modules/settings/settings.php:890
 msgid "Enable Taxonomy Filter:"
 msgstr "I-enable ang Taxonomy Filter:"
 
-#: modules/settings/settings.php:894
+#: modules/settings/settings.php:909
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Huwag paganahin ang \"Status\" na opsyon kapag gumagamit ng \"Quick Edit\":"
 
-#: modules/settings/settings.php:902
+#: modules/settings/settings.php:917
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Ganap na i-disable ang \"Quick Edit\":"
 
-#: modules/settings/settings.php:910
+#: modules/settings/settings.php:925
 msgid "Disable \"Publish\" button:"
 msgstr "I-disable ang \"Publish\" na button:"
 
-#: modules/settings/settings.php:928
+#: modules/settings/settings.php:943
 msgid "Complete Icon:"
 msgstr "Kumpletong Icon:"
 
-#: modules/settings/settings.php:936
+#: modules/settings/settings.php:951
 msgid "Incomplete Icon:"
 msgstr "Hindi Kumpletong Icon:"
 
-#: modules/settings/settings.php:944
+#: modules/settings/settings.php:959
 msgid "Required Complete Color:"
 msgstr "Kinakailangang Kumpletong Kulay:"
 
-#: modules/settings/settings.php:952
+#: modules/settings/settings.php:967
 msgid "Required Incomplete Color:"
 msgstr "Kinakailangang Hindi Kumpletong Kulay:"
 
-#: modules/settings/settings.php:960
+#: modules/settings/settings.php:975
 msgid "Required Asterisk Color:"
 msgstr "Kinakailangang Kulay ng Asterisk:"
 
-#: modules/settings/settings.php:968
+#: modules/settings/settings.php:983
 msgid "Recommended Complete Color:"
 msgstr "Inirerekomendang Kumpletong Kulay:"
 
-#: modules/settings/settings.php:976
+#: modules/settings/settings.php:991
 msgid "Recommended Incomplete Color:"
 msgstr "Inirerekomendang Hindi Kumpletong Kulay:"
 
-#: modules/settings/settings.php:984
+#: modules/settings/settings.php:999
 msgid "Rename task labels:"
 msgstr "Palitan ang mga label ng gawain:"
 
-#: modules/settings/settings.php:992
+#: modules/settings/settings.php:1007
 msgid "Checklist task sort order:"
 msgstr "Ayos ng pag-sort ng checklist task:"
 
-#: modules/settings/settings.php:1010, fuzzy
+#: modules/settings/settings.php:1025, fuzzy
 msgid "OpenAI API Key:"
 msgstr "OpenAI API Key:"
 
-#: modules/settings/settings.php:1025
+#: modules/settings/settings.php:1040
 msgid "Reset Renamed Checklist:"
 msgstr "I-reset ang Pinangalanang Checklist:"
 
-#: modules/settings/settings.php:1044
+#: modules/settings/settings.php:1059
 msgid "Post types:"
 msgstr "Mga uri ng post:"
 
-#: modules/settings/settings.php:1077
+#: modules/settings/settings.php:1092
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1338,13 +2031,13 @@ msgstr ""
 "Pinapayagan nito ang mga gawain na hindi paganahin para sa mga partikular "
 "na status tulad ng \"Draft\" o \"Published."
 
-#: modules/settings/settings.php:1098
+#: modules/settings/settings.php:1113
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
 "Pinapayagan nito ang mga gumagamit na kopyahin ang mga umiiral na checklist "
 "na gawain."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1135
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1352,7 +2045,7 @@ msgstr ""
 "Magdagdag ng Checklists na kolum sa screen ng Mga Post na nagpapakita kung "
 "gaano karaming kinakailangan ang kumpleto."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1156
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1361,7 +2054,7 @@ msgstr ""
 "tiyak na mga termino ng taxonomy. Pumunta sa tab na \"Mga Uri ng Post\" "
 "upang pumili ng mga termino."
 
-#: modules/settings/settings.php:1163
+#: modules/settings/settings.php:1178
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1369,7 +2062,7 @@ msgstr ""
 "Ipinapakita nito ang isang icon ng babala sa kahon ng \"Checklists\" kung "
 "hindi kumpleto ang mga kinakailangan."
 
-#: modules/settings/settings.php:1183
+#: modules/settings/settings.php:1198
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
@@ -1377,7 +2070,7 @@ msgstr ""
 "Ito ay magha-highlight ng mga Gutenberg blocks na bumagsak sa mga tiyak na "
 "checklist task."
 
-#: modules/settings/settings.php:1203
+#: modules/settings/settings.php:1218
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1385,11 +2078,11 @@ msgstr ""
 "Kapag naka-enable, lahat ng data ng PublishPress Checklists ay mabubura "
 "kung ang plugin ay aalisin."
 
-#: modules/settings/settings.php:1224
+#: modules/settings/settings.php:1239
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "Ito ay magpapakita ng mga opsyon na \"I-exclude ang User Roles\"."
 
-#: modules/settings/settings.php:1245
+#: modules/settings/settings.php:1260
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1397,7 +2090,7 @@ msgstr ""
 "Inirerekomenda ang pag-disable ng \"Status\" na opsyon dahil maaari itong "
 "magamit upang maiwasan ang paggamit ng mga kinakailangan ng Checklists."
 
-#: modules/settings/settings.php:1266
+#: modules/settings/settings.php:1281
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1405,7 +2098,7 @@ msgstr ""
 "Hihinto nito ang \"Quick Edit\" para sa lahat ng mga gumagamit maliban sa "
 "mga may kakayahang \"manage_options\"."
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1302
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
@@ -1413,88 +2106,88 @@ msgstr ""
 "Hihinto nito ang \"Publish\" na button kapag hindi natutugunan ang mga "
 "kinakailangan ng checklist."
 
-#: modules/settings/settings.php:1306
+#: modules/settings/settings.php:1321
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
 "Ilagay ang iyong API Key upang magamit ang OpenAI prompts sa checklist "
 "tasks."
 
-#: modules/settings/settings.php:1379
+#: modules/settings/settings.php:1394
 msgid "Post Types"
 msgstr "Mga Uri ng Post"
 
-#: modules/settings/settings.php:1380
+#: modules/settings/settings.php:1395
 msgid "General"
 msgstr "Pangkalahatan"
 
-#: modules/settings/settings.php:1381
+#: modules/settings/settings.php:1396
 msgid "Publishing Options"
 msgstr "Mga Opsyon sa Pag-publish"
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1397
 msgid "Appearance"
 msgstr "Hitsura"
 
-#: modules/settings/settings.php:1383
+#: modules/settings/settings.php:1398
 msgid "Integration"
 msgstr "Pagsasama"
 
-#: modules/settings/settings.php:1384
+#: modules/settings/settings.php:1399
 msgid "Tools"
 msgstr "Mga Tool"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr ""
 "Ipasok ang pangalan ng klase ng Dashicons (hal. dashicons-yes, "
 "dashicons-saved). "
 
-#: modules/settings/settings.php:1432
 #: modules/settings/settings.php:1447
+#: modules/settings/settings.php:1462
 msgid "View Dashicons"
 msgstr "Tingnan ang Dashicons"
 
-#: modules/settings/settings.php:1446
+#: modules/settings/settings.php:1461
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 "Ipasok ang pangalan ng klase ng Dashicons (hal. dashicons-no, "
 "dashicons-dismiss). "
 
-#: modules/settings/settings.php:1529
+#: modules/settings/settings.php:1544
 msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
 "Payagan ang mga admin na palitan ang mga label ng gawain para sa post "
 "editor."
 
-#: modules/settings/settings.php:1547, fuzzy
+#: modules/settings/settings.php:1562, fuzzy
 msgid "Default"
 msgstr "Default"
 
-#: modules/settings/settings.php:1548
+#: modules/settings/settings.php:1563
 msgid "Priority"
 msgstr "Prayoridad"
 
-#: modules/settings/settings.php:1549
+#: modules/settings/settings.php:1564
 msgid "Alphabetical"
 msgstr "Alpabetiko"
 
-#: modules/settings/settings.php:1553
+#: modules/settings/settings.php:1568
 msgid "Keeps tasks in the order configured on the Checklists screen."
 msgstr ""
 "Nananatili ang mga gawain sa pagkakasunod-sunod na na-configure sa screen "
 "ng Checklist."
 
-#: modules/settings/settings.php:1557
+#: modules/settings/settings.php:1572
 msgid "Shows Required tasks before Recommended tasks."
 msgstr ""
 "Ipinapakita ang mga Kinakailangang gawain bago ang mga Inirerekomendang "
 "gawain."
 
-#: modules/settings/settings.php:1561
+#: modules/settings/settings.php:1576
 msgid "Sorts tasks alphabetically by task label."
 msgstr "Nagsasaayos ng mga gawain ayon sa alpabeto batay sa label ng gawain."
 
-#: modules/settings/settings.php:1604
+#: modules/settings/settings.php:1619
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
@@ -1502,143 +2195,143 @@ msgstr ""
 "Ito ay i-reset ang lahat ng pinalitang label ng checklist para sa WP Admin "
 "at screen ng Pag-edit pabalik sa kanilang default na mga label."
 
-#: modules/settings/settings.php:1614
+#: modules/settings/settings.php:1629
 msgid "Security check failed."
 msgstr "Nabigo ang pagsusuri sa seguridad."
 
-#: modules/settings/settings.php:1619
+#: modules/settings/settings.php:1634
 msgid "You do not have permission to perform this action."
 msgstr "Wala kang pahintulot na isagawa ang aksyong ito."
 
-#: modules/settings/settings.php:1664
+#: modules/settings/settings.php:1679
 msgid "All renamed labels have been reset successfully."
 msgstr "Lahat ng pinalitang label ay matagumpay na na-reset."
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 msgid "Number of characters in Yoast SEO focus keyword"
 msgstr "Bilang ng mga karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
 msgstr "Minimum na %d na karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
 msgstr "Minimum ng %d na mga karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
 msgstr "Sobra ng %d karakter sa pangunahing keyword ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
 msgstr "Maximum na %d na karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
 msgstr "%d karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:48
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
 msgstr "%d mga karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
 msgstr "Sa pagitan ng %d at %d na karakter sa Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:39
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:40
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 msgid "Number of characters in Yoast SEO meta description"
 msgstr "Bilang ng mga karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
 msgstr "Minimum ng %d na karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
 msgstr "Minimum ng %d na mga karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
 msgstr "Sobra ng %d karakter sa meta description ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
 msgstr "Maximum na %d na karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "%d character in Yoast SEO meta description"
 msgstr "%d karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:48
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
 msgstr "%d mga karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
 msgstr "Sa pagitan ng %d at %d na karakter sa Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:57
 msgid "Minimum Yoast SEO readability score"
 msgstr "Minimum na marka ng readability ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:139
 #. translators: %s expands to the readability score
 #, fuzzy, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Readability: %s"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:135
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:170
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:169
 msgid "OK"
 msgstr "Ayos"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:140
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:171
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:139
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:170
 msgid "Good"
 msgstr "Maganda"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:56
 msgid "Minimum Yoast SEO analysis score"
 msgstr "Minimum na marka ng pagsusuri ng Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:133
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:138
 #. translators: %s expands to the seo score
 #, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
-#: modules/yoastseo/yoastseo.php:69
+#: modules/yoastseo/yoastseo.php:72
 msgid "Define tasks related to Yoast SEO"
 msgstr "Tukuyin ang mga gawain na may kaugnayan sa Yoast SEO"
 
-#: publishpress-checklists.php:103
+#: publishpress-checklists.php:107
 msgid "This plugin can be deleted."
 msgstr "Maaaring tanggalin ang plugin na ito."
 
-#: publishpress-checklists.php:154
+#: publishpress-checklists.php:164
 #, php-format
 msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "

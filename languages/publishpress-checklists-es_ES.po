@@ -1,5 +1,5 @@
 # Copyright (C) 2026 PublishPress
-# This file is distributed under the same license as the PublishPress Checklists Free plugin.
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - PublishPress Checklists: Pre-Publishing "
@@ -13,14 +13,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-10-26 16:53+0000\n"
+"PO-Revision-Date: 2026-11-12 14:33+0000\n"
 "X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: es-ES\n"
 "X-Loco-Version: 2.6.11; wp-6.6.2\n"
 
-#: publishpress-checklists.php:4
+#: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
@@ -40,6 +40,8 @@ msgstr ""
 "para tu contenido."
 
 #: publishpress-checklists.php:7
+#: core/Mcp/Bootstrap.php:37
+#: modules/checklists/templates/footer.php:45
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -50,91 +52,588 @@ msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
 
 #: core/API/LabelMapper.php:39
-#: modules/checklists/checklists.php:1222
+#: modules/checklists/checklists.php:1661
 msgid "Disabled"
 msgstr "Desactivado"
 
 #: core/API/LabelMapper.php:40
-#: modules/checklists/checklists.php:1029
-#: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1306
-#: modules/checklists/assets/js/gutenberg-panel.jsx:464
+#: modules/checklists/checklists.php:1260
+#: modules/checklists/checklists.php:1662
+#: modules/checklists/checklists.php:1746
+#: modules/checklists/assets/js/gutenberg-panel.jsx:493
 msgid "Recommended"
 msgstr "Recomendado"
 
 #: core/API/LabelMapper.php:41
-#: modules/checklists/checklists.php:1028
-#: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1305
-#: modules/checklists/assets/js/gutenberg-panel.jsx:463
+#: modules/checklists/checklists.php:1259
+#: modules/checklists/checklists.php:1663
+#: modules/checklists/checklists.php:1745
+#: modules/checklists/assets/js/gutenberg-panel.jsx:492
 msgid "Required"
 msgstr "Obligatorio"
 
-#: core/Legacy/LegacyPlugin.php:208
+#: core/Legacy/LegacyPlugin.php:217
 msgid "Please correct your form errors below and try again."
 msgstr "Por favor, corrige tus errores en el formulario de abajo y prueba otra vez."
 
-#: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:523
+#: core/Legacy/LegacyPlugin.php:221
+#: modules/settings/settings.php:536
 msgid "Cheatin&#8217; uh?"
 msgstr "Haciendo trampas, ¿eh?"
 
-#: core/Legacy/LegacyPlugin.php:213
+#: core/Legacy/LegacyPlugin.php:222
 msgid "You do not have necessary permissions to complete this action."
 msgstr "No tienes los permisos necesarios para realizar esta acción."
 
-#: core/Legacy/LegacyPlugin.php:217
+#: core/Legacy/LegacyPlugin.php:226
 msgid "Post does not exist"
 msgstr "La entrada no existe"
 
-#: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:78
-#: modules/checklists/checklists.php:110
-#: modules/checklists/checklists.php:1132
-#: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1302
-#: modules/checklists/assets/js/gutenberg-panel.jsx:438
+#: core/Legacy/LegacyPlugin.php:360
+#: core/Plugin.php:83
+#: modules/checklists/checklists.php:125
+#: modules/checklists/checklists.php:1571
+#: modules/checklists/checklists.php:1586
+#: modules/checklists/checklists.php:1741
+#: modules/checklists/assets/js/gutenberg-panel.jsx:587
 msgid "Checklists"
 msgstr "Listas de verificación"
 
-#: core/Legacy/Module.php:286
+#: core/Legacy/Module.php:292
 msgid "PublishPress Checklists"
 msgstr "Publishpress Checklists"
 
-#: core/Legacy/Module.php:289
+#: core/Legacy/Module.php:295
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "Si te gusta %s, por favor déjanos una valoración de %s. ¡Gracias!"
 
-#: core/Legacy/Util.php:179
+#: core/Legacy/Util.php:183
 msgid "Need PublishPress Checklists Support?"
 msgstr "¿Necesitas ayuda con PublishPress Checklists?"
 
-#: core/Legacy/Util.php:185
+#: core/Legacy/Util.php:189
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
 "Si necesitas ayuda o quieres solicitar alguna nueva característica, "
 "háznoslo saber."
 
-#: core/Legacy/Util.php:188
+#: core/Legacy/Util.php:192
 msgid "Request Support"
 msgstr "Solicitar soporte"
 
-#: core/Legacy/Util.php:195
+#: core/Legacy/Util.php:199
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "También hay disponible documentación detallada en la web del plugin."
 
-#: core/Legacy/Util.php:198
+#: core/Legacy/Util.php:202
 msgid "View Knowledge Base"
 msgstr "Ver la base de conocimiento"
 
-#: core/Plugin.php:79
-#: modules/settings/settings.php:134
+#: core/Mcp/Bootstrap.php:38
+msgid "Actions provided by PublishPress plugins."
+msgstr "Acciones proporcionadas por los plugins de PublishPress."
+
+#: core/Mcp/Catalog.php:30
+msgid "Discover Checklists features"
+msgstr "Descubre las características de las Listas de Verificación"
+
+#: core/Mcp/Catalog.php:31
+msgid ""
+"Discover native checklist configuration, custom and OpenAI tasks, "
+"publishing settings, appearance, per-post task states and active "
+"Pro/integration modules. Feature discovery grants no additional permissions."
+msgstr ""
+"Descubre la configuración nativa de listas de verificación, tareas "
+"personalizadas y OpenAI, configuraciones de publicación, apariencia, "
+"estados de tareas por publicación y módulos Pro/integra activos. El "
+"descubrimiento de funciones no otorga permisos adicionales."
+
+#: core/Mcp/Catalog.php:39
+msgid "Discover checklist post types"
+msgstr "Descubre los tipos de publicaciones de listas de verificación"
+
+#: core/Mcp/Catalog.php:40
+msgid ""
+"Read native supported post type names, labels, enabled state and "
+"configuration locks. Requires the filtered checklist management capability."
+msgstr ""
+"Lee los nombres de tipo de publicación nativos compatibles, etiquetas, "
+"estado habilitado y bloqueos de configuración. Requiere la capacidad de "
+"gestión de listas de verificación filtradas."
+
+#: core/Mcp/Catalog.php:48
+msgid "Find checklist requirements"
+msgstr "Encuentra requisitos de listas de verificación"
+
+#: core/Mcp/Catalog.php:49
+msgid ""
+"Find native built-in, custom, OpenAI, duplicated and integration-specific "
+"task IDs for one post type. Includes labels, groups, configured rule and "
+"actual edition availability. Read one requirement for its exact fields and "
+"latest revision."
+msgstr ""
+"Encuentra IDs de tareas nativas integradas, personalizadas, de OpenAI, "
+"duplicadas y específicas de integración para un tipo de publicación. "
+"Incluye etiquetas, grupos, reglas configuradas y disponibilidad de edición "
+"actual. Lee un requisito para sus campos exactos y la última revisión."
+
+#: core/Mcp/Catalog.php:57
+msgid "Read checklist requirement settings"
+msgstr "Lee la configuración de requisitos de listas de verificación"
+
+#: core/Mcp/Catalog.php:58
+msgid ""
+"Read one native task with exact per-post-type field names, types, choices, "
+"current settings and revision. Includes ranges, role/user selectors and "
+"labels when supported. Free Pro placeholders are unavailable for writes."
+msgstr ""
+"Lee una tarea nativa con nombres de campos exactos por tipo de publicación, "
+"tipos, opciones, configuraciones actuales y revisión. Incluye rangos, "
+"selectores de rol/usuario y etiquetas cuando sea compatible. Los marcadores "
+"de posición Pro gratuitos no están disponibles para escritura."
+
+#: core/Mcp/Catalog.php:66
+msgid "Discover checklist requirement choices"
+msgstr "Descubre las opciones de requisitos de listas de verificación"
+
+#: core/Mcp/Catalog.php:67
+msgid ""
+"Read a bounded page of native field choices, including role/user choices "
+"and live assignable taxonomy term identifiers. Use returned values rather "
+"than inventing taxonomy IDs or names."
+msgstr ""
+"Lee una página limitada de opciones de campos nativos, incluyendo opciones "
+"de rol/usuario e identificadores de término de taxonomía asignables en "
+"vivo. Usa los valores devueltos en lugar de inventar IDs o nombres de "
+"taxonomía."
+
+#: core/Mcp/Catalog.php:102
+msgid "Editable post; native task role/user restrictions also apply"
+msgstr ""
+"Publicación editable; también se aplican restricciones de rol/usuario de "
+"tarea nativa"
+
+#: core/Mcp/Catalog.php:102
+msgid "Site configuration"
+msgstr "Configuración del sitio"
+
+#: core/Mcp/Catalog.php:173
+#: core/Mcp/Requirements.php:225
+msgid "Choose a supported post type."
+msgstr "Elige un tipo de publicación compatible."
+
+#: core/Mcp/Catalog.php:194
+msgid "Choose a requirement from this post type's discovery."
+msgstr "Elige un requisito del descubrimiento de este tipo de publicación."
+
+#: core/Mcp/Catalog.php:202
+msgid "Native taxonomy tokens from get-requirement-choices; do not invent names."
+msgstr "Tokens de taxonomía nativos de get-requirement-choices; no inventes nombres."
+
+#: core/Mcp/Catalog.php:247
+msgid "Choose a discovered field."
+msgstr "Elige un campo descubierto."
+
+#: core/Mcp/Catalog.php:253
+msgid "You cannot list users."
+msgstr "No puedes listar usuarios."
+
+#: core/Mcp/Catalog.php:265
+msgid "You cannot access this taxonomy selector."
+msgstr "No puedes acceder a este selector de taxonomía."
+
+#: core/Mcp/Options.php:96
+msgid "The settings could not be saved; original values were restored."
+msgstr "No se pudieron guardar los ajustes; se restauraron los valores originales."
+
+#: core/Mcp/Options.php:97
+msgid "Saving failed and recovery was incomplete. Read settings before retrying."
+msgstr ""
+"El guardado falló y la recuperación fue incompleta. Lee los ajustes antes "
+"de volver a intentar."
+
+#: core/Mcp/Registry.php:68
+msgid "Use the exact field types returned by discovery."
+msgstr "Usa los tipos de campos exactos devueltos por el descubrimiento."
+
+#: core/Mcp/Registry.php:178
+msgid "The request is too large."
+msgstr "La solicitud es demasiado grande."
+
+#: core/Mcp/Registry.php:188
+msgid "You do not have permission for this action."
+msgstr "No tienes permiso para esta acción."
+
+#: core/Mcp/Registry.php:192
+msgid "The result is too large. Use narrower discovery or a smaller page."
+msgstr ""
+"El resultado es demasiado grande. Usa un descubrimiento más específico o "
+"una página más pequeña."
+
+#: core/Mcp/Registry.php:197
+msgid ""
+"The operation did not complete normally. Read the affected data before "
+"retrying; some changes may have been applied."
+msgstr ""
+"La operación no se completó normalmente. Lee los datos afectados antes de "
+"volver a intentar; algunos cambios pueden haber sido aplicados."
+
+#: core/Mcp/Registry.php:198
+msgid "The data could not be read. Check the active integrations before retrying."
+msgstr ""
+"No se pudieron leer los datos. Verifica las integraciones activas antes de "
+"volver a intentar."
+
+#: core/Mcp/Requirements.php:34
+msgid "Update a checklist requirement"
+msgstr "Actualizar un requisito de lista de verificación"
+
+#: core/Mcp/Requirements.php:35
+msgid ""
+"Patch one discovered task for one post type using its latest hash. Supports "
+"native rule, ranges, selectors, role exceptions and labels. Preserves other "
+"tasks and post types. Native validation runs without simulated admin forms; "
+"dry_run previews without saving."
+msgstr ""
+"Parchea una tarea descubierta para un tipo de publicación usando su último "
+"hash. Soporta regla nativa, rangos, selectores, excepciones de rol y "
+"etiquetas. Preserva otras tareas y tipos de publicación. La validación "
+"nativa se ejecuta sin formularios de administrador simulados; dry_run "
+"muestra una vista previa sin guardar."
+
+#: core/Mcp/Requirements.php:44
+msgid "Update several checklist requirements"
+msgstr "Actualizar varios requisitos de listas de verificación"
+
+#: core/Mcp/Requirements.php:45
+msgid ""
+"Validate every explicit task/post-type target before one native "
+"configuration write. Each target needs its current hash. Preserves omitted "
+"configuration and accepts dry_run. Does not change post content or mark "
+"tasks completed."
+msgstr ""
+"Valida cada tarea/objetivo de tipo de publicación explícito antes de una "
+"escritura de configuración nativa. Cada objetivo necesita su hash actual. "
+"Preserva la configuración omitida y acepta dry_run. No cambia el contenido "
+"de la publicación ni marca las tareas como completadas."
+
+#: core/Mcp/Requirements.php:55
+msgid "Create or update a custom checklist task"
+msgstr "Crear o actualizar una tarea de lista de verificación personalizada"
+
+#: core/Mcp/Requirements.php:56
+msgid ""
+"Create a custom checkbox or OpenAI instruction task for one supported post "
+"type, disabled by default, or patch a discovered existing task using its "
+"latest hash. New IDs are generated by the plugin. OpenAI tasks configure "
+"instructions only; this action does not call an AI service or certify its "
+"result."
+msgstr ""
+"Crea una tarea de casilla de verificación personalizada o de instrucción "
+"OpenAI para un tipo de publicación compatible, deshabilitada por defecto, o "
+"parchea una tarea existente descubierta usando su último hash. Nuevos IDs "
+"son generados por el plugin. Las tareas OpenAI configuran solo "
+"instrucciones; esta acción no llama a un servicio de IA ni certifica su "
+"resultado."
+
+#: core/Mcp/Requirements.php:69
+msgid "Remove a custom checklist task"
+msgstr "Eliminar una tarea de lista de verificación personalizada"
+
+#: core/Mcp/Requirements.php:70
+msgid ""
+"Remove a verified custom or OpenAI task from one post type using its latest "
+"hash. Other post types and historic post completion metadata are retained. "
+"Native built-in tasks are disabled through their rule rather than deleted. "
+"dry_run checks only."
+msgstr ""
+"Elimina una tarea personalizada o de OpenAI verificada de un tipo de "
+"publicación usando su último hash. Otros tipos de publicación y metadatos "
+"históricos de finalización de publicaciones se retienen. Las tareas nativas "
+"integradas se deshabilitan a través de su regla en lugar de ser eliminadas. "
+"Solo se realizan verificaciones dry_run."
+
+#: core/Mcp/Requirements.php:79
+msgid "Reorder checklist tasks"
+msgstr "Reordenar tareas de listas de verificación"
+
+#: core/Mcp/Requirements.php:80
+msgid ""
+"Move discovered requirements into the supplied native shared order. Rule "
+"ordering is shared by post types, so this can change their default task "
+"ordering too; Appearance Priority/Alphabetical modes still apply. Uses one "
+"requirement hash from the current configuration. dry_run previews without "
+"saving."
+msgstr ""
+"Mueve requisitos descubiertos al orden compartido nativo proporcionado. El "
+"orden de las reglas es compartido por los tipos de publicación, por lo que "
+"esto también puede cambiar su orden predeterminado de tareas; los modos de "
+"Prioridad de Apariencia/Alfabético siguen aplicándose. Usa un hash de "
+"requisito de la configuración actual. dry_run muestra una vista previa sin "
+"guardar."
+
+#: core/Mcp/Requirements.php:90
+msgid "Reset renamed checklist labels"
+msgstr "Restablecer etiquetas de lista de verificación renombradas"
+
+#: core/Mcp/Requirements.php:91
+msgid ""
+"Reset native WP Admin and Editing screen task labels to their defaults. "
+"This affects all tasks/post types, preserves task titles/rules and requires "
+"manage_options. Use checklist_hash from get-plugin-settings; dry_run checks "
+"only."
+msgstr ""
+"Restablecer las etiquetas de tareas nativas de WP Admin y de la pantalla de "
+"edición a sus valores predeterminados. Esto afecta todas las tareas/tipos "
+"de publicación, preserva los títulos/reglas de tareas y requiere "
+"manage_options. Usa checklist_hash de get-plugin-settings; solo se realizan "
+"verificaciones dry_run."
+
+#: core/Mcp/Requirements.php:108
+msgid "This requirement needs its active Pro integration."
+msgstr "Este requisito necesita su integración Pro activa."
+
+#: core/Mcp/Requirements.php:111
+#: core/Mcp/Requirements.php:295
+#: core/Mcp/Requirements.php:325
+msgid "Checklist configuration changed. Read it again."
+msgstr "La configuración de la lista de verificación ha cambiado. Léela de nuevo."
+
+#: core/Mcp/Requirements.php:118
+#: core/Mcp/Requirements.php:252
+msgid "Enter a task title that remains non-empty after sanitization."
+msgstr ""
+"Introduce un título de tarea que permanezca no vacío después de la "
+"sanitización."
+
+#: core/Mcp/Requirements.php:123
+msgid "You cannot select users."
+msgstr "No puedes seleccionar usuarios."
+
+#: core/Mcp/Requirements.php:128
+msgid "Select an eligible user from current choices."
+msgstr "Selecciona un usuario elegible de las opciones actuales."
+
+#: core/Mcp/Requirements.php:136
+msgid "You cannot assign this taxonomy."
+msgstr "No puedes asignar esta taxonomy."
+
+#: core/Mcp/Requirements.php:142
+msgid "Read current taxonomy choices before saving."
+msgstr "Lee las opciones de taxonomy actuales antes de guardar."
+
+#: core/Mcp/Requirements.php:157
+msgid "The minimum cannot exceed a positive maximum."
+msgstr "El mínimo no puede exceder un máximo positivo."
+
+#: core/Mcp/Requirements.php:160
+#: core/Mcp/Requirements.php:255
+msgid "Enable Who can ignore in Settings before changing role exceptions."
+msgstr ""
+"Habilita Quién puede ignorar en Configuración antes de cambiar las "
+"excepciones de rol."
+
+#: core/Mcp/Requirements.php:180
+msgid "Include each requirement/post-type target only once."
+msgstr "Incluye cada requisito/tipo de publicación objetivo solo una vez."
+
+#: core/Mcp/Requirements.php:233
+msgid "Choose a configured custom or OpenAI task."
+msgstr "Elige una tarea personalizada configurada o una tarea de OpenAI."
+
+#: core/Mcp/Requirements.php:236
+msgid "Task kind cannot be changed. Use its discovered kind or create a new task."
+msgstr ""
+"El tipo de tarea no puede ser cambiado. Usa su tipo descubierto o crea una "
+"nueva tarea."
+
+#: core/Mcp/Requirements.php:292
+msgid "Only custom and OpenAI tasks can be removed."
+msgstr "Solo las tareas personalizadas y de OpenAI pueden ser eliminadas."
+
+#: core/Mcp/Requirements.php:329
+msgid "Use discovered requirement identifiers."
+msgstr "Utiliza identificadores de requisitos descubiertos."
+
+#: core/Mcp/Requirements.php:350
+msgid "Settings changed. Read them again."
+msgstr "La configuración ha cambiado. Léela de nuevo."
+
+#: core/Mcp/Settings.php:47
+msgid "Enable User Roles Filter (Who can ignore)"
+msgstr "Habilitar filtro de roles de usuario (Quién puede ignorar)"
+
+#: core/Mcp/Settings.php:48
+msgid "Show warning icon"
+msgstr "Mostrar icono de advertencia"
+
+#: core/Mcp/Settings.php:49
+msgid "Highlight failing blocks in the editor"
+msgstr "Resaltar bloques que fallan en el editor"
+
+#: core/Mcp/Settings.php:50
+msgid "Disable the Status option when using Quick Edit"
+msgstr "Deshabilitar la opción de Estado al usar Edición Rápida"
+
+#: core/Mcp/Settings.php:51
+msgid "Disable Quick Edit completely"
+msgstr "Deshabilitar Edición Rápida por completo"
+
+#: core/Mcp/Settings.php:52
+msgid "Disable Publish button"
+msgstr "Deshabilitar botón Publicar"
+
+#: core/Mcp/Settings.php:53
+msgid "Rename task labels"
+msgstr "Renombrar etiquetas de tarea"
+
+#: core/Mcp/Settings.php:54
+msgid "Checklist task sort order"
+msgstr "Orden de clasificación de tareas de lista de verificación"
+
+#: core/Mcp/Settings.php:69
+msgid "Read Checklists settings"
+msgstr "Leer configuraciones de Listas de Verificación"
+
+#: core/Mcp/Settings.php:70
+msgid ""
+"Read Post Types, General, Publishing Options and Appearance settings with "
+"exact native fields, choices and revisions. Actual Pro adds available "
+"non-secret settings. OpenAI/license credentials are excluded. Requires "
+"manage_options."
+msgstr ""
+"Lee los tipos de publicaciones, opciones generales, opciones de publicación "
+"y configuraciones de apariencia con campos nativos exactos, elecciones y "
+"revisiones. La Pro actual añade configuraciones disponibles no secretas. "
+"Credenciales de OpenAI/licencia están excluidas. Requiere manage_options."
+
+#: core/Mcp/Settings.php:78
+msgid "Update Checklists settings"
+msgstr "Actualizar configuraciones de Listas de Verificación"
+
+#: core/Mcp/Settings.php:79
+msgid ""
+"Patch supplied discovered settings using the latest hash. Boolean inputs "
+"map to native yes/no or on/off storage; post_types is a list of enabled "
+"names. Preserves omitted settings and credentials. dry_run previews native "
+"validation without saving. Feature-specific settings retain dependency and "
+"edition gates."
+msgstr ""
+"Parchea configuraciones descubiertas suministradas utilizando el último "
+"hash. Las entradas booleanas se asignan a almacenamiento nativo de sí/no o "
+"encendido/apagado; post_types es una lista de nombres habilitados. Preserva "
+"configuraciones y credenciales omitidas. dry_run previsualiza la validación "
+"nativa sin guardar. Configuraciones específicas de características "
+"mantienen dependencias y puertas de edición."
+
+#: core/Mcp/Settings.php:89
+msgid "Enable an optional Checklists feature"
+msgstr "Habilitar una característica opcional de Listas de Verificación"
+
+#: core/Mcp/Settings.php:90
+msgid ""
+"Enable or disable one discovered optional module. Core/autoloaded modules "
+"cannot be disabled. Requires manage_options and actual module availability. "
+"Uses the latest feature inventory hash. Changes take effect in a fresh "
+"request."
+msgstr ""
+"Habilitar o deshabilitar un módulo opcional descubierto. Los módulos "
+"básicos/cargados automáticamente no pueden ser deshabilitados. Requiere "
+"manage_options y disponibilidad real del módulo. Utiliza el último hash del "
+"inventario de características. Los cambios tienen efecto en una nueva "
+"solicitud."
+
+#: core/Mcp/Settings.php:129
+msgid "Settings changed. Read them again before saving."
+msgstr "La configuración ha cambiado. Léela de nuevo antes de guardar."
+
+#: core/Mcp/Settings.php:139
+msgid "This setting requires its active integration."
+msgstr "Esta configuración requiere su integración activa."
+
+#: core/Mcp/Settings.php:170
+msgid "Native validation did not accept this setting."
+msgstr "La validación nativa no aceptó esta configuración."
+
+#: core/Mcp/Settings.php:192
+msgid "Feature settings changed. Discover them again."
+msgstr "Las configuraciones de características han cambiado. Descúbrelas de nuevo."
+
+#: core/Mcp/Settings.php:200
+msgid "This core module cannot be switched through MCP."
+msgstr "Este módulo básico no puede ser cambiado a través de MCP."
+
+#: core/Mcp/Settings.php:210
+msgid "Choose an available feature from discovery."
+msgstr "Elige una característica disponible de descubrimiento."
+
+#: core/Mcp/Tasks.php:38
+msgid "Read a post checklist"
+msgstr "Leer una lista de verificación de publicación"
+
+#: core/Mcp/Tasks.php:39
+msgid ""
+"Read the native checklist for an editable saved post, respecting ignored "
+"roles and active Pro status/taxonomy exclusions. Results are native server "
+"snapshots, not a guarantee about unsaved editor content or JavaScript-only "
+"checks. OpenAI calls are not performed. Includes manual completion "
+"permissions and current revision."
+msgstr ""
+"Lee la lista de verificación nativa para una publicación guardada editable, "
+"respetando roles ignorados y exclusiones de estado/taxonomía Pro activas. "
+"Los resultados son instantáneas nativas del servidor, no una garantía sobre "
+"contenido no guardado del editor o verificaciones solo de JavaScript. No se "
+"realizan llamadas a OpenAI."
+
+#: core/Mcp/Tasks.php:47
+msgid "Complete or reopen manual checklist tasks"
+msgstr "Completar o reabrir tareas de lista de verificación manual"
+
+#: core/Mcp/Tasks.php:48
+msgid ""
+"Set explicit boolean states for configured, enabled custom checkboxes or "
+"approvals on one editable post using its latest revision. Checks each "
+"task's native role/user restrictions and post-meta permission before any "
+"write. Automatic and OpenAI results cannot be forged. dry_run validates "
+"without saving."
+msgstr ""
+"Establecer estados booleanos explícitos para casillas de verificación "
+"personalizadas configuradas y habilitadas o aprobaciones en una publicación "
+"editable usando su última revisión. Verifica las restricciones de "
+"rol/usuario nativas de cada tarea y permisos de post-meta antes de "
+"cualquier escritura. Los resultados automáticos y de OpenAI no pueden ser "
+"falsificados. dry_run valida sin guardar."
+
+#: core/Mcp/Tasks.php:87
+msgid "The post or checklist changed. Read it again."
+msgstr "La publicación o lista de verificación ha cambiado. Léela de nuevo."
+
+#: core/Mcp/Tasks.php:93
+msgid "You cannot mark this task for this post."
+msgstr "No puedes marcar esta tarea para esta publicación."
+
+#: core/Mcp/Tasks.php:131
+msgid "Task state could not be saved; original states were restored."
+msgstr ""
+"No se pudo guardar el estado de la tarea; se restauraron los estados "
+"originales."
+
+#: core/Mcp/Tasks.php:132
+msgid ""
+"Task state save failed and recovery was incomplete. Read the checklist "
+"before retrying."
+msgstr ""
+"El guardado del estado de la tarea falló y la recuperación fue incompleta. "
+"Lee la lista de verificación antes de volver a intentar."
+
+#: core/Plugin.php:84
+#: modules/settings/settings.php:137
 msgid "Settings"
 msgstr "Ajustes"
 
-#: core/Plugin.php:87
-#: publishpress-checklists.php:183
+#: core/Plugin.php:92
+#: publishpress-checklists.php:193
 msgid "Upgrade to Pro"
 msgstr "Mejorar a Pro"
 
@@ -148,11 +647,11 @@ msgid "Approved by a user in this role"
 msgstr "Aprobado por un usuario con este perfil"
 
 #: core/Requirement/Approved_by.php:161
-#: core/Requirement/Base_requirement.php:239
-#: core/Requirement/Prohibited_categories.php:414
-#: core/Requirement/Prohibited_tags.php:383
-#: core/Requirement/Required_categories.php:422
-#: core/Requirement/Required_tags.php:383
+#: core/Requirement/Base_requirement.php:251
+#: core/Requirement/Prohibited_categories.php:417
+#: core/Requirement/Prohibited_tags.php:386
+#: core/Requirement/Required_categories.php:425
+#: core/Requirement/Required_tags.php:386
 #. translators: 1: custom editor label, 2: selected role names.
 #. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
 #. translators: 1: custom editor label, 2: prohibited category names.
@@ -163,43 +662,101 @@ msgstr "Aprobado por un usuario con este perfil"
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
-#: core/Requirement/Base_counter.php:385
-#: core/Requirement/Pro_Requirement.php:112
+#: core/Requirement/Base_counter.php:388
+#: core/Requirement/Pro_Requirement.php:114
 msgid "Min"
 msgstr "Mínimo"
 
-#: core/Requirement/Base_counter.php:393
-#: core/Requirement/Pro_Requirement.php:113
+#: core/Requirement/Base_counter.php:396
+#: core/Requirement/Pro_Requirement.php:115
 msgid "Max"
 msgstr "Máximo"
 
-#: core/Requirement/Base_requirement.php:268
+#: core/Requirement/Base_dropdown.php:111
+#, php-format
+msgid "Set option for %s"
+msgstr "Establecer opción para %s"
+
+#: core/Requirement/Base_requirement.php:280
 #. translators: %d: exact required value.
 #, php-format
 msgid "exact %d"
 msgstr "%d exacto"
 
-#: core/Requirement/Base_requirement.php:276
+#: core/Requirement/Base_requirement.php:288
 #. translators: %d: minimum required value.
 #, fuzzy, php-format
 msgid "min %d"
 msgstr "min %d"
 
-#: core/Requirement/Base_requirement.php:284
+#: core/Requirement/Base_requirement.php:296
 #. translators: %d: maximum allowed value.
 #, fuzzy, php-format
 msgid "max %d"
 msgstr "max %d"
 
-#: core/Requirement/Base_requirement.php:291
+#: core/Requirement/Base_requirement.php:303
 #. translators: 1: minimum required value, 2: maximum allowed value.
 #, fuzzy, php-format
 msgid "min %1$d max %2$d"
 msgstr "min %1$d max %2$d"
 
-#: core/Requirement/Base_requirement.php:346
+#: core/Requirement/Base_requirement.php:364
+#, php-format
+msgid "More information about %s"
+msgstr "Más información sobre %s"
+
+#: core/Requirement/Base_requirement.php:367
+#, php-format
+msgid "Edit label for %s"
+msgstr "Editar etiqueta para %s"
+
+#: core/Requirement/Base_requirement.php:367
 msgid "Edit label"
 msgstr "Editar etiqueta"
+
+#: core/Requirement/Base_requirement.php:405
+#, php-format
+msgid "Set requirement status for %s"
+msgstr "Establecer estado de requisito para %s"
+
+#: core/Requirement/Base_requirement.php:454
+msgid "Task status: Disabled, Recommended or Required"
+msgstr "Estado de la tarea: Deshabilitado, Recomendado o Requerido"
+
+#: core/Requirement/Base_requirement.php:455
+msgid "WP Admin label"
+msgstr "Etiqueta de WP Admin"
+
+#: core/Requirement/Base_requirement.php:456
+msgid "Editing screen label"
+msgstr "Etiqueta de pantalla de edición"
+
+#: core/Requirement/Base_requirement.php:458
+msgid "Who can ignore this task?"
+msgstr "¿Quién puede ignorar esta tarea?"
+
+#: core/Requirement/Base_requirement.php:462
+msgid "Minimum"
+msgstr "Mínimo"
+
+#: core/Requirement/Base_requirement.php:463
+msgid "Maximum; zero or empty has no upper limit"
+msgstr "Máximo; cero o vacío no tiene límite superior"
+
+#: core/Requirement/Base_requirement.php:484
+msgid "Time in 24-hour HH:MM format"
+msgstr "Hora en formato de 24 horas HH:MM"
+
+#: core/Requirement/Base_requirement.php:488
+msgid "Task title or instruction"
+msgstr "Título de la tarea o instrucción"
+
+#: core/Requirement/Base_time.php:147
+#: core/Requirement/Pro_Requirement.php:102
+#, php-format
+msgid "Set time for %s"
+msgstr "Establecer tiempo para %s"
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
@@ -240,27 +797,38 @@ msgstr "%s categorías"
 msgid "Between %s and %s categories"
 msgstr "Entre  %s y %s categorías"
 
-#: core/Requirement/Custom_item.php:60
 #: core/Requirement/Custom_item.php:61
-#: core/Utils/FieldsTabs.php:73
+#: core/Requirement/Custom_item.php:62
+#: core/Utils/FieldsTabs.php:75
 msgid "Custom"
 msgstr "Personalizada"
 
-#: core/Requirement/Custom_item.php:62
-#: modules/checklists/checklists.php:768
+#: core/Requirement/Custom_item.php:63
+#: modules/checklists/checklists.php:839
 msgid "Which roles can mark this task as complete?"
 msgstr "¿Qué perfiles pueden marcar esta tarea como completada?"
 
 #: core/Requirement/Custom_item.php:81
-#: modules/checklists/checklists.php:775
+#: modules/checklists/checklists.php:847
+msgid "Custom task title"
+msgstr "Título de tarea personalizado"
+
+#: core/Requirement/Custom_item.php:85
+#: modules/checklists/checklists.php:856
 msgid "Enter name of custom task"
 msgstr "Introduce el nombre de la tarea personalizada"
 
-#: core/Requirement/Custom_item.php:129
-#: core/Requirement/Openai_item.php:147
-#: modules/checklists/checklists.php:774
+#: core/Requirement/Custom_item.php:132
+#: core/Requirement/Openai_item.php:151
+#: modules/checklists/checklists.php:845
 msgid "Remove"
 msgstr "Eliminar"
+
+#: core/Requirement/Custom_item.php:133
+#: core/Requirement/Openai_item.php:152
+#: modules/checklists/checklists.php:846
+msgid "Remove custom task"
+msgstr "Eliminar tarea personalizada"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
@@ -446,25 +1014,30 @@ msgid "Openai"
 msgstr "Openai"
 
 #: core/Requirement/Openai_item.php:100
-#: modules/checklists/checklists.php:776
+#: modules/checklists/checklists.php:848
+msgid "OpenAI task prompt"
+msgstr "Indicador de tarea de OpenAI"
+
+#: core/Requirement/Openai_item.php:104
+#: modules/checklists/checklists.php:857
 msgid "Enter OpenAI task prompt"
 msgstr "Introduce indicación de tarea de OpenAI"
 
-#: core/Requirement/Openai_item.php:286
+#: core/Requirement/Openai_item.php:291
 msgid "An error occured."
 msgstr "Se ha producido un error."
 
-#: core/Requirement/Openai_item.php:293
+#: core/Requirement/Openai_item.php:298
 msgid "Validation error. Kindly reload this page and try again."
 msgstr ""
 "Error de validación. Por favor, vuelve a cargar esta página e inténtalo de "
 "nuevo."
 
-#: core/Requirement/Openai_item.php:298
+#: core/Requirement/Openai_item.php:303
 msgid "Post content is empty."
 msgstr "El contenido de la entrada está vacío."
 
-#: core/Requirement/Openai_item.php:307
+#: core/Requirement/Openai_item.php:312
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
@@ -472,16 +1045,16 @@ msgstr ""
 "Las tareas de OpenAI requieren una clave de API. Por favor, añade tu clave "
 "de API en los ajustes."
 
-#: core/Requirement/Openai_item.php:362
+#: core/Requirement/Openai_item.php:367
 #, php-format
 msgid "API Error: %1s."
 msgstr "Error de API: %1s."
 
-#: core/Requirement/Openai_item.php:380
+#: core/Requirement/Openai_item.php:385
 msgid "See the full response."
 msgstr "Ver la respuesta completa."
 
-#: core/Requirement/Openai_item.php:401
+#: core/Requirement/Openai_item.php:406
 msgid "Invalid response"
 msgstr "Respuesta no válida"
 
@@ -502,6 +1075,11 @@ msgstr "Etiquetas prohibidas: %s"
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
 msgstr "Etiquetas prohibidas"
+
+#: core/Requirement/Pro_Requirement.php:126
+#, php-format
+msgid "Select options for %s"
+msgstr "Seleccionar opciones para %s"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
@@ -671,476 +1249,573 @@ msgstr "%d palabras en el contenido"
 msgid "Between %d and %d words in content"
 msgstr "Entre %d y %d palabras en el contenido"
 
-#: core/Utils/FieldsTabs.php:21
+#: core/Utils/FieldsTabs.php:23
 msgid "Title"
 msgstr "Título"
 
-#: core/Utils/FieldsTabs.php:25
+#: core/Utils/FieldsTabs.php:27
 msgid "Content"
 msgstr "Contenido"
 
-#: core/Utils/FieldsTabs.php:29
+#: core/Utils/FieldsTabs.php:31
 msgid "Publish Date / Time"
 msgstr "Fecha/hora de la publicación"
 
-#: core/Utils/FieldsTabs.php:33
+#: core/Utils/FieldsTabs.php:35
 msgid "Approval"
 msgstr "Aprobación"
 
-#: core/Utils/FieldsTabs.php:37
+#: core/Utils/FieldsTabs.php:39
 msgid "Images"
 msgstr "Imágenes"
 
-#: core/Utils/FieldsTabs.php:41
+#: core/Utils/FieldsTabs.php:43
 msgid "Audio / Video"
 msgstr "Audio/vídeo"
 
-#: core/Utils/FieldsTabs.php:45
+#: core/Utils/FieldsTabs.php:47
 msgid "Featured Image"
 msgstr "Imagen destacada"
 
-#: core/Utils/FieldsTabs.php:49
+#: core/Utils/FieldsTabs.php:51
 msgid "Links"
 msgstr "Enlaces"
 
-#: core/Utils/FieldsTabs.php:53
+#: core/Utils/FieldsTabs.php:55
 msgid "Permalink"
 msgstr "Enlace permanente"
 
-#: core/Utils/FieldsTabs.php:57
+#: core/Utils/FieldsTabs.php:59
 msgid "Categories"
 msgstr "Categorías"
 
-#: core/Utils/FieldsTabs.php:61
+#: core/Utils/FieldsTabs.php:63
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: core/Utils/FieldsTabs.php:65
+#: core/Utils/FieldsTabs.php:67
 msgid "Taxonomies"
 msgstr "Taxonomías"
 
-#: core/Utils/FieldsTabs.php:69
+#: core/Utils/FieldsTabs.php:71
 msgid "Accessibility"
 msgstr "Accesibilidad"
 
-#: core/Utils/FieldsTabs.php:97
+#: core/Utils/FieldsTabs.php:99
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: core/Utils/FieldsTabs.php:104, fuzzy
+#: core/Utils/FieldsTabs.php:106, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
-#: core/Utils/FieldsTabs.php:111, fuzzy
+#: core/Utils/FieldsTabs.php:113, fuzzy
 msgid "All in One SEO"
 msgstr "All in One SEO"
 
-#: core/Utils/FieldsTabs.php:118
-#: modules/yoastseo/yoastseo.php:68, fuzzy
+#: core/Utils/FieldsTabs.php:120
+#: modules/yoastseo/yoastseo.php:71, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
-#: core/Utils/FieldsTabs.php:126, fuzzy
+#: core/Utils/FieldsTabs.php:128, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
-#: modules/checklists/checklists.php:724
+#: core/Utils/HelpTip.php:63
+msgid "More information"
+msgstr "Más información"
+
+#: modules/checklists/checklists.php:795
 msgid "options cannot be empty."
 msgstr "las opciones no pueden ser vacías."
 
-#: modules/checklists/checklists.php:728
+#: modules/checklists/checklists.php:799
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr "Por favor asegúrate de añadirle un nombre a todas las tareas personalizadas."
 
-#: modules/checklists/checklists.php:732
+#: modules/checklists/checklists.php:803
 msgid "Rename task label"
 msgstr "Renombrar etiqueta de tarea"
 
-#: modules/checklists/checklists.php:736
+#: modules/checklists/checklists.php:807
 msgid "Label for the Checklists screen"
 msgstr "Etiqueta para la pantalla de listas de verificación"
 
-#: modules/checklists/checklists.php:740
+#: modules/checklists/checklists.php:811
 msgid "Leave empty to use the default WP Admin label"
 msgstr ""
 "Dejar en blanco para utilizar la etiqueta por defecto del administrador de "
 "WP"
 
-#: modules/checklists/checklists.php:744
+#: modules/checklists/checklists.php:815
 msgid "Label for the post editing screen"
 msgstr "Etiqueta para la pantalla de edición de la entrada"
 
-#: modules/checklists/checklists.php:748
+#: modules/checklists/checklists.php:819
 msgid "Leave empty to use the default editing screen label"
 msgstr ""
 "Dejar en blanco para utilizar la etiqueta por defecto de la pantalla de "
 "edición"
 
-#: modules/checklists/checklists.php:752
+#: modules/checklists/checklists.php:823
 msgid "Preview in editing screen:"
 msgstr "Vista previa en la pantalla de edición:"
 
-#: modules/checklists/checklists.php:756
+#: modules/checklists/checklists.php:827
 msgid "Default checklist label will be used."
 msgstr "Se usará la etiqueta por defecto de la lista de verificación."
 
-#: modules/checklists/checklists.php:760
+#: modules/checklists/checklists.php:831
 msgid "Save"
 msgstr "Guardar"
 
-#: modules/checklists/checklists.php:764
+#: modules/checklists/checklists.php:835
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: modules/checklists/checklists.php:772
+#: modules/checklists/checklists.php:843
 msgid "No results found"
 msgstr "No se han encontrado resultados"
 
-#: modules/checklists/checklists.php:773
+#: modules/checklists/checklists.php:844
 msgid "Searching…"
 msgstr "Buscando…"
 
-#: modules/checklists/checklists.php:777
+#: modules/checklists/checklists.php:849
+msgid "Set requirement status"
+msgstr "Establecer estado de requisito"
+
+#: modules/checklists/checklists.php:850
+msgid "Roles that can ignore this task"
+msgstr "Roles que pueden ignorar esta tarea"
+
+#: modules/checklists/checklists.php:851
+msgid "Roles that can mark this task as complete"
+msgstr "Roles que pueden marcar esta tarea como completa"
+
+#: modules/checklists/checklists.php:852
+msgid "Custom task added."
+msgstr "Tarea personalizada añadida."
+
+#: modules/checklists/checklists.php:853
+msgid "Custom task removed."
+msgstr "Tarea personalizada eliminada."
+
+#: modules/checklists/checklists.php:854
+msgid "OpenAI prompt task added."
+msgstr "Tarea de indicación de OpenAI añadida."
+
+#: modules/checklists/checklists.php:855
+msgid "OpenAI prompt task removed."
+msgstr "Tarea de indicación de OpenAI eliminada."
+
+#: modules/checklists/checklists.php:858
 msgid "Suggested Prompts"
 msgstr "Indicaciones sugeridas"
 
-#: modules/checklists/checklists.php:778
+#: modules/checklists/checklists.php:859
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr ""
 "¿Cuál es la respuesta esperada de OpenAI para marcar el requisito como "
 "aprobado?"
 
-#: modules/checklists/checklists.php:781
+#: modules/checklists/checklists.php:862
 msgid "Clear Content"
 msgstr "Vaciar el contenido"
 
-#: modules/checklists/checklists.php:782
+#: modules/checklists/checklists.php:863
 msgid "Is this content clear and easy to read?"
 msgstr "¿El contenido es claro y fácil de leer?"
 
-#: modules/checklists/checklists.php:785
+#: modules/checklists/checklists.php:866
 msgid "Friendly Tone Content"
 msgstr "Tono del contenido amigable"
 
-#: modules/checklists/checklists.php:786
+#: modules/checklists/checklists.php:867
 msgid "Is this content tone friendly?"
 msgstr "¿Este tono de contenido es amigable?"
 
-#: modules/checklists/checklists.php:789
+#: modules/checklists/checklists.php:870
 msgid "Professional Tone Content"
 msgstr "Tono del contenido profesional"
 
-#: modules/checklists/checklists.php:790
+#: modules/checklists/checklists.php:871
 msgid "Is this content tone professional?"
 msgstr "¿Este tono de contenido es profesional?"
 
-#: modules/checklists/checklists.php:793
+#: modules/checklists/checklists.php:874
 msgid "Persuasive Tone Content"
 msgstr "Tono del contenido persuasivo"
 
-#: modules/checklists/checklists.php:794
+#: modules/checklists/checklists.php:875
 msgid "Is this content tone persuasive?"
 msgstr "¿Este tono de contenido es persuasivo?"
 
-#: modules/checklists/checklists.php:797
+#: modules/checklists/checklists.php:878
 msgid "Empathetic Tone Content"
 msgstr "Tono del contenido empático"
 
-#: modules/checklists/checklists.php:798
+#: modules/checklists/checklists.php:879
 msgid "Is this content tone empathetic?"
 msgstr "¿Este tono de contenido es empático?"
 
-#: modules/checklists/checklists.php:801
+#: modules/checklists/checklists.php:882
 msgid "Adventurous Tone Content"
 msgstr "Tono del contenido aventurero"
 
-#: modules/checklists/checklists.php:802
+#: modules/checklists/checklists.php:883
 msgid "Is this content tone adventurous?"
 msgstr "¿Este tono de contenido es aventurero?"
 
-#: modules/checklists/checklists.php:805
+#: modules/checklists/checklists.php:886
 msgid "Promotional Tone Content"
 msgstr "Tono del contenido promocional"
 
-#: modules/checklists/checklists.php:806
+#: modules/checklists/checklists.php:887
 msgid "Is this content tone promotional?"
 msgstr "¿Este tono de contenido es promocional?"
 
-#: modules/checklists/checklists.php:872
-#: modules/checklists/checklists.php:960
+#: modules/checklists/checklists.php:961
+#: modules/checklists/checklists.php:1168
+#: modules/checklists/checklists.php:1742
+#: modules/checklists/assets/js/gutenberg-panel.jsx:597
 msgid "Checklist"
 msgstr "Lista de verificación"
 
-#: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1303
+#: modules/checklists/checklists.php:1164
+#: modules/checklists/checklists.php:1743
 msgid "You don't have to complete any Checklist tasks."
 msgstr "No tienes que completar ninguna tarea de la lista de verificación."
 
-#: modules/checklists/checklists.php:961
+#: modules/checklists/checklists.php:1169
 msgid "Are you sure you want to publish anyway?"
 msgstr "¿Seguro que quieres publicar de todos modos?"
 
-#: modules/checklists/checklists.php:965
+#: modules/checklists/checklists.php:1173
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "¿Seguro que quieres actualizar la entrada publicada de todos modos?"
 
-#: modules/checklists/checklists.php:969
+#: modules/checklists/checklists.php:1177
 msgid "Please complete the following tasks before publishing:"
 msgstr "Por favor, completa las siguientes tareas antes de publicar:"
 
-#: modules/checklists/checklists.php:973
+#: modules/checklists/checklists.php:1181
 msgid "Please complete the following tasks before updating the published post:"
 msgstr "Por favor, completa estas tareas antes de actualizar la estrada publicada:"
 
-#: modules/checklists/checklists.php:977
-#: modules/checklists/checklists.php:981
+#: modules/checklists/checklists.php:1185
+#: modules/checklists/checklists.php:1189
 msgid "Not required, but important: "
 msgstr "No es obligatorio, pero es importante: "
 
-#: modules/checklists/checklists.php:987
+#: modules/checklists/checklists.php:1193
+msgid "These recommendations are missing:"
+msgstr "Faltan estas recomendaciones:"
+
+#: modules/checklists/checklists.php:1199
 msgid "One or more items in the checklist are not completed"
 msgstr "No se han completado uno o más elementos de la lista de verificación"
 
-#: modules/checklists/checklists.php:1024
+#: modules/checklists/checklists.php:1209
+msgid "completed"
+msgstr "completado"
+
+#: modules/checklists/checklists.php:1210
+msgid "not completed"
+msgstr "no completado"
+
+#: modules/checklists/checklists.php:1211
+#: modules/checklists/checklists.php:1265
+#: modules/checklists/checklists.php:1747
+msgid "Completed"
+msgstr "Completado"
+
+#: modules/checklists/checklists.php:1212
+#: modules/checklists/checklists.php:1266
+#: modules/checklists/checklists.php:1748
+msgid "Not completed"
+msgstr "No completado"
+
+#: modules/checklists/checklists.php:1213
+msgid "Dismiss this notice."
+msgstr "Descartar este aviso."
+
+#: modules/checklists/checklists.php:1215
+#. translators: Live count badge next to a counter task with a maximum. %1$s is the current count, %2$s is the maximum.
+#, fuzzy, php-format
+msgid "%1$s / %2$s"
+msgstr "%1$s / %2$s"
+
+#: modules/checklists/checklists.php:1217
+#. translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum.
+#, fuzzy, php-format
+msgid "%1$s, min %2$s"
+msgstr "%1$s, min %2$s"
+
+#: modules/checklists/checklists.php:1218
+msgid "The checklist task could not be saved. Please try again."
+msgstr ""
+"No se pudo guardar la tarea de la lista de verificación. Por favor, "
+"inténtalo de nuevo."
+
+#: modules/checklists/checklists.php:1255
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr ""
 "No tienes que completar ninguna de las %stareas de la lista de "
 "verificación%s."
 
-#: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:500
+#: modules/checklists/checklists.php:1261
+#: modules/checklists/assets/js/gutenberg-panel.jsx:545
 msgid "Check Now"
 msgstr "Comprobar ahora"
 
-#: modules/checklists/checklists.php:1031
+#: modules/checklists/checklists.php:1262
 msgid "Ok"
 msgstr "Aceptar"
 
-#: modules/checklists/checklists.php:1032, fuzzy
+#: modules/checklists/checklists.php:1263, fuzzy
 msgid "No"
 msgstr "No"
 
-#: modules/checklists/checklists.php:1033
+#: modules/checklists/checklists.php:1264
 msgid "Yes"
 msgstr "Sí"
 
-#: modules/checklists/checklists.php:1197
+#: modules/checklists/checklists.php:1267
+msgid "Checklist requirements"
+msgstr "Requisitos de la lista de verificación"
+
+#: modules/checklists/checklists.php:1636
 msgid "Task"
 msgstr "Tarea"
 
-#: modules/checklists/checklists.php:1198
+#: modules/checklists/checklists.php:1637
 msgid "Disabled, Recommended or Required"
 msgstr "Desactivado, Recomendado u Obligatorio"
 
-#: modules/checklists/checklists.php:1199
+#: modules/checklists/checklists.php:1638
 msgid "Options"
 msgstr "Opciones"
 
-#: modules/checklists/checklists.php:1200
+#: modules/checklists/checklists.php:1639
 msgid "Add custom task"
 msgstr "Añadir tarea personalizada"
 
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1740
 msgid "Please complete the required(*) checklists task."
 msgstr "Por favor, completa la tarea obligatoria(*) de las listas de verificación."
 
-#: modules/checklists/checklists.php:1304
+#: modules/checklists/checklists.php:1744
 msgid "required"
 msgstr "obligatorio"
 
-#: modules/checklists/checklists.php:1309
-#: modules/checklists/templates/meta-box.php:16
+#: modules/checklists/checklists.php:1751
+#: modules/checklists/templates/meta-box.php:19
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr ""
 "Las tareas de las listas de verificación no están disponibles en los "
 "editores de Elementor"
 
-#: modules/checklists/pro-requirements.php:22
+#: modules/checklists/pro-requirements.php:24
 msgid "All in One SEO Headline Score"
 msgstr "Puntuación del titular SEO de All in One"
 
-#: modules/checklists/pro-requirements.php:31
+#: modules/checklists/pro-requirements.php:33
 msgid "All in One SEO Score"
 msgstr "Puntuación SEO de All in One"
 
-#: modules/checklists/pro-requirements.php:40
+#: modules/checklists/pro-requirements.php:42
 msgid "Featured image height"
 msgstr "Altura de la imagen destacada"
 
-#: modules/checklists/pro-requirements.php:49
+#: modules/checklists/pro-requirements.php:51
 msgid "Featured image width"
 msgstr "Anchura de la imagen destacada"
 
-#: modules/checklists/pro-requirements.php:58
+#: modules/checklists/pro-requirements.php:60
 msgid "H1, H2, H3 etc tags are used in logical order"
 msgstr "Las etiquetas H1, H2, H3, etc. son utilizadas en orden lógico"
 
-#: modules/checklists/pro-requirements.php:67
+#: modules/checklists/pro-requirements.php:69
 msgid "Number of images in content"
 msgstr "Número de imágenes en el contenido"
 
-#: modules/checklists/pro-requirements.php:76
+#: modules/checklists/pro-requirements.php:78
 msgid "Number of characters in image captions"
 msgstr "Número de caracteres en las leyendas de las imágenes"
 
-#: modules/checklists/pro-requirements.php:85
+#: modules/checklists/pro-requirements.php:87
 msgid "Number of audio items in content"
 msgstr "Número de elementos de audio en el contenido"
 
-#: modules/checklists/pro-requirements.php:94
+#: modules/checklists/pro-requirements.php:96
 msgid "Number of video items in content"
 msgstr "Número de elementos de vídeo en el contenido"
 
-#: modules/checklists/pro-requirements.php:103
+#: modules/checklists/pro-requirements.php:105
 msgid "Approved by role"
 msgstr "Aprobado por el perfil"
 
-#: modules/checklists/pro-requirements.php:110
+#: modules/checklists/pro-requirements.php:112
 msgid "Approved by specific user"
 msgstr "Aprobado por un usuario específico"
 
-#: modules/checklists/pro-requirements.php:117
+#: modules/checklists/pro-requirements.php:119
 msgid "Avoid heading tags in content"
 msgstr "Evita las etiquetas de encabezado en el contenido"
 
-#: modules/checklists/pro-requirements.php:124
+#: modules/checklists/pro-requirements.php:126
 msgid "Prohibited words"
 msgstr "Palabras prohibidas"
 
-#: modules/checklists/pro-requirements.php:131
+#: modules/checklists/pro-requirements.php:133
+msgid "Required words"
+msgstr "Palabras requeridas"
+
+#: modules/checklists/pro-requirements.php:140
 msgid "Publish time should be at a specific time"
 msgstr "La hora de publicación debe ser una hora determinada"
 
-#: modules/checklists/pro-requirements.php:139
+#: modules/checklists/pro-requirements.php:148
 msgid "Publish time should be in the future"
 msgstr "La hora de publicación debe ser en el futuro"
 
-#: modules/checklists/pro-requirements.php:147
+#: modules/checklists/pro-requirements.php:156
 msgid "Rank Math SEO Score"
 msgstr "Puntuación SEO de Rank Math"
 
-#: modules/checklists/pro-requirements.php:156
+#: modules/checklists/pro-requirements.php:165
 msgid "Only one H1 tag in content"
 msgstr "Solo una etiqueta H1 en el contenido"
 
-#: modules/checklists/pro-requirements.php:163
+#: modules/checklists/pro-requirements.php:172
 msgid "Tables have a header row"
 msgstr "Las tablas tienen una fila de encabezado"
 
-#: modules/checklists/pro-requirements.php:170
+#: modules/checklists/pro-requirements.php:179
 msgid "Check the \"Allow backorders?\" box"
 msgstr "Marca la casilla «¿Permitir pedidos pendientes?»."
 
-#: modules/checklists/pro-requirements.php:178
+#: modules/checklists/pro-requirements.php:187
 msgid "Select some products for \"Cross-sells\""
 msgstr "Selecciona unos productos para las «Ventas cruzadas»"
 
-#: modules/checklists/pro-requirements.php:186
+#: modules/checklists/pro-requirements.php:195
 msgid "Discount for the \"Sale price\""
 msgstr "Descuento por el «Precio de oferta»"
 
-#: modules/checklists/pro-requirements.php:194
+#: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Downloadable\" box"
 msgstr "Marca la casilla «Descargable»"
 
-#: modules/checklists/pro-requirements.php:202
+#: modules/checklists/pro-requirements.php:211
 msgid "Product image"
 msgstr "Imagen del producto"
 
-#: modules/checklists/pro-requirements.php:210
+#: modules/checklists/pro-requirements.php:219
 msgid "Check the \"Manage stock?\" box"
 msgstr "Marca la casilla «Gestionar el almacen?»"
 
-#: modules/checklists/pro-requirements.php:218
+#: modules/checklists/pro-requirements.php:227
 msgid "Enter a \"Regular price\""
 msgstr "Introduce un «Precio regular»"
 
-#: modules/checklists/pro-requirements.php:226
+#: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"Sale price\""
 msgstr "Introduce un «Precio de oferta»"
 
-#: modules/checklists/pro-requirements.php:234
+#: modules/checklists/pro-requirements.php:243
 msgid "Schedule the \"Sale price\""
 msgstr "Programa el «Precio de oferta»"
 
-#: modules/checklists/pro-requirements.php:242
+#: modules/checklists/pro-requirements.php:251
 msgid "Enter a \"SKU\""
 msgstr "Introduce un «SKU»"
 
-#: modules/checklists/pro-requirements.php:250
+#: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Sold individually\" box"
 msgstr "Marca la casilla «Vendido individualmente»"
 
-#: modules/checklists/pro-requirements.php:258
+#: modules/checklists/pro-requirements.php:267
 msgid "Select some products for \"Upsells\""
 msgstr "Selecciona unos productos para las «Ventas adicionales»"
 
-#: modules/checklists/pro-requirements.php:266
+#: modules/checklists/pro-requirements.php:275
 msgid "Check the \"Virtual\" box"
 msgstr "Marca la casilla «Virtual»"
 
-#: modules/checklists/pro-requirements.php:297
+#: modules/checklists/pro-requirements.php:306
 #, php-format
 msgid "Number of Characters in %s field"
 msgstr "Número de caracter en el campo %s"
 
-#: modules/checklists/pro-requirements.php:310
+#: modules/checklists/pro-requirements.php:319
 #, php-format
 msgid "%s is filled"
 msgstr "%s está relleno"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About PublishPress Checklists"
 msgstr "Acerca de PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About"
 msgstr "Acerca de"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "PublishPress Checklists Documentation"
 msgstr "Documentación de PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "Documentation"
 msgstr "Documentación"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact the PublishPress team"
 msgstr "Contacta con el equipo de PublishPress"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact"
 msgstr "Contacto"
 
-#: modules/checklists/templates/global-checklists.php:6
+#: modules/checklists/templates/global-checklists.php:7
 msgid "Settings saved successfully!"
 msgstr "¡Los ajustes han sido guardado correctamente!"
 
-#: modules/checklists/templates/global-checklists.php:12
-#: modules/checklists/templates/global-checklists.php:217
+#: modules/checklists/templates/global-checklists.php:13
+#: modules/checklists/templates/global-checklists.php:268
 msgid "Save Changes"
 msgstr "Guardar cambios"
 
-#: modules/checklists/templates/global-checklists.php:152
+#: modules/checklists/templates/global-checklists.php:16
+msgid "Post types"
+msgstr "Tipos de publicaciones"
+
+#: modules/checklists/templates/global-checklists.php:74
+#, php-format
+msgid "Checklist sections for %s"
+msgstr "Secciones de la lista de verificación para %s"
+
+#: modules/checklists/templates/global-checklists.php:203
 msgid "Pro feature"
 msgstr "Característica Pro"
 
-#: modules/checklists/templates/global-checklists.php:165
+#: modules/checklists/templates/global-checklists.php:216
 #, php-format
 msgid "No %s requirements for this post type."
 msgstr "No hay requisitos %s para este tipo de contenido."
 
-#: modules/checklists/templates/global-checklists.php:183
+#: modules/checklists/templates/global-checklists.php:234
 msgid "New Item"
 msgstr "Nuevo elemento"
 
-#: modules/checklists/templates/global-checklists.php:184
+#: modules/checklists/templates/global-checklists.php:235
 msgid "Description"
 msgstr "Descripción"
 
-#: modules/checklists/templates/global-checklists.php:196
+#: modules/checklists/templates/global-checklists.php:247
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
@@ -1148,50 +1823,55 @@ msgstr ""
 "Las tareas personalizadas no se completan automáticamente. Los usuarios "
 "deben marcar la caja para indicar que han completado la tarea."
 
-#: modules/checklists/templates/global-checklists.php:203
+#: modules/checklists/templates/global-checklists.php:254
 msgid "Add OpenAI Prompt task"
 msgstr "Añadir tarea de indicación de OpenAI"
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "The prompt should be in form of a question."
 msgstr "La indicación debe tener forma de pregunta."
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "This feature requires an OpenAI API Key."
 msgstr ""
 "Para utilizar esta característica es obligatorio disponer de una clave API "
 "de OpenAI."
 
-#: modules/permalinks/lib/Requirement/ValidChars.php:44
+#: modules/permalinks/lib/Requirement/ValidChars.php:46
 msgid "Latin characters in permalink"
 msgstr "Caracteres latinos en el enlace permanente"
 
-#: modules/permalinks/permalinks.php:65
+#: modules/permalinks/permalinks.php:67
 msgid "Permalinks"
 msgstr "Enlaces permanentes"
 
-#: modules/permalinks/permalinks.php:66
+#: modules/permalinks/permalinks.php:68
 msgid "Define tasks related to permalinks"
 msgstr "Definir las tareas relacionadas con los enlaces permanentes"
 
-#: modules/permissions/permissions.php:68
+#: modules/permissions/permissions.php:70
 msgid "Permissions"
 msgstr "Permisos"
 
-#: modules/permissions/permissions.php:107
+#: modules/permissions/permissions.php:109
 msgid "Exclude User Roles"
 msgstr "Excluir perfiles de usuario"
 
-#: modules/reviews/reviews.php:61
+#: modules/permissions/permissions.php:127
+#, php-format
+msgid "Roles that can ignore %s"
+msgstr "Roles que pueden ignorar %s"
+
+#: modules/reviews/reviews.php:63
 msgid "Reviews"
 msgstr "Valoraciones"
 
-#: modules/settings/settings.php:62
-#: modules/settings/settings.php:132
+#: modules/settings/settings.php:64
+#: modules/settings/settings.php:135
 msgid "Checklists Settings"
 msgstr "Ajustes de las listas de verificación"
 
-#: modules/settings/settings.php:162
+#: modules/settings/settings.php:166
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
@@ -1199,32 +1879,36 @@ msgstr ""
 "¿Seguro que quieres restablecer todos los elementos de la lista de "
 "verificación a sus etiquetas por defecto? Esta acción no se puede deshacer."
 
-#: modules/settings/settings.php:163
+#: modules/settings/settings.php:167
 msgid "Resetting..."
 msgstr "Restableciendo…"
 
-#: modules/settings/settings.php:164
-#: modules/settings/settings.php:1602
+#: modules/settings/settings.php:168
+#: modules/settings/settings.php:1617
 msgid "Reset All Renamed Labels"
 msgstr "Restablecer todas las etiquetas renombradas"
 
-#: modules/settings/settings.php:327
+#: modules/settings/settings.php:284
+msgid "Settings sections"
+msgstr "Secciones de configuración"
+
+#: modules/settings/settings.php:338
 msgid "Features"
 msgstr "Características"
 
-#: modules/settings/settings.php:328
+#: modules/settings/settings.php:339
 msgid "Feel free to select only the features you need."
 msgstr "Siéntete libre de seleccionar sólo las características que necesitas."
 
-#: modules/settings/settings.php:336
+#: modules/settings/settings.php:347
 msgid "Enabled features"
 msgstr "Características activadas"
 
-#: modules/settings/settings.php:391
+#: modules/settings/settings.php:402
 msgid "There are no PublishPress modules registered"
 msgstr "No hay módulos de PublishPress registrados"
 
-#: modules/settings/settings.php:487
+#: modules/settings/settings.php:500
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
@@ -1233,99 +1917,99 @@ msgstr ""
 "Desactivado porque `add_post_type_support('%1$s', '%2$s')` está incluido en "
 "un archivo cargado."
 
-#: modules/settings/settings.php:812
+#: modules/settings/settings.php:827
 msgid "Enable User Roles Filter:"
 msgstr "Activar el filtro de perfiles de usuario:"
 
-#: modules/settings/settings.php:820
+#: modules/settings/settings.php:835
 msgid "Show warning icon:"
 msgstr "Mostrar el icono de advertencia:"
 
-#: modules/settings/settings.php:828
+#: modules/settings/settings.php:843
 msgid "Highlight failing blocks in the editor:"
 msgstr "Resaltar los bloques con errores en el editor:"
 
-#: modules/settings/settings.php:836
+#: modules/settings/settings.php:851
 msgid "Delete data on uninstall:"
 msgstr "Borra los datos al desinstalar:"
 
-#: modules/settings/settings.php:845
+#: modules/settings/settings.php:860
 msgid "Enable Status Filter:"
 msgstr "Activar el filtro de estado:"
 
-#: modules/settings/settings.php:855
+#: modules/settings/settings.php:870
 msgid "Enable Duplicate Checklists:"
 msgstr "Activar la duplicación de listas de verificación:"
 
-#: modules/settings/settings.php:865
+#: modules/settings/settings.php:880
 msgid "Show Checklists column in post lists:"
 msgstr "Mostrar la columna «Listas de verificación» en las listas de entradas:"
 
-#: modules/settings/settings.php:875
+#: modules/settings/settings.php:890
 msgid "Enable Taxonomy Filter:"
 msgstr "Activar el filtro de taxonomía:"
 
-#: modules/settings/settings.php:894
+#: modules/settings/settings.php:909
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Desactiva la opción «Estado» cuando utilices la «Edición rápida»:"
 
-#: modules/settings/settings.php:902
+#: modules/settings/settings.php:917
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Desactivar la «Edición rápida» completamente:"
 
-#: modules/settings/settings.php:910
+#: modules/settings/settings.php:925
 msgid "Disable \"Publish\" button:"
 msgstr "Desactivar el botón «Publicar»:"
 
-#: modules/settings/settings.php:928
+#: modules/settings/settings.php:943
 msgid "Complete Icon:"
 msgstr "Icono completo:"
 
-#: modules/settings/settings.php:936
+#: modules/settings/settings.php:951
 msgid "Incomplete Icon:"
 msgstr "Icono incompleto:"
 
-#: modules/settings/settings.php:944
+#: modules/settings/settings.php:959
 msgid "Required Complete Color:"
 msgstr "Color completo obligatorio:"
 
-#: modules/settings/settings.php:952
+#: modules/settings/settings.php:967
 msgid "Required Incomplete Color:"
 msgstr "Color incompleto obligatorio:"
 
-#: modules/settings/settings.php:960
+#: modules/settings/settings.php:975
 msgid "Required Asterisk Color:"
 msgstr "Color del asterisco obligatorio:"
 
-#: modules/settings/settings.php:968
+#: modules/settings/settings.php:983
 msgid "Recommended Complete Color:"
 msgstr "Color completo recomendado:"
 
-#: modules/settings/settings.php:976
+#: modules/settings/settings.php:991
 msgid "Recommended Incomplete Color:"
 msgstr "Color incompleto recomendado:"
 
-#: modules/settings/settings.php:984
+#: modules/settings/settings.php:999
 msgid "Rename task labels:"
 msgstr "Renombrar etiqueta de tarea"
 
-#: modules/settings/settings.php:992
+#: modules/settings/settings.php:1007
 msgid "Checklist task sort order:"
 msgstr "Orden de clasificación de las tareas de la lista de verificación:"
 
-#: modules/settings/settings.php:1010
+#: modules/settings/settings.php:1025
 msgid "OpenAI API Key:"
 msgstr "Clave API de OpenAI:"
 
-#: modules/settings/settings.php:1025
+#: modules/settings/settings.php:1040
 msgid "Reset Renamed Checklist:"
 msgstr "Restablecer la lista de verificación renombrada:"
 
-#: modules/settings/settings.php:1044
+#: modules/settings/settings.php:1059
 msgid "Post types:"
 msgstr "Tipos de contenido:"
 
-#: modules/settings/settings.php:1077
+#: modules/settings/settings.php:1092
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1333,13 +2017,13 @@ msgstr ""
 "Esto permite desactivar tareas para estados específicos, como «Borrador» o "
 "«Publicado»."
 
-#: modules/settings/settings.php:1098
+#: modules/settings/settings.php:1113
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr ""
 "Esto permite a los usuarios duplicar tareas existentes de la lista de "
 "verificación."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1135
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1347,7 +2031,7 @@ msgstr ""
 "Añade una columna de listas de verificación a la pantalla «Entradas» que "
 "muestre cuántos requisitos se han completado."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1156
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1355,7 +2039,7 @@ msgstr ""
 "Esto permite desactivar tareas para entradas con términos de taxonomía "
 "específicos. Ve a la pestaña «Tipos de contenido» y selecciona los términos."
 
-#: modules/settings/settings.php:1163
+#: modules/settings/settings.php:1178
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
@@ -1363,7 +2047,7 @@ msgstr ""
 "Esto mostrará un icono de advertencia en el cuadro «Listas de verificación» "
 "si los requisitos están incompletos."
 
-#: modules/settings/settings.php:1183
+#: modules/settings/settings.php:1198
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
@@ -1371,7 +2055,7 @@ msgstr ""
 "Esto resaltará los bloques de Gutenberg que no superen las tareas de la "
 "lista de verificación específicas de cada bloque."
 
-#: modules/settings/settings.php:1203
+#: modules/settings/settings.php:1218
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1379,11 +2063,11 @@ msgstr ""
 "Cuando esté activado, todos los datos de PublishPress Checklists se "
 "borrarán si se desinstala el plugin."
 
-#: modules/settings/settings.php:1224
+#: modules/settings/settings.php:1239
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "Esto mostrará las opciones de «Excluir perfiles de usuario»."
 
-#: modules/settings/settings.php:1245
+#: modules/settings/settings.php:1260
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1391,7 +2075,7 @@ msgstr ""
 "Se recomienda desactivar la opción «Estado» porque puede utilizarse para "
 "evitar el uso de los requisitos de las listas de control."
 
-#: modules/settings/settings.php:1266
+#: modules/settings/settings.php:1281
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1399,7 +2083,7 @@ msgstr ""
 "Esto desactivará la «Edición rápida» para todos los usuarios, excepto "
 "aquellos con la capacidad «manage_options»."
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1302
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
@@ -1407,86 +2091,86 @@ msgstr ""
 "Esto desactivará el botón «Publicar» cuando no se cumplan los requisitos de "
 "la lista de verificación."
 
-#: modules/settings/settings.php:1306
+#: modules/settings/settings.php:1321
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr ""
 "Introduce tu clave API para utilizar las indicaciones de OpenAI en las "
 "tareas de las listas de verificación."
 
-#: modules/settings/settings.php:1379
+#: modules/settings/settings.php:1394
 msgid "Post Types"
 msgstr "Tipos de contenido"
 
-#: modules/settings/settings.php:1380, fuzzy
+#: modules/settings/settings.php:1395, fuzzy
 msgid "General"
 msgstr "General"
 
-#: modules/settings/settings.php:1381
+#: modules/settings/settings.php:1396
 msgid "Publishing Options"
 msgstr "Opciones de publicación"
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1397
 msgid "Appearance"
 msgstr "Apariencia"
 
-#: modules/settings/settings.php:1383
+#: modules/settings/settings.php:1398
 msgid "Integration"
 msgstr "Integración"
 
-#: modules/settings/settings.php:1384
+#: modules/settings/settings.php:1399
 msgid "Tools"
 msgstr "Herramientas"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr ""
 "Introduce un nombre de clase Dashicons (por ejemplo, dashicons-yes, "
 "dashicons-saved). "
 
-#: modules/settings/settings.php:1432
 #: modules/settings/settings.php:1447
+#: modules/settings/settings.php:1462
 msgid "View Dashicons"
 msgstr "Ver Dashicons"
 
-#: modules/settings/settings.php:1446
+#: modules/settings/settings.php:1461
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr ""
 "Introduce un nombre de clase Dashicons (por ejemplo, dashicons-no, "
 "dashicons-dismiss). "
 
-#: modules/settings/settings.php:1529
+#: modules/settings/settings.php:1544
 msgid "Allow admins to rename task labels for the post editor."
 msgstr ""
 "Permitir a los administradores de renombrar las etiquetas de la tarea para "
 "el editor de entrada."
 
-#: modules/settings/settings.php:1547
+#: modules/settings/settings.php:1562
 msgid "Default"
 msgstr "Por defecto"
 
-#: modules/settings/settings.php:1548
+#: modules/settings/settings.php:1563
 msgid "Priority"
 msgstr "Prioridad"
 
-#: modules/settings/settings.php:1549
+#: modules/settings/settings.php:1564
 msgid "Alphabetical"
 msgstr "Alfabético"
 
-#: modules/settings/settings.php:1553
+#: modules/settings/settings.php:1568
 msgid "Keeps tasks in the order configured on the Checklists screen."
 msgstr ""
 "Mantiene las tareas en el orden configurado en la pantalla de Listas de "
 "Verificación."
 
-#: modules/settings/settings.php:1557
+#: modules/settings/settings.php:1572
 msgid "Shows Required tasks before Recommended tasks."
 msgstr "Muestra las tareas Obligatorias antes que las tareas Recomendadas."
 
-#: modules/settings/settings.php:1561
+#: modules/settings/settings.php:1576
 msgid "Sorts tasks alphabetically by task label."
 msgstr "Ordena las tareas alfabéticamente por la etiqueta de la tarea."
 
-#: modules/settings/settings.php:1604
+#: modules/settings/settings.php:1619
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
@@ -1495,143 +2179,143 @@ msgstr ""
 "hayan renombrado en el panel de administración de WordPress y en la "
 "pantalla de edición, devolviéndolas a sus etiquetas por defecto."
 
-#: modules/settings/settings.php:1614
+#: modules/settings/settings.php:1629
 msgid "Security check failed."
 msgstr "La comprobación de seguridad ha fallado."
 
-#: modules/settings/settings.php:1619
+#: modules/settings/settings.php:1634
 msgid "You do not have permission to perform this action."
 msgstr "No tienes los permisos necesarios para realizar esta acción."
 
-#: modules/settings/settings.php:1664
+#: modules/settings/settings.php:1679
 msgid "All renamed labels have been reset successfully."
 msgstr "Todas las etiquetas renombradas han sido restablecidas correctamente."
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 msgid "Number of characters in Yoast SEO focus keyword"
 msgstr "Número de caracteres en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
 msgstr "Minimo de %d caracter en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
 msgstr "Minimo de %d caracteres en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
 msgstr "Máximo de %d caracter en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
 msgstr "Máximo de %d caracteres en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
 msgstr "%d caracter en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:48
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
 msgstr "%d caracteres en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
 msgstr "Entre %d y %d caracteres en la palabra clave objetivo de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:39
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:40
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 msgid "Number of characters in Yoast SEO meta description"
 msgstr "Número de caracteres en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
 msgstr "Minimo de %d caracter en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
 msgstr "Minimo de %d caracteres en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
 msgstr "Máximo de %d caracter en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
 msgstr "Máximo de %d caracteres en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "%d character in Yoast SEO meta description"
 msgstr "%d caracter en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:48
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
 msgstr "%d caracteres en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
 msgstr "Entre %d y %d caracter en la descripción meta de Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:57
 msgid "Minimum Yoast SEO readability score"
 msgstr "Mínima puntuación de legibilidad en Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:139
 #. translators: %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
 msgstr "Legibilidad Yoast: %s"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:135
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:170
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:169
 msgid "OK"
 msgstr "Correcto"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:140
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:171
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:139
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:170
 msgid "Good"
 msgstr "Bueno"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:56
 msgid "Minimum Yoast SEO analysis score"
 msgstr "Puntuación mínima del análisis Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:133
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:138
 #. translators: %s expands to the seo score
 #, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
-#: modules/yoastseo/yoastseo.php:69
+#: modules/yoastseo/yoastseo.php:72
 msgid "Define tasks related to Yoast SEO"
 msgstr "Definir tareas de Yoast SEO"
 
-#: publishpress-checklists.php:103
+#: publishpress-checklists.php:107
 msgid "This plugin can be deleted."
 msgstr "Este plugin puede ser borrado."
 
-#: publishpress-checklists.php:154
+#: publishpress-checklists.php:164
 #, php-format
 msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "

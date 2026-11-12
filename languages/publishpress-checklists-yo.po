@@ -1,5 +1,5 @@
 # Copyright (C) 2026 PublishPress
-# This file is distributed under the same license as the PublishPress Checklists plugin.
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-01-27T14:26:22+00:00\n"
-"PO-Revision-Date: 2026-04-15 17:35+0000\n"
+"PO-Revision-Date: 2026-11-12 14:38+0000\n"
 "X-Generator: Weblate 5.14.3\n"
 "X-Domain: publishpress-checklists\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -31,109 +31,590 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 
-#: publishpress-checklists.php
-#: core/Legacy/Module.php:286, fuzzy
+#: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
-msgid "PublishPress Checklists"
-msgstr "PublishPress Checklists"
+msgid "PublishPress Checklists Free"
+msgstr "PublishPress Checklists Free"
 
-#: publishpress-checklists.php, fuzzy
+#: publishpress-checklists.php:5
 #. Plugin URI of the plugin
 msgid "https://publishpress.com/"
 msgstr "https://publishpress.com/"
 
-#: publishpress-checklists.php
+#: publishpress-checklists.php:6
 #. Description of the plugin
 msgid ""
 "With PublishPress Checklists, you can choose publishing requirements for "
 "your content."
 msgstr "Pẹlu PublishPress Checklists, o le yan awọn ibeere titẹjade fun akoonu rẹ."
 
-#: publishpress-checklists.php, fuzzy
+#: publishpress-checklists.php:7
+#: core/Mcp/Bootstrap.php:37
+#: modules/checklists/templates/footer.php:45
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
 
-#: publishpress-checklists.php, fuzzy
+#: publishpress-checklists.php:8
 #. Author URI of the plugin
 msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
 
 #: core/API/LabelMapper.php:39
-#: modules/checklists/checklists.php:1116
+#: modules/checklists/checklists.php:1661
 msgid "Disabled"
 msgstr "Ti dènà"
 
 #: core/API/LabelMapper.php:40
-#: modules/checklists/checklists.php:1117
+#: modules/checklists/checklists.php:1260
+#: modules/checklists/checklists.php:1662
+#: modules/checklists/checklists.php:1746
+#: modules/checklists/assets/js/gutenberg-panel.jsx:493
 msgid "Recommended"
 msgstr "Ti a ṣe iṣeduro"
 
 #: core/API/LabelMapper.php:41
-#: modules/checklists/checklists.php:923
-#: modules/checklists/checklists.php:1118
+#: modules/checklists/checklists.php:1259
+#: modules/checklists/checklists.php:1663
+#: modules/checklists/checklists.php:1745
+#: modules/checklists/assets/js/gutenberg-panel.jsx:492
 msgid "Required"
 msgstr "Ti a beere"
 
-#: core/Legacy/LegacyPlugin.php:208
+#: core/Legacy/LegacyPlugin.php:217
 msgid "Please correct your form errors below and try again."
 msgstr "Jọwọ ṣatunṣe awọn aṣiṣe fọọmu rẹ ni isalẹ ki o si gbiyanju lẹẹkansi."
 
-#: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:510
+#: core/Legacy/LegacyPlugin.php:221
+#: modules/settings/settings.php:536
 msgid "Cheatin&#8217; uh?"
 msgstr "Ṣe o n ṣe ẹtan&#8217; bẹẹ ni?"
 
-#: core/Legacy/LegacyPlugin.php:213
+#: core/Legacy/LegacyPlugin.php:222
 msgid "You do not have necessary permissions to complete this action."
 msgstr "Iwọ ko ni awọn aṣẹ pataki lati pari iṣẹ yii."
 
-#: core/Legacy/LegacyPlugin.php:217
+#: core/Legacy/LegacyPlugin.php:226
 msgid "Post does not exist"
 msgstr "Ifiweranṣẹ ko si"
 
-#: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:107
-#: modules/checklists/checklists.php:110
-#: modules/checklists/checklists.php:1026
-#: modules/checklists/checklists.php:1041
-#: modules/checklists/checklists.php:1188
-#: modules/checklists/assets/js/gutenberg-panel.jsx:237
+#: core/Legacy/LegacyPlugin.php:360
+#: core/Plugin.php:83
+#: modules/checklists/checklists.php:125
+#: modules/checklists/checklists.php:1571
+#: modules/checklists/checklists.php:1586
+#: modules/checklists/checklists.php:1741
+#: modules/checklists/assets/js/gutenberg-panel.jsx:587
 msgid "Checklists"
 msgstr "Awọn Akojọ Ṣayẹwo"
 
-#: core/Legacy/Module.php:289
+#: core/Legacy/Module.php:292, fuzzy
+msgid "PublishPress Checklists"
+msgstr "PublishPress Checklists"
+
+#: core/Legacy/Module.php:295
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "Ti o ba fẹ %s jọwọ fi %s ipo silẹ fun wa. O ṣeun!"
 
-#: core/Legacy/Util.php:179
+#: core/Legacy/Util.php:183
 msgid "Need PublishPress Checklists Support?"
 msgstr "Ṣe o nilo Atilẹyin PublishPress Checklists?"
 
-#: core/Legacy/Util.php:185
+#: core/Legacy/Util.php:189
 msgid "If you need help or have a new feature request, let us know."
 msgstr "Tí o bá nílò ìrànlọ́wọ́ tàbí ní ìbéèrè tuntun fún ẹya kan, jẹ́ kí a mọ."
 
-#: core/Legacy/Util.php:188
+#: core/Legacy/Util.php:192
 msgid "Request Support"
 msgstr "Beere Atilẹyin"
 
-#: core/Legacy/Util.php:195
+#: core/Legacy/Util.php:199
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "Iwe-ẹri ti o ni alaye ni gbogbo wa tun wa lori oju opo wẹẹbu plugin naa."
 
-#: core/Legacy/Util.php:198
+#: core/Legacy/Util.php:202
 msgid "View Knowledge Base"
 msgstr "Wo Ile-ika Ẹkọ"
 
-#: core/Plugin.php:108
-#: modules/settings/settings.php:130
+#: core/Mcp/Bootstrap.php:38
+msgid "Actions provided by PublishPress plugins."
+msgstr "Iṣe ti a pese nipasẹ awọn afikun PublishPress."
+
+#: core/Mcp/Catalog.php:30
+msgid "Discover Checklists features"
+msgstr "Ṣawari awọn ẹya Checklists"
+
+#: core/Mcp/Catalog.php:31
+msgid ""
+"Discover native checklist configuration, custom and OpenAI tasks, "
+"publishing settings, appearance, per-post task states and active "
+"Pro/integration modules. Feature discovery grants no additional permissions."
+msgstr ""
+"Ṣawari iṣeto akojọ aṣayan abinibi, iṣẹ-ṣiṣe aṣa ati OpenAI, awọn eto "
+"atẹjade, irisi, ipin iṣẹ-ṣiṣe fun ọkọọkan awọn ifiweranṣẹ ati awọn modulu "
+"Pro / isopọ ti n ṣiṣẹ. Ṣawari ẹya ko fun ni awọn aṣẹ afikun."
+
+#: core/Mcp/Catalog.php:39
+msgid "Discover checklist post types"
+msgstr "Ṣawari awọn iru ifiweranṣẹ akojọ"
+
+#: core/Mcp/Catalog.php:40
+msgid ""
+"Read native supported post type names, labels, enabled state and "
+"configuration locks. Requires the filtered checklist management capability."
+msgstr ""
+"Ka awọn orukọ iru ifiweranṣẹ ti a ṣe atilẹyin, awọn aami, ipo ti a mu ṣiṣẹ "
+"ati awọn idena iṣeto. Nbeere agbara iṣakoso akojọ ti a lọ lọ."
+
+#: core/Mcp/Catalog.php:48
+msgid "Find checklist requirements"
+msgstr "Wa awọn ibeere akojọ"
+
+#: core/Mcp/Catalog.php:49
+msgid ""
+"Find native built-in, custom, OpenAI, duplicated and integration-specific "
+"task IDs for one post type. Includes labels, groups, configured rule and "
+"actual edition availability. Read one requirement for its exact fields and "
+"latest revision."
+msgstr ""
+"Wa awọn ID iṣẹ-ṣiṣe abinibi, aṣa, OpenAI, atunṣe ati pataki-isopọ fun iru "
+"ifiweranṣẹ kan. Ni awọn aami, awọn ẹgbẹ, ofin ti a ṣeto ati iraye si ẹda "
+"gangan. Ka ibeere kan fun awọn aaye gangan rẹ ati atunṣe tuntun rẹ."
+
+#: core/Mcp/Catalog.php:57
+msgid "Read checklist requirement settings"
+msgstr "Ka awọn eto ibeere akojọ"
+
+#: core/Mcp/Catalog.php:58
+msgid ""
+"Read one native task with exact per-post-type field names, types, choices, "
+"current settings and revision. Includes ranges, role/user selectors and "
+"labels when supported. Free Pro placeholders are unavailable for writes."
+msgstr ""
+"Ka iṣẹ-ṣiṣe abinibi kan pẹlu awọn orukọ aaye gangan fun iru ifiweranṣẹ "
+"kọọkan, awọn iru, awọn aṣayan, awọn eto lọwọlọwọ ati atunṣe. Ni awọn iwọn, "
+"awọn aṣayan ipa / olumulo ati awọn aami nigbati a ba ṣe atilẹyin. Awọn "
+"placeholders Pro ọfẹ ko wa fun kikọ."
+
+#: core/Mcp/Catalog.php:66
+msgid "Discover checklist requirement choices"
+msgstr "Ṣawari awọn aṣayan ibeere akojọ"
+
+#: core/Mcp/Catalog.php:67
+msgid ""
+"Read a bounded page of native field choices, including role/user choices "
+"and live assignable taxonomy term identifiers. Use returned values rather "
+"than inventing taxonomy IDs or names."
+msgstr ""
+"Ka oju-iwe ti o ni ihamọ ti awọn aṣayan aaye abinibi, pẹlu awọn aṣayan ipa "
+"/ olumulo ati awọn idanimọ ọrọ taxonomy ti o le jẹri laaye. Lo awọn iye ti "
+"a pada dipo ki o ṣẹda awọn IDs tabi awọn orukọ taxonomy."
+
+#: core/Mcp/Catalog.php:102
+msgid "Editable post; native task role/user restrictions also apply"
+msgstr ""
+"Ifiweranṣẹ ti o le ṣe atunṣe; awọn ihamọ ipa / olumulo iṣẹ-ṣiṣe abinibi tun "
+"wulo"
+
+#: core/Mcp/Catalog.php:102
+msgid "Site configuration"
+msgstr "Iṣeto aaye ayelujara"
+
+#: core/Mcp/Catalog.php:173
+#: core/Mcp/Requirements.php:225
+msgid "Choose a supported post type."
+msgstr "Yan iru ifiweranṣẹ ti a ṣe atilẹyin."
+
+#: core/Mcp/Catalog.php:194
+msgid "Choose a requirement from this post type's discovery."
+msgstr "Yan ibeere kan lati inu iwari iru ifiweranṣẹ yii."
+
+#: core/Mcp/Catalog.php:202
+msgid "Native taxonomy tokens from get-requirement-choices; do not invent names."
+msgstr ""
+"Awọn aami taxonomy abinibi lati get-requirement-choices; ma ṣe ṣẹda awọn "
+"orukọ."
+
+#: core/Mcp/Catalog.php:247
+msgid "Choose a discovered field."
+msgstr "Yan aaye ti a ṣe awari kan."
+
+#: core/Mcp/Catalog.php:253
+msgid "You cannot list users."
+msgstr "O ko le ṣe akojọ awọn olumulo."
+
+#: core/Mcp/Catalog.php:265
+msgid "You cannot access this taxonomy selector."
+msgstr "O ko le wọle si aṣayan taxonomy yii."
+
+#: core/Mcp/Options.php:96
+msgid "The settings could not be saved; original values were restored."
+msgstr "Awọn eto ko le jẹ fipamọ; awọn iye atilẹba ni a tunṣe."
+
+#: core/Mcp/Options.php:97
+msgid "Saving failed and recovery was incomplete. Read settings before retrying."
+msgstr "Fipamọ kuna ati imularada ko pari. Ka awọn eto ṣaaju ki o to tun gbiyanju."
+
+#: core/Mcp/Registry.php:68
+msgid "Use the exact field types returned by discovery."
+msgstr "Lo awọn iru aaye gangan ti a pada nipasẹ iwari."
+
+#: core/Mcp/Registry.php:178
+msgid "The request is too large."
+msgstr "Beere naa tobi ju."
+
+#: core/Mcp/Registry.php:188
+msgid "You do not have permission for this action."
+msgstr "O ko ni aṣẹ fun iṣe yii."
+
+#: core/Mcp/Registry.php:192
+msgid "The result is too large. Use narrower discovery or a smaller page."
+msgstr "Abajade naa tobi ju. Lo iwari to kere tabi oju-iwe ti o kere."
+
+#: core/Mcp/Registry.php:197
+msgid ""
+"The operation did not complete normally. Read the affected data before "
+"retrying; some changes may have been applied."
+msgstr ""
+"Iṣe naa ko pari ni deede. Ka data ti o kan ṣaaju ki o to tun gbiyanju; diẹ "
+"ninu awọn iyipada le ti wa ni ohun elo."
+
+#: core/Mcp/Registry.php:198
+msgid "The data could not be read. Check the active integrations before retrying."
+msgstr "Data ko le ka. Ṣayẹwo awọn isopọ ti n ṣiṣẹ ṣaaju ki o to tun gbiyanju."
+
+#: core/Mcp/Requirements.php:34
+msgid "Update a checklist requirement"
+msgstr "Ṣatunkọ ibeere akojọ kan"
+
+#: core/Mcp/Requirements.php:35
+msgid ""
+"Patch one discovered task for one post type using its latest hash. Supports "
+"native rule, ranges, selectors, role exceptions and labels. Preserves other "
+"tasks and post types. Native validation runs without simulated admin forms; "
+"dry_run previews without saving."
+msgstr ""
+"Ṣatunkọ iṣẹ-ṣiṣe kan ti a ṣe awari fun iru ifiweranṣẹ kan nipa lilo hash "
+"tuntun rẹ. Ṣe atilẹyin ofin abinibi, awọn iwọn, awọn aṣayan, awọn iyasọtọ "
+"ipa ati awọn aami. Ṣetọju awọn iṣẹ-ṣiṣe miiran ati awọn iru ifiweranṣẹ. "
+"Ifojusi abinibi n ṣiṣẹ laisi awọn fọọmu alakoso ti a ṣe afiwe; dry_run n "
+"ṣafihan laisi fipamọ."
+
+#: core/Mcp/Requirements.php:44
+msgid "Update several checklist requirements"
+msgstr "Ṣatunkọ ọpọlọpọ awọn ibeere akojọ"
+
+#: core/Mcp/Requirements.php:45
+msgid ""
+"Validate every explicit task/post-type target before one native "
+"configuration write. Each target needs its current hash. Preserves omitted "
+"configuration and accepts dry_run. Does not change post content or mark "
+"tasks completed."
+msgstr ""
+"Ṣayẹwo gbogbo ibi-afẹde iṣẹ-ṣiṣe / iru-ifiranṣẹ ti o han ṣaaju ki o to kọ "
+"nkan iṣeto abinibi kan. Gbogbo ibi-afẹde nilo hash lọwọlọwọ rẹ. Ṣetọju "
+"iṣeto ti a kọ silẹ ati gba dry_run. Ko yi akoonu ifiweranṣẹ tabi ṣe afihan "
+"awọn iṣẹ-ṣiṣe bi a ti pari."
+
+#: core/Mcp/Requirements.php:55
+msgid "Create or update a custom checklist task"
+msgstr "Ṣẹda tabi ṣe imudojuiwọn iṣẹ-ṣiṣe akojọ aṣa kan"
+
+#: core/Mcp/Requirements.php:56
+msgid ""
+"Create a custom checkbox or OpenAI instruction task for one supported post "
+"type, disabled by default, or patch a discovered existing task using its "
+"latest hash. New IDs are generated by the plugin. OpenAI tasks configure "
+"instructions only; this action does not call an AI service or certify its "
+"result."
+msgstr ""
+"Ṣẹda iṣẹ-ṣiṣe apoti ayẹwo aṣa tabi itọsọna OpenAI fun iru ifiweranṣẹ ti a "
+"ṣe atilẹyin, ti a pa mọ ni aiyipada, tabi ṣatunkọ iṣẹ-ṣiṣe ti a ṣe awari "
+"tẹlẹ nipa lilo hash tuntun rẹ. Awọn ID tuntun ni a ṣẹda nipasẹ afikun naa. "
+"Awọn iṣẹ-ṣiṣe OpenAI n ṣeto awọn ilana nikan; iṣe yii ko pe iṣẹ AI kan tabi "
+"jẹrisi abajade rẹ."
+
+#: core/Mcp/Requirements.php:69
+msgid "Remove a custom checklist task"
+msgstr "Yọ iṣẹ-ṣiṣe akojọ aṣa kan"
+
+#: core/Mcp/Requirements.php:70
+msgid ""
+"Remove a verified custom or OpenAI task from one post type using its latest "
+"hash. Other post types and historic post completion metadata are retained. "
+"Native built-in tasks are disabled through their rule rather than deleted. "
+"dry_run checks only."
+msgstr ""
+"Yọ iṣẹ-ṣiṣe aṣa ti a fọwọsi tabi OpenAI lati inu iru ifiweranṣẹ kan nipa "
+"lilo hash tuntun rẹ. Awọn iru ifiweranṣẹ miiran ati metadata ipari "
+"ifiweranṣẹ itan ni a tọju. Awọn iṣẹ-ṣiṣe abinibi ti a ṣe sinu ni a pa mọ "
+"nipasẹ ofin wọn dipo ki o yọkuro. dry_run n ṣayẹwo nikan."
+
+#: core/Mcp/Requirements.php:79
+msgid "Reorder checklist tasks"
+msgstr "Tun awọn iṣẹ-ṣiṣe akojọ ṣe"
+
+#: core/Mcp/Requirements.php:80
+msgid ""
+"Move discovered requirements into the supplied native shared order. Rule "
+"ordering is shared by post types, so this can change their default task "
+"ordering too; Appearance Priority/Alphabetical modes still apply. Uses one "
+"requirement hash from the current configuration. dry_run previews without "
+"saving."
+msgstr ""
+"Gbe awọn ibeere ti a ṣe awari sinu aṣẹ ti a pin abinibi ti a pese. Aṣẹ ofin "
+"ni a pin nipasẹ awọn iru ifiweranṣẹ, nitorina eyi le yi aṣẹ iṣẹ-ṣiṣe "
+"aiyipada wọn pada; Awọn ipo Iru Irisi / Atojọ ni a tun lo. Lo hash ibeere "
+"kan lati iṣeto lọwọlọwọ. dry_run n ṣafihan laisi fipamọ."
+
+#: core/Mcp/Requirements.php:90
+msgid "Reset renamed checklist labels"
+msgstr "Tun awọn aami akojọ ti a tun orukọ ṣe"
+
+#: core/Mcp/Requirements.php:91
+msgid ""
+"Reset native WP Admin and Editing screen task labels to their defaults. "
+"This affects all tasks/post types, preserves task titles/rules and requires "
+"manage_options. Use checklist_hash from get-plugin-settings; dry_run checks "
+"only."
+msgstr ""
+"Tun awọn aami iṣẹ-ṣiṣe WP Admin ati Ibi ṣiṣatunkọ abinibi pada si awọn "
+"aiyipada wọn. Eyi ni ipa lori gbogbo awọn iṣẹ-ṣiṣe / awọn iru ifiweranṣẹ, n "
+"ṣetọju awọn akọle iṣẹ-ṣiṣe / ofin ati beere manage_options. Lo "
+"checklist_hash lati get-plugin-settings; dry_run n ṣayẹwo nikan."
+
+#: core/Mcp/Requirements.php:108
+msgid "This requirement needs its active Pro integration."
+msgstr "Ibeere yi nilo iṣọpọ Pro rẹ ti n ṣiṣẹ."
+
+#: core/Mcp/Requirements.php:111
+#: core/Mcp/Requirements.php:295
+#: core/Mcp/Requirements.php:325
+msgid "Checklist configuration changed. Read it again."
+msgstr "Atunṣe atokọ ti yipada. Ka a lẹẹkansi."
+
+#: core/Mcp/Requirements.php:118
+#: core/Mcp/Requirements.php:252
+msgid "Enter a task title that remains non-empty after sanitization."
+msgstr "Tẹ akọle iṣẹ kan ti o wa ni ohun ti ko ni ofo lẹhin sanitization."
+
+#: core/Mcp/Requirements.php:123
+msgid "You cannot select users."
+msgstr "O ko le yan awọn olumulo."
+
+#: core/Mcp/Requirements.php:128
+msgid "Select an eligible user from current choices."
+msgstr "Yan olumulo ti o ni ẹtọ lati awọn aṣayan lọwọlọwọ."
+
+#: core/Mcp/Requirements.php:136
+msgid "You cannot assign this taxonomy."
+msgstr "O ko le fi taxonomy yii si."
+
+#: core/Mcp/Requirements.php:142
+msgid "Read current taxonomy choices before saving."
+msgstr "Ka awọn aṣayan taxonomy lọwọlọwọ ṣaaju fipamọ."
+
+#: core/Mcp/Requirements.php:157
+msgid "The minimum cannot exceed a positive maximum."
+msgstr "Minimun ko le kọja agbara to dara."
+
+#: core/Mcp/Requirements.php:160
+#: core/Mcp/Requirements.php:255
+msgid "Enable Who can ignore in Settings before changing role exceptions."
+msgstr "Mu \"Tani le foju\" ṣiṣẹ ni Eto ṣaaju ki o to yipada awọn iyasọtọ ipa."
+
+#: core/Mcp/Requirements.php:180
+msgid "Include each requirement/post-type target only once."
+msgstr "Nilo lati fi ibeere kọọkan/tipo ifiweranṣẹ kan silẹ nikan lẹẹkan."
+
+#: core/Mcp/Requirements.php:233
+msgid "Choose a configured custom or OpenAI task."
+msgstr "Yan iṣẹ aṣa kan ti a ti ṣeto tabi iṣẹ OpenAI kan."
+
+#: core/Mcp/Requirements.php:236
+msgid "Task kind cannot be changed. Use its discovered kind or create a new task."
+msgstr "Iru iṣẹ ko le yipada. Lo iru rẹ ti a ti ṣe awari tabi ṣẹda iṣẹ tuntun."
+
+#: core/Mcp/Requirements.php:292
+msgid "Only custom and OpenAI tasks can be removed."
+msgstr "Nikan awọn iṣẹ aṣa ati OpenAI ni a le yọkuro."
+
+#: core/Mcp/Requirements.php:329
+msgid "Use discovered requirement identifiers."
+msgstr "Lo awọn idanimọ ibeere ti a ṣe awari."
+
+#: core/Mcp/Requirements.php:350
+msgid "Settings changed. Read them again."
+msgstr "Awọn eto ti yipada. Ka wọn lẹẹkansi."
+
+#: core/Mcp/Settings.php:47
+msgid "Enable User Roles Filter (Who can ignore)"
+msgstr "Mu Asopọ Awọn olumulo ṣiṣẹ (Tani le foju)"
+
+#: core/Mcp/Settings.php:48
+msgid "Show warning icon"
+msgstr "Fihan aami ikilọ"
+
+#: core/Mcp/Settings.php:49
+msgid "Highlight failing blocks in the editor"
+msgstr "Ṣe afihan awọn bulọọki ti n baje ni olootu"
+
+#: core/Mcp/Settings.php:50
+msgid "Disable the Status option when using Quick Edit"
+msgstr "Pa aṣayan Ipo nigba ti o ba n lo Ṣatunkọ Kiakia"
+
+#: core/Mcp/Settings.php:51
+msgid "Disable Quick Edit completely"
+msgstr "Pa Ṣatunkọ Kiakia run patapata"
+
+#: core/Mcp/Settings.php:52
+msgid "Disable Publish button"
+msgstr "Pa bọtini Fọwọsi run"
+
+#: core/Mcp/Settings.php:53
+msgid "Rename task labels"
+msgstr "Tun orukọ awọn afi iṣẹ"
+
+#: core/Mcp/Settings.php:54
+msgid "Checklist task sort order"
+msgstr "Iṣeto aṣẹ iṣẹ atokọ"
+
+#: core/Mcp/Settings.php:69
+msgid "Read Checklists settings"
+msgstr "Ka awọn eto Atokọ"
+
+#: core/Mcp/Settings.php:70
+msgid ""
+"Read Post Types, General, Publishing Options and Appearance settings with "
+"exact native fields, choices and revisions. Actual Pro adds available "
+"non-secret settings. OpenAI/license credentials are excluded. Requires "
+"manage_options."
+msgstr ""
+"Ka Awọn Iru Ifiweranṣẹ, Gbogbogbo, Awọn aṣayan Ikede ati Awọn eto Iwa pẹlu "
+"awọn aaye aboriginal, awọn aṣayan ati awọn atunṣe. Awọn afikun Pro gidi ni "
+"a fi kun awọn eto ti ko ni ikọkọ. Awọn iwe-ẹri OpenAI/license ti wa ni "
+"ikọlu. Nilo manage_options."
+
+#: core/Mcp/Settings.php:78
+msgid "Update Checklists settings"
+msgstr "Ṣatunkọ awọn eto Atokọ"
+
+#: core/Mcp/Settings.php:79
+msgid ""
+"Patch supplied discovered settings using the latest hash. Boolean inputs "
+"map to native yes/no or on/off storage; post_types is a list of enabled "
+"names. Preserves omitted settings and credentials. dry_run previews native "
+"validation without saving. Feature-specific settings retain dependency and "
+"edition gates."
+msgstr ""
+"Ṣe afihan awọn eto ti a fi silẹ ti a ṣe awari nipa lilo hash tuntun. Awọn "
+"titẹ Boolean ma ṣe ni ibamu si ibo/ko si tabi on/off ibi ipamọ; post_types "
+"jẹ atokọ ti awọn orukọ ti a gba laaye. Nilo awọn eto ti a ko fi silẹ ati "
+"awọn iwe-ẹri. dry_run n ṣafihan idanwo aboriginal laisi fipamọ. Awọn eto "
+"pato ẹya n pa asopọ ati awọn ilẹkun ipamọ."
+
+#: core/Mcp/Settings.php:89
+msgid "Enable an optional Checklists feature"
+msgstr "Mu ẹya Atokọ ti a yan ṣiṣẹ"
+
+#: core/Mcp/Settings.php:90
+msgid ""
+"Enable or disable one discovered optional module. Core/autoloaded modules "
+"cannot be disabled. Requires manage_options and actual module availability. "
+"Uses the latest feature inventory hash. Changes take effect in a fresh "
+"request."
+msgstr ""
+"Mu tabi pa modulu aṣayan kan ti a ṣe awari. Awọn modulu ipilẹ/ti a fa ko le "
+"pa run. Nilo manage_options ati wiwa modulu gidi. Lo hash ọja tuntun. Awọn "
+"ayipada mu ipa ni ibeere tuntun."
+
+#: core/Mcp/Settings.php:129
+msgid "Settings changed. Read them again before saving."
+msgstr "Awọn eto ti yipada. Ka wọn lẹẹkansi ṣaaju fipamọ."
+
+#: core/Mcp/Settings.php:139
+msgid "This setting requires its active integration."
+msgstr "Ipo yi nilo iṣọpọ rẹ ti n ṣiṣẹ."
+
+#: core/Mcp/Settings.php:170
+msgid "Native validation did not accept this setting."
+msgstr "Idanwo aboriginal ko gba ipo yii."
+
+#: core/Mcp/Settings.php:192
+msgid "Feature settings changed. Discover them again."
+msgstr "Awọn eto ẹya ti yipada. Ṣawari wọn lẹẹkansi."
+
+#: core/Mcp/Settings.php:200
+msgid "This core module cannot be switched through MCP."
+msgstr "Modulu ipilẹ yii ko le yipada nipasẹ MCP."
+
+#: core/Mcp/Settings.php:210
+msgid "Choose an available feature from discovery."
+msgstr "Yan ẹya ti o wa lati iwari."
+
+#: core/Mcp/Tasks.php:38
+msgid "Read a post checklist"
+msgstr "Ka atokọ ifiweranṣẹ kan"
+
+#: core/Mcp/Tasks.php:39
+msgid ""
+"Read the native checklist for an editable saved post, respecting ignored "
+"roles and active Pro status/taxonomy exclusions. Results are native server "
+"snapshots, not a guarantee about unsaved editor content or JavaScript-only "
+"checks. OpenAI calls are not performed. Includes manual completion "
+"permissions and current revision."
+msgstr ""
+"Ka atokọ aboriginal fun ifiweranṣẹ ti a fipamọ ti a le satunkọ, bọwọ fun "
+"awọn ipa ti a foju ati ipo Pro ti n ṣiṣẹ/taxonomy ti a yọkuro. Awọn abajade "
+"jẹ awọn aworan akoko olupin aboriginal, kii ṣe iṣeduro nipa akoonu olootu "
+"ti a ko fipamọ tabi awọn idanwo JavaScript nikan. Awọn ipe OpenAI ko ṣe."
+
+#: core/Mcp/Tasks.php:47
+msgid "Complete or reopen manual checklist tasks"
+msgstr "Pari tabi tun ṣi awọn iṣẹ atokọ ọwọ"
+
+#: core/Mcp/Tasks.php:48
+msgid ""
+"Set explicit boolean states for configured, enabled custom checkboxes or "
+"approvals on one editable post using its latest revision. Checks each "
+"task's native role/user restrictions and post-meta permission before any "
+"write. Automatic and OpenAI results cannot be forged. dry_run validates "
+"without saving."
+msgstr ""
+"Ṣeto awọn ipo boolean ti o han gbangba fun awọn apoti ayẹwo aṣa ti a ti "
+"ṣeto, ti a mu ṣiṣẹ lori ifiweranṣẹ kan ti a le satunkọ nipa lilo atunṣe rẹ "
+"ti o kẹhin. Ṣayẹwo awọn ihamọ ipa/olumulo aboriginal ti iṣẹ kọọkan ati "
+"igbanilaaye post-meta ṣaaju eyikeyi kọ. Awọn abajade adaṣe ati OpenAI ko le "
+"jẹ ẹtan. dry_run n ṣayẹwo laisi fipamọ."
+
+#: core/Mcp/Tasks.php:87
+msgid "The post or checklist changed. Read it again."
+msgstr "Ipo tabi atokọ ti yipada. Ka a lẹẹkansi."
+
+#: core/Mcp/Tasks.php:93
+msgid "You cannot mark this task for this post."
+msgstr "Iwọ ko le samisi iṣẹ yii fun ifiweranṣẹ yii."
+
+#: core/Mcp/Tasks.php:131
+msgid "Task state could not be saved; original states were restored."
+msgstr "Ipo iṣẹ ko le jẹ fipamọ; awọn ipo atilẹba ni a tun pada."
+
+#: core/Mcp/Tasks.php:132
+msgid ""
+"Task state save failed and recovery was incomplete. Read the checklist "
+"before retrying."
+msgstr ""
+"Fipamọ ipo iṣẹ kuna ati imularada ko pari. Ka atokọ ṣaaju ki o to tun "
+"gbiyanju."
+
+#: core/Plugin.php:84
+#: modules/settings/settings.php:137
 msgid "Settings"
 msgstr "Ẹ̀tọ́"
 
-#: core/Plugin.php:116
-#: publishpress-checklists.php:183
+#: core/Plugin.php:92
+#: publishpress-checklists.php:193
 msgid "Upgrade to Pro"
 msgstr "Mu si Pro"
 
@@ -146,19 +627,117 @@ msgstr "Ti fọwọsi nipasẹ %s"
 msgid "Approved by a user in this role"
 msgstr "Ti fọwọsi nipasẹ olumulo kan ni ipa yii"
 
-#: core/Requirement/Base_counter.php:302
-#: core/Requirement/Pro_Requirement.php:112
+#: core/Requirement/Approved_by.php:161
+#: core/Requirement/Base_requirement.php:251
+#: core/Requirement/Prohibited_categories.php:417
+#: core/Requirement/Prohibited_tags.php:386
+#: core/Requirement/Required_categories.php:425
+#: core/Requirement/Required_tags.php:386
+#. translators: 1: custom editor label, 2: selected role names.
+#. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
+#. translators: 1: custom editor label, 2: prohibited category names.
+#. translators: 1: custom editor label, 2: prohibited tag names.
+#. translators: 1: custom editor label, 2: required category names.
+#. translators: 1: custom editor label, 2: required tag names.
+#, fuzzy, php-format
+msgid "%1$s - %2$s"
+msgstr "%1$s - %2$s"
+
+#: core/Requirement/Base_counter.php:388
+#: core/Requirement/Pro_Requirement.php:114
 msgid "Min"
 msgstr "kerepin"
 
-#: core/Requirement/Base_counter.php:310
-#: core/Requirement/Pro_Requirement.php:113
+#: core/Requirement/Base_counter.php:396
+#: core/Requirement/Pro_Requirement.php:115
 msgid "Max"
 msgstr "pòpin"
 
-#: core/Requirement/Base_requirement.php:187
+#: core/Requirement/Base_dropdown.php:111
+#, php-format
+msgid "Set option for %s"
+msgstr "Seti aṣayan fun %s"
+
+#: core/Requirement/Base_requirement.php:280
+#. translators: %d: exact required value.
+#, fuzzy, php-format
+msgid "exact %d"
+msgstr "exact %d"
+
+#: core/Requirement/Base_requirement.php:288
+#. translators: %d: minimum required value.
+#, fuzzy, php-format
+msgid "min %d"
+msgstr "min %d"
+
+#: core/Requirement/Base_requirement.php:296
+#. translators: %d: maximum allowed value.
+#, fuzzy, php-format
+msgid "max %d"
+msgstr "max %d"
+
+#: core/Requirement/Base_requirement.php:303
+#. translators: 1: minimum required value, 2: maximum allowed value.
+#, fuzzy, php-format
+msgid "min %1$d max %2$d"
+msgstr "min %1$d max %2$d"
+
+#: core/Requirement/Base_requirement.php:364
+#, php-format
+msgid "More information about %s"
+msgstr "Alaye diẹ sii nipa %s"
+
+#: core/Requirement/Base_requirement.php:367
+#, php-format
+msgid "Edit label for %s"
+msgstr "Ṣatunkọ aami fun %s"
+
+#: core/Requirement/Base_requirement.php:367
 msgid "Edit label"
 msgstr "Ṣatunkọ aami"
+
+#: core/Requirement/Base_requirement.php:405
+#, php-format
+msgid "Set requirement status for %s"
+msgstr "Seti ipo ibeere fun %s"
+
+#: core/Requirement/Base_requirement.php:454
+msgid "Task status: Disabled, Recommended or Required"
+msgstr "Ipo iṣẹ: Ti a pa, Ti a ṣe iṣeduro tabi Ti a beere"
+
+#: core/Requirement/Base_requirement.php:455
+msgid "WP Admin label"
+msgstr "admin WP"
+
+#: core/Requirement/Base_requirement.php:456
+msgid "Editing screen label"
+msgstr "Aami iboju ṣiṣatunkọ"
+
+#: core/Requirement/Base_requirement.php:458
+msgid "Who can ignore this task?"
+msgstr "Tani le foju kọ iṣẹ yii?"
+
+#: core/Requirement/Base_requirement.php:462
+msgid "Minimum"
+msgstr "Kekere"
+
+#: core/Requirement/Base_requirement.php:463
+msgid "Maximum; zero or empty has no upper limit"
+msgstr "Max; odo tabi ofo ko ni opin oke"
+
+#: core/Requirement/Base_requirement.php:484
+msgid "Time in 24-hour HH:MM format"
+msgstr "Akoko ni fọọmu 24-wakati HH:MM"
+
+#: core/Requirement/Base_requirement.php:488
+msgid "Task title or instruction"
+msgstr "Ak title iṣẹ tabi ilana"
+
+#: core/Requirement/Base_time.php:147
+#: core/Requirement/Pro_Requirement.php:102
+#, php-format
+msgid "Set time for %s"
+msgstr "Seti akoko fun %s"
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
@@ -199,27 +778,38 @@ msgstr "%s awọn ẹka"
 msgid "Between %s and %s categories"
 msgstr "Laarin %s ati %s awọn ẹka"
 
-#: core/Requirement/Custom_item.php:60
 #: core/Requirement/Custom_item.php:61
-#: core/Utils/FieldsTabs.php:73
+#: core/Requirement/Custom_item.php:62
+#: core/Utils/FieldsTabs.php:75
 msgid "Custom"
 msgstr "Adani"
 
-#: core/Requirement/Custom_item.php:62
-#: modules/checklists/checklists.php:676
+#: core/Requirement/Custom_item.php:63
+#: modules/checklists/checklists.php:839
 msgid "Which roles can mark this task as complete?"
 msgstr "Iru ipa wo ni o le samisi iṣẹ yii gẹgẹ bi ti pari?"
 
 #: core/Requirement/Custom_item.php:81
-#: modules/checklists/checklists.php:683
+#: modules/checklists/checklists.php:847
+msgid "Custom task title"
+msgstr "Akọle iṣẹ aṣa"
+
+#: core/Requirement/Custom_item.php:85
+#: modules/checklists/checklists.php:856
 msgid "Enter name of custom task"
 msgstr "Tẹ orúkọ iṣẹ́ àtọkànwá"
 
-#: core/Requirement/Custom_item.php:129
-#: core/Requirement/Openai_item.php:147
-#: modules/checklists/checklists.php:682
+#: core/Requirement/Custom_item.php:132
+#: core/Requirement/Openai_item.php:151
+#: modules/checklists/checklists.php:845
 msgid "Remove"
 msgstr "Yọ"
+
+#: core/Requirement/Custom_item.php:133
+#: core/Requirement/Openai_item.php:152
+#: modules/checklists/checklists.php:846
+msgid "Remove custom task"
+msgstr "Yọ iṣẹ aṣa kuro"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
@@ -277,8 +867,8 @@ msgstr "Àwòrán tó ṣe pàtàkì ní akọlé"
 
 #: core/Requirement/Filled_excerpt.php:42
 #: core/Requirement/Filled_excerpt.php:43
-msgid "Numbers of characters in excerpt"
-msgstr "Iye awọn lẹta ninu akopọ"
+msgid "Number of characters in excerpt"
+msgstr "Iye awọn ohun kikọ ninu akopọ"
 
 #: core/Requirement/Filled_excerpt.php:44
 #, php-format
@@ -405,38 +995,43 @@ msgid "Openai"
 msgstr "Openai"
 
 #: core/Requirement/Openai_item.php:100
-#: modules/checklists/checklists.php:684
+#: modules/checklists/checklists.php:848
+msgid "OpenAI task prompt"
+msgstr "Akiyesi iṣẹ OpenAI"
+
+#: core/Requirement/Openai_item.php:104
+#: modules/checklists/checklists.php:857
 msgid "Enter OpenAI task prompt"
 msgstr "Tẹ ìpè iṣẹ́ OpenAI"
 
-#: core/Requirement/Openai_item.php:286
+#: core/Requirement/Openai_item.php:291
 msgid "An error occured."
 msgstr "Aṣiṣe kan ṣẹlẹ."
 
-#: core/Requirement/Openai_item.php:293
+#: core/Requirement/Openai_item.php:298
 msgid "Validation error. Kindly reload this page and try again."
 msgstr "Aṣiṣe ìmúlẹ. Jọwọ tún ìwé yìí ṣe àtúnṣe kí o sì tún gbìmọ̀ lẹ́ẹ̀kan síi."
 
-#: core/Requirement/Openai_item.php:298
+#: core/Requirement/Openai_item.php:303
 msgid "Post content is empty."
 msgstr "Akopọ ifiweranṣẹ jẹ ofo."
 
-#: core/Requirement/Openai_item.php:307
+#: core/Requirement/Openai_item.php:312
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
 msgstr "Awọn iṣẹ OpenAI nilo Bọtini API. Jọwọ fi Bọtini API rẹ kun ni agbegbe Eto."
 
-#: core/Requirement/Openai_item.php:362
+#: core/Requirement/Openai_item.php:367
 #, php-format
 msgid "API Error: %1s."
 msgstr "Aṣiṣe API: %1s."
 
-#: core/Requirement/Openai_item.php:380
+#: core/Requirement/Openai_item.php:385
 msgid "See the full response."
 msgstr "Wo idahun kikun."
 
-#: core/Requirement/Openai_item.php:401
+#: core/Requirement/Openai_item.php:406
 msgid "Invalid response"
 msgstr "Ìdáhùn tí kò tọ́"
 
@@ -457,6 +1052,11 @@ msgstr "Awọn aami ti a ko: %s"
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
 msgstr "Awọn aami ti a ko"
+
+#: core/Requirement/Pro_Requirement.php:126
+#, php-format
+msgid "Select options for %s"
+msgstr "Yan awọn aṣayan fun %s"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
@@ -626,428 +1226,563 @@ msgstr "%d awọn ọrọ ninu akoonu"
 msgid "Between %d and %d words in content"
 msgstr "Laarin %d ati %d awọn ọrọ ni akoonu"
 
-#: core/Utils/FieldsTabs.php:21
+#: core/Utils/FieldsTabs.php:23
 msgid "Title"
 msgstr "Akọle"
 
-#: core/Utils/FieldsTabs.php:25
+#: core/Utils/FieldsTabs.php:27
 msgid "Content"
 msgstr "Àkóónú"
 
-#: core/Utils/FieldsTabs.php:29
+#: core/Utils/FieldsTabs.php:31
 msgid "Publish Date / Time"
 msgstr "Ọjọ / Akoko Ifiweranṣẹ"
 
-#: core/Utils/FieldsTabs.php:33
+#: core/Utils/FieldsTabs.php:35
 msgid "Approval"
 msgstr "Igbọwọsi"
 
-#: core/Utils/FieldsTabs.php:37
+#: core/Utils/FieldsTabs.php:39
 msgid "Images"
 msgstr "Aworan"
 
-#: core/Utils/FieldsTabs.php:41
+#: core/Utils/FieldsTabs.php:43
 msgid "Audio / Video"
 msgstr "Ohun / Fidio"
 
-#: core/Utils/FieldsTabs.php:45
+#: core/Utils/FieldsTabs.php:47
 msgid "Featured Image"
 msgstr "Àwòrán tó ṣe pàtàkì"
 
-#: core/Utils/FieldsTabs.php:49
+#: core/Utils/FieldsTabs.php:51
 msgid "Links"
 msgstr "Àwọn ọna asopọ"
 
-#: core/Utils/FieldsTabs.php:53, fuzzy
+#: core/Utils/FieldsTabs.php:55, fuzzy
 msgid "Permalink"
 msgstr "Permalink"
 
-#: core/Utils/FieldsTabs.php:57
+#: core/Utils/FieldsTabs.php:59
 msgid "Categories"
 msgstr "Awọn ẹka"
 
-#: core/Utils/FieldsTabs.php:61
+#: core/Utils/FieldsTabs.php:63
 msgid "Tags"
 msgstr "Àwọn ami"
 
-#: core/Utils/FieldsTabs.php:65, fuzzy
+#: core/Utils/FieldsTabs.php:67
 msgid "Taxonomies"
 msgstr "Taxonomies"
 
-#: core/Utils/FieldsTabs.php:69
+#: core/Utils/FieldsTabs.php:71
 msgid "Accessibility"
 msgstr "Iwọle"
 
-#: core/Utils/FieldsTabs.php:97, fuzzy
+#: core/Utils/FieldsTabs.php:99
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: core/Utils/FieldsTabs.php:104, fuzzy
+#: core/Utils/FieldsTabs.php:106, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:113
 msgid "All in One SEO"
 msgstr "Gbogbo ni SEO Ni Ọkan"
 
-#: core/Utils/FieldsTabs.php:118
-#: modules/yoastseo/yoastseo.php:68, fuzzy
+#: core/Utils/FieldsTabs.php:120
+#: modules/yoastseo/yoastseo.php:71, fuzzy
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
-#: core/Utils/FieldsTabs.php:126, fuzzy
+#: core/Utils/FieldsTabs.php:128, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
-#: modules/checklists/checklists.php:668
+#: core/Utils/HelpTip.php:63
+msgid "More information"
+msgstr "Alaye diẹ sii"
+
+#: modules/checklists/checklists.php:795
 msgid "options cannot be empty."
 msgstr "àṣàyàn ko le jẹ ofo."
 
-#: modules/checklists/checklists.php:672
+#: modules/checklists/checklists.php:799
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr "Jọwọ rii daju lati fi orukọ kun fun gbogbo awọn iṣẹ aṣa."
 
-#: modules/checklists/checklists.php:680
+#: modules/checklists/checklists.php:803
+msgid "Rename task label"
+msgstr "Tun orukọ aami iṣẹ"
+
+#: modules/checklists/checklists.php:807
+msgid "Label for the Checklists screen"
+msgstr "Aami fun iboju Awọn atokọ ayẹwo"
+
+#: modules/checklists/checklists.php:811
+msgid "Leave empty to use the default WP Admin label"
+msgstr "Fi silẹ ofo lati lo aami admin WP aiyipada"
+
+#: modules/checklists/checklists.php:815
+msgid "Label for the post editing screen"
+msgstr "Aami fun iboju ṣiṣatunkọ ifiweranṣẹ"
+
+#: modules/checklists/checklists.php:819
+msgid "Leave empty to use the default editing screen label"
+msgstr "Fi silẹ ofo lati lo aami iboju ṣiṣatunkọ aiyipada"
+
+#: modules/checklists/checklists.php:823
+msgid "Preview in editing screen:"
+msgstr "Ṣayẹwo ni iboju ṣiṣatunkọ:"
+
+#: modules/checklists/checklists.php:827
+msgid "Default checklist label will be used."
+msgstr "Aami atokọ aiyipada ni a yoo lo."
+
+#: modules/checklists/checklists.php:831
+msgid "Save"
+msgstr "Fipamọ"
+
+#: modules/checklists/checklists.php:835
+msgid "Cancel"
+msgstr "Fagilee"
+
+#: modules/checklists/checklists.php:843
 msgid "No results found"
 msgstr "Ko si awọn esi ti a ri"
 
-#: modules/checklists/checklists.php:681
+#: modules/checklists/checklists.php:844
 msgid "Searching…"
 msgstr "N wa…"
 
-#: modules/checklists/checklists.php:685
+#: modules/checklists/checklists.php:849
+msgid "Set requirement status"
+msgstr "Seti ipo ibeere"
+
+#: modules/checklists/checklists.php:850
+msgid "Roles that can ignore this task"
+msgstr "Awọn ipa ti o le foju kọ iṣẹ yii"
+
+#: modules/checklists/checklists.php:851
+msgid "Roles that can mark this task as complete"
+msgstr "Awọn ipa ti o le samisi iṣẹ yii gẹgẹbi ti pari"
+
+#: modules/checklists/checklists.php:852
+msgid "Custom task added."
+msgstr "Iṣẹ aṣa ti a fi kun."
+
+#: modules/checklists/checklists.php:853
+msgid "Custom task removed."
+msgstr "Iṣẹ aṣa ti yọ."
+
+#: modules/checklists/checklists.php:854
+msgid "OpenAI prompt task added."
+msgstr "Iṣẹ ipe OpenAI ti fi kun."
+
+#: modules/checklists/checklists.php:855
+msgid "OpenAI prompt task removed."
+msgstr "Iṣẹ ipe OpenAI ti yọ."
+
+#: modules/checklists/checklists.php:858
 msgid "Suggested Prompts"
 msgstr "Àwọn ìtọ́kasí tó dájú"
 
-#: modules/checklists/checklists.php:686
+#: modules/checklists/checklists.php:859
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr "Kí ni idahun OpenAI ti a nireti lati samisi ibeere naa gẹgẹ bi ti o kọja?"
 
-#: modules/checklists/checklists.php:689
+#: modules/checklists/checklists.php:862
 msgid "Clear Content"
 msgstr "Kó Àkóónú"
 
-#: modules/checklists/checklists.php:690
+#: modules/checklists/checklists.php:863
 msgid "Is this content clear and easy to read?"
 msgstr "Ṣe akoonu yii ye ati irọrun lati ka?"
 
-#: modules/checklists/checklists.php:693
+#: modules/checklists/checklists.php:866
 msgid "Friendly Tone Content"
 msgstr "Àkóónú tó ní ìbáṣepọ̀"
 
-#: modules/checklists/checklists.php:694
+#: modules/checklists/checklists.php:867
 msgid "Is this content tone friendly?"
 msgstr "Ṣe akoonu yii ni irọrun ọrẹ?"
 
-#: modules/checklists/checklists.php:697
+#: modules/checklists/checklists.php:870
 msgid "Professional Tone Content"
 msgstr "Akoonu Iwa ọjọgbọn"
 
-#: modules/checklists/checklists.php:698
+#: modules/checklists/checklists.php:871
 msgid "Is this content tone professional?"
 msgstr "Ṣe akoonu yii ni irọrun ọjọgbọn?"
 
-#: modules/checklists/checklists.php:701
+#: modules/checklists/checklists.php:874
 msgid "Persuasive Tone Content"
 msgstr "Akoonu Iwa ipolongo"
 
-#: modules/checklists/checklists.php:702
+#: modules/checklists/checklists.php:875
 msgid "Is this content tone persuasive?"
 msgstr "Ṣe akoonu yii ni irọrun ikọ́ni?"
 
-#: modules/checklists/checklists.php:705
+#: modules/checklists/checklists.php:878
 msgid "Empathetic Tone Content"
 msgstr "Àkóónú Ohun Èdè Ẹmi"
 
-#: modules/checklists/checklists.php:706
+#: modules/checklists/checklists.php:879
 msgid "Is this content tone empathetic?"
 msgstr "Ṣe akoonu yii ni irọrun empathetic?"
 
-#: modules/checklists/checklists.php:709
+#: modules/checklists/checklists.php:882
 msgid "Adventurous Tone Content"
 msgstr "Akọọlẹ Ohun ti o ni ẹdá"
 
-#: modules/checklists/checklists.php:710
+#: modules/checklists/checklists.php:883
 msgid "Is this content tone adventurous?"
 msgstr "Ṣe akoonu yii ni irọrun ìrìn-ajo?"
 
-#: modules/checklists/checklists.php:713
+#: modules/checklists/checklists.php:886
 msgid "Promotional Tone Content"
 msgstr "Akoko Ipolowo Ak contenido"
 
-#: modules/checklists/checklists.php:714
+#: modules/checklists/checklists.php:887
 msgid "Is this content tone promotional?"
 msgstr "Ṣe akoonu yii ni irọrun ìpolówó?"
 
-#: modules/checklists/checklists.php:780
-#: modules/checklists/checklists.php:865
+#: modules/checklists/checklists.php:961
+#: modules/checklists/checklists.php:1168
+#: modules/checklists/checklists.php:1742
+#: modules/checklists/assets/js/gutenberg-panel.jsx:597
 msgid "Checklist"
 msgstr "Akojọ Ṣayẹwo"
 
-#: modules/checklists/checklists.php:861
-#: modules/checklists/checklists.php:1189
+#: modules/checklists/checklists.php:1164
+#: modules/checklists/checklists.php:1743
 msgid "You don't have to complete any Checklist tasks."
 msgstr "Iwọ ko ni lati pari eyikeyi Ise akojo aseyewo."
 
-#: modules/checklists/checklists.php:866
+#: modules/checklists/checklists.php:1169
 msgid "Are you sure you want to publish anyway?"
 msgstr "Ṣe o da ọ loju pe o fẹ lati tẹjade ni gbogbo ọna?"
 
-#: modules/checklists/checklists.php:870
+#: modules/checklists/checklists.php:1173
 msgid "Are you sure you want to update the published post anyway?"
 msgstr ""
 "Ṣe o da ọ loju pe o fẹ lati ṣe imudojuiwọn ifiweranṣẹ ti a tẹjade ni gbogbo "
 "ọna?"
 
-#: modules/checklists/checklists.php:874
+#: modules/checklists/checklists.php:1177
 msgid "Please complete the following tasks before publishing:"
 msgstr "Jọwọ pari iṣẹ wọnyi ṣaaju ki o to tẹjade:"
 
-#: modules/checklists/checklists.php:878
+#: modules/checklists/checklists.php:1181
 msgid "Please complete the following tasks before updating the published post:"
 msgstr "Jọwọ pari iṣẹ wọnyi ṣaaju ki o to ṣe imudojuiwọn ifiweranṣẹ ti a tẹjade:"
 
-#: modules/checklists/checklists.php:882
-#: modules/checklists/checklists.php:886
+#: modules/checklists/checklists.php:1185
+#: modules/checklists/checklists.php:1189
 msgid "Not required, but important: "
 msgstr "Ki ṣe dandan, ṣugbọn o ṣe pataki: "
 
-#: modules/checklists/checklists.php:892
+#: modules/checklists/checklists.php:1193
+msgid "These recommendations are missing:"
+msgstr "Awọn iṣeduro wọnyi ko si:"
+
+#: modules/checklists/checklists.php:1199
 msgid "One or more items in the checklist are not completed"
 msgstr "Ọkan tabi diẹ ẹ sii awọn nkan ninu atokọ ayẹwo ko ti pari"
 
-#: modules/checklists/checklists.php:919
+#: modules/checklists/checklists.php:1209
+msgid "completed"
+msgstr "pari"
+
+#: modules/checklists/checklists.php:1210
+msgid "not completed"
+msgstr "ko pari"
+
+#: modules/checklists/checklists.php:1211
+#: modules/checklists/checklists.php:1265
+#: modules/checklists/checklists.php:1747
+msgid "Completed"
+msgstr "Ti pari"
+
+#: modules/checklists/checklists.php:1212
+#: modules/checklists/checklists.php:1266
+#: modules/checklists/checklists.php:1748
+msgid "Not completed"
+msgstr "Ko ti pari"
+
+#: modules/checklists/checklists.php:1213
+msgid "Dismiss this notice."
+msgstr "Kọkọ yii si ikilọ."
+
+#: modules/checklists/checklists.php:1215
+#. translators: Live count badge next to a counter task with a maximum. %1$s is the current count, %2$s is the maximum.
+#, fuzzy, php-format
+msgid "%1$s / %2$s"
+msgstr "%1$s / %2$s"
+
+#: modules/checklists/checklists.php:1217
+#. translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum.
+#, fuzzy, php-format
+msgid "%1$s, min %2$s"
+msgstr "%1$s, min %2$s"
+
+#: modules/checklists/checklists.php:1218
+msgid "The checklist task could not be saved. Please try again."
+msgstr "Iṣẹ atokọ ko le fipamọ. Jọwọ gbiyanju lẹẹkansi."
+
+#: modules/checklists/checklists.php:1255
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "Iwọ ko ni lati pari eyikeyi %Ise akojo aseyewo%s."
 
-#: modules/checklists/checklists.php:924
-#: modules/checklists/assets/js/gutenberg-panel.jsx:282
+#: modules/checklists/checklists.php:1261
+#: modules/checklists/assets/js/gutenberg-panel.jsx:545
 msgid "Check Now"
 msgstr "Ṣayẹwo Bayi"
 
-#: modules/checklists/checklists.php:925
+#: modules/checklists/checklists.php:1262
 msgid "Ok"
 msgstr "Daradara"
 
-#: modules/checklists/checklists.php:926
+#: modules/checklists/checklists.php:1263
 msgid "No"
 msgstr "Rara"
 
-#: modules/checklists/checklists.php:927
+#: modules/checklists/checklists.php:1264
 msgid "Yes"
 msgstr "Bẹẹni"
 
-#: modules/checklists/checklists.php:1091
+#: modules/checklists/checklists.php:1267
+msgid "Checklist requirements"
+msgstr "Awọn ibeere atokọ"
+
+#: modules/checklists/checklists.php:1636
 msgid "Task"
 msgstr "Ìṣe"
 
-#: modules/checklists/checklists.php:1092
+#: modules/checklists/checklists.php:1637
 msgid "Disabled, Recommended or Required"
 msgstr "Ti dènà, Ti a ṣe iṣeduro tabi Ti a beere"
 
-#: modules/checklists/checklists.php:1093
+#: modules/checklists/checklists.php:1638
 msgid "Options"
 msgstr "Àṣayan"
 
-#: modules/checklists/checklists.php:1094
+#: modules/checklists/checklists.php:1639
 msgid "Add custom task"
 msgstr "Fi iṣẹ aṣa kun"
 
-#: modules/checklists/checklists.php:1187
+#: modules/checklists/checklists.php:1740
 msgid "Please complete the required(*) checklists task."
 msgstr "Jọwọ pari iṣẹ atokọ ti a beere(*) naa."
 
-#: modules/checklists/checklists.php:1190
+#: modules/checklists/checklists.php:1744
 msgid "required"
 msgstr "ti a beere"
 
-#: modules/checklists/checklists.php:1191
-#: modules/checklists/templates/meta-box.php:11
+#: modules/checklists/checklists.php:1751
+#: modules/checklists/templates/meta-box.php:19
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "Awọn iṣẹ atokọ ko si ni awọn olootu Elementor"
 
-#: modules/checklists/pro-requirements.php:22
+#: modules/checklists/pro-requirements.php:24
 msgid "All in One SEO Headline Score"
 msgstr "Gbogbo nínú Àkọsílẹ SEO Ìtọ́ka"
 
-#: modules/checklists/pro-requirements.php:31
+#: modules/checklists/pro-requirements.php:33
 msgid "All in One SEO Score"
 msgstr "Gbogbo nínú Àkọsílẹ SEO"
 
-#: modules/checklists/pro-requirements.php:40
+#: modules/checklists/pro-requirements.php:42
 msgid "Featured image height"
 msgstr "Giga aworan to wa ninu àfihàn"
 
-#: modules/checklists/pro-requirements.php:49
+#: modules/checklists/pro-requirements.php:51
 msgid "Featured image width"
 msgstr "Iwọn aworan to wa ninu àfihàn"
 
-#: modules/checklists/pro-requirements.php:58
-msgid "Heading in hierarchy"
-msgstr "Àkọsílẹ nínú ìtòsọ́tọ̀"
+#: modules/checklists/pro-requirements.php:60
+msgid "H1, H2, H3 etc tags are used in logical order"
+msgstr "Awọn afi H1, H2, H3 ati bẹbẹ lọ ni a lo ni aṣẹ to tọ"
 
-#: modules/checklists/pro-requirements.php:67
+#: modules/checklists/pro-requirements.php:69
 msgid "Number of images in content"
 msgstr "Iye awọn aworan nínú akoonu"
 
-#: modules/checklists/pro-requirements.php:76
+#: modules/checklists/pro-requirements.php:78
 msgid "Number of characters in image captions"
 msgstr "Iye awọn ohun kikọ nínú akọsilẹ aworan"
 
-#: modules/checklists/pro-requirements.php:85
-msgid "Number of audio in content"
-msgstr "Iye awọn ohun èlò nínú akoonu"
+#: modules/checklists/pro-requirements.php:87
+msgid "Number of audio items in content"
+msgstr "Iye awọn ohun ohun ni akoonu"
 
-#: modules/checklists/pro-requirements.php:94
-msgid "Number of video in content"
-msgstr "Iye awọn fidio nínú akoonu"
+#: modules/checklists/pro-requirements.php:96
+msgid "Number of video items in content"
+msgstr "Iye awọn ohun fidio ni akoonu"
 
-#: modules/checklists/pro-requirements.php:103
+#: modules/checklists/pro-requirements.php:105
 msgid "Approved by role"
 msgstr "A fọwọsi nipasẹ ipa"
 
-#: modules/checklists/pro-requirements.php:110
-msgid "Approved by user"
-msgstr "A fọwọsi nipasẹ olumulo"
+#: modules/checklists/pro-requirements.php:112
+msgid "Approved by specific user"
+msgstr "Tẹnumọ nipasẹ olumulo kan pato"
 
-#: modules/checklists/pro-requirements.php:117
+#: modules/checklists/pro-requirements.php:119
 msgid "Avoid heading tags in content"
 msgstr "Yago fun awọn aami akọsori nínú akoonu"
 
-#: modules/checklists/pro-requirements.php:124
-msgid "Published at exact time"
-msgstr "Ti wa ni tẹjade ni akoko gangan"
+#: modules/checklists/pro-requirements.php:126
+msgid "Prohibited words"
+msgstr "Awọn ọrọ ti a ko gba laaye"
 
-#: modules/checklists/pro-requirements.php:132
+#: modules/checklists/pro-requirements.php:133
+msgid "Required words"
+msgstr "Awọn ọrọ ti a beere"
+
+#: modules/checklists/pro-requirements.php:140
+msgid "Publish time should be at a specific time"
+msgstr "Akoko ikede gbọdọ jẹ ni akoko kan pato"
+
+#: modules/checklists/pro-requirements.php:148
 msgid "Publish time should be in the future"
 msgstr "Akoko ikede yẹ ki o wa ninu ọjọ iwaju"
 
-#: modules/checklists/pro-requirements.php:140
+#: modules/checklists/pro-requirements.php:156
 msgid "Rank Math SEO Score"
 msgstr "Iwọn SEO Rank Math"
 
-#: modules/checklists/pro-requirements.php:149
+#: modules/checklists/pro-requirements.php:165
 msgid "Only one H1 tag in content"
 msgstr "Kàn H1 kan ṣoṣo nínú akoonu"
 
-#: modules/checklists/pro-requirements.php:156
+#: modules/checklists/pro-requirements.php:172
 msgid "Tables have a header row"
 msgstr "Àwọn tabili ni kópa àkọsílẹ"
 
-#: modules/checklists/pro-requirements.php:163
+#: modules/checklists/pro-requirements.php:179
 msgid "Check the \"Allow backorders?\" box"
 msgstr "Ṣayẹwo apoti \"Ṣe iwọ yoo gba awọn aṣẹ pada?\""
 
-#: modules/checklists/pro-requirements.php:171
+#: modules/checklists/pro-requirements.php:187
 msgid "Select some products for \"Cross-sells\""
 msgstr "Yan diẹ ninu awọn ọja fun \"Cross-sells\""
 
-#: modules/checklists/pro-requirements.php:179
+#: modules/checklists/pro-requirements.php:195
 msgid "Discount for the \"Sale price\""
 msgstr "Idinku fun \"Iye tita\""
 
-#: modules/checklists/pro-requirements.php:187
+#: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Downloadable\" box"
 msgstr "Ṣayẹwo apoti \"Downloadable\""
 
-#: modules/checklists/pro-requirements.php:195
+#: modules/checklists/pro-requirements.php:211
 msgid "Product image"
 msgstr "Aworan ọja"
 
-#: modules/checklists/pro-requirements.php:203
+#: modules/checklists/pro-requirements.php:219
 msgid "Check the \"Manage stock?\" box"
 msgstr "Ṣayẹwo apoti \"Ṣakoso iṣura?\""
 
-#: modules/checklists/pro-requirements.php:211
+#: modules/checklists/pro-requirements.php:227
 msgid "Enter a \"Regular price\""
 msgstr "Tẹ ọrọ \"Iye deede\""
 
-#: modules/checklists/pro-requirements.php:219
+#: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"Sale price\""
 msgstr "Tẹ ọrọ \"Iye tita\""
 
-#: modules/checklists/pro-requirements.php:227
+#: modules/checklists/pro-requirements.php:243
 msgid "Schedule the \"Sale price\""
 msgstr "Ṣeto \"Iye tita\""
 
-#: modules/checklists/pro-requirements.php:235
+#: modules/checklists/pro-requirements.php:251
 msgid "Enter a \"SKU\""
 msgstr "Tẹ ọrọ \"SKU\""
 
-#: modules/checklists/pro-requirements.php:243
+#: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Sold individually\" box"
 msgstr "Ṣayẹwo apoti \"Ta ni kọọkan\""
 
-#: modules/checklists/pro-requirements.php:251
+#: modules/checklists/pro-requirements.php:267
 msgid "Select some products for \"Upsells\""
 msgstr "Yan diẹ ninu awọn ọja fun \"Upsells\""
 
-#: modules/checklists/pro-requirements.php:259
+#: modules/checklists/pro-requirements.php:275
 msgid "Check the \"Virtual\" box"
 msgstr "Ṣayẹwo apoti \"Virtual\""
 
-#: modules/checklists/pro-requirements.php:290
+#: modules/checklists/pro-requirements.php:306
 #, php-format
 msgid "Number of Characters in %s field"
 msgstr "Iye awọn ohun kikọ ninu aaye %s"
 
-#: modules/checklists/pro-requirements.php:303
+#: modules/checklists/pro-requirements.php:319
 #, php-format
 msgid "%s is filled"
 msgstr "%s ti kun"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About PublishPress Checklists"
 msgstr "Nipa PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About"
 msgstr "Nipa"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "PublishPress Checklists Documentation"
 msgstr "Iwe Itọsọna PublishPress Checklists"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "Documentation"
 msgstr "Iwe afọwọkọ"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact the PublishPress team"
 msgstr "Kan si ẹgbẹ PublishPress"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact"
 msgstr "Kan si"
 
-#: modules/checklists/templates/global-checklists.php:6
+#: modules/checklists/templates/global-checklists.php:7
 msgid "Settings saved successfully!"
 msgstr "Iṣeto ti fipamọ́ ní aṣeyọrí!"
 
-#: modules/checklists/templates/global-checklists.php:12
-#: modules/checklists/templates/global-checklists.php:217
+#: modules/checklists/templates/global-checklists.php:13
+#: modules/checklists/templates/global-checklists.php:268
 msgid "Save Changes"
 msgstr "Fipamọ Awọn Ayipada"
 
-#: modules/checklists/templates/global-checklists.php:152
+#: modules/checklists/templates/global-checklists.php:16
+msgid "Post types"
+msgstr "Iru ifiweranṣẹ"
+
+#: modules/checklists/templates/global-checklists.php:74
+#, php-format
+msgid "Checklist sections for %s"
+msgstr "Awọn apakan atokọ fun %s"
+
+#: modules/checklists/templates/global-checklists.php:203
 msgid "Pro feature"
 msgstr "Ẹya Pro"
 
-#: modules/checklists/templates/global-checklists.php:165
+#: modules/checklists/templates/global-checklists.php:216
 #, php-format
 msgid "No %s requirements for this post type."
 msgstr "Ko si awọn ibeere %s fun iru ifiweranṣẹ yii."
 
-#: modules/checklists/templates/global-checklists.php:183
+#: modules/checklists/templates/global-checklists.php:234
 msgid "New Item"
 msgstr "Ohun Tuntun"
 
-#: modules/checklists/templates/global-checklists.php:184
+#: modules/checklists/templates/global-checklists.php:235
 msgid "Description"
 msgstr "Apejuwe"
 
-#: modules/checklists/templates/global-checklists.php:196
+#: modules/checklists/templates/global-checklists.php:247
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
@@ -1055,48 +1790,53 @@ msgstr ""
 "Iṣẹ adani ko pari laifọwọyi. Awọn olumulo gbọdọ ṣayẹwo apoti lati fi hàn pe "
 "wọn ti pari iṣẹ naa."
 
-#: modules/checklists/templates/global-checklists.php:203
+#: modules/checklists/templates/global-checklists.php:254
 msgid "Add OpenAI Prompt task"
 msgstr "Fi iṣẹ OpenAI Prompt kun"
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "The prompt should be in form of a question."
 msgstr "Ìmúrasílẹ̀ náà yẹ kí o jẹ́ ní fọ́ọ̀mù ìbéèrè."
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "This feature requires an OpenAI API Key."
 msgstr "Àwọn ẹya yii nilo bọtini API OpenAI kan."
 
-#: modules/permalinks/lib/Requirement/ValidChars.php:44
+#: modules/permalinks/lib/Requirement/ValidChars.php:46
 msgid "Latin characters in permalink"
 msgstr "Àwọn àkàrà Látínì nínú permalink"
 
-#: modules/permalinks/permalinks.php:65, fuzzy
+#: modules/permalinks/permalinks.php:67, fuzzy
 msgid "Permalinks"
 msgstr "Permalinks"
 
-#: modules/permalinks/permalinks.php:66
+#: modules/permalinks/permalinks.php:68
 msgid "Define tasks related to permalinks"
 msgstr "Ṣe alaye awọn iṣẹ ti o ni ibatan si awọn permalink"
 
-#: modules/permissions/permissions.php:68
+#: modules/permissions/permissions.php:70
 msgid "Permissions"
 msgstr "Ìmúṣẹ"
 
-#: modules/permissions/permissions.php:107
+#: modules/permissions/permissions.php:109
 msgid "Exclude User Roles"
 msgstr "Yọkuro Awọn ipa olumulo"
 
-#: modules/reviews/reviews.php:61
+#: modules/permissions/permissions.php:127
+#, php-format
+msgid "Roles that can ignore %s"
+msgstr "Awọn ipa ti o le foju %s"
+
+#: modules/reviews/reviews.php:63
 msgid "Reviews"
 msgstr "Atunwo"
 
-#: modules/settings/settings.php:62
-#: modules/settings/settings.php:128
+#: modules/settings/settings.php:64
+#: modules/settings/settings.php:135
 msgid "Checklists Settings"
 msgstr "Awọn Eto Akojọ Ṣayẹwo"
 
-#: modules/settings/settings.php:151
+#: modules/settings/settings.php:166
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
@@ -1104,23 +1844,36 @@ msgstr ""
 "Ṣe o da igbẹkẹle pe o fẹ lati tun gbogbo awọn nkan atokọ ti a tun orukọ "
 "silẹ si awọn aami aiyipada wọn? Iṣe yii ko le ṣe atunṣe."
 
-#: modules/settings/settings.php:314
+#: modules/settings/settings.php:167
+msgid "Resetting..."
+msgstr "Tun seeto..."
+
+#: modules/settings/settings.php:168
+#: modules/settings/settings.php:1617
+msgid "Reset All Renamed Labels"
+msgstr "Tun gbogbo awọn aami orukọ pada"
+
+#: modules/settings/settings.php:284
+msgid "Settings sections"
+msgstr "Awọn apakan eto"
+
+#: modules/settings/settings.php:338
 msgid "Features"
 msgstr "Awọn ẹya"
 
-#: modules/settings/settings.php:315
+#: modules/settings/settings.php:339
 msgid "Feel free to select only the features you need."
 msgstr "Ma ṣe ṣiyemeji lati yan awọn ẹya ti o nilo nikan."
 
-#: modules/settings/settings.php:323
+#: modules/settings/settings.php:347
 msgid "Enabled features"
 msgstr "Awọn ẹya ti a mu ṣiṣẹ"
 
-#: modules/settings/settings.php:378
+#: modules/settings/settings.php:402
 msgid "There are no PublishPress modules registered"
 msgstr "Kò sí àwọn àwùjọ PublishPress tí a forúkọsílẹ̀"
 
-#: modules/settings/settings.php:474
+#: modules/settings/settings.php:500
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
@@ -1129,83 +1882,99 @@ msgstr ""
 "Ti dènà nitori add_post_type_support('%1$s', '%2$s') ti wa ninu faili kan "
 "ti a kojọpọ."
 
-#: modules/settings/settings.php:770
-msgid "Enable Who Can Ignore:"
-msgstr "Mú ẹni tó lè foju kọ́:"
+#: modules/settings/settings.php:827
+msgid "Enable User Roles Filter:"
+msgstr "Mu Asẹ Awọn ipa olumulo ṣiṣẹ:"
 
-#: modules/settings/settings.php:778
+#: modules/settings/settings.php:835
 msgid "Show warning icon:"
 msgstr "Fi aami ikilọ hàn:"
 
-#: modules/settings/settings.php:786
+#: modules/settings/settings.php:843
+msgid "Highlight failing blocks in the editor:"
+msgstr "Ṣafihan awọn bulọọki ti o kuna ni olootu:"
+
+#: modules/settings/settings.php:851
 msgid "Delete data on uninstall:"
 msgstr "Pa data nigba ti a ba yọ:"
 
-#: modules/settings/settings.php:795
+#: modules/settings/settings.php:860
 msgid "Enable Status Filter:"
 msgstr "Mú àyẹ̀wò ipo ṣiṣẹ́:"
 
-#: modules/settings/settings.php:805
+#: modules/settings/settings.php:870
 msgid "Enable Duplicate Checklists:"
 msgstr "Mú àyẹ̀wò àtẹ̀jáde pọ̀ sílẹ̀:"
 
-#: modules/settings/settings.php:815
+#: modules/settings/settings.php:880
 msgid "Show Checklists column in post lists:"
 msgstr "Fi kọlámu atokọ àṣẹ hàn nínú àkópọ àṣẹ:"
 
-#: modules/settings/settings.php:825
+#: modules/settings/settings.php:890
 msgid "Enable Taxonomy Filter:"
 msgstr "Mú Fílítà Taxonomy ṣiṣẹ:"
 
-#: modules/settings/settings.php:844
+#: modules/settings/settings.php:909
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "Dena aṣayan \"Ipo\" nigba ti nlo \"Ṣatunkọ Yara\":"
 
-#: modules/settings/settings.php:852
+#: modules/settings/settings.php:917
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "Dákẹ́ \"Àtúnṣe Yara\" patapata:"
 
-#: modules/settings/settings.php:860
+#: modules/settings/settings.php:925
 msgid "Disable \"Publish\" button:"
 msgstr "Dákẹ́ \"Ṣe àtúnṣe\" bọtini:"
 
-#: modules/settings/settings.php:878
+#: modules/settings/settings.php:943
 msgid "Complete Icon:"
 msgstr "Aami Pipe:"
 
-#: modules/settings/settings.php:886
+#: modules/settings/settings.php:951
 msgid "Incomplete Icon:"
 msgstr "Aami Aisi Pipe:"
 
-#: modules/settings/settings.php:894
+#: modules/settings/settings.php:959
 msgid "Required Complete Color:"
 msgstr "Ẹ̀dá Pipe ti a beere:"
 
-#: modules/settings/settings.php:902
+#: modules/settings/settings.php:967
 msgid "Required Incomplete Color:"
 msgstr "Ẹ̀dá Aisi Pipe ti a beere:"
 
-#: modules/settings/settings.php:910
+#: modules/settings/settings.php:975
+msgid "Required Asterisk Color:"
+msgstr "Awọ Asterisk ti a beere:"
+
+#: modules/settings/settings.php:983
 msgid "Recommended Complete Color:"
 msgstr "Ẹ̀dá Pipe ti a ṣe iṣeduro:"
 
-#: modules/settings/settings.php:918
+#: modules/settings/settings.php:991
 msgid "Recommended Incomplete Color:"
 msgstr "Àwọ̀ tí a ṣàkóso tí kò pé:"
 
-#: modules/settings/settings.php:936
+#: modules/settings/settings.php:999
+msgid "Rename task labels:"
+msgstr "Tun orukọ awọn aami iṣẹ:"
+
+#: modules/settings/settings.php:1007
+msgid "Checklist task sort order:"
+msgstr "Aṣẹ irọrun iṣẹ atokọ:"
+
+#: modules/settings/settings.php:1025
 msgid "OpenAI API Key:"
 msgstr "Bọtini API OpenAI:"
 
-#: modules/settings/settings.php:951
+#: modules/settings/settings.php:1040
 msgid "Reset Renamed Checklist:"
 msgstr "Tun orúkọ àtòkọ náà ṣe:"
 
-#: modules/settings/settings.php:970
+#: modules/settings/settings.php:1059
 msgid "Post types:"
 msgstr "Iru ìpò:"
 
-#: modules/settings/settings.php:1003
+#: modules/settings/settings.php:1092
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
@@ -1213,11 +1982,11 @@ msgstr ""
 "Eyi gba iṣẹ́ laaye lati jẹ́ aláìlera fún àwọn ipo pataki gẹ́gẹ́ bí "
 "\"Ìkàwé\" tàbí \"Tí a tẹ̀jáde.\""
 
-#: modules/settings/settings.php:1024
+#: modules/settings/settings.php:1113
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "Èyí gba àwọn olumulo laaye láti da àwọn iṣẹ́ àtòkọ tí ó wà lọ́wọ́ pọ̀."
 
-#: modules/settings/settings.php:1046
+#: modules/settings/settings.php:1135
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
@@ -1225,7 +1994,7 @@ msgstr ""
 "Fi kolomu Checklists kun si iboju Posts ti o nfihan bi ọpọlọpọ ibeere ti "
 "pari."
 
-#: modules/settings/settings.php:1067
+#: modules/settings/settings.php:1156
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1233,13 +2002,19 @@ msgstr ""
 "Èyí gba àwọn iṣẹ́ laaye láti jẹ́ kó ma ṣiṣẹ́ fún àwọn ìpò pẹ̀lú àwọn ọrọ̀ "
 "taxonimy pàtó. Lọ sí taabu \"Iru Ìpò\" láti yan àwọn ọrọ̀ náà."
 
-#: modules/settings/settings.php:1089
+#: modules/settings/settings.php:1178
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "Eyi yóò fi aami ikilọ hàn nínú apoti \"Àwọn Atokọ\" tí awọn ibeere kò pé."
 
-#: modules/settings/settings.php:1109
+#: modules/settings/settings.php:1198
+msgid ""
+"This will highlight Gutenberg blocks that fail block-specific checklist "
+"tasks."
+msgstr "Eyi yoo ṣe afihan awọn bulọọki Gutenberg ti o kuna awọn iṣẹ atokọ pato."
+
+#: modules/settings/settings.php:1218
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
@@ -1247,11 +2022,11 @@ msgstr ""
 "Nigbati o ba ti mu ṣiṣẹ, gbogbo data PublishPress Checklists yoo parẹ ti a "
 "ba yọ akopọ naa kuro."
 
-#: modules/settings/settings.php:1130
-msgid "This will show \"Who can ignore\" options."
-msgstr "Eyi yóò fi \"Ta ni o le foju kọ\" awọn aṣayan hàn."
+#: modules/settings/settings.php:1239
+msgid "This will show \"Exclude User Roles\" options."
+msgstr "Eyi yoo fihan awọn aṣayan \"Yọ Awọn ipa olumulo\"."
 
-#: modules/settings/settings.php:1151
+#: modules/settings/settings.php:1260
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
@@ -1259,7 +2034,7 @@ msgstr ""
 "Dákẹ́ àṣayan \"Ipo\" ni a ṣe iṣeduro nitori pe a le lo lati yago fun lilo "
 "awọn ibeere Checklists."
 
-#: modules/settings/settings.php:1172
+#: modules/settings/settings.php:1281
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
@@ -1267,200 +2042,226 @@ msgstr ""
 "Eyi yóò pa \"Ṣatunkọ Kánkán\" fun gbogbo awọn olumulo ayafi fun awọn ti o "
 "ni agbara \"manage_options\"."
 
-#: modules/settings/settings.php:1193
+#: modules/settings/settings.php:1302
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr "Eyi yóò pa bọtini \"Tẹ̀jáde\" run nigbati awọn ibeere atokọ ko ba pade."
 
-#: modules/settings/settings.php:1212
+#: modules/settings/settings.php:1321
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "Tẹ bọtini API rẹ lati lo awọn ibeere OpenAI ninu awọn iṣẹ akọsilẹ."
 
-#: modules/settings/settings.php:1266
+#: modules/settings/settings.php:1394
 msgid "Post Types"
 msgstr "Iru Ifiweranṣẹ"
 
-#: modules/settings/settings.php:1267
+#: modules/settings/settings.php:1395
 msgid "General"
 msgstr "Gbogbogbo"
 
-#: modules/settings/settings.php:1268
+#: modules/settings/settings.php:1396
 msgid "Publishing Options"
 msgstr "Awọn aṣayan Ifiweranṣẹ"
 
-#: modules/settings/settings.php:1269
+#: modules/settings/settings.php:1397
 msgid "Appearance"
 msgstr "Ímúrasílẹ̀"
 
-#: modules/settings/settings.php:1270
+#: modules/settings/settings.php:1398
 msgid "Integration"
 msgstr "Isopọ"
 
-#: modules/settings/settings.php:1271
+#: modules/settings/settings.php:1399
 msgid "Tools"
 msgstr "Awọn irinṣẹ"
 
-#: modules/settings/settings.php:1318
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "Tẹ orúkọ kilasi Dashicons kan (àpẹẹrẹ, dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1319
-#: modules/settings/settings.php:1334
+#: modules/settings/settings.php:1447
+#: modules/settings/settings.php:1462
 msgid "View Dashicons"
 msgstr "Wo Dashicons"
 
-#: modules/settings/settings.php:1333
+#: modules/settings/settings.php:1461
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "Tẹ orúkọ kilasi Dashicons kan (àpẹẹrẹ, dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1396
-msgid "Reset All Custom Labels"
-msgstr "Tun gbogbo Àkọlé Àdáni ṣe"
+#: modules/settings/settings.php:1544
+msgid "Allow admins to rename task labels for the post editor."
+msgstr "Gba awọn alakoso laaye lati tun orukọ awọn aami iṣẹ fun olootu ifiweranṣẹ."
 
-#: modules/settings/settings.php:1398
-msgid "This will reset all renamed checklist items back to their default labels."
+#: modules/settings/settings.php:1562
+msgid "Default"
+msgstr "Aiyipada"
+
+#: modules/settings/settings.php:1563
+msgid "Priority"
+msgstr "Pataki"
+
+#: modules/settings/settings.php:1564
+msgid "Alphabetical"
+msgstr "Akọtọ"
+
+#: modules/settings/settings.php:1568
+msgid "Keeps tasks in the order configured on the Checklists screen."
+msgstr "Pa awọn iṣẹ ni aṣẹ ti a ti tunto lori iboju Atokọ."
+
+#: modules/settings/settings.php:1572
+msgid "Shows Required tasks before Recommended tasks."
+msgstr "Fihan awọn iṣẹ ti a beere ṣaaju awọn iṣẹ ti a ṣeduro."
+
+#: modules/settings/settings.php:1576
+msgid "Sorts tasks alphabetically by task label."
+msgstr "Ṣeto awọn iṣẹ ni akojọ nipasẹ aami iṣẹ."
+
+#: modules/settings/settings.php:1619
+msgid ""
+"This will reset all renamed checklist labels for WP Admin and Editing "
+"screen back to their default labels."
 msgstr ""
-"Èyí yóò tún gbogbo ohun àtòkọ tí a ti yí orúkọ wọn padà sí àkọlé àtọkànwá "
-"wọn."
+"Eyi yoo tun gbogbo awọn aami atokọ ti a renamed fun WP Admin ati iboju "
+"Ṣatunkọ pada si awọn aami aiyipada wọn."
 
-#: modules/settings/settings.php:1408
+#: modules/settings/settings.php:1629
 msgid "Security check failed."
 msgstr "Ìdánwò ààbò kọ́ ṣẹ́gun."
 
-#: modules/settings/settings.php:1413
+#: modules/settings/settings.php:1634
 msgid "You do not have permission to perform this action."
 msgstr "Ìwọ kò ní ìjẹ́wọ́ láti ṣe ìṣe yìí."
 
-#: modules/settings/settings.php:1458
-msgid "All custom labels have been reset successfully."
-msgstr "Gbogbo àkọlé àdáni ti túnṣe ni aṣeyọrí."
+#: modules/settings/settings.php:1679
+msgid "All renamed labels have been reset successfully."
+msgstr "Gbogbo awọn aami ti a renamed ti tunṣe ni aṣeyọri."
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 msgid "Number of characters in Yoast SEO focus keyword"
 msgstr "Iye awọn ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
 msgstr "Kéré jùlọ ti %d àwòrán nínú ọrọ pataki Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
 msgstr "Kere ju %d awọn ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
 msgstr "Max ti %d lẹta ninu Yoast SEO focus keyword"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
 msgstr "Maximu ti %d àwòrán nínú ọrọ pataki Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
 msgstr "%d ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:48
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
 msgstr "%d awọn ohun kikọ ninu ọrọ-ọrọ idojukọ Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
 msgstr "Laarin %d ati %d awọn kikọ ni ọrọ-ọrọ idojuko Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:39
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:40
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 msgid "Number of characters in Yoast SEO meta description"
 msgstr "Iye awọn ohun kikọ ninu apejuwe meta Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
 msgstr "Kere ju %d ohun kikọ ninu apejuwe meta Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
 msgstr "Kere ju %d awọn ohun kikọ ninu apejuwe meta Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
 msgstr "Max ti %d lẹta ninu Yoast SEO meta description"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
 msgstr "Maximu ti %d àwòrán nínú ìtàn meta Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "%d character in Yoast SEO meta description"
 msgstr "%d ohun kikọ ninu apejuwe meta Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:48
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
 msgstr "%d awọn ohun kikọ ninu apejuwe meta Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
 msgstr "Laarin %d ati %d awọn kikọ ni apejuwe meta Yoast SEO"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:57
 msgid "Minimum Yoast SEO readability score"
 msgstr "Iwọn iṣiro kika Yoast SEO ti o kere ju"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:139
 #. translators: %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
 msgstr "Yoast Iye kika: %s"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:135
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:170
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:169
 msgid "OK"
 msgstr "Daradara"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:140
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:171
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:139
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:170
 msgid "Good"
 msgstr "Daradara"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:56
 msgid "Minimum Yoast SEO analysis score"
 msgstr "Iwọn iṣiro itupalẹ Yoast SEO ti o kere ju"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:133
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:138
 #. translators: %s expands to the seo score
 #, fuzzy, php-format
 msgid "Yoast SEO: %s"
 msgstr "Yoast SEO: %s"
 
-#: modules/yoastseo/yoastseo.php:69
+#: modules/yoastseo/yoastseo.php:72
 msgid "Define tasks related to Yoast SEO"
 msgstr "Ṣe alaye awọn iṣẹ ti o ni ibatan si Yoast SEO"
 
-#: publishpress-checklists.php:103
+#: publishpress-checklists.php:107
 msgid "This plugin can be deleted."
 msgstr "A le pa àfikún yìí run."
 
-#: publishpress-checklists.php:154
+#: publishpress-checklists.php:164
 #, php-format
 msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "
