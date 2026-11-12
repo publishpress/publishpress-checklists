@@ -752,6 +752,14 @@ if (!class_exists('PPCH_Checklists')) {
                     true
                 );
 
+                wp_enqueue_script(
+                    'pp-checklists-help-tip',
+                    $this->module_url . 'assets/js/help-tip.js',
+                    [],
+                    PPCH_VERSION,
+                    true
+                );
+
 
                 $rules = apply_filters('publishpress_checklists_rules_list', []);
                 $roles = self::get_editable_roles_labels();
