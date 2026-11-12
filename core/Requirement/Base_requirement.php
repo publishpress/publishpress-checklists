@@ -11,6 +11,7 @@ namespace PublishPress\Checklists\Core\Requirement;
 
 use PublishPress\Checklists\Core\Factory;
 use PublishPress\Checklists\Core\Plugin;
+use PublishPress\Checklists\Core\Utils\HelpTip;
 
 \defined('ABSPATH') || exit;
 
@@ -58,6 +59,17 @@ class Base_requirement
      * @var array
      */
     public $is_custom = false;
+
+    /**
+     * Show the field's help text (lang 'label_option_description') in an
+     * info tooltip instead of under the field. Use it for long help text so
+     * the row on the Checklists screen stays compact.
+     *
+     * @var bool
+     *
+     * @since 2.31.0
+     */
+    public $option_description_tooltip = false;
 
     /**
      * The post type of this requirement.
@@ -343,6 +355,15 @@ class Base_requirement
             $editor_input_name,
             esc_attr($editor_label)
         );
+        if ($this->option_description_tooltip && !empty($this->lang['label_option_description'])) {
+            // Long help text: an info tooltip next to the task name (#1248). The
+            // field in the Options column refers to it with aria-describedby.
+            $html .= HelpTip::render(
+                wp_strip_all_tags((string)$this->lang['label_option_description']),
+                $this->get_option_field_id(),
+                sprintf(__('More information about %s', 'publishpress-checklists'), $default_label)
+            );
+        }
         $html .= '<button type="button" class="pp-checklists-edit-label" aria-label="' . esc_attr(sprintf(__('Edit label for %s', 'publishpress-checklists'), $default_label)) . '" title="' . esc_attr__('Edit label', 'publishpress-checklists') . '" data-default-label="' . esc_attr($default_label) . '" data-editor-default-label="' . esc_attr($this->get_default_editor_label_for_settings()) . '" data-admin-label="' . esc_attr($custom_label) . '" data-editor-label="' . esc_attr($editor_label) . '">';
         $html .= '<span class="dashicons dashicons-edit" aria-hidden="true"></span>';
         $html .= '</button>';
@@ -467,6 +488,44 @@ class Base_requirement
                 'title' => __('Task title or instruction', 'publishpress-checklists'), 'default' => ''];
         }
         return apply_filters('publishpress_checklists_configuration_fields', $fields, $this);
+    }
+
+    /**
+     * Returns the id of the requirement's settings field in the Options
+     * column, e.g. "post-checklists-required_words_multiple".
+     *
+     * @return string
+     *
+     * @since 2.31.0
+     */
+    public function get_option_field_id()
+    {
+        $field = property_exists($this, 'field_name') && !empty($this->field_name) ? '_' . $this->field_name : '';
+
+        return $this->post_type . '-' . $this->module->slug . '-' . $this->name . $field;
+    }
+
+    /**
+     * Returns the help text to print under a settings field. With
+     * $option_description_tooltip the help text is in the info tooltip next
+     * to the task name instead (see get_setting_title_html()), so this is
+     * empty. Give the field aria-describedby="<HelpTip::getId($fieldId)>"
+     * so screen readers announce the help text with it, in both cases.
+     *
+     * @param string $fieldId The id of the field the help text describes.
+     *
+     * @return string
+     *
+     * @since 2.31.0
+     */
+    public function get_option_description_html($fieldId)
+    {
+        if (empty($this->lang['label_option_description']) || $this->option_description_tooltip) {
+            return '';
+        }
+
+        return '<p class="pp-checklists-editable-by-description" id="' . esc_attr(HelpTip::getId($fieldId)) . '">'
+            . esc_html(wp_strip_all_tags((string)$this->lang['label_option_description'])) . '</p>';
     }
 
     /**
