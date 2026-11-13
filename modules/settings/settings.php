@@ -78,7 +78,8 @@ if (!class_exists('PPCH_Settings')) {
                     'enable_block_highlighting' => Base_requirement::VALUE_YES,
                     'openai_api_key'           => '',
                     'delete_data_on_uninstall' => 'off',
-                    'who_can_ignore_option'      => Base_requirement::VALUE_YES,
+                    // Off for new installs since 2.31.0; existing sites keep 'yes' (Core\Utils\InstallDefaults).
+                    'who_can_ignore_option'      => Base_requirement::VALUE_NO,
                     // Custom icons and colors for checklist items
                     'complete_icon'               => 'dashicons-yes',
                     'incomplete_icon'             => 'dashicons-no',
@@ -1359,7 +1360,7 @@ if (!class_exists('PPCH_Settings')) {
             $new_options['enable_block_highlighting'] = Base_requirement::VALUE_YES === $new_options['enable_block_highlighting'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
 
             if (!isset($new_options['who_can_ignore_option'])) {
-                $new_options['who_can_ignore_option'] = Base_requirement::VALUE_YES;
+                $new_options['who_can_ignore_option'] = Base_requirement::VALUE_NO;
             }
             $new_options['who_can_ignore_option'] = Base_requirement::VALUE_YES === $new_options['who_can_ignore_option'] ? Base_requirement::VALUE_YES : Base_requirement::VALUE_NO;
 

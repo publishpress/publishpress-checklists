@@ -1,5 +1,12 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+[2.31.0] - 12 November, 2026
+
+- Added: MCP abilities (WordPress Abilities API) to read and update checklist settings and tasks, manage custom tasks and complete manual tasks on posts, with the same permissions as wp-admin #1255
+- Fixed: A custom task saved with no roles selected could not be ticked by anyone and blocked publishing when Required #1247
+- Changed: Long task help text on the Checklists screen is shown in an accessible tooltip next to the task name, so rows stay compact #1248
+- Changed: "Exclude User Roles" is off by default on new installs; existing sites keep their setting #1254
+
 [2.30.0] - 27 October, 2026
 
 - Added: Counter tasks now show a live count in the editor #1218

@@ -22,3 +22,6 @@ CONTRIBUTING.md export-ignore
 README.md export-ignore
 dist export-ignore
 node_modules export-ignore
+
+.agents export-ignore
+docs export-ignore

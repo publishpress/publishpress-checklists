@@ -54,6 +54,7 @@ function publishpress_checklists_uninstall_cleanup()
         // Migration flags
         'publishpress_checklists_options_migrated_2_0_0',
         'publishpress_checklists_options_migrated_2_6_0',
+        'publishpress_checklists_defaults_2_31_0',
         
         // Reviews/branding
         'publishpress-checklists_wp_reviews_installed_on',

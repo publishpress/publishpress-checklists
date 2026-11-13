@@ -1,5 +1,5 @@
 # Copyright (C) 2026 PublishPress
-# This file is distributed under the same license as the PublishPress Checklists Free plugin.
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: PublishPress Checklists\n"
@@ -12,10 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-04-16T15:09:09+00:00\n"
-"PO-Revision-Date: 2026-10-26 16:53+0000\n"
+"PO-Revision-Date: 2026-11-12 14:34+0000\n"
 "X-Generator: Weblate 2026.6.1\n"
 "X-Domain: publishpress-checklists\n"
-"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ko-KR\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: publishpress-checklists.php\n"
@@ -28,9 +29,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: publishpress-checklists.php:4
+#: publishpress-checklists.php:4, fuzzy
 #. Plugin Name of the plugin
 msgid "PublishPress Checklists Free"
 msgstr "PublishPress Checklists Free"
@@ -48,6 +48,8 @@ msgid ""
 msgstr "PublishPress 체크리스트를 사용하면 콘텐츠에 대한 게시 요구 사항을 선택할 수 있습니다."
 
 #: publishpress-checklists.php:7
+#: core/Mcp/Bootstrap.php:37
+#: modules/checklists/templates/footer.php:45
 #. Author of the plugin
 msgid "PublishPress"
 msgstr "PublishPress"
@@ -58,89 +60,527 @@ msgid "https://publishpress.com"
 msgstr "https://publishpress.com"
 
 #: core/API/LabelMapper.php:39
-#: modules/checklists/checklists.php:1222
+#: modules/checklists/checklists.php:1661
 msgid "Disabled"
 msgstr "비활성화됨"
 
 #: core/API/LabelMapper.php:40
-#: modules/checklists/checklists.php:1029
-#: modules/checklists/checklists.php:1223
-#: modules/checklists/checklists.php:1306
-#: modules/checklists/assets/js/gutenberg-panel.jsx:464
+#: modules/checklists/checklists.php:1260
+#: modules/checklists/checklists.php:1662
+#: modules/checklists/checklists.php:1746
+#: modules/checklists/assets/js/gutenberg-panel.jsx:493
 msgid "Recommended"
 msgstr "추천"
 
 #: core/API/LabelMapper.php:41
-#: modules/checklists/checklists.php:1028
-#: modules/checklists/checklists.php:1224
-#: modules/checklists/checklists.php:1305
-#: modules/checklists/assets/js/gutenberg-panel.jsx:463
+#: modules/checklists/checklists.php:1259
+#: modules/checklists/checklists.php:1663
+#: modules/checklists/checklists.php:1745
+#: modules/checklists/assets/js/gutenberg-panel.jsx:492
 msgid "Required"
 msgstr "필수"
 
-#: core/Legacy/LegacyPlugin.php:208
+#: core/Legacy/LegacyPlugin.php:217
 msgid "Please correct your form errors below and try again."
 msgstr "아래의 양식 오류를 수정하고 다시 시도하십시오."
 
-#: core/Legacy/LegacyPlugin.php:212
-#: modules/settings/settings.php:523
+#: core/Legacy/LegacyPlugin.php:221
+#: modules/settings/settings.php:536
 msgid "Cheatin&#8217; uh?"
 msgstr "속임수인가요?"
 
-#: core/Legacy/LegacyPlugin.php:213
+#: core/Legacy/LegacyPlugin.php:222
 msgid "You do not have necessary permissions to complete this action."
 msgstr "이 작업을 완료할 수 있는 필요한 권한이 없습니다."
 
-#: core/Legacy/LegacyPlugin.php:217
+#: core/Legacy/LegacyPlugin.php:226
 msgid "Post does not exist"
 msgstr "게시물이 존재하지 않습니다"
 
-#: core/Legacy/LegacyPlugin.php:348
-#: core/Plugin.php:78
-#: modules/checklists/checklists.php:110
-#: modules/checklists/checklists.php:1132
-#: modules/checklists/checklists.php:1147
-#: modules/checklists/checklists.php:1302
-#: modules/checklists/assets/js/gutenberg-panel.jsx:438
+#: core/Legacy/LegacyPlugin.php:360
+#: core/Plugin.php:83
+#: modules/checklists/checklists.php:125
+#: modules/checklists/checklists.php:1571
+#: modules/checklists/checklists.php:1586
+#: modules/checklists/checklists.php:1741
+#: modules/checklists/assets/js/gutenberg-panel.jsx:587
 msgid "Checklists"
 msgstr "체크리스트들"
 
-#: core/Legacy/Module.php:286
+#: core/Legacy/Module.php:292
 msgid "PublishPress Checklists"
 msgstr "PublishPress 체크리스트"
 
-#: core/Legacy/Module.php:289
+#: core/Legacy/Module.php:295
 #, php-format
 msgid "If you like %s please leave us a %s rating. Thank you!"
 msgstr "%s를 좋아하신다면 %s 평가를 남겨주세요. 감사합니다!"
 
-#: core/Legacy/Util.php:179
+#: core/Legacy/Util.php:183
 msgid "Need PublishPress Checklists Support?"
 msgstr "PublishPress 체크리스트 지원이 필요하신가요?"
 
-#: core/Legacy/Util.php:185
+#: core/Legacy/Util.php:189
 msgid "If you need help or have a new feature request, let us know."
 msgstr "도움이 필요하시거나 새로운 기능 요청이 있으시면 알려주세요."
 
-#: core/Legacy/Util.php:188
+#: core/Legacy/Util.php:192
 msgid "Request Support"
 msgstr "지원 요청"
 
-#: core/Legacy/Util.php:195
+#: core/Legacy/Util.php:199
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "자세한 문서는 플러그인 웹사이트에서도 확인할 수 있습니다."
 
-#: core/Legacy/Util.php:198
+#: core/Legacy/Util.php:202
 msgid "View Knowledge Base"
 msgstr "지식 베이스 보기"
 
-#: core/Plugin.php:79
-#: modules/settings/settings.php:134
+#: core/Mcp/Bootstrap.php:38
+msgid "Actions provided by PublishPress plugins."
+msgstr "PublishPress 플러그인에서 제공하는 작업입니다."
+
+#: core/Mcp/Catalog.php:30
+msgid "Discover Checklists features"
+msgstr "체크리스트 기능 알아보기"
+
+#: core/Mcp/Catalog.php:31
+msgid ""
+"Discover native checklist configuration, custom and OpenAI tasks, "
+"publishing settings, appearance, per-post task states and active "
+"Pro/integration modules. Feature discovery grants no additional permissions."
+msgstr ""
+"네이티브 체크리스트 구성, 사용자 정의 및 OpenAI 작업, 게시 설정, 모양, 게시물별 작업 상태 및 활성 Pro/통합 모듈을 "
+"알아보세요. 기능 발견은 추가 권한을 부여하지 않습니다."
+
+#: core/Mcp/Catalog.php:39
+msgid "Discover checklist post types"
+msgstr "체크리스트 게시물 유형 알아보기"
+
+#: core/Mcp/Catalog.php:40
+msgid ""
+"Read native supported post type names, labels, enabled state and "
+"configuration locks. Requires the filtered checklist management capability."
+msgstr "네이티브로 지원되는 게시물 유형 이름, 레이블, 활성 상태 및 구성 잠금을 읽습니다. 필터링된 체크리스트 관리 기능이 필요합니다."
+
+#: core/Mcp/Catalog.php:48
+msgid "Find checklist requirements"
+msgstr "체크리스트 요구 사항 찾기"
+
+#: core/Mcp/Catalog.php:49
+msgid ""
+"Find native built-in, custom, OpenAI, duplicated and integration-specific "
+"task IDs for one post type. Includes labels, groups, configured rule and "
+"actual edition availability. Read one requirement for its exact fields and "
+"latest revision."
+msgstr ""
+"하나의 게시물 유형에 대해 네이티브 내장, 사용자 정의, OpenAI, 중복 및 통합 전용 작업 ID를 찾습니다. 레이블, 그룹, "
+"구성된 규칙 및 실제 편집 가능성을 포함합니다. 특정 필드와 최신 개정판에 대한 요구 사항을 읽습니다."
+
+#: core/Mcp/Catalog.php:57
+msgid "Read checklist requirement settings"
+msgstr "체크리스트 요구 사항 설정 읽기"
+
+#: core/Mcp/Catalog.php:58
+msgid ""
+"Read one native task with exact per-post-type field names, types, choices, "
+"current settings and revision. Includes ranges, role/user selectors and "
+"labels when supported. Free Pro placeholders are unavailable for writes."
+msgstr ""
+"게시물 유형별 필드 이름, 유형, 선택 사항, 현재 설정 및 개정이 정확한 네이티브 작업 하나를 읽습니다. 지원되는 경우 범위, "
+"역할/사용자 선택기 및 레이블을 포함합니다. 무료 Pro 자리 표시자는 쓰기에 사용할 수 없습니다."
+
+#: core/Mcp/Catalog.php:66
+msgid "Discover checklist requirement choices"
+msgstr "체크리스트 요구 사항 선택 사항 알아보기"
+
+#: core/Mcp/Catalog.php:67
+msgid ""
+"Read a bounded page of native field choices, including role/user choices "
+"and live assignable taxonomy term identifiers. Use returned values rather "
+"than inventing taxonomy IDs or names."
+msgstr ""
+"역할/사용자 선택 사항 및 실시간 할당 가능한 분류 용어 식별자를 포함한 네이티브 필드 선택 사항의 제한된 페이지를 읽습니다. 분류 "
+"ID 또는 이름을 발명하지 말고 반환된 값을 사용하십시오."
+
+#: core/Mcp/Catalog.php:102
+msgid "Editable post; native task role/user restrictions also apply"
+msgstr "편집 가능한 게시물; 네이티브 작업 역할/사용자 제한도 적용됩니다."
+
+#: core/Mcp/Catalog.php:102
+msgid "Site configuration"
+msgstr "사이트 구성"
+
+#: core/Mcp/Catalog.php:173
+#: core/Mcp/Requirements.php:225
+msgid "Choose a supported post type."
+msgstr "지원되는 게시물 유형을 선택하세요."
+
+#: core/Mcp/Catalog.php:194
+msgid "Choose a requirement from this post type's discovery."
+msgstr "이 게시물 유형의 발견에서 요구 사항을 선택하세요."
+
+#: core/Mcp/Catalog.php:202
+msgid "Native taxonomy tokens from get-requirement-choices; do not invent names."
+msgstr "get-requirement-choices의 네이티브 분류 토큰; 이름을 발명하지 마십시오."
+
+#: core/Mcp/Catalog.php:247
+msgid "Choose a discovered field."
+msgstr "발견된 필드를 선택하세요."
+
+#: core/Mcp/Catalog.php:253
+msgid "You cannot list users."
+msgstr "사용자 목록을 나열할 수 없습니다."
+
+#: core/Mcp/Catalog.php:265
+msgid "You cannot access this taxonomy selector."
+msgstr "이 분류 선택기에 접근할 수 없습니다."
+
+#: core/Mcp/Options.php:96
+msgid "The settings could not be saved; original values were restored."
+msgstr "설정을 저장할 수 없습니다; 원래 값이 복원되었습니다."
+
+#: core/Mcp/Options.php:97
+msgid "Saving failed and recovery was incomplete. Read settings before retrying."
+msgstr "저장에 실패했고 복구가 완료되지 않았습니다. 재시도하기 전에 설정을 읽으십시오."
+
+#: core/Mcp/Registry.php:68
+msgid "Use the exact field types returned by discovery."
+msgstr "발견된 정확한 필드 유형을 사용하십시오."
+
+#: core/Mcp/Registry.php:178
+msgid "The request is too large."
+msgstr "요청이 너무 큽니다."
+
+#: core/Mcp/Registry.php:188
+msgid "You do not have permission for this action."
+msgstr "이 작업에 대한 권한이 없습니다."
+
+#: core/Mcp/Registry.php:192
+msgid "The result is too large. Use narrower discovery or a smaller page."
+msgstr "결과가 너무 큽니다. 더 좁은 발견 또는 더 작은 페이지를 사용하십시오."
+
+#: core/Mcp/Registry.php:197
+msgid ""
+"The operation did not complete normally. Read the affected data before "
+"retrying; some changes may have been applied."
+msgstr "작업이 정상적으로 완료되지 않았습니다. 재시도하기 전에 영향을 받는 데이터를 읽으십시오; 일부 변경 사항이 적용되었을 수 있습니다."
+
+#: core/Mcp/Registry.php:198
+msgid "The data could not be read. Check the active integrations before retrying."
+msgstr "데이터를 읽을 수 없습니다. 재시도하기 전에 활성 통합을 확인하십시오."
+
+#: core/Mcp/Requirements.php:34
+msgid "Update a checklist requirement"
+msgstr "체크리스트 요구 사항 업데이트"
+
+#: core/Mcp/Requirements.php:35
+msgid ""
+"Patch one discovered task for one post type using its latest hash. Supports "
+"native rule, ranges, selectors, role exceptions and labels. Preserves other "
+"tasks and post types. Native validation runs without simulated admin forms; "
+"dry_run previews without saving."
+msgstr ""
+"최신 해시를 사용하여 하나의 게시물 유형에 대해 발견된 작업 하나를 패치합니다. 네이티브 규칙, 범위, 선택기, 역할 예외 및 레이블을 "
+"지원합니다. 다른 작업 및 게시물 유형은 보존됩니다. 네이티브 검증은 시뮬레이션된 관리 양식 없이 실행되며; dry_run은 저장 없이 "
+"미리보기합니다."
+
+#: core/Mcp/Requirements.php:44
+msgid "Update several checklist requirements"
+msgstr "여러 체크리스트 요구 사항 업데이트"
+
+#: core/Mcp/Requirements.php:45
+msgid ""
+"Validate every explicit task/post-type target before one native "
+"configuration write. Each target needs its current hash. Preserves omitted "
+"configuration and accepts dry_run. Does not change post content or mark "
+"tasks completed."
+msgstr ""
+"하나의 네이티브 구성 쓰기 전에 모든 명시적인 작업/게시물 유형 대상을 검증합니다. 각 대상은 현재 해시가 필요합니다. 생략된 구성은 "
+"보존되며 dry_run을 수용합니다. 게시물 내용이나 작업 완료 마크는 변경되지 않습니다."
+
+#: core/Mcp/Requirements.php:55
+msgid "Create or update a custom checklist task"
+msgstr "사용자 정의 체크리스트 작업 만들기 또는 업데이트하기"
+
+#: core/Mcp/Requirements.php:56
+msgid ""
+"Create a custom checkbox or OpenAI instruction task for one supported post "
+"type, disabled by default, or patch a discovered existing task using its "
+"latest hash. New IDs are generated by the plugin. OpenAI tasks configure "
+"instructions only; this action does not call an AI service or certify its "
+"result."
+msgstr ""
+"하나의 지원되는 게시물 유형에 대해 기본적으로 비활성된 사용자 정의 체크박스 또는 OpenAI 지침 작업을 만들거나 최신 해시를 "
+"사용하여 발견된 기존 작업을 패치합니다. 새 ID는 플러그인에 의해 생성됩니다. OpenAI 작업은 지침만 구성하며; 이 작업은 AI "
+"서비스를 호출하거나 그 결과를 인증하지 않습니다."
+
+#: core/Mcp/Requirements.php:69
+msgid "Remove a custom checklist task"
+msgstr "사용자 정의 체크리스트 작업 제거"
+
+#: core/Mcp/Requirements.php:70
+msgid ""
+"Remove a verified custom or OpenAI task from one post type using its latest "
+"hash. Other post types and historic post completion metadata are retained. "
+"Native built-in tasks are disabled through their rule rather than deleted. "
+"dry_run checks only."
+msgstr ""
+"최신 해시를 사용하여 하나의 게시물 유형에서 확인된 사용자 정의 또는 OpenAI 작업을 제거합니다. 다른 게시물 유형 및 이전 게시 "
+"완료 메타데이터는 보존됩니다. 네이티브 내장 작업은 삭제되지 않고 규칙을 통해 비활성화됩니다. dry_run만 확인합니다."
+
+#: core/Mcp/Requirements.php:79
+msgid "Reorder checklist tasks"
+msgstr "체크리스트 작업 순서 변경"
+
+#: core/Mcp/Requirements.php:80
+msgid ""
+"Move discovered requirements into the supplied native shared order. Rule "
+"ordering is shared by post types, so this can change their default task "
+"ordering too; Appearance Priority/Alphabetical modes still apply. Uses one "
+"requirement hash from the current configuration. dry_run previews without "
+"saving."
+msgstr ""
+"발견된 요구 사항을 제공된 네이티브 공유 순서로 이동합니다. 규칙 정렬은 게시물 유형에 의해 공유되므로 기본 작업 정렬도 변경될 수 "
+"있습니다; 모양 우선 순위/알파벳 순 모드가 여전히 적용됩니다. 현재 구성에서 하나의 요구 사항 해시를 사용합니다. dry_run은 "
+"저장 없이 미리보기합니다."
+
+#: core/Mcp/Requirements.php:90
+msgid "Reset renamed checklist labels"
+msgstr "이름이 바뀐 체크리스트 레이블 재설정"
+
+#: core/Mcp/Requirements.php:91
+msgid ""
+"Reset native WP Admin and Editing screen task labels to their defaults. "
+"This affects all tasks/post types, preserves task titles/rules and requires "
+"manage_options. Use checklist_hash from get-plugin-settings; dry_run checks "
+"only."
+msgstr ""
+"네이티브 WP Admin 및 편집 화면 작업 레이블을 기본값으로 재설정합니다. 이는 모든 작업/게시물 유형에 영향을 미치며, 작업 "
+"제목/규칙을 보존하고 manage_options가 필요합니다. get-plugin-settings에서 checklist_hash를 "
+"사용하십시오; dry_run만 확인합니다."
+
+#: core/Mcp/Requirements.php:108
+msgid "This requirement needs its active Pro integration."
+msgstr "이 요구 사항에는 활성 Pro 통합이 필요합니다."
+
+#: core/Mcp/Requirements.php:111
+#: core/Mcp/Requirements.php:295
+#: core/Mcp/Requirements.php:325
+msgid "Checklist configuration changed. Read it again."
+msgstr "체크리스트 구성 변경됨. 다시 읽어보세요."
+
+#: core/Mcp/Requirements.php:118
+#: core/Mcp/Requirements.php:252
+msgid "Enter a task title that remains non-empty after sanitization."
+msgstr "정화 후 비어 있지 않은 작업 제목을 입력하세요."
+
+#: core/Mcp/Requirements.php:123
+msgid "You cannot select users."
+msgstr "사용자를 선택할 수 없습니다."
+
+#: core/Mcp/Requirements.php:128
+msgid "Select an eligible user from current choices."
+msgstr "현재 선택에서 적격 사용자를 선택하세요."
+
+#: core/Mcp/Requirements.php:136
+msgid "You cannot assign this taxonomy."
+msgstr "이 taxonomy를 할당할 수 없습니다."
+
+#: core/Mcp/Requirements.php:142
+msgid "Read current taxonomy choices before saving."
+msgstr "저장하기 전에 현재 taxonomy 선택을 읽어보세요."
+
+#: core/Mcp/Requirements.php:157
+msgid "The minimum cannot exceed a positive maximum."
+msgstr "최소값은 양의 최대값을 초과할 수 없습니다."
+
+#: core/Mcp/Requirements.php:160
+#: core/Mcp/Requirements.php:255
+msgid "Enable Who can ignore in Settings before changing role exceptions."
+msgstr "역할 예외를 변경하기 전에 설정에서 무시할 수 있는 사용자를 활성화하세요."
+
+#: core/Mcp/Requirements.php:180
+msgid "Include each requirement/post-type target only once."
+msgstr "각 요구 사항/게시물 유형 대상을 한 번만 포함하세요."
+
+#: core/Mcp/Requirements.php:233
+msgid "Choose a configured custom or OpenAI task."
+msgstr "구성된 사용자 지정 또는 OpenAI 작업을 선택하세요."
+
+#: core/Mcp/Requirements.php:236
+msgid "Task kind cannot be changed. Use its discovered kind or create a new task."
+msgstr "작업 종류는 변경할 수 없습니다. 발견된 종류를 사용하거나 새로운 작업을 생성하세요."
+
+#: core/Mcp/Requirements.php:292
+msgid "Only custom and OpenAI tasks can be removed."
+msgstr "사용자 지정 및 OpenAI 작업만 제거할 수 있습니다."
+
+#: core/Mcp/Requirements.php:329
+msgid "Use discovered requirement identifiers."
+msgstr "발견된 요구 사항 식별자를 사용하세요."
+
+#: core/Mcp/Requirements.php:350
+msgid "Settings changed. Read them again."
+msgstr "설정이 변경되었습니다. 다시 읽어보세요."
+
+#: core/Mcp/Settings.php:47
+msgid "Enable User Roles Filter (Who can ignore)"
+msgstr "사용자 역할 필터 활성화 (무시할 수 있는 사용자)"
+
+#: core/Mcp/Settings.php:48
+msgid "Show warning icon"
+msgstr "경고 아이콘 표시"
+
+#: core/Mcp/Settings.php:49
+msgid "Highlight failing blocks in the editor"
+msgstr "편집기에서 실패하는 블록 강조 표시"
+
+#: core/Mcp/Settings.php:50
+msgid "Disable the Status option when using Quick Edit"
+msgstr "빠른 편집을 사용할 때 상태 옵션 비활성화"
+
+#: core/Mcp/Settings.php:51
+msgid "Disable Quick Edit completely"
+msgstr "빠른 편집 완전히 비활성화"
+
+#: core/Mcp/Settings.php:52
+msgid "Disable Publish button"
+msgstr "발행 버튼 비활성화"
+
+#: core/Mcp/Settings.php:53
+msgid "Rename task labels"
+msgstr "작업 레이블 이름 변경"
+
+#: core/Mcp/Settings.php:54
+msgid "Checklist task sort order"
+msgstr "체크리스트 작업 정렬 순서"
+
+#: core/Mcp/Settings.php:69
+msgid "Read Checklists settings"
+msgstr "체크리스트 설정 읽기"
+
+#: core/Mcp/Settings.php:70
+msgid ""
+"Read Post Types, General, Publishing Options and Appearance settings with "
+"exact native fields, choices and revisions. Actual Pro adds available "
+"non-secret settings. OpenAI/license credentials are excluded. Requires "
+"manage_options."
+msgstr ""
+"정확한 네이티브 필드, 선택 사항 및 수정과 함께 게시물 유형, 일반, 발행 옵션 및 외관 설정 읽기. 실제 Pro는 비밀이 아닌 사용 "
+"가능한 설정을 추가합니다. OpenAI/라이센스 자격 증명은 제외됩니다. manage_options가 필요합니다."
+
+#: core/Mcp/Settings.php:78
+msgid "Update Checklists settings"
+msgstr "체크리스트 설정 업데이트"
+
+#: core/Mcp/Settings.php:79
+msgid ""
+"Patch supplied discovered settings using the latest hash. Boolean inputs "
+"map to native yes/no or on/off storage; post_types is a list of enabled "
+"names. Preserves omitted settings and credentials. dry_run previews native "
+"validation without saving. Feature-specific settings retain dependency and "
+"edition gates."
+msgstr ""
+"최신 해시를 사용하여 제공된 발견된 설정을 패치합니다. 부울 입력은 네이티브 예/아니오 또는 켜기/끄기 저장소에 매핑됩니다; "
+"post_types는 활성화된 이름 목록입니다. 생략된 설정 및 자격 증명을 보존합니다. dry_run은 저장하지 않고 네이티브 검증을 "
+"미리 봅니다. 기능별 설정은 종속성 및 편집 게이트를 유지합니다."
+
+#: core/Mcp/Settings.php:89
+msgid "Enable an optional Checklists feature"
+msgstr "선택적 체크리스트 기능 활성화"
+
+#: core/Mcp/Settings.php:90
+msgid ""
+"Enable or disable one discovered optional module. Core/autoloaded modules "
+"cannot be disabled. Requires manage_options and actual module availability. "
+"Uses the latest feature inventory hash. Changes take effect in a fresh "
+"request."
+msgstr ""
+"발견된 선택적 모듈을 활성화하거나 비활성화하세요. 코어/자동 로드 모듈은 비활성화할 수 없습니다. manage_options 및 실제 "
+"모듈 가용성이 필요합니다. 최신 기능 재고 해시를 사용합니다. 변경 사항은 새로운 요청에서 적용됩니다."
+
+#: core/Mcp/Settings.php:129
+msgid "Settings changed. Read them again before saving."
+msgstr "설정이 변경되었습니다. 저장하기 전에 다시 읽어보세요."
+
+#: core/Mcp/Settings.php:139
+msgid "This setting requires its active integration."
+msgstr "이 설정은 활성 통합이 필요합니다."
+
+#: core/Mcp/Settings.php:170
+msgid "Native validation did not accept this setting."
+msgstr "네이티브 검증에서 이 설정을 수용하지 않았습니다."
+
+#: core/Mcp/Settings.php:192
+msgid "Feature settings changed. Discover them again."
+msgstr "기능 설정이 변경되었습니다. 다시 확인하세요."
+
+#: core/Mcp/Settings.php:200
+msgid "This core module cannot be switched through MCP."
+msgstr "이 코어 모듈은 MCP를 통해 전환할 수 없습니다."
+
+#: core/Mcp/Settings.php:210
+msgid "Choose an available feature from discovery."
+msgstr "발견에서 사용 가능한 기능을 선택하세요."
+
+#: core/Mcp/Tasks.php:38
+msgid "Read a post checklist"
+msgstr "게시물 체크리스트 읽기"
+
+#: core/Mcp/Tasks.php:39
+msgid ""
+"Read the native checklist for an editable saved post, respecting ignored "
+"roles and active Pro status/taxonomy exclusions. Results are native server "
+"snapshots, not a guarantee about unsaved editor content or JavaScript-only "
+"checks. OpenAI calls are not performed. Includes manual completion "
+"permissions and current revision."
+msgstr ""
+"무시된 역할과 활성 Pro 상태/세분화 제외를 존중하여 수정 가능한 저장된 게시물을 위한 네이티브 체크리스트를 읽습니다. 결과는 "
+"네이티브 서버 스냅샷이며, 저장되지 않은 편집기 콘텐츠 또는 JavaScript 전용 검사를 보장하지 않습니다. OpenAI 호출은 "
+"수행되지 않습니다. 수동 완료 권한 및 현재 수정본이 포함됩니다."
+
+#: core/Mcp/Tasks.php:47
+msgid "Complete or reopen manual checklist tasks"
+msgstr "수동 체크리스트 작업 완료 또는 재개"
+
+#: core/Mcp/Tasks.php:48
+msgid ""
+"Set explicit boolean states for configured, enabled custom checkboxes or "
+"approvals on one editable post using its latest revision. Checks each "
+"task's native role/user restrictions and post-meta permission before any "
+"write. Automatic and OpenAI results cannot be forged. dry_run validates "
+"without saving."
+msgstr ""
+"최신 수정본을 사용하여 하나의 수정 가능한 게시물에서 구성된 활성화된 사용자 지정 체크박스 또는 승인에 대한 명시적인 부울 상태를 "
+"설정하세요. 모든 쓰기 전에 각 작업의 네이티브 역할/사용자 제한 및 게시물 메타 권한을 확인합니다. 자동 및 OpenAI 결과는 "
+"위조할 수 없습니다. dry_run은 저장하지 않고 검증합니다."
+
+#: core/Mcp/Tasks.php:87
+msgid "The post or checklist changed. Read it again."
+msgstr "게시물 또는 체크리스트가 변경되었습니다. 다시 읽어보세요."
+
+#: core/Mcp/Tasks.php:93
+msgid "You cannot mark this task for this post."
+msgstr "이 게시물에 대해 이 작업을 표시할 수 없습니다."
+
+#: core/Mcp/Tasks.php:131
+msgid "Task state could not be saved; original states were restored."
+msgstr "작업 상태를 저장할 수 없습니다; 원래 상태가 복원되었습니다."
+
+#: core/Mcp/Tasks.php:132
+msgid ""
+"Task state save failed and recovery was incomplete. Read the checklist "
+"before retrying."
+msgstr "작업 상태 저장에 실패하였고 복구가 완료되지 않았습니다. 다시 시도하기 전에 체크리스트를 읽으십시오."
+
+#: core/Plugin.php:84
+#: modules/settings/settings.php:137
 msgid "Settings"
 msgstr "설정"
 
-#: core/Plugin.php:87
-#: publishpress-checklists.php:183
+#: core/Plugin.php:92
+#: publishpress-checklists.php:193
 msgid "Upgrade to Pro"
 msgstr "프로로 업그레이드"
 
@@ -154,11 +594,11 @@ msgid "Approved by a user in this role"
 msgstr "이 역할의 사용자에 의해 승인됨"
 
 #: core/Requirement/Approved_by.php:161
-#: core/Requirement/Base_requirement.php:239
-#: core/Requirement/Prohibited_categories.php:414
-#: core/Requirement/Prohibited_tags.php:383
-#: core/Requirement/Required_categories.php:422
-#: core/Requirement/Required_tags.php:383
+#: core/Requirement/Base_requirement.php:251
+#: core/Requirement/Prohibited_categories.php:417
+#: core/Requirement/Prohibited_tags.php:386
+#: core/Requirement/Required_categories.php:425
+#: core/Requirement/Required_tags.php:386
 #. translators: 1: custom editor label, 2: selected role names.
 #. translators: 1: custom editor label, 2: compact counter requirement (min/max/exact).
 #. translators: 1: custom editor label, 2: prohibited category names.
@@ -169,43 +609,101 @@ msgstr "이 역할의 사용자에 의해 승인됨"
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
-#: core/Requirement/Base_counter.php:385
-#: core/Requirement/Pro_Requirement.php:112
+#: core/Requirement/Base_counter.php:388
+#: core/Requirement/Pro_Requirement.php:114
 msgid "Min"
 msgstr "최소"
 
-#: core/Requirement/Base_counter.php:393
-#: core/Requirement/Pro_Requirement.php:113
+#: core/Requirement/Base_counter.php:396
+#: core/Requirement/Pro_Requirement.php:115
 msgid "Max"
 msgstr "최대"
 
-#: core/Requirement/Base_requirement.php:268
+#: core/Requirement/Base_dropdown.php:111
+#, php-format
+msgid "Set option for %s"
+msgstr "%s에 대한 옵션 설정"
+
+#: core/Requirement/Base_requirement.php:280
 #. translators: %d: exact required value.
 #, php-format
 msgid "exact %d"
 msgstr "정확한 %d"
 
-#: core/Requirement/Base_requirement.php:276
+#: core/Requirement/Base_requirement.php:288
 #. translators: %d: minimum required value.
 #, php-format
 msgid "min %d"
 msgstr "최소 %d"
 
-#: core/Requirement/Base_requirement.php:284
+#: core/Requirement/Base_requirement.php:296
 #. translators: %d: maximum allowed value.
 #, php-format
 msgid "max %d"
 msgstr "최대 %d"
 
-#: core/Requirement/Base_requirement.php:291
+#: core/Requirement/Base_requirement.php:303
 #. translators: 1: minimum required value, 2: maximum allowed value.
 #, php-format
 msgid "min %1$d max %2$d"
 msgstr "최소 %1$d 최대 %2$d"
 
-#: core/Requirement/Base_requirement.php:346
+#: core/Requirement/Base_requirement.php:364
+#, php-format
+msgid "More information about %s"
+msgstr "%s에 대한 추가 정보"
+
+#: core/Requirement/Base_requirement.php:367
+#, php-format
+msgid "Edit label for %s"
+msgstr "%s에 대한 레이블 편집"
+
+#: core/Requirement/Base_requirement.php:367
 msgid "Edit label"
 msgstr "레이블 편집"
+
+#: core/Requirement/Base_requirement.php:405
+#, php-format
+msgid "Set requirement status for %s"
+msgstr "%s에 대한 요구 사항 상태 설정"
+
+#: core/Requirement/Base_requirement.php:454
+msgid "Task status: Disabled, Recommended or Required"
+msgstr "작업 상태: 비활성화, 권장 또는 필수"
+
+#: core/Requirement/Base_requirement.php:455
+msgid "WP Admin label"
+msgstr "WP Admin 레이블"
+
+#: core/Requirement/Base_requirement.php:456
+msgid "Editing screen label"
+msgstr "편집 화면 레이블"
+
+#: core/Requirement/Base_requirement.php:458
+msgid "Who can ignore this task?"
+msgstr "누가 이 작업을 무시할 수 있습니까?"
+
+#: core/Requirement/Base_requirement.php:462
+msgid "Minimum"
+msgstr "최소"
+
+#: core/Requirement/Base_requirement.php:463
+msgid "Maximum; zero or empty has no upper limit"
+msgstr "최대; 0 또는 비어 있으면 상한이 없습니다"
+
+#: core/Requirement/Base_requirement.php:484
+msgid "Time in 24-hour HH:MM format"
+msgstr "24시간 HH:MM 형식의 시간"
+
+#: core/Requirement/Base_requirement.php:488
+msgid "Task title or instruction"
+msgstr "작업 제목 또는 지침"
+
+#: core/Requirement/Base_time.php:147
+#: core/Requirement/Pro_Requirement.php:102
+#, php-format
+msgid "Set time for %s"
+msgstr "%s에 대한 시간 설정"
 
 #: core/Requirement/Categories_count.php:47
 msgid "Number of categories"
@@ -246,27 +744,38 @@ msgstr "%s 카테고리"
 msgid "Between %s and %s categories"
 msgstr "%s와 %s 카테고리 사이"
 
-#: core/Requirement/Custom_item.php:60
 #: core/Requirement/Custom_item.php:61
-#: core/Utils/FieldsTabs.php:73
+#: core/Requirement/Custom_item.php:62
+#: core/Utils/FieldsTabs.php:75
 msgid "Custom"
 msgstr "사용자 정의"
 
-#: core/Requirement/Custom_item.php:62
-#: modules/checklists/checklists.php:768
+#: core/Requirement/Custom_item.php:63
+#: modules/checklists/checklists.php:839
 msgid "Which roles can mark this task as complete?"
 msgstr "어떤 역할이 이 작업을 완료로 표시할 수 있습니까?"
 
 #: core/Requirement/Custom_item.php:81
-#: modules/checklists/checklists.php:775
+#: modules/checklists/checklists.php:847
+msgid "Custom task title"
+msgstr "사용자 지정 작업 제목"
+
+#: core/Requirement/Custom_item.php:85
+#: modules/checklists/checklists.php:856
 msgid "Enter name of custom task"
 msgstr "사용자 정의 작업의 이름을 입력하세요"
 
-#: core/Requirement/Custom_item.php:129
-#: core/Requirement/Openai_item.php:147
-#: modules/checklists/checklists.php:774
+#: core/Requirement/Custom_item.php:132
+#: core/Requirement/Openai_item.php:151
+#: modules/checklists/checklists.php:845
 msgid "Remove"
 msgstr "제거"
+
+#: core/Requirement/Custom_item.php:133
+#: core/Requirement/Openai_item.php:152
+#: modules/checklists/checklists.php:846
+msgid "Remove custom task"
+msgstr "사용자 지정 작업 제거"
 
 #: core/Requirement/External_links.php:43
 msgid "Number of external links in content"
@@ -452,38 +961,43 @@ msgid "Openai"
 msgstr "Openai"
 
 #: core/Requirement/Openai_item.php:100
-#: modules/checklists/checklists.php:776
+#: modules/checklists/checklists.php:848
+msgid "OpenAI task prompt"
+msgstr "OpenAI 작업 프롬프트"
+
+#: core/Requirement/Openai_item.php:104
+#: modules/checklists/checklists.php:857
 msgid "Enter OpenAI task prompt"
 msgstr "OpenAI 작업 프롬프트를 입력하세요"
 
-#: core/Requirement/Openai_item.php:286
+#: core/Requirement/Openai_item.php:291
 msgid "An error occured."
 msgstr "오류가 발생했습니다."
 
-#: core/Requirement/Openai_item.php:293
+#: core/Requirement/Openai_item.php:298
 msgid "Validation error. Kindly reload this page and try again."
 msgstr "유효성 검사 오류. 이 페이지를 새로 고치고 다시 시도해 주세요."
 
-#: core/Requirement/Openai_item.php:298
+#: core/Requirement/Openai_item.php:303
 msgid "Post content is empty."
 msgstr "게시물 내용이 비어 있습니다."
 
-#: core/Requirement/Openai_item.php:307
+#: core/Requirement/Openai_item.php:312
 msgid ""
 "OpenAI tasks require an API Key. Please add your API Key in the Settings "
 "area."
 msgstr "OpenAI 작업에는 API 키가 필요합니다. 설정 영역에 API 키를 추가하십시오."
 
-#: core/Requirement/Openai_item.php:362
+#: core/Requirement/Openai_item.php:367
 #, php-format
 msgid "API Error: %1s."
 msgstr "API 오류: %1s."
 
-#: core/Requirement/Openai_item.php:380
+#: core/Requirement/Openai_item.php:385
 msgid "See the full response."
 msgstr "전체 응답 보기."
 
-#: core/Requirement/Openai_item.php:401
+#: core/Requirement/Openai_item.php:406
 msgid "Invalid response"
 msgstr "잘못된 응답"
 
@@ -504,6 +1018,11 @@ msgstr "금지된 태그: %s"
 #: core/Requirement/Prohibited_tags.php:88
 msgid "Prohibited tags"
 msgstr "금지된 태그"
+
+#: core/Requirement/Pro_Requirement.php:126
+#, php-format
+msgid "Select options for %s"
+msgstr "%s에 대한 옵션 선택"
 
 #: core/Requirement/Required_categories.php:87
 #, php-format
@@ -673,659 +1192,763 @@ msgstr "%d 단어들 콘텐츠에"
 msgid "Between %d and %d words in content"
 msgstr "내용에서 %d와 %d 단어 사이"
 
-#: core/Utils/FieldsTabs.php:21
+#: core/Utils/FieldsTabs.php:23
 msgid "Title"
 msgstr "제목"
 
-#: core/Utils/FieldsTabs.php:25
+#: core/Utils/FieldsTabs.php:27
 msgid "Content"
 msgstr "내용"
 
-#: core/Utils/FieldsTabs.php:29
+#: core/Utils/FieldsTabs.php:31
 msgid "Publish Date / Time"
 msgstr "발행 날짜 / 시간"
 
-#: core/Utils/FieldsTabs.php:33
+#: core/Utils/FieldsTabs.php:35
 msgid "Approval"
 msgstr "승인"
 
-#: core/Utils/FieldsTabs.php:37
+#: core/Utils/FieldsTabs.php:39
 msgid "Images"
 msgstr "이미지"
 
-#: core/Utils/FieldsTabs.php:41
+#: core/Utils/FieldsTabs.php:43
 msgid "Audio / Video"
 msgstr "오디오 / 비디오"
 
-#: core/Utils/FieldsTabs.php:45
+#: core/Utils/FieldsTabs.php:47
 msgid "Featured Image"
 msgstr "특집 이미지"
 
-#: core/Utils/FieldsTabs.php:49
+#: core/Utils/FieldsTabs.php:51
 msgid "Links"
 msgstr "링크"
 
-#: core/Utils/FieldsTabs.php:53
+#: core/Utils/FieldsTabs.php:55
 msgid "Permalink"
 msgstr "퍼머링크"
 
-#: core/Utils/FieldsTabs.php:57
+#: core/Utils/FieldsTabs.php:59
 msgid "Categories"
 msgstr "카테고리"
 
-#: core/Utils/FieldsTabs.php:61
+#: core/Utils/FieldsTabs.php:63
 msgid "Tags"
 msgstr "태그"
 
-#: core/Utils/FieldsTabs.php:65
+#: core/Utils/FieldsTabs.php:67
 msgid "Taxonomies"
 msgstr "분류"
 
-#: core/Utils/FieldsTabs.php:69
+#: core/Utils/FieldsTabs.php:71
 msgid "Accessibility"
 msgstr "접근성"
 
-#: core/Utils/FieldsTabs.php:97
+#: core/Utils/FieldsTabs.php:99
 msgid "WooCommerce"
 msgstr "우커머스"
 
-#: core/Utils/FieldsTabs.php:104, fuzzy
+#: core/Utils/FieldsTabs.php:106, fuzzy
 msgid "Rank Math SEO"
 msgstr "Rank Math SEO"
 
-#: core/Utils/FieldsTabs.php:111
+#: core/Utils/FieldsTabs.php:113
 msgid "All in One SEO"
 msgstr "올인원 SEO"
 
-#: core/Utils/FieldsTabs.php:118
-#: modules/yoastseo/yoastseo.php:68
+#: core/Utils/FieldsTabs.php:120
+#: modules/yoastseo/yoastseo.php:71
 msgid "Yoast SEO"
 msgstr "요스트 SEO"
 
-#: core/Utils/FieldsTabs.php:126, fuzzy
+#: core/Utils/FieldsTabs.php:128, fuzzy
 msgid "ACF"
 msgstr "ACF"
 
-#: modules/checklists/checklists.php:724
+#: core/Utils/HelpTip.php:63
+msgid "More information"
+msgstr "추가 정보"
+
+#: modules/checklists/checklists.php:795
 msgid "options cannot be empty."
 msgstr "옵션은 비어 있을 수 없습니다."
 
-#: modules/checklists/checklists.php:728
+#: modules/checklists/checklists.php:799
 msgid "Please make sure to add a name for all the custom tasks."
 msgstr "모든 사용자 정의 작업에 이름을 추가했는지 확인하십시오."
 
-#: modules/checklists/checklists.php:732
+#: modules/checklists/checklists.php:803
 msgid "Rename task label"
 msgstr "작업 레이블 이름 바꾸기"
 
-#: modules/checklists/checklists.php:736
+#: modules/checklists/checklists.php:807
 msgid "Label for the Checklists screen"
 msgstr "체크리스트 화면의 레이블"
 
-#: modules/checklists/checklists.php:740
+#: modules/checklists/checklists.php:811
 msgid "Leave empty to use the default WP Admin label"
 msgstr "기본 WP 관리 레이블을 사용하려면 비워 두십시오"
 
-#: modules/checklists/checklists.php:744
+#: modules/checklists/checklists.php:815
 msgid "Label for the post editing screen"
 msgstr "게시물 편집 화면의 레이블"
 
-#: modules/checklists/checklists.php:748
+#: modules/checklists/checklists.php:819
 msgid "Leave empty to use the default editing screen label"
 msgstr "기본 편집 화면 레이블을 사용하려면 비워 두십시오"
 
-#: modules/checklists/checklists.php:752
+#: modules/checklists/checklists.php:823
 msgid "Preview in editing screen:"
 msgstr "편집 화면에서 미리보기:"
 
-#: modules/checklists/checklists.php:756
+#: modules/checklists/checklists.php:827
 msgid "Default checklist label will be used."
 msgstr "기본 체크리스트 레이블이 사용됩니다."
 
-#: modules/checklists/checklists.php:760
+#: modules/checklists/checklists.php:831
 msgid "Save"
 msgstr "저장"
 
-#: modules/checklists/checklists.php:764
+#: modules/checklists/checklists.php:835
 msgid "Cancel"
 msgstr "취소"
 
-#: modules/checklists/checklists.php:772
+#: modules/checklists/checklists.php:843
 msgid "No results found"
 msgstr "결과를 찾을 수 없습니다"
 
-#: modules/checklists/checklists.php:773
+#: modules/checklists/checklists.php:844
 msgid "Searching…"
 msgstr "검색 중…"
 
-#: modules/checklists/checklists.php:777
+#: modules/checklists/checklists.php:849
+msgid "Set requirement status"
+msgstr "요구 사항 상태 설정"
+
+#: modules/checklists/checklists.php:850
+msgid "Roles that can ignore this task"
+msgstr "이 작업을 무시할 수 있는 역할"
+
+#: modules/checklists/checklists.php:851
+msgid "Roles that can mark this task as complete"
+msgstr "이 작업을 완료로 표시할 수 있는 역할"
+
+#: modules/checklists/checklists.php:852
+msgid "Custom task added."
+msgstr "사용자 지정 작업이 추가되었습니다."
+
+#: modules/checklists/checklists.php:853
+msgid "Custom task removed."
+msgstr "사용자 지정 작업이 제거되었습니다."
+
+#: modules/checklists/checklists.php:854
+msgid "OpenAI prompt task added."
+msgstr "OpenAI 프롬프트 작업이 추가되었습니다."
+
+#: modules/checklists/checklists.php:855
+msgid "OpenAI prompt task removed."
+msgstr "OpenAI 프롬프트 작업이 제거되었습니다."
+
+#: modules/checklists/checklists.php:858
 msgid "Suggested Prompts"
 msgstr "제안된 프롬프트"
 
-#: modules/checklists/checklists.php:778
+#: modules/checklists/checklists.php:859
 msgid "What's the expected OpenAI response to mark the requirement as pass?"
 msgstr "요구 사항을 통과로 표시하기 위한 OpenAI의 예상 응답은 무엇입니까?"
 
-#: modules/checklists/checklists.php:781
+#: modules/checklists/checklists.php:862
 msgid "Clear Content"
 msgstr "내용 지우기"
 
-#: modules/checklists/checklists.php:782
+#: modules/checklists/checklists.php:863
 msgid "Is this content clear and easy to read?"
 msgstr "이 콘텐츠가 명확하고 읽기 쉬운가요?"
 
-#: modules/checklists/checklists.php:785
+#: modules/checklists/checklists.php:866
 msgid "Friendly Tone Content"
 msgstr "친근한 어조 콘텐츠"
 
-#: modules/checklists/checklists.php:786
+#: modules/checklists/checklists.php:867
 msgid "Is this content tone friendly?"
 msgstr "이 콘텐츠의 톤이 친근한가요?"
 
-#: modules/checklists/checklists.php:789
+#: modules/checklists/checklists.php:870
 msgid "Professional Tone Content"
 msgstr "전문적인 톤 콘텐츠"
 
-#: modules/checklists/checklists.php:790
+#: modules/checklists/checklists.php:871
 msgid "Is this content tone professional?"
 msgstr "이 콘텐츠의 톤이 전문적인가요?"
 
-#: modules/checklists/checklists.php:793
+#: modules/checklists/checklists.php:874
 msgid "Persuasive Tone Content"
 msgstr "설득력 있는 톤 콘텐츠"
 
-#: modules/checklists/checklists.php:794
+#: modules/checklists/checklists.php:875
 msgid "Is this content tone persuasive?"
 msgstr "이 콘텐츠의 톤이 설득력 있는가요?"
 
-#: modules/checklists/checklists.php:797
+#: modules/checklists/checklists.php:878
 msgid "Empathetic Tone Content"
 msgstr "공감적인 톤의 내용"
 
-#: modules/checklists/checklists.php:798
+#: modules/checklists/checklists.php:879
 msgid "Is this content tone empathetic?"
 msgstr "이 콘텐츠의 톤이 공감적인가요?"
 
-#: modules/checklists/checklists.php:801
+#: modules/checklists/checklists.php:882
 msgid "Adventurous Tone Content"
 msgstr "모험적인 톤 콘텐츠"
 
-#: modules/checklists/checklists.php:802
+#: modules/checklists/checklists.php:883
 msgid "Is this content tone adventurous?"
 msgstr "이 콘텐츠의 톤이 모험적인가요?"
 
-#: modules/checklists/checklists.php:805
+#: modules/checklists/checklists.php:886
 msgid "Promotional Tone Content"
 msgstr "홍보 톤 콘텐츠"
 
-#: modules/checklists/checklists.php:806
+#: modules/checklists/checklists.php:887
 msgid "Is this content tone promotional?"
 msgstr "이 콘텐츠의 톤이 홍보적인가요?"
 
-#: modules/checklists/checklists.php:872
-#: modules/checklists/checklists.php:960
+#: modules/checklists/checklists.php:961
+#: modules/checklists/checklists.php:1168
+#: modules/checklists/checklists.php:1742
+#: modules/checklists/assets/js/gutenberg-panel.jsx:597
 msgid "Checklist"
 msgstr "체크리스트"
 
-#: modules/checklists/checklists.php:956
-#: modules/checklists/checklists.php:1303
+#: modules/checklists/checklists.php:1164
+#: modules/checklists/checklists.php:1743
 msgid "You don't have to complete any Checklist tasks."
 msgstr "당신은 어떤 체크리스트 작업도 완료할 필요가 없습니다."
 
-#: modules/checklists/checklists.php:961
+#: modules/checklists/checklists.php:1169
 msgid "Are you sure you want to publish anyway?"
 msgstr "그래도 게시하시겠습니까?"
 
-#: modules/checklists/checklists.php:965
+#: modules/checklists/checklists.php:1173
 msgid "Are you sure you want to update the published post anyway?"
 msgstr "발행된 게시물을 업데이트하시겠습니까?"
 
-#: modules/checklists/checklists.php:969
+#: modules/checklists/checklists.php:1177
 msgid "Please complete the following tasks before publishing:"
 msgstr "게시하기 전에 다음 작업을 완료하십시오:"
 
-#: modules/checklists/checklists.php:973
+#: modules/checklists/checklists.php:1181
 msgid "Please complete the following tasks before updating the published post:"
 msgstr "게시된 게시물을 업데이트하기 전에 다음 작업을 완료하십시오:"
 
-#: modules/checklists/checklists.php:977
-#: modules/checklists/checklists.php:981
+#: modules/checklists/checklists.php:1185
+#: modules/checklists/checklists.php:1189
 msgid "Not required, but important: "
 msgstr "필수는 아니지만 중요합니다: "
 
-#: modules/checklists/checklists.php:987
+#: modules/checklists/checklists.php:1193
+msgid "These recommendations are missing:"
+msgstr "누락된 권장 사항은 다음과 같습니다:"
+
+#: modules/checklists/checklists.php:1199
 msgid "One or more items in the checklist are not completed"
 msgstr "체크리스트의 하나 이상의 항목이 완료되지 않았습니다"
 
-#: modules/checklists/checklists.php:1024
+#: modules/checklists/checklists.php:1209
+msgid "completed"
+msgstr "완료됨"
+
+#: modules/checklists/checklists.php:1210
+msgid "not completed"
+msgstr "완료되지 않음"
+
+#: modules/checklists/checklists.php:1211
+#: modules/checklists/checklists.php:1265
+#: modules/checklists/checklists.php:1747
+msgid "Completed"
+msgstr "완료됨"
+
+#: modules/checklists/checklists.php:1212
+#: modules/checklists/checklists.php:1266
+#: modules/checklists/checklists.php:1748
+msgid "Not completed"
+msgstr "완료되지 않음"
+
+#: modules/checklists/checklists.php:1213
+msgid "Dismiss this notice."
+msgstr "이 알림을 무시합니다."
+
+#: modules/checklists/checklists.php:1215
+#. translators: Live count badge next to a counter task with a maximum. %1$s is the current count, %2$s is the maximum.
+#, fuzzy, php-format
+msgid "%1$s / %2$s"
+msgstr "%1$s / %2$s"
+
+#: modules/checklists/checklists.php:1217
+#. translators: Live count badge next to a counter task with only a minimum. %1$s is the current count, %2$s is the minimum.
+#, php-format
+msgid "%1$s, min %2$s"
+msgstr "%1$s, 최소 %2$s"
+
+#: modules/checklists/checklists.php:1218
+msgid "The checklist task could not be saved. Please try again."
+msgstr "체크리스트 작업을 저장할 수 없습니다. 다시 시도해 주십시오."
+
+#: modules/checklists/checklists.php:1255
 #, php-format
 msgid "You don't have to complete any %sChecklist tasks%s."
 msgstr "당신은 어떤 %s체크리스트 작업%s도 완료할 필요가 없습니다."
 
-#: modules/checklists/checklists.php:1030
-#: modules/checklists/assets/js/gutenberg-panel.jsx:500
+#: modules/checklists/checklists.php:1261
+#: modules/checklists/assets/js/gutenberg-panel.jsx:545
 msgid "Check Now"
 msgstr "지금 확인하기"
 
-#: modules/checklists/checklists.php:1031
+#: modules/checklists/checklists.php:1262
 msgid "Ok"
 msgstr "확인"
 
-#: modules/checklists/checklists.php:1032
+#: modules/checklists/checklists.php:1263
 msgid "No"
 msgstr "아니요"
 
-#: modules/checklists/checklists.php:1033
+#: modules/checklists/checklists.php:1264
 msgid "Yes"
 msgstr "예"
 
-#: modules/checklists/checklists.php:1197
+#: modules/checklists/checklists.php:1267
+msgid "Checklist requirements"
+msgstr "체크리스트 요구 사항"
+
+#: modules/checklists/checklists.php:1636
 msgid "Task"
 msgstr "작업"
 
-#: modules/checklists/checklists.php:1198
+#: modules/checklists/checklists.php:1637
 msgid "Disabled, Recommended or Required"
 msgstr "비활성화됨, 권장 또는 필수"
 
-#: modules/checklists/checklists.php:1199
+#: modules/checklists/checklists.php:1638
 msgid "Options"
 msgstr "옵션"
 
-#: modules/checklists/checklists.php:1200
+#: modules/checklists/checklists.php:1639
 msgid "Add custom task"
 msgstr "사용자 정의 작업 추가"
 
-#: modules/checklists/checklists.php:1301
+#: modules/checklists/checklists.php:1740
 msgid "Please complete the required(*) checklists task."
 msgstr "필수(*) 체크리스트 작업을 완료하십시오."
 
-#: modules/checklists/checklists.php:1304
+#: modules/checklists/checklists.php:1744
 msgid "required"
 msgstr "필수"
 
-#: modules/checklists/checklists.php:1309
-#: modules/checklists/templates/meta-box.php:16
+#: modules/checklists/checklists.php:1751
+#: modules/checklists/templates/meta-box.php:19
 msgid "Checklists tasks are not available in Elementor editors"
 msgstr "체크리스트 작업은 Elementor 편집기에서 사용할 수 없습니다."
 
-#: modules/checklists/pro-requirements.php:22
+#: modules/checklists/pro-requirements.php:24
 msgid "All in One SEO Headline Score"
 msgstr "올인원 SEO 헤드라인 점수"
 
-#: modules/checklists/pro-requirements.php:31
+#: modules/checklists/pro-requirements.php:33
 msgid "All in One SEO Score"
 msgstr "올인원 SEO 점수"
 
-#: modules/checklists/pro-requirements.php:40
+#: modules/checklists/pro-requirements.php:42
 msgid "Featured image height"
 msgstr "대표 이미지 높이"
 
-#: modules/checklists/pro-requirements.php:49
+#: modules/checklists/pro-requirements.php:51
 msgid "Featured image width"
 msgstr "대표 이미지 너비"
 
-#: modules/checklists/pro-requirements.php:58
+#: modules/checklists/pro-requirements.php:60
 msgid "H1, H2, H3 etc tags are used in logical order"
 msgstr "H1, H2, H3 등의 태그는 논리적인 순서로 사용됩니다"
 
-#: modules/checklists/pro-requirements.php:67
+#: modules/checklists/pro-requirements.php:69
 msgid "Number of images in content"
 msgstr "내용 내 이미지 수"
 
-#: modules/checklists/pro-requirements.php:76
+#: modules/checklists/pro-requirements.php:78
 msgid "Number of characters in image captions"
 msgstr "이미지 캡션의 문자 수"
 
-#: modules/checklists/pro-requirements.php:85
+#: modules/checklists/pro-requirements.php:87
 msgid "Number of audio items in content"
 msgstr "컨텐츠의 오디오 항목 수"
 
-#: modules/checklists/pro-requirements.php:94
+#: modules/checklists/pro-requirements.php:96
 msgid "Number of video items in content"
 msgstr "컨텐츠의 비디오 항목 수"
 
-#: modules/checklists/pro-requirements.php:103
+#: modules/checklists/pro-requirements.php:105
 msgid "Approved by role"
 msgstr "역할에 의해 승인됨"
 
-#: modules/checklists/pro-requirements.php:110
+#: modules/checklists/pro-requirements.php:112
 msgid "Approved by specific user"
 msgstr "특정 사용자에 의해 승인됨"
 
-#: modules/checklists/pro-requirements.php:117
+#: modules/checklists/pro-requirements.php:119
 msgid "Avoid heading tags in content"
 msgstr "내용 내 제목 태그 피하기"
 
-#: modules/checklists/pro-requirements.php:124
+#: modules/checklists/pro-requirements.php:126
 msgid "Prohibited words"
 msgstr "금지된 단어"
 
-#: modules/checklists/pro-requirements.php:131
+#: modules/checklists/pro-requirements.php:133
+msgid "Required words"
+msgstr "필수 단어"
+
+#: modules/checklists/pro-requirements.php:140
 msgid "Publish time should be at a specific time"
 msgstr "게시 시간은 특정 시간이어야 합니다."
 
-#: modules/checklists/pro-requirements.php:139
+#: modules/checklists/pro-requirements.php:148
 msgid "Publish time should be in the future"
 msgstr "게시 시간은 미래여야 합니다"
 
-#: modules/checklists/pro-requirements.php:147
+#: modules/checklists/pro-requirements.php:156
 msgid "Rank Math SEO Score"
 msgstr "랭크 매스 SEO 점수"
 
-#: modules/checklists/pro-requirements.php:156
+#: modules/checklists/pro-requirements.php:165
 msgid "Only one H1 tag in content"
 msgstr "내용 내 H1 태그는 하나만 사용"
 
-#: modules/checklists/pro-requirements.php:163
+#: modules/checklists/pro-requirements.php:172
 msgid "Tables have a header row"
 msgstr "테이블에는 헤더 행이 있습니다"
 
-#: modules/checklists/pro-requirements.php:170
+#: modules/checklists/pro-requirements.php:179
 msgid "Check the \"Allow backorders?\" box"
 msgstr "\"백오더 허용?\" 박스를 확인하세요"
 
-#: modules/checklists/pro-requirements.php:178
+#: modules/checklists/pro-requirements.php:187
 msgid "Select some products for \"Cross-sells\""
 msgstr "\"교차 판매\"를 위한 제품을 선택하세요"
 
-#: modules/checklists/pro-requirements.php:186
+#: modules/checklists/pro-requirements.php:195
 msgid "Discount for the \"Sale price\""
 msgstr "\"판매 가격\"에 대한 할인"
 
-#: modules/checklists/pro-requirements.php:194
+#: modules/checklists/pro-requirements.php:203
 msgid "Check the \"Downloadable\" box"
 msgstr "\"다운로드 가능\" 상자를 체크하세요"
 
-#: modules/checklists/pro-requirements.php:202
+#: modules/checklists/pro-requirements.php:211
 msgid "Product image"
 msgstr "제품 이미지"
 
-#: modules/checklists/pro-requirements.php:210
+#: modules/checklists/pro-requirements.php:219
 msgid "Check the \"Manage stock?\" box"
 msgstr "\"재고 관리?\" 상자를 체크하세요"
 
-#: modules/checklists/pro-requirements.php:218
+#: modules/checklists/pro-requirements.php:227
 msgid "Enter a \"Regular price\""
 msgstr "\"정상 가격\"을 입력하세요"
 
-#: modules/checklists/pro-requirements.php:226
+#: modules/checklists/pro-requirements.php:235
 msgid "Enter a \"Sale price\""
 msgstr "\"판매 가격\"을 입력하세요"
 
-#: modules/checklists/pro-requirements.php:234
+#: modules/checklists/pro-requirements.php:243
 msgid "Schedule the \"Sale price\""
 msgstr "\"판매 가격\"을 예약하세요"
 
-#: modules/checklists/pro-requirements.php:242
+#: modules/checklists/pro-requirements.php:251
 msgid "Enter a \"SKU\""
 msgstr "\"SKU\"를 입력하세요"
 
-#: modules/checklists/pro-requirements.php:250
+#: modules/checklists/pro-requirements.php:259
 msgid "Check the \"Sold individually\" box"
 msgstr "\"개별 판매\" 상자를 체크하세요"
 
-#: modules/checklists/pro-requirements.php:258
+#: modules/checklists/pro-requirements.php:267
 msgid "Select some products for \"Upsells\""
 msgstr "\"상향 판매\"를 위한 제품을 선택하세요"
 
-#: modules/checklists/pro-requirements.php:266
+#: modules/checklists/pro-requirements.php:275
 msgid "Check the \"Virtual\" box"
 msgstr "\"가상\" 상자를 체크하세요"
 
-#: modules/checklists/pro-requirements.php:297
+#: modules/checklists/pro-requirements.php:306
 #, php-format
 msgid "Number of Characters in %s field"
 msgstr "%s 필드의 문자 수"
 
-#: modules/checklists/pro-requirements.php:310
+#: modules/checklists/pro-requirements.php:319
 #, php-format
 msgid "%s is filled"
 msgstr "%s 가 채워졌습니다"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About PublishPress Checklists"
 msgstr "PublishPress 체크리스트에 대하여"
 
-#: modules/checklists/templates/footer.php:23
+#: modules/checklists/templates/footer.php:24
 msgid "About"
 msgstr "정보"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "PublishPress Checklists Documentation"
 msgstr "PublishPress 체크리스트 문서"
 
-#: modules/checklists/templates/footer.php:30
+#: modules/checklists/templates/footer.php:31
 msgid "Documentation"
 msgstr "문서"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact the PublishPress team"
 msgstr "PublishPress 팀에 연락하기"
 
-#: modules/checklists/templates/footer.php:37
+#: modules/checklists/templates/footer.php:38
 msgid "Contact"
 msgstr "연락처"
 
-#: modules/checklists/templates/global-checklists.php:6
+#: modules/checklists/templates/global-checklists.php:7
 msgid "Settings saved successfully!"
 msgstr "설정이 성공적으로 저장되었습니다!"
 
-#: modules/checklists/templates/global-checklists.php:12
-#: modules/checklists/templates/global-checklists.php:217
+#: modules/checklists/templates/global-checklists.php:13
+#: modules/checklists/templates/global-checklists.php:268
 msgid "Save Changes"
 msgstr "변경 사항 저장"
 
-#: modules/checklists/templates/global-checklists.php:152
+#: modules/checklists/templates/global-checklists.php:16
+msgid "Post types"
+msgstr "게시물 유형"
+
+#: modules/checklists/templates/global-checklists.php:74
+#, php-format
+msgid "Checklist sections for %s"
+msgstr "%s에 대한 체크리스트 섹션"
+
+#: modules/checklists/templates/global-checklists.php:203
 msgid "Pro feature"
 msgstr "프로 기능"
 
-#: modules/checklists/templates/global-checklists.php:165
+#: modules/checklists/templates/global-checklists.php:216
 #, php-format
 msgid "No %s requirements for this post type."
 msgstr "이 게시물 유형에 대한 %s 요구 사항이 없습니다."
 
-#: modules/checklists/templates/global-checklists.php:183
+#: modules/checklists/templates/global-checklists.php:234
 msgid "New Item"
 msgstr "새 항목"
 
-#: modules/checklists/templates/global-checklists.php:184
+#: modules/checklists/templates/global-checklists.php:235
 msgid "Description"
 msgstr "설명"
 
-#: modules/checklists/templates/global-checklists.php:196
+#: modules/checklists/templates/global-checklists.php:247
 msgid ""
 "Custom tasks do not complete automatically. Users must check the box to "
 "show they have completed the task."
 msgstr "사용자 정의 작업은 자동으로 완료되지 않습니다. 사용자는 작업이 완료되었음을 표시하기 위해 체크박스를 선택해야 합니다."
 
-#: modules/checklists/templates/global-checklists.php:203
+#: modules/checklists/templates/global-checklists.php:254
 msgid "Add OpenAI Prompt task"
 msgstr "OpenAI 프롬프트 작업 추가"
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "The prompt should be in form of a question."
 msgstr "프롬프트는 질문 형식이어야 합니다."
 
-#: modules/checklists/templates/global-checklists.php:210
+#: modules/checklists/templates/global-checklists.php:261
 msgid "This feature requires an OpenAI API Key."
 msgstr "이 기능은 OpenAI API 키가 필요합니다."
 
-#: modules/permalinks/lib/Requirement/ValidChars.php:44
+#: modules/permalinks/lib/Requirement/ValidChars.php:46
 msgid "Latin characters in permalink"
 msgstr "퍼머링크의 라틴 문자"
 
-#: modules/permalinks/permalinks.php:65
+#: modules/permalinks/permalinks.php:67
 msgid "Permalinks"
 msgstr "퍼머링크들"
 
-#: modules/permalinks/permalinks.php:66
+#: modules/permalinks/permalinks.php:68
 msgid "Define tasks related to permalinks"
 msgstr "퍼머링크와 관련된 작업 정의"
 
-#: modules/permissions/permissions.php:68
+#: modules/permissions/permissions.php:70
 msgid "Permissions"
 msgstr "권한"
 
-#: modules/permissions/permissions.php:107
+#: modules/permissions/permissions.php:109
 msgid "Exclude User Roles"
 msgstr "사용자 역할 제외"
 
-#: modules/reviews/reviews.php:61
+#: modules/permissions/permissions.php:127
+#, php-format
+msgid "Roles that can ignore %s"
+msgstr "%s를 무시할 수 있는 역할"
+
+#: modules/reviews/reviews.php:63
 msgid "Reviews"
 msgstr "리뷰"
 
-#: modules/settings/settings.php:62
-#: modules/settings/settings.php:132
+#: modules/settings/settings.php:64
+#: modules/settings/settings.php:135
 msgid "Checklists Settings"
 msgstr "체크리스트 설정"
 
-#: modules/settings/settings.php:162
+#: modules/settings/settings.php:166
 msgid ""
 "Are you sure you want to reset all renamed checklist items to their default "
 "labels? This action cannot be undone."
 msgstr "모든 이름이 변경된 체크리스트 항목을 기본 레이블로 재설정하시겠습니까? 이 작업은 실행 취소할 수 없습니다."
 
-#: modules/settings/settings.php:163
+#: modules/settings/settings.php:167
 msgid "Resetting..."
 msgstr "초기화중..."
 
-#: modules/settings/settings.php:164
-#: modules/settings/settings.php:1602
+#: modules/settings/settings.php:168
+#: modules/settings/settings.php:1617
 msgid "Reset All Renamed Labels"
 msgstr "모든 이름 변경된 레이블 초기화"
 
-#: modules/settings/settings.php:327
+#: modules/settings/settings.php:284
+msgid "Settings sections"
+msgstr "설정 섹션"
+
+#: modules/settings/settings.php:338
 msgid "Features"
 msgstr "기능"
 
-#: modules/settings/settings.php:328
+#: modules/settings/settings.php:339
 msgid "Feel free to select only the features you need."
 msgstr "필요한 기능만 선택하시면 됩니다."
 
-#: modules/settings/settings.php:336
+#: modules/settings/settings.php:347
 msgid "Enabled features"
 msgstr "활성화된 기능"
 
-#: modules/settings/settings.php:391
+#: modules/settings/settings.php:402
 msgid "There are no PublishPress modules registered"
 msgstr "등록된 PublishPress 모듈이 없습니다"
 
-#: modules/settings/settings.php:487
+#: modules/settings/settings.php:500
 #, php-format
 msgid ""
 "Disabled because add_post_type_support('%1$s', '%2$s') is included in a "
 "loaded file."
 msgstr "add_post_type_support('%1$s', '%2$s')가 로드된 파일에 포함되어 있어 비활성화됨."
 
-#: modules/settings/settings.php:812
+#: modules/settings/settings.php:827
 msgid "Enable User Roles Filter:"
 msgstr "사용자 역할 필터 활성화:"
 
-#: modules/settings/settings.php:820
+#: modules/settings/settings.php:835
 msgid "Show warning icon:"
 msgstr "경고 아이콘 표시:"
 
-#: modules/settings/settings.php:828
+#: modules/settings/settings.php:843
 msgid "Highlight failing blocks in the editor:"
 msgstr "편집기에서 실패한 블록 강조 표시:"
 
-#: modules/settings/settings.php:836
+#: modules/settings/settings.php:851
 msgid "Delete data on uninstall:"
 msgstr "제거 시 데이터 삭제:"
 
-#: modules/settings/settings.php:845
+#: modules/settings/settings.php:860
 msgid "Enable Status Filter:"
 msgstr "상태 필터 활성화:"
 
-#: modules/settings/settings.php:855
+#: modules/settings/settings.php:870
 msgid "Enable Duplicate Checklists:"
 msgstr "중복 체크리스트 활성화:"
 
-#: modules/settings/settings.php:865
+#: modules/settings/settings.php:880
 msgid "Show Checklists column in post lists:"
 msgstr "게시물 목록에 체크리스트 열 표시:"
 
-#: modules/settings/settings.php:875
+#: modules/settings/settings.php:890
 msgid "Enable Taxonomy Filter:"
 msgstr "분류 필터 활성화:"
 
-#: modules/settings/settings.php:894
+#: modules/settings/settings.php:909
 msgid "Disable the \"Status\" option when using \"Quick Edit\":"
 msgstr "\"빠른 편집\"을 사용할 때 \"상태\" 옵션 비활성화:"
 
-#: modules/settings/settings.php:902
+#: modules/settings/settings.php:917
 msgid "Disable \"Quick Edit\" completely:"
 msgstr "\"빠른 편집\" 완전히 비활성화:"
 
-#: modules/settings/settings.php:910
+#: modules/settings/settings.php:925
 msgid "Disable \"Publish\" button:"
 msgstr "\"발행\" 버튼 비활성화:"
 
-#: modules/settings/settings.php:928
+#: modules/settings/settings.php:943
 msgid "Complete Icon:"
 msgstr "완료 아이콘:"
 
-#: modules/settings/settings.php:936
+#: modules/settings/settings.php:951
 msgid "Incomplete Icon:"
 msgstr "미완료 아이콘:"
 
-#: modules/settings/settings.php:944
+#: modules/settings/settings.php:959
 msgid "Required Complete Color:"
 msgstr "필수 완료 색상:"
 
-#: modules/settings/settings.php:952
+#: modules/settings/settings.php:967
 msgid "Required Incomplete Color:"
 msgstr "필수 미완료 색상:"
 
-#: modules/settings/settings.php:960
+#: modules/settings/settings.php:975
 msgid "Required Asterisk Color:"
 msgstr "필수 별표 색상:"
 
-#: modules/settings/settings.php:968
+#: modules/settings/settings.php:983
 msgid "Recommended Complete Color:"
 msgstr "추천 완료 색상:"
 
-#: modules/settings/settings.php:976
+#: modules/settings/settings.php:991
 msgid "Recommended Incomplete Color:"
 msgstr "추천된 미완료 색상:"
 
-#: modules/settings/settings.php:984
+#: modules/settings/settings.php:999
 msgid "Rename task labels:"
 msgstr "작업 레이블 이름 바꾸기:"
 
-#: modules/settings/settings.php:992
+#: modules/settings/settings.php:1007
 msgid "Checklist task sort order:"
 msgstr "체크리스트 작업 정렬 순서:"
 
-#: modules/settings/settings.php:1010
+#: modules/settings/settings.php:1025
 msgid "OpenAI API Key:"
 msgstr "OpenAI API 키:"
 
-#: modules/settings/settings.php:1025
+#: modules/settings/settings.php:1040
 msgid "Reset Renamed Checklist:"
 msgstr "이름이 변경된 체크리스트 초기화:"
 
-#: modules/settings/settings.php:1044
+#: modules/settings/settings.php:1059
 msgid "Post types:"
 msgstr "게시물 유형:"
 
-#: modules/settings/settings.php:1077
+#: modules/settings/settings.php:1092
 msgid ""
 "This allows tasks to be disabled for specific statuses such as \"Draft\" or "
 "\"Published."
 msgstr "이 설정은 \"초안\" 또는 \"게시됨\"과 같은 특정 상태에 대해 작업을 비활성화할 수 있습니다."
 
-#: modules/settings/settings.php:1098
+#: modules/settings/settings.php:1113
 msgid "This allows users to duplicate existing checklist tasks."
 msgstr "이 기능은 사용자가 기존 체크리스트 작업을 복제할 수 있도록 합니다."
 
-#: modules/settings/settings.php:1120
+#: modules/settings/settings.php:1135
 msgid ""
 "Add a Checklists column to the Posts screen showing how many requirements "
 "are complete."
 msgstr "게시물 화면에 체크리스트 열을 추가하여 완료된 요구 사항 수를 표시합니다."
 
-#: modules/settings/settings.php:1141
+#: modules/settings/settings.php:1156
 msgid ""
 "This allows tasks to be disabled for posts with specific taxonomy terms. Go "
 "to the \"Post Types\" tab to choose the terms."
@@ -1333,258 +1956,258 @@ msgstr ""
 "이 기능은 특정 분류 용어가 있는 게시물에 대해 작업을 비활성화할 수 있도록 합니다. 용어를 선택하려면 \"게시물 유형\" 탭으로 "
 "이동하세요."
 
-#: modules/settings/settings.php:1163
+#: modules/settings/settings.php:1178
 msgid ""
 "This will display a warning icon in the \"Checklists\" box if requirements "
 "are incomplete."
 msgstr "이 설정은 요구 사항이 불완전할 경우 \"체크리스트\" 상자에 경고 아이콘을 표시합니다."
 
-#: modules/settings/settings.php:1183
+#: modules/settings/settings.php:1198
 msgid ""
 "This will highlight Gutenberg blocks that fail block-specific checklist "
 "tasks."
 msgstr "이 작업은 블록 특정 체크리스트 작업에 실패한 구텐베르크 블록을 강조 표시합니다."
 
-#: modules/settings/settings.php:1203
+#: modules/settings/settings.php:1218
 msgid ""
 "When enabled, all PublishPress Checklists data will be deleted if the "
 "plugin is uninstalled."
 msgstr "활성화되면, 플러그인이 제거될 경우 모든 PublishPress 체크리스트 데이터가 삭제됩니다."
 
-#: modules/settings/settings.php:1224
+#: modules/settings/settings.php:1239
 msgid "This will show \"Exclude User Roles\" options."
 msgstr "이 옵션은 \"사용자 역할 제외\"를 표시합니다."
 
-#: modules/settings/settings.php:1245
+#: modules/settings/settings.php:1260
 msgid ""
 "Disabling the \"Status\" option is recommended because it can be used to "
 "avoid using the Checklists requirements."
 msgstr "\"상태\" 옵션을 비활성화하는 것이 권장됩니다. 이를 통해 체크리스트 요구 사항을 피할 수 있습니다."
 
-#: modules/settings/settings.php:1266
+#: modules/settings/settings.php:1281
 msgid ""
 "This will disable \"Quick Edit\" for all users except those with the "
 "\"manage_options\" capability."
 msgstr "이 설정은 \"manage_options\" 권한이 없는 모든 사용자에 대해 \"빠른 편집\"을 비활성화합니다."
 
-#: modules/settings/settings.php:1287
+#: modules/settings/settings.php:1302
 msgid ""
 "This will disable the \"Publish\" button when checklist requirements are "
 "not met."
 msgstr "이 설정은 체크리스트 요구 사항이 충족되지 않을 때 \"게시\" 버튼을 비활성화합니다."
 
-#: modules/settings/settings.php:1306
+#: modules/settings/settings.php:1321
 msgid "Enter your API Key to use OpenAI prompts in checklist tasks."
 msgstr "체크리스트 작업에서 OpenAI 프롬프트를 사용하려면 API 키를 입력하세요."
 
-#: modules/settings/settings.php:1379
+#: modules/settings/settings.php:1394
 msgid "Post Types"
 msgstr "게시물 유형"
 
-#: modules/settings/settings.php:1380
+#: modules/settings/settings.php:1395
 msgid "General"
 msgstr "일반"
 
-#: modules/settings/settings.php:1381
+#: modules/settings/settings.php:1396
 msgid "Publishing Options"
 msgstr "발행 옵션"
 
-#: modules/settings/settings.php:1382
+#: modules/settings/settings.php:1397
 msgid "Appearance"
 msgstr "모양"
 
-#: modules/settings/settings.php:1383
+#: modules/settings/settings.php:1398
 msgid "Integration"
 msgstr "통합"
 
-#: modules/settings/settings.php:1384
+#: modules/settings/settings.php:1399
 msgid "Tools"
 msgstr "도구"
 
-#: modules/settings/settings.php:1431
+#: modules/settings/settings.php:1446
 msgid "Enter a Dashicons class name (e.g., dashicons-yes, dashicons-saved). "
 msgstr "대시아이콘 클래스 이름을 입력하세요(예: dashicons-yes, dashicons-saved). "
 
-#: modules/settings/settings.php:1432
 #: modules/settings/settings.php:1447
+#: modules/settings/settings.php:1462
 msgid "View Dashicons"
 msgstr "대시아이콘 보기"
 
-#: modules/settings/settings.php:1446
+#: modules/settings/settings.php:1461
 msgid "Enter a Dashicons class name (e.g., dashicons-no, dashicons-dismiss). "
 msgstr "대시아이콘 클래스 이름을 입력하세요(예: dashicons-no, dashicons-dismiss). "
 
-#: modules/settings/settings.php:1529
+#: modules/settings/settings.php:1544
 msgid "Allow admins to rename task labels for the post editor."
 msgstr "게시물 편집기에서 관리자가 작업 레이블 이름을 바꿀 수 있도록 허용합니다."
 
-#: modules/settings/settings.php:1547
+#: modules/settings/settings.php:1562
 msgid "Default"
 msgstr "기본값"
 
-#: modules/settings/settings.php:1548
+#: modules/settings/settings.php:1563
 msgid "Priority"
 msgstr "우선순위"
 
-#: modules/settings/settings.php:1549
+#: modules/settings/settings.php:1564
 msgid "Alphabetical"
 msgstr "알파벳순"
 
-#: modules/settings/settings.php:1553
+#: modules/settings/settings.php:1568
 msgid "Keeps tasks in the order configured on the Checklists screen."
 msgstr "작업을 체크리스트 화면에 구성된 순서대로 유지합니다."
 
-#: modules/settings/settings.php:1557
+#: modules/settings/settings.php:1572
 msgid "Shows Required tasks before Recommended tasks."
 msgstr "필수 작업을 권장 작업보다 먼저 표시합니다."
 
-#: modules/settings/settings.php:1561
+#: modules/settings/settings.php:1576
 msgid "Sorts tasks alphabetically by task label."
 msgstr "작업 레이블에 따라 작업을 알파벳순으로 정렬합니다."
 
-#: modules/settings/settings.php:1604
+#: modules/settings/settings.php:1619
 msgid ""
 "This will reset all renamed checklist labels for WP Admin and Editing "
 "screen back to their default labels."
 msgstr "이 작업은 WP 관리자 및 편집 화면의 모든 이름 변경된 체크리스트 레이블을 기본 레이블로 초기화합니다."
 
-#: modules/settings/settings.php:1614
+#: modules/settings/settings.php:1629
 msgid "Security check failed."
 msgstr "보안 검사가 실패했습니다."
 
-#: modules/settings/settings.php:1619
+#: modules/settings/settings.php:1634
 msgid "You do not have permission to perform this action."
 msgstr "이 작업을 수행할 권한이 없습니다."
 
-#: modules/settings/settings.php:1664
+#: modules/settings/settings.php:1679
 msgid "All renamed labels have been reset successfully."
 msgstr "모든 이름 변경된 레이블이 성공적으로 초기화되었습니다."
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:39
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:40
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
 msgid "Number of characters in Yoast SEO focus keyword"
 msgstr "Yoast SEO 초점 키워드의 문자 수"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:41
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO focus keyword"
 msgstr "Yoast SEO 초점 키워드에서 %d자 이하"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:42
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO focus keyword"
 msgstr "Yoast SEO 집중 키워드의 최소 %d자"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:43
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO focus keyword"
 msgstr "Yoast SEO 집중 키워드에서 최대 %d 자"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:44
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO focus keyword"
 msgstr "Yoast SEO 초점 키워드에서 %d자 이하"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:45
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
 #, php-format
 msgid "%d character in Yoast SEO focus keyword"
 msgstr "%d 문자(들) Yoast SEO 포커스 키워드에"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:46
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:48
 #, php-format
 msgid "%d characters in Yoast SEO focus keyword"
 msgstr "%d 문자(들) Yoast SEO 포커스 키워드에"
 
-#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:47
+#: modules/yoastseo/lib/Requirement/Focus_Keyword.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO focus keyword"
 msgstr "Yoast SEO 포커스 키워드에서 %d와 %d 문자 사이"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:39
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:40
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
 msgid "Number of characters in Yoast SEO meta description"
 msgstr "Yoast SEO 메타 설명의 문자 수"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:41
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
 #, php-format
 msgid "Minimum of %d character in Yoast SEO meta description"
 msgstr "Yoast SEO 메타 설명의 최소 %d자"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:42
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
 #, php-format
 msgid "Minimum of %d characters in Yoast SEO meta description"
 msgstr "Yoast SEO 메타 설명의 최소 %d자"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:43
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
 #, php-format
 msgid "Maximum of %d character in Yoast SEO meta description"
 msgstr "Yoast SEO 메타 설명에서 최대 %d 자"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:44
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
 #, php-format
 msgid "Maximum of %d characters in Yoast SEO meta description"
 msgstr "Yoast SEO 메타 설명에서 %d자 이하"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:45
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
 #, php-format
 msgid "%d character in Yoast SEO meta description"
 msgstr "%d 문자(들) Yoast SEO 메타 설명에"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:46
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:48
 #, php-format
 msgid "%d characters in Yoast SEO meta description"
 msgstr "%d 문자(들) Yoast SEO 메타 설명에"
 
-#: modules/yoastseo/lib/Requirement/Meta_Description.php:47
+#: modules/yoastseo/lib/Requirement/Meta_Description.php:49
 #, php-format
 msgid "Between %d and %d characters in Yoast SEO meta description"
 msgstr "Yoast SEO 메타 설명에서 %d와 %d 문자 사이"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:55
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:57
 msgid "Minimum Yoast SEO readability score"
 msgstr "최소 Yoast SEO 가독성 점수"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:137
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:139
 #. translators: %s expands to the readability score
 #, php-format
 msgid "Yoast Readability: %s"
 msgstr "요스트 가독성: %s"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:133
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:168
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:132
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:167
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:135
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:170
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:134
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:169
 msgid "OK"
 msgstr "확인"
 
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:138
-#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:169
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:137
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:168
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:140
+#: modules/yoastseo/lib/Requirement/Readability_Analysis.php:171
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:139
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:170
 msgid "Good"
 msgstr "좋음"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:54
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:56
 msgid "Minimum Yoast SEO analysis score"
 msgstr "최소 Yoast SEO 분석 점수"
 
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:131
-#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:136
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:133
+#: modules/yoastseo/lib/Requirement/Seo_Analysis.php:138
 #. translators: %s expands to the seo score
 #, php-format
 msgid "Yoast SEO: %s"
 msgstr "요스트 SEO: %s"
 
-#: modules/yoastseo/yoastseo.php:69
+#: modules/yoastseo/yoastseo.php:72
 msgid "Define tasks related to Yoast SEO"
 msgstr "Yoast SEO와 관련된 작업 정의"
 
-#: publishpress-checklists.php:103
+#: publishpress-checklists.php:107
 msgid "This plugin can be deleted."
 msgstr "이 플러그인은 삭제할 수 있습니다."
 
-#: publishpress-checklists.php:154
+#: publishpress-checklists.php:164
 #, php-format
 msgid ""
 "You're using PublishPress Checklists Free. The Pro version has more "
